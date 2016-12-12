@@ -26,6 +26,9 @@
 
 #include <DBAccessor.h>
 
+#include <cuda_runtime.h>
+#include "cublas_v2.h"
+
 using track = std::array<float, 4>;
 
 
@@ -54,7 +57,7 @@ void getMean(const std::vector<track>& v, track& mean)
 }
 
 
-int main(void)
+int testDBAccessor(void)
 {
 	DBAccessor dba("../../db/TrackData/TrackData_20161124.db");
 	
@@ -92,3 +95,48 @@ int main(void)
 	
 	return 0;
 }
+
+int testCUBLAS()
+{
+	cudaError_t cuda_error;
+	cublasStatus_t stat;
+	cublasHandle_t handle;
+	stat = cublasCreate_v2(&handle);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "CUBLAS initialization failed" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	DBAccessor dba("../../db/TrackData/TrackData_20161124.db");
+	
+	dba.setQuery("select latitude, longitude, altitude, time from TrackData;");
+	
+	std::vector<float> v;
+	
+	while(SQLITE_ROW == dba.step_select())
+	{
+		double la=dba.getColumnDouble(0);
+		double lo=dba.getColumnDouble(1);
+		int a=dba.getColumnInt(2);
+		long long time=dba.getColumnLongLong(3);
+		
+		v.push_back(static_cast<float>(la  ));
+		v.push_back(static_cast<float>(lo  ));
+		v.push_back(static_cast<float>(a   ));
+		v.push_back(static_cast<float>(time));
+		
+	}
+	int M = 4;
+	int N = v.size() / M;
+	
+	
+	
+	return EXIT_SUCCESS;
+}
+
+int main(void)
+{
+	return testCUBLAS();
+}
+

@@ -1,1 +1,21 @@
-======== Warning: No CUDA application was profiled, exiting
+==6399== NVPROF is profiling process 6399, command: ./learningTrackData
+==6399== Profiling application: ./learningTrackData
+==6399== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,us,,us,us,us,
+100.000000,1.152000,1,1.152000,1.152000,1.152000,"[CUDA memcpy HtoD]"
+
+==6399== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+99.716907,597.677982,1,597.677982,597.677982,597.677982,"cudaFree"
+0.108768,0.651927,3,0.217309,0.013343,0.357269,"cudaMalloc"
+0.078139,0.468347,91,0.005146,0.000317,0.179444,"cuDeviceGetAttribute"
+0.076670,0.459539,1,0.459539,0.459539,0.459539,"cuDeviceTotalMem"
+0.008205,0.049181,1,0.049181,0.049181,0.049181,"cuDeviceGetName"
+0.005240,0.031409,1,0.031409,0.031409,0.031409,"cudaMemcpy"
+0.003033,0.018182,16,0.001136,0.000683,0.005353,"cudaEventCreateWithFlags"
+0.001203,0.007208,11,0.000655,0.000392,0.002756,"cudaDeviceGetAttribute"
+0.000957,0.005737,3,0.001912,0.000590,0.004333,"cuDeviceGetCount"
+0.000505,0.003027,1,0.003027,0.003027,0.003027,"cudaGetDevice"
+0.000372,0.002229,3,0.000743,0.000468,0.001200,"cuDeviceGet"

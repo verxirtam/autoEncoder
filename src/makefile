@@ -22,7 +22,7 @@ COMMON_FLAGS := -pg -g -O0
 #COMMON_FLAGS := 
 
 #CXX_LINKS
-CXX_LINKS := -lsqlite3
+CXX_LINKS := -lsqlite3 -lcublas
 
 #ホームディレクトリのパス(末尾に"/"無し)
 HOME := $(shell echo ~)
