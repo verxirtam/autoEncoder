@@ -26,11 +26,11 @@
 
 #include <DBAccessor.h>
 
-#include <cuda_runtime.h>
-#include "cublas_v2.h"
+#include "CUBLASFunction.h"
+
+
 
 using track = std::array<float, 4>;
-
 
 void getMean(const std::vector<track>& v, track& mean)
 {
@@ -98,7 +98,7 @@ int testDBAccessor(void)
 
 int testCUBLAS()
 {
-	cudaError_t cuda_error;
+	//cudaError_t cuda_error;
 	cublasStatus_t stat;
 	cublasHandle_t handle;
 	stat = cublasCreate_v2(&handle);
@@ -125,10 +125,140 @@ int testCUBLAS()
 		v.push_back(static_cast<float>(lo  ));
 		v.push_back(static_cast<float>(a   ));
 		v.push_back(static_cast<float>(time));
-		
+		//if(v.size() >= 400)
+		//{
+		//	break;
+		//}
 	}
 	int M = 4;
 	int N = v.size() / M;
+	
+	std::cout << "M = " << M << ", N = " << N << std::endl;
+	
+	std::vector<float> vec1;
+	for(int i = 0; i < N; i++)
+	{
+		vec1.push_back(1.0f);
+	}
+	
+	std::vector<float> result;
+	for(int i = 0; i < M; i++)
+	{
+		result.push_back(3.0f);
+	}
+	
+	
+	
+	float* v_d;
+	cudaMalloc((void**)&v_d, M*N*sizeof(float));
+	stat = cublasSetMatrix(M, N, sizeof(float), v.data(), M, v_d, M);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "error at cublasSetMatrix()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	float* vec1_d;
+	cudaMalloc((void**)&vec1_d, N*sizeof(float));
+	stat = cublasSetVector(N, sizeof(float), vec1.data(), 1, vec1_d, 1);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "error at cublasSetVector()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	float* result_d;
+	cudaMalloc((void**)&result_d, M*sizeof(float));
+	stat = cublasSetVector(M, sizeof(float), result.data(), 1, result_d, 1);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "error at cublasSetVector()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	float alpha = 1.0f / static_cast<float>(N);
+	float beta = 0.0f;
+	stat = cublasSgemv(handle, CUBLAS_OP_N, M, N, &alpha, v_d, M, vec1_d, 1, &beta, result_d, 1);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "error at cublasSgemv()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	stat = cublasGetVector(M, sizeof(float), result_d, 1, result.data(), 1);
+	if(stat != CUBLAS_STATUS_SUCCESS)
+	{
+		std::cout << "error at cublasGetVector()" << std::endl;
+		return EXIT_FAILURE;
+	}
+	
+	for(int i = 0; i < M; i++)
+	{
+		std::cout << result[i] << '\t';
+	}
+	std::cout << std::endl;
+	
+	
+	
+	cublasDestroy(handle);
+	return EXIT_SUCCESS;
+}
+
+int testCUBLASClass()
+{
+	
+	DBAccessor dba("../../db/TrackData/TrackData_20161124.db");
+	
+	dba.setQuery("select latitude, longitude, altitude, time from TrackData;");
+	
+	std::vector<float> v;
+	
+	while(SQLITE_ROW == dba.step_select())
+	{
+		double la=dba.getColumnDouble(0);
+		double lo=dba.getColumnDouble(1);
+		int a=dba.getColumnInt(2);
+		long long time=dba.getColumnLongLong(3);
+		
+		v.push_back(static_cast<float>(la  ));
+		v.push_back(static_cast<float>(lo  ));
+		v.push_back(static_cast<float>(a   ));
+		v.push_back(static_cast<float>(time));
+		//if(v.size() >= 400)
+		//{
+		//	break;
+		//}
+	}
+	int M = 4;
+	int N = v.size() / M;
+	
+	std::cout << "M = " << M << ", N = " << N << std::endl;
+	
+	std::vector<float> vec1(N, 1.0f);
+	
+	std::vector<float> result(M, 3.0f);
+	
+	
+	DeviceMatrix v_d(M, N);
+	v_d.set(v.data());
+	
+	DeviceVector vec1_d(N);
+	vec1_d.set(vec1.data());
+	
+	DeviceVector result_d(M);
+	result_d.set(result.data());
+	
+	float alpha = 1.0f / static_cast<float>(N);
+	float beta = 0.0f;
+	Sgemv(&alpha, CUBLAS_OP_N, v_d, vec1_d, &beta, result_d);
+	
+	result_d.get(result.data());
+	
+	for(int i = 0; i < M; i++)
+	{
+		std::cout << result[i] << '\t';
+	}
+	std::cout << std::endl;
 	
 	
 	
@@ -137,6 +267,7 @@ int testCUBLAS()
 
 int main(void)
 {
-	return testCUBLAS();
+	testCUBLAS();
+	return testCUBLASClass();
 }
 

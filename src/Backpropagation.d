@@ -1,5 +1,4 @@
-learningTrackData.o: learningTrackData.cpp \
- /home/daisuke/programs/ATFViewer/include/DBAccessor.h CUBLASFunction.h \
+Backpropagation.o: Backpropagation.cpp Backpropagation.h CUBLASFunction.h \
  DeviceVector.h CUBLASManager.h /usr/local/cuda/include/cuda_runtime.h \
  /usr/local/cuda/include/host_config.h \
  /usr/local/cuda/include/builtin_types.h \

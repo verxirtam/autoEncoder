@@ -1,6 +1,5 @@
-learningTrackData.o: learningTrackData.cpp \
- /home/daisuke/programs/ATFViewer/include/DBAccessor.h CUBLASFunction.h \
- DeviceVector.h CUBLASManager.h /usr/local/cuda/include/cuda_runtime.h \
+CUBLASFunction.o: CUBLASFunction.cpp CUBLASFunction.h DeviceVector.h \
+ CUBLASManager.h /usr/local/cuda/include/cuda_runtime.h \
  /usr/local/cuda/include/host_config.h \
  /usr/local/cuda/include/builtin_types.h \
  /usr/local/cuda/include/device_types.h \
