@@ -32,9 +32,22 @@ private:
 	//コピー代入演算子
 	DeviceVector& operator=(const DeviceVector&) = delete;
 	//ムーブコンストラクタ
-	DeviceVector(DeviceVector&&) = delete;
+	DeviceVector(DeviceVector&& dv):
+		dimension(dv.dimension),
+		device(dv.device)
+	{
+		dv.device = nullptr;
+	}
 	//ムーブ代入演算子
-	DeviceVector& operator=(DeviceVector&&) = delete;
+	DeviceVector& operator=(DeviceVector&& dv)
+	{
+		this->dimension = dv.dimension;
+		
+		cudaFree(this->device);
+		this->device = dv.device;
+		dv.device = nullptr;
+		return *this;
+	}
 public:
 	DeviceVector(int d):
 		dimension(d),
