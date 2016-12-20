@@ -265,9 +265,51 @@ int testCUBLASClass()
 	return EXIT_SUCCESS;
 }
 
+int testDeviceVector(void)
+{
+	using namespace std;
+	vector<DeviceVector> dv;
+	DeviceVector x(3);
+	float a[]={1.0f, 2.0f, 3.0f};
+	float b[]={2.0f, 3.0f, 4.0f};
+	float c[]={0.0f, 0.0f, 0.0f};
+	
+	x.set(a);
+	dv.push_back(x);
+	
+	x.set(b);
+	dv.push_back(x);
+	
+	dv[0].get(c);
+	cout << "c[] = {";
+	cout << c[0] << '\t';
+	cout << c[1] << '\t';
+	cout << c[2] << "}" << endl;
+	
+	dv[1].get(c);
+	cout << "c[] = {";
+	cout << c[0] << '\t';
+	cout << c[1] << '\t';
+	cout << c[2] << "}" << endl;
+	
+	vector<DeviceVector> dv1(dv);
+	
+	dv1[0].get(c);
+	cout << "c[] = {";
+	cout << c[0] << '\t';
+	cout << c[1] << '\t';
+	cout << c[2] << "}" << endl;
+	
+	
+	
+	return EXIT_SUCCESS;
+}
+
+
 int main(void)
 {
-	testCUBLAS();
-	return testCUBLASClass();
+	//testCUBLAS();
+	//testCUBLASClass();
+	return testDeviceVector();
 }
 
