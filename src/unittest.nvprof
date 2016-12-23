@@ -1,0 +1,22 @@
+==13491== NVPROF is profiling process 13491, command: ./unittest --gtest_color=yes
+==13491== Profiling application: ./unittest --gtest_color=yes
+==13491== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,us,us,ms,
+67.100382,1.864778,29,64.302000,1.024000,1.689769,"[CUDA memcpy HtoD]"
+32.809804,0.911813,29,31.441000,0.320000,0.754948,"[CUDA memcpy DtoH]"
+0.089814,0.002496,2,1.248000,1.088000,0.001408,"[CUDA memcpy DtoD]"
+
+==13491== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,us,ms,
+62.288514,379.437053,60,6.323950,16.562000,373.607625,"cudaMemcpy"
+35.203997,214.448863,75,2.859318,0.593000,210.017403,"cudaFree"
+2.307999,14.059420,48,0.292904,11.401000,0.418722,"cudaMalloc"
+0.097677,0.595008,178,0.003342,0.181000,0.125629,"cuDeviceGetAttribute"
+0.089130,0.542947,2,0.271473,268.072000,0.274875,"cuDeviceTotalMem"
+0.011499,0.070047,2,0.035023,33.900000,0.036147,"cuDeviceGetName"
+0.000662,0.004032,4,0.001008,0.325000,0.002624,"cuDeviceGetCount"
+0.000256,0.001561,4,0.000390,0.237000,0.000679,"cuDeviceGet"
+0.000150,0.000915,1,0.000915,0.915000,0.000915,"cuInit"
+0.000115,0.000701,1,0.000701,0.701000,0.000701,"cuDriverGetVersion"

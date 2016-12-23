@@ -18,12 +18,17 @@
 
 #pragma once
 
+#include <vector>
+#include <initializer_list>
+
 #include "CUBLASManager.h"
 
 class DeviceVector
 {
 private:
+	//次元
 	unsigned int dimension;
+	//デバイスメモリのアドレス
 	float* device;
 public:
 	//コピーコンストラクタ
@@ -67,7 +72,9 @@ public:
 		dimension(dv.dimension),
 		device(dv.device)
 	{
-		//コピー元はnullptrにする
+		//ムーブ元はdimension = 0にする
+		dv.dimension = 0;
+		//ムーブ元はnullptrにする
 		dv.device = nullptr;
 	}
 	//ムーブ代入演算子
@@ -81,6 +88,8 @@ public:
 		cudaFree(this->device);
 		//ムーブするアドレスの付け替え
 		this->device = dv.device;
+		//ムーブ元はdimension = 0にする
+		dv.dimension = 0;
 		//ムーブ元のアドレスをnullptrにする
 		dv.device = nullptr;
 		//自身への参照を返す
@@ -97,10 +106,25 @@ public:
 			cudaMalloc((void**)&device, dimension * sizeof(float));
 		}
 	}
+	//コンストラクタ
+	DeviceVector(const std::vector<float>& v):
+		DeviceVector(v.size())
+	{
+		this->set(v.data());
+	}
+	//コンストラクタ
+	DeviceVector(const std::initializer_list<float> v):
+		DeviceVector(std::vector<float>(v))
+	{
+	}
+	//デストラクタ
 	~DeviceVector()
 	{
 		cudaFree(device);
 	}
+	//値の設定
+	//配列のサイズがdimensionになっていることが前提
+	//範囲チェックはしない
 	void set(const float* const host)
 	{
 		cublasStatus_t stat;
@@ -110,6 +134,14 @@ public:
 			std::cout << "error at cublasSetVector()" << std::endl;
 		}
 	}
+	//値の設定(vector版)
+	void set(const std::vector<float>& host)
+	{
+		this->set(host.data());
+	}
+	//値の取得
+	//配列のサイズがdimensionになっていることが前提
+	//範囲チェックはしない
 	void get(float* const host)
 	{
 		cublasStatus_t stat;
@@ -119,11 +151,21 @@ public:
 			std::cout << "error at cublasGetVector()" << std::endl;
 		}
 	}
+	//値の取得(vector版)
+	void get(std::vector<float>& host)
+	{
+		//サイズをDeviceVectorのdimensionに合わせる
+		host.resize(this->dimension);
+		//値の設定
+		this->get(host.data());
+	}
+	//デバイスメモリのアドレスを取得
 	float* getAddress() const
 	{
 		return device;
 	}
-	int getDimension() const
+	//次元を取得
+	unsigned int getDimension() const
 	{
 		return dimension;
 	}

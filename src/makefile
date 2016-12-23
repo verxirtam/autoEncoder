@@ -22,13 +22,14 @@ COMMON_FLAGS := -pg -g -O0
 #COMMON_FLAGS := 
 
 #CXX_LINKS
-CXX_LINKS := -lsqlite3 -lcublas
+CXX_LINKS := -L/usr/local/lib -lgtest -lsqlite3 -lcublas 
 
 #ホームディレクトリのパス(末尾に"/"無し)
 HOME := $(shell echo ~)
 
 #g++のコンパイルのフラグ
 CXXFLAGS := -Wall -fopenmp -I/usr/include -I/usr/local/cuda/include -I$(HOME)/programs/ATFViewer/include $(CXX_LINKS)
+#CXXFLAGS := -Wall -fopenmp -I/usr/include -I/usr/local/include -I/usr/local/cuda/include -I$(HOME)/programs/ATFViewer/include $(CXX_LINKS)
 CXXONLYFLAGS := -std=c++11 -Weffc++
 
 #CUDA関連の設定
@@ -64,11 +65,17 @@ OBJSTARGET := $(filter-out $(TESTTARGET).o $(GLTESTTARGET).o, $(OBJS))
 #テスト用のオブジェクトファイル
 OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OBJS))
 
+#テストのコマンドラインオプション
+TESTOPTION := --gtest_color=yes
+
 #依存関係ファイル
 DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)
 
 #gprof2dot.pyのパス
 GPROF2DOT := ~/tools/gprof2dot/gprof2dot.py
+
+#nvprof_graph.shのパス
+NVPROFGRAPH := ~/tools/nvprof_graph/nvprof_graph.sh
 
 #nvprofコマンド
 NVPROF := nvprof --csv
@@ -79,8 +86,7 @@ NVPROF := nvprof --csv
 #全てコンパイルする
 #先頭に書いたコマンドはmakeコマンドでオプション無しで実行される
 .PHONY: all
-all: $(TARGET)
-#all: $(TARGET) $(TESTTARGET)
+all: $(TARGET) $(TESTTARGET)
 
 .PHONY: run
 run: $(TARGET)
@@ -90,12 +96,12 @@ run: $(TARGET)
 
 #テストの実行ファイルを実行する
 #ログと標準出力両方に出力する
-#.PHONY: test
-#test: $(TESTTARGET)
-#	$(NVPROF) --log-file $(TESTTARGET).nvprof ./$(TESTTARGET) 2>&1 | tee -a $(TESTTARGET).log
-#	if [ -f core ]; then banner core dumped!;fi
-#	gprof $(TESTTARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TESTTARGET).png
-#	./nvprof_graph.sh $(TESTTARGET)
+.PHONY: test
+test: $(TESTTARGET)
+	$(NVPROF) --log-file $(TESTTARGET).nvprof ./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log
+	if [ -f core ]; then banner core dumped!;fi
+	gprof $(TESTTARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TESTTARGET).png
+	$(NVPROFGRAPH) $(TESTTARGET)
 
 #githubにアップロードする
 .PHONY: git
@@ -137,8 +143,8 @@ $(TARGET): $(OBJSTARGET)
 	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $@ $^ $(NVCC_CXX_FLAGS)
 
 #テスト用の実行ファイルを作成
-#$(TESTTARGET): $(OBJSTEST)
-#	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $@ $^ $(NVCC_CXX_FLAGS)
+$(TESTTARGET): $(OBJSTEST)
+	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $@ $^ $(NVCC_CXX_FLAGS)
 
 #オブジェクトファイルの作成
 #"-MMD"オプションによって依存関係ファイル(*.d)も同時に作成する

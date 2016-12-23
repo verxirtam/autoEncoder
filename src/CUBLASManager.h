@@ -59,5 +59,6 @@ public:
 	{
 		return getInstance().handle;
 	}
+	static const char* getErrorString(cublasStatus_t error);
 };
 
