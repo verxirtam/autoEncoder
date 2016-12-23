@@ -28,17 +28,74 @@ private:
 	unsigned int rowCount;
 	unsigned int columnCount;
 	float* device;
-	//ポインタメンバを持つがコピー不要なので禁止する
-	//本当はデバイスメモリ同士でコピーしたい...。
-	//コピーコンストラクタ
-	DeviceMatrix(const DeviceMatrix&) = delete;
-	//コピー代入演算子
-	DeviceMatrix& operator=(const DeviceMatrix&) = delete;
-	//ムーブコンストラクタ
-	DeviceMatrix(DeviceMatrix&&) = delete;
-	//ムーブ代入演算子
-	DeviceMatrix& operator=(DeviceMatrix&&) = delete;
 public:
+	//コピーコンストラクタ
+	DeviceMatrix(const DeviceMatrix& dm):
+		rowCount(dm.rowCount),
+		columnCount(dm.columnCount),
+		device(nullptr)
+	{
+		//rowCountとcolumnCountがともに0でなければ
+		//デバイスメモリ確保とデバイスメモリ同士でのコピーを行う
+		//rowCountとcolumnCountのどちらかが0の時はdm.device = nullptrのためコピーしない
+		unsigned int size = this->rowCount * this->columnCount;
+		if(size != 0)
+		{
+			cudaMalloc((void**)&(this->device), size * sizeof(float));
+			cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice);
+		}
+	}
+	//コピー代入演算子
+	DeviceMatrix& operator=(const DeviceMatrix& dm)
+	{
+		cudaFree(device);
+		
+		this->rowCount = dm.rowCount;
+		this->columnCount = dm.columnCount;
+		this->device = nullptr;
+		
+		//rowCountとcolumnCountがともに0でなければ
+		//デバイスメモリ確保とデバイスメモリ同士でのコピーを行う
+		//rowCountとcolumnCountのどちらかが0の時はdm.device = nullptrのためコピーしない
+		unsigned int size = this->rowCount * this->columnCount;
+		if(size != 0)
+		{
+			cudaMalloc((void**)&(this->device), size * sizeof(float));
+			cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice);
+		}
+		
+		//自分への参照を返す
+		return *(this);
+	}
+	//ムーブコンストラクタ
+	DeviceMatrix(DeviceMatrix&& dm):
+		rowCount(dm.rowCount),
+		columnCount(dm.columnCount),
+		device(dm.device)
+	{
+		//ムーブ元を0行0列に設定
+		dm.rowCount = 0;
+		dm.columnCount = 0;
+		//ムーブ元ポインタをnullptrに設定
+		dm.device = nullptr;
+	}
+	//ムーブ代入演算子
+	DeviceMatrix& operator=(DeviceMatrix&& dm)
+	{
+		//ムーブ先のメモリの開放
+		cudaFree(this->device);
+		//値とポインタのコピー
+		this->rowCount = dm.rowCount;
+		this->columnCount = dm.columnCount;
+		this->device = dm.device;
+		//ムーブ元を0行0列に設定
+		dm.rowCount = 0;
+		dm.columnCount = 0;
+		//ムーブ元ポインタをnullptrに設定
+		dm.device = nullptr;
+		//自分への参照を返す
+		return *(this);
+	}
 	//コンストラクタ
 	DeviceMatrix(int r, int c):
 		rowCount(r),

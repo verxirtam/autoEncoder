@@ -84,7 +84,7 @@ public:
 		//次元のコピー
 		this->dimension = dv.dimension;
 		
-		//コピー先のメモリ解放
+		//ムーブ先のメモリ解放
 		cudaFree(this->device);
 		//ムーブするアドレスの付け替え
 		this->device = dv.device;

@@ -27,6 +27,10 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
+//////////////////////////////////////////////////////////////////////
+// DeviceVectorTest
+//////////////////////////////////////////////////////////////////////
+
 class DeviceVectorTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
 {
 protected:
@@ -206,6 +210,58 @@ TEST_P(DeviceVectorTest, set)
 	}
 }
 
+TEST(DeviceVectorTest, useContainer)
+{
+	std::vector<DeviceVector> vdv;
+	vdv.push_back({11.0f, 12.0f});
+	vdv.push_back({21.0f, 22.0f, 23.0f});
+	vdv.push_back({31.0f, 32.0f, 33.0f, 34.0f});
+	
+	vdv.resize(10);
+	
+	std::vector<float> result;
+	
+	EXPECT_EQ(vdv[0].getDimension(),2);
+	vdv[0].get(result);
+	EXPECT_EQ(result.size(), 2);
+	EXPECT_EQ(result[0], 11.0f);
+	EXPECT_EQ(result[1], 12.0f);
+	
+	EXPECT_EQ(vdv[1].getDimension(),3);
+	vdv[1].get(result);
+	EXPECT_EQ(result.size(), 3);
+	EXPECT_EQ(result[0], 21.0f);
+	EXPECT_EQ(result[1], 22.0f);
+	EXPECT_EQ(result[2], 23.0f);
+	
+	EXPECT_EQ(vdv[2].getDimension(),4);
+	vdv[2].get(result);
+	EXPECT_EQ(result.size(), 4);
+	EXPECT_EQ(result[0], 31.0f);
+	EXPECT_EQ(result[1], 32.0f);
+	EXPECT_EQ(result[2], 33.0f);
+	EXPECT_EQ(result[3], 34.0f);
+	
+	EXPECT_EQ(vdv[3].getDimension(),0);
+	EXPECT_EQ((vdv[3].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[4].getDimension(),0);
+	EXPECT_EQ((vdv[4].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[5].getDimension(),0);
+	EXPECT_EQ((vdv[5].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[6].getDimension(),0);
+	EXPECT_EQ((vdv[6].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[7].getDimension(),0);
+	EXPECT_EQ((vdv[7].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[8].getDimension(),0);
+	EXPECT_EQ((vdv[8].getAddress()==nullptr), true);
+	EXPECT_EQ(vdv[9].getDimension(),0);
+	EXPECT_EQ((vdv[9].getAddress()==nullptr), true);
+}
+
+//////////////////////////////////////////////////////////////////////
+// DeviceMatrixTest
+//////////////////////////////////////////////////////////////////////
+
 using RowColumn = std::tuple<unsigned int, unsigned int>;
 class DeviceMatrixTest : public ::testing::Test , public ::testing::WithParamInterface<RowColumn>
 {
@@ -347,7 +403,7 @@ TEST_P(DeviceMatrixTest, CopyConstructor)
 	
 	//初期化した値のチェック
 	std::vector<float> result;
-	dm.get(result);
+	dm1.get(result);
 	
 	for(unsigned int j = 0; j < c; j++)
 	{
