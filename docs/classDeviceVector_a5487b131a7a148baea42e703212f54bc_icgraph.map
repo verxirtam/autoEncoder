@@ -1,0 +1,7 @@
+<map id="DeviceVector::getAddress" name="DeviceVector::getAddress">
+<area shape="rect" id="node2" href="$CUBLASFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="230,31,293,57"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="233,81,289,108"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="341,5,552,32"/>
+<area shape="rect" id="node5" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="381,56,513,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a8ec812e0d53c36b5f17510fdb3bd5c13" title="Backpropagation::forward" alt="" coords="600,5,771,32"/>
+</map>
