@@ -115,9 +115,9 @@ doc: $(TARGET)
 	(cd ..; doxygen;)
 	(cd ../docs; git add .;)
 	(cd ../docs; git commit -m "update docs.";)
-	(cd ../docs; git push origin gh-pages;)
-	(cd ..; git add docs/;)
-	(cd ..; git commit -m "update docs.";)
+#	(cd ../docs; git push origin gh-pages;)
+#	(cd ..; git add docs/;)
+#	(cd ..; git commit -m "update docs.";)
 
 
 #makefile自体のテスト用
