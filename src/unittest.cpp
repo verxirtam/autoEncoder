@@ -212,12 +212,15 @@ TEST_P(DeviceVectorTest, set)
 
 TEST(DeviceVectorTest, useContainer)
 {
-	std::vector<DeviceVector> vdv;
-	vdv.push_back({11.0f, 12.0f});
-	vdv.push_back({21.0f, 22.0f, 23.0f});
-	vdv.push_back({31.0f, 32.0f, 33.0f, 34.0f});
+	std::vector<DeviceVector> vdv0;
+	vdv0.push_back({11.0f, 12.0f});
+	vdv0.push_back({21.0f, 22.0f, 23.0f});
+	vdv0.push_back({31.0f, 32.0f, 33.0f, 34.0f});
 	
-	vdv.resize(10);
+	vdv0.resize(10);
+	
+	std::vector<DeviceVector> vdv;
+	vdv = vdv0;
 	
 	std::vector<float> result;
 	
@@ -413,6 +416,211 @@ TEST_P(DeviceMatrixTest, CopyConstructor)
 		}
 	}
 }
+
+TEST_P(DeviceMatrixTest, CopyAssignmentOperator)
+{
+	unsigned int r = std::get<0>(GetParam());
+	unsigned int c = std::get<1>(GetParam());
+	DeviceMatrix dm0(r, c);
+	//初期化用のデータの設定
+	std::vector<float> hm;
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			float value = static_cast<float>(i + 1) + 1.0f / static_cast<float>(j + 1);
+			hm.push_back(value);
+		}
+	}
+	dm0.set(hm);
+	
+	DeviceMatrix dm1;
+	dm1 = dm0;
+	
+	EXPECT_EQ(dm1.getRowCount(),    r);
+	EXPECT_EQ(dm1.getColumnCount(), c);
+	if(r * c != 0)
+	{
+		EXPECT_EQ((dm1.getAddress() != nullptr), true);
+	}
+	else
+	{
+		EXPECT_EQ((dm1.getAddress() == nullptr), true);
+	}
+	
+	//初期化した値のチェック
+	std::vector<float> result;
+	dm1.get(result);
+	
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			EXPECT_EQ(result[i + j * r], hm[i + j * r]);
+		}
+	}
+}
+
+
+
+TEST_P(DeviceMatrixTest, MoveConstructor)
+{
+	unsigned int r = std::get<0>(GetParam());
+	unsigned int c = std::get<1>(GetParam());
+	DeviceMatrix dm0(r, c);
+	//初期化用のデータの設定
+	std::vector<float> hm;
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			float value = static_cast<float>(i + 1) + 1.0f / static_cast<float>(j + 1);
+			hm.push_back(value);
+		}
+	}
+	dm0.set(hm);
+	
+	DeviceMatrix dm1(std::move(dm0));
+	
+	EXPECT_EQ(dm0.getRowCount(),    0);
+	EXPECT_EQ(dm0.getColumnCount(), 0);
+	EXPECT_EQ((dm0.getAddress() == nullptr), true);
+	
+	EXPECT_EQ(dm1.getRowCount(),    r);
+	EXPECT_EQ(dm1.getColumnCount(), c);
+	if(r * c != 0)
+	{
+		EXPECT_EQ((dm1.getAddress() != nullptr), true);
+	}
+	else
+	{
+		EXPECT_EQ((dm1.getAddress() == nullptr), true);
+	}
+	
+	//初期化した値のチェック
+	std::vector<float> result;
+	dm1.get(result);
+	
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			EXPECT_EQ(result[i + j * r], hm[i + j * r]);
+		}
+	}
+}
+
+TEST_P(DeviceMatrixTest, MoveAssignmentOperator)
+{
+	unsigned int r = std::get<0>(GetParam());
+	unsigned int c = std::get<1>(GetParam());
+	DeviceMatrix dm0(r, c);
+	//初期化用のデータの設定
+	std::vector<float> hm;
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			float value = static_cast<float>(i + 1) + 1.0f / static_cast<float>(j + 1);
+			hm.push_back(value);
+		}
+	}
+	dm0.set(hm);
+	
+	DeviceMatrix dm1;
+	dm1 = std::move(dm0);
+	
+	EXPECT_EQ(dm0.getRowCount(),    0);
+	EXPECT_EQ(dm0.getColumnCount(), 0);
+	EXPECT_EQ((dm0.getAddress() == nullptr), true);
+	
+	EXPECT_EQ(dm1.getRowCount(),    r);
+	EXPECT_EQ(dm1.getColumnCount(), c);
+	if(r * c != 0)
+	{
+		EXPECT_EQ((dm1.getAddress() != nullptr), true);
+	}
+	else
+	{
+		EXPECT_EQ((dm1.getAddress() == nullptr), true);
+	}
+	
+	//初期化した値のチェック
+	std::vector<float> result;
+	dm1.get(result);
+	
+	for(unsigned int j = 0; j < c; j++)
+	{
+		for(unsigned int i = 0; i < r; i++)
+		{
+			EXPECT_EQ(result[i + j * r], hm[i + j * r]);
+		}
+	}
+}
+
+TEST(DeviceMatrixTest, useContainer)
+{
+	using host_matrix = std::vector<float>;
+	std::vector<host_matrix> vhm;
+	std::vector<unsigned int> vr;
+	std::vector<unsigned int> vc;
+	const unsigned int count = 100;
+	for(unsigned int n = 0; n < count; n++)
+	{
+		host_matrix hm;
+		
+		unsigned int r = n + 1;
+		unsigned int c = (n + 5) / 2;
+		unsigned int imax = r * c;
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			hm.push_back(static_cast<float>(i));
+		}
+		vhm.push_back(hm);
+		vr.push_back(r);
+		vc.push_back(c);
+	}
+	
+	std::vector<DeviceMatrix> vdm0;
+	for(unsigned int n = 0; n < count; n++)
+	{
+		vdm0.push_back(DeviceMatrix(vr[n], vc[n], vhm[n]));
+	}
+	
+	std::vector<DeviceMatrix> vdm;
+	vdm = vdm0;
+	vdm.resize(count * 3);
+	unsigned int n;
+	for(n = 0; n < count; n++)
+	{
+		DeviceMatrix dm = vdm[n];
+		unsigned int r = vr[n];
+		unsigned int c = vc[n];
+		host_matrix hm;
+		
+		dm.get(hm);
+		EXPECT_EQ(dm.getRowCount(),    r);
+		EXPECT_EQ(dm.getColumnCount(), c);
+		unsigned int imax = r * c;
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			EXPECT_EQ(hm[i], vhm[n][i]);
+		}
+	}
+	for(; n < 3 * count; n++)
+	{
+		DeviceMatrix dm = vdm[n];
+		EXPECT_EQ(dm.getRowCount(),    0);
+		EXPECT_EQ(dm.getColumnCount(), 0);
+		EXPECT_EQ((dm.getAddress() == nullptr), true);
+	}
+}
+
+
+
+
+
+
 
 
 int main(int argc, char **argv)
