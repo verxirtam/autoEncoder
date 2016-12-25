@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handle',['handle',['../classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd',1,'CUBLASManager']]]
+  ['epsilon',['epsilon',['../classBackpropagation.html#af259b432ddfba7efcc9e6f883afd1134',1,'Backpropagation']]]
 ];

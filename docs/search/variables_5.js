@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowcount',['rowCount',['../classDeviceMatrix.html#a6336e3424399d2485ffb6fd328955085',1,'DeviceMatrix']]]
+  ['layercount',['layerCount',['../classBackpropagation.html#abb7416301d29366a9fd155560ddab509',1,'Backpropagation']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['dedb',['dEdb',['../classBackpropagation.html#a5d29cbe244ac42f434c18c5b24cf5a49',1,'Backpropagation']]],
-  ['dedw',['dEdW',['../classBackpropagation.html#ae2e48f0e2f9ca9fec5821739da46d50f',1,'Backpropagation']]],
+  ['dedb',['dEdb',['../classBackpropagation.html#a0ee00f2c5c69dc80671f71096e3a1b1a',1,'Backpropagation']]],
+  ['dedw',['dEdW',['../classBackpropagation.html#af9eac0f6e3f734440045efb602c2d2ea',1,'Backpropagation']]],
+  ['delta',['delta',['../classBackpropagation.html#aed4ea2f7162840c3b5e8f43700656bf6',1,'Backpropagation']]],
   ['device',['device',['../classDeviceMatrix.html#ab9a999def7ee4b4456f0749ffcc03b86',1,'DeviceMatrix::device()'],['../classDeviceVector.html#aec704ebacfeabbff2f292066f64617ca',1,'DeviceVector::device()']]],
   ['devicematrix',['DeviceMatrix',['../classDeviceMatrix.html',1,'DeviceMatrix'],['../classDeviceMatrix.html#a38f74b238bab091fb94e78d75f4c737d',1,'DeviceMatrix::DeviceMatrix(const DeviceMatrix &amp;dm)'],['../classDeviceMatrix.html#ad58c044ed53f43db2657352f548ab1f1',1,'DeviceMatrix::DeviceMatrix(DeviceMatrix &amp;&amp;dm)'],['../classDeviceMatrix.html#a55575fa4e327c89f94895a62a420493e',1,'DeviceMatrix::DeviceMatrix(int r, int c)'],['../classDeviceMatrix.html#ada83d78870bd29082835978dfa368fb4',1,'DeviceMatrix::DeviceMatrix(int r, int c, const std::vector&lt; float &gt; &amp;d)'],['../classDeviceMatrix.html#a678af62d896522088f280aaa70434486',1,'DeviceMatrix::DeviceMatrix()']]],
   ['devicematrix_2eh',['DeviceMatrix.h',['../DeviceMatrix_8h.html',1,'']]],

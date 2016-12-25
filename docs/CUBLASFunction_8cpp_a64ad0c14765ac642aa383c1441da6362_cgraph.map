@@ -1,0 +1,7 @@
+<map id="Saxpy" name="Saxpy">
+<area shape="rect" id="node2" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="125,5,315,32"/>
+<area shape="rect" id="node3" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="123,56,317,83"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="133,107,307,133"/>
+<area shape="rect" id="node6" href="$classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723" title="CUBLASManager::getErrorString" alt="" coords="113,157,327,184"/>
+<area shape="rect" id="node4" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="376,56,579,83"/>
+</map>

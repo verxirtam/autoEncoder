@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['layercount',['layerCount',['../classBackpropagation.html#abb7416301d29366a9fd155560ddab509',1,'Backpropagation']]]
+  ['handle',['handle',['../classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd',1,'CUBLASManager']]]
 ];
