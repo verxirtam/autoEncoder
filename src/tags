@@ -15,6 +15,8 @@ CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
 CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -lgtest -lsqlite3 -lcublas $/;"	m
 DEPS	makefile	/^DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)$/;"	m
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix():$/;"	f	class:DeviceMatrix
+DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(DeviceMatrix&& dm):$/;"	f	class:DeviceMatrix
+DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(const DeviceMatrix& dm):$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(int r, int c):$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(int r, int c, const std::vector<float>& d):$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^class DeviceMatrix$/;"	c
@@ -42,12 +44,14 @@ OBJSTARGET	makefile	/^OBJSTARGET := $(filter-out $(TESTTARGET).o $(GLTESTTARGET)
 OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OBJS))$/;"	m
 RowColumn	unittest.cpp	/^using RowColumn = std::tuple<unsigned int, unsigned int>;$/;"	u
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
+Saxpy	CUBLASFunction.cpp	/^void Saxpy$/;"	f
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceMatrixTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CUBLASFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CUBLASFunction.cpp	/^void Sgemv$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
+TEST	unittest.cpp	/^TEST(DeviceMatrixTest, useContainer)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest,Constructor3)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, Constructor1)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, Constructor2)$/;"	f
@@ -59,23 +63,32 @@ TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveAssignmentOperator1)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveAssignmentOperator2)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor1)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor2)$/;"	f
+TEST	unittest.cpp	/^TEST(DeviceVectorTest, useContainer)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor1)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor2)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyAssignmentOperator)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyConstructor)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceMatrixTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceVectorTest
-bias	Backpropagation.h	/^	std::vector<upDeviceVector> bias;$/;"	m	class:Backpropagation
+WTdelta	Backpropagation.h	/^	std::vector<DeviceVector> WTdelta;$/;"	m	class:Backpropagation
+back	Backpropagation.cpp	/^void Backpropagation::back(const std::vector<float>& d)$/;"	f	class:Backpropagation
+bias	Backpropagation.h	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backpropagation
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
-dEdW	Backpropagation.h	/^	std::vector<upDeviceMatrix> dEdW;$/;"	m	class:Backpropagation
-dEdb	Backpropagation.h	/^	std::vector<upDeviceVector> dEdb;$/;"	m	class:Backpropagation
+dEdW	Backpropagation.h	/^	std::vector<DeviceMatrix> dEdW;$/;"	m	class:Backpropagation
+dEdb	Backpropagation.h	/^	std::vector<DeviceVector> dEdb;$/;"	m	class:Backpropagation
+delta	Backpropagation.h	/^	std::vector<DeviceVector>& delta;$/;"	m	class:Backpropagation
 device	DeviceMatrix.h	/^	float* device;$/;"	m	class:DeviceMatrix
 device	DeviceVector.h	/^	float* device;$/;"	m	class:DeviceVector
 df	Backpropagation.h	/^	float df(const float& x)$/;"	f	class:Backpropagation
 dimension	DeviceVector.h	/^	unsigned int dimension;$/;"	m	class:DeviceVector
+epsilon	Backpropagation.h	/^	float epsilon;$/;"	m	class:Backpropagation
 f	Backpropagation.h	/^	float f(const float& x)$/;"	f	class:Backpropagation
-forward	Backpropagation.h	/^	void forward(const std::vector<float>& x)$/;"	f	class:Backpropagation
+forward	Backpropagation.h	/^	void forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation
 get	DeviceMatrix.h	/^	void get(float* host)$/;"	f	class:DeviceMatrix
 get	DeviceMatrix.h	/^	void get(std::vector<float>& host)$/;"	f	class:DeviceMatrix
 get	DeviceVector.h	/^	void get(float* const host)$/;"	f	class:DeviceVector
@@ -90,17 +103,22 @@ getInstance	CUBLASManager.h	/^	static CUBLASManager& getInstance()$/;"	f	class:C
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
 handle	CUBLASManager.h	/^	cublasHandle_t handle;$/;"	m	class:CUBLASManager
+host_matrix	unittest.cpp	/^	using host_matrix = std::vector<float>;$/;"	u
 init	Backpropagation.cpp	/^void Backpropagation::init(const std::vector<unsigned int>& unit_count)$/;"	f	class:Backpropagation
 initRandom	Backpropagation.cpp	/^void Backpropagation::initRandom(void)$/;"	f	class:Backpropagation
 layerCount	Backpropagation.h	/^	const unsigned int layerCount;$/;"	m	class:Backpropagation
 main	learningTrackData.cpp	/^int main(void)$/;"	f
 main	unittest.cpp	/^int main(int argc, char **argv)$/;"	f
+obtainDelta	Backpropagation.cpp	/^void Backpropagation::obtainDelta(unsigned int l)$/;"	f	class:Backpropagation
+obtainDeltaLast	Backpropagation.cpp	/^void Backpropagation::obtainDeltaLast(const std::vector<float>& d)$/;"	f	class:Backpropagation
 obtainUFromZ	Backpropagation.h	/^	void obtainUFromZ(unsigned int l)$/;"	f	class:Backpropagation
-obtainZFromU	Backpropagation.h	/^	void obtainZFromU(unsigned int l)$/;"	f	class:Backpropagation
+operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(DeviceMatrix&& dm)$/;"	f	class:DeviceMatrix
+operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"	f	class:DeviceMatrix
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
 operator =	DeviceVector.h	/^	DeviceVector& operator=(const DeviceVector& dv)$/;"	f	class:DeviceVector
 rowCount	DeviceMatrix.h	/^	unsigned int rowCount;$/;"	m	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const float* host)$/;"	f	class:DeviceMatrix
+set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceMatrix
 set	DeviceVector.h	/^	void set(const float* const host)$/;"	f	class:DeviceVector
 set	DeviceVector.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceVector
 testCUBLAS	learningTrackData.cpp	/^int testCUBLAS()$/;"	f
@@ -108,12 +126,11 @@ testCUBLASClass	learningTrackData.cpp	/^int testCUBLASClass()$/;"	f
 testDBAccessor	learningTrackData.cpp	/^int testDBAccessor(void)$/;"	f
 testDeviceVector	learningTrackData.cpp	/^int testDeviceVector(void)$/;"	f
 track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
-u	Backpropagation.h	/^	std::vector<upDeviceVector> u;$/;"	m	class:Backpropagation
+u	Backpropagation.h	/^	std::vector<DeviceVector> u;$/;"	m	class:Backpropagation
 unitCount	Backpropagation.h	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation
-upDeviceMatrix	Backpropagation.h	/^	using upDeviceMatrix = std::unique_ptr<DeviceMatrix>;$/;"	u
-upDeviceVector	Backpropagation.h	/^	using upDeviceVector = std::unique_ptr<DeviceVector>;$/;"	u
-weight	Backpropagation.h	/^	std::vector<upDeviceMatrix> weight;$/;"	m	class:Backpropagation
-z	Backpropagation.h	/^	std::vector<upDeviceVector> z;$/;"	m	class:Backpropagation
+updateParameter	Backpropagation.cpp	/^void Backpropagation::updateParameter()$/;"	f	class:Backpropagation
+weight	Backpropagation.h	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation
+z	Backpropagation.h	/^	std::vector<DeviceVector> z;$/;"	m	class:Backpropagation
 ~CUBLASManager	CUBLASManager.h	/^	virtual ~CUBLASManager()$/;"	f	class:CUBLASManager
 ~DeviceMatrix	DeviceMatrix.h	/^	~DeviceMatrix()$/;"	f	class:DeviceMatrix
 ~DeviceVector	DeviceVector.h	/^	~DeviceVector()$/;"	f	class:DeviceVector

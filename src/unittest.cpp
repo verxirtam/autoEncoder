@@ -27,6 +27,8 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
+#include "Backpropagation.h"
+
 //////////////////////////////////////////////////////////////////////
 // DeviceVectorTest
 //////////////////////////////////////////////////////////////////////
@@ -617,14 +619,100 @@ TEST(DeviceMatrixTest, useContainer)
 }
 
 
+//////////////////////////////////////////////////////////////////////
+// BackpropagationTest
+//////////////////////////////////////////////////////////////////////
 
+class BackpropagationTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
 
+INSTANTIATE_TEST_CASE_P(InstantiateBackpropagationTest, BackpropagationTest, ::testing::Values(2, 3, 10, 100));
 
+TEST_P(BackpropagationTest, Constructor)
+{
+	unsigned int layer_count = GetParam();
+	Backpropagation b(layer_count);
+}
 
+TEST_P(BackpropagationTest, Init)
+{
+	unsigned int layer_count = GetParam();
+	Backpropagation b(layer_count);
+	
+	std::vector<unsigned int> unit_count;
+	for(unsigned int l = 0; l < layer_count; l++)
+	{
+		unsigned int uc = (l <= layer_count / 2) ? (layer_count - (l / 2)) : (layer_count / 2 + (l / 2));
+		unit_count.push_back(uc);
+	}
+	
+	b.init(unit_count);
+	b.initRandom();
+}
 
+TEST(BackpropagationTest, Forward)
+{
+	Backpropagation b(3);
+	b.init({100,50,100});
+	b.initRandom();
+	
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	int imax = 20;
+	
+	std::vector<float> r_[4];
+	std::vector<float> r;
+	
+	std::cout << "r init start." << std::endl;
+	
+	#pragma omp parallel for
+	for(int t = 0; t < 4; t++)
+	{
+		for(int i = 0; i < imax / 4; i++)
+		{
+			r_[t].push_back(urd(engine));
+		}
+	}
+	
+	r.reserve(imax);
+	for(int t = 0; t < 4; t++)
+	{
+		r.insert(r.end(), r_[t].begin(), r_[t].end());
+	}
+	
+	std::cout << "r init end." << std::endl;
+	
+	for(int i = 0; i < imax; i++)
+	{
+		
+		std::vector<float> x(100, r[i]);
+		std::vector<float> y;
+		std::vector<float> d = x;
+		b.forward(x, y);
+		b.back(d);
+		b.updateParameter();
+	}
+	std::vector<float> x(100, 0.5f);
+	std::vector<float> y(100, 0.0f);
+	b.forward(x, y);
+	std::cout << "y = (" << y[0] << ", " << y[1] << ")" << std::endl;
+}
 
+//////////////////////////////////////////////////////////////////////
+// main()
+//////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
+	::testing::GTEST_FLAG(filter)="*Forward*";
+	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
+	
+	
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }

@@ -21,6 +21,15 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
+//y = alpha * x + y;
+void Saxpy
+	(
+		const float* const alpha,
+		const DeviceVector& x,
+		DeviceVector& y
+	);
+
+//y = alpha * op(A) * x + beta * y;
 void Sgemv
 	(
 		const float* alpha,
@@ -31,6 +40,7 @@ void Sgemv
 		DeviceVector& y
 	);
 
+//C = alpha * op_A(A) + beta * op_B(B);
 void Sgeam
 	(
 		const float* alpha,

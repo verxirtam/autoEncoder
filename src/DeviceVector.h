@@ -48,21 +48,33 @@ public:
 	//コピー代入演算子
 	DeviceVector& operator=(const DeviceVector& dv)
 	{
-		//次元のコピー
-		this->dimension = dv.dimension;
-		
-		//コピー先のメモリ解放
-		cudaFree(this->device);
-		this->device = nullptr;
 		
 		//dimensionが0でなければ
 		//デバイスメモリ確保とデバイスメモリ同士でのコピーを行う
 		//dimensionが0の時はdv.device = nullptrのためコピーしない
-		if(this->dimension != 0)
+		if(dv.dimension != 0)
 		{
-			cudaMalloc((void**)&(this->device), this->dimension * sizeof(float));
-			cudaMemcpy(this->device, dv.device, this->dimension * sizeof(float), cudaMemcpyDeviceToDevice);
+			if(this->dimension != dv.dimension)
+			{
+				//コピー先のメモリ解放
+				cudaFree(this->device);
+				this->device = nullptr;
+				//コピー先のメモリ確保
+				cudaMalloc((void**)&(this->device), dv.dimension * sizeof(float));
+			}
+			cudaMemcpy(this->device, dv.device, dv.dimension * sizeof(float), cudaMemcpyDeviceToDevice);
 		}
+		else
+		{
+			//dv.dimension == 0 の場合
+			//コピー先のメモリ解放
+			cudaFree(this->device);
+			this->device = nullptr;
+		}
+		
+		//次元のコピー
+		this->dimension = dv.dimension;
+		
 		//自身への参照を返す
 		return *this;
 	}
@@ -154,8 +166,11 @@ public:
 	//値の取得(vector版)
 	void get(std::vector<float>& host)
 	{
-		//サイズをDeviceVectorのdimensionに合わせる
-		host.resize(this->dimension);
+		if(this->dimension != host.size())
+		{
+			//サイズをDeviceVectorのdimensionに合わせる
+			host.resize(this->dimension);
+		}
 		//値の設定
 		this->get(host.data());
 	}
