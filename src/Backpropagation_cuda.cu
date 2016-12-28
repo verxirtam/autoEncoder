@@ -18,7 +18,7 @@ namespace
 	
 	
 	__global__
-	void obtainZFromU_Kernel
+	void obtainZFromU_kernel
 		(
 			const float* const u_lp1,
 			float* const z_lp1
@@ -84,9 +84,10 @@ void Backpropagation::obtainZFromU(unsigned int l)
 	
 	int block_count = 1;
 	int thread_count = u[l + 1].getDimension();
-	obtainZFromU_Kernel<<<block_count, thread_count>>>(u[l + 1].getAddress(), z[l + 1].getAddress());
+	obtainZFromU_kernel<<<block_count, thread_count>>>(u[l + 1].getAddress(), z[l + 1].getAddress());
 	//直後にu[l + 1]を使用するので同期する
-	cudaDeviceSynchronize();
+	//cudaDeviceSynchronize();
+	cudaStreamSynchronize(0);
 }
 
 
@@ -102,7 +103,8 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 			delta[l].getAddress()
 		);
 	//直後にdelta[l]を使用するので同期する
-	cudaDeviceSynchronize();
+	//cudaDeviceSynchronize();
+	cudaStreamSynchronize(0);
 }
 
 //dEdW[l] = delta[l] * (z[l - 1])^T;

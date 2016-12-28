@@ -656,15 +656,17 @@ TEST_P(BackpropagationTest, Init)
 
 TEST(BackpropagationTest, Forward)
 {
-	Backpropagation b(3);
-	b.init({100,50,100});
+	const unsigned int dimension = 1000;
+	
+	Backpropagation b(5);
+	b.init({dimension, 500, 1, 500, dimension});
 	b.initRandom();
 	
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int imax = 20;
+	int imax = 10;
 	
 	std::vector<float> r_[4];
 	std::vector<float> r;
@@ -691,15 +693,15 @@ TEST(BackpropagationTest, Forward)
 	for(int i = 0; i < imax; i++)
 	{
 		
-		std::vector<float> x(100, r[i]);
+		std::vector<float> x(dimension, r[i]);
 		std::vector<float> y;
 		std::vector<float> d = x;
 		b.forward(x, y);
 		b.back(d);
 		b.updateParameter();
 	}
-	std::vector<float> x(100, 0.5f);
-	std::vector<float> y(100, 0.0f);
+	std::vector<float> x(dimension, 0.5f);
+	std::vector<float> y(dimension, 0.0f);
 	b.forward(x, y);
 	std::cout << "y = (" << y[0] << ", " << y[1] << ")" << std::endl;
 }
