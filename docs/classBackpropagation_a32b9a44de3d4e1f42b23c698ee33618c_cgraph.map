@@ -1,10 +1,9 @@
 <map id="Backpropagation::obtainUFromZ" name="Backpropagation::obtainUFromZ">
-<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="265,132,327,159"/>
-<area shape="rect" id="node3" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="391,5,577,32"/>
-<area shape="rect" id="node4" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="381,56,587,83"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="387,107,581,133"/>
-<area shape="rect" id="node7" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="397,157,571,184"/>
-<area shape="rect" id="node8" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="397,208,571,235"/>
-<area shape="rect" id="node9" href="$classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723" title="CUBLASManager::getErrorString" alt="" coords="377,259,591,285"/>
-<area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="640,107,843,133"/>
+<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="265,107,327,133"/>
+<area shape="rect" id="node3" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="385,5,572,32"/>
+<area shape="rect" id="node4" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="376,56,581,83"/>
+<area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="382,107,575,133"/>
+<area shape="rect" id="node7" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="392,157,565,184"/>
+<area shape="rect" id="node8" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="391,208,566,235"/>
+<area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="629,107,832,133"/>
 </map>

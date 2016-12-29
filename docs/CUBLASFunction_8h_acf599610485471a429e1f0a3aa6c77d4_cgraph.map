@@ -1,9 +1,8 @@
 <map id="Sgemv" name="Sgemv">
-<area shape="rect" id="node2" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="132,5,319,32"/>
-<area shape="rect" id="node3" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="123,56,328,83"/>
-<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="129,107,322,133"/>
-<area shape="rect" id="node6" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="139,157,312,184"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="138,208,313,235"/>
-<area shape="rect" id="node8" href="$classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723" title="CUBLASManager::getErrorString" alt="" coords="118,259,333,285"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="381,107,584,133"/>
+<area shape="rect" id="node2" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="127,5,313,32"/>
+<area shape="rect" id="node3" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="117,56,323,83"/>
+<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="123,107,317,133"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="133,157,307,184"/>
+<area shape="rect" id="node7" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="133,208,307,235"/>
+<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="371,107,573,133"/>
 </map>

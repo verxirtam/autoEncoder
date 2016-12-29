@@ -84,7 +84,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">CUBLASManager.h File Reference</div>  </div>
 </div><!--header-->
@@ -111,11 +112,76 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCUBLASManager.html">CUBLASManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a66bc11e96a4f269bc00a472efd4f86fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CUBLASManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cmd)</td></tr>
+<tr class="separator:a66bc11e96a4f269bc00a472efd4f86fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7faf58a47ee95fc475079ec1d80e9d67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cmd)</td></tr>
+<tr class="separator:a7faf58a47ee95fc475079ec1d80e9d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a7faf58a47ee95fc475079ec1d80e9d67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CUBLAS_CALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">    cublasStatus_t stat;\</div>
+<div class="line">    stat =  cmd;\</div>
+<div class="line">    if(stat != CUBLAS_STATUS_SUCCESS)\</div>
+<div class="line">    {\</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;CUBLAS_ERROR : &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; <a class="code" href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a>(stat) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">    }\</div>
+<div class="line">}</div>
+<div class="ttc" id="classCUBLASManager_html_a15c9188706fd6dc73677d9c3ea138723"><div class="ttname"><a href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a></div><div class="ttdeci">static const char * getErrorString(cublasStatus_t error)</div><div class="ttdef"><b>Definition:</b> CUBLASManager.cpp:21</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a66bc11e96a4f269bc00a472efd4f86fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CUDA_CALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">    cudaError_t error;\</div>
+<div class="line">    error =  cmd;\</div>
+<div class="line">    if(error != cudaSuccess)\</div>
+<div class="line">    {\</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;CUDA_ERROR : &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; cudaGetErrorString(error) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">    }\</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 29 2016 00:30:12 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 29 2016 18:41:19 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,8 +1,7 @@
 <map id="Backpropagation::obtainDeltaLast" name="Backpropagation::obtainDeltaLast">
-<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="272,81,331,108"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="392,5,581,32"/>
-<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="390,56,583,83"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="399,107,574,133"/>
-<area shape="rect" id="node7" href="$classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723" title="CUBLASManager::getErrorString" alt="" coords="379,157,594,184"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="643,56,845,83"/>
+<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="272,56,331,83"/>
+<area shape="rect" id="node3" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="381,5,571,32"/>
+<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="379,56,573,83"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="389,107,563,133"/>
+<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="621,56,824,83"/>
 </map>

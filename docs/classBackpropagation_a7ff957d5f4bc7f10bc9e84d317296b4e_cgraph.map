@@ -1,16 +1,15 @@
 <map id="Backpropagation::back" name="Backpropagation::back">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,77,427,104"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,132,414,159"/>
-<area shape="rect" id="node15" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="215,183,419,209"/>
-<area shape="rect" id="node3" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="543,73,601,100"/>
-<area shape="rect" id="node4" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="731,5,920,32"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="729,56,922,83"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="738,107,913,133"/>
-<area shape="rect" id="node8" href="$classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723" title="CUBLASManager::getErrorString" alt="" coords="718,157,933,184"/>
-<area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="981,56,1184,83"/>
-<area shape="rect" id="node10" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="541,191,603,217"/>
-<area shape="rect" id="node14" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="475,125,669,166"/>
-<area shape="rect" id="node11" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="732,208,919,235"/>
-<area shape="rect" id="node12" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="723,259,928,285"/>
-<area shape="rect" id="node13" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="739,309,912,336"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,52,427,79"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,107,414,133"/>
+<area shape="rect" id="node14" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="215,157,419,184"/>
+<area shape="rect" id="node3" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="543,48,601,75"/>
+<area shape="rect" id="node4" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="725,5,915,32"/>
+<area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="723,56,917,83"/>
+<area shape="rect" id="node7" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="733,107,907,133"/>
+<area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="971,56,1173,83"/>
+<area shape="rect" id="node9" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="541,165,603,192"/>
+<area shape="rect" id="node13" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="475,99,669,141"/>
+<area shape="rect" id="node10" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="727,157,913,184"/>
+<area shape="rect" id="node11" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="717,208,923,235"/>
+<area shape="rect" id="node12" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="733,259,907,285"/>
 </map>

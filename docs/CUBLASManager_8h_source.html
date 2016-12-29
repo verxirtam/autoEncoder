@@ -111,58 +111,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;cuda_runtime.h&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;cublas_v2.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classCUBLASManager.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCUBLASManager.html">CUBLASManager</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">   28</a></span>&#160;    cublasHandle_t <a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">   29</a></span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>():</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>()</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        cublasStatus_t stat;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        stat = cublasCreate_v2(&amp;<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>(stat != CUBLAS_STATUS_SUCCESS)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;CUBLAS initialization failed&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//シングルトンとするため削除する</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//コピーコンストラクタ</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>(<span class="keyword">const</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">//コピー代入演算子</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#ac62fe6ccc29c8efc0b4808b802d69e62">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//ムーブコンストラクタ</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>(<a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//ムーブ代入演算子</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#ac62fe6ccc29c8efc0b4808b802d69e62">operator=</a>(<a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">   49</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">~CUBLASManager</a>()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        cublasDestroy(<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">   53</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">getInstance</a>()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a> i;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> i;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">   58</a></span>&#160;    <span class="keyword">static</span> cublasHandle_t <a class="code" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">getHandle</a>()</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">getInstance</a>().<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">getErrorString</a>(cublasStatus_t error);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="ttc" id="classCUBLASManager_html_a6300352cbf5110a012eeb9b82ce475fd"><div class="ttname"><a href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">CUBLASManager::handle</a></div><div class="ttdeci">cublasHandle_t handle</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:28</div></div>
-<div class="ttc" id="classCUBLASManager_html_a0d82c2a82ed02d13d99fe4604277070d"><div class="ttname"><a href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">CUBLASManager::getHandle</a></div><div class="ttdeci">static cublasHandle_t getHandle()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:58</div></div>
-<div class="ttc" id="classCUBLASManager_html_a85d6bf9412acb3ca1f4c18ee78332047"><div class="ttname"><a href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">CUBLASManager::~CUBLASManager</a></div><div class="ttdeci">virtual ~CUBLASManager()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:49</div></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="CUBLASManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">   26</a></span>&#160;<span class="preprocessor">#define CUDA_CALL(cmd)\</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">{\</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">    cudaError_t error;\</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">    error =  cmd;\</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">    if(error != cudaSuccess)\</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">    {\</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; &quot;CUDA_ERROR : &quot;;\</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; cudaGetErrorString(error) &lt;&lt; &quot; at &quot;;\</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; __FILE__ &lt;&lt; &quot; &quot;;\</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; __LINE__ &lt;&lt; &quot; &quot;;\</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">    }\</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">}</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">   42</a></span>&#160;<span class="preprocessor">#define CUBLAS_CALL(cmd)\</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">{\</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">    cublasStatus_t stat;\</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">    stat =  cmd;\</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">    if(stat != CUBLAS_STATUS_SUCCESS)\</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    {\</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; &quot;CUBLAS_ERROR : &quot;;\</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; CUBLASManager::getErrorString(stat) &lt;&lt; &quot; at &quot;;\</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; __FILE__ &lt;&lt; &quot; &quot;;\</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; __LINE__ &lt;&lt; &quot; &quot;;\</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">    }\</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">}</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classCUBLASManager.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCUBLASManager.html">CUBLASManager</a></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">   62</a></span>&#160;    cublasHandle_t <a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">   63</a></span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>():</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasCreate_v2(&amp;<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//シングルトンとするため削除する</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//コピーコンストラクタ</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>(<span class="keyword">const</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//コピー代入演算子</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#ac62fe6ccc29c8efc0b4808b802d69e62">operator=</a>(<span class="keyword">const</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//ムーブコンストラクタ</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager</a>(<a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//ムーブ代入演算子</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#ac62fe6ccc29c8efc0b4808b802d69e62">operator=</a>(<a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">   78</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">~CUBLASManager</a>()</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasDestroy(<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">   82</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a>&amp; <a class="code" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">getInstance</a>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCUBLASManager.html">CUBLASManager</a> i;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">   87</a></span>&#160;    <span class="keyword">static</span> cublasHandle_t <a class="code" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">getHandle</a>()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">getInstance</a>().<a class="code" href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">handle</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">getErrorString</a>(cublasStatus_t error);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="ttc" id="classCUBLASManager_html_a6300352cbf5110a012eeb9b82ce475fd"><div class="ttname"><a href="classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd">CUBLASManager::handle</a></div><div class="ttdeci">cublasHandle_t handle</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:62</div></div>
+<div class="ttc" id="classCUBLASManager_html_a0d82c2a82ed02d13d99fe4604277070d"><div class="ttname"><a href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d">CUBLASManager::getHandle</a></div><div class="ttdeci">static cublasHandle_t getHandle()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:87</div></div>
+<div class="ttc" id="classCUBLASManager_html_a85d6bf9412acb3ca1f4c18ee78332047"><div class="ttname"><a href="classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047">CUBLASManager::~CUBLASManager</a></div><div class="ttdeci">virtual ~CUBLASManager()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:78</div></div>
 <div class="ttc" id="classCUBLASManager_html_a15c9188706fd6dc73677d9c3ea138723"><div class="ttname"><a href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a></div><div class="ttdeci">static const char * getErrorString(cublasStatus_t error)</div><div class="ttdef"><b>Definition:</b> CUBLASManager.cpp:21</div></div>
-<div class="ttc" id="classCUBLASManager_html"><div class="ttname"><a href="classCUBLASManager.html">CUBLASManager</a></div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:25</div></div>
+<div class="ttc" id="classCUBLASManager_html"><div class="ttname"><a href="classCUBLASManager.html">CUBLASManager</a></div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:59</div></div>
 <div class="ttc" id="classCUBLASManager_html_ac62fe6ccc29c8efc0b4808b802d69e62"><div class="ttname"><a href="classCUBLASManager.html#ac62fe6ccc29c8efc0b4808b802d69e62">CUBLASManager::operator=</a></div><div class="ttdeci">CUBLASManager &amp; operator=(const CUBLASManager &amp;)=delete</div></div>
-<div class="ttc" id="classCUBLASManager_html_af5bcb0ea2db486ee000a8dd0fd5ba61d"><div class="ttname"><a href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager::CUBLASManager</a></div><div class="ttdeci">CUBLASManager()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:29</div></div>
-<div class="ttc" id="classCUBLASManager_html_a75e2b1152e3ae5693c564dd209abde16"><div class="ttname"><a href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">CUBLASManager::getInstance</a></div><div class="ttdeci">static CUBLASManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:53</div></div>
+<div class="ttc" id="classCUBLASManager_html_af5bcb0ea2db486ee000a8dd0fd5ba61d"><div class="ttname"><a href="classCUBLASManager.html#af5bcb0ea2db486ee000a8dd0fd5ba61d">CUBLASManager::CUBLASManager</a></div><div class="ttdeci">CUBLASManager()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:63</div></div>
+<div class="ttc" id="CUBLASManager_8h_html_a7faf58a47ee95fc475079ec1d80e9d67"><div class="ttname"><a href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a></div><div class="ttdeci">#define CUBLAS_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:42</div></div>
+<div class="ttc" id="classCUBLASManager_html_a75e2b1152e3ae5693c564dd209abde16"><div class="ttname"><a href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16">CUBLASManager::getInstance</a></div><div class="ttdeci">static CUBLASManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> CUBLASManager.h:82</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 29 2016 00:30:12 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 29 2016 18:41:19 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
