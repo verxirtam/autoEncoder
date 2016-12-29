@@ -51,6 +51,7 @@ private:
 		float tanh_x = std::tanh(x);
 		return 1.0f - (tanh_x * tanh_x);
 	}
+public:
 	//下記を求める
 	//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1];
 	void obtainUFromZ(unsigned int l)
@@ -80,7 +81,8 @@ private:
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
 	//dEdW[l] = delta[l] * (z[l -1])^T;
 	void obtainDEDW(unsigned int l);
-public:
+	
+	//コンストラクタ
 	Backpropagation(unsigned int layer_count):
 		layerCount(layer_count),
 		unitCount(),
@@ -95,7 +97,9 @@ public:
 		WTdelta()
 	{
 	}
+	//初期化
 	void init(const std::vector<unsigned int>& unit_count);
+	//weightをランダムに初期化する
 	void initRandom(void);
 	
 	void forward(const std::vector<float>& x, std::vector<float>& y)
@@ -108,13 +112,121 @@ public:
 			//u[l+1]からz[l+1]を得る
 			obtainZFromU(l);
 		}
-		//z[L-1] == yを設定
-		z[layerCount - 1].get(y);
+		//y = z[L-1]を設定
+		y = z[layerCount - 1].get();
 	}
 	//逆伝播
 	void back(const std::vector<float>& d);
 	
 	void updateParameter();
+
+	void setWeight(const std::vector<std::vector<float> >& w)
+	{
+		if(w.size() != this->weight.size())
+		{
+			std::cout << "error at setWeight() :  w.size() != this->weight.size()." << std::endl;
+		}
+		unsigned int imax = this->weight.size();
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			this->weight[i].set(w[i]);
+		}
+	}
+	
+	void setBias(const std::vector<std::vector<float> >& b)
+	{
+		if(b.size() != this->bias.size())
+		{
+			std::cout << "error at setBias() :  b.size() != this->bias.size()." << std::endl;
+		}
+		unsigned int imax = this->weight.size();
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			this->bias[i].set(b[i]);
+		}
+		
+	}
+	
+	
+	const std::vector<DeviceVector>& getU() const
+	{
+		return this->u;
+	}
+	void getU(std::vector<std::vector<float> >& hu) const
+	{
+		std::vector<float> h;
+		unsigned int imax = this->u.size();
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			this->u[i].get(h);
+			hu.push_back(h);
+		}
+		
+	}
+	std::vector<std::vector<float> > getUAsVector() const
+	{
+		std::vector<std::vector<float> > hu;
+		for(auto&& _u : this->u )
+		{
+			hu.push_back(_u.get());
+		}
+		return hu;
+	}
+	const std::vector<DeviceVector>& getZ() const
+	{
+		return this->z;
+	}
+	std::vector<std::vector<float> > getZAsVector() const
+	{
+		std::vector<std::vector<float> > hz;
+		for(auto&& _z : this->z )
+		{
+			hz.push_back(_z.get());
+		}
+		return hz;
+	}
+	const std::vector<DeviceMatrix>& getWeight() const
+	{
+		return this->weight;
+	}
+	const std::vector<DeviceVector>& getBias() const
+	{
+		return this->bias;
+	}
+	const std::vector<DeviceMatrix>& getDEDW() const
+	{
+		return this->dEdW;
+	}
+	std::vector<std::vector<float> > getDEDWAsVector() const
+	{
+		std::vector<std::vector<float> > hdEdW;
+		for(auto&& _d : this->dEdW)
+		{
+			hdEdW.push_back(_d.get());
+		}
+		return hdEdW;
+	}
+	const std::vector<DeviceVector>& getDEDB() const
+	{
+		return this->dEdb;
+	}
+	const std::vector<DeviceVector>& getDelta() const
+	{
+		return this->dEdb;
+	}
+	std::vector<std::vector<float> > getDeltaAsVector() const
+	{
+		std::vector<std::vector<float> > hdelta;
+		for(auto&& _d : this->delta)
+		{
+			hdelta.push_back(_d.get());
+		}
+		return hdelta;
+	}
+	const std::vector<DeviceVector>& getWTDelta() const
+	{
+		return this->WTdelta;
+	}
 };
 
 

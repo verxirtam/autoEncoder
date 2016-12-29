@@ -654,7 +654,74 @@ TEST_P(BackpropagationTest, Init)
 	b.initRandom();
 }
 
-TEST(BackpropagationTest, Forward)
+TEST(BackpropagationTest, Simple)
+{
+	Backpropagation b(3);
+	//bの初期化
+	b.init({1,1,1});
+	std::vector<std::vector<float> > weight{{0.0f}, {2.0f}, {3.0f}};
+	std::vector<std::vector<float> >   bias{{0.0f}, {1.0f}, {2.0f}};
+	b.setWeight(weight);
+	b.setBias(bias);
+	
+	//Forward
+	////////////////////////////////////////
+	//forwardの引数
+	std::vector<float> x{1.0f};
+	std::vector<float> y{0.0f};
+	
+	b.forward(x,y);
+	//結果が想定通りか確認
+	std::vector<float> d{0.0f};
+	d[0] = std::tanh(2.0f * x[0] + 1.0);
+	d[0] = std::tanh(3.0f * d[0] + 2.0);
+	//結果が十分近いことを確認
+	EXPECT_NEAR(y[0], d[0], 0.0001f);
+	
+	std::vector<std::vector<float> > u{{0.0f}, {0.0f}, {0.0f}};
+	std::vector<std::vector<float> > z{{0.0f}, {0.0f}, {0.0f}};
+	z[0][0] = x[0];
+	u[1][0] = 2.0f * x[0]    + 1.0;
+	z[1][0] = std::tanh(u[1][0]);
+	u[2][0] = 3.0f * z[1][0] + 2.0;
+	z[2][0] = std::tanh(u[2][0]);
+	
+	auto hz = b.getZAsVector();
+	auto hu = b.getUAsVector();
+	std::cout << "hz[1][0] = " << hz[1][0] << ", z[1][0] = " <<  z[1][0] << std::endl;
+	std::cout << "hu[1][0] = " << hu[1][0] << ", u[1][0] = " <<  u[1][0] << std::endl;
+	std::cout << "hz[2][0] = " << hz[2][0] << ", z[2][0] = " <<  z[2][0] << std::endl;
+	std::cout << "hu[2][0] = " << hu[2][0] << ", u[2][0] = " <<  u[2][0] << std::endl;
+	EXPECT_NEAR(hz[1][0], z[1][0], 0.0001f);
+	EXPECT_NEAR(hu[1][0], u[1][0], 0.0001f);
+	EXPECT_NEAR(hz[2][0], z[2][0], 0.0001f);
+	EXPECT_NEAR(hu[2][0], u[2][0], 0.0001f);
+	
+	//Back
+	////////////////////////////////////////
+	
+	b.back({1.0f});
+	
+	std::vector<std::vector<float> > delta = {{0.0f},{0.0f},{0.0f}};
+	delta[2][0] = u[2][0] - 1.0f;
+	float tanh_u = std::tanh(hu[1][0]);
+	delta[1][0] = (1.0f - tanh_u * tanh_u) * delta[2][0] * weight[2][0];
+	
+	auto hdelta = b.getDeltaAsVector();
+	std::cout << "hdelta[1][0] = " << hdelta[1][0] << ", delta[1][0] = " <<  delta[1][0] << std::endl;
+	std::cout << "hdelta[2][0] = " << hdelta[2][0] << ", delta[2][0] = " <<  delta[2][0] << std::endl;
+	EXPECT_NEAR(hdelta[1][0], delta[1][0], 0.0001f);
+	EXPECT_NEAR(hdelta[2][0], delta[2][0], 0.0001f);
+	
+	std::vector<std::vector<float> > dEdW = {{0.0f},{0.0f},{0.0f}};
+	dEdW[2][0] = delta[2][0] * z[1][0];
+	dEdW[1][0] = delta[1][0] * z[0][0];
+
+	auto hdEdW   = b.getDEDWAsVector();
+	std::cout << "hdEdW[1][0] = " << hdEdW[1][0] << ", dEdW[1][0] = " <<  dEdW[1][0] << std::endl;
+	std::cout << "hdEdW[2][0] = " << hdEdW[2][0] << ", dEdW[2][0] = " <<  dEdW[2][0] << std::endl;
+}
+TEST(BackpropagationTest, All)
 {
 	const unsigned int dimension = 1000;
 	
@@ -711,7 +778,7 @@ TEST(BackpropagationTest, Forward)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*Forward*";
+	::testing::GTEST_FLAG(filter)="*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
 	

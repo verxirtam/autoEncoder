@@ -145,7 +145,7 @@ void Backpropagation::back(const std::vector<float>& d)
 		obtainDEDW(l);
 	}
 	//完了待ち
-	cudaDeviceSynchronize();
+	CUDA_CALL(cudaDeviceSynchronize());
 	
 	//対応不要
 	//dEdb[l]  = delta[l];

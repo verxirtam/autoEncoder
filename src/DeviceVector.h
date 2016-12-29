@@ -41,8 +41,8 @@ public:
 		//dimensionが0の時はdv.device = nullptrのためコピーしない
 		if(this->dimension != 0)
 		{
-			cudaMalloc((void**)&(this->device), this->dimension * sizeof(float));
-			cudaMemcpy(this->device, dv.device, this->dimension * sizeof(float), cudaMemcpyDeviceToDevice);
+			CUDA_CALL(cudaMalloc((void**)&(this->device), this->dimension * sizeof(float)));
+			CUDA_CALL(cudaMemcpy(this->device, dv.device, this->dimension * sizeof(float), cudaMemcpyDeviceToDevice));
 		}
 	}
 	//コピー代入演算子
@@ -57,18 +57,18 @@ public:
 			if(this->dimension != dv.dimension)
 			{
 				//コピー先のメモリ解放
-				cudaFree(this->device);
+				CUDA_CALL(cudaFree(this->device));
 				this->device = nullptr;
 				//コピー先のメモリ確保
-				cudaMalloc((void**)&(this->device), dv.dimension * sizeof(float));
+				CUDA_CALL(cudaMalloc((void**)&(this->device), dv.dimension * sizeof(float)));
 			}
-			cudaMemcpy(this->device, dv.device, dv.dimension * sizeof(float), cudaMemcpyDeviceToDevice);
+			CUDA_CALL(cudaMemcpy(this->device, dv.device, dv.dimension * sizeof(float), cudaMemcpyDeviceToDevice));
 		}
 		else
 		{
 			//dv.dimension == 0 の場合
 			//コピー先のメモリ解放
-			cudaFree(this->device);
+			CUDA_CALL(cudaFree(this->device));
 			this->device = nullptr;
 		}
 		
@@ -97,7 +97,7 @@ public:
 		this->dimension = dv.dimension;
 		
 		//ムーブ先のメモリ解放
-		cudaFree(this->device);
+		CUDA_CALL(cudaFree(this->device));
 		//ムーブするアドレスの付け替え
 		this->device = dv.device;
 		//ムーブ元はdimension = 0にする
@@ -115,7 +115,7 @@ public:
 	{
 		if(d != 0)
 		{
-			cudaMalloc((void**)&device, dimension * sizeof(float));
+			CUDA_CALL(cudaMalloc((void**)&device, dimension * sizeof(float)));
 		}
 	}
 	//コンストラクタ
@@ -132,19 +132,14 @@ public:
 	//デストラクタ
 	~DeviceVector()
 	{
-		cudaFree(device);
+		CUDA_CALL(cudaFree(device));
 	}
 	//値の設定
 	//配列のサイズがdimensionになっていることが前提
 	//範囲チェックはしない
 	void set(const float* const host)
 	{
-		cublasStatus_t stat;
-		stat = cublasSetVector(dimension, sizeof(float), host, 1, device, 1);
-		if(stat != CUBLAS_STATUS_SUCCESS)
-		{
-			std::cout << "error at cublasSetVector()" << std::endl;
-		}
+		CUBLAS_CALL(cublasSetVector(dimension, sizeof(float), host, 1, device, 1));
 	}
 	//値の設定(vector版)
 	void set(const std::vector<float>& host)
@@ -154,17 +149,12 @@ public:
 	//値の取得
 	//配列のサイズがdimensionになっていることが前提
 	//範囲チェックはしない
-	void get(float* const host)
+	void get(float* const host) const
 	{
-		cublasStatus_t stat;
-		stat = cublasGetVector(dimension, sizeof(float), device, 1, host, 1);
-		if(stat != CUBLAS_STATUS_SUCCESS)
-		{
-			std::cout << "error at cublasGetVector()" << std::endl;
-		}
+		CUBLAS_CALL(cublasGetVector(dimension, sizeof(float), device, 1, host, 1));
 	}
 	//値の取得(vector版)
-	void get(std::vector<float>& host)
+	void get(std::vector<float>& host) const
 	{
 		if(this->dimension != host.size())
 		{
@@ -173,6 +163,13 @@ public:
 		}
 		//値の設定
 		this->get(host.data());
+	}
+	std::vector<float> get() const
+	{
+		std::vector<float> host;
+		this->get(host);
+		//返り値はムーブ代入される
+		return host;
 	}
 	//デバイスメモリのアドレスを取得
 	float* getAddress() const

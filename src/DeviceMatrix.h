@@ -41,14 +41,14 @@ public:
 		unsigned int size = this->rowCount * this->columnCount;
 		if(size != 0)
 		{
-			cudaMalloc((void**)&(this->device), size * sizeof(float));
-			cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice);
+			CUDA_CALL(cudaMalloc((void**)&(this->device), size * sizeof(float)));
+			CUDA_CALL(cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice));
 		}
 	}
 	//コピー代入演算子
 	DeviceMatrix& operator=(const DeviceMatrix& dm)
 	{
-		cudaFree(device);
+		CUDA_CALL(cudaFree(device));
 		
 		this->rowCount = dm.rowCount;
 		this->columnCount = dm.columnCount;
@@ -60,8 +60,8 @@ public:
 		unsigned int size = this->rowCount * this->columnCount;
 		if(size != 0)
 		{
-			cudaMalloc((void**)&(this->device), size * sizeof(float));
-			cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice);
+			CUDA_CALL(cudaMalloc((void**)&(this->device), size * sizeof(float)));
+			CUDA_CALL(cudaMemcpy(this->device, dm.device, size * sizeof(float), cudaMemcpyDeviceToDevice));
 		}
 		
 		//自分への参照を返す
@@ -83,7 +83,7 @@ public:
 	DeviceMatrix& operator=(DeviceMatrix&& dm)
 	{
 		//ムーブ先のメモリの開放
-		cudaFree(this->device);
+		CUDA_CALL(cudaFree(this->device));
 		//値とポインタのコピー
 		this->rowCount = dm.rowCount;
 		this->columnCount = dm.columnCount;
@@ -104,7 +104,7 @@ public:
 	{
 		if(rowCount * columnCount != 0)
 		{
-			cudaMalloc((void**)&device, rowCount * columnCount * sizeof(float));
+			CUDA_CALL(cudaMalloc((void**)&device, rowCount * columnCount * sizeof(float)));
 		}
 	}
 	//コンストラクタ(vector版)
@@ -124,7 +124,7 @@ public:
 	//デストラクタ
 	~DeviceMatrix()
 	{
-		cudaFree(device);
+		CUDA_CALL(cudaFree(device));
 	}
 	void set(const float* host)
 	{
@@ -132,43 +132,30 @@ public:
 		{
 			return;
 		}
-		cublasStatus_t stat;
-		stat = cublasSetMatrix(rowCount, columnCount, sizeof(float), host, rowCount, device, rowCount);
-		if(stat != CUBLAS_STATUS_SUCCESS)
-		{
-			std::cout << "error at cublasSetMatrix() stat = ";
-			std::cout << CUBLASManager::getErrorString(stat) << std::endl;
-			std::cout << "      at DeviceMatrix::set(const float*) ";
-			std::cout << "rowCount = " << rowCount << ", ";
-			std::cout << "columnCount = " << columnCount << std::endl;
-		}
+		CUBLAS_CALL(cublasSetMatrix(rowCount, columnCount, sizeof(float), host, rowCount, device, rowCount));
 	}
 	void set(const std::vector<float>& host)
 	{
 		this->set(host.data());
 	}
-	void get(float* host)
+	void get(float* const host) const
 	{
 		if(rowCount * columnCount == 0)
 		{
 			return;
 		}
-		cublasStatus_t stat;
-		stat = cublasGetMatrix(rowCount, columnCount, sizeof(float), device, rowCount, host, rowCount);
-		if(stat != CUBLAS_STATUS_SUCCESS)
-		{
-			std::cout << "error at cublasGetMatrix() stat = ";
-			std::cout << CUBLASManager::getErrorString(stat) << std::endl;
-			std::cout << "      at DeviceMatrix::get(const float*) ";
-			std::cout << "rowCount = " << rowCount << ", ";
-			std::cout << "columnCount = " << columnCount << std::endl;
-		}
-		
+		CUBLAS_CALL(cublasGetMatrix(rowCount, columnCount, sizeof(float), device, rowCount, host, rowCount));
 	}
-	void get(std::vector<float>& host)
+	void get(std::vector<float>& host) const
 	{
 		host.resize(rowCount * columnCount);
 		this->get(host.data());
+	}
+	std::vector<float> get() const
+	{
+		std::vector<float> host;
+		this->get(host);
+		return host;
 	}
 	float* getAddress() const
 	{

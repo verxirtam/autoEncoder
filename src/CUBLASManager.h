@@ -22,6 +22,40 @@
 #include <cuda_runtime.h>
 #include "cublas_v2.h"
 
+
+#define CUDA_CALL(cmd)\
+{\
+	cudaError_t error;\
+	error =  cmd;\
+	if(error != cudaSuccess)\
+	{\
+		std::cout << "CUDA_ERROR : ";\
+		std::cout << cudaGetErrorString(error) << " at ";\
+		std::cout << __FILE__ << " ";\
+		std::cout << __LINE__ << " ";\
+		std::cout << #cmd << std::endl;\
+	}\
+}
+
+
+
+#define CUBLAS_CALL(cmd)\
+{\
+	cublasStatus_t stat;\
+	stat =  cmd;\
+	if(stat != CUBLAS_STATUS_SUCCESS)\
+	{\
+		std::cout << "CUBLAS_ERROR : ";\
+		std::cout << CUBLASManager::getErrorString(stat) << " at ";\
+		std::cout << __FILE__ << " ";\
+		std::cout << __LINE__ << " ";\
+		std::cout << #cmd << std::endl;\
+	}\
+}
+
+
+
+
 class CUBLASManager
 {
 private:
@@ -29,12 +63,7 @@ private:
 	CUBLASManager():
 		handle()
 	{
-		cublasStatus_t stat;
-		stat = cublasCreate_v2(&handle);
-		if(stat != CUBLAS_STATUS_SUCCESS)
-		{
-			std::cout << "CUBLAS initialization failed" << std::endl;
-		}
+		CUBLAS_CALL(cublasCreate_v2(&handle));
 	}
 	//シングルトンとするため削除する
 	//コピーコンストラクタ
@@ -48,7 +77,7 @@ private:
 public:
 	virtual ~CUBLASManager()
 	{
-		cublasDestroy(handle);
+		CUBLAS_CALL(cublasDestroy(handle));
 	}
 	static CUBLASManager& getInstance()
 	{

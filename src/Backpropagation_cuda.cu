@@ -87,7 +87,7 @@ void Backpropagation::obtainZFromU(unsigned int l)
 	obtainZFromU_kernel<<<block_count, thread_count>>>(u[l + 1].getAddress(), z[l + 1].getAddress());
 	//直後にu[l + 1]を使用するので同期する
 	//cudaDeviceSynchronize();
-	cudaStreamSynchronize(0);
+	CUDA_CALL(cudaStreamSynchronize(0));
 }
 
 
@@ -104,7 +104,7 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 		);
 	//直後にdelta[l]を使用するので同期する
 	//cudaDeviceSynchronize();
-	cudaStreamSynchronize(0);
+	CUDA_CALL(cudaStreamSynchronize(0));
 }
 
 //dEdW[l] = delta[l] * (z[l - 1])^T;

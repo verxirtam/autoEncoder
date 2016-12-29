@@ -26,14 +26,8 @@ void Saxpy
 		DeviceVector& y
 	)
 {
-	cublasStatus_t stat;
 	int N = x.getDimension();
-	stat = cublasSaxpy(CUBLASManager::getHandle(), N, alpha, x.getAddress(), 1, y.getAddress(), 1);
-	if(stat != CUBLAS_STATUS_SUCCESS)
-	{
-		std::cout << "error at cublasSaxpy()" << " : ";
-		std::cout << CUBLASManager::getErrorString(stat) << std::endl;
-	}
+	CUBLAS_CALL(cublasSaxpy(CUBLASManager::getHandle(), N, alpha, x.getAddress(), 1, y.getAddress(), 1));
 }
 
 //y = alpha * op(A) * x + beta * y;
@@ -47,21 +41,18 @@ void Sgemv
 		DeviceVector& y
 	)
 {
-	cublasStatus_t stat;
 	int M = A.getRowCount();
 	int N = A.getColumnCount();
-	stat = cublasSgemv
+	CUBLAS_CALL
 		(
-			CUBLASManager::getHandle(), op, M, N,
-			alpha, A.getAddress(), M,
-			x.getAddress(), 1,
-			beta, y.getAddress(), 1
+			cublasSgemv
+				(
+					CUBLASManager::getHandle(), op, M, N,
+					alpha, A.getAddress(), M,
+					x.getAddress(), 1,
+					beta, y.getAddress(), 1
+				)
 		);
-	if(stat != CUBLAS_STATUS_SUCCESS)
-	{
-		std::cout << "error at cublasSgemv()" << " : ";
-		std::cout << CUBLASManager::getErrorString(stat) << std::endl;
-	}
 }
 
 //C = alpha * op_A(A) + beta * op_B(B);
@@ -76,19 +67,16 @@ void Sgeam
 		DeviceMatrix& C
 	)
 {
-	cublasStatus_t stat;
 	int M = A.getRowCount();
 	int N = A.getColumnCount();
-	stat = cublasSgeam
+	CUBLAS_CALL
 		(
-			CUBLASManager::getHandle(), op_A, op_B, M, N, 
-			alpha, A.getAddress(), M,
-			beta, B.getAddress(), M,
-			C.getAddress(), M
+			cublasSgeam
+				(
+				 CUBLASManager::getHandle(), op_A, op_B, M, N, 
+				 alpha, A.getAddress(), M,
+				 beta, B.getAddress(), M,
+				 C.getAddress(), M
+				)
 		);
-	if(stat != CUBLAS_STATUS_SUCCESS)
-	{
-		std::cout << "error at cublasSgeam() : ";
-		std::cout << CUBLASManager::getErrorString(stat) << std::endl;
-	}
 }
