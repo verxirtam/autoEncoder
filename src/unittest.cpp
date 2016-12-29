@@ -725,47 +725,107 @@ TEST(BackpropagationTest, All)
 {
 	const unsigned int dimension = 1000;
 	
-	Backpropagation b(5);
-	b.init({dimension, 500, 1, 500, dimension});
+	std::vector<unsigned int> unit_count{dimension, 5, dimension};
+	Backpropagation b(unit_count.size());
+	b.init(unit_count);
 	b.initRandom();
 	
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int imax = 10;
+	int nmax = 10;
 	
-	std::vector<float> r_[4];
 	std::vector<float> r;
 	
 	std::cout << "r init start." << std::endl;
 	
-	#pragma omp parallel for
-	for(int t = 0; t < 4; t++)
+	for(int n = 0; n < nmax; n++)
 	{
-		for(int i = 0; i < imax / 4; i++)
-		{
-			r_[t].push_back(urd(engine));
-		}
-	}
-	
-	r.reserve(imax);
-	for(int t = 0; t < 4; t++)
-	{
-		r.insert(r.end(), r_[t].begin(), r_[t].end());
+		r.push_back(urd(engine));
 	}
 	
 	std::cout << "r init end." << std::endl;
 	
-	for(int i = 0; i < imax; i++)
+	for(int n = 0; n < nmax; n++)
 	{
 		
-		std::vector<float> x(dimension, r[i]);
+		std::vector<float> x(dimension, r[n]);
 		std::vector<float> y;
 		std::vector<float> d = x;
 		b.forward(x, y);
 		b.back(d);
 		b.updateParameter();
+		
+		std::cout << "//" << " n = " << n << std::endl;
+		std::cout << "///////////////////////////////////////////////////////" << std::endl;
+		std::cout << "x = (";
+		unsigned int imax = std::min(x.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << x[i] << ", ";
+		}
+		std::cout << "...)" << std::endl;
+		
+		auto z = b.getZAsVector();
+		std::cout << "z = (";
+		for(auto&& z_l : z)
+		{
+			unsigned int imax = std::min(z_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << z_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		auto u = b.getUAsVector();
+		std::cout << "u = (";
+		for(auto&& u_l : u)
+		{
+			unsigned int imax = std::min(u_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << u_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		auto dEdW = b.getDEDWAsVector();
+		std::cout << "dEdW = (";
+		for(auto&& w_l : dEdW)
+		{
+			unsigned int imax = std::min(w_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << w_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		auto delta = b.getDeltaAsVector();
+		std::cout << "delta = (";
+		for(auto&& d_l : delta)
+		{
+			unsigned int imax = std::min(d_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << d_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		std::cout << "y = (";
+		imax = std::min(y.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << y[i] << ", ";
+		}
+		std::cout << "...)" << std::endl;
 	}
 	std::vector<float> x(dimension, 0.5f);
 	std::vector<float> y(dimension, 0.0f);
@@ -778,7 +838,7 @@ TEST(BackpropagationTest, All)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*Simple*";
+	//::testing::GTEST_FLAG(filter)="*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
 	

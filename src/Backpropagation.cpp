@@ -70,19 +70,25 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 
 	for(unsigned int l = 0; l < layerCount; l++)
 	{
-		u.push_back(DeviceVector(unitCount[l]));
+		if(unitCount[l] == 0)
+		{
+			std::cout << "error at Backpropagation::init() : unitCount[" << l << "] == 0." << std::endl;
+		}
+		
 		z.push_back(DeviceVector(unitCount[l]));
 		if(l == 0)
 		{
 			//インデックスl = 0は使用しないのでダミーの値を格納する。
-			weight.push_back( DeviceMatrix(1,1));
-			bias.push_back(   DeviceVector(1  ));
-			dEdW.push_back(   DeviceMatrix(1,1));
-			dEdb.push_back(   DeviceVector(1  ));
-			WTdelta.push_back(DeviceVector(1  ));
+			u.push_back(      DeviceVector{0.0f}      );
+			weight.push_back( DeviceMatrix(1,1,{0.0f}));
+			bias.push_back(   DeviceVector{0.0f}      );
+			dEdW.push_back(   DeviceMatrix(1,1,{0.0f}));
+			dEdb.push_back(   DeviceVector{0.0f}      );
+			WTdelta.push_back(DeviceVector{0.0f}      );
 		}
 		else
 		{
+			u.push_back(     DeviceVector(unitCount[l]));
 			weight.push_back(DeviceMatrix(unitCount[l],unitCount[l-1]));
 			bias.push_back(  DeviceVector(unitCount[l]));
 			dEdW.push_back(  DeviceMatrix(unitCount[l],unitCount[l-1]));
@@ -105,7 +111,10 @@ void Backpropagation::initRandom(void)
 		std::vector<float> h_w;
 		for(unsigned int i =0; i < M * N; i++)
 		{
-			h_w.push_back(urd(engine));
+			//定義域の次元が大きい時に絶対値が大きくなると
+			//活性化関数の値が1に上げ止まってしまうので
+			//乱数の値をNで割る
+			h_w.push_back(urd(engine) / static_cast<float>(N));
 		}
 		w.set(h_w);
 	}

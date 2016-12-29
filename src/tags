@@ -10,6 +10,8 @@ BackpropagationTest	unittest.cpp	/^class BackpropagationTest : public ::testing:
 COMMON_FLAGS	makefile	/^COMMON_FLAGS := -pg -g -O0$/;"	m
 CUBLASManager	CUBLASManager.h	/^	CUBLASManager():$/;"	f	class:CUBLASManager
 CUBLASManager	CUBLASManager.h	/^class CUBLASManager$/;"	c
+CUBLAS_CALL	CUBLASManager.h	42;"	d
+CUDA_CALL	CUBLASManager.h	26;"	d
 CUDA_SRCS	makefile	/^CUDA_SRCS := $(shell ls *.cu)$/;"	m
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
