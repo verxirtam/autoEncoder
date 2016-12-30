@@ -114,6 +114,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagationTest.html">BackpropagationTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagationAllTest.html">BackpropagationAllTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -181,8 +183,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac1c291c9bde3a4f2cfbf113b5d03ccca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e8203e08f3c4ecbf257300f185a7e79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79">TEST</a> (<a class="el" href="classBackpropagationTest.html">BackpropagationTest</a>, Simple)</td></tr>
 <tr class="separator:a0e8203e08f3c4ecbf257300f185a7e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9d73219db2efb07534292c22ee42862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#af9d73219db2efb07534292c22ee42862">TEST</a> (<a class="el" href="classBackpropagationTest.html">BackpropagationTest</a>, All)</td></tr>
-<tr class="separator:af9d73219db2efb07534292c22ee42862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec40988a8a0cd6b89b8e46badcf29ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a3ec40988a8a0cd6b89b8e46badcf29ee">INSTANTIATE_TEST_CASE_P</a> (InstantiateBackpropagationAllTest, <a class="el" href="classBackpropagationAllTest.html">BackpropagationAllTest</a>,::testing::Values(200, 201, 202, 203, 204, 205, 206))</td></tr>
+<tr class="separator:a3ec40988a8a0cd6b89b8e46badcf29ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca61c1799b7d4dc54c35f757eff14c52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52">TEST_P</a> (<a class="el" href="classBackpropagationAllTest.html">BackpropagationAllTest</a>, All)</td></tr>
+<tr class="separator:aca61c1799b7d4dc54c35f757eff14c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -303,6 +307,38 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">::testing::&#160;</td>
           <td class="paramname"><em>Values</em>2, 3, 10, 100&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ec40988a8a0cd6b89b8e46badcf29ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INSTANTIATE_TEST_CASE_P </td>
+          <td>(</td>
+          <td class="paramtype">InstantiateBackpropagationAllTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classBackpropagationAllTest.html">BackpropagationAllTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::testing::&#160;</td>
+          <td class="paramname"><em>Values</em>200, 201, 202, 203, 204, 205, 206&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -820,41 +856,6 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="af9d73219db2efb07534292c22ee42862"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">TEST </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classBackpropagationTest.html">BackpropagationTest</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">All&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unittest_8cpp_af9d73219db2efb07534292c22ee42862_cgraph.png" border="0" usemap="#unittest_8cpp_af9d73219db2efb07534292c22ee42862_cgraph" alt=""/></div>
-<map name="unittest_8cpp_af9d73219db2efb07534292c22ee42862_cgraph" id="unittest_8cpp_af9d73219db2efb07534292c22ee42862_cgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="109,5,253,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a6ced43c0892681d4f32e0a84ad0d22aa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1152,6 +1153,41 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="aca61c1799b7d4dc54c35f757eff14c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_P </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classBackpropagationAllTest.html">BackpropagationAllTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">All&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unittest_8cpp_aca61c1799b7d4dc54c35f757eff14c52_cgraph.png" border="0" usemap="#unittest_8cpp_aca61c1799b7d4dc54c35f757eff14c52_cgraph" alt=""/></div>
+<map name="unittest_8cpp_aca61c1799b7d4dc54c35f757eff14c52_cgraph" id="unittest_8cpp_aca61c1799b7d4dc54c35f757eff14c52_cgraph">
+<area shape="rect" id="node2" href="classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="125,5,269,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a94b1957249b9d95386b1a60dce55735c"></a>
 <div class="memitem">
@@ -1168,7 +1204,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 30 2016 02:04:19 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 30 2016 20:54:14 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

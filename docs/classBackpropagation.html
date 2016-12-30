@@ -135,8 +135,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3089e4192f8448e4d4e83915a8aed438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5efd2913d5588b8c12d56f129c5d9ae1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a5efd2913d5588b8c12d56f129c5d9ae1">getWeight</a> () const </td></tr>
 <tr class="separator:a5efd2913d5588b8c12d56f129c5d9ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9091daf11c984eb9e5225d0d324a9dda"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda">getWeightAsVector</a> () const </td></tr>
+<tr class="separator:a9091daf11c984eb9e5225d0d324a9dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92b8518396e44af72149674389b561c1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceVector.html">DeviceVector</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a92b8518396e44af72149674389b561c1">getBias</a> () const </td></tr>
 <tr class="separator:a92b8518396e44af72149674389b561c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10dab2abddf279a343882d07ad372ef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ae10dab2abddf279a343882d07ad372ef">getBiasAsVector</a> () const </td></tr>
+<tr class="separator:ae10dab2abddf279a343882d07ad372ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06950b24d2fcd028cf79c409f2994e25"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a06950b24d2fcd028cf79c409f2994e25">getDEDW</a> () const </td></tr>
 <tr class="separator:a06950b24d2fcd028cf79c409f2994e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09898475e7c091b1ffe89a877477af8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#aa09898475e7c091b1ffe89a877477af8">getDEDWAsVector</a> () const </td></tr>
@@ -147,6 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a84293e616eac6a6b4a8b661abc320d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada3aa286e72185627564c11716ef6acf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ada3aa286e72185627564c11716ef6acf">getDeltaAsVector</a> () const </td></tr>
 <tr class="separator:ada3aa286e72185627564c11716ef6acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90adcdc5ef8c3e007c55caefacd66eb9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a90adcdc5ef8c3e007c55caefacd66eb9">getDEDBAsVector</a> () const </td></tr>
+<tr class="separator:a90adcdc5ef8c3e007c55caefacd66eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433519629dc1dcbb5403d4c8bf7a433f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceVector.html">DeviceVector</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a433519629dc1dcbb5403d4c8bf7a433f">getWTDelta</a> () const </td></tr>
 <tr class="separator:a433519629dc1dcbb5403d4c8bf7a433f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -374,6 +380,29 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ae10dab2abddf279a343882d07ad372ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;float&gt; &gt; Backpropagation::getBiasAsVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abb86f3dae751a8aaa0f73dffc9278869"></a>
 <div class="memitem">
 <div class="memproto">
@@ -394,6 +423,38 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a90adcdc5ef8c3e007c55caefacd66eb9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;float&gt; &gt; Backpropagation::getDEDBAsVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a90adcdc5ef8c3e007c55caefacd66eb9_cgraph.png" border="0" usemap="#classBackpropagation_a90adcdc5ef8c3e007c55caefacd66eb9_cgraph" alt=""/></div>
+<map name="classBackpropagation_a90adcdc5ef8c3e007c55caefacd66eb9_cgraph" id="classBackpropagation_a90adcdc5ef8c3e007c55caefacd66eb9_cgraph">
+<area shape="rect" id="node2" href="classBackpropagation.html#ada3aa286e72185627564c11716ef6acf" title="Backpropagation::getDelta\lAsVector" alt="" coords="253,5,429,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -501,7 +562,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph.png" border="0" usemap="#classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph" alt=""/></div>
 <map name="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph" id="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="229,12,285,39"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a90adcdc5ef8c3e007c55caefacd66eb9" title="Backpropagation::getDEDBAs\lVector" alt="" coords="230,5,429,46"/><area shape="rect" id="node3" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="301,71,357,97"/></map>
 </div>
 </p>
 
@@ -595,6 +656,29 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">const std::vector&lt;<a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&gt;&amp; Backpropagation::getWeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9091daf11c984eb9e5225d0d324a9dda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;float&gt; &gt; Backpropagation::getWeightAsVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1251,7 +1335,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 30 2016 02:04:19 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 30 2016 20:54:14 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
