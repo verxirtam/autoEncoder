@@ -135,15 +135,17 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{\</div>
-<div class="line">    cublasStatus_t stat;\</div>
-<div class="line">    stat =  cmd;\</div>
-<div class="line">    if(stat != CUBLAS_STATUS_SUCCESS)\</div>
 <div class="line">    {\</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;CUBLAS_ERROR : &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; <a class="code" href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a>(stat) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">        cublasStatus_t stat;\</div>
+<div class="line">        stat =  cmd;\</div>
+<div class="line">        if(stat != CUBLAS_STATUS_SUCCESS)\</div>
+<div class="line">        {\</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;CUBLAS_ERROR : &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; <a class="code" href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a>(stat) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">        }\</div>
 <div class="line">    }\</div>
 <div class="line">}</div>
 <div class="ttc" id="classCUBLASManager_html_a15c9188706fd6dc73677d9c3ea138723"><div class="ttname"><a href="classCUBLASManager.html#a15c9188706fd6dc73677d9c3ea138723">CUBLASManager::getErrorString</a></div><div class="ttdeci">static const char * getErrorString(cublasStatus_t error)</div><div class="ttdef"><b>Definition:</b> CUBLASManager.cpp:21</div></div>
@@ -164,15 +166,17 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">{\</div>
-<div class="line">    cudaError_t error;\</div>
-<div class="line">    error =  cmd;\</div>
-<div class="line">    if(error != cudaSuccess)\</div>
 <div class="line">    {\</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;CUDA_ERROR : &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; cudaGetErrorString(error) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">        std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">        cudaError_t error;\</div>
+<div class="line">        error =  cmd;\</div>
+<div class="line">        if(error != cudaSuccess)\</div>
+<div class="line">        {\</div>
+<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;CUDA_ERROR : &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; cudaGetErrorString(error) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
+<div class="line">            std::cout &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
+<div class="line">        }\</div>
 <div class="line">    }\</div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -181,7 +185,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 30 2016 20:54:14 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 31 2016 00:58:36 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

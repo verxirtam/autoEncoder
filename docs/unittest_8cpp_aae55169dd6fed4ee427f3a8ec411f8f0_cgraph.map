@@ -1,0 +1,8 @@
+<map id="BackpropagationTest_All_showInfo" name="BackpropagationTest_All_showInfo">
+<area shape="rect" id="node2" href="$classBackpropagation.html#a3089e4192f8448e4d4e83915a8aed438" title="Backpropagation::getZAsVector" alt="" coords="202,5,409,32"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a320a9bce5775a00805ee4ef8dc23f3bf" title="Backpropagation::getUAsVector" alt="" coords="201,56,410,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#aa09898475e7c091b1ffe89a877477af8" title="Backpropagation::getDEDWAs\lVector" alt="" coords="204,107,407,149"/>
+<area shape="rect" id="node5" href="$classBackpropagation.html#ada3aa286e72185627564c11716ef6acf" title="Backpropagation::getDelta\lAsVector" alt="" coords="217,173,393,214"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda" title="Backpropagation::getWeight\lAsVector" alt="" coords="212,238,399,279"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#ae10dab2abddf279a343882d07ad372ef" title="Backpropagation::getBias\lAsVector" alt="" coords="220,303,391,345"/>
+</map>
