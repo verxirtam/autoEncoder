@@ -1,5 +1,6 @@
 <map id="src/DeviceMatrix.h" name="src/DeviceMatrix.h">
-<area shape="rect" id="node3" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="211,80,348,107"/>
-<area shape="rect" id="node7" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="509,155,632,181"/>
-<area shape="rect" id="node10" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="350,155,484,181"/>
+<area shape="rect" id="node3" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="142,80,279,107"/>
+<area shape="rect" id="node6" href="$CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="216,155,339,181"/>
+<area shape="rect" id="node11" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="357,229,491,256"/>
+<area shape="rect" id="node8" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="75,229,197,256"/>
 </map>

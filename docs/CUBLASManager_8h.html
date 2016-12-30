@@ -91,16 +91,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;sstream&gt;</code><br/>
-<code>#include &lt;cuda_runtime.h&gt;</code><br/>
 <code>#include &quot;cublas_v2.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="CudaException_8h_source.html">CudaException.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="CUDAManager_8h_source.html">CUDAManager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="CuBlasException_8h_source.html">CuBlasException.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for CUBLASManager.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="CUBLASManager_8h__incl.png" border="0" usemap="#src_2CUBLASManager_8h" alt=""/></div>
 <map name="src_2CUBLASManager_8h" id="src_2CUBLASManager_8h">
-<area shape="rect" id="node5" href="CudaException_8h.html" title="CudaException.h" alt="" coords="509,80,632,107"/><area shape="rect" id="node8" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="350,80,484,107"/></map>
+<area shape="rect" id="node4" href="CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="216,80,339,107"/><area shape="rect" id="node9" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="357,155,491,181"/><area shape="rect" id="node6" href="CudaException_8h.html" title="CudaException.h" alt="" coords="75,155,197,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -119,8 +118,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a66bc11e96a4f269bc00a472efd4f86fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CUBLASManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cmd)</td></tr>
-<tr class="separator:a66bc11e96a4f269bc00a472efd4f86fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7faf58a47ee95fc475079ec1d80e9d67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CUBLASManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cmd)</td></tr>
 <tr class="separator:a7faf58a47ee95fc475079ec1d80e9d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -159,44 +156,10 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="a66bc11e96a4f269bc00a472efd4f86fb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CUDA_CALL</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">cmd</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">{\</div>
-<div class="line">    {\</div>
-<div class="line">        cudaError_t error;\</div>
-<div class="line">        error =  cmd;\</div>
-<div class="line">        if(error != cudaSuccess)\</div>
-<div class="line">        {\</div>
-<div class="line">            std::stringstream msg;\</div>
-<div class="line">            msg &lt;&lt; <span class="stringliteral">&quot;CUDA_ERROR : &quot;</span>;\</div>
-<div class="line">            msg &lt;&lt; cudaGetErrorString(error) &lt;&lt; <span class="stringliteral">&quot; at &quot;</span>;\</div>
-<div class="line">            msg &lt;&lt; __FILE__ &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;\</div>
-<div class="line">            msg &lt;&lt; __LINE__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">            msg &lt;&lt; __PRETTY_FUNCTION__ &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;\</div>
-<div class="line">            msg &lt;&lt; #cmd &lt;&lt; std::endl;\</div>
-<div class="line">            throw <a class="code" href="classCudaException.html">CudaException</a>(msg.str());\</div>
-<div class="line">        }\</div>
-<div class="line">    }\</div>
-<div class="line">}</div>
-<div class="ttc" id="classCudaException_html"><div class="ttname"><a href="classCudaException.html">CudaException</a></div><div class="ttdef"><b>Definition:</b> CudaException.h:25</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 31 2016 03:39:38 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 31 2016 08:18:05 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
