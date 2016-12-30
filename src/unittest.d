@@ -17,4 +17,5 @@ unittest.o: unittest.cpp DeviceVector.h CUBLASManager.h \
  /usr/local/cuda/include/vector_functions.hpp \
  /usr/local/cuda/include/cublas_v2.h /usr/local/cuda/include/cublas_api.h \
  /usr/local/cuda/include/cuComplex.h /usr/local/cuda/include/cuda_fp16.h \
- DeviceMatrix.h Backpropagation.h CUBLASFunction.h
+ CudaException.h CuBlasException.h DeviceMatrix.h Backpropagation.h \
+ CUBLASFunction.h BackpropagationException.h

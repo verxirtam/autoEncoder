@@ -16,4 +16,5 @@ CUBLASManager.o: CUBLASManager.cpp CUBLASManager.h \
  /usr/local/cuda/include/vector_functions.h \
  /usr/local/cuda/include/vector_functions.hpp \
  /usr/local/cuda/include/cublas_v2.h /usr/local/cuda/include/cublas_api.h \
- /usr/local/cuda/include/cuComplex.h /usr/local/cuda/include/cuda_fp16.h
+ /usr/local/cuda/include/cuComplex.h /usr/local/cuda/include/cuda_fp16.h \
+ CudaException.h CuBlasException.h

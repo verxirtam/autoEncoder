@@ -674,7 +674,7 @@ TEST(BackpropagationTest, Simple)
 	//結果が想定通りか確認
 	std::vector<float> d{0.0f};
 	d[0] = std::tanh(2.0f * x[0] + 1.0);
-	d[0] = std::tanh(3.0f * d[0] + 2.0);
+	d[0] = 3.0f * d[0] + 2.0;//最後のレイヤの活性化関数は恒等写像
 	//結果が十分近いことを確認
 	EXPECT_NEAR(y[0], d[0], 0.0001f);
 	
@@ -684,7 +684,7 @@ TEST(BackpropagationTest, Simple)
 	u[1][0] = 2.0f * x[0]    + 1.0;
 	z[1][0] = std::tanh(u[1][0]);
 	u[2][0] = 3.0f * z[1][0] + 2.0;
-	z[2][0] = std::tanh(u[2][0]);
+	z[2][0] = u[2][0];//最後のレイヤは恒等写像
 	
 	auto hz = b.getZAsVector();
 	auto hu = b.getUAsVector();
@@ -735,10 +735,10 @@ INSTANTIATE_TEST_CASE_P
 		InstantiateBackpropagationAllTest,
 		BackpropagationAllTest,
 		//::testing::Values(205)
-		::testing::Values(200, 201, 202, 203, 204, 205, 206)
+		//::testing::Values(200, 201, 202, 203, 204, 205, 206)
 		//::testing::Values(200, 206, 213, 219, 225)
 		//::testing::Values(200, 225, 250, 275, 300)
-		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000)
+		::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
@@ -852,9 +852,9 @@ void BackpropagationTest_All_showInfo
 }
 
 
-TEST(BackpropagationTest, All)
+TEST_P(BackpropagationAllTest, All)
 {
-	const unsigned int dimension = 205;//GetParam();//
+	const unsigned int dimension = GetParam();
 	
 	std::vector<unsigned int> unit_count{dimension, 5, dimension};
 	Backpropagation b(unit_count.size());
@@ -865,7 +865,7 @@ TEST(BackpropagationTest, All)
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int nmax = 100;
+	int nmax = 5000;
 	
 	std::vector<float> r;
 	
@@ -890,11 +890,7 @@ TEST(BackpropagationTest, All)
 		b.back(d);
 		b.updateParameter();
 		
-		//if(n != nmax -1)
-		//{
-		//	continue;
-		//}
-		if(n < 2)
+		if(n == nmax -1)
 		{
 			BackpropagationTest_All_showInfo(dimension, n, b, x, y);
 		}

@@ -79,8 +79,8 @@ namespace
 
 void Backpropagation::obtainZFromU(unsigned int l)
 {
-	//最後のレイヤの場合は恒等写像なので単にコピーする
-	if(l == layerCount - 1)
+	//最後のレイヤ(l == layerCount - 2)の場合は恒等写像なので単にコピーする
+	if(l == layerCount - 2)
 	{
 		z[l + 1] = u[l + 1];
 		return;

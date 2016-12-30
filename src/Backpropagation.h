@@ -25,6 +25,9 @@
 
 #include "CUBLASFunction.h"
 
+#include "BackpropagationException.h"
+
+
 class Backpropagation
 {
 private:
@@ -124,7 +127,7 @@ public:
 	{
 		if(w.size() != this->weight.size())
 		{
-			std::cout << "error at setWeight() :  w.size() != this->weight.size()." << std::endl;
+			throw BackpropagationException("error at setWeight() :  w.size() != this->weight.size().");
 		}
 		unsigned int imax = this->weight.size();
 		for(unsigned int i = 0; i < imax; i++)
@@ -137,7 +140,7 @@ public:
 	{
 		if(b.size() != this->bias.size())
 		{
-			std::cout << "error at setBias() :  b.size() != this->bias.size()." << std::endl;
+			throw BackpropagationException("error at setBias() :  b.size() != this->bias.size().");
 		}
 		unsigned int imax = this->weight.size();
 		for(unsigned int i = 0; i < imax; i++)

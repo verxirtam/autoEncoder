@@ -17,4 +17,5 @@ Backpropagation.o: Backpropagation.cpp Backpropagation.h CUBLASFunction.h \
  /usr/local/cuda/include/vector_functions.hpp \
  /usr/local/cuda/include/cublas_v2.h /usr/local/cuda/include/cublas_api.h \
  /usr/local/cuda/include/cuComplex.h /usr/local/cuda/include/cuda_fp16.h \
- DeviceMatrix.h
+ CudaException.h CuBlasException.h DeviceMatrix.h \
+ BackpropagationException.h

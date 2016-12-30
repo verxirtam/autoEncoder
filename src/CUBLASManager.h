@@ -17,11 +17,15 @@
  */
 #pragma once
 
-#include <iostream>
+//#include <iostream>
+
+#include <sstream>
 
 #include <cuda_runtime.h>
 #include "cublas_v2.h"
 
+#include "CudaException.h"
+#include "CuBlasException.h"
 
 #define CUDA_CALL(cmd)\
 {\
@@ -30,11 +34,14 @@
 		error =  cmd;\
 		if(error != cudaSuccess)\
 		{\
-			std::cout << "CUDA_ERROR : ";\
-			std::cout << cudaGetErrorString(error) << " at ";\
-			std::cout << __FILE__ << ":";\
-			std::cout << __LINE__ << " ";\
-			std::cout << #cmd << std::endl;\
+			std::stringstream msg;\
+			msg << "CUDA_ERROR : ";\
+			msg << cudaGetErrorString(error) << " at ";\
+			msg << __FILE__ << ":";\
+			msg << __LINE__ << " ";\
+			msg << __PRETTY_FUNCTION__ << " ";\
+			msg << #cmd << std::endl;\
+			throw CudaException(msg.str());\
 		}\
 	}\
 }
@@ -48,11 +55,13 @@
 		stat =  cmd;\
 		if(stat != CUBLAS_STATUS_SUCCESS)\
 		{\
-			std::cout << "CUBLAS_ERROR : ";\
-			std::cout << CUBLASManager::getErrorString(stat) << " at ";\
-			std::cout << __FILE__ << ":";\
-			std::cout << __LINE__ << " ";\
-			std::cout << #cmd << std::endl;\
+			std::stringstream msg;\
+			msg << "CUBLAS_ERROR : ";\
+			msg << CUBLASManager::getErrorString(stat) << " at ";\
+			msg << __FILE__ << ":";\
+			msg << __LINE__ << " ";\
+			msg << #cmd << std::endl;\
+			throw CuBlasException(msg.str());\
 		}\
 	}\
 }

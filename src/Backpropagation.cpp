@@ -57,7 +57,7 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 {
 	if(layerCount != unit_count.size())
 	{
-		std::cout << "error at Backpropagation::init() : layerCount != unit_count.size()." << std::endl;
+		throw BackpropagationException("error at Backpropagation::init() : layerCount != unit_count.size().");
 	}
 	unitCount = unit_count;
 
@@ -72,7 +72,9 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 	{
 		if(unitCount[l] == 0)
 		{
-			std::cout << "error at Backpropagation::init() : unitCount[" << l << "] == 0." << std::endl;
+			std::stringstream msg;
+			msg << "error at Backpropagation::init() : unitCount[" << l << "] == 0.";
+			throw BackpropagationException(msg.str());
 		}
 		
 		z.push_back(DeviceVector(unitCount[l]));
