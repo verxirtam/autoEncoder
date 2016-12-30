@@ -118,13 +118,14 @@ void Backpropagation::initRandom(void)
 		}
 		w.set(h_w);
 	}
+	//biasは一律0で初期化する
 	for(auto&& b : bias)
 	{
 		unsigned int N = b.getDimension();
 		std::vector<float> h_b;
 		for(unsigned int i =0; i < N; i++)
 		{
-			h_b.push_back(urd(engine));
+			h_b.push_back(0.0f);
 		}
 		b.set(h_b);
 	}

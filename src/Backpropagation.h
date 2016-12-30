@@ -189,9 +189,27 @@ public:
 	{
 		return this->weight;
 	}
+	std::vector<std::vector<float> > getWeightAsVector() const
+	{
+		std::vector<std::vector<float> > hweight;
+		for(auto&& _w : this->weight)
+		{
+			hweight.push_back(_w.get());
+		}
+		return hweight;
+	}
 	const std::vector<DeviceVector>& getBias() const
 	{
 		return this->bias;
+	}
+	std::vector<std::vector<float> > getBiasAsVector() const
+	{
+		std::vector<std::vector<float> > hbias;
+		for(auto&& _b : this->bias)
+		{
+			hbias.push_back(_b.get());
+		}
+		return hbias;
 	}
 	const std::vector<DeviceMatrix>& getDEDW() const
 	{
@@ -222,6 +240,10 @@ public:
 			hdelta.push_back(_d.get());
 		}
 		return hdelta;
+	}
+	std::vector<std::vector<float> > getDEDBAsVector() const
+	{
+		return getDeltaAsVector();
 	}
 	const std::vector<DeviceVector>& getWTDelta() const
 	{

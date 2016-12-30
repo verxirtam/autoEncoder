@@ -721,9 +721,29 @@ TEST(BackpropagationTest, Simple)
 	std::cout << "hdEdW[1][0] = " << hdEdW[1][0] << ", dEdW[1][0] = " <<  dEdW[1][0] << std::endl;
 	std::cout << "hdEdW[2][0] = " << hdEdW[2][0] << ", dEdW[2][0] = " <<  dEdW[2][0] << std::endl;
 }
-TEST(BackpropagationTest, All)
+
+/////////////////////////////////////////////////////////////////////////////////
+class BackpropagationAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
 {
-	const unsigned int dimension = 1000;
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateBackpropagationAllTest,
+		BackpropagationAllTest,
+		::testing::Values(200, 201, 202, 203, 204, 205, 206)
+		//::testing::Values(200, 206, 213, 219, 225)
+		//::testing::Values(200, 225, 250, 275, 300)
+		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000)
+		//::testing::Values(500, 625, 750, 875, 1000)
+	);
+
+TEST_P(BackpropagationAllTest, All)
+{
+	const unsigned int dimension = GetParam();
 	
 	std::vector<unsigned int> unit_count{dimension, 5, dimension};
 	Backpropagation b(unit_count.size());
@@ -734,7 +754,7 @@ TEST(BackpropagationTest, All)
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int nmax = 10;
+	int nmax = 100;
 	
 	std::vector<float> r;
 	
@@ -757,6 +777,11 @@ TEST(BackpropagationTest, All)
 		b.back(d);
 		b.updateParameter();
 		
+		if(n != nmax -1)
+		{
+			continue;
+		}
+		std::cout << "//" << " dimension = " << dimension << std::endl;
 		std::cout << "//" << " n = " << n << std::endl;
 		std::cout << "///////////////////////////////////////////////////////" << std::endl;
 		std::cout << "x = (";
@@ -819,6 +844,33 @@ TEST(BackpropagationTest, All)
 		}
 		std::cout << "...)" << std::endl;
 		
+		auto weight = b.getWeightAsVector();
+		std::cout << "weight = (";
+		for(auto&& w_l : weight)
+		{
+			unsigned int imax = std::min(w_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << w_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		auto bias = b.getBiasAsVector();
+		std::cout << "bias = (";
+		for(auto&& b_l : bias)
+		{
+			unsigned int imax = std::min(b_l.size(), 10ul);
+			for(unsigned int i = 0; i < imax; i++)
+			{
+				std::cout << b_l[i] << ", ";
+			}
+			std::cout << std::endl;
+		}
+		std::cout << "...)" << std::endl;
+		
+		
 		std::cout << "y = (";
 		imax = std::min(y.size(), 10ul);
 		for(unsigned int i = 0; i < imax; i++)
@@ -826,6 +878,7 @@ TEST(BackpropagationTest, All)
 			std::cout << y[i] << ", ";
 		}
 		std::cout << "...)" << std::endl;
+		
 	}
 	std::vector<float> x(dimension, 0.5f);
 	std::vector<float> y(dimension, 0.0f);
@@ -838,7 +891,7 @@ TEST(BackpropagationTest, All)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="*Simple*";
+	::testing::GTEST_FLAG(filter)="*All*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
 	
