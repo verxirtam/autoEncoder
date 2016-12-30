@@ -910,7 +910,7 @@ TEST(BackpropagationTest, All)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*All*";
+	::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
 	

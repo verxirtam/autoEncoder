@@ -59,17 +59,21 @@ namespace
 	__global__
 	void obtainDEDW_kernel
 		(
+			unsigned int block_index_offset,
+			unsigned int thread_count,
+			unsigned int row_count,
 			const float* const delta_l,
 			const float* const z_lm1,
 			float* const dedw_l
 		)
 	{
 		//ブロックインデックス、スレッドインデックスの読み替え
-		int i = threadIdx.x;
-		int imax = blockDim.x;
-		int j = threadIdx.y;
+		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + block_index_offset * thread_count;
+		unsigned int i = s % row_count;
+		unsigned int j = s / row_count;
+		unsigned int k = s;
 		
-		dedw_l[i + j * imax] = delta_l[i] * z_lm1[j];
+		dedw_l[k] = delta_l[i] * z_lm1[j];
 	}
 }
 
@@ -114,15 +118,51 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 //dEdW[l] = delta[l] * (z[l - 1])^T;
 void Backpropagation::obtainDEDW(unsigned int l)
 {
-	dim3 grid(1, 1, 1);
-	dim3 block(1, 1, 1);
-	block.x = dEdW[l].getRowCount();
-	block.y = dEdW[l].getColumnCount();
+	//1ブロックあたりのスレッド数の上限(GTX1080の値)
+	unsigned int thread_count = 1024;
 	
-	//dEdW[l] = delta[l] * (z[l - 1])^T;
-	obtainDEDW_kernel<<<grid, block>>>(delta[l].getAddress(), z[l - 1].getAddress(), dEdW[l].getAddress());
-	//カーネル実行時のエラーチェック
-	CUDA_CALL(cudaGetLastError());
+	unsigned int N = dEdW[l].getRowCount();
+	unsigned int M = dEdW[l].getColumnCount();
+	//実行するスレッド数の合計
+	unsigned int thread_count_total = N * M;
+	
+	//スレッド数thread_countで実行するブロック数
+	unsigned int block_count         = thread_count_total / thread_count;
+	//スレッド数の残り
+	unsigned int thread_count_remain = thread_count_total % thread_count;
+	
+	if(block_count * thread_count != 0)
+	{
+		//ブロックあたりthread_countスレッドで実行
+		//dEdW[l] = delta[l] * (z[l - 1])^T;
+		obtainDEDW_kernel<<<block_count, thread_count>>>
+			(
+				0,
+				thread_count,
+				N,
+				delta[l].getAddress(),
+				z[l - 1].getAddress(),
+				dEdW[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	if(thread_count_remain != 0)
+	{
+		//上記のカーネル実行で余ったスレッドの実行
+		//dEdW[l] = delta[l] * (z[l - 1])^T;
+		obtainDEDW_kernel<<<1, thread_count_remain>>>
+			(
+				block_count,
+				thread_count,
+				N,
+				delta[l].getAddress(),
+				z[l - 1].getAddress(),
+				dEdW[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
 }
 
 
