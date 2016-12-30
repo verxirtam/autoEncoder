@@ -25,15 +25,17 @@
 
 #define CUDA_CALL(cmd)\
 {\
-	cudaError_t error;\
-	error =  cmd;\
-	if(error != cudaSuccess)\
 	{\
-		std::cout << "CUDA_ERROR : ";\
-		std::cout << cudaGetErrorString(error) << " at ";\
-		std::cout << __FILE__ << " ";\
-		std::cout << __LINE__ << " ";\
-		std::cout << #cmd << std::endl;\
+		cudaError_t error;\
+		error =  cmd;\
+		if(error != cudaSuccess)\
+		{\
+			std::cout << "CUDA_ERROR : ";\
+			std::cout << cudaGetErrorString(error) << " at ";\
+			std::cout << __FILE__ << ":";\
+			std::cout << __LINE__ << " ";\
+			std::cout << #cmd << std::endl;\
+		}\
 	}\
 }
 
@@ -41,15 +43,17 @@
 
 #define CUBLAS_CALL(cmd)\
 {\
-	cublasStatus_t stat;\
-	stat =  cmd;\
-	if(stat != CUBLAS_STATUS_SUCCESS)\
 	{\
-		std::cout << "CUBLAS_ERROR : ";\
-		std::cout << CUBLASManager::getErrorString(stat) << " at ";\
-		std::cout << __FILE__ << " ";\
-		std::cout << __LINE__ << " ";\
-		std::cout << #cmd << std::endl;\
+		cublasStatus_t stat;\
+		stat =  cmd;\
+		if(stat != CUBLAS_STATUS_SUCCESS)\
+		{\
+			std::cout << "CUBLAS_ERROR : ";\
+			std::cout << CUBLASManager::getErrorString(stat) << " at ";\
+			std::cout << __FILE__ << ":";\
+			std::cout << __LINE__ << " ";\
+			std::cout << #cmd << std::endl;\
+		}\
 	}\
 }
 

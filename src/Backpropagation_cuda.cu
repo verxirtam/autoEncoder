@@ -85,6 +85,8 @@ void Backpropagation::obtainZFromU(unsigned int l)
 	int block_count = 1;
 	int thread_count = u[l + 1].getDimension();
 	obtainZFromU_kernel<<<block_count, thread_count>>>(u[l + 1].getAddress(), z[l + 1].getAddress());
+	//カーネル実行時のエラーチェック
+	CUDA_CALL(cudaGetLastError());
 	//直後にu[l + 1]を使用するので同期する
 	//cudaDeviceSynchronize();
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -102,6 +104,8 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 			WTdelta[l + 1].getAddress(),
 			delta[l].getAddress()
 		);
+	//カーネル実行時のエラーチェック
+	CUDA_CALL(cudaGetLastError());
 	//直後にdelta[l]を使用するので同期する
 	//cudaDeviceSynchronize();
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -117,6 +121,8 @@ void Backpropagation::obtainDEDW(unsigned int l)
 	
 	//dEdW[l] = delta[l] * (z[l - 1])^T;
 	obtainDEDW_kernel<<<grid, block>>>(delta[l].getAddress(), z[l - 1].getAddress(), dEdW[l].getAddress());
+	//カーネル実行時のエラーチェック
+	CUDA_CALL(cudaGetLastError());
 }
 
 

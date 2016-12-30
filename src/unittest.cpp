@@ -734,6 +734,7 @@ INSTANTIATE_TEST_CASE_P
 	(
 		InstantiateBackpropagationAllTest,
 		BackpropagationAllTest,
+		//::testing::Values(205)
 		::testing::Values(200, 201, 202, 203, 204, 205, 206)
 		//::testing::Values(200, 206, 213, 219, 225)
 		//::testing::Values(200, 225, 250, 275, 300)
@@ -741,9 +742,119 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
-TEST_P(BackpropagationAllTest, All)
+void BackpropagationTest_All_showInfo
+	(
+		unsigned int dimension,
+		int n,
+		const Backpropagation& b,
+		const std::vector<float>& x,
+		const std::vector<float>& y
+	)
 {
-	const unsigned int dimension = GetParam();
+	std::cout << "//" << " dimension = " << dimension << std::endl;
+	std::cout << "//" << " n = " << n << std::endl;
+	std::cout << "///////////////////////////////////////////////////////" << std::endl;
+	std::cout << "x = (";
+	unsigned int imax = std::min(x.size(), 10ul);
+	for(unsigned int i = 0; i < imax; i++)
+	{
+		std::cout << x[i] << ", ";
+	}
+	std::cout << "...)" << std::endl;
+
+	auto z = b.getZAsVector();
+	std::cout << "z = (";
+	for(auto&& z_l : z)
+	{
+		unsigned int imax = std::min(z_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << z_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+	auto u = b.getUAsVector();
+	std::cout << "u = (";
+	for(auto&& u_l : u)
+	{
+		unsigned int imax = std::min(u_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << u_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+	auto dEdW = b.getDEDWAsVector();
+	std::cout << "dEdW = (";
+	for(auto&& w_l : dEdW)
+	{
+		unsigned int imax = std::min(w_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << w_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+	auto delta = b.getDeltaAsVector();
+	std::cout << "delta = (";
+	for(auto&& d_l : delta)
+	{
+		unsigned int imax = std::min(d_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << d_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+	auto weight = b.getWeightAsVector();
+	std::cout << "weight = (";
+	for(auto&& w_l : weight)
+	{
+		unsigned int imax = std::min(w_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << w_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+	auto bias = b.getBiasAsVector();
+	std::cout << "bias = (";
+	for(auto&& b_l : bias)
+	{
+		unsigned int imax = std::min(b_l.size(), 10ul);
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			std::cout << b_l[i] << ", ";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << "...)" << std::endl;
+
+
+	std::cout << "y = (";
+	imax = std::min(y.size(), 10ul);
+	for(unsigned int i = 0; i < imax; i++)
+	{
+		std::cout << y[i] << ", ";
+	}
+	std::cout << "...)" << std::endl;
+
+}
+
+
+TEST(BackpropagationTest, All)
+{
+	const unsigned int dimension = 205;//GetParam();//
 	
 	std::vector<unsigned int> unit_count{dimension, 5, dimension};
 	Backpropagation b(unit_count.size());
@@ -767,6 +878,8 @@ TEST_P(BackpropagationAllTest, All)
 	
 	std::cout << "r init end." << std::endl;
 	
+	BackpropagationTest_All_showInfo(dimension, -1, b, {}, {});
+	
 	for(int n = 0; n < nmax; n++)
 	{
 		
@@ -777,108 +890,14 @@ TEST_P(BackpropagationAllTest, All)
 		b.back(d);
 		b.updateParameter();
 		
-		if(n != nmax -1)
+		//if(n != nmax -1)
+		//{
+		//	continue;
+		//}
+		if(n < 2)
 		{
-			continue;
+			BackpropagationTest_All_showInfo(dimension, n, b, x, y);
 		}
-		std::cout << "//" << " dimension = " << dimension << std::endl;
-		std::cout << "//" << " n = " << n << std::endl;
-		std::cout << "///////////////////////////////////////////////////////" << std::endl;
-		std::cout << "x = (";
-		unsigned int imax = std::min(x.size(), 10ul);
-		for(unsigned int i = 0; i < imax; i++)
-		{
-			std::cout << x[i] << ", ";
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto z = b.getZAsVector();
-		std::cout << "z = (";
-		for(auto&& z_l : z)
-		{
-			unsigned int imax = std::min(z_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << z_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto u = b.getUAsVector();
-		std::cout << "u = (";
-		for(auto&& u_l : u)
-		{
-			unsigned int imax = std::min(u_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << u_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto dEdW = b.getDEDWAsVector();
-		std::cout << "dEdW = (";
-		for(auto&& w_l : dEdW)
-		{
-			unsigned int imax = std::min(w_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << w_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto delta = b.getDeltaAsVector();
-		std::cout << "delta = (";
-		for(auto&& d_l : delta)
-		{
-			unsigned int imax = std::min(d_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << d_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto weight = b.getWeightAsVector();
-		std::cout << "weight = (";
-		for(auto&& w_l : weight)
-		{
-			unsigned int imax = std::min(w_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << w_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		auto bias = b.getBiasAsVector();
-		std::cout << "bias = (";
-		for(auto&& b_l : bias)
-		{
-			unsigned int imax = std::min(b_l.size(), 10ul);
-			for(unsigned int i = 0; i < imax; i++)
-			{
-				std::cout << b_l[i] << ", ";
-			}
-			std::cout << std::endl;
-		}
-		std::cout << "...)" << std::endl;
-		
-		
-		std::cout << "y = (";
-		imax = std::min(y.size(), 10ul);
-		for(unsigned int i = 0; i < imax; i++)
-		{
-			std::cout << y[i] << ", ";
-		}
-		std::cout << "...)" << std::endl;
-		
 	}
 	std::vector<float> x(dimension, 0.5f);
 	std::vector<float> y(dimension, 0.0f);
