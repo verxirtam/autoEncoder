@@ -244,6 +244,7 @@ Backpropagation_cuda.o : Backpropagation_cuda.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
+    CUDAManager.h \
     CudaException.h \
     CuBlasException.h \
     DeviceMatrix.h \

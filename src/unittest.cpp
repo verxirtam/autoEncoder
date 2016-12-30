@@ -738,7 +738,8 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(200, 201, 202, 203, 204, 205, 206)
 		//::testing::Values(200, 206, 213, 219, 225)
 		//::testing::Values(200, 225, 250, 275, 300)
-		::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
+		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
+		::testing::Values(10, 1024, 1025, 2000, 5000)
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
@@ -865,7 +866,7 @@ TEST_P(BackpropagationAllTest, All)
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int nmax = 5000;
+	int nmax = 10000;
 	
 	std::vector<float> r;
 	

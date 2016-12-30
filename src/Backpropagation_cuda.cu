@@ -20,17 +20,16 @@ namespace
 	__global__
 	void obtainZFromU_kernel
 		(
+			unsigned int thread_index_offset,
 			const float* const u_lp1,
 			float* const z_lp1
 		)
 	{
 		//ブロックインデックス、スレッドインデックスの読み替え
-		int tx = threadIdx.x;
-		int txsize = blockDim.x;
-		int bx = blockIdx.x;
+		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
 		
 		//このスレッドが計算すべき成分のインデックス
-		int j = tx + bx * txsize;
+		unsigned int j = s;
 		
 		//活性化関数の適用
 		z_lp1[j] = activateFunction(u_lp1[j]);
@@ -39,18 +38,17 @@ namespace
 	__global__
 	void obtainDeltaFromFdUWTDelta_kernel
 		(
+			unsigned int thread_index_offset,
 			const float* const u_l,
 			const float* const wtdelta_lp1,
 			float* const delta_l
 		)
 	{
 		//ブロックインデックス、スレッドインデックスの読み替え
-		int tx = threadIdx.x;
-		int txsize = blockDim.x;
-		int bx = blockIdx.x;
+		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
 		
 		//このスレッドが計算すべき成分のインデックス
-		int j = tx + bx * txsize;
+		unsigned int j = s;
 		
 		delta_l[j] = activateFunctionDash(u_l[j]) * wtdelta_lp1[j];
 	}
@@ -59,8 +57,7 @@ namespace
 	__global__
 	void obtainDEDW_kernel
 		(
-			unsigned int block_index_offset,
-			unsigned int thread_count,
+			unsigned int thread_index_offset,
 			unsigned int row_count,
 			const float* const delta_l,
 			const float* const z_lm1,
@@ -68,7 +65,7 @@ namespace
 		)
 	{
 		//ブロックインデックス、スレッドインデックスの読み替え
-		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + block_index_offset * thread_count;
+		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
 		unsigned int i = s % row_count;
 		unsigned int j = s / row_count;
 		unsigned int k = s;
@@ -79,7 +76,6 @@ namespace
 
 void Backpropagation::obtainZFromU(unsigned int l)
 {
-	//TODO dimension > 1024 の時は複数ブロックに分ける
 	
 	//最後のレイヤ(l == layerCount - 2)の場合は恒等写像なので単にコピーする
 	if(l == layerCount - 2)
@@ -88,13 +84,43 @@ void Backpropagation::obtainZFromU(unsigned int l)
 		return;
 	}
 	
-	int block_count = 1;
-	int thread_count = u[l + 1].getDimension();
-	obtainZFromU_kernel<<<block_count, thread_count>>>(u[l + 1].getAddress(), z[l + 1].getAddress());
-	//カーネル実行時のエラーチェック
-	CUDA_CALL(cudaGetLastError());
+	//1ブロックあたりのスレッド数の上限
+	static unsigned int thread_count = CUDAManager::getDeviceProp().maxThreadsPerBlock;
+	
+	//生成するスレッド数全体
+	unsigned int thread_count_total = u[l + 1].getDimension();
+	
+	//スレッド数thread_countで実行するブロック数
+	unsigned int block_count         = thread_count_total / thread_count;
+	//スレッド数の残り
+	unsigned int thread_count_remain = thread_count_total % thread_count;
+	
+	if(block_count * thread_count != 0)
+	{
+		//カーネル実行
+		obtainZFromU_kernel<<<block_count, thread_count>>>
+			(
+				0,
+				u[l + 1].getAddress(),
+				z[l + 1].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	if(thread_count_remain != 0)
+	{
+		//カーネル実行
+		obtainZFromU_kernel<<<1, thread_count_remain>>>
+			(
+				block_count * thread_count,
+				u[l + 1].getAddress(),
+				z[l + 1].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	
 	//直後にu[l + 1]を使用するので同期する
-	//cudaDeviceSynchronize();
 	CUDA_CALL(cudaStreamSynchronize(0));
 }
 
@@ -102,18 +128,43 @@ void Backpropagation::obtainZFromU(unsigned int l)
 //delta[l] = f'(u[l]) ** WTdelta[l + 1];
 void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 {
-	//TODO dimension > 1024 の時は複数ブロックに分ける
+	//1ブロックあたりのスレッド数の上限
+	static unsigned int thread_count = CUDAManager::getDeviceProp().maxThreadsPerBlock;
 	
-	int block_count = 1;
-	int thread_count = u[l].getDimension();
-	obtainDeltaFromFdUWTDelta_kernel<<<block_count, thread_count>>>
-		(
-			u[l].getAddress(),
-			WTdelta[l + 1].getAddress(),
-			delta[l].getAddress()
-		);
-	//カーネル実行時のエラーチェック
-	CUDA_CALL(cudaGetLastError());
+	//生成するスレッド数全体
+	unsigned int thread_count_total = u[l].getDimension();
+	
+	//スレッド数thread_countで実行するブロック数
+	unsigned int block_count         = thread_count_total / thread_count;
+	//スレッド数の残り
+	unsigned int thread_count_remain = thread_count_total % thread_count;
+	
+	if(block_count * thread_count != 0)
+	{
+		//カーネル実行
+		obtainDeltaFromFdUWTDelta_kernel<<<block_count, thread_count>>>
+			(
+				0,
+				u[l].getAddress(),
+				WTdelta[l + 1].getAddress(),
+				delta[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	if(thread_count_remain != 0)
+	{
+		//カーネル実行
+		obtainDeltaFromFdUWTDelta_kernel<<<1, thread_count_remain>>>
+			(
+				block_count * thread_count,
+				u[l].getAddress(),
+				WTdelta[l + 1].getAddress(),
+				delta[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
 	//直後にdelta[l]を使用するので同期する
 	//cudaDeviceSynchronize();
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -122,8 +173,8 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 //dEdW[l] = delta[l] * (z[l - 1])^T;
 void Backpropagation::obtainDEDW(unsigned int l)
 {
-	//1ブロックあたりのスレッド数の上限(GTX1080の値)
-	unsigned int thread_count = 1024;
+	//1ブロックあたりのスレッド数の上限
+	static unsigned int thread_count = CUDAManager::getDeviceProp().maxThreadsPerBlock;
 	
 	unsigned int N = dEdW[l].getRowCount();
 	unsigned int M = dEdW[l].getColumnCount();
@@ -142,7 +193,6 @@ void Backpropagation::obtainDEDW(unsigned int l)
 		obtainDEDW_kernel<<<block_count, thread_count>>>
 			(
 				0,
-				thread_count,
 				N,
 				delta[l].getAddress(),
 				z[l - 1].getAddress(),
@@ -157,8 +207,7 @@ void Backpropagation::obtainDEDW(unsigned int l)
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
 		obtainDEDW_kernel<<<1, thread_count_remain>>>
 			(
-				block_count,
-				thread_count,
+				block_count * thread_count,
 				N,
 				delta[l].getAddress(),
 				z[l - 1].getAddress(),

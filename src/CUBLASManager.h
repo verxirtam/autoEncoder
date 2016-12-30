@@ -17,34 +17,16 @@
  */
 #pragma once
 
-//#include <iostream>
 
 #include <sstream>
 
-#include <cuda_runtime.h>
+
 #include "cublas_v2.h"
 
-#include "CudaException.h"
+#include "CUDAManager.h"
+
 #include "CuBlasException.h"
 
-#define CUDA_CALL(cmd)\
-{\
-	{\
-		cudaError_t error;\
-		error =  cmd;\
-		if(error != cudaSuccess)\
-		{\
-			std::stringstream msg;\
-			msg << "CUDA_ERROR : ";\
-			msg << cudaGetErrorString(error) << " at ";\
-			msg << __FILE__ << ":";\
-			msg << __LINE__ << " ";\
-			msg << __PRETTY_FUNCTION__ << " ";\
-			msg << #cmd << std::endl;\
-			throw CudaException(msg.str());\
-		}\
-	}\
-}
 
 
 

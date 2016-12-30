@@ -6,16 +6,28 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 Backpropagation	Backpropagation.h	/^	Backpropagation(unsigned int layer_count):$/;"	f	class:Backpropagation
 Backpropagation	Backpropagation.h	/^class Backpropagation$/;"	c
+BackpropagationAllTest	unittest.cpp	/^class BackpropagationAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
+BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const char* what_arg):$/;"	f	class:BackpropagationException
+BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const std::string& what_arg):$/;"	f	class:BackpropagationException
+BackpropagationException	BackpropagationException.h	/^class BackpropagationException : public std::runtime_error$/;"	c
 BackpropagationTest	unittest.cpp	/^class BackpropagationTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
+BackpropagationTest_All_showInfo	unittest.cpp	/^void BackpropagationTest_All_showInfo$/;"	f
 COMMON_FLAGS	makefile	/^COMMON_FLAGS := -pg -g -O0$/;"	m
 CUBLASManager	CUBLASManager.h	/^	CUBLASManager():$/;"	f	class:CUBLASManager
 CUBLASManager	CUBLASManager.h	/^class CUBLASManager$/;"	c
-CUBLAS_CALL	CUBLASManager.h	42;"	d
-CUDA_CALL	CUBLASManager.h	26;"	d
+CUBLAS_CALL	CUBLASManager.h	33;"	d
+CUDAManager	CUDAManager.h	/^class CUDAManager$/;"	c
+CUDA_CALL	CUDAManager.h	25;"	d
 CUDA_SRCS	makefile	/^CUDA_SRCS := $(shell ls *.cu)$/;"	m
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
 CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -lgtest -lsqlite3 -lcublas $/;"	m
+CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
+CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
+CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
+CudaException	CudaException.h	/^	CudaException(const char* what_arg):$/;"	f	class:CudaException
+CudaException	CudaException.h	/^	CudaException(const std::string& what_arg):$/;"	f	class:CudaException
+CudaException	CudaException.h	/^class CudaException : public std::runtime_error$/;"	c
 DEPS	makefile	/^DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)$/;"	m
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix():$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(DeviceMatrix&& dm):$/;"	f	class:DeviceMatrix
@@ -48,13 +60,13 @@ OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OB
 RowColumn	unittest.cpp	/^using RowColumn = std::tuple<unsigned int, unsigned int>;$/;"	u
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
 Saxpy	CUBLASFunction.cpp	/^void Saxpy$/;"	f
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationAllTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceMatrixTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CUBLASFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CUBLASFunction.cpp	/^void Sgemv$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
-TEST	unittest.cpp	/^TEST(BackpropagationTest, All)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, useContainer)$/;"	f
@@ -72,6 +84,7 @@ TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor2)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, useContainer)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
+TEST_P	unittest.cpp	/^TEST_P(BackpropagationAllTest, All)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Constructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Init)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor1)$/;"	f
@@ -81,6 +94,7 @@ TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationAllTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceMatrixTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceVectorTest
@@ -107,8 +121,10 @@ get	DeviceVector.h	/^	void get(std::vector<float>& host) const$/;"	f	class:Devic
 getAddress	DeviceMatrix.h	/^	float* getAddress() const$/;"	f	class:DeviceMatrix
 getAddress	DeviceVector.h	/^	float* getAddress() const$/;"	f	class:DeviceVector
 getBias	Backpropagation.h	/^	const std::vector<DeviceVector>& getBias() const$/;"	f	class:Backpropagation
+getBiasAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getBiasAsVector() const$/;"	f	class:Backpropagation
 getColumnCount	DeviceMatrix.h	/^	int getColumnCount() const$/;"	f	class:DeviceMatrix
 getDEDB	Backpropagation.h	/^	const std::vector<DeviceVector>& getDEDB() const$/;"	f	class:Backpropagation
+getDEDBAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDEDBAsVector() const$/;"	f	class:Backpropagation
 getDEDW	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getDEDW() const$/;"	f	class:Backpropagation
 getDEDWAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDEDWAsVector() const$/;"	f	class:Backpropagation
 getDelta	Backpropagation.h	/^	const std::vector<DeviceVector>& getDelta() const$/;"	f	class:Backpropagation
@@ -117,6 +133,7 @@ getDimension	DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:Dev
 getErrorString	CUBLASManager.cpp	/^const char* CUBLASManager::getErrorString(cublasStatus_t error)$/;"	f	class:CUBLASManager
 getHandle	CUBLASManager.h	/^	static cublasHandle_t getHandle()$/;"	f	class:CUBLASManager
 getInstance	CUBLASManager.h	/^	static CUBLASManager& getInstance()$/;"	f	class:CUBLASManager
+getMaxThreadCountPerBlock	CUDAManager.h	/^	static inline unsigned int getMaxThreadCountPerBlock(void)$/;"	f	class:CUDAManager
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
 getU	Backpropagation.h	/^	const std::vector<DeviceVector>& getU() const$/;"	f	class:Backpropagation
@@ -124,6 +141,7 @@ getU	Backpropagation.h	/^	void getU(std::vector<std::vector<float> >& hu) const$
 getUAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:Backpropagation
 getWTDelta	Backpropagation.h	/^	const std::vector<DeviceVector>& getWTDelta() const$/;"	f	class:Backpropagation
 getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
+getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation
 getZ	Backpropagation.h	/^	const std::vector<DeviceVector>& getZ() const$/;"	f	class:Backpropagation
 getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
 handle	CUBLASManager.h	/^	cublasHandle_t handle;$/;"	m	class:CUBLASManager
