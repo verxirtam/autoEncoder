@@ -79,6 +79,8 @@ namespace
 
 void Backpropagation::obtainZFromU(unsigned int l)
 {
+	//TODO dimension > 1024 の時は複数ブロックに分ける
+	
 	//最後のレイヤ(l == layerCount - 2)の場合は恒等写像なので単にコピーする
 	if(l == layerCount - 2)
 	{
@@ -100,6 +102,8 @@ void Backpropagation::obtainZFromU(unsigned int l)
 //delta[l] = f'(u[l]) ** WTdelta[l + 1];
 void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 {
+	//TODO dimension > 1024 の時は複数ブロックに分ける
+	
 	int block_count = 1;
 	int thread_count = u[l].getDimension();
 	obtainDeltaFromFdUWTDelta_kernel<<<block_count, thread_count>>>
