@@ -1,6 +1,9 @@
 <map id="src/Backpropagation.h" name="src/Backpropagation.h">
-<area shape="rect" id="node6" href="$CUBLASFunction_8h.html" title="CUBLASFunction.h" alt="" coords="139,80,276,107"/>
-<area shape="rect" id="node7" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="275,155,385,181"/>
-<area shape="rect" id="node13" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="139,155,249,181"/>
-<area shape="rect" id="node9" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="202,229,339,256"/>
+<area shape="rect" id="node6" href="$CUBLASFunction_8h.html" title="CUBLASFunction.h" alt="" coords="455,80,592,107"/>
+<area shape="rect" id="node18" href="$BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="655,304,843,331"/>
+<area shape="rect" id="node7" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="475,155,585,181"/>
+<area shape="rect" id="node17" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="339,155,449,181"/>
+<area shape="rect" id="node9" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="334,229,471,256"/>
+<area shape="rect" id="node13" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="164,304,287,331"/>
+<area shape="rect" id="node16" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,304,139,331"/>
 </map>

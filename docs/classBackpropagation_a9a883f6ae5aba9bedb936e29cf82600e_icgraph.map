@@ -1,4 +1,5 @@
 <map id="Backpropagation::obtainDelta" name="Backpropagation::obtainDelta">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="248,5,403,32"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="451,5,507,32"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="248,31,403,57"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="459,5,515,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="451,56,523,83"/>
 </map>

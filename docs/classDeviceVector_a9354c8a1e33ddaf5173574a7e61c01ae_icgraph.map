@@ -1,9 +1,9 @@
 <map id="DeviceVector::getDimension" name="DeviceVector::getDimension">
 <area shape="rect" id="node2" href="$CUBLASFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="243,31,301,57"/>
 <area shape="rect" id="node8" href="$unittest_8cpp.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="244,81,300,108"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="353,5,572,32"/>
-<area shape="rect" id="node6" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="349,56,576,83"/>
-<area shape="rect" id="node4" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="624,5,779,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="827,5,883,32"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#af9d73219db2efb07534292c22ee42862" title="TEST" alt="" coords="673,56,729,83"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="349,5,568,32"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="616,56,843,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="652,5,807,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="899,5,955,32"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="891,56,963,83"/>
 </map>
