@@ -739,7 +739,8 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(200, 206, 213, 219, 225)
 		//::testing::Values(200, 225, 250, 275, 300)
 		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
-		::testing::Values(10, 1024, 1025, 2000, 5000)
+		//::testing::Values(10, 1024, 1025, 2000)
+		::testing::Values(10, 2000)
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
@@ -857,7 +858,7 @@ TEST_P(BackpropagationAllTest, All)
 {
 	const unsigned int dimension = GetParam();
 	
-	std::vector<unsigned int> unit_count{dimension, 5, dimension};
+	std::vector<unsigned int> unit_count{dimension, dimension / 2, 1, dimension / 2, dimension};
 	Backpropagation b(unit_count.size());
 	b.init(unit_count);
 	b.initRandom();
