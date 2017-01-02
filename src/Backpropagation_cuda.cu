@@ -166,7 +166,6 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 		CUDA_CALL(cudaGetLastError());
 	}
 	//直後にdelta[l]を使用するので同期する
-	//cudaDeviceSynchronize();
 	CUDA_CALL(cudaStreamSynchronize(0));
 }
 

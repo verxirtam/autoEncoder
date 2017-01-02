@@ -24,6 +24,9 @@
 
 #include <tuple>
 
+#include <numeric>
+#include <limits>
+
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
@@ -903,12 +906,213 @@ TEST_P(BackpropagationAllTest, All)
 	std::cout << "y = (" << y[0] << ", " << y[1] << ")" << std::endl;
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class BackpropagationNumericDiffTest :
+	public ::testing::Test ,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int, float>>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+//std::vector<unsigned int> dimlist{1, 2, 10, 100, 1000};
+//std::vector<unsigned int> dimlist{1, 2, 10, 100};
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateBackpropagationNumericDiffTest,
+		BackpropagationNumericDiffTest,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u}),
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u}),
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u}),
+				::testing::ValuesIn(std::vector<float>{0.0625f, 0.03125f})
+				//::testing::ValuesIn(std::vector<float>{0.015625f, std::sqrt(std::numeric_limits<float>::epsilon())})
+				//::testing::ValuesIn(std::vector<float>{0.0625f, 0.03125f, 0.015625f})
+			)
+	);
+float ErrorFunc(const std::vector<float>& y, const std::vector<float>& d)
+{
+	return 0.5f * std::inner_product
+		(
+			y.begin(), y.end(),
+			d.begin(),
+			0.0f,
+			[](float x_, float y_){return x_ + y_;},
+			[](float x_, float y_){return (x_ - y_) * (x_ - y_);}
+		);
+}
+
+//パラメータの更新に使用するdEdW, dEdbが正しいかを数値微分と比較して確認する
+TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
+{
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	//BPの初期化
+	unsigned int d0 = std::get<0>(GetParam());
+	unsigned int d1 = std::get<1>(GetParam());
+	std::vector<unsigned int> unit_count{d0, d1, d0};
+	Backpropagation b(unit_count.size());
+	b.init(unit_count);
+	b.initRandom();
+	
+	//数値微分との差の評価に使用するepsilon
+	float epsilon0 = 1.0f;
+	//数値微分に使用するepsilon
+	float epsilon = std::get<3>(GetParam());
+	
+	
+	std::vector<float> x(unit_count[0], urd(engine));
+	std::vector<float> y0;
+	unsigned int sample_count = std::get<2>(GetParam());
+	for(unsigned int n = 0; n < sample_count; n++)
+	{
+		x = std::vector<float>(unit_count[0], urd(engine));
+		//順伝播
+		b.forward(x, y0);
+		//逆伝播
+		b.back(x);
+		
+		if(n != sample_count - 1)
+		{
+			//パラメータの更新
+			b.updateParameter();
+		}
+	}
+	
+	//この時点でdEdW, dEdbが算出された
+	
+	//E0 = 0.5f *  ||y0 -x||^2
+	float E0 = ErrorFunc(y0, x);
+	
+	//微分の基準となるパラメータの取得
+	auto w0 = b.getWeightAsVector();
+	auto w  = w0;
+	auto bias0 = b.getBiasAsVector();
+	auto bias  = bias0;
+	
+	//比較用のdEdWの取得
+	auto dedw = b.getDEDWAsVector();
+	//比較用のdEdbの取得
+	auto dedb = b.getDEDBAsVector();
+	
+	unsigned int imax = w.size();
+	for(unsigned int i = 0; i < imax; i++)
+	{
+		unsigned int jmax = w[i].size();
+		for(unsigned int j = 0; j < jmax; j++)
+		{
+			//dEdWの数値微分を算出する
+			{
+				w = w0;
+				float e = std::abs(w[i][j]);
+				e = (e < 1.0f) ? 1.0f : e;
+				e *= epsilon;
+				w[i][j] += e;
+				b.setWeight(w);
+				
+				std::vector<float> y;
+				b.forward(x, y);
+				
+				float E = ErrorFunc(y, x);
+				
+				//下記を算出する
+				//(E - E0) / epsilon
+				float ndedw = (E - E0) / e;
+				
+				float e0 = std::abs(w[i][j]);
+				e0 = (e0 < 1.0f) ? 1.0f : e0;
+				e0 *= epsilon0;
+				//数値微分と比較する
+				EXPECT_NEAR(ndedw, dedw[i][j], e0);
+				if(!(std::abs(ndedw - dedw[i][j]) < e0))
+				{
+					//失敗した時に情報表示する
+					std::cout << "ERROR." << std::endl;
+					std::cout << "epsilon  = " << epsilon  << std::endl;
+					std::cout << "e        = " << e        << std::endl;
+					std::cout << "epsilon0 = " << epsilon0 << std::endl;
+					std::cout << "e0       = " << e0       << std::endl;
+					std::cout << "d0 = " << d0 << std::endl;
+					std::cout << "d1 = " << d1 << std::endl;
+					std::cout << "i  = " << i  << std::endl;
+					std::cout << "j  = " << j  << std::endl;
+					std::cout << "E  = " << std::setprecision(10) << E  << std::endl;
+					std::cout << "E0 = " << std::setprecision(10) << E0 << std::endl;
+					std::cout << "ndedw  = " << ndedw << std::endl;
+					std::cout << "dedw["<< i << "][" << j << "]  = " << dedw[i][j] << std::endl;
+					std::cout << "diff  = " << (ndedw - dedw[i][j]) << std::endl;
+					BackpropagationTest_All_showInfo(d0, sample_count, b, x, y);
+					return;
+				}
+			}
+		}
+		//biasの数値微分に影響しないように
+		//weightを元に戻す
+		b.setWeight(w0);
+		jmax = bias[i].size();
+		for(unsigned int j = 0; j < jmax; j++)
+		{
+			//dEdbの数値微分を算出する
+			bias = bias0;
+			float e = std::abs(bias[i][j]);
+			e = (e < 1.0f) ? 1.0f : e;
+			e *= epsilon;
+			bias[i][j] += e;
+			b.setBias(bias);
+			
+			std::vector<float> y;
+			b.forward(x, y);
+			
+			float E = ErrorFunc(y, x);
+			
+			//下記を算出する
+			//(E - E0) / epsilon
+			float ndedb = (E - E0) / e;
+			float e0 = std::abs(bias[i][j]);
+			e0 = (e0 < 1.0f) ? 1.0f : e0;
+			e0 *= epsilon0;
+			//数値微分と比較する
+			EXPECT_NEAR(ndedb, dedb[i][j], e0);
+			if(!(std::abs(ndedb - dedb[i][j]) < e0))
+			{
+				//失敗した時に情報表示する
+				std::cout << "ERROR." << std::endl;
+				std::cout << "epsilon  = " << epsilon  << std::endl;
+				std::cout << "e        = " << e        << std::endl;
+				std::cout << "epsilon0 = " << epsilon0 << std::endl;
+				std::cout << "e0       = " << e0       << std::endl;
+				std::cout << "d0 = " << d0 << std::endl;
+				std::cout << "d1 = " << d1 << std::endl;
+				std::cout << "i  = " << i  << std::endl;
+				std::cout << "j  = " << j  << std::endl;
+				std::cout << "E  = " << std::setprecision(10) << E  << std::endl;
+				std::cout << "E0 = " << std::setprecision(10) << E0 << std::endl;
+				std::cout << "ndedb  = " << ndedb << std::endl;
+				std::cout << "dedb[" << i << "][" << j << "]  = " << dedb[i][j] << std::endl;
+				std::cout << "diff  = " << (ndedb - dedb[i][j]) << std::endl;
+				BackpropagationTest_All_showInfo(d0, sample_count, b, x, y);
+				return;
+			}
+		}
+		//weightの数値微分に影響しないように
+		//biasを元に戻す
+		b.setBias(bias0);
+	}
+}
+
+
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*All*:*Simple*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
 	
