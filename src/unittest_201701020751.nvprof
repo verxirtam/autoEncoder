@@ -1,0 +1,45 @@
+==2418== NVPROF is profiling process 2418, command: ./unittest --gtest_color=yes
+==2418== Profiling application: ./unittest --gtest_color=yes
+==2418== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,s,,us,us,ms,
+69.142111,10.242616,100002,102.424000,2.880000,1.363110,"_GLOBAL__N__55_tmpxft_000008d7_00000000_7_Backpropagation_cuda_cpp1_ii_b2c851b5::obtainDEDW_kernel(unsigned int, unsigned int, float const *, float const *, float*)"
+15.039332,2.227906,80000,27.848000,1.376000,0.524738,"void geam_kernel<float, bool=0, bool=0, bool=0, bool=0, int=6, int=5, int=3, bool=1>(cublasGeamParams<float>, float const *, float const *, float*, float const *, float const *)"
+4.463997,0.661290,60001,11.021000,1.376000,0.308609,"void gemv2T_kernel_val<float, float, float, int=128, int=16, int=2, int=2, bool=0>(int, int, float, float const *, int, float const *, int, float, float*, int)"
+3.074075,0.455389,10001,45.534000,42.368000,0.226689,"void gemv2N_kernel_val<float, float, float, int=128, int=8, int=4, int=4, int=1>(float, float, cublasGemv2Params_v2<float, float, float>)"
+2.672766,0.395940,20002,19.795000,2.240000,0.282626,"void gemv2N_kernel_val<float, float, float, int=128, int=4, int=4, int=4, int=1>(float, float, cublasGemv2Params_v2<float, float, float>)"
+1.295526,0.191917,60001,3.198000,2.432000,0.099520,"_GLOBAL__N__55_tmpxft_000008d7_00000000_7_Backpropagation_cuda_cpp1_ii_b2c851b5::obtainDeltaFromFdUWTDelta_kernel(unsigned int, float const *, float const *, float*)"
+1.093533,0.161995,60007,2.699000,2.080000,0.095361,"_GLOBAL__N__55_tmpxft_000008d7_00000000_7_Backpropagation_cuda_cpp1_ii_b2c851b5::obtainZFromU_kernel(unsigned int, float const *, float*)"
+0.784248,0.116177,100001,1.161000,0.768000,0.002080,"void axpy_kernel_val<float, float, int=0>(cublasAxpyParamsVal<float, float, float>)"
+0.770647,0.114163,121625,0.938000,0.704000,0.072672,"[CUDA memcpy DtoD]"
+0.394922,0.058503,40499,1.444000,0.992000,1.989449,"[CUDA memcpy HtoD]"
+0.362793,0.053744,20004,2.686000,1.920000,0.003808,"void gemv2N_kernel_val<float, float, float, int=128, int=1, int=4, int=4, int=1>(float, float, cublasGemv2Params_v2<float, float, float>)"
+0.362584,0.053713,10001,5.370000,5.088000,0.097089,"void gemv2N_kernel_val<float, float, float, int=128, int=32, int=4, int=4, int=1>(float, float, cublasGemv2Params_v2<float, float, float>)"
+0.305167,0.045207,20002,2.260000,1.888000,0.004192,"void gemv2N_kernel_val<float, float, float, int=128, int=2, int=4, int=4, int=1>(float, float, cublasGemv2Params_v2<float, float, float>)"
+0.238297,0.035301,20331,1.736000,0.256000,3.588752,"[CUDA memcpy DtoH]"
+
+==2418== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,s,,us,us,ms,
+44.016669,12.541886,140009,89.579000,3.183000,5.061728,"cudaStreamSynchronize"
+26.642679,7.591430,540022,14.057000,9.006000,3.784720,"cudaLaunch"
+20.236050,5.765957,182455,31.602000,8.166000,483.446581,"cudaMemcpy"
+2.768311,0.788788,24319,32.435000,0.512000,301.215932,"cudaFree"
+2.424952,0.690954,2340076,0.295000,0.175000,0.650252,"cudaSetupArgument"
+1.841808,0.524795,22724,23.094000,4.999000,1.513749,"cudaMalloc"
+1.144259,0.326039,720023,0.452000,0.187000,1.018001,"cudaGetLastError"
+0.918019,0.261576,540022,0.484000,0.220000,0.459026,"cudaConfigureCall"
+0.003009,0.000857,178,4.816000,0.207000,0.183986,"cuDeviceGetAttribute"
+0.002588,0.000737,2,368.696000,325.736000,0.411656,"cuDeviceTotalMem"
+0.001004,0.000286,1,286.055000,286.055000,0.286055,"cudaGetDeviceProperties"
+0.000386,0.000110,2,55.058000,47.417000,0.062700,"cuDeviceGetName"
+0.000078,0.000022,16,1.393000,0.791000,0.006654,"cudaEventCreateWithFlags"
+0.000057,0.000016,16,1.022000,0.718000,0.002722,"cudaEventDestroy"
+0.000053,0.000015,2,7.519000,6.321000,0.008717,"cudaThreadSynchronize"
+0.000026,0.000007,11,0.676000,0.391000,0.002932,"cudaDeviceGetAttribute"
+0.000024,0.000007,4,1.712000,0.558000,0.004394,"cuDeviceGetCount"
+0.000010,0.000003,1,2.859000,2.859000,0.002859,"cudaGetDevice"
+0.000009,0.000003,4,0.642000,0.459000,0.001059,"cuDeviceGet"
+0.000004,0.000001,1,1.193000,1.193000,0.001193,"cuDriverGetVersion"
+0.000004,0.000001,1,1.112000,1.112000,0.001112,"cuInit"
+==2418== Warning: Some profiling data are not recorded. Make sure cudaProfilerStop() or cuProfilerStop() is called before application exit to flush profile data.

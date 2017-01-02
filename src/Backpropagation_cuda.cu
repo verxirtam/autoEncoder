@@ -54,6 +54,7 @@ namespace
 	}
 	
 	//dEdW[l] = delta[l] * (z[l])^T;
+	template<unsigned int BC>
 	__global__
 	void obtainDEDW_kernel
 		(
@@ -69,8 +70,24 @@ namespace
 		unsigned int i = s % row_count;
 		unsigned int j = s / row_count;
 		unsigned int k = s;
-		
-		dedw_l[k] = delta_l[i] * z_lm1[j];
+		//shared memory 版
+		{	
+			//TODO z_lm1[j]を一旦shared memoryに格納してから利用する
+			//TODO block単位で使用するz_lm1[]を格納する
+			unsigned int jmin = (             blockIdx.x * blockDim.x + thread_index_offset) / row_count;
+			unsigned int jmax = (blockDim.x + blockIdx.x * blockDim.x + thread_index_offset) / row_count + 1;
+			//必要なshared memoryの個数は(jmax - jmin)個だが、
+			//(jmax - jmin)個以上で、blockIdxに依存しない値に設定する
+			__shared__ unsigned int z_lm1_s[BC];//"jmax - jmin"はconstにする必要あり
+			if(threadIdx.x < (jmax - jmin))
+			{
+				z_lm1_s[threadIdx.x] = z_lm1[threadIdx.x + jmin];
+			}
+			__syncthreads();
+			dedw_l[k] = delta_l[i] * z_lm1_s[j - jmin];
+		}
+		//global memory 版
+		//dedw_l[k] = delta_l[i] * z_lm1[j];
 	}
 }
 
@@ -189,7 +206,7 @@ void Backpropagation::obtainDEDW(unsigned int l)
 	{
 		//ブロックあたりthread_countスレッドで実行
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<block_count, thread_count>>>
+		obtainDEDW_kernel<1025><<<block_count, thread_count>>>
 			(
 				0,
 				N,
@@ -204,7 +221,7 @@ void Backpropagation::obtainDEDW(unsigned int l)
 	{
 		//上記のカーネル実行で余ったスレッドの実行
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<1, thread_count_remain>>>
+		obtainDEDW_kernel<1025><<<1, thread_count_remain>>>
 			(
 				block_count * thread_count,
 				N,
