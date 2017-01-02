@@ -1,7 +1,6 @@
 <map id="src/BackpropagationException.h" name="src/BackpropagationException.h">
-<area shape="rect" id="node2" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="285,80,437,107"/>
+<area shape="rect" id="node2" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="191,80,343,107"/>
 <area shape="rect" id="node3" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="5,163,171,189"/>
-<area shape="rect" id="node4" href="$Backpropagation_8cu.html" title="src/Backpropagation.cu" alt="" coords="195,163,353,189"/>
-<area shape="rect" id="node5" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="379,155,519,197"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="544,163,655,189"/>
+<area shape="rect" id="node4" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="196,155,336,197"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="361,163,472,189"/>
 </map>
