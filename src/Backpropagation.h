@@ -83,7 +83,7 @@ public:
 	//delta[l] = f'(u[l]) ** WTdelta[l + 1];
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
 	//dEdW[l] = delta[l] * (z[l -1])^T;
-	void obtainDEDW(unsigned int l, unsigned int substream_index);
+	void obtainDEDW(unsigned int l);
 	
 	//コンストラクタ
 	Backpropagation(unsigned int layer_count):
