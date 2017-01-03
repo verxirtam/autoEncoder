@@ -1251,11 +1251,11 @@ INSTANTIATE_TEST_CASE_P
 		BackpropagationStreamTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u}),
-				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u})
+				::testing::ValuesIn(std::vector<unsigned int>{2050u}),
+				::testing::ValuesIn(std::vector<unsigned int>{2000u})
 			)
 	);
-TEST_P(BackpropagationStreamTest, Init)
+TEST(BackpropagationStreamTest, Init)
 {
 	Backpropagation b(3);
 	b.init({3,2,3});
@@ -1272,6 +1272,35 @@ TEST_P(BackpropagationStreamTest, Init)
 	b.getSubStream(1);
 	b.getSubStream(2);
 }
+
+
+TEST_P(BackpropagationStreamTest, Evaluate)
+{
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	Backpropagation b(3);
+	unsigned int d0 = std::get<0>(GetParam());
+	unsigned int d1 = std::get<1>(GetParam());
+	b.init({d0,d1,d0});
+	b.initRandom();
+	std::vector<float> x(d0);
+	std::vector<float> y(d0);
+	auto d = x;
+	
+	//100サイクル回す
+	for(unsigned int n = 0; n < 100; n ++)
+	{
+		//xを乱数で初期化する
+		std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
+		b.forward(x, y);
+		b.back(d);
+		b.updateParameter();
+	}
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////
 class CudaManagerTest :
@@ -1305,7 +1334,8 @@ TEST(CudaManagerTest, Stream)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="*Evaluate*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
