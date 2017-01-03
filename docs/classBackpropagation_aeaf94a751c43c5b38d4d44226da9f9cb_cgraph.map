@@ -1,4 +1,8 @@
 <map id="Backpropagation::obtainDEDW" name="Backpropagation::obtainDEDW">
-<area shape="rect" id="node2" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="259,5,464,32"/>
-<area shape="rect" id="node3" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="512,5,699,32"/>
+<area shape="rect" id="node2" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="261,71,467,97"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="259,5,469,46"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="259,121,469,148"/>
+<area shape="rect" id="node3" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="532,71,719,97"/>
+<area shape="rect" id="node5" href="$classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="518,12,733,39"/>
+<area shape="rect" id="node7" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="536,121,715,148"/>
 </map>

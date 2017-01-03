@@ -1,7 +1,10 @@
 <map id="Backpropagation::obtainDeltaLast" name="Backpropagation::obtainDeltaLast">
-<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="272,56,331,83"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="381,5,571,32"/>
-<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="379,56,573,83"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="389,107,563,133"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="621,56,824,83"/>
+<area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="329,77,388,104"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="272,150,445,191"/>
+<area shape="rect" id="node3" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="496,5,685,32"/>
+<area shape="rect" id="node4" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="494,56,687,83"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="503,107,678,133"/>
+<area shape="rect" id="node5" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="736,56,939,83"/>
+<area shape="rect" id="node8" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="497,157,684,184"/>
+<area shape="rect" id="node9" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="501,208,680,235"/>
 </map>

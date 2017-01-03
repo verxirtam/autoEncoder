@@ -1,7 +1,7 @@
 <map id="Backpropagation::getSubStream" name="Backpropagation::getSubStream">
 <area shape="rect" id="node2" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="553,25,708,52"/>
 <area shape="rect" id="node5" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="517,76,744,102"/>
-<area shape="rect" id="node6" href="$classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="265,25,469,52"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="265,25,469,52"/>
 <area shape="rect" id="node7" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="339,126,395,153"/>
 <area shape="rect" id="node3" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="800,25,856,52"/>
 <area shape="rect" id="node4" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="792,76,864,102"/>

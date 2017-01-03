@@ -1,13 +1,14 @@
 <map id="CUDAManager::getStream" name="CUDAManager::getStream">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="251,176,424,217"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="232,82,443,109"/>
-<area shape="rect" id="node12" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="309,242,365,269"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="497,183,690,210"/>
-<area shape="rect" id="node4" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="780,146,935,173"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="772,197,943,223"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="565,133,621,159"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="1027,197,1083,223"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="1019,146,1091,173"/>
-<area shape="rect" id="node10" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="744,19,971,46"/>
-<area shape="rect" id="node11" href="$classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="491,31,695,58"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="251,202,424,243"/>
+<area shape="rect" id="node10" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="232,82,443,109"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="309,268,365,294"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="491,285,709,312"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="793,234,948,261"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="503,336,697,362"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="785,184,956,210"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="572,133,628,160"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="1040,234,1096,261"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="1032,184,1104,210"/>
+<area shape="rect" id="node11" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="757,57,984,84"/>
+<area shape="rect" id="node12" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="498,32,702,58"/>
 </map>

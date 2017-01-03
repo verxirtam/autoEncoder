@@ -1,7 +1,7 @@
 <map id="CUDAManager::getDeviceProp" name="CUDAManager::getDeviceProp">
 <area shape="rect" id="node2" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="259,5,469,32"/>
 <area shape="rect" id="node6" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="267,107,461,149"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="518,56,722,83"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="518,56,722,83"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="771,5,941,32"/>
 <area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="997,5,1053,32"/>
 <area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="989,56,1061,83"/>
