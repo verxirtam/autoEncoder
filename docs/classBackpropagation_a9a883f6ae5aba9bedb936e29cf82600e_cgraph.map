@@ -1,12 +1,14 @@
 <map id="Backpropagation::obtainDelta" name="Backpropagation::obtainDelta">
 <area shape="rect" id="node2" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="314,132,377,159"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="249,205,442,246"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="259,261,432,302"/>
+<area shape="rect" id="node12" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="249,343,442,385"/>
 <area shape="rect" id="node3" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="500,5,687,32"/>
 <area shape="rect" id="node4" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="491,56,696,83"/>
 <area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="497,107,690,133"/>
 <area shape="rect" id="node7" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="507,157,680,184"/>
 <area shape="rect" id="node8" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="506,208,681,235"/>
 <area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="744,107,947,133"/>
-<area shape="rect" id="node10" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="491,259,696,285"/>
-<area shape="rect" id="node11" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="752,259,939,285"/>
+<area shape="rect" id="node10" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="752,309,939,336"/>
+<area shape="rect" id="node11" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="504,309,683,336"/>
+<area shape="rect" id="node13" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="491,360,696,387"/>
 </map>

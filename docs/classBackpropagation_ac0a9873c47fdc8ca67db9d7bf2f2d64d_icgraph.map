@@ -1,3 +1,7 @@
 <map id="Backpropagation::getSubStreamCount" name="Backpropagation::getSubStreamCount">
-<area shape="rect" id="node2" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="264,12,320,39"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="300,5,455,32"/>
+<area shape="rect" id="node5" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="264,56,491,83"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="349,107,405,133"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="547,5,603,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="539,56,611,83"/>
 </map>

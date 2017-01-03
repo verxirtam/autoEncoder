@@ -1,0 +1,6 @@
+<map id="Backpropagation::obtainDEDW" name="Backpropagation::obtainDEDW">
+<area shape="rect" id="node2" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="261,5,467,32"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="259,56,469,83"/>
+<area shape="rect" id="node3" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="517,5,704,32"/>
+<area shape="rect" id="node5" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="521,56,700,83"/>
+</map>

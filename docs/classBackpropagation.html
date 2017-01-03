@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a883f6ae5aba9bedb936e29cf82600e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f9e9e93af97b549f31b2a080a881573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573">obtainDeltaFromFdUWTDelta</a> (unsigned int l)</td></tr>
 <tr class="separator:a8f9e9e93af97b549f31b2a080a881573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeaf94a751c43c5b38d4d44226da9f9cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb">obtainDEDW</a> (unsigned int l)</td></tr>
-<tr class="separator:aeaf94a751c43c5b38d4d44226da9f9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da48c4be67de2c7927a3cad15767cc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2">obtainDEDW</a> (unsigned int l, unsigned int substream_index)</td></tr>
+<tr class="separator:a7da48c4be67de2c7927a3cad15767cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b0f4dc317a9ae9e58416835757752d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a6b0f4dc317a9ae9e58416835757752d5">Backpropagation</a> (unsigned int layer_count)</td></tr>
 <tr class="separator:a6b0f4dc317a9ae9e58416835757752d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae633a88bdc212776496a27442c19c0f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5">init</a> (const std::vector&lt; unsigned int &gt; &amp;unit_count)</td></tr>
@@ -224,7 +224,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph.png" border="0" usemap="#classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph" alt=""/></div>
 <map name="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph" id="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph">
-<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="277,5,464,32"/><area shape="rect" id="node3" href="classCUDAManager.html#a2fa13a29a043eb49fd2ead7220cf32a6" title="CUDAManager::initStream" alt="" coords="281,56,460,83"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="277,23,488,65"/><area shape="rect" id="node3" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="536,5,723,32"/><area shape="rect" id="node4" href="classCUDAManager.html#a2fa13a29a043eb49fd2ead7220cf32a6" title="CUDAManager::initStream" alt="" coords="540,56,719,83"/></map>
 </div>
 </p>
 
@@ -250,7 +250,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_cgraph.png" border="0" usemap="#classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_cgraph" alt=""/></div>
 <map name="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_cgraph" id="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_cgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,143,427,169"/><area shape="rect" id="node8" href="classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,223,414,249"/><area shape="rect" id="node16" href="classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="215,295,419,321"/><area shape="rect" id="node3" href="CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="543,103,601,129"/><area shape="rect" id="node4" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="725,5,915,32"/><area shape="rect" id="node5" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="723,107,917,133"/><area shape="rect" id="node7" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="733,56,907,83"/><area shape="rect" id="node6" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="971,107,1173,133"/><area shape="rect" id="node9" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="541,161,603,188"/><area shape="rect" id="node13" href="classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="475,230,669,271"/><area shape="rect" id="node10" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="727,157,913,184"/><area shape="rect" id="node11" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="717,208,923,235"/><area shape="rect" id="node12" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="733,259,907,285"/><area shape="rect" id="node14" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="717,309,923,336"/><area shape="rect" id="node15" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="979,309,1165,336"/></map>
+<area shape="rect" id="node2" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="745,107,938,133"/><area shape="rect" id="node4" href="classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="496,427,669,469"/><area shape="rect" id="node7" href="classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,56,427,83"/><area shape="rect" id="node11" href="classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,216,414,243"/><area shape="rect" id="node18" href="classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="212,267,423,309"/><area shape="rect" id="node20" href="classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="215,384,419,411"/><area shape="rect" id="node21" href="classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="477,493,688,520"/><area shape="rect" id="node3" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="992,107,1195,133"/><area shape="rect" id="node5" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="1000,401,1187,428"/><area shape="rect" id="node6" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="752,477,931,504"/><area shape="rect" id="node8" href="CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="553,56,612,83"/><area shape="rect" id="node9" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="747,5,936,32"/><area shape="rect" id="node10" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="754,56,929,83"/><area shape="rect" id="node12" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="551,157,614,184"/><area shape="rect" id="node16" href="classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="486,209,679,250"/><area shape="rect" id="node13" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="748,259,935,285"/><area shape="rect" id="node14" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="739,157,944,184"/><area shape="rect" id="node15" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="755,208,928,235"/><area shape="rect" id="node17" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="739,376,944,403"/><area shape="rect" id="node19" href="classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="475,275,690,301"/></map>
 </div>
 </p>
 
@@ -325,9 +325,6 @@ Here is the caller graph for this function:</div>
 <a class="anchor" id="ae98cfa54ca3bbe71bde5a60967762ec8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Backpropagation::forward </td>
@@ -347,11 +344,6 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p><div class="dynheader">
@@ -359,7 +351,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_cgraph.png" border="0" usemap="#classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_cgraph" alt=""/></div>
 <map name="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_cgraph" id="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_cgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="224,157,435,184"/><area shape="rect" id="node10" href="classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="224,220,435,247"/><area shape="rect" id="node3" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="554,132,617,159"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="745,5,932,32"/><area shape="rect" id="node5" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="736,56,941,83"/><area shape="rect" id="node6" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="742,107,935,133"/><area shape="rect" id="node8" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="752,157,925,184"/><area shape="rect" id="node9" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="751,208,926,235"/><area shape="rect" id="node7" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="989,107,1192,133"/><area shape="rect" id="node11" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="483,227,688,253"/><area shape="rect" id="node12" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="745,259,932,285"/></map>
+<area shape="rect" id="node2" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="742,117,935,144"/><area shape="rect" id="node4" href="classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="243,7,416,48"/><area shape="rect" id="node7" href="classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="224,200,435,226"/><area shape="rect" id="node13" href="classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="224,73,435,100"/><area shape="rect" id="node3" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="989,117,1192,144"/><area shape="rect" id="node5" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="745,22,932,49"/><area shape="rect" id="node6" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="496,22,675,49"/><area shape="rect" id="node8" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="554,212,617,238"/><area shape="rect" id="node9" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="745,269,932,296"/><area shape="rect" id="node10" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="736,320,941,346"/><area shape="rect" id="node11" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="752,168,925,194"/><area shape="rect" id="node12" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="751,218,926,245"/><area shape="rect" id="node14" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="483,73,688,100"/></map>
 </div>
 </p>
 
@@ -639,7 +631,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph.png" border="0" usemap="#classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph" alt=""/></div>
 <map name="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph" id="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="227,12,283,39"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="227,25,421,52"/><area shape="rect" id="node3" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="477,25,632,52"/><area shape="rect" id="node6" href="classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="469,76,640,103"/><area shape="rect" id="node7" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="296,127,352,153"/><area shape="rect" id="node4" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="696,25,752,52"/><area shape="rect" id="node5" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="688,76,760,103"/></map>
 </div>
 </p>
 
@@ -681,7 +673,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph.png" border="0" usemap="#classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" alt=""/></div>
 <map name="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" id="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="264,5,320,32"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="553,25,708,52"/><area shape="rect" id="node5" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="517,76,744,102"/><area shape="rect" id="node6" href="classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="265,25,469,52"/><area shape="rect" id="node7" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="339,126,395,153"/><area shape="rect" id="node3" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="800,25,856,52"/><area shape="rect" id="node4" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="792,76,864,102"/></map>
 </div>
 </p>
 
@@ -723,7 +715,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph.png" border="0" usemap="#classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" alt=""/></div>
 <map name="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" id="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="264,12,320,39"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="300,5,455,32"/><area shape="rect" id="node5" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="264,56,491,83"/><area shape="rect" id="node6" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="349,107,405,133"/><area shape="rect" id="node3" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="547,5,603,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="539,56,611,83"/></map>
 </div>
 </p>
 
@@ -1000,7 +992,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="aeaf94a751c43c5b38d4d44226da9f9cb"></a>
+<a class="anchor" id="a7da48c4be67de2c7927a3cad15767cc2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1008,8 +1000,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">void Backpropagation::obtainDEDW </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>substream_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1017,17 +1019,17 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_cgraph.png" border="0" usemap="#classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_cgraph" alt=""/></div>
-<map name="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_cgraph" id="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_cgraph">
-<area shape="rect" id="node2" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="259,5,464,32"/><area shape="rect" id="node3" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="512,5,699,32"/></map>
+<div class="center"><img src="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_cgraph.png" border="0" usemap="#classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_cgraph" alt=""/></div>
+<map name="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_cgraph" id="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="261,5,467,32"/><area shape="rect" id="node4" href="classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="259,56,469,83"/><area shape="rect" id="node3" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="517,5,704,32"/><area shape="rect" id="node5" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="521,56,700,83"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_icgraph.png" border="0" usemap="#classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_icgraph" alt=""/></div>
-<map name="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_icgraph" id="classBackpropagation_aeaf94a751c43c5b38d4d44226da9f9cb_icgraph">
+<div class="center"><img src="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_icgraph.png" border="0" usemap="#classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_icgraph" alt=""/></div>
+<map name="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_icgraph" id="classBackpropagation_a7da48c4be67de2c7927a3cad15767cc2_icgraph">
 <area shape="rect" id="node2" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="259,31,413,57"/><area shape="rect" id="node3" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="469,5,525,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="461,56,533,83"/></map>
 </div>
 </p>
@@ -1053,7 +1055,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a9a883f6ae5aba9bedb936e29cf82600e_cgraph.png" border="0" usemap="#classBackpropagation_a9a883f6ae5aba9bedb936e29cf82600e_cgraph" alt=""/></div>
 <map name="classBackpropagation_a9a883f6ae5aba9bedb936e29cf82600e_cgraph" id="classBackpropagation_a9a883f6ae5aba9bedb936e29cf82600e_cgraph">
-<area shape="rect" id="node2" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="314,132,377,159"/><area shape="rect" id="node9" href="classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="249,205,442,246"/><area shape="rect" id="node3" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="500,5,687,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="491,56,696,83"/><area shape="rect" id="node5" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="497,107,690,133"/><area shape="rect" id="node7" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="507,157,680,184"/><area shape="rect" id="node8" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="506,208,681,235"/><area shape="rect" id="node6" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="744,107,947,133"/><area shape="rect" id="node10" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="491,259,696,285"/><area shape="rect" id="node11" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="752,259,939,285"/></map>
+<area shape="rect" id="node2" href="CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="314,132,377,159"/><area shape="rect" id="node9" href="classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="259,261,432,302"/><area shape="rect" id="node12" href="classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="249,343,442,385"/><area shape="rect" id="node3" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="500,5,687,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="491,56,696,83"/><area shape="rect" id="node5" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="497,107,690,133"/><area shape="rect" id="node7" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="507,157,680,184"/><area shape="rect" id="node8" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="506,208,681,235"/><area shape="rect" id="node6" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="744,107,947,133"/><area shape="rect" id="node10" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="752,309,939,336"/><area shape="rect" id="node11" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="504,309,683,336"/><area shape="rect" id="node13" href="classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="491,360,696,387"/></map>
 </div>
 </p>
 
@@ -1281,7 +1283,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph.png" border="0" usemap="#classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph" alt=""/></div>
 <map name="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph" id="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="264,12,320,39"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a6b0f4dc317a9ae9e58416835757752d5" title="Backpropagation::Backpropagation" alt="" coords="264,5,488,32"/><area shape="rect" id="node3" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="348,56,404,83"/></map>
 </div>
 </p>
 
@@ -1338,7 +1340,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_af56fe77162dadcfcdac69ec658106212_cgraph.png" border="0" usemap="#classBackpropagation_af56fe77162dadcfcdac69ec658106212_cgraph" alt=""/></div>
 <map name="classBackpropagation_af56fe77162dadcfcdac69ec658106212_cgraph" id="classBackpropagation_af56fe77162dadcfcdac69ec658106212_cgraph">
-<area shape="rect" id="node2" href="CUBLASFunction_8cpp.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="281,107,343,133"/><area shape="rect" id="node8" href="CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="283,183,341,209"/><area shape="rect" id="node3" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="401,5,588,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="392,56,597,83"/><area shape="rect" id="node5" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="398,157,591,184"/><area shape="rect" id="node7" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="408,107,581,133"/><area shape="rect" id="node6" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="645,157,848,184"/><area shape="rect" id="node9" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="400,208,589,235"/><area shape="rect" id="node10" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="407,259,582,285"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="280,45,491,86"/><area shape="rect" id="node5" href="classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="550,309,743,336"/><area shape="rect" id="node7" href="classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="280,111,491,137"/><area shape="rect" id="node9" href="CUBLASFunction_8cpp.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="354,221,417,248"/><area shape="rect" id="node13" href="CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="356,348,415,375"/><area shape="rect" id="node3" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="553,56,740,83"/><area shape="rect" id="node4" href="classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="539,5,754,32"/><area shape="rect" id="node6" href="classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="803,309,1005,336"/><area shape="rect" id="node8" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="557,107,736,133"/><area shape="rect" id="node10" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="553,208,740,235"/><area shape="rect" id="node11" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="544,259,749,285"/><area shape="rect" id="node12" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="560,157,733,184"/><area shape="rect" id="node14" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="552,411,741,437"/><area shape="rect" id="node15" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="559,360,734,387"/></map>
 </div>
 </p>
 
@@ -1582,7 +1584,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 3 2017 13:03:29 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 3 2017 16:23:45 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

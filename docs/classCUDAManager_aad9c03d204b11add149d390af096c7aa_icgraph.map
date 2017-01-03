@@ -1,5 +1,9 @@
 <map id="CUDAManager::getStreamCount" name="CUDAManager::getStreamCount">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="269,5,480,46"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="347,71,403,97"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="528,12,584,39"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="269,49,480,90"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="347,115,403,141"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="564,5,719,32"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="528,56,755,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="613,107,669,133"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="811,5,867,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="803,56,875,83"/>
 </map>

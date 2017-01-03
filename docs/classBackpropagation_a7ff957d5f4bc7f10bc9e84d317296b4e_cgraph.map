@@ -1,17 +1,22 @@
 <map id="Backpropagation::back" name="Backpropagation::back">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,143,427,169"/>
-<area shape="rect" id="node8" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,223,414,249"/>
-<area shape="rect" id="node16" href="$classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb" title="Backpropagation::obtainDEDW" alt="" coords="215,295,419,321"/>
-<area shape="rect" id="node3" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="543,103,601,129"/>
-<area shape="rect" id="node4" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="725,5,915,32"/>
-<area shape="rect" id="node5" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="723,107,917,133"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="733,56,907,83"/>
-<area shape="rect" id="node6" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="971,107,1173,133"/>
-<area shape="rect" id="node9" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="541,161,603,188"/>
-<area shape="rect" id="node13" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="475,230,669,271"/>
-<area shape="rect" id="node10" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="727,157,913,184"/>
-<area shape="rect" id="node11" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="717,208,923,235"/>
-<area shape="rect" id="node12" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="733,259,907,285"/>
-<area shape="rect" id="node14" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="717,309,923,336"/>
-<area shape="rect" id="node15" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="979,309,1165,336"/>
+<area shape="rect" id="node2" href="$classCUBLASManager.html#a0d82c2a82ed02d13d99fe4604277070d" title="CUBLASManager::getHandle" alt="" coords="745,107,938,133"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="496,427,669,469"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,56,427,83"/>
+<area shape="rect" id="node11" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,216,414,243"/>
+<area shape="rect" id="node18" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="212,267,423,309"/>
+<area shape="rect" id="node20" href="$classBackpropagation.html#a7da48c4be67de2c7927a3cad15767cc2" title="Backpropagation::obtainDEDW" alt="" coords="215,384,419,411"/>
+<area shape="rect" id="node21" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="477,493,688,520"/>
+<area shape="rect" id="node3" href="$classCUBLASManager.html#a75e2b1152e3ae5693c564dd209abde16" title="CUBLASManager::getInstance" alt="" coords="992,107,1195,133"/>
+<area shape="rect" id="node5" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="1000,401,1187,428"/>
+<area shape="rect" id="node6" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="752,477,931,504"/>
+<area shape="rect" id="node8" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="553,56,612,83"/>
+<area shape="rect" id="node9" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="747,5,936,32"/>
+<area shape="rect" id="node10" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="754,56,929,83"/>
+<area shape="rect" id="node12" href="$CUBLASFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="551,157,614,184"/>
+<area shape="rect" id="node16" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="486,209,679,250"/>
+<area shape="rect" id="node13" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="748,259,935,285"/>
+<area shape="rect" id="node14" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="739,157,944,184"/>
+<area shape="rect" id="node15" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="755,208,928,235"/>
+<area shape="rect" id="node17" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="739,376,944,403"/>
+<area shape="rect" id="node19" href="$classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="475,275,690,301"/>
 </map>
