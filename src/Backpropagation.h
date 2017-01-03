@@ -83,7 +83,7 @@ public:
 	//delta[l] = f'(u[l]) ** WTdelta[l + 1];
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
 	//dEdW[l] = delta[l] * (z[l -1])^T;
-	void obtainDEDW(unsigned int l);
+	void obtainDEDW(unsigned int l, unsigned int substream_index);
 	
 	//コンストラクタ
 	Backpropagation(unsigned int layer_count):
@@ -99,26 +99,14 @@ public:
 		delta(dEdb),
 		WTdelta()
 	{
-		CUDAManager::getInstance().initStream(2);
+		this->setSubStreamCount(4);
 	}
 	//初期化
 	void init(const std::vector<unsigned int>& unit_count);
 	//weightをランダムに初期化する
 	void initRandom(void);
-	
-	void forward(const std::vector<float>& x, std::vector<float>& y)
-	{
-		z[0].set(x);
-		for(unsigned int l = 0; l < layerCount - 1; l++)
-		{
-			//z[l], weight[l+1], bias[l+1]からu[l+1]を得る
-			obtainUFromZ(l);
-			//u[l+1]からz[l+1]を得る
-			obtainZFromU(l);
-		}
-		//y = z[L-1]を設定
-		y = z[layerCount - 1].get();
-	}
+	//順伝播
+	void forward(const std::vector<float>& x, std::vector<float>& y);
 	//逆伝播
 	void back(const std::vector<float>& d);
 	

@@ -49,8 +49,14 @@ void Backpropagation::obtainDelta(unsigned int l)
 	float beta  = 0.0f;
 	Sgemv(&alpha, CUBLAS_OP_T, weight[l + 1], delta[l + 1], &beta, WTdelta[l + 1]);
 	
+	//ストリーム完了待ち
+	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
+	
 	//delta[l] = f'(u[l]) ** WTdelta[l + 1];
 	obtainDeltaFromFdUWTDelta(l);
+	
+	//ストリーム完了待ち
+	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
 void Backpropagation::init(const std::vector<unsigned int>& unit_count)
@@ -133,9 +139,36 @@ void Backpropagation::initRandom(void)
 	}
 }
 
+void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)
+{
+	//使用するStreamをMainStreamに設定
+	CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getMainStream()));
+	
+	z[0].set(x);
+	//ストリーム完了待ち
+	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
+	for(unsigned int l = 0; l < layerCount - 1; l++)
+	{
+		//z[l], weight[l+1], bias[l+1]からu[l+1]を得る
+		obtainUFromZ(l);
+		//ストリーム完了待ち
+		CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
+		//u[l+1]からz[l+1]を得る
+		obtainZFromU(l);
+		//ストリーム完了待ち
+		CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
+	}
+	//y = z[L-1]を設定
+	y = z[layerCount - 1].get();
+	//ストリーム完了待ち
+	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
+}
 
 void Backpropagation::back(const std::vector<float>& d)
 {
+	//使用するStreamをMainStreamに設定
+	CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getMainStream()));
+	
 	//初期化
 	//delta[layer_count - 1] = u[layer_count - 1] - dd;
 	obtainDeltaLast(d);
@@ -148,36 +181,58 @@ void Backpropagation::back(const std::vector<float>& d)
 		obtainDelta(l);
 	}
 	
+	
+	unsigned int substream_count = getSubStreamCount();
 	//lについて並列実行
 	//dEdW[l]  = delta[l] * (z[l - 1])^T;
 	//l = layerCount - 1, ... , 1
 	for(unsigned int l = layerCount - 1; l >= 1; l--)
 	{
 		//非同期実行
-		obtainDEDW(l);
+		obtainDEDW(l, l % substream_count);
 	}
 	//完了待ち
-	CUDA_CALL(cudaStreamSynchronize(0));
+	for(unsigned int s = 0; s < substream_count; s++)
+	{
+		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
+	}
 	
 	//対応不要
 	//dEdb[l]  = delta[l];
 	//l = layerCount - 1, ... , 2
+	
 }
 
 void Backpropagation::updateParameter()
 {
 	//l,W,b について非同期に実行
 	
+	unsigned int substream_count = getSubStreamCount();
+	
 	for(unsigned int l = 1; l < layerCount; l++)
 	{
+		//使用するStreamを設定
+		unsigned int si = (2 * l) % substream_count;
+		CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getSubStream(si)));
+		
 		//W[l] = W[l] - e * dEdW[l];
 		//<=> W[l] = - e * dEdW[l] + 1.0f *  W[l];
 		float alpha = - epsilon;
 		float beta = 1.0f;
 		Sgeam(&alpha, CUBLAS_OP_N, dEdW[l], &beta, CUBLAS_OP_N, weight[l], weight[l]);
 		
+		//使用するStreamを設定
+		si = (2 * l + 1) % substream_count;
+		CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getSubStream(si)));
+		
 		//b[l] = b[l] - e * dEdb[l];
 		//<=> b[l] = - e * dEdb[l] + b[l];
 		Saxpy(&alpha, dEdb[l], bias[l]);
+	}
+	
+	//完了待ち
+	for(unsigned int s = 0; s < substream_count; s++)
+	{
+		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
 	}
 }

@@ -171,10 +171,13 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 }
 
 //dEdW[l] = delta[l] * (z[l - 1])^T;
-void Backpropagation::obtainDEDW(unsigned int l)
+void Backpropagation::obtainDEDW(unsigned int l, unsigned int substream_index)
 {
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count = CUDAManager::getDeviceProp().maxThreadsPerBlock;
+	
+	//実行するStreamのインデックス
+	cudaStream_t si = this->getSubStream(substream_index);
 	
 	unsigned int N = dEdW[l].getRowCount();
 	unsigned int M = dEdW[l].getColumnCount();
@@ -190,7 +193,7 @@ void Backpropagation::obtainDEDW(unsigned int l)
 	{
 		//ブロックあたりthread_countスレッドで実行
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<block_count, thread_count>>>
+		obtainDEDW_kernel<<<block_count, thread_count, 0, si>>>
 			(
 				0,
 				N,
@@ -205,7 +208,7 @@ void Backpropagation::obtainDEDW(unsigned int l)
 	{
 		//上記のカーネル実行で余ったスレッドの実行
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<1, thread_count_remain>>>
+		obtainDEDW_kernel<<<1, thread_count_remain, 0, si>>>
 			(
 				block_count * thread_count,
 				N,

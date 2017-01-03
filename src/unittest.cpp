@@ -1261,6 +1261,7 @@ TEST(BackpropagationStreamTest, Init)
 	b.init({3,2,3});
 	b.initRandom();
 	
+	b.setSubStreamCount(1);
 	EXPECT_EQ(b.getSubStreamCount(), 1);
 	b.getMainStream();
 	b.getSubStream(0);
