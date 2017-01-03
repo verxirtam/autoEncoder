@@ -24,6 +24,7 @@
 
 #include <tuple>
 
+#include <algorithm>
 #include <numeric>
 #include <limits>
 
@@ -907,6 +908,135 @@ TEST_P(BackpropagationAllTest, All)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
+class BackpropagationFunctionTest :
+	public ::testing::Test ,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int>>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateBackpropagationFunctionTest,
+		BackpropagationFunctionTest,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u, 2050u}),
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u})
+			)
+	);
+//std::vector<float>同士の差が許容誤差未満であることを確認する
+//その差の絶対値の最大値を求める
+float BackpropagationFunctionTest_compare(const std::vector<float>& x,const std::vector<float>& y)
+{
+	return std::inner_product
+		(
+		 x.begin(), x.end(), y.begin(), 0.0f,
+		 [](float _x, float _y){return std::max(_x, _y);},
+		 [](float _x, float _y){EXPECT_NEAR(_x, _y, 0.0625f); return std::abs(_x - _y);}
+		);
+}
+//CUDAの算出結果とhostでの算出結果と一致することを確認する
+TEST_P(BackpropagationFunctionTest, Kernel)
+{
+	unsigned int d0 = std::get<0>(GetParam());
+	unsigned int d1 = std::get<1>(GetParam());
+	Backpropagation b(3);
+	b.init({d0, d1, d0});
+	b.initRandom();
+	
+	std::vector<float> x(d0, 0.5f);
+	std::vector<float> y;
+	auto d = x;
+
+	b.forward(x, y);
+	b.back(d);
+	
+	auto du = b.getUAsVector();
+	auto dz = b.getZAsVector();
+	auto dweight = b.getWeightAsVector();
+	auto hz = du;
+	
+	hz[0] = x;
+	
+	unsigned int lmax = du.size();
+	//z = f(u);
+	for(unsigned int l = 1; l < lmax; l++)
+	{
+		std::transform(hz[l].begin(), hz[l].end(), hz[l].begin(), [](float _x){return std::tanh(_x);});
+		float max_error = BackpropagationFunctionTest_compare(hz[l], dz[l]);
+		std::cout << "max_error(z[" << l << "]) = " << max_error << std::endl;
+	}
+	
+	auto hu = b.getUAsVector();
+	auto dbias = b.getBiasAsVector();
+	//u = weight * z + bias;
+	for(unsigned int l = 1; l < lmax; l++)
+	{
+		unsigned int imax = hu[l].size();
+		for(unsigned int i = 0; i < imax; i++)
+		{
+			hu[l][i] = 0.0f;
+			unsigned int kmax = hz[l -1].size();
+			for(unsigned int k = 0; k < kmax; k++)
+			{
+				hu[l][i] += dweight[l][i + k * imax] * dz[l - 1][k];
+			}
+			hu[l][i] += dbias[l][i];
+		}
+		float max_error = BackpropagationFunctionTest_compare(hu[l], du[l]);
+		std::cout << "max_error(u[" << l << "]) = " << max_error << std::endl;
+	}
+	
+	auto ddelta = b.getDeltaAsVector();
+	auto hdelta = ddelta;
+	//hdelta[lmax -1] = hdelta[lmax -1] - d;
+	std::transform
+		(
+			du[lmax -1].begin(), du[lmax -1].end(), d.begin(), hdelta[lmax -1].begin(),
+			[](float _x, float _y){return _x - _y;}
+		);
+	float max_error = BackpropagationFunctionTest_compare(hdelta[lmax - 1], ddelta[lmax - 1]);
+	std::cout << "max_error(delta[" << (lmax - 1) << "]) = " << max_error << std::endl;
+	
+	//hdelta[l] = f'(u[l]) ** (weight[l + 1]^T * delta[l + 1]);
+	for(unsigned int l = lmax - 2; l >= 1; l--)
+	{
+		unsigned int uc_l = du[l].size();
+		unsigned int kmax = du[l + 1].size();
+		for(unsigned int j = 0; j < uc_l; j++)
+		{
+			float hwtdelta_lj = 0.0f;
+			for(unsigned int k = 0; k < kmax; k++)
+			{
+				hwtdelta_lj += dweight[l + 1][k + j * kmax] * hdelta[l + 1][k];
+			}
+			float tanh_u_lj = std::tanh(du[l][j]);
+			float fd_u_lj = (1.0f - tanh_u_lj * tanh_u_lj);
+			hdelta[l][j] = fd_u_lj * hwtdelta_lj;
+		}
+		float max_error = BackpropagationFunctionTest_compare(hdelta[l], ddelta[l]);
+		std::cout << "max_error(delta[" << l << "]) = " << max_error << std::endl;
+	}
+	auto ddedw = b.getDEDWAsVector();
+	auto hdedw = ddedw;
+	//dEdW[l] = delta[l] * z[l-1]^T
+	for(unsigned int l = 1; l < lmax; l++)
+	{
+		unsigned int kmax = hdedw[l].size();
+		for(unsigned int k = 0; k < kmax; k++)
+		{
+			unsigned int imax = du[l].size();
+			unsigned int i = k % imax;
+			unsigned int j = k / imax;
+			hdedw[l][k] = hdelta[l][i] * hz[l - 1][j];
+		}
+		float max_error = BackpropagationFunctionTest_compare(hdedw[l], ddedw[l]);
+		std::cout << "max_error(dedw[" << l << "]) = " << max_error << std::endl;
+	}
+}
+/////////////////////////////////////////////////////////////////////////////////
 class BackpropagationNumericDiffTest :
 	public ::testing::Test ,
 	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int, float>>
@@ -1103,6 +1233,70 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 		//biasを元に戻す
 		b.setBias(bias0);
 	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+class BackpropagationStreamTest :
+	public ::testing::Test ,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int>>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateBackpropagationStreamTest,
+		BackpropagationStreamTest,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u}),
+				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u})
+			)
+	);
+TEST_P(BackpropagationStreamTest, Init)
+{
+	Backpropagation b(3);
+	b.init({3,2,3});
+	b.initRandom();
+	
+	EXPECT_EQ(b.getSubStreamCount(), 1);
+	b.getMainStream();
+	b.getSubStream(0);
+	
+	b.setSubStreamCount(3);
+	EXPECT_EQ(b.getSubStreamCount(), 3);
+	b.getMainStream();
+	b.getSubStream(0);
+	b.getSubStream(1);
+	b.getSubStream(2);
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+class CudaManagerTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(CudaManagerTest, Stream)
+{
+	CUDAManager& cm = CUDAManager::getInstance();
+	cm.initStream(2);
+	cm.getStream(0);
+	cm.getStream(1);
+	EXPECT_EQ(cm.getStreamCount(), 2);
+	
+	cm.initStream(5);
+	cm.getStream(0);
+	cm.getStream(1);
+	cm.getStream(2);
+	cm.getStream(3);
+	cm.getStream(4);
+	EXPECT_EQ(cm.getStreamCount(), 5);
 }
 
 

@@ -99,6 +99,7 @@ public:
 		delta(dEdb),
 		WTdelta()
 	{
+		CUDAManager::getInstance().initStream(2);
 	}
 	//初期化
 	void init(const std::vector<unsigned int>& unit_count);
@@ -251,6 +252,22 @@ public:
 	const std::vector<DeviceVector>& getWTDelta() const
 	{
 		return this->WTdelta;
+	}
+	void setSubStreamCount(unsigned int substream_count) const
+	{
+		CUDAManager::getInstance().initStream(substream_count + 1);
+	}
+	unsigned int getSubStreamCount(void) const
+	{
+		return CUDAManager::getInstance().getStreamCount() - 1;
+	}
+	cudaStream_t getMainStream(void) const
+	{
+		return CUDAManager::getInstance().getStream(0);
+	}
+	cudaStream_t getSubStream(unsigned int stream_index) const
+	{
+		return CUDAManager::getInstance().getStream(stream_index + 1);
 	}
 };
 
