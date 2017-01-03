@@ -155,6 +155,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90adcdc5ef8c3e007c55caefacd66eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433519629dc1dcbb5403d4c8bf7a433f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceVector.html">DeviceVector</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a433519629dc1dcbb5403d4c8bf7a433f">getWTDelta</a> () const </td></tr>
 <tr class="separator:a433519629dc1dcbb5403d4c8bf7a433f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06e40023b1cf99d06f09693fd08386b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b">setSubStreamCount</a> (unsigned int substream_count) const </td></tr>
+<tr class="separator:ad06e40023b1cf99d06f09693fd08386b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a9873c47fdc8ca67db9d7bf2f2d64d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d">getSubStreamCount</a> (void) const </td></tr>
+<tr class="separator:ac0a9873c47fdc8ca67db9d7bf2f2d64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3709ad39a5c6e43115831e46056cd655"><td class="memItemLeft" align="right" valign="top">cudaStream_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655">getMainStream</a> (void) const </td></tr>
+<tr class="separator:a3709ad39a5c6e43115831e46056cd655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bcf82c3a9b8df9a75bfabc310faedf7"><td class="memItemLeft" align="right" valign="top">cudaStream_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7">getSubStream</a> (unsigned int stream_index) const </td></tr>
+<tr class="separator:a2bcf82c3a9b8df9a75bfabc310faedf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -210,6 +218,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph.png" border="0" usemap="#classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph" alt=""/></div>
+<map name="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph" id="classBackpropagation_a6b0f4dc317a9ae9e58416835757752d5_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="277,5,464,32"/><area shape="rect" id="node3" href="classCUDAManager.html#a2fa13a29a043eb49fd2ead7220cf32a6" title="CUDAManager::initStream" alt="" coords="281,56,460,83"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -581,6 +598,132 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph.png" border="0" usemap="#classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph" alt=""/></div>
 <map name="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph" id="classBackpropagation_ada3aa286e72185627564c11716ef6acf_icgraph">
 <area shape="rect" id="node2" href="classBackpropagation.html#a90adcdc5ef8c3e007c55caefacd66eb9" title="Backpropagation::getDEDBAs\lVector" alt="" coords="230,5,429,46"/><area shape="rect" id="node4" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="301,71,357,97"/><area shape="rect" id="node5" href="unittest_8cpp.html#aae55169dd6fed4ee427f3a8ec411f8f0" title="BackpropagationTest\l_All_showInfo" alt="" coords="257,122,402,163"/><area shape="rect" id="node3" href="unittest_8cpp.html#a47d4e24538965ed5fce29573d75c634c" title="TEST_P" alt="" coords="477,12,549,39"/><area shape="rect" id="node6" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="477,129,549,156"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3709ad39a5c6e43115831e46056cd655"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cudaStream_t Backpropagation::getMainStream </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_cgraph.png" border="0" usemap="#classBackpropagation_a3709ad39a5c6e43115831e46056cd655_cgraph" alt=""/></div>
+<map name="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_cgraph" id="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="227,5,413,32"/><area shape="rect" id="node3" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="231,56,409,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph.png" border="0" usemap="#classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph" alt=""/></div>
+<map name="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph" id="classBackpropagation_a3709ad39a5c6e43115831e46056cd655_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#aeefe58e60e558c3559765383aa13e720" title="TEST_P" alt="" coords="227,12,299,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bcf82c3a9b8df9a75bfabc310faedf7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cudaStream_t Backpropagation::getSubStream </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>stream_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_cgraph.png" border="0" usemap="#classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_cgraph" alt=""/></div>
+<map name="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_cgraph" id="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="264,5,451,32"/><area shape="rect" id="node3" href="classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="268,56,447,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph.png" border="0" usemap="#classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" alt=""/></div>
+<map name="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" id="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#aeefe58e60e558c3559765383aa13e720" title="TEST_P" alt="" coords="264,5,336,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0a9873c47fdc8ca67db9d7bf2f2d64d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Backpropagation::getSubStreamCount </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_cgraph.png" border="0" usemap="#classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_cgraph" alt=""/></div>
+<map name="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_cgraph" id="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="279,5,465,32"/><area shape="rect" id="node3" href="classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="265,56,479,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph.png" border="0" usemap="#classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" alt=""/></div>
+<map name="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" id="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#aeefe58e60e558c3559765383aa13e720" title="TEST_P" alt="" coords="264,12,336,39"/></map>
 </div>
 </p>
 
@@ -1102,6 +1245,48 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ad06e40023b1cf99d06f09693fd08386b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Backpropagation::setSubStreamCount </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>substream_count</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_cgraph.png" border="0" usemap="#classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_cgraph" alt=""/></div>
+<map name="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_cgraph" id="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_cgraph">
+<area shape="rect" id="node2" href="classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="264,5,451,32"/><area shape="rect" id="node3" href="classCUDAManager.html#a2fa13a29a043eb49fd2ead7220cf32a6" title="CUDAManager::initStream" alt="" coords="268,56,447,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph.png" border="0" usemap="#classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph" alt=""/></div>
+<map name="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph" id="classBackpropagation_ad06e40023b1cf99d06f09693fd08386b_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#aeefe58e60e558c3559765383aa13e720" title="TEST_P" alt="" coords="264,12,336,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ac241a900cd0987d61b599e300522b477"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1397,7 +1582,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 3 2017 01:20:26 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 3 2017 11:23:35 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

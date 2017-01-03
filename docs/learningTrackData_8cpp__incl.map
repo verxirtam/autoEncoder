@@ -1,9 +1,9 @@
 <map id="src/learningTrackData.cpp" name="src/learningTrackData.cpp">
 <area shape="rect" id="node8" href="$CUBLASFunction_8h.html" title="CUBLASFunction.h" alt="" coords="306,80,443,107"/>
-<area shape="rect" id="node9" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="441,155,552,181"/>
-<area shape="rect" id="node20" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="306,155,416,181"/>
-<area shape="rect" id="node11" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="369,229,505,256"/>
-<area shape="rect" id="node14" href="$CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="443,304,565,331"/>
-<area shape="rect" id="node19" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="583,379,717,405"/>
-<area shape="rect" id="node16" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="301,379,424,405"/>
+<area shape="rect" id="node9" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="319,155,429,181"/>
+<area shape="rect" id="node20" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="455,155,565,181"/>
+<area shape="rect" id="node11" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="586,229,723,256"/>
+<area shape="rect" id="node14" href="$CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="501,304,624,331"/>
+<area shape="rect" id="node19" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="797,379,931,405"/>
+<area shape="rect" id="node16" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="649,379,772,405"/>
 </map>

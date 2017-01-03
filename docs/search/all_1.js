@@ -14,5 +14,6 @@ var searchData=
   ['cudaexception',['CudaException',['../classCudaException.html',1,'CudaException'],['../classCudaException.html#a006fb495993b7c1716566b4295ca169e',1,'CudaException::CudaException(const std::string &amp;what_arg)'],['../classCudaException.html#ac9813c467c70d33c2f5e1d0de6bcd7ea',1,'CudaException::CudaException(const char *what_arg)']]],
   ['cudaexception_2eh',['CudaException.h',['../CudaException_8h.html',1,'']]],
   ['cudamanager',['CUDAManager',['../classCUDAManager.html',1,'CUDAManager'],['../classCUDAManager.html#a4557b93b8053f74dc843375922087826',1,'CUDAManager::CUDAManager()'],['../classCUDAManager.html#aeadd081933d45a5eeb70a0c0628a5ea0',1,'CUDAManager::CUDAManager(const CUDAManager &amp;)=delete'],['../classCUDAManager.html#af14b43254e45155ef37f7bb0293c7d14',1,'CUDAManager::CUDAManager(CUDAManager &amp;&amp;)=delete']]],
-  ['cudamanager_2eh',['CUDAManager.h',['../CUDAManager_8h.html',1,'']]]
+  ['cudamanager_2eh',['CUDAManager.h',['../CUDAManager_8h.html',1,'']]],
+  ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]]
 ];

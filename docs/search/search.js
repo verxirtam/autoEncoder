@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   1: "bcd",
   2: "bcdlu",
   3: "bcdefgimostu~",
-  4: "bcdehlruwz",
+  4: "bcdehlrsuwz",
   5: "rt",
   6: "cg"
 };

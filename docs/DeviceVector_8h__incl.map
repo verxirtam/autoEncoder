@@ -1,6 +1,6 @@
 <map id="src/DeviceVector.h" name="src/DeviceVector.h">
-<area shape="rect" id="node4" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="210,80,347,107"/>
-<area shape="rect" id="node7" href="$CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="283,155,405,181"/>
-<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="423,229,557,256"/>
-<area shape="rect" id="node9" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="141,229,264,256"/>
+<area shape="rect" id="node4" href="$CUBLASManager_8h.html" title="CUBLASManager.h" alt="" coords="117,80,253,107"/>
+<area shape="rect" id="node7" href="$CUDAManager_8h.html" title="CUDAManager.h" alt="" coords="256,155,379,181"/>
+<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="397,229,531,256"/>
+<area shape="rect" id="node9" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="115,229,237,256"/>
 </map>
