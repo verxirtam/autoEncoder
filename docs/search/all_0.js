@@ -11,6 +11,7 @@ var searchData=
   ['backpropagationfunctiontest',['BackpropagationFunctionTest',['../classBackpropagationFunctionTest.html',1,'']]],
   ['backpropagationfunctiontest_5fcompare',['BackpropagationFunctionTest_compare',['../unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767',1,'unittest.cpp']]],
   ['backpropagationnumericdifftest',['BackpropagationNumericDiffTest',['../classBackpropagationNumericDiffTest.html',1,'']]],
+  ['backpropagationobtaindedwtest',['BackpropagationObtainDEDWTest',['../classBackpropagationObtainDEDWTest.html',1,'']]],
   ['backpropagationstreamtest',['BackpropagationStreamTest',['../classBackpropagationStreamTest.html',1,'']]],
   ['backpropagationtest',['BackpropagationTest',['../classBackpropagationTest.html',1,'']]],
   ['backpropagationtest_5fall_5fshowinfo',['BackpropagationTest_All_showInfo',['../unittest_8cpp.html#aae55169dd6fed4ee427f3a8ec411f8f0',1,'unittest.cpp']]],

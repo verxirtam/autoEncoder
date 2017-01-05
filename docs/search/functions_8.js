@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['obtaindedw',['obtainDEDW',['../classBackpropagation.html#aeaf94a751c43c5b38d4d44226da9f9cb',1,'Backpropagation']]],
+  ['obtaindedw',['obtainDEDW',['../classBackpropagation.html#a780bd5771e658089742e568b9ce302f9',1,'Backpropagation']]],
+  ['obtaindedwmain',['obtainDEDWMain',['../classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24',1,'Backpropagation']]],
   ['obtaindelta',['obtainDelta',['../classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e',1,'Backpropagation']]],
   ['obtaindeltafromfduwtdelta',['obtainDeltaFromFdUWTDelta',['../classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573',1,'Backpropagation']]],
   ['obtaindeltalast',['obtainDeltaLast',['../classBackpropagation.html#a01a673820db95e496a9b45323c170dc2',1,'Backpropagation']]],
