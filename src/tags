@@ -11,6 +11,7 @@ BackpropagationException	BackpropagationException.h	/^	BackpropagationException(
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const std::string& what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^class BackpropagationException : public std::runtime_error$/;"	c
 BackpropagationFunctionTest	unittest.cpp	/^class BackpropagationFunctionTest :$/;"	c	file:
+BackpropagationFunctionTest_compare	unittest.cpp	/^float BackpropagationFunctionTest_compare(const std::vector<float>& x,const std::vector<float>& y)$/;"	f
 BackpropagationNumericDiffTest	unittest.cpp	/^class BackpropagationNumericDiffTest :$/;"	c	file:
 BackpropagationStreamTest	unittest.cpp	/^class BackpropagationStreamTest :$/;"	c	file:
 BackpropagationTest	unittest.cpp	/^class BackpropagationTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
@@ -77,6 +78,7 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CUBLASFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CUBLASFunction.cpp	/^void Sgemv$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
+TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
 TEST	unittest.cpp	/^TEST(CudaManagerTest, Stream)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
@@ -96,9 +98,9 @@ TEST	unittest.cpp	/^TEST(DeviceVectorTest, useContainer)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationAllTest, All)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationFunctionTest, Kernel_obtainZfromU)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(BackpropagationFunctionTest, Kernel)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationStreamTest, Init)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(BackpropagationStreamTest, Evaluate)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Constructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Init)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor1)$/;"	f
@@ -130,7 +132,7 @@ df	Backpropagation.h	/^	float df(const float& x)$/;"	f	class:Backpropagation
 dimension	DeviceVector.h	/^	unsigned int dimension;$/;"	m	class:DeviceVector
 epsilon	Backpropagation.h	/^	float epsilon;$/;"	m	class:Backpropagation
 f	Backpropagation.h	/^	float f(const float& x)$/;"	f	class:Backpropagation
-forward	Backpropagation.h	/^	void forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation
+forward	Backpropagation.cpp	/^void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation
 get	DeviceMatrix.h	/^	std::vector<float> get() const$/;"	f	class:DeviceMatrix
 get	DeviceMatrix.h	/^	void get(float* const host) const$/;"	f	class:DeviceMatrix
 get	DeviceMatrix.h	/^	void get(std::vector<float>& host) const$/;"	f	class:DeviceMatrix

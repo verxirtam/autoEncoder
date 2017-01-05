@@ -1302,7 +1302,61 @@ TEST_P(BackpropagationStreamTest, Evaluate)
 	}
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class BackpropagationObtainDEDWTest :
+	public ::testing::Test ,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int>>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
 
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateBackpropagationObtainDEDWTest,
+		BackpropagationObtainDEDWTest,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),
+				::testing::ValuesIn(std::vector<unsigned int>{32, 64, 128, 256, 512, 1024}),
+				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 64, 128})
+			)
+	);
+TEST_P(BackpropagationObtainDEDWTest, test)
+{
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	unsigned int dimension    = std::get<0>(GetParam());
+	unsigned int thread_count = std::get<1>(GetParam());
+	unsigned int data_count   = std::get<2>(GetParam());
+	
+	std::vector<unsigned int> unit_count(5, dimension);
+	Backpropagation b(unit_count.size());
+	b.init(unit_count);
+	b.initRandom();
+	std::vector<float> x(dimension);
+	std::vector<float> y(dimension);
+	auto d = x;
+	
+	//xを乱数で初期化する
+	std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
+	b.forward(x, y);
+	b.back(d);
+	
+	//obtainDEDWを単独で実行
+	for(unsigned int n = 0; n < 10; n++)
+	{
+		for(unsigned int l = unit_count.size() - 1; l >= 1; l--)
+		{
+			b.obtainDEDW(l, thread_count, data_count);
+		}
+	}
+	
+}
 /////////////////////////////////////////////////////////////////////////////////
 class CudaManagerTest :
 	public ::testing::Test
@@ -1335,7 +1389,8 @@ TEST(CudaManagerTest, Stream)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*Evaluate*";
+	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";

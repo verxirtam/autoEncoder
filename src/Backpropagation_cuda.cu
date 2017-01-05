@@ -54,24 +54,28 @@ namespace
 	}
 	
 	//dEdW[l] = delta[l] * (z[l])^T;
+	template<unsigned int D>
 	__global__
 	void obtainDEDW_kernel
 		(
-			unsigned int thread_index_offset,
+			unsigned int data_index_offset,
 			unsigned int row_count,
 			const float* const delta_l,
 			const float* const z_lm1,
 			float* const dedw_l
 		)
 	{
-		//ブロックインデックス、スレッドインデックスの読み替え
-		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
-		unsigned int i = s % row_count;
-		unsigned int j = s / row_count;
-		unsigned int k = s;
-		
-		//dEdW[l] = delta[l] * (z[l])^T;
-		dedw_l[k] = delta_l[i] * z_lm1[j];
+		for(unsigned int d =0; d < D; d++)
+		{
+			//ブロックインデックス、スレッドインデックスの読み替え
+			unsigned int s = threadIdx.x + d * blockDim.x + blockIdx.x * D * blockDim.x + data_index_offset;
+			unsigned int i = s % row_count;
+			unsigned int j = s / row_count;
+			unsigned int k = s;
+			
+			//dEdW[l] = delta[l] * (z[l])^T;
+			dedw_l[k] = delta_l[i] * z_lm1[j];
+		}
 	}
 }
 
@@ -170,32 +174,63 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 	CUDA_CALL(cudaStreamSynchronize(0));
 }
 
-//dEdW[l] = delta[l] * (z[l - 1])^T;
-void Backpropagation::obtainDEDW(unsigned int l)
+void Backpropagation::obtainDEDW(unsigned int l, unsigned int thread_count, unsigned int d)
 {
-	//1ブロックあたりのスレッド数の上限
-	static unsigned int thread_count = CUDAManager::getDeviceProp().maxThreadsPerBlock;
-	
+	switch(d)
+	{
+	case 1:
+		obtainDEDWMain<1>(l, thread_count);
+		break;
+	case 32:
+		obtainDEDWMain<32>(l, thread_count);
+		break;
+	case 64:
+		obtainDEDWMain<64>(l, thread_count);
+		break;
+	case 128:
+		obtainDEDWMain<128>(l, thread_count);
+		break;
+	case 256:
+		obtainDEDWMain<256>(l, thread_count);
+		break;
+	case 512:
+		obtainDEDWMain<512>(l, thread_count);
+		break;
+	case 1024:
+		obtainDEDWMain<1024>(l, thread_count);
+		break;
+	}
+}
+//dEdW[l] = delta[l] * (z[l - 1])^T;
+//D:1スレッドが処理する変数の個数
+template<unsigned int D>
+void Backpropagation::obtainDEDWMain(unsigned int l, unsigned int thread_count)
+{
 	//実行するStream
 	unsigned int substream_count = this->getSubStreamCount();
-	cudaStream_t si0 = this->getSubStream((2 * l + 0) % substream_count);
-	cudaStream_t si1 = this->getSubStream((2 * l + 1) % substream_count);
+	cudaStream_t si0 = this->getSubStream((3 * l + 0) % substream_count);
+	cudaStream_t si1 = this->getSubStream((3 * l + 1) % substream_count);
+	cudaStream_t si2 = this->getSubStream((3 * l + 2) % substream_count);
 	
 	unsigned int N = dEdW[l].getRowCount();
 	unsigned int M = dEdW[l].getColumnCount();
 	//実行するスレッド数の合計
-	unsigned int thread_count_total = N * M;
+	unsigned int data_count_total = N * M;
 	
-	//スレッド数thread_countで実行するブロック数
-	unsigned int block_count         = thread_count_total / thread_count;
+	//ブロック数
+	unsigned int block_count0 = data_count_total / (D * thread_count);
 	//スレッド数の残り
-	unsigned int thread_count_remain = thread_count_total % thread_count;
+	unsigned int remain0      = data_count_total % (D * thread_count);
+	//ブロック数
+	unsigned int block_count1 = remain0 / thread_count;
+	//スレッド数の残り
+	unsigned int remain1      = remain0 % thread_count;
 	
-	if(block_count * thread_count != 0)
+	if(block_count0 != 0)
 	{
 		//ブロックあたりthread_countスレッドで実行
 		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<block_count, thread_count, 0, si0>>>
+		obtainDEDW_kernel<D><<<block_count0, thread_count, 0, si0>>>
 			(
 				0,
 				N,
@@ -206,20 +241,37 @@ void Backpropagation::obtainDEDW(unsigned int l)
 		//カーネル実行時のエラーチェック
 		CUDA_CALL(cudaGetLastError());
 	}
-	if(thread_count_remain != 0)
+	if(remain0 != 0)
 	{
 		//上記のカーネル実行で余ったスレッドの実行
-		//dEdW[l] = delta[l] * (z[l - 1])^T;
-		obtainDEDW_kernel<<<1, thread_count_remain, 0, si1>>>
-			(
-				block_count * thread_count,
-				N,
-				delta[l].getAddress(),
-				z[l - 1].getAddress(),
-				dEdW[l].getAddress()
-			);
-		//カーネル実行時のエラーチェック
-		CUDA_CALL(cudaGetLastError());
+		if(block_count1 != 0)
+		{
+			//dEdW[l] = delta[l] * (z[l - 1])^T;
+			obtainDEDW_kernel<1><<<block_count1, thread_count, 0, si1>>>
+				(
+					D * block_count0 * thread_count,
+					N,
+					delta[l].getAddress(),
+					z[l - 1].getAddress(),
+					dEdW[l].getAddress()
+				);
+			//カーネル実行時のエラーチェック
+			CUDA_CALL(cudaGetLastError());
+		}
+		if(remain1 != 0)
+		{
+			//dEdW[l] = delta[l] * (z[l - 1])^T;
+			obtainDEDW_kernel<1><<<1, remain1, 0, si2>>>
+				(
+					D * block_count0 * thread_count + block_count1 * thread_count,
+					N,
+					delta[l].getAddress(),
+					z[l - 1].getAddress(),
+					dEdW[l].getAddress()
+				);
+			//カーネル実行時のエラーチェック
+			CUDA_CALL(cudaGetLastError());
+		}
 	}
 }
 
