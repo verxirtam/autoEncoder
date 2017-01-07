@@ -1,6 +1,7 @@
 <map id="CUDAManager::initStream" name="CUDAManager::initStream">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="232,23,443,65"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="309,89,365,116"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="232,49,443,90"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="309,115,365,141"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a6b0f4dc317a9ae9e58416835757752d5" title="Backpropagation::Backpropagation" alt="" coords="491,5,715,32"/>
 <area shape="rect" id="node4" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="575,56,631,83"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="567,107,639,133"/>
 </map>

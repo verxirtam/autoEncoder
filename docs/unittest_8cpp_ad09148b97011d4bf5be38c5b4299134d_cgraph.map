@@ -20,7 +20,7 @@
 <area shape="rect" id="node18" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="907,380,1112,407"/>
 <area shape="rect" id="node20" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="372,505,591,532"/>
 <area shape="rect" id="node23" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="385,353,578,380"/>
-<area shape="rect" id="node25" href="$classBackpropagation.html#a780bd5771e658089742e568b9ce302f9" title="Backpropagation::obtainDEDW" alt="" coords="379,657,583,684"/>
+<area shape="rect" id="node25" href="$classBackpropagation.html#a208ef5fbf7758a9234157347050e510b" title="Backpropagation::obtainDEDW" alt="" coords="379,657,583,684"/>
 <area shape="rect" id="node26" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="643,470,853,511"/>
 <area shape="rect" id="node28" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="643,536,853,563"/>
 <area shape="rect" id="node21" href="$CUBLASFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="719,303,777,329"/>
