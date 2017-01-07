@@ -208,9 +208,9 @@ void Backpropagation::obtainDEDWMain(unsigned int l, unsigned int thread_count)
 {
 	//実行するStream
 	unsigned int substream_count = this->getSubStreamCount();
-	cudaStream_t si0 = this->getSubStream((3 * l + 0) % substream_count);
-	cudaStream_t si1 = this->getSubStream((3 * l + 1) % substream_count);
-	cudaStream_t si2 = this->getSubStream((3 * l + 2) % substream_count);
+	cudaStream_t si0 = this->getSubStream((l + 0) % substream_count);
+	cudaStream_t si1 = this->getSubStream((l + 1) % substream_count);
+	cudaStream_t si2 = this->getSubStream((l + 2) % substream_count);
 	
 	unsigned int N = dEdW[l].getRowCount();
 	unsigned int M = dEdW[l].getColumnCount();

@@ -1305,7 +1305,7 @@ TEST_P(BackpropagationStreamTest, Evaluate)
 /////////////////////////////////////////////////////////////////////////////////
 class BackpropagationObtainDEDWTest :
 	public ::testing::Test ,
-	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int>>
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int, unsigned int>>
 {
 protected:
 	void SetUp(){}
@@ -1318,13 +1318,16 @@ INSTANTIATE_TEST_CASE_P
 		BackpropagationObtainDEDWTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),
-				::testing::ValuesIn(std::vector<unsigned int>{32, 64, 128, 256, 512, 1024}),
-				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 64, 128})
+				::testing::ValuesIn(std::vector<unsigned int>{512}),//1, 10, 100, 1024, 1025}),
+				::testing::ValuesIn(std::vector<unsigned int>{256}),//32, 64, 128, 256, 512, 1024}),
+				::testing::ValuesIn(std::vector<unsigned int>{256}),//1, 32, 64, 128, 256, 512, 1024}),
+				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);
 TEST_P(BackpropagationObtainDEDWTest, test)
 {
+	std::cout << "テスト開始" << std::endl;
+	
 	//乱数の初期化
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
@@ -1333,20 +1336,38 @@ TEST_P(BackpropagationObtainDEDWTest, test)
 	unsigned int dimension    = std::get<0>(GetParam());
 	unsigned int thread_count = std::get<1>(GetParam());
 	unsigned int data_count   = std::get<2>(GetParam());
+	unsigned int substream_count = std::get<3>(GetParam());
 	
-	std::vector<unsigned int> unit_count(5, dimension);
+	std::cout << "乱数の初期化完了" << std::endl;
+	
+	std::vector<unsigned int> unit_count(64, dimension);
 	Backpropagation b(unit_count.size());
+	b.setSubStreamCount(substream_count);
+	EXPECT_EQ(b.getSubStreamCount(), substream_count);
 	b.init(unit_count);
 	b.initRandom();
 	std::vector<float> x(dimension);
 	std::vector<float> y(dimension);
 	auto d = x;
 	
+	std::cout << "Backpropagation の初期化完了" << std::endl;
+	
 	//xを乱数で初期化する
 	std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
 	b.forward(x, y);
 	b.back(d);
 	
+	std::cout << "x の初期化完了" << std::endl;
+	
+	//時刻測定イベントの定義
+	cudaEvent_t start;
+	cudaEvent_t stop;
+	CUDA_CALL(cudaEventCreate(&start));
+	CUDA_CALL(cudaEventCreate(&stop));
+	//時刻測定前に同期
+	CUDA_CALL(cudaDeviceSynchronize());
+	//時間測定開始
+	CUDA_CALL(cudaEventRecord(start, 0));
 	//obtainDEDWを単独で実行
 	for(unsigned int n = 0; n < 10; n++)
 	{
@@ -1355,7 +1376,27 @@ TEST_P(BackpropagationObtainDEDWTest, test)
 			b.obtainDEDW(l, thread_count, data_count);
 		}
 	}
-	
+	//時刻測定前に同期
+	CUDA_CALL(cudaDeviceSynchronize());
+	//時間測定完了
+	CUDA_CALL(cudaEventRecord(stop, 0));
+	CUDA_CALL(cudaEventSynchronize(stop));
+	//実行時間
+	float elapsed_time_ms;
+	CUDA_CALL(cudaEventElapsedTime(&elapsed_time_ms, start, stop));
+	//実行時間を表示
+	std::cout << "(label)"       << '\t';
+	std::cout << "dimension"       << '\t';
+	std::cout << "thread_count"    << '\t';
+	std::cout << "data_count"      << '\t';
+	std::cout << "substream_count" << '\t';
+	std::cout << "elapsed_time_ms" << std::endl;
+	std::cout << "EV" << '\t';
+	std::cout << dimension << '\t';
+	std::cout << thread_count << '\t';
+	std::cout << data_count << '\t';
+	std::cout << substream_count << '\t';
+	std::cout << elapsed_time_ms << std::endl;
 }
 /////////////////////////////////////////////////////////////////////////////////
 class CudaManagerTest :
