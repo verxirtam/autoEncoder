@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['generator',['generator',['../classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a',1,'CuRandManager']]],
   ['get',['get',['../classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49',1,'DeviceMatrix::get(float *const host) const '],['../classDeviceMatrix.html#a2813fb81c0fc36af635ad5df83f4051f',1,'DeviceMatrix::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceMatrix.html#a768bbfeecba310e0cd3b9c71a586e9b1',1,'DeviceMatrix::get() const '],['../classDeviceVector.html#ab03314e09ef894fce63874fdee42041c',1,'DeviceVector::get(float *const host) const '],['../classDeviceVector.html#aa8532322d34cb26b623d58e4577ddcb8',1,'DeviceVector::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceVector.html#a06ede5f67f6ccbc52e0b94e43e1da736',1,'DeviceVector::get() const ']]],
   ['getaddress',['getAddress',['../classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d',1,'DeviceMatrix::getAddress()'],['../classDeviceVector.html#a5487b131a7a148baea42e703212f54bc',1,'DeviceVector::getAddress()']]],
   ['getbias',['getBias',['../classBackpropagation.html#a92b8518396e44af72149674389b561c1',1,'Backpropagation']]],
@@ -13,9 +14,9 @@ var searchData=
   ['getdeltaasvector',['getDeltaAsVector',['../classBackpropagation.html#ada3aa286e72185627564c11716ef6acf',1,'Backpropagation']]],
   ['getdeviceprop',['getDeviceProp',['../classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4',1,'CudaManager']]],
   ['getdimension',['getDimension',['../classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae',1,'DeviceVector']]],
-  ['geterrorstring',['getErrorString',['../classCuBlasManager.html#ae9779f5cc71cd9cdef179b1a9c4abd1c',1,'CuBlasManager']]],
+  ['geterrorstring',['getErrorString',['../classCuBlasManager.html#ae9779f5cc71cd9cdef179b1a9c4abd1c',1,'CuBlasManager::getErrorString()'],['../classCuRandManager.html#a25b129dd3ee0b918bb0b92c215ed2f79',1,'CuRandManager::getErrorString()']]],
   ['gethandle',['getHandle',['../classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d',1,'CuBlasManager']]],
-  ['getinstance',['getInstance',['../classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f',1,'CuBlasManager::getInstance()'],['../classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86',1,'CudaManager::getInstance()']]],
+  ['getinstance',['getInstance',['../classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f',1,'CuBlasManager::getInstance()'],['../classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86',1,'CudaManager::getInstance()'],['../classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c',1,'CuRandManager::getInstance()']]],
   ['getmainstream',['getMainStream',['../classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655',1,'Backpropagation']]],
   ['getmean',['getMean',['../learningTrackData_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'learningTrackData.cpp']]],
   ['getrowcount',['getRowCount',['../classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa',1,'DeviceMatrix']]],

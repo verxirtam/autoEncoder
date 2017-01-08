@@ -15,5 +15,11 @@ var searchData=
   ['cudaexception_2eh',['CudaException.h',['../CudaException_8h.html',1,'']]],
   ['cudamanager',['CudaManager',['../classCudaManager.html',1,'CudaManager'],['../classCudaManager.html#adfc45a05dd47ba033325b6ee80f0dc05',1,'CudaManager::CudaManager()'],['../classCudaManager.html#a8b77054f5b522ea2f4af481429a02228',1,'CudaManager::CudaManager(const CudaManager &amp;)=delete'],['../classCudaManager.html#afb8237bd653579ee9500dc1b3be449af',1,'CudaManager::CudaManager(CudaManager &amp;&amp;)=delete']]],
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
-  ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]]
+  ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
+  ['curand_5fcall',['CURAND_CALL',['../CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02',1,'CuRandManager.h']]],
+  ['curandexception',['CuRandException',['../classCuRandException.html',1,'CuRandException'],['../classCuRandException.html#a225dc948e1b1eaa4bf77124cbde9fcd0',1,'CuRandException::CuRandException(const std::string &amp;what_arg)'],['../classCuRandException.html#a41bfdfc146e267dbb8236b1021603089',1,'CuRandException::CuRandException(const char *what_arg)']]],
+  ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
+  ['curandmanager',['CuRandManager',['../classCuRandManager.html',1,'CuRandManager'],['../classCuRandManager.html#adf796d406ab9f3de991a2eb3f12e756e',1,'CuRandManager::CuRandManager()'],['../classCuRandManager.html#a9a81ff3fc12984d0b8e0001c0c6540a2',1,'CuRandManager::CuRandManager(const CuRandManager &amp;)=delete'],['../classCuRandManager.html#a9a2ef42a28f4c034d5b447ecea4dcf54',1,'CuRandManager::CuRandManager(CuRandManager &amp;&amp;)=delete']]],
+  ['curandmanager_2ecpp',['CuRandManager.cpp',['../CuRandManager_8cpp.html',1,'']]],
+  ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]]
 ];
