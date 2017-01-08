@@ -216,9 +216,9 @@ Backpropagation_cuda.o : Backpropagation_cuda.cu \
     /usr/include/c++/4.8/bits/random.tcc \
     /usr/include/c++/4.8/numeric \
     /usr/include/c++/4.8/bits/stl_numeric.h \
-    CUBLASFunction.h \
+    CuBlasFunction.h \
     DeviceVector.h \
-    CUBLASManager.h \
+    CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -244,7 +244,7 @@ Backpropagation_cuda.o : Backpropagation_cuda.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    CUDAManager.h \
+    CudaManager.h \
     CudaException.h \
     CuBlasException.h \
     DeviceMatrix.h \

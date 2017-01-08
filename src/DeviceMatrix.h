@@ -20,7 +20,7 @@
 
 #include <vector>
 
-#include "CUBLASManager.h"
+#include "CuBlasManager.h"
 
 class DeviceMatrix
 {

@@ -23,7 +23,7 @@
 #include <memory>
 #include <random>
 
-#include "CUBLASFunction.h"
+#include "CuBlasFunction.h"
 
 #include "BackpropagationException.h"
 
@@ -246,19 +246,19 @@ public:
 	}
 	void setSubStreamCount(unsigned int substream_count) const
 	{
-		CUDAManager::getInstance().initStream(substream_count + 1);
+		CudaManager::getInstance().initStream(substream_count + 1);
 	}
 	unsigned int getSubStreamCount(void) const
 	{
-		return CUDAManager::getInstance().getStreamCount() - 1;
+		return CudaManager::getInstance().getStreamCount() - 1;
 	}
 	cudaStream_t getMainStream(void) const
 	{
-		return CUDAManager::getInstance().getStream(0);
+		return CudaManager::getInstance().getStream(0);
 	}
 	cudaStream_t getSubStream(unsigned int stream_index) const
 	{
-		return CUDAManager::getInstance().getStream(stream_index + 1);
+		return CudaManager::getInstance().getStream(stream_index + 1);
 	}
 };
 

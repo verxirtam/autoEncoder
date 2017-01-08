@@ -21,7 +21,7 @@
 #include <vector>
 #include <initializer_list>
 
-#include "CUBLASManager.h"
+#include "CuBlasManager.h"
 
 class DeviceVector
 {

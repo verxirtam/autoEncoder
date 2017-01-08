@@ -145,8 +145,8 @@ void Backpropagation::initRandom(void)
 void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)
 {
 	//使用するStreamをMainStreamに設定
-	//CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getMainStream()));
-	CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), 0));
+	//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
+	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
 	z[0].set(x);
 	//ストリーム完了待ち
@@ -171,7 +171,7 @@ void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y
 void Backpropagation::back(const std::vector<float>& d)
 {
 	//使用するStreamをMainStreamに設定
-	CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getMainStream()));
+	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
 	
 	//初期化
 	//delta[layer_count - 1] = u[layer_count - 1] - dd;
@@ -217,7 +217,7 @@ void Backpropagation::updateParameter()
 	{
 		//使用するStreamを設定
 		unsigned int si = (2 * l) % substream_count;
-		CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getSubStream(si)));
+		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
 		//W[l] = W[l] - e * dEdW[l];
 		//<=> W[l] = - e * dEdW[l] + 1.0f *  W[l];
@@ -227,7 +227,7 @@ void Backpropagation::updateParameter()
 		
 		//使用するStreamを設定
 		si = (2 * l + 1) % substream_count;
-		CUBLAS_CALL(cublasSetStream(CUBLASManager::getHandle(), this->getSubStream(si)));
+		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
 		//b[l] = b[l] - e * dEdb[l];
 		//<=> b[l] = - e * dEdb[l] + b[l];

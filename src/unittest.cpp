@@ -1409,7 +1409,7 @@ protected:
 
 TEST(CudaManagerTest, Stream)
 {
-	CUDAManager& cm = CUDAManager::getInstance();
+	CudaManager& cm = CudaManager::getInstance();
 	cm.initStream(2);
 	cm.getStream(0);
 	cm.getStream(1);

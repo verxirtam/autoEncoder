@@ -26,7 +26,7 @@
 
 #include <DBAccessor.h>
 
-#include "CUBLASFunction.h"
+#include "CuBlasFunction.h"
 
 
 
