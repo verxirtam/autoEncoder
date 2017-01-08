@@ -24,7 +24,7 @@
 #include <random>
 
 #include "CuBlasFunction.h"
-
+#include "CuRandManager.h"
 #include "BackpropagationException.h"
 
 

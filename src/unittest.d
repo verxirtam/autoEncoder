@@ -19,4 +19,5 @@ unittest.o: unittest.cpp DeviceVector.h CuBlasManager.h \
  /usr/local/cuda/include/vector_functions.h \
  /usr/local/cuda/include/vector_functions.hpp CudaException.h \
  CuBlasException.h DeviceMatrix.h Backpropagation.h CuBlasFunction.h \
+ CuRandManager.h /usr/local/cuda/include/curand.h CuRandException.h \
  BackpropagationException.h

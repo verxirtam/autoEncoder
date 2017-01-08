@@ -248,4 +248,7 @@ Backpropagation_cuda.o : Backpropagation_cuda.cu \
     CudaException.h \
     CuBlasException.h \
     DeviceMatrix.h \
+    CuRandManager.h \
+    /usr/local/cuda/include/curand.h \
+    CuRandException.h \
     BackpropagationException.h

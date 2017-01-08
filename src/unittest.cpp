@@ -1430,9 +1430,9 @@ TEST(CudaManagerTest, Stream)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	
