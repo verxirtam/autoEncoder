@@ -85,6 +85,7 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceMatrixTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
+Sscal	CuBlasFunction.cpp	/^void Sscal$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
@@ -165,6 +166,7 @@ getDeviceProp	CudaManager.h	/^	static inline const cudaDeviceProp& getDeviceProp
 getDimension	DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:DeviceVector
 getErrorString	CuBlasManager.cpp	/^const char* CuBlasManager::getErrorString(cublasStatus_t error)$/;"	f	class:CuBlasManager
 getErrorString	CuRandManager.cpp	/^const char* CuRandManager::getErrorString(curandStatus_t error)$/;"	f	class:CuRandManager
+getGenerator	CuRandManager.h	/^	static curandGenerator_t getGenerator()$/;"	f	class:CuRandManager
 getHandle	CuBlasManager.h	/^	static cublasHandle_t getHandle()$/;"	f	class:CuBlasManager
 getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:CuBlasManager
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager

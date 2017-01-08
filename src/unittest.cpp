@@ -1318,9 +1318,9 @@ INSTANTIATE_TEST_CASE_P
 		BackpropagationObtainDEDWTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{512}),//1, 10, 100, 1024, 1025}),
-				::testing::ValuesIn(std::vector<unsigned int>{256}),//32, 64, 128, 256, 512, 1024}),
-				::testing::ValuesIn(std::vector<unsigned int>{256}),//1, 32, 64, 128, 256, 512, 1024}),
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),//512
+				::testing::ValuesIn(std::vector<unsigned int>{32, 64, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 64, 128, 256, 512, 1024}),//256
 				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);
@@ -1329,9 +1329,13 @@ TEST_P(BackpropagationObtainDEDWTest, test)
 	std::cout << "テスト開始" << std::endl;
 	
 	//乱数の初期化
-	std::random_device rdev;
-	std::mt19937 engine(rdev());
-	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	//std::random_device rdev;
+	//std::mt19937 engine(rdev());
+	//std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	CuBlasManager::getHandle();
+	CuRandManager::getGenerator();
+	
 	
 	unsigned int dimension    = std::get<0>(GetParam());
 	unsigned int thread_count = std::get<1>(GetParam());
@@ -1346,18 +1350,23 @@ TEST_P(BackpropagationObtainDEDWTest, test)
 	EXPECT_EQ(b.getSubStreamCount(), substream_count);
 	b.init(unit_count);
 	b.initRandom();
-	std::vector<float> x(dimension);
-	std::vector<float> y(dimension);
-	auto d = x;
 	
 	std::cout << "Backpropagation の初期化完了" << std::endl;
 	
 	//xを乱数で初期化する
-	std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
+	//std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
+	DeviceVector dx(dimension);
+	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), dx.getAddress(), dx.getDimension()));
+	std::vector<float> x = dx.get();
+	std::vector<float> y(dimension);
+	std::vector<float>& d =x;
+	
+	std::cout << "x の初期化完了" << std::endl;
+	
 	b.forward(x, y);
 	b.back(d);
 	
-	std::cout << "x の初期化完了" << std::endl;
+	std::cout << "forward(), back()完了" << std::endl;
 	
 	//時刻測定イベントの定義
 	cudaEvent_t start;
@@ -1424,15 +1433,149 @@ TEST(CudaManagerTest, Stream)
 	EXPECT_EQ(cm.getStreamCount(), 5);
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class CuRandManagerTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(CuRandManagerTest, Constructor)
+{
+	CuRandManager::getGenerator();
+}
+
+TEST(CuRandManagerTest, Generate)
+{
+	DeviceVector dv0(1);
+	curandGenerateUniform(CuRandManager::getGenerator(), dv0.getAddress(), dv0.getDimension());
+	DeviceVector dv1(100);
+	curandGenerateUniform(CuRandManager::getGenerator(), dv1.getAddress(), dv1.getDimension());
+}
+/////////////////////////////////////////////////////////////////////////////////
+class CuBlasFunctionTest_1V :
+	public ::testing::Test,
+	public ::testing::WithParamInterface<unsigned int>
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateCuBlasFunctionTest_1V,
+		CuBlasFunctionTest_1V,
+		::testing::ValuesIn(std::vector<unsigned int>{1,10,100})
+	);
+
+///////////////////////////////////////
+class CuBlasFunctionTest_2V :
+	public ::testing::Test,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int> >
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateCuBlasFunctionTest_2V,
+		CuBlasFunctionTest_2V,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100}),
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100})
+			)
+	);
+///////////////////////////////////////
+
+TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)
+{
+	unsigned int dimension = GetParam();
+	std::vector<float> x(dimension, 0.0f);
+	//xを乱数で初期化する
+	
+	DeviceVector x_d(x);
+	CURAND_CALL
+		(
+			curandGenerateUniform
+				(
+					CuRandManager::getGenerator(),
+					x_d.getAddress(),
+					x_d.getDimension()
+				)
+		);
+	x = x_d.get();
+	float alpha = 0.5f;
+	Sscal(&alpha, x_d);
+	
+	
+	std::transform(x.begin(), x.end(), x.begin(), [&](float _x){return _x *= alpha;});
+	
+	auto y = x_d.get();
+	
+	float diff = BackpropagationFunctionTest_compare(x, y);
+	std::cout << "diff = " << diff << std::endl;
+}
+
+TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
+{
+	
+	unsigned int N = std::get<0>(GetParam());
+	unsigned int M = std::get<1>(GetParam());
+	
+	std::vector<float> A(M * N, 0.0f);
+	//Aを乱数で初期化する
+	DeviceMatrix A_d(M, N, A);
+	CURAND_CALL
+		(
+			curandGenerateUniform
+				(
+					CuRandManager::getGenerator(),
+					A_d.getAddress(),
+					A_d.getRowCount() * A_d.getColumnCount()
+				)
+		);
+	A = A_d.get();
+	
+	float alpha = 0.1f;
+	Sscal(&alpha, A_d);
+	
+	
+	std::transform(A.begin(), A.end(), A.begin(), [&](float _x){return _x *= alpha;});
+	
+	auto B = A_d.get();
+	
+	
+	
+	//std::cout << "A = (";
+	//std::for_each(A.begin(), A.end(), [](float _x){std::cout << _x << ", ";});
+	//std::cout << ")" << std::endl;
+	//std::cout << "B = (";
+	//std::for_each(B.begin(), B.end(), [](float _x){std::cout << _x << ", ";});
+	//std::cout << ")" << std::endl;
+	
+	float diff = BackpropagationFunctionTest_compare(A, B);
+	std::cout << "diff = " << diff << std::endl;
+}
+
+
 
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	
+	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
+	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest*";
+	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	

@@ -22,7 +22,7 @@ COMMON_FLAGS := -pg -g -O0
 #COMMON_FLAGS := 
 
 #CXX_LINKS
-CXX_LINKS := -L/usr/local/lib -lgtest -lsqlite3 -lcublas 
+CXX_LINKS := -L/usr/local/lib -lgtest -lsqlite3 -lcublas -lcurand
 
 #ホームディレクトリのパス(末尾に"/"無し)
 HOME := $(shell echo ~)

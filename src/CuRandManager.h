@@ -72,6 +72,10 @@ public:
 		static CuRandManager crm;
 		return crm;
 	}
+	static curandGenerator_t getGenerator()
+	{
+		return CuRandManager::getInstance().generator;
+	}
 	static const char* getErrorString(curandStatus_t error);
 };
 

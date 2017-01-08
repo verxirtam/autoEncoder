@@ -80,3 +80,66 @@ void Sgeam
 				)
 		);
 }
+
+
+//x = alpha * x;
+void Sscal
+	(
+		const float* alpha,
+		DeviceVector& x
+	)
+{
+	int N = x.getDimension();
+	CUBLAS_CALL
+		(
+			cublasSscal
+				(
+					CuBlasManager::getHandle(),
+					N,
+					alpha,
+					x.getAddress(),
+					1
+				)
+		);
+}
+
+//A = alpha * A;
+void Sscal
+	(
+		const float* alpha,
+		DeviceMatrix& A
+	)
+{
+	int M = A.getRowCount();
+	int N = A.getColumnCount();
+	//行列Aを(M * N)次元ベクトルとみなしてスカラー倍する
+	try
+	{
+		CUBLAS_CALL
+			(
+				cublasSscal
+					(
+						CuBlasManager::getHandle(),
+						M * N,
+						alpha,
+						A.getAddress(),
+						1
+					)
+			);
+	}
+	catch(CuBlasException& e)
+	{
+		std::stringstream msg;
+		msg << e.what();
+		msg << " at ";
+		msg << __FILE__ << ":";
+		msg << __LINE__ << " ";
+		msg << "CuBlasManager::getHandle() = " << CuBlasManager::getHandle() << ", ";
+		msg << "M = " << M << ", ";
+		msg << "N = " << N << ", ";
+		msg << "*alpha = " << *alpha << ", ";
+		msg << "A.getAddress() = " << A.getAddress() << ", ";
+		throw CuBlasException(msg.str());
+	}
+}
+

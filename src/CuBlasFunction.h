@@ -52,7 +52,18 @@ void Sgeam
 		DeviceMatrix& C
 	);
 
+//x = alpha * x;
+void Sscal
+	(
+		const float* alpha,
+		DeviceVector& x
+	);
 
-
+//A = alpha * A;
+void Sscal
+	(
+		const float* alpha,
+		DeviceMatrix& A
+	);
 
 
