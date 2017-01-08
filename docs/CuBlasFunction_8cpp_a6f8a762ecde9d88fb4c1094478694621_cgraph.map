@@ -1,0 +1,6 @@
+<map id="Sscal" name="Sscal">
+<area shape="rect" id="node2" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="109,5,299,32"/>
+<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="113,56,295,83"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="117,107,291,133"/>
+<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="347,56,538,83"/>
+</map>

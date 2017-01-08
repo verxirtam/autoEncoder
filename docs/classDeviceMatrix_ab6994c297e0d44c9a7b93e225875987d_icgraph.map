@@ -1,8 +1,9 @@
 <map id="DeviceMatrix::getAddress" name="DeviceMatrix::getAddress">
 <area shape="rect" id="node2" href="$CuBlasFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="231,68,294,95"/>
 <area shape="rect" id="node10" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="421,157,483,184"/>
-<area shape="rect" id="node12" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="235,195,291,221"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="227,245,299,272"/>
+<area shape="rect" id="node12" href="$CuBlasFunction_8h.html#a443f286492eac14303adf334de45cb33" title="Sscal" alt="" coords="235,195,290,221"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="235,245,291,272"/>
+<area shape="rect" id="node14" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="227,296,299,323"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="355,56,549,83"/>
 <area shape="rect" id="node7" href="$classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="347,5,557,32"/>
 <area shape="rect" id="node9" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="386,107,518,133"/>

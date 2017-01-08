@@ -161,23 +161,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">static</span> <a class="code" href="classCuRandManager.html">CuRandManager</a> crm;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> crm;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCuRandManager.html#a25b129dd3ee0b918bb0b92c215ed2f79">getErrorString</a>(curandStatus_t error);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8">   75</a></span>&#160;    <span class="keyword">static</span> curandGenerator_t <a class="code" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8">getGenerator</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c">CuRandManager::getInstance</a>().<a class="code" href="classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a">generator</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCuRandManager.html#a25b129dd3ee0b918bb0b92c215ed2f79">getErrorString</a>(curandStatus_t error);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="ttc" id="classCuRandManager_html_ac507a072f6c6eda6185561087e6d025c"><div class="ttname"><a href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c">CuRandManager::getInstance</a></div><div class="ttdeci">static CuRandManager &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:70</div></div>
 <div class="ttc" id="classCuRandManager_html"><div class="ttname"><a href="classCuRandManager.html">CuRandManager</a></div><div class="ttdef"><b>Definition:</b> CuRandManager.h:47</div></div>
 <div class="ttc" id="CuRandManager_8h_html_aa31e5d819ee0b16ce23168f426395b02"><div class="ttname"><a href="CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02">CURAND_CALL</a></div><div class="ttdeci">#define CURAND_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:27</div></div>
 <div class="ttc" id="classCuRandManager_html_a25b129dd3ee0b918bb0b92c215ed2f79"><div class="ttname"><a href="classCuRandManager.html#a25b129dd3ee0b918bb0b92c215ed2f79">CuRandManager::getErrorString</a></div><div class="ttdeci">static const char * getErrorString(curandStatus_t error)</div><div class="ttdef"><b>Definition:</b> CuRandManager.cpp:20</div></div>
 <div class="ttc" id="CuRandException_8h_html"><div class="ttname"><a href="CuRandException_8h.html">CuRandException.h</a></div></div>
 <div class="ttc" id="classCuRandManager_html_adb86d79187ea93d75319a5efe8b5b36a"><div class="ttname"><a href="classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a">CuRandManager::generator</a></div><div class="ttdeci">curandGenerator_t generator</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:50</div></div>
+<div class="ttc" id="classCuRandManager_html_abd24fbe05fafa5240680e8d5d1c7a7c8"><div class="ttname"><a href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8">CuRandManager::getGenerator</a></div><div class="ttdeci">static curandGenerator_t getGenerator()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:75</div></div>
 <div class="ttc" id="classCuRandManager_html_adf796d406ab9f3de991a2eb3f12e756e"><div class="ttname"><a href="classCuRandManager.html#adf796d406ab9f3de991a2eb3f12e756e">CuRandManager::CuRandManager</a></div><div class="ttdeci">CuRandManager()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:51</div></div>
 <div class="ttc" id="classCuRandManager_html_a6821587d9470498055b397f5dd20ee07"><div class="ttname"><a href="classCuRandManager.html#a6821587d9470498055b397f5dd20ee07">CuRandManager::~CuRandManager</a></div><div class="ttdeci">~CuRandManager()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:56</div></div>
 <div class="ttc" id="classCuRandManager_html_a93a1669705c6500a746be7315e4414fc"><div class="ttname"><a href="classCuRandManager.html#a93a1669705c6500a746be7315e4414fc">CuRandManager::operator=</a></div><div class="ttdeci">CuRandManager &amp; operator=(const CuRandManager &amp;)=delete</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 8 2017 17:44:33 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 9 2017 01:18:36 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

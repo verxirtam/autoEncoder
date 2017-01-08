@@ -14,6 +14,7 @@ var searchData=
   ['getdeviceprop',['getDeviceProp',['../classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4',1,'CudaManager']]],
   ['getdimension',['getDimension',['../classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae',1,'DeviceVector']]],
   ['geterrorstring',['getErrorString',['../classCuBlasManager.html#ae9779f5cc71cd9cdef179b1a9c4abd1c',1,'CuBlasManager::getErrorString()'],['../classCuRandManager.html#a25b129dd3ee0b918bb0b92c215ed2f79',1,'CuRandManager::getErrorString()']]],
+  ['getgenerator',['getGenerator',['../classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8',1,'CuRandManager']]],
   ['gethandle',['getHandle',['../classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d',1,'CuBlasManager']]],
   ['getinstance',['getInstance',['../classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f',1,'CuBlasManager::getInstance()'],['../classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86',1,'CudaManager::getInstance()'],['../classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c',1,'CuRandManager::getInstance()']]],
   ['getmainstream',['getMainStream',['../classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655',1,'Backpropagation']]],

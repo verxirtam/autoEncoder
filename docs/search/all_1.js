@@ -7,6 +7,8 @@ var searchData=
   ['cublasexception_2eh',['CuBlasException.h',['../CuBlasException_8h.html',1,'']]],
   ['cublasfunction_2ecpp',['CuBlasFunction.cpp',['../CuBlasFunction_8cpp.html',1,'']]],
   ['cublasfunction_2eh',['CuBlasFunction.h',['../CuBlasFunction_8h.html',1,'']]],
+  ['cublasfunctiontest_5f1v',['CuBlasFunctionTest_1V',['../classCuBlasFunctionTest__1V.html',1,'']]],
+  ['cublasfunctiontest_5f2v',['CuBlasFunctionTest_2V',['../classCuBlasFunctionTest__2V.html',1,'']]],
   ['cublasmanager',['CuBlasManager',['../classCuBlasManager.html',1,'CuBlasManager'],['../classCuBlasManager.html#a754a7fe32204af76a708d70514210eb5',1,'CuBlasManager::CuBlasManager()'],['../classCuBlasManager.html#a76beb23e06889220094e9ee3b4685d17',1,'CuBlasManager::CuBlasManager(const CuBlasManager &amp;)=delete'],['../classCuBlasManager.html#ae690780a5f33ad06fd6d9f43201faf7e',1,'CuBlasManager::CuBlasManager(CuBlasManager &amp;&amp;)=delete']]],
   ['cublasmanager_2ecpp',['CuBlasManager.cpp',['../CuBlasManager_8cpp.html',1,'']]],
   ['cublasmanager_2eh',['CuBlasManager.h',['../CuBlasManager_8h.html',1,'']]],
@@ -21,5 +23,6 @@ var searchData=
   ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
   ['curandmanager',['CuRandManager',['../classCuRandManager.html',1,'CuRandManager'],['../classCuRandManager.html#adf796d406ab9f3de991a2eb3f12e756e',1,'CuRandManager::CuRandManager()'],['../classCuRandManager.html#a9a81ff3fc12984d0b8e0001c0c6540a2',1,'CuRandManager::CuRandManager(const CuRandManager &amp;)=delete'],['../classCuRandManager.html#a9a2ef42a28f4c034d5b447ecea4dcf54',1,'CuRandManager::CuRandManager(CuRandManager &amp;&amp;)=delete']]],
   ['curandmanager_2ecpp',['CuRandManager.cpp',['../CuRandManager_8cpp.html',1,'']]],
-  ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]]
+  ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]],
+  ['curandmanagertest',['CuRandManagerTest',['../classCuRandManagerTest.html',1,'']]]
 ];
