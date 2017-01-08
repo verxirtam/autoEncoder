@@ -1,4 +1,4 @@
 <map id="Backpropagation::obtainZFromU" name="Backpropagation::obtainZFromU">
-<area shape="rect" id="node2" href="$classCUDAManager.html#a2e14fc69f82d2c229b41bb1a247d8c26" title="CUDAManager::getDeviceProp" alt="" coords="264,5,469,32"/>
-<area shape="rect" id="node3" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="517,5,704,32"/>
+<area shape="rect" id="node2" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="264,5,461,32"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="509,5,688,32"/>
 </map>

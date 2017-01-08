@@ -1,5 +1,5 @@
 <map id="Backpropagation::Backpropagation" name="Backpropagation::Backpropagation">
 <area shape="rect" id="node2" href="$classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="277,23,488,65"/>
-<area shape="rect" id="node3" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="536,5,723,32"/>
-<area shape="rect" id="node4" href="$classCUDAManager.html#a2fa13a29a043eb49fd2ead7220cf32a6" title="CUDAManager::initStream" alt="" coords="540,56,719,83"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="536,5,715,32"/>
+<area shape="rect" id="node4" href="$classCudaManager.html#af5165cd36e60be7791be7073e0a37a5a" title="CudaManager::initStream" alt="" coords="540,56,711,83"/>
 </map>

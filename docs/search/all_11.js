@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_7ecublasmanager',['~CUBLASManager',['../classCUBLASManager.html#a85d6bf9412acb3ca1f4c18ee78332047',1,'CUBLASManager']]],
-  ['_7ecudamanager',['~CUDAManager',['../classCUDAManager.html#a6e01c51cdfcd74dc750c3ed98466bb46',1,'CUDAManager']]],
+  ['_7ecublasmanager',['~CuBlasManager',['../classCuBlasManager.html#aa4e928933f96fe0628f329174d59c806',1,'CuBlasManager']]],
+  ['_7ecudamanager',['~CudaManager',['../classCudaManager.html#ac248e2334d711d51a5be1df089223d87',1,'CudaManager']]],
   ['_7edevicematrix',['~DeviceMatrix',['../classDeviceMatrix.html#a74f7b918bfefcadab80528a77e207a97',1,'DeviceMatrix']]],
   ['_7edevicevector',['~DeviceVector',['../classDeviceVector.html#aa808d221db1f222f68f0e6b748da049a',1,'DeviceVector']]]
 ];

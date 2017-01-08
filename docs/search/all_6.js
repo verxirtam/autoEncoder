@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handle',['handle',['../classCUBLASManager.html#a6300352cbf5110a012eeb9b82ce475fd',1,'CUBLASManager']]]
+  ['handle',['handle',['../classCuBlasManager.html#a903f478502e70ab58c952c086efb4c99',1,'CuBlasManager']]]
 ];

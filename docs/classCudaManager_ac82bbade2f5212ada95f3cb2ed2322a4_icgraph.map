@@ -1,0 +1,9 @@
+<map id="CudaManager::getDeviceProp" name="CudaManager::getDeviceProp">
+<area shape="rect" id="node2" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="251,5,461,32"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="259,57,453,98"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="752,8,923,35"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="979,8,1035,35"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="971,59,1043,85"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="510,60,703,87"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="760,59,915,85"/>
+</map>

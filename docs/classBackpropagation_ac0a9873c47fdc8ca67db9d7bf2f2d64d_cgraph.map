@@ -1,4 +1,4 @@
 <map id="Backpropagation::getSubStreamCount" name="Backpropagation::getSubStreamCount">
-<area shape="rect" id="node2" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="279,5,465,32"/>
-<area shape="rect" id="node3" href="$classCUDAManager.html#aad9c03d204b11add149d390af096c7aa" title="CUDAManager::getStreamCount" alt="" coords="265,56,479,83"/>
+<area shape="rect" id="node2" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="279,5,457,32"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a77452ece2c085919024b759c01dfceed" title="CudaManager::getStreamCount" alt="" coords="265,56,471,83"/>
 </map>

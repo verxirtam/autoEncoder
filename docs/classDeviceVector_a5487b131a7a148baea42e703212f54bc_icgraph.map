@@ -1,6 +1,6 @@
 <map id="DeviceVector::getAddress" name="DeviceVector::getAddress">
-<area shape="rect" id="node2" href="$CUBLASFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="232,43,291,69"/>
-<area shape="rect" id="node8" href="$CUBLASFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="230,119,293,145"/>
+<area shape="rect" id="node2" href="$CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="232,43,291,69"/>
+<area shape="rect" id="node8" href="$CuBlasFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="230,119,293,145"/>
 <area shape="rect" id="node13" href="$unittest_8cpp.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="233,169,289,196"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="341,43,560,69"/>
 <area shape="rect" id="node7" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="608,5,835,32"/>

@@ -1,4 +1,4 @@
 <map id="Backpropagation::getMainStream" name="Backpropagation::getMainStream">
-<area shape="rect" id="node2" href="$classCUDAManager.html#ab70242e4695edd78f58327e728227664" title="CUDAManager::getInstance" alt="" coords="227,5,413,32"/>
-<area shape="rect" id="node3" href="$classCUDAManager.html#ab7db8fe56b07fc770f8a27fa812691d9" title="CUDAManager::getStream" alt="" coords="231,56,409,83"/>
+<area shape="rect" id="node2" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="227,5,405,32"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98" title="CudaManager::getStream" alt="" coords="231,56,401,83"/>
 </map>
