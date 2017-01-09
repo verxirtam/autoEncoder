@@ -128,7 +128,7 @@ public:
 	}
 	void set(const float* host)
 	{
-		if(rowCount * columnCount == 0)
+		if(((rowCount * columnCount) == 0))
 		{
 			return;
 		}
@@ -140,7 +140,7 @@ public:
 	}
 	void get(float* const host) const
 	{
-		if(rowCount * columnCount == 0)
+		if(((rowCount * columnCount) == 0))
 		{
 			return;
 		}

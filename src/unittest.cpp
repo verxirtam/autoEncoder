@@ -1320,7 +1320,7 @@ INSTANTIATE_TEST_CASE_P
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),//512
 				::testing::ValuesIn(std::vector<unsigned int>{32, 64, 128, 256, 512, 1024}),//256
-				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 64, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{64}),//1, 32, 64, 128, 256, 512, 1024}),//256
 				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);

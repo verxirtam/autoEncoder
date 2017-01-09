@@ -111,11 +111,15 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 
 void Backpropagation::initRandom(void)
 {
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
 	for(DeviceMatrix& w : weight)
 	{
 		unsigned int M = w.getRowCount();
 		unsigned int N = w.getColumnCount();
-		/*
+		
 		std::vector<float> h_w;
 		for(unsigned int i =0; i < M * N; i++)
 		{
@@ -125,12 +129,14 @@ void Backpropagation::initRandom(void)
 			h_w.push_back(urd(engine) / static_cast<float>(N));
 		}
 		w.set(h_w);
-		*/
+		
+		/*
 		//wのデバイスメモリに値域(0.0, 1.0]の一様分布に従う乱数を生成
 		CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), w.getAddress(), M * N));
 		//wを1/Nでスカラー倍する
 		float alpha = 1.0f / static_cast<float>(N);
 		Sscal(&alpha, w);
+		*/
 	}
 	//biasは一律0で初期化する
 	for(auto&& b : bias)
