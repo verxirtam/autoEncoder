@@ -1318,9 +1318,9 @@ INSTANTIATE_TEST_CASE_P
 		BackpropagationObtainDEDWTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),//512
-				::testing::ValuesIn(std::vector<unsigned int>{32, 128, 256, 512, 1024}),//256
-				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{1025}),//1, 10, 100, 1024, 1025}),//512
+				::testing::ValuesIn(std::vector<unsigned int>{128}),//32, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{32}),//1, 32, 128, 256, 512, 1024}),//256
 				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);
@@ -1569,9 +1569,9 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
-	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
