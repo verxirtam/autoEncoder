@@ -1319,8 +1319,8 @@ INSTANTIATE_TEST_CASE_P
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1024, 1025}),//512
-				::testing::ValuesIn(std::vector<unsigned int>{32, 64, 128, 256, 512, 1024}),//256
-				::testing::ValuesIn(std::vector<unsigned int>{64}),//1, 32, 64, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{32, 128, 256, 512, 1024}),//256
+				::testing::ValuesIn(std::vector<unsigned int>{1, 32, 128, 256, 512, 1024}),//256
 				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);
@@ -1450,9 +1450,9 @@ TEST(CuRandManagerTest, Constructor)
 TEST(CuRandManagerTest, Generate)
 {
 	DeviceVector dv0(1);
-	curandGenerateUniform(CuRandManager::getGenerator(), dv0.getAddress(), dv0.getDimension());
+	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), dv0.getAddress(), dv0.getDimension()));
 	DeviceVector dv1(100);
-	curandGenerateUniform(CuRandManager::getGenerator(), dv1.getAddress(), dv1.getDimension());
+	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), dv1.getAddress(), dv1.getDimension()));
 }
 /////////////////////////////////////////////////////////////////////////////////
 class CuBlasFunctionTest_1V :
@@ -1487,8 +1487,8 @@ INSTANTIATE_TEST_CASE_P
 		CuBlasFunctionTest_2V,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100}),
-				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100})
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1025}),
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1025})
 			)
 	);
 ///////////////////////////////////////
@@ -1524,7 +1524,6 @@ TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)
 
 TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 {
-	
 	unsigned int N = std::get<0>(GetParam());
 	unsigned int M = std::get<1>(GetParam());
 	
@@ -1570,11 +1569,12 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	
+	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
-	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest*";
-	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
