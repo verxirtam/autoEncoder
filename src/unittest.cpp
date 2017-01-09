@@ -744,7 +744,7 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(200, 225, 250, 275, 300)
 		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
 		//::testing::Values(10, 1024, 1025, 2000)
-		::testing::Values(10, 2000)
+		::testing::Values(10, 1025)
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
@@ -871,7 +871,7 @@ TEST_P(BackpropagationAllTest, All)
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	int nmax = 10000;
+	int nmax = 100;
 	
 	std::vector<float> r;
 	
@@ -1569,9 +1569,9 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
-	::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
