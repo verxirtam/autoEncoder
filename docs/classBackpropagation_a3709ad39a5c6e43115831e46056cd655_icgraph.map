@@ -1,9 +1,8 @@
 <map id="Backpropagation::getMainStream" name="Backpropagation::getMainStream">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="227,34,445,60"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="501,59,656,86"/>
-<area shape="rect" id="node6" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="239,84,433,111"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="493,110,664,136"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="308,186,364,212"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="720,59,776,86"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="712,110,784,136"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="227,5,445,32"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="493,56,648,83"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="239,107,433,133"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="308,157,364,184"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="704,31,760,57"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="696,81,768,108"/>
 </map>
