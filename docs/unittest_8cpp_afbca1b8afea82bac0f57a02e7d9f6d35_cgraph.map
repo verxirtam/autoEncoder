@@ -10,7 +10,7 @@
 <area shape="rect" id="node17" href="$classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="167,1042,294,1069"/>
 <area shape="rect" id="node18" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="145,522,316,549"/>
 <area shape="rect" id="node26" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="153,750,308,777"/>
-<area shape="rect" id="node33" href="$classBackpropagation.html#a208ef5fbf7758a9234157347050e510b" title="Backpropagation::obtainDEDW" alt="" coords="391,943,595,970"/>
+<area shape="rect" id="node33" href="$classBackpropagation.html#a2378bdf5f4fac500a7fb4363f251562e" title="Backpropagation::obtainDEDW" alt="" coords="391,943,595,970"/>
 <area shape="rect" id="node3" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="1163,318,1354,345"/>
 <area shape="rect" id="node5" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="914,39,1110,66"/>
 <area shape="rect" id="node7" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="1169,850,1348,877"/>

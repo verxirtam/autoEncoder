@@ -3,7 +3,7 @@
 <area shape="rect" id="node4" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="493,359,667,401"/>
 <area shape="rect" id="node7" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="208,269,427,296"/>
 <area shape="rect" id="node11" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="221,320,414,347"/>
-<area shape="rect" id="node18" href="$classBackpropagation.html#a208ef5fbf7758a9234157347050e510b" title="Backpropagation::obtainDEDW" alt="" coords="215,555,419,581"/>
+<area shape="rect" id="node18" href="$classBackpropagation.html#a2378bdf5f4fac500a7fb4363f251562e" title="Backpropagation::obtainDEDW" alt="" coords="215,555,419,581"/>
 <area shape="rect" id="node19" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="212,489,423,530"/>
 <area shape="rect" id="node21" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="475,425,685,452"/>
 <area shape="rect" id="node3" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="987,5,1178,32"/>
