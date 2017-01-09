@@ -1,20 +1,13 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="143,79,287,105"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="118,129,311,156"/>
-<area shape="rect" id="node12" href="$classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="109,246,320,287"/>
-<area shape="rect" id="node15" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="109,181,320,222"/>
-<area shape="rect" id="node17" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="128,311,301,353"/>
-<area shape="rect" id="node19" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="109,377,320,404"/>
-<area shape="rect" id="node4" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="371,19,573,45"/>
-<area shape="rect" id="node6" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="445,95,499,121"/>
-<area shape="rect" id="node11" href="$classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="407,145,537,172"/>
-<area shape="rect" id="node5" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="625,5,821,32"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="628,157,817,184"/>
-<area shape="rect" id="node8" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="631,56,814,83"/>
-<area shape="rect" id="node10" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="635,107,810,133"/>
-<area shape="rect" id="node9" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="870,56,1061,83"/>
-<area shape="rect" id="node13" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="383,312,561,339"/>
-<area shape="rect" id="node14" href="$classCudaManager.html#af5165cd36e60be7791be7073e0a37a5a" title="CudaManager::initStream" alt="" coords="387,253,557,280"/>
-<area shape="rect" id="node16" href="$classCudaManager.html#a77452ece2c085919024b759c01dfceed" title="CudaManager::getStreamCount" alt="" coords="369,196,575,223"/>
-<area shape="rect" id="node18" href="$classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98" title="CudaManager::getStream" alt="" coords="387,367,557,393"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="143,5,287,32"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="118,56,311,83"/>
+<area shape="rect" id="node5" href="$classBackpropagation.html#ad06e40023b1cf99d06f09693fd08386b" title="Backpropagation::setSubStream\lCount" alt="" coords="109,173,320,214"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="109,107,320,149"/>
+<area shape="rect" id="node10" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="128,238,301,279"/>
+<area shape="rect" id="node12" href="$classBackpropagation.html#a2bcf82c3a9b8df9a75bfabc310faedf7" title="Backpropagation::getSubStream" alt="" coords="109,304,320,331"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="407,56,537,83"/>
+<area shape="rect" id="node6" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="383,239,561,265"/>
+<area shape="rect" id="node7" href="$classCudaManager.html#af5165cd36e60be7791be7073e0a37a5a" title="CudaManager::initStream" alt="" coords="387,180,557,207"/>
+<area shape="rect" id="node9" href="$classCudaManager.html#a77452ece2c085919024b759c01dfceed" title="CudaManager::getStreamCount" alt="" coords="369,115,575,141"/>
+<area shape="rect" id="node11" href="$classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98" title="CudaManager::getStream" alt="" coords="387,293,557,320"/>
 </map>

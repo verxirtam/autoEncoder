@@ -1,12 +1,5 @@
 <map id="TEST_P" name="TEST_P">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="151,31,295,57"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="126,81,319,108"/>
-<area shape="rect" id="node4" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="368,19,571,45"/>
-<area shape="rect" id="node6" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="442,81,497,108"/>
-<area shape="rect" id="node11" href="$classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="404,132,535,159"/>
-<area shape="rect" id="node5" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="619,5,815,32"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="623,56,812,83"/>
-<area shape="rect" id="node8" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="626,107,809,133"/>
-<area shape="rect" id="node10" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="630,157,805,184"/>
-<area shape="rect" id="node9" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="865,107,1055,133"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ae633a88bdc212776496a27442c19c0f5" title="Backpropagation::init" alt="" coords="151,5,295,32"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="126,56,319,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="368,56,499,83"/>
 </map>

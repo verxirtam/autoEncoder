@@ -1,7 +1,4 @@
 <map id="CuRandManager::getGenerator" name="CuRandManager::getGenerator">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="257,31,450,57"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="317,81,389,108"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="325,132,381,159"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="499,5,571,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="507,56,563,83"/>
+<area shape="rect" id="node2" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="256,5,328,32"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="264,56,320,83"/>
 </map>
