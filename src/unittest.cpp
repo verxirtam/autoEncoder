@@ -1563,7 +1563,7 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class CuSolverTest :
+class CuSolverDnTest :
 	public ::testing::Test
 {
 protected:
@@ -1571,9 +1571,9 @@ protected:
 	void TearDown(){}
 };
 
-TEST(CuSolverTest, getHandle)
+TEST(CuSolverDnTest, getHandle)
 {
-	CuSolverManager::getHandle();
+	CuSolverDnManager::getHandle();
 }
 
 TEST(CuSolverTest, DnSsyevd)
