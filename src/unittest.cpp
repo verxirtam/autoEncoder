@@ -33,6 +33,9 @@
 
 #include "Backpropagation.h"
 
+#include "CuSolverDnManager.h"
+#include "CuSolverDnFunction.h"
+
 //////////////////////////////////////////////////////////////////////
 // DeviceVectorTest
 //////////////////////////////////////////////////////////////////////
@@ -1576,7 +1579,7 @@ TEST(CuSolverDnTest, getHandle)
 	CuSolverDnManager::getHandle();
 }
 
-TEST(CuSolverTest, DnSsyevd)
+TEST(CuSolverDnTest, DnSsyevd)
 {
 	DeviceMatrix dA(3, 3, {3.5f, 0.5f, 0.0f, 0.5f, 3.5f, 0.0f, 0.0f, 0.0f, 2.0f});
 	DeviceVector dW;
@@ -1600,10 +1603,11 @@ TEST(CuSolverTest, DnSsyevd)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
+	::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";

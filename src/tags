@@ -22,12 +22,15 @@ CUBLAS_CALL	CuBlasManager.h	33;"	d
 CUDA_CALL	CudaManager.h	26;"	d
 CUDA_SRCS	makefile	/^CUDA_SRCS := $(shell ls *.cu)$/;"	m
 CURAND_CALL	CuRandManager.h	27;"	d
+CUSOLVERDN_CALL	CuSolverDnManager.h	25;"	d
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
-CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -lgtest -lsqlite3 -lcublas $/;"	m
+CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -lgtest -lsqlite3 -lcublas -lcurand$/;"	m
 CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
+CuBlasFunctionTest_1V	unittest.cpp	/^class CuBlasFunctionTest_1V :$/;"	c	file:
+CuBlasFunctionTest_2V	unittest.cpp	/^class CuBlasFunctionTest_2V :$/;"	c	file:
 CuBlasManager	CuBlasManager.h	/^	CuBlasManager():$/;"	f	class:CuBlasManager
 CuBlasManager	CuBlasManager.h	/^class CuBlasManager$/;"	c
 CuRandException	CuRandException.h	/^	CuRandException(const char* what_arg):$/;"	f	class:CuRandException
@@ -35,6 +38,13 @@ CuRandException	CuRandException.h	/^	CuRandException(const std::string& what_arg
 CuRandException	CuRandException.h	/^class CuRandException : public std::runtime_error$/;"	c
 CuRandManager	CuRandManager.h	/^	CuRandManager():$/;"	f	class:CuRandManager
 CuRandManager	CuRandManager.h	/^class CuRandManager$/;"	c
+CuRandManagerTest	unittest.cpp	/^class CuRandManagerTest :$/;"	c	file:
+CuSolverDnException	CuSolverDnException.h	/^	CuSolverDnException(const char* what_arg):$/;"	f	class:CuSolverDnException
+CuSolverDnException	CuSolverDnException.h	/^	CuSolverDnException(const std::string& what_arg):$/;"	f	class:CuSolverDnException
+CuSolverDnException	CuSolverDnException.h	/^class CuSolverDnException : public std::runtime_error$/;"	c
+CuSolverDnManager	CuSolverDnManager.h	/^	CuSolverDnManager():$/;"	f	class:CuSolverDnManager
+CuSolverDnManager	CuSolverDnManager.h	/^class CuSolverDnManager$/;"	c
+CuSolverDnTest	unittest.cpp	/^class CuSolverDnTest :$/;"	c	file:
 CudaException	CudaException.h	/^	CudaException(const char* what_arg):$/;"	f	class:CudaException
 CudaException	CudaException.h	/^	CudaException(const std::string& what_arg):$/;"	f	class:CudaException
 CudaException	CudaException.h	/^class CudaException : public std::runtime_error$/;"	c
@@ -56,6 +66,7 @@ DeviceVector	DeviceVector.h	/^	DeviceVector(const std::vector<float>& v):$/;"	f	
 DeviceVector	DeviceVector.h	/^	DeviceVector(unsigned int d = 0):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^class DeviceVector$/;"	c
 DeviceVectorTest	unittest.cpp	/^class DeviceVectorTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
+DnSsyevd	CuSolverDnFunction.cpp	/^void DnSsyevd$/;"	f
 ErrorFunc	unittest.cpp	/^float ErrorFunc(const std::vector<float>& y, const std::vector<float>& d)$/;"	f
 GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py$/;"	m
 GTEST_LANG_CXX11	unittest.cpp	19;"	d	file:
@@ -80,6 +91,10 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationNumericDiffTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationObtainDEDWTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationStreamTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationTest
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_1V
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_2V
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuRandManagerTest
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuSolverDnTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CudaManagerTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceMatrixTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
@@ -89,6 +104,10 @@ Sscal	CuBlasFunction.cpp	/^void Sscal$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
+TEST	unittest.cpp	/^TEST(CuRandManagerTest, Constructor)$/;"	f
+TEST	unittest.cpp	/^TEST(CuRandManagerTest, Generate)$/;"	f
+TEST	unittest.cpp	/^TEST(CuSolverDnTest, getHandle)$/;"	f
+TEST	unittest.cpp	/^TEST(CuSolverTest, DnSsyevd)$/;"	f
 TEST	unittest.cpp	/^TEST(CudaManagerTest, Stream)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, useContainer)$/;"	f
@@ -113,6 +132,8 @@ TEST_P	unittest.cpp	/^TEST_P(BackpropagationObtainDEDWTest, test)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationStreamTest, Evaluate)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Constructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Init)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor1)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor2)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyAssignmentOperator)$/;"	f
@@ -126,6 +147,10 @@ TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationNumericDif
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationObtainDEDWTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationStreamTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationTest
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_1V
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_2V
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuRandManagerTest
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuSolverDnTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CudaManagerTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceMatrixTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceVectorTest
@@ -168,8 +193,10 @@ getErrorString	CuBlasManager.cpp	/^const char* CuBlasManager::getErrorString(cub
 getErrorString	CuRandManager.cpp	/^const char* CuRandManager::getErrorString(curandStatus_t error)$/;"	f	class:CuRandManager
 getGenerator	CuRandManager.h	/^	static curandGenerator_t getGenerator()$/;"	f	class:CuRandManager
 getHandle	CuBlasManager.h	/^	static cublasHandle_t getHandle()$/;"	f	class:CuBlasManager
+getHandle	CuSolverDnManager.h	/^	static inline cusolverDnHandle_t getHandle(void) const$/;"	f	class:CuSolverDnManager
 getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:CuBlasManager
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager
+getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
 getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
@@ -187,6 +214,7 @@ getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeigh
 getZ	Backpropagation.h	/^	const std::vector<DeviceVector>& getZ() const$/;"	f	class:Backpropagation
 getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
 handle	CuBlasManager.h	/^	cublasHandle_t handle;$/;"	m	class:CuBlasManager
+handle	CuSolverDnManager.h	/^	cusolverDnHandle_t handle;$/;"	m	class:CuSolverDnManager
 host_matrix	unittest.cpp	/^	using host_matrix = std::vector<float>;$/;"	u
 init	Backpropagation.cpp	/^void Backpropagation::init(const std::vector<unsigned int>& unit_count)$/;"	f	class:Backpropagation
 initRandom	Backpropagation.cpp	/^void Backpropagation::initRandom(void)$/;"	f	class:Backpropagation
@@ -222,6 +250,7 @@ weight	Backpropagation.h	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpr
 z	Backpropagation.h	/^	std::vector<DeviceVector> z;$/;"	m	class:Backpropagation
 ~CuBlasManager	CuBlasManager.h	/^	virtual ~CuBlasManager()$/;"	f	class:CuBlasManager
 ~CuRandManager	CuRandManager.h	/^	~CuRandManager()$/;"	f	class:CuRandManager
+~CuSolverDnManager	CuSolverDnManager.h	/^	~CuSolverDnManager()$/;"	f	class:CuSolverDnManager
 ~CudaManager	CudaManager.h	/^	~CudaManager()$/;"	f	class:CudaManager
 ~DeviceMatrix	DeviceMatrix.h	/^	~DeviceMatrix()$/;"	f	class:DeviceMatrix
 ~DeviceVector	DeviceVector.h	/^	~DeviceVector()$/;"	f	class:DeviceVector
