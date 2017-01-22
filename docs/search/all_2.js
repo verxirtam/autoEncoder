@@ -12,5 +12,6 @@ var searchData=
   ['devicevector_2eh',['DeviceVector.h',['../DeviceVector_8h.html',1,'']]],
   ['devicevectortest',['DeviceVectorTest',['../classDeviceVectorTest.html',1,'']]],
   ['df',['df',['../classBackpropagation.html#a35499381a306103889b02b3b00e51a49',1,'Backpropagation']]],
-  ['dimension',['dimension',['../classDeviceVector.html#a8e5e571fae8c9f62e0dd36b0d9e82abd',1,'DeviceVector']]]
+  ['dimension',['dimension',['../classDeviceVector.html#a8e5e571fae8c9f62e0dd36b0d9e82abd',1,'DeviceVector']]],
+  ['dnssyevd',['DnSsyevd',['../CuSolverDnFunction_8cpp.html#a4e9db582b587567d43a7b29eac6fb423',1,'DnSsyevd(const DeviceMatrix &amp;A, DeviceVector &amp;W, DeviceMatrix &amp;V):&#160;CuSolverDnFunction.cpp'],['../CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423',1,'DnSsyevd(const DeviceMatrix &amp;A, DeviceVector &amp;W, DeviceMatrix &amp;V):&#160;CuSolverDnFunction.cpp']]]
 ];

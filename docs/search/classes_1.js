@@ -9,5 +9,8 @@ var searchData=
   ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
   ['curandexception',['CuRandException',['../classCuRandException.html',1,'']]],
   ['curandmanager',['CuRandManager',['../classCuRandManager.html',1,'']]],
-  ['curandmanagertest',['CuRandManagerTest',['../classCuRandManagerTest.html',1,'']]]
+  ['curandmanagertest',['CuRandManagerTest',['../classCuRandManagerTest.html',1,'']]],
+  ['cusolverdnexception',['CuSolverDnException',['../classCuSolverDnException.html',1,'']]],
+  ['cusolverdnmanager',['CuSolverDnManager',['../classCuSolverDnManager.html',1,'']]],
+  ['cusolverdntest',['CuSolverDnTest',['../classCuSolverDnTest.html',1,'']]]
 ];

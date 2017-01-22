@@ -1,9 +1,11 @@
 <map id="src/DeviceVector.h" name="src/DeviceVector.h">
-<area shape="rect" id="node2" href="$CuBlasFunction_8h.html" title="src/CuBlasFunction.h" alt="" coords="365,80,512,107"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="491,237,601,264"/>
+<area shape="rect" id="node2" href="$CuBlasFunction_8h.html" title="src/CuBlasFunction.h" alt="" coords="382,80,529,107"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="621,237,732,264"/>
+<area shape="rect" id="node9" href="$CuSolverDnFunction_8h.html" title="src/CuSolverDnFunction.h" alt="" coords="715,80,891,107"/>
 <area shape="rect" id="node3" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="101,155,253,181"/>
 <area shape="rect" id="node7" href="$CuBlasFunction_8cpp.html" title="src/CuBlasFunction.cpp" alt="" coords="277,155,440,181"/>
 <area shape="rect" id="node8" href="$learningTrackData_8cpp.html" title="src/learningTrackData.cpp" alt="" coords="465,155,639,181"/>
 <area shape="rect" id="node4" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="5,237,171,264"/>
 <area shape="rect" id="node5" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="196,230,336,271"/>
+<area shape="rect" id="node10" href="$CuSolverDnFunction_8cpp.html" title="src/CuSolverDnFunction.cpp" alt="" coords="766,155,956,181"/>
 </map>

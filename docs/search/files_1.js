@@ -9,5 +9,10 @@ var searchData=
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
   ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
   ['curandmanager_2ecpp',['CuRandManager.cpp',['../CuRandManager_8cpp.html',1,'']]],
-  ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]]
+  ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]],
+  ['cusolverdnexception_2eh',['CuSolverDnException.h',['../CuSolverDnException_8h.html',1,'']]],
+  ['cusolverdnfunction_2ecpp',['CuSolverDnFunction.cpp',['../CuSolverDnFunction_8cpp.html',1,'']]],
+  ['cusolverdnfunction_2eh',['CuSolverDnFunction.h',['../CuSolverDnFunction_8h.html',1,'']]],
+  ['cusolverdnmanager_2ecpp',['CuSolverDnManager.cpp',['../CuSolverDnManager_8cpp.html',1,'']]],
+  ['cusolverdnmanager_2eh',['CuSolverDnManager.h',['../CuSolverDnManager_8h.html',1,'']]]
 ];
