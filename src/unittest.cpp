@@ -1562,6 +1562,37 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 	std::cout << "diff = " << diff << std::endl;
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class CuSolverTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(CuSolverTest, getHandle)
+{
+	CuSolverManager::getHandle();
+}
+
+TEST(CuSolverTest, DnSsyevd)
+{
+	DeviceMatrix dA(3, 3, {3.5f, 0.5f, 0.0f, 0.5f, 3.5f, 0.0f, 0.0f, 0.0f, 2.0f});
+	DeviceVector dW;
+	DeviceMatrix dV;
+	DnSsyevd(dA, dW, dV);
+	auto hW = dW.get();
+	auto hV = dV.get();
+	
+	float rt2d2 = std::sqrt(2.0f) / 2.0f;
+	std::vector<float> W{2.0f, 3.0f, 4.0f};
+	std::vector<float> V{0.0f, 0.0f, 1.0f, - rt2d2, rt2d2, 0.0f, rt2d2, rt2d2, 0.0f};
+	
+	BackpropagationFunctionTest_compare(hW, W);
+	BackpropagationFunctionTest_compare(hV, V);
+}
+
 
 
 //////////////////////////////////////////////////////////////////////
