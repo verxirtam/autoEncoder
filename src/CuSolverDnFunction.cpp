@@ -69,7 +69,13 @@ void DnSsyevd
 	DeviceVector d_work(lwork);
 	
 	//結果の成否
-	int devinfo;
+	//TODO デバイスメモリdevinfoを保持するクラスを作る
+	//TODO 例外発生時に開放できるようにするため
+	int* devinfo;
+	//デバイスメモリの確保
+	CUDA_CALL(cudaMalloc((void**)&devinfo, sizeof(int)));
+	//対応するホストメモリ
+	int info_gpu = 0;
 	
 	//固有値・固有ベクトルを算出
 	//Wに固有値、
@@ -87,18 +93,26 @@ void DnSsyevd
 					W.getAddress(),
 					d_work.getAddress(),
 					lwork,
-					&devinfo
+					devinfo
 				)
 		);
 	
-	//devinfoが不正な場合は例外発生
-	if(devinfo != 0)
+	//devinfoをホストメモリinfo_gpuにコピー
+	CUDA_CALL(cudaMemcpy(&info_gpu, devinfo, sizeof(int), cudaMemcpyDeviceToHost));
+	
+	//info_gpuが不正な場合は例外発生
+	if(info_gpu != 0)
 	{
 		std::stringstream msg;
 		msg << "error at DnSsyevd() : ";
-		msg << "devinfo = " << devinfo;
+		msg << "info_gpu = " << info_gpu;
+		//デバイスメモリの開放
+		CUDA_CALL(cudaFree(devinfo));
 		throw CuSolverDnException(msg.str());
 	}
+	
+	//デバイスメモリの開放
+	CUDA_CALL(cudaFree(devinfo));
 	
 }
 

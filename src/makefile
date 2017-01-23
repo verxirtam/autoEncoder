@@ -22,7 +22,7 @@ COMMON_FLAGS := -pg -g -O0
 #COMMON_FLAGS := 
 
 #CXX_LINKS
-CXX_LINKS := -L/usr/local/lib -lgtest -lsqlite3 -lcublas -lcurand -lcusolver
+CXX_LINKS := -L/usr/local/lib -L/usr/local/cuda/lib64 -lgtest -lsqlite3 -lcudart -lcublas -lcurand -lcusolver
 
 #ホームディレクトリのパス(末尾に"/"無し)
 HOME := $(shell echo ~)
@@ -44,7 +44,7 @@ NVCC_FLAGS := --std c++11 -G -Wno-deprecated-gpu-targets
 NVCC_CXX_FLAGS := $(CXXFLAGS:%=-Xcompiler %)
 
 #CUDAリンクオプション
-NVCC_LINKS := -lcuda -lcudart $(CXX_LINKS)
+NVCC_LINKS := -lcuda $(CXX_LINKS)
 
 
 #ソースファイル

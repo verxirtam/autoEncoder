@@ -1603,11 +1603,11 @@ TEST(CuSolverDnTest, DnSsyevd)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
+	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";

@@ -22,10 +22,10 @@ CUBLAS_CALL	CuBlasManager.h	33;"	d
 CUDA_CALL	CudaManager.h	26;"	d
 CUDA_SRCS	makefile	/^CUDA_SRCS := $(shell ls *.cu)$/;"	m
 CURAND_CALL	CuRandManager.h	27;"	d
-CUSOLVERDN_CALL	CuSolverDnManager.h	25;"	d
+CUSOLVERDN_CALL	CuSolverDnManager.h	28;"	d
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
-CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -lgtest -lsqlite3 -lcublas -lcurand$/;"	m
+CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -L\/usr\/local\/cuda\/lib64 -lgtest -lsqlite3 -lcublas -lcurand -lcusolver$/;"	m
 CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
@@ -106,8 +106,8 @@ TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
 TEST	unittest.cpp	/^TEST(CuRandManagerTest, Constructor)$/;"	f
 TEST	unittest.cpp	/^TEST(CuRandManagerTest, Generate)$/;"	f
+TEST	unittest.cpp	/^TEST(CuSolverDnTest, DnSsyevd)$/;"	f
 TEST	unittest.cpp	/^TEST(CuSolverDnTest, getHandle)$/;"	f
-TEST	unittest.cpp	/^TEST(CuSolverTest, DnSsyevd)$/;"	f
 TEST	unittest.cpp	/^TEST(CudaManagerTest, Stream)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceMatrixTest, useContainer)$/;"	f
@@ -191,9 +191,10 @@ getDeviceProp	CudaManager.h	/^	static inline const cudaDeviceProp& getDeviceProp
 getDimension	DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:DeviceVector
 getErrorString	CuBlasManager.cpp	/^const char* CuBlasManager::getErrorString(cublasStatus_t error)$/;"	f	class:CuBlasManager
 getErrorString	CuRandManager.cpp	/^const char* CuRandManager::getErrorString(curandStatus_t error)$/;"	f	class:CuRandManager
+getErrorString	CuSolverDnManager.cpp	/^const char* CuSolverDnManager::getErrorString(cusolverStatus_t status)$/;"	f	class:CuSolverDnManager
 getGenerator	CuRandManager.h	/^	static curandGenerator_t getGenerator()$/;"	f	class:CuRandManager
 getHandle	CuBlasManager.h	/^	static cublasHandle_t getHandle()$/;"	f	class:CuBlasManager
-getHandle	CuSolverDnManager.h	/^	static inline cusolverDnHandle_t getHandle(void) const$/;"	f	class:CuSolverDnManager
+getHandle	CuSolverDnManager.h	/^	static inline cusolverDnHandle_t getHandle(void)$/;"	f	class:CuSolverDnManager
 getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:CuBlasManager
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager
 getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
