@@ -25,7 +25,7 @@ CURAND_CALL	CuRandManager.h	27;"	d
 CUSOLVERDN_CALL	CuSolverDnManager.h	28;"	d
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
-CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -L\/usr\/local\/cuda\/lib64 -lgtest -lsqlite3 -lcublas -lcurand -lcusolver$/;"	m
+CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -L\/usr\/local\/cuda\/lib64 -lgtest -lsqlite3 -lcudart -lcublas -lcurand -lcusolver$/;"	m
 CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
@@ -76,7 +76,7 @@ MAKETEST_NOTEXIST	makefile	/^MAKETEST_NOTEXIST = notexistfile$/;"	m
 NVCC	makefile	/^NVCC := nvcc$/;"	m
 NVCC_CXX_FLAGS	makefile	/^NVCC_CXX_FLAGS := $(CXXFLAGS:%=-Xcompiler %)$/;"	m
 NVCC_FLAGS	makefile	/^NVCC_FLAGS := --std c++11 -G -Wno-deprecated-gpu-targets$/;"	m
-NVCC_LINKS	makefile	/^NVCC_LINKS := -lcuda -lcudart $(CXX_LINKS)$/;"	m
+NVCC_LINKS	makefile	/^NVCC_LINKS := -lcuda $(CXX_LINKS)$/;"	m
 NVPROF	makefile	/^NVPROF := nvprof --csv$/;"	m
 NVPROFGRAPH	makefile	/^NVPROFGRAPH := ~\/tools\/nvprof_graph\/nvprof_graph.sh$/;"	m
 OBJS	makefile	/^OBJS := $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o)$/;"	m
@@ -101,6 +101,7 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
 Sscal	CuBlasFunction.cpp	/^void Sscal$/;"	f
+Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f

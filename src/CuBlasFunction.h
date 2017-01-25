@@ -40,6 +40,24 @@ void Sgemv
 		DeviceVector& y
 	);
 
+//A = alpha * x * x^T + A; A : symmetric matrix
+void Ssyr
+	(
+		const float* alpha,
+		const DeviceVector& x,
+		DeviceMatrix& A
+	);
+
+//C = alpha * op(A) * (op(A))^T + beta * C; C : symmetric matrix
+void Ssyrk
+	(
+		const float* alpha,
+		cublasOperation_t op,
+		const DeviceMatrix& A,
+		const float* beta,
+		DeviceMatrix& C
+	);
+
 //C = alpha * op_A(A) + beta * op_B(B);
 void Sgeam
 	(

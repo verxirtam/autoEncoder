@@ -55,6 +55,64 @@ void Sgemv
 		);
 }
 
+//A = alpha * x * x^T + A; A : symmetric matrix
+void Ssyr
+	(
+		const float* alpha,
+		const DeviceVector& x,
+		DeviceMatrix& A
+	)
+{
+	int N = A.getRowCount();
+	CUBLAS_CALL
+		(
+			cublasSsyr
+				(
+					CuBlasManager::getHandle(),
+					CUBLAS_FILL_MODE_UPPER,
+					N,
+					alpha,
+					x.getAddress(),
+					1,
+					A.getAddress(),
+					N
+				)
+		)
+}
+
+//C = alpha * op(A) * (op(A))^T + beta * C; C : symmetric matrix
+void Ssyrk
+	(
+		const float* alpha,
+		cublasOperation_t op,
+		const DeviceMatrix& A,
+		const float* beta,
+		DeviceMatrix& C
+	)
+{
+	int N = A.getRowCount();
+	int K = A.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasSsyrk
+				(
+					CuBlasManager::getHandle(),
+					CUBLAS_FILL_MODE_UPPER,
+					op,
+					N,
+					K,
+					alpha,
+					A.getAddress(),
+					N,
+					beta,
+					C.getAddress(),
+					N
+				)
+		);
+}
+
+
 //C = alpha * op_A(A) + beta * op_B(B);
 void Sgeam
 	(
