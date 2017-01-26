@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cublasexception',['CuBlasException',['../classCuBlasException.html',1,'']]],
+  ['cublasfunctiontest',['CuBlasFunctionTest',['../classCuBlasFunctionTest.html',1,'']]],
   ['cublasfunctiontest_5f1v',['CuBlasFunctionTest_1V',['../classCuBlasFunctionTest__1V.html',1,'']]],
   ['cublasfunctiontest_5f2v',['CuBlasFunctionTest_2V',['../classCuBlasFunctionTest__2V.html',1,'']]],
   ['cublasmanager',['CuBlasManager',['../classCuBlasManager.html',1,'']]],

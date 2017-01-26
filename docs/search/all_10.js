@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['z',['z',['../classBackpropagation.html#af2918807a74783b207cf9c3a88e6e0c4',1,'Backpropagation']]]
+  ['weight',['weight',['../classBackpropagation.html#a11709cf3f30b963a0f1ba3d8e24e1628',1,'Backpropagation']]],
+  ['wtdelta',['WTdelta',['../classBackpropagation.html#ab1ef8716ccb17001de4d85eff369efef',1,'Backpropagation']]]
 ];

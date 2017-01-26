@@ -5,7 +5,7 @@
 <area shape="rect" id="node6" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="125,157,331,184"/>
 <area shape="rect" id="node7" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="165,208,291,235"/>
 <area shape="rect" id="node8" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="201,259,255,285"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767" title="BackpropagationFunctionTest\l_compare" alt="" coords="131,310,325,351"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="173,309,283,336"/>
 <area shape="rect" id="node3" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="379,5,575,32"/>
 <area shape="rect" id="node9" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="383,208,572,235"/>
 <area shape="rect" id="node10" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="386,259,569,285"/>

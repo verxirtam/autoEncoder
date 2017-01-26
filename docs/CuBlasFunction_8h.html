@@ -124,6 +124,10 @@ Functions</h2></td></tr>
 <tr class="separator:a6f8a762ecde9d88fb4c1094478694621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a443f286492eac14303adf334de45cb33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuBlasFunction_8h.html#a443f286492eac14303adf334de45cb33">Sscal</a> (const float *alpha, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;A)</td></tr>
 <tr class="separator:a443f286492eac14303adf334de45cb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0116e643f587b46bb43f9a4191689aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;A, const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;x, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;C)</td></tr>
+<tr class="separator:a0116e643f587b46bb43f9a4191689aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c67138ea0b834f6e7e37df87f176322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuBlasFunction_8h.html#a1c67138ea0b834f6e7e37df87f176322">Sdgmm</a> (const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;x, const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;A, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;C)</td></tr>
+<tr class="separator:a1c67138ea0b834f6e7e37df87f176322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a64ad0c14765ac642aa383c1441da6362"></a>
@@ -171,6 +175,97 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="CuBlasFunction_8h_a64ad0c14765ac642aa383c1441da6362_icgraph.png" border="0" usemap="#CuBlasFunction_8h_a64ad0c14765ac642aa383c1441da6362_icgraph" alt=""/></div>
 <map name="CuBlasFunction_8h_a64ad0c14765ac642aa383c1441da6362_icgraph" id="CuBlasFunction_8h_a64ad0c14765ac642aa383c1441da6362_icgraph">
 <area shape="rect" id="node2" href="classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="112,5,331,32"/><area shape="rect" id="node6" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="379,56,605,83"/><area shape="rect" id="node3" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="415,5,569,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="661,5,717,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="653,56,725,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0116e643f587b46bb43f9a4191689aa5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sdgmm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_cgraph.png" border="0" usemap="#CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_cgraph" alt=""/></div>
+<map name="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_cgraph" id="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_cgraph">
+<area shape="rect" id="node2" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="129,5,316,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="120,56,325,83"/><area shape="rect" id="node4" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="131,107,314,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="136,157,309,184"/><area shape="rect" id="node7" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="135,208,310,235"/><area shape="rect" id="node5" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="374,107,565,133"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_icgraph.png" border="0" usemap="#CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_icgraph" alt=""/></div>
+<map name="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_icgraph" id="CuBlasFunction_8h_a0116e643f587b46bb43f9a4191689aa5_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="120,5,176,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c67138ea0b834f6e7e37df87f176322"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sdgmm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>C</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="CuBlasFunction_8h_a1c67138ea0b834f6e7e37df87f176322_cgraph.png" border="0" usemap="#CuBlasFunction_8h_a1c67138ea0b834f6e7e37df87f176322_cgraph" alt=""/></div>
+<map name="CuBlasFunction_8h_a1c67138ea0b834f6e7e37df87f176322_cgraph" id="CuBlasFunction_8h_a1c67138ea0b834f6e7e37df87f176322_cgraph">
+<area shape="rect" id="node2" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="129,5,316,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="120,56,325,83"/><area shape="rect" id="node4" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="131,107,314,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="136,157,309,184"/><area shape="rect" id="node7" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="135,208,310,235"/><area shape="rect" id="node5" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="374,107,565,133"/></map>
 </div>
 </p>
 
@@ -494,7 +589,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 26 2017 01:36:05 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 27 2017 02:09:10 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

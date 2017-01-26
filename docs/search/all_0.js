@@ -9,7 +9,6 @@ var searchData=
   ['backpropagationexception',['BackpropagationException',['../classBackpropagationException.html',1,'BackpropagationException'],['../classBackpropagationException.html#a476cbf6b34647657602a89c6edded46b',1,'BackpropagationException::BackpropagationException(const std::string &amp;what_arg)'],['../classBackpropagationException.html#ab095501546c90d19b0f0f1b99ec62f06',1,'BackpropagationException::BackpropagationException(const char *what_arg)']]],
   ['backpropagationexception_2eh',['BackpropagationException.h',['../BackpropagationException_8h.html',1,'']]],
   ['backpropagationfunctiontest',['BackpropagationFunctionTest',['../classBackpropagationFunctionTest.html',1,'']]],
-  ['backpropagationfunctiontest_5fcompare',['BackpropagationFunctionTest_compare',['../unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767',1,'unittest.cpp']]],
   ['backpropagationnumericdifftest',['BackpropagationNumericDiffTest',['../classBackpropagationNumericDiffTest.html',1,'']]],
   ['backpropagationobtaindedwtest',['BackpropagationObtainDEDWTest',['../classBackpropagationObtainDEDWTest.html',1,'']]],
   ['backpropagationstreamtest',['BackpropagationStreamTest',['../classBackpropagationStreamTest.html',1,'']]],

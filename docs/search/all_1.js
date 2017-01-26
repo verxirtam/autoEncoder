@@ -1,12 +1,14 @@
 var searchData=
 [
   ['columncount',['columnCount',['../classDeviceMatrix.html#aae610c8c73a240c25dc645dd0dfc11fc',1,'DeviceMatrix']]],
+  ['comparevector',['compareVector',['../unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9',1,'unittest.cpp']]],
   ['count',['count',['../unittest_8cpp.html#a94b1957249b9d95386b1a60dce55735c',1,'unittest.cpp']]],
   ['cublas_5fcall',['CUBLAS_CALL',['../CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67',1,'CuBlasManager.h']]],
   ['cublasexception',['CuBlasException',['../classCuBlasException.html',1,'CuBlasException'],['../classCuBlasException.html#a0b145266437601d2411478a033199780',1,'CuBlasException::CuBlasException(const std::string &amp;what_arg)'],['../classCuBlasException.html#a68530bd6987eb2ef7d037c2a7133d21e',1,'CuBlasException::CuBlasException(const char *what_arg)']]],
   ['cublasexception_2eh',['CuBlasException.h',['../CuBlasException_8h.html',1,'']]],
   ['cublasfunction_2ecpp',['CuBlasFunction.cpp',['../CuBlasFunction_8cpp.html',1,'']]],
   ['cublasfunction_2eh',['CuBlasFunction.h',['../CuBlasFunction_8h.html',1,'']]],
+  ['cublasfunctiontest',['CuBlasFunctionTest',['../classCuBlasFunctionTest.html',1,'']]],
   ['cublasfunctiontest_5f1v',['CuBlasFunctionTest_1V',['../classCuBlasFunctionTest__1V.html',1,'']]],
   ['cublasfunctiontest_5f2v',['CuBlasFunctionTest_2V',['../classCuBlasFunctionTest__2V.html',1,'']]],
   ['cublasmanager',['CuBlasManager',['../classCuBlasManager.html',1,'CuBlasManager'],['../classCuBlasManager.html#a754a7fe32204af76a708d70514210eb5',1,'CuBlasManager::CuBlasManager()'],['../classCuBlasManager.html#a76beb23e06889220094e9ee3b4685d17',1,'CuBlasManager::CuBlasManager(const CuBlasManager &amp;)=delete'],['../classCuBlasManager.html#ae690780a5f33ad06fd6d9f43201faf7e',1,'CuBlasManager::CuBlasManager(CuBlasManager &amp;&amp;)=delete']]],

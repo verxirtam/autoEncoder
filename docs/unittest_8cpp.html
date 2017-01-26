@@ -133,11 +133,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuRandManagerTest.html">CuRandManagerTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuBlasFunctionTest.html">CuBlasFunctionTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuBlasFunctionTest__1V.html">CuBlasFunctionTest_1V</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuBlasFunctionTest__2V.html">CuBlasFunctionTest_2V</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuSolverDnTest.html">CuSolverDnTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalizationTest.html">NormalizationTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -214,8 +218,8 @@ Functions</h2></td></tr>
 <tr class="separator:aca61c1799b7d4dc54c35f757eff14c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4471e9195074ff867c5f4f73bf3cc296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a4471e9195074ff867c5f4f73bf3cc296">INSTANTIATE_TEST_CASE_P</a> (InstantiateBackpropagationFunctionTest, <a class="el" href="classBackpropagationFunctionTest.html">BackpropagationFunctionTest</a>,::testing::Combine(::testing::ValuesIn(std::vector&lt; unsigned int &gt;{1u, 2u, 10u, 100u, 1025u, 2050u}),::testing::ValuesIn(std::vector&lt; unsigned int &gt;{1u, 2u, 10u})))</td></tr>
 <tr class="separator:a4471e9195074ff867c5f4f73bf3cc296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a887d6d416c4eb96eceb8b4743ded3767"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767">BackpropagationFunctionTest_compare</a> (const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</td></tr>
-<tr class="separator:a887d6d416c4eb96eceb8b4743ded3767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667b075433e7c1f117a15af5b1c6eea9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9">compareVector</a> (const std::vector&lt; float &gt; &amp;x, const std::vector&lt; float &gt; &amp;y)</td></tr>
+<tr class="separator:a667b075433e7c1f117a15af5b1c6eea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80abf7edab0e422a14199efda31ec5f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a80abf7edab0e422a14199efda31ec5f6">TEST_P</a> (<a class="el" href="classBackpropagationFunctionTest.html">BackpropagationFunctionTest</a>, Kernel)</td></tr>
 <tr class="separator:a80abf7edab0e422a14199efda31ec5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a65775d5f390afbe9d9db522f5990b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a87a65775d5f390afbe9d9db522f5990b">INSTANTIATE_TEST_CASE_P</a> (InstantiateBackpropagationNumericDiffTest, <a class="el" href="classBackpropagationNumericDiffTest.html">BackpropagationNumericDiffTest</a>,::testing::Combine(::testing::ValuesIn(std::vector&lt; unsigned int &gt;{1u, 2u, 10u, 100u, 1025u}),::testing::ValuesIn(std::vector&lt; unsigned int &gt;{1u, 2u, 10u}),::testing::ValuesIn(std::vector&lt; unsigned int &gt;{1u, 2u, 10u, 100u}),::testing::ValuesIn(std::vector&lt; float &gt;{0.0625f, 0.03125f})))</td></tr>
@@ -248,10 +252,14 @@ Functions</h2></td></tr>
 <tr class="separator:a10d6f310b74f3b584746a4ce7df0d5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4248c5a3a30f5129d71dbb9693ebf56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#ac4248c5a3a30f5129d71dbb9693ebf56">TEST_P</a> (<a class="el" href="classCuBlasFunctionTest__2V.html">CuBlasFunctionTest_2V</a>, Sscal_Matrix)</td></tr>
 <tr class="separator:ac4248c5a3a30f5129d71dbb9693ebf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977a0fcd18b10d6867e16e925ee0a9b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5">TEST</a> (<a class="el" href="classCuBlasFunctionTest.html">CuBlasFunctionTest</a>, <a class="el" href="CuBlasFunction_8h.html#a1c67138ea0b834f6e7e37df87f176322">Sdgmm</a>)</td></tr>
+<tr class="separator:a977a0fcd18b10d6867e16e925ee0a9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94276c5fd15d9db4a003f972efe4a87a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a">TEST</a> (<a class="el" href="classCuSolverDnTest.html">CuSolverDnTest</a>, getHandle)</td></tr>
 <tr class="separator:a94276c5fd15d9db4a003f972efe4a87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad825710f89f5943079e617a471a8d6ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae">TEST</a> (<a class="el" href="classCuSolverDnTest.html">CuSolverDnTest</a>, <a class="el" href="CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423">DnSsyevd</a>)</td></tr>
 <tr class="separator:ad825710f89f5943079e617a471a8d6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad6fdfd233c7616f54cdf06db7150bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf">TEST</a> (<a class="el" href="classNormalizationTest.html">NormalizationTest</a>, getHandle)</td></tr>
+<tr class="separator:a0ad6fdfd233c7616f54cdf06db7150bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -287,41 +295,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a887d6d416c4eb96eceb8b4743ded3767"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float BackpropagationFunctionTest_compare </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unittest_8cpp_a887d6d416c4eb96eceb8b4743ded3767_icgraph.png" border="0" usemap="#unittest_8cpp_a887d6d416c4eb96eceb8b4743ded3767_icgraph" alt=""/></div>
-<map name="unittest_8cpp_a887d6d416c4eb96eceb8b4743ded3767_icgraph" id="unittest_8cpp_a887d6d416c4eb96eceb8b4743ded3767_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#a80abf7edab0e422a14199efda31ec5f6" title="TEST_P" alt="" coords="248,5,320,32"/><area shape="rect" id="node3" href="unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="256,56,312,83"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="aae55169dd6fed4ee427f3a8ec411f8f0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -379,6 +352,41 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="unittest_8cpp_aae55169dd6fed4ee427f3a8ec411f8f0_icgraph.png" border="0" usemap="#unittest_8cpp_aae55169dd6fed4ee427f3a8ec411f8f0_icgraph" alt=""/></div>
 <map name="unittest_8cpp_aae55169dd6fed4ee427f3a8ec411f8f0_icgraph" id="unittest_8cpp_aae55169dd6fed4ee427f3a8ec411f8f0_icgraph">
 <area shape="rect" id="node2" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="200,12,272,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a667b075433e7c1f117a15af5b1c6eea9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float compareVector </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unittest_8cpp_a667b075433e7c1f117a15af5b1c6eea9_icgraph.png" border="0" usemap="#unittest_8cpp_a667b075433e7c1f117a15af5b1c6eea9_icgraph" alt=""/></div>
+<map name="unittest_8cpp_a667b075433e7c1f117a15af5b1c6eea9_icgraph" id="unittest_8cpp_a667b075433e7c1f117a15af5b1c6eea9_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#a80abf7edab0e422a14199efda31ec5f6" title="TEST_P" alt="" coords="165,5,237,32"/><area shape="rect" id="node3" href="unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="173,56,229,83"/></map>
 </div>
 </p>
 
@@ -1385,6 +1393,41 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a977a0fcd18b10d6867e16e925ee0a9b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCuBlasFunctionTest.html">CuBlasFunctionTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="CuBlasFunction_8h.html#a1c67138ea0b834f6e7e37df87f176322">Sdgmm</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unittest_8cpp_a977a0fcd18b10d6867e16e925ee0a9b5_cgraph.png" border="0" usemap="#unittest_8cpp_a977a0fcd18b10d6867e16e925ee0a9b5_cgraph" alt=""/></div>
+<map name="unittest_8cpp_a977a0fcd18b10d6867e16e925ee0a9b5_cgraph" id="unittest_8cpp_a977a0fcd18b10d6867e16e925ee0a9b5_cgraph">
+<area shape="rect" id="node2" href="CuBlasFunction_8cpp.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="139,107,205,133"/><area shape="rect" id="node9" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="109,157,235,184"/><area shape="rect" id="node10" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="117,208,227,235"/><area shape="rect" id="node3" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="292,5,479,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="283,56,488,83"/><area shape="rect" id="node5" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="294,107,477,133"/><area shape="rect" id="node7" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="299,157,472,184"/><area shape="rect" id="node8" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="298,208,473,235"/><area shape="rect" id="node6" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="537,107,727,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a94276c5fd15d9db4a003f972efe4a87a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1449,9 +1492,35 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest_8cpp_ad825710f89f5943079e617a471a8d6ae_cgraph.png" border="0" usemap="#unittest_8cpp_ad825710f89f5943079e617a471a8d6ae_cgraph" alt=""/></div>
 <map name="unittest_8cpp_ad825710f89f5943079e617a471a8d6ae_cgraph" id="unittest_8cpp_ad825710f89f5943079e617a471a8d6ae_cgraph">
-<area shape="rect" id="node2" href="CuSolverDnFunction_8cpp.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="165,64,248,91"/><area shape="rect" id="node7" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="144,115,269,141"/><area shape="rect" id="node8" href="unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767" title="BackpropagationFunctionTest\l_compare" alt="" coords="109,166,304,207"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="352,5,557,32"/><area shape="rect" id="node4" href="classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="379,57,530,98"/><area shape="rect" id="node6" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="367,123,542,149"/><area shape="rect" id="node5" href="classCuSolverDnManager.html#a710c91d2a171086ee210fd5d1f8eeeb5" title="CuSolverDnManager::\lgetInstance" alt="" coords="606,57,757,98"/></map>
+<area shape="rect" id="node2" href="CuSolverDnFunction_8cpp.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="131,64,213,91"/><area shape="rect" id="node7" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="109,115,235,141"/><area shape="rect" id="node8" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="117,165,227,192"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="283,5,488,32"/><area shape="rect" id="node4" href="classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="310,57,461,98"/><area shape="rect" id="node6" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="298,123,473,149"/><area shape="rect" id="node5" href="classCuSolverDnManager.html#a710c91d2a171086ee210fd5d1f8eeeb5" title="CuSolverDnManager::\lgetInstance" alt="" coords="537,57,687,98"/></map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ad6fdfd233c7616f54cdf06db7150bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNormalizationTest.html">NormalizationTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">getHandle&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1816,7 +1885,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest_8cpp_a80abf7edab0e422a14199efda31ec5f6_cgraph.png" border="0" usemap="#unittest_8cpp_a80abf7edab0e422a14199efda31ec5f6_cgraph" alt=""/></div>
 <map name="unittest_8cpp_a80abf7edab0e422a14199efda31ec5f6_cgraph" id="unittest_8cpp_a80abf7edab0e422a14199efda31ec5f6_cgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767" title="BackpropagationFunctionTest\l_compare" alt="" coords="125,5,320,46"/></map>
+<area shape="rect" id="node2" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="126,5,237,32"/></map>
 </div>
 </p>
 
@@ -1956,7 +2025,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest_8cpp_a10d6f310b74f3b584746a4ce7df0d5d9_cgraph.png" border="0" usemap="#unittest_8cpp_a10d6f310b74f3b584746a4ce7df0d5d9_cgraph" alt=""/></div>
 <map name="unittest_8cpp_a10d6f310b74f3b584746a4ce7df0d5d9_cgraph" id="unittest_8cpp_a10d6f310b74f3b584746a4ce7df0d5d9_cgraph">
-<area shape="rect" id="node2" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="125,5,328,32"/><area shape="rect" id="node4" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="387,56,562,83"/><area shape="rect" id="node5" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="380,157,569,184"/><area shape="rect" id="node6" href="classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="163,208,290,235"/><area shape="rect" id="node7" href="CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="199,107,254,133"/><area shape="rect" id="node10" href="unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767" title="BackpropagationFunctionTest\l_compare" alt="" coords="129,259,324,301"/><area shape="rect" id="node3" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="377,5,573,32"/><area shape="rect" id="node8" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="383,107,566,133"/><area shape="rect" id="node9" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="622,107,813,133"/></map>
+<area shape="rect" id="node2" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="125,5,328,32"/><area shape="rect" id="node4" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="387,56,562,83"/><area shape="rect" id="node5" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="380,157,569,184"/><area shape="rect" id="node6" href="classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="163,208,290,235"/><area shape="rect" id="node7" href="CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="199,107,254,133"/><area shape="rect" id="node10" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="171,259,282,285"/><area shape="rect" id="node3" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="377,5,573,32"/><area shape="rect" id="node8" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="383,107,566,133"/><area shape="rect" id="node9" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="622,107,813,133"/></map>
 </div>
 </p>
 
@@ -1991,7 +2060,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest_8cpp_ac4248c5a3a30f5129d71dbb9693ebf56_cgraph.png" border="0" usemap="#unittest_8cpp_ac4248c5a3a30f5129d71dbb9693ebf56_cgraph" alt=""/></div>
 <map name="unittest_8cpp_ac4248c5a3a30f5129d71dbb9693ebf56_cgraph" id="unittest_8cpp_ac4248c5a3a30f5129d71dbb9693ebf56_cgraph">
-<area shape="rect" id="node2" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="127,5,329,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="141,56,315,83"/><area shape="rect" id="node5" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="135,107,321,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="125,157,331,184"/><area shape="rect" id="node7" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="165,208,291,235"/><area shape="rect" id="node8" href="CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="201,259,255,285"/><area shape="rect" id="node13" href="unittest_8cpp.html#a887d6d416c4eb96eceb8b4743ded3767" title="BackpropagationFunctionTest\l_compare" alt="" coords="131,310,325,351"/><area shape="rect" id="node3" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="379,5,575,32"/><area shape="rect" id="node9" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="383,208,572,235"/><area shape="rect" id="node10" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="386,259,569,285"/><area shape="rect" id="node12" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="390,309,565,336"/><area shape="rect" id="node11" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="625,259,815,285"/></map>
+<area shape="rect" id="node2" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="127,5,329,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="141,56,315,83"/><area shape="rect" id="node5" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="135,107,321,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="125,157,331,184"/><area shape="rect" id="node7" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="165,208,291,235"/><area shape="rect" id="node8" href="CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="201,259,255,285"/><area shape="rect" id="node13" href="unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="173,309,283,336"/><area shape="rect" id="node3" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="379,5,575,32"/><area shape="rect" id="node9" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="383,208,572,235"/><area shape="rect" id="node10" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="386,259,569,285"/><area shape="rect" id="node12" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="390,309,565,336"/><area shape="rect" id="node11" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="625,259,815,285"/></map>
 </div>
 </p>
 
@@ -2013,7 +2082,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 26 2017 01:36:05 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 27 2017 02:09:10 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
