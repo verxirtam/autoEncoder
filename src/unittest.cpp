@@ -931,7 +931,7 @@ INSTANTIATE_TEST_CASE_P
 	);
 //std::vector<float>同士の差が許容誤差未満であることを確認する
 //その差の絶対値の最大値を求める
-float BackpropagationFunctionTest_compare(const std::vector<float>& x,const std::vector<float>& y)
+float compareVector(const std::vector<float>& x,const std::vector<float>& y)
 {
 	return std::inner_product
 		(
@@ -968,7 +968,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 	for(unsigned int l = 1; l < lmax; l++)
 	{
 		std::transform(hz[l].begin(), hz[l].end(), hz[l].begin(), [](float _x){return std::tanh(_x);});
-		float max_error = BackpropagationFunctionTest_compare(hz[l], dz[l]);
+		float max_error = compareVector(hz[l], dz[l]);
 		std::cout << "max_error(z[" << l << "]) = " << max_error << std::endl;
 	}
 	
@@ -988,7 +988,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			}
 			hu[l][i] += dbias[l][i];
 		}
-		float max_error = BackpropagationFunctionTest_compare(hu[l], du[l]);
+		float max_error = compareVector(hu[l], du[l]);
 		std::cout << "max_error(u[" << l << "]) = " << max_error << std::endl;
 	}
 	
@@ -1000,7 +1000,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			du[lmax -1].begin(), du[lmax -1].end(), d.begin(), hdelta[lmax -1].begin(),
 			[](float _x, float _y){return _x - _y;}
 		);
-	float max_error = BackpropagationFunctionTest_compare(hdelta[lmax - 1], ddelta[lmax - 1]);
+	float max_error = compareVector(hdelta[lmax - 1], ddelta[lmax - 1]);
 	std::cout << "max_error(delta[" << (lmax - 1) << "]) = " << max_error << std::endl;
 	
 	//hdelta[l] = f'(u[l]) ** (weight[l + 1]^T * delta[l + 1]);
@@ -1019,7 +1019,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			float fd_u_lj = (1.0f - tanh_u_lj * tanh_u_lj);
 			hdelta[l][j] = fd_u_lj * hwtdelta_lj;
 		}
-		float max_error = BackpropagationFunctionTest_compare(hdelta[l], ddelta[l]);
+		float max_error = compareVector(hdelta[l], ddelta[l]);
 		std::cout << "max_error(delta[" << l << "]) = " << max_error << std::endl;
 	}
 	auto ddedw = b.getDEDWAsVector();
@@ -1035,7 +1035,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			unsigned int j = k / imax;
 			hdedw[l][k] = hdelta[l][i] * hz[l - 1][j];
 		}
-		float max_error = BackpropagationFunctionTest_compare(hdedw[l], ddedw[l]);
+		float max_error = compareVector(hdedw[l], ddedw[l]);
 		std::cout << "max_error(dedw[" << l << "]) = " << max_error << std::endl;
 	}
 }
@@ -1458,6 +1458,15 @@ TEST(CuRandManagerTest, Generate)
 	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), dv1.getAddress(), dv1.getDimension()));
 }
 /////////////////////////////////////////////////////////////////////////////////
+class CuBlasFunctionTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+/////////////////////////////////////////////////////////////////////////////////
 class CuBlasFunctionTest_1V :
 	public ::testing::Test,
 	public ::testing::WithParamInterface<unsigned int>
@@ -1521,7 +1530,7 @@ TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)
 	
 	auto y = x_d.get();
 	
-	float diff = BackpropagationFunctionTest_compare(x, y);
+	float diff = compareVector(x, y);
 	std::cout << "diff = " << diff << std::endl;
 }
 
@@ -1561,10 +1570,41 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 	//std::for_each(B.begin(), B.end(), [](float _x){std::cout << _x << ", ";});
 	//std::cout << ")" << std::endl;
 	
-	float diff = BackpropagationFunctionTest_compare(A, B);
+	float diff = compareVector(A, B);
 	std::cout << "diff = " << diff << std::endl;
 }
 
+TEST(CuBlasFunctionTest, Sdgmm)
+{
+	DeviceMatrix A(3, 4, {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f});
+	DeviceVector x{1.0f, 2.0f, 3.0f, 4.0f};
+	DeviceVector y{1.0f, 2.0f, 3.0f};
+	DeviceMatrix C(3, 4);
+	DeviceMatrix D(3, 4);
+	std::vector<float> Ax
+		{
+			 1.0f,  2.0f,  3.0f,
+			 8.0f, 10.0f, 12.0f,
+			21.0f, 24.0f, 27.0f,
+			40.0f, 44.0f, 48.0f
+		};
+	std::vector<float> yA
+		{
+			 1.0f,  4.0f,  9.0f,
+			 4.0f, 10.0f, 18.0f,
+			 7.0f, 16.0f, 27.0f,
+			10.0f, 22.0f, 36.0f
+		};
+	
+	Sdgmm(A, x, C);
+	Sdgmm(y, A, D);
+	
+	auto dC = C.get();
+	auto dD = D.get();
+	
+	compareVector(dC, Ax);
+	compareVector(dD, yA);
+}
 /////////////////////////////////////////////////////////////////////////////////
 class CuSolverDnTest :
 	public ::testing::Test
@@ -1592,10 +1632,28 @@ TEST(CuSolverDnTest, DnSsyevd)
 	std::vector<float> W{2.0f, 3.0f, 4.0f};
 	std::vector<float> V{0.0f, 0.0f, 1.0f, - rt2d2, rt2d2, 0.0f, rt2d2, rt2d2, 0.0f};
 	
-	BackpropagationFunctionTest_compare(hW, W);
-	BackpropagationFunctionTest_compare(hV, V);
+	compareVector(hW, W);
+	compareVector(hV, V);
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class NormalizationTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(NormalizationTest, getHandle)
+{
+	Normalization n;
+	DeviceMatrix X;
+	//TODO Xを初期化する
+	n.init(X);
+	auto pca =  n.getPCAWhiteningMatrix();
+	auto zca =  n.getZCAWhiteningMatrix();
+}
 
 
 //////////////////////////////////////////////////////////////////////
@@ -1603,10 +1661,11 @@ TEST(CuSolverDnTest, DnSsyevd)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
+	::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";

@@ -84,4 +84,18 @@ void Sscal
 		DeviceMatrix& A
 	);
 
+//C = A * diag(x)
+void Sdgmm
+	(
+		const DeviceMatrix& A,
+		const DeviceVector& x,
+		DeviceMatrix& C
+	);
 
+//C = diag(x) * A
+void Sdgmm
+	(
+		const DeviceVector& x,
+		const DeviceMatrix& A,
+		DeviceMatrix& C
+	);

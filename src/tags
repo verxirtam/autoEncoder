@@ -11,7 +11,6 @@ BackpropagationException	BackpropagationException.h	/^	BackpropagationException(
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const std::string& what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^class BackpropagationException : public std::runtime_error$/;"	c
 BackpropagationFunctionTest	unittest.cpp	/^class BackpropagationFunctionTest :$/;"	c	file:
-BackpropagationFunctionTest_compare	unittest.cpp	/^float BackpropagationFunctionTest_compare(const std::vector<float>& x,const std::vector<float>& y)$/;"	f
 BackpropagationNumericDiffTest	unittest.cpp	/^class BackpropagationNumericDiffTest :$/;"	c	file:
 BackpropagationObtainDEDWTest	unittest.cpp	/^class BackpropagationObtainDEDWTest :$/;"	c	file:
 BackpropagationStreamTest	unittest.cpp	/^class BackpropagationStreamTest :$/;"	c	file:
@@ -29,6 +28,7 @@ CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -L\/usr\/local\/cuda\/lib6
 CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
+CuBlasFunctionTest	unittest.cpp	/^class CuBlasFunctionTest :$/;"	c	file:
 CuBlasFunctionTest_1V	unittest.cpp	/^class CuBlasFunctionTest_1V :$/;"	c	file:
 CuBlasFunctionTest_2V	unittest.cpp	/^class CuBlasFunctionTest_2V :$/;"	c	file:
 CuBlasManager	CuBlasManager.h	/^	CuBlasManager():$/;"	f	class:CuBlasManager
@@ -85,12 +85,14 @@ OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OB
 RowColumn	unittest.cpp	/^using RowColumn = std::tuple<unsigned int, unsigned int>;$/;"	u
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
 Saxpy	CuBlasFunction.cpp	/^void Saxpy$/;"	f
+Sdgmm	CuBlasFunction.cpp	/^void Sdgmm$/;"	f
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationAllTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationFunctionTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationNumericDiffTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationObtainDEDWTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationStreamTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationTest
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_1V
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_2V
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuRandManagerTest
@@ -101,10 +103,12 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
 Sscal	CuBlasFunction.cpp	/^void Sscal$/;"	f
+Ssyr	CuBlasFunction.cpp	/^void Ssyr$/;"	f
 Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
+TEST	unittest.cpp	/^TEST(CuBlasFunctionTest, Sdgmm)$/;"	f
 TEST	unittest.cpp	/^TEST(CuRandManagerTest, Constructor)$/;"	f
 TEST	unittest.cpp	/^TEST(CuRandManagerTest, Generate)$/;"	f
 TEST	unittest.cpp	/^TEST(CuSolverDnTest, DnSsyevd)$/;"	f
@@ -148,6 +152,7 @@ TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationNumericDif
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationObtainDEDWTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationStreamTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationTest
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_1V
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_2V
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuRandManagerTest
@@ -159,6 +164,7 @@ WTdelta	Backpropagation.h	/^	std::vector<DeviceVector> WTdelta;$/;"	m	class:Back
 back	Backpropagation.cpp	/^void Backpropagation::back(const std::vector<float>& d)$/;"	f	class:Backpropagation
 bias	Backpropagation.h	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backpropagation
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
+compareVector	unittest.cpp	/^float compareVector(const std::vector<float>& x,const std::vector<float>& y)$/;"	f
 dEdW	Backpropagation.h	/^	std::vector<DeviceMatrix> dEdW;$/;"	m	class:Backpropagation
 dEdb	Backpropagation.h	/^	std::vector<DeviceVector> dEdb;$/;"	m	class:Backpropagation
 delta	Backpropagation.h	/^	std::vector<DeviceVector>& delta;$/;"	m	class:Backpropagation

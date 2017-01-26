@@ -100,8 +100,7 @@ void Ssyrk
 					CuBlasManager::getHandle(),
 					CUBLAS_FILL_MODE_UPPER,
 					op,
-					N,
-					K,
+					N, K,
 					alpha,
 					A.getAddress(),
 					N,
@@ -200,4 +199,56 @@ void Sscal
 		throw CuBlasException(msg.str());
 	}
 }
+
+//C = A * diag(x)
+void Sdgmm
+	(
+		const DeviceMatrix& A,
+		const DeviceVector& x,
+		DeviceMatrix& C
+	)
+{
+	int M = A.getRowCount();
+	int N = A.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasSdgmm
+				(
+					CuBlasManager::getHandle(),
+					CUBLAS_SIDE_RIGHT,
+					M, N,
+					A.getAddress(), M,
+					x.getAddress(), 1,
+					C.getAddress(), M
+				)
+		);
+}
+
+
+//C = diag(x) * A
+void Sdgmm
+	(
+		const DeviceVector& x,
+		const DeviceMatrix& A,
+		DeviceMatrix& C
+	)
+{
+	int M = A.getRowCount();
+	int N = A.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasSdgmm
+				(
+					CuBlasManager::getHandle(),
+					CUBLAS_SIDE_LEFT,
+					M, N,
+					A.getAddress(), M,
+					x.getAddress(), 1,
+					C.getAddress(), M
+				)
+		);
+}
+
 
