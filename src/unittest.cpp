@@ -1647,12 +1647,46 @@ protected:
 
 TEST(NormalizationTest, getHandle)
 {
+	//正規化用のクラス
 	Normalization n;
-	DeviceMatrix X;
-	//TODO Xを初期化する
-	n.init(X);
-	auto pca =  n.getPCAWhiteningMatrix();
-	auto zca =  n.getZCAWhiteningMatrix();
+	//元のデータ
+	DeviceMatrix dX(2,3,{3f, 6f, 6f, 12f, 9f, 3f});
+	//算出される値
+	std::vector<float> mean{6f, 7f};
+	std::vector<float> P_pca{0.424264068711929f, -0.0816496580927726f, 0.14142135623731f, 0.244948974278318f};
+	std::vector<float> Y_pca{-1.4142135623731f, 0f, 0.707106781186547f, 1.22474487139159f, 0.707106781186547f, -1.22474487139159f};
+	std::vector<float> P_zca{0.428312124924678f, 0.0567044117258391f, 0.0567044117258391f, 0.277100360322441f};
+	std::vector<float> Y_zca{
+		-1.34164078649987f, -0.447213595499958f,
+		0.283522058629195f, 1.3855018016122f,
+		1.05811872787068f, -0.938288206112246f};
+
+	
+	//元データで初期化
+	n.init(dX);
+	
+	//平均を算出して比較
+	DeviceVector dmean;
+	n.getMean(dmean);
+	auto hmean = dmean.get();
+	compareVector(hmean, mean);
+	
+	//PCA白色化
+	DeviceMatrix dY_pca;
+	DeviceMatrix dP_pca;
+	n.getPCAWhiteningMatrix(dP_pca);
+	n.getPCAWhitening(dY_pca);
+	compareVector(P_pca, dP_pca.get());
+	compareVector(Y_pca, dY_pca.get());
+	
+	
+	//ZCA白色化
+	DeviceMatrix dY_zca;
+	DeviceMatrix dP_zca;
+	n.getZCAWhiteningMatrix(dP_zca);
+	n.getZCAWhitening(dY_zca);
+	compareVector(P_zca, dP_zca.get());
+	compareVector(Y_zca, dY_zca.get());
 }
 
 
