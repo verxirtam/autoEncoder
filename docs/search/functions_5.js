@@ -1,6 +1,7 @@
 var searchData=
 [
   ['get',['get',['../classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49',1,'DeviceMatrix::get(float *const host) const '],['../classDeviceMatrix.html#a2813fb81c0fc36af635ad5df83f4051f',1,'DeviceMatrix::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceMatrix.html#a768bbfeecba310e0cd3b9c71a586e9b1',1,'DeviceMatrix::get() const '],['../classDeviceVector.html#ab03314e09ef894fce63874fdee42041c',1,'DeviceVector::get(float *const host) const '],['../classDeviceVector.html#aa8532322d34cb26b623d58e4577ddcb8',1,'DeviceVector::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceVector.html#a06ede5f67f6ccbc52e0b94e43e1da736',1,'DeviceVector::get() const ']]],
+  ['get1vector',['get1Vector',['../classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea',1,'DeviceVector']]],
   ['getaddress',['getAddress',['../classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d',1,'DeviceMatrix::getAddress()'],['../classDeviceVector.html#a5487b131a7a148baea42e703212f54bc',1,'DeviceVector::getAddress()']]],
   ['getbias',['getBias',['../classBackpropagation.html#a92b8518396e44af72149674389b561c1',1,'Backpropagation']]],
   ['getbiasasvector',['getBiasAsVector',['../classBackpropagation.html#ae10dab2abddf279a343882d07ad372ef',1,'Backpropagation']]],
@@ -18,7 +19,9 @@ var searchData=
   ['gethandle',['getHandle',['../classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d',1,'CuBlasManager::getHandle()'],['../classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685',1,'CuSolverDnManager::getHandle()']]],
   ['getinstance',['getInstance',['../classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f',1,'CuBlasManager::getInstance()'],['../classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86',1,'CudaManager::getInstance()'],['../classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c',1,'CuRandManager::getInstance()'],['../classCuSolverDnManager.html#a710c91d2a171086ee210fd5d1f8eeeb5',1,'CuSolverDnManager::getInstance()']]],
   ['getmainstream',['getMainStream',['../classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655',1,'Backpropagation']]],
-  ['getmean',['getMean',['../learningTrackData_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'learningTrackData.cpp']]],
+  ['getmean',['getMean',['../classNormalization.html#a30294727819c10bee0b977df51e0fd38',1,'Normalization::getMean()'],['../learningTrackData_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'getMean():&#160;learningTrackData.cpp']]],
+  ['getpcawhitening',['getPCAWhitening',['../classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec',1,'Normalization']]],
+  ['getpcawhiteningmatrix',['getPCAWhiteningMatrix',['../classNormalization.html#a3404f67ac2f9272372d94d6843e58d3a',1,'Normalization']]],
   ['getrowcount',['getRowCount',['../classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa',1,'DeviceMatrix']]],
   ['getstream',['getStream',['../classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98',1,'CudaManager']]],
   ['getstreamcount',['getStreamCount',['../classCudaManager.html#a77452ece2c085919024b759c01dfceed',1,'CudaManager']]],
@@ -30,5 +33,7 @@ var searchData=
   ['getweightasvector',['getWeightAsVector',['../classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda',1,'Backpropagation']]],
   ['getwtdelta',['getWTDelta',['../classBackpropagation.html#a433519629dc1dcbb5403d4c8bf7a433f',1,'Backpropagation']]],
   ['getz',['getZ',['../classBackpropagation.html#aedd9c2a98885bbf3ff841c052c1ccffe',1,'Backpropagation']]],
-  ['getzasvector',['getZAsVector',['../classBackpropagation.html#a3089e4192f8448e4d4e83915a8aed438',1,'Backpropagation']]]
+  ['getzasvector',['getZAsVector',['../classBackpropagation.html#a3089e4192f8448e4d4e83915a8aed438',1,'Backpropagation']]],
+  ['getzcawhitening',['getZCAWhitening',['../classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf',1,'Normalization']]],
+  ['getzcawhiteningmatrix',['getZCAWhiteningMatrix',['../classNormalization.html#a58c5c66c2b99f5d1954551a52acd6e2b',1,'Normalization']]]
 ];

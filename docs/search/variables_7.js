@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowcount',['rowCount',['../classDeviceMatrix.html#a6336e3424399d2485ffb6fd328955085',1,'DeviceMatrix']]]
+  ['mean',['mean',['../classNormalization.html#a275bc50701083bfdef098c315066d981',1,'Normalization']]]
 ];

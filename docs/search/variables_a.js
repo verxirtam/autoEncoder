@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['weight',['weight',['../classBackpropagation.html#a11709cf3f30b963a0f1ba3d8e24e1628',1,'Backpropagation']]],
-  ['wtdelta',['WTdelta',['../classBackpropagation.html#ab1ef8716ccb17001de4d85eff369efef',1,'Backpropagation']]]
+  ['stream',['stream',['../classCudaManager.html#a062336d3e1edf52ce3782eb250c5571a',1,'CudaManager']]]
 ];

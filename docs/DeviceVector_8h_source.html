@@ -270,13 +270,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceVector.html#a8e5e571fae8c9f62e0dd36b0d9e82abd">dimension</a>;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;};</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">//全成分が1のベクトルを取得</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea">  185</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classDeviceVector.html">DeviceVector</a> <a class="code" href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea">get1Vector</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classDeviceVector.html#a8e5e571fae8c9f62e0dd36b0d9e82abd">dimension</a>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758">DeviceVector</a>(std::vector&lt;float&gt;(dimension, 1.0f));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;};</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
 <div class="ttc" id="classDeviceVector_html_ac3404f0ce64dd9b98b3272454946d758"><div class="ttname"><a href="classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758">DeviceVector::DeviceVector</a></div><div class="ttdeci">DeviceVector(const DeviceVector &amp;dv)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:35</div></div>
 <div class="ttc" id="classDeviceVector_html_a875dbcee52a101f197c780810095fe8f"><div class="ttname"><a href="classDeviceVector.html#a875dbcee52a101f197c780810095fe8f">DeviceVector::DeviceVector</a></div><div class="ttdeci">DeviceVector(const std::vector&lt; float &gt; &amp;v)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:122</div></div>
 <div class="ttc" id="CuBlasManager_8h_html_a7faf58a47ee95fc475079ec1d80e9d67"><div class="ttname"><a href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a></div><div class="ttdeci">#define CUBLAS_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:33</div></div>
 <div class="ttc" id="classDeviceVector_html_a5487b131a7a148baea42e703212f54bc"><div class="ttname"><a href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc">DeviceVector::getAddress</a></div><div class="ttdeci">float * getAddress() const </div><div class="ttdef"><b>Definition:</b> DeviceVector.h:175</div></div>
+<div class="ttc" id="classDeviceVector_html_a86c4055cfa3e7d02ed97cf13e523c5ea"><div class="ttname"><a href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea">DeviceVector::get1Vector</a></div><div class="ttdeci">static DeviceVector get1Vector(unsigned int dimension)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:185</div></div>
 <div class="ttc" id="classDeviceVector_html_aec704ebacfeabbff2f292066f64617ca"><div class="ttname"><a href="classDeviceVector.html#aec704ebacfeabbff2f292066f64617ca">DeviceVector::device</a></div><div class="ttdeci">float * device</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:32</div></div>
 <div class="ttc" id="classDeviceVector_html_a3f1274f6d0cc0131362706a2d291cec6"><div class="ttname"><a href="classDeviceVector.html#a3f1274f6d0cc0131362706a2d291cec6">DeviceVector::set</a></div><div class="ttdeci">void set(const std::vector&lt; float &gt; &amp;host)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:145</div></div>
 <div class="ttc" id="classDeviceVector_html_a9354c8a1e33ddaf5173574a7e61c01ae"><div class="ttname"><a href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae">DeviceVector::getDimension</a></div><div class="ttdeci">unsigned int getDimension() const </div><div class="ttdef"><b>Definition:</b> DeviceVector.h:180</div></div>
@@ -294,7 +300,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2017 05:24:02 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 30 2017 01:55:42 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

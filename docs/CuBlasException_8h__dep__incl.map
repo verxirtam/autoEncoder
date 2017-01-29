@@ -1,15 +1,18 @@
 <map id="src/CuBlasException.h" name="src/CuBlasException.h">
-<area shape="rect" id="node2" href="$CuBlasManager_8h.html" title="src/CuBlasManager.h" alt="" coords="255,80,403,107"/>
-<area shape="rect" id="node3" href="$DeviceVector_8h.html" title="src/DeviceVector.h" alt="" coords="262,155,396,181"/>
-<area shape="rect" id="node13" href="$DeviceMatrix_8h.html" title="src/DeviceMatrix.h" alt="" coords="87,155,219,181"/>
-<area shape="rect" id="node14" href="$CuBlasManager_8cpp.html" title="src/CuBlasManager.cpp" alt="" coords="421,155,584,181"/>
-<area shape="rect" id="node4" href="$CuBlasFunction_8h.html" title="src/CuBlasFunction.h" alt="" coords="265,229,412,256"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="211,387,321,413"/>
-<area shape="rect" id="node11" href="$CuSolverDnFunction_8h.html" title="src/CuSolverDnFunction.h" alt="" coords="56,229,232,256"/>
-<area shape="rect" id="node5" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="695,304,847,331"/>
-<area shape="rect" id="node9" href="$CuBlasFunction_8cpp.html" title="src/CuBlasFunction.cpp" alt="" coords="257,304,420,331"/>
-<area shape="rect" id="node10" href="$learningTrackData_8cpp.html" title="src/learningTrackData.cpp" alt="" coords="445,304,619,331"/>
-<area shape="rect" id="node6" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="777,387,943,413"/>
-<area shape="rect" id="node7" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="611,379,751,421"/>
-<area shape="rect" id="node12" href="$CuSolverDnFunction_8cpp.html" title="src/CuSolverDnFunction.cpp" alt="" coords="42,304,232,331"/>
+<area shape="rect" id="node2" href="$CuBlasManager_8h.html" title="src/CuBlasManager.h" alt="" coords="467,80,614,107"/>
+<area shape="rect" id="node3" href="$DeviceVector_8h.html" title="src/DeviceVector.h" alt="" coords="473,155,607,181"/>
+<area shape="rect" id="node16" href="$DeviceMatrix_8h.html" title="src/DeviceMatrix.h" alt="" coords="303,155,434,181"/>
+<area shape="rect" id="node17" href="$CuBlasManager_8cpp.html" title="src/CuBlasManager.cpp" alt="" coords="633,155,795,181"/>
+<area shape="rect" id="node4" href="$CuBlasFunction_8h.html" title="src/CuBlasFunction.h" alt="" coords="475,229,622,256"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="417,387,527,413"/>
+<area shape="rect" id="node14" href="$CuSolverDnFunction_8h.html" title="src/CuSolverDnFunction.h" alt="" coords="274,229,450,256"/>
+<area shape="rect" id="node5" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="898,304,1050,331"/>
+<area shape="rect" id="node9" href="$CuBlasFunction_8cpp.html" title="src/CuBlasFunction.cpp" alt="" coords="661,304,823,331"/>
+<area shape="rect" id="node10" href="$learningTrackData_8cpp.html" title="src/learningTrackData.cpp" alt="" coords="461,304,635,331"/>
+<area shape="rect" id="node11" href="$Normalization_8h.html" title="src/Normalization.h" alt="" coords="251,304,385,331"/>
+<area shape="rect" id="node6" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="980,387,1146,413"/>
+<area shape="rect" id="node7" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="814,379,954,421"/>
+<area shape="rect" id="node12" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="243,387,391,413"/>
+<area shape="rect" id="node13" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="41,387,218,413"/>
+<area shape="rect" id="node15" href="$CuSolverDnFunction_8cpp.html" title="src/CuSolverDnFunction.cpp" alt="" coords="36,304,226,331"/>
 </map>
