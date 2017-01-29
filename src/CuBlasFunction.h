@@ -58,6 +58,18 @@ void Ssyrk
 		DeviceMatrix& C
 	);
 
+//C = alpha * op_A(A) * op_B(B) + beta * C;
+void Sgemm
+	(
+		const float* alpha,
+		cublasOperation_t op_A,
+		const DeviceMatrix& A,
+		cublasOperation_t op_B,
+		const DeviceMatrix& B,
+		const float* beta,
+		DeviceMatrix& C
+	);
+
 //C = alpha * op_A(A) + beta * op_B(B);
 void Sgeam
 	(

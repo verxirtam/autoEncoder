@@ -181,6 +181,11 @@ public:
 	{
 		return dimension;
 	}
+	//全成分が1のベクトルを取得
+	static DeviceVector get1Vector(unsigned int dimension)
+	{
+		return DeviceVector(std::vector<float>(dimension, 1.0f));
+	}
 };
 
 

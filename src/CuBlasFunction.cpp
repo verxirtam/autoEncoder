@@ -111,6 +111,32 @@ void Ssyrk
 		);
 }
 
+//C = alpha * op_A(A) * op_B(B) + beta * C;
+void Sgemm
+	(
+		const float* alpha,
+		cublasOperation_t op_A,
+		const DeviceMatrix& A,
+		cublasOperation_t op_B,
+		const DeviceMatrix& B,
+		const float* beta,
+		DeviceMatrix& C
+	)
+{
+	int M = C.getRowCount();
+	int N = C.getColumnCount();
+	int K = (op_A == CUBLAS_OP_N) ? A.getColumnCount() : A.getRowCount();
+	CUBLAS_CALL
+		(
+			cublasSgemm
+				(
+				 CuBlasManager::getHandle(), op_A, op_B, M, N, K,
+				 alpha, A.getAddress(), A.getRowCount(),
+				        B.getAddress(), B.getRowCount(),
+				 beta,  C.getAddress(), C.getRowCount()
+				)
+		);
+}
 
 //C = alpha * op_A(A) + beta * op_B(B);
 void Sgeam

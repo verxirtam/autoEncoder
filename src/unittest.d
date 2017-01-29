@@ -23,4 +23,4 @@ unittest.o: unittest.cpp DeviceVector.h CuBlasManager.h \
  BackpropagationException.h CuSolverDnManager.h \
  /usr/local/cuda/include/cusolverDn.h /usr/local/cuda/include/cublas_v2.h \
  /usr/local/cuda/include/cusolver_common.h CuSolverDnException.h \
- CuSolverDnFunction.h
+ CuSolverDnFunction.h Normalization.h

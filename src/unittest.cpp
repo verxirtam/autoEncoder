@@ -36,6 +36,8 @@
 #include "CuSolverDnManager.h"
 #include "CuSolverDnFunction.h"
 
+#include "Normalization.h"
+
 //////////////////////////////////////////////////////////////////////
 // DeviceVectorTest
 //////////////////////////////////////////////////////////////////////
@@ -933,6 +935,11 @@ INSTANTIATE_TEST_CASE_P
 //その差の絶対値の最大値を求める
 float compareVector(const std::vector<float>& x,const std::vector<float>& y)
 {
+	if(x.size() != y.size())
+	{
+		std::cout << "x.size() = " << x.size() << ", y.size() = " << y.size() << std::endl;
+		throw std::runtime_error("x.size() != y.size()");
+	}
 	return std::inner_product
 		(
 		 x.begin(), x.end(), y.begin(), 0.0f,
@@ -1650,43 +1657,60 @@ TEST(NormalizationTest, getHandle)
 	//正規化用のクラス
 	Normalization n;
 	//元のデータ
-	DeviceMatrix dX(2,3,{3f, 6f, 6f, 12f, 9f, 3f});
+	DeviceMatrix dX(2,3,{3.0f, 6.0f, 6.0f, 12.0f, 9.0f, 3.0f});
 	//算出される値
-	std::vector<float> mean{6f, 7f};
+	std::vector<float> mean{6.0f, 7.0f};
 	std::vector<float> P_pca{0.424264068711929f, -0.0816496580927726f, 0.14142135623731f, 0.244948974278318f};
-	std::vector<float> Y_pca{-1.4142135623731f, 0f, 0.707106781186547f, 1.22474487139159f, 0.707106781186547f, -1.22474487139159f};
+	std::vector<float> Y_pca{
+		-1.4142135623731f,    0.0f,
+		 0.707106781186547f,  1.22474487139159f,
+		 0.707106781186547f, -1.22474487139159f};
 	std::vector<float> P_zca{0.428312124924678f, 0.0567044117258391f, 0.0567044117258391f, 0.277100360322441f};
 	std::vector<float> Y_zca{
 		-1.34164078649987f, -0.447213595499958f,
-		0.283522058629195f, 1.3855018016122f,
-		1.05811872787068f, -0.938288206112246f};
+		 0.283522058629195f, 1.3855018016122f,
+		 1.05811872787068f, -0.938288206112246f};
 
 	
 	//元データで初期化
 	n.init(dX);
 	
 	//平均を算出して比較
-	DeviceVector dmean;
-	n.getMean(dmean);
-	auto hmean = dmean.get();
-	compareVector(hmean, mean);
+	auto dmean = n.getMean();
+	EXPECT_EQ(compareVector(mean, dmean.get()) < 0.0625f, true);
 	
 	//PCA白色化
-	DeviceMatrix dY_pca;
-	DeviceMatrix dP_pca;
-	n.getPCAWhiteningMatrix(dP_pca);
-	n.getPCAWhitening(dY_pca);
-	compareVector(P_pca, dP_pca.get());
-	compareVector(Y_pca, dY_pca.get());
+	//白色化変換行列を取得
+	auto dP_pca = n.getPCAWhiteningMatrix();
+	
+	std::cout << " P_pca = {";
+	for(auto&& x : P_pca)
+	{
+		std::cout << x << ", ";
+	}
+	std::cout << "}" << std::endl;
+	std::cout << "dP_pca = {";
+	for(auto&& x : dP_pca.get())
+	{
+		std::cout << x << ", ";
+	}
+	std::cout << "}" << std::endl;
+	
+	//白色化を実行
+	auto dY_pca =  n.getPCAWhitening(dX);
+	//結果を比較
+	EXPECT_EQ(compareVector(P_pca, dP_pca.get()) < 0.0625f, true);
+	EXPECT_EQ(compareVector(Y_pca, dY_pca.get()) < 0.0625f, true);
 	
 	
 	//ZCA白色化
-	DeviceMatrix dY_zca;
-	DeviceMatrix dP_zca;
-	n.getZCAWhiteningMatrix(dP_zca);
-	n.getZCAWhitening(dY_zca);
-	compareVector(P_zca, dP_zca.get());
-	compareVector(Y_zca, dY_zca.get());
+	//白色化変換行列を取得
+	auto dP_zca = n.getZCAWhiteningMatrix();
+	//白色化を実行
+	auto dY_zca = n.getZCAWhitening(dX);
+	//結果を比較
+	EXPECT_EQ(compareVector(P_zca, dP_zca.get()) < 0.0625f, true);
+	EXPECT_EQ(compareVector(Y_zca, dY_zca.get()) < 0.0625f, true);
 }
 
 
@@ -1699,7 +1723,8 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*Sdgmm*";
+	::testing::GTEST_FLAG(filter)="*Normalization*";
+	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
 	//::testing::GTEST_FLAG(filter)="*CuBlasFunctionTest_2V*";
