@@ -108,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aada795b6203ef7b688f13df9dc2af843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30294727819c10bee0b977df51e0fd38"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a30294727819c10bee0b977df51e0fd38">getMean</a> (void) const </td></tr>
 <tr class="separator:a30294727819c10bee0b977df51e0fd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6785f76633cdd021bee3980d8fb0971a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a6785f76633cdd021bee3980d8fb0971a">getVarCovMatrix</a> (void) const </td></tr>
+<tr class="separator:a6785f76633cdd021bee3980d8fb0971a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3404f67ac2f9272372d94d6843e58d3a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a3404f67ac2f9272372d94d6843e58d3a">getPCAWhiteningMatrix</a> (void) const </td></tr>
 <tr class="separator:a3404f67ac2f9272372d94d6843e58d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5706dbfc7e03e93a3bd05a4800a950ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec">getPCAWhitening</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;X) const </td></tr>
@@ -126,6 +128,8 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a275bc50701083bfdef098c315066d981"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceVector.html">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a275bc50701083bfdef098c315066d981">mean</a></td></tr>
 <tr class="separator:a275bc50701083bfdef098c315066d981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc75656f21ddf2d3a31ee9f1e65ed2a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#adc75656f21ddf2d3a31ee9f1e65ed2a9">varCovMatrix</a></td></tr>
+<tr class="separator:adc75656f21ddf2d3a31ee9f1e65ed2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a182780baefa5adde8c967a1ec81d0d61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a182780baefa5adde8c967a1ec81d0d61">pcaWhiteningMatrix</a></td></tr>
 <tr class="separator:a182780baefa5adde8c967a1ec81d0d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19ad973ee8b1ef60206f142b39b21761"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html#a19ad973ee8b1ef60206f142b39b21761">zcaWhiteningMatrix</a></td></tr>
@@ -212,6 +216,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_cgraph.png" border="0" usemap="#classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_cgraph" alt=""/></div>
+<map name="classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_cgraph" id="classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_cgraph">
+<area shape="rect" id="node2" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="279,5,465,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="269,56,475,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_icgraph.png" border="0" usemap="#classNormalization_a5706dbfc7e03e93a3bd05a4800a950ec_icgraph" alt=""/></div>
@@ -255,6 +268,39 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a6785f76633cdd021bee3980d8fb0971a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; Normalization::getVarCovMatrix </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classNormalization_a6785f76633cdd021bee3980d8fb0971a_icgraph.png" border="0" usemap="#classNormalization_a6785f76633cdd021bee3980d8fb0971a_icgraph" alt=""/></div>
+<map name="classNormalization_a6785f76633cdd021bee3980d8fb0971a_icgraph" id="classNormalization_a6785f76633cdd021bee3980d8fb0971a_icgraph">
+<area shape="rect" id="node2" href="unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf" title="TEST" alt="" coords="227,12,283,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ae6c98abf709156e118ab5abc02ef80bf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -276,6 +322,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classNormalization_ae6c98abf709156e118ab5abc02ef80bf_cgraph.png" border="0" usemap="#classNormalization_ae6c98abf709156e118ab5abc02ef80bf_cgraph" alt=""/></div>
+<map name="classNormalization_ae6c98abf709156e118ab5abc02ef80bf_cgraph" id="classNormalization_ae6c98abf709156e118ab5abc02ef80bf_cgraph">
+<area shape="rect" id="node2" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="276,5,463,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="267,56,472,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -438,6 +493,26 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="adc75656f21ddf2d3a31ee9f1e65ed2a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> Normalization::varCovMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a19ad973ee8b1ef60206f142b39b21761"></a>
 <div class="memitem">
 <div class="memproto">
@@ -466,7 +541,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 30 2017 01:55:44 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 31 2017 01:49:32 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

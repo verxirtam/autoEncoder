@@ -29,6 +29,7 @@ var searchData=
   ['getsubstreamcount',['getSubStreamCount',['../classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d',1,'Backpropagation']]],
   ['getu',['getU',['../classBackpropagation.html#abbe8caef5c0ed9e7991015403d5d15cb',1,'Backpropagation::getU() const '],['../classBackpropagation.html#a3b7abd6d24e13ebce2fb17d0a974b437',1,'Backpropagation::getU(std::vector&lt; std::vector&lt; float &gt; &gt; &amp;hu) const ']]],
   ['getuasvector',['getUAsVector',['../classBackpropagation.html#a320a9bce5775a00805ee4ef8dc23f3bf',1,'Backpropagation']]],
+  ['getvarcovmatrix',['getVarCovMatrix',['../classNormalization.html#a6785f76633cdd021bee3980d8fb0971a',1,'Normalization']]],
   ['getweight',['getWeight',['../classBackpropagation.html#a5efd2913d5588b8c12d56f129c5d9ae1',1,'Backpropagation']]],
   ['getweightasvector',['getWeightAsVector',['../classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda',1,'Backpropagation']]],
   ['getwtdelta',['getWTDelta',['../classBackpropagation.html#a433519629dc1dcbb5403d4c8bf7a433f',1,'Backpropagation']]],
