@@ -40,30 +40,33 @@ void Normalization::init(const DeviceMatrix& X)
 	Sscal(&alpha, mean);
 	
 	//分散共分散行列
-	DeviceMatrix PhiX(D,D);
-	//PhiX = 1.0f * X * X^T;
+	varCovMatrix = DeviceMatrix(D,D);
+	//varCovMatrix = 1.0f * X * X^T;
 	alpha = 1.0f;
 	beta = 0.0f;
-	Ssyrk(&alpha, CUBLAS_OP_N, X, &beta, PhiX);
+	Ssyrk(&alpha, CUBLAS_OP_N, X, &beta, varCovMatrix);
+	//varCovMatrixの値は上半分のみ設定される
 	
-	//PhiX = -(1 / N)*(X_1N) * (X_1N)^T + X * X^T;
-	//     = X * X^T -(1 / N)*(X_1N) * (X_1N)^T;
-	alpha = 1.0f / static_cast<float>(N);
-	Ssyr(&alpha, X_1N, PhiX);
+	//varCovMatrix = -(1 / N) * (X_1N) * (X_1N)^T + X * X^T;
+	//     = X * X^T -(1 / N) * (X_1N) * (X_1N)^T;
+	alpha = - 1.0f / static_cast<float>(N);
+	Ssyr(&alpha, X_1N, varCovMatrix);
+	//varCovMatrixの値は上半分のみ設定される
 	
-	//PhiX = (1 / N) * PhiX;
+	//varCovMatrix = (1 / N) * varCovMatrix;
 	//     = (1 / N) * (X * X^T -(1 / N)*(X_1N) * (X_1N)^T);
 	alpha = 1.0f / static_cast<float>(N);
-	Sscal(&alpha, PhiX);
-	//この時点で分散共分散行列PhiXが取得できた
+	Sscal(&alpha, varCovMatrix);
+	//この時点で分散共分散行列varCovMatrixが取得できた
+	//ただしvarCovMatrixの値は上半分のみ設定されている
 	
-	//PhiX = E * diag(W) * E^T
+	//varCovMatrix = E * diag(W) * E^T
 	//E : 直交行列
-	//W : PhiXの固有値から成るベクトル
+	//W : varCovMatrixの固有値から成るベクトル
 	//    W = (l_0, l_1, ... , l_(D-1)), l_i <= l_(i+1) i=0, ... ,D-2
 	DeviceMatrix E;
 	DeviceVector W;
-	DnSsyevd(PhiX, W , E);
+	DnSsyevd(varCovMatrix, W , E);
 	
 	//W = W^(-1/2)
 	invSqrtByElement(W);

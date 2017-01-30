@@ -1652,6 +1652,16 @@ protected:
 	void TearDown(){}
 };
 
+void printVector(const std::vector<float>& v, const std::string& vname)
+{
+	std::cout << vname << " = {";
+	for(auto&& x : v)
+	{
+		std::cout << x << ", ";
+	}
+	std::cout << "}" << std::endl;
+}
+
 TEST(NormalizationTest, getHandle)
 {
 	//正規化用のクラス
@@ -1660,16 +1670,22 @@ TEST(NormalizationTest, getHandle)
 	DeviceMatrix dX(2,3,{3.0f, 6.0f, 6.0f, 12.0f, 9.0f, 3.0f});
 	//算出される値
 	std::vector<float> mean{6.0f, 7.0f};
-	std::vector<float> P_pca{0.424264068711929f, -0.0816496580927726f, 0.14142135623731f, 0.244948974278318f};
-	std::vector<float> Y_pca{
-		-1.4142135623731f,    0.0f,
-		 0.707106781186547f,  1.22474487139159f,
-		 0.707106781186547f, -1.22474487139159f};
+	std::vector<float> varcovmatrix{6.0f, -3.0f, -3.0f, 14.0f};
+	std::vector<float> P_pca{-0.424264068711929f, -0.0816496580927726f, -0.14142135623731f, 0.244948974278318f};
+	std::vector<float> Y_pca
+		{
+			 1.4142135623731f,    0.0f, 
+			-0.707106781186547f,  1.22474487139159f, 
+			-0.707106781186547f, -1.22474487139159f
+		};
+
 	std::vector<float> P_zca{0.428312124924678f, 0.0567044117258391f, 0.0567044117258391f, 0.277100360322441f};
-	std::vector<float> Y_zca{
-		-1.34164078649987f, -0.447213595499958f,
-		 0.283522058629195f, 1.3855018016122f,
-		 1.05811872787068f, -0.938288206112246f};
+	std::vector<float> Y_zca
+		{
+			-1.34164078649987f, -0.447213595499958f,
+			 0.283522058629195f, 1.3855018016122f,
+			 1.05811872787068f, -0.938288206112246f
+		};
 
 	
 	//元データで初期化
@@ -1679,38 +1695,38 @@ TEST(NormalizationTest, getHandle)
 	auto dmean = n.getMean();
 	EXPECT_EQ(compareVector(mean, dmean.get()) < 0.0625f, true);
 	
+	//分散共分散行列を算出して比較
+	auto dvarcovmatrix = n.getVarCovMatrix().get();
+	//下半分の値が不定値なので上半分の値を設定する
+	dvarcovmatrix[1] = dvarcovmatrix[2];
+	EXPECT_EQ(compareVector(varcovmatrix, dvarcovmatrix) < 0.0625f, true);
+	printVector( varcovmatrix, " varcovmatrix");
+	printVector(dvarcovmatrix, "dvarcovmatrix");
+	
 	//PCA白色化
 	//白色化変換行列を取得
-	auto dP_pca = n.getPCAWhiteningMatrix();
-	
-	std::cout << " P_pca = {";
-	for(auto&& x : P_pca)
-	{
-		std::cout << x << ", ";
-	}
-	std::cout << "}" << std::endl;
-	std::cout << "dP_pca = {";
-	for(auto&& x : dP_pca.get())
-	{
-		std::cout << x << ", ";
-	}
-	std::cout << "}" << std::endl;
+	auto dP_pca = n.getPCAWhiteningMatrix().get();
 	
 	//白色化を実行
-	auto dY_pca =  n.getPCAWhitening(dX);
+	auto dY_pca =  n.getPCAWhitening(dX).get();
 	//結果を比較
-	EXPECT_EQ(compareVector(P_pca, dP_pca.get()) < 0.0625f, true);
-	EXPECT_EQ(compareVector(Y_pca, dY_pca.get()) < 0.0625f, true);
+	EXPECT_EQ(compareVector(P_pca, dP_pca) < 0.0625f, true);
+	printVector(  P_pca, " P_pca");
+	printVector( dP_pca, "dP_pca");
+	EXPECT_EQ(compareVector(Y_pca, dY_pca) < 0.0625f, true);
+	
 	
 	
 	//ZCA白色化
 	//白色化変換行列を取得
-	auto dP_zca = n.getZCAWhiteningMatrix();
+	auto dP_zca = n.getZCAWhiteningMatrix().get();
 	//白色化を実行
-	auto dY_zca = n.getZCAWhitening(dX);
+	auto dY_zca = n.getZCAWhitening(dX).get();
 	//結果を比較
-	EXPECT_EQ(compareVector(P_zca, dP_zca.get()) < 0.0625f, true);
-	EXPECT_EQ(compareVector(Y_zca, dY_zca.get()) < 0.0625f, true);
+	EXPECT_EQ(compareVector(P_zca, dP_zca) < 0.0625f, true);
+	printVector(  P_zca, " P_zca");
+	printVector( dP_zca, "dP_zca");
+	EXPECT_EQ(compareVector(Y_zca, dY_zca) < 0.0625f, true);
 }
 
 

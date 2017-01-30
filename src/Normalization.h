@@ -27,6 +27,8 @@ class Normalization
 private:
 	//平均
 	DeviceVector mean;
+	//分散共分散行列
+	DeviceMatrix varCovMatrix;
 	//PCA白色化変換行列
 	DeviceMatrix pcaWhiteningMatrix;
 	//ZCA白色化変換行列
@@ -38,6 +40,7 @@ public:
 	//コンストラクタ
 	Normalization():
 		mean(),
+		varCovMatrix(),
 		pcaWhiteningMatrix(),
 		zcaWhiteningMatrix()
 	{
@@ -50,6 +53,11 @@ public:
 	{
 		return mean;
 	}
+	//分散共分散行列を取得する
+	const DeviceMatrix& getVarCovMatrix(void) const
+	{
+		return varCovMatrix;
+	}
 	//PCA白色化の変換行列を取得する
 	const DeviceMatrix& getPCAWhiteningMatrix(void) const
 	{
@@ -58,7 +66,7 @@ public:
 	//PCA白色化を行う
 	DeviceMatrix getPCAWhitening(const DeviceMatrix& X) const
 	{
-		return DeviceMatrix();
+		return DeviceMatrix(X.getRowCount(), X.getColumnCount());
 	}
 	//ZCA白色化の変換行列を取得する
 	const DeviceMatrix& getZCAWhiteningMatrix(void) const
@@ -68,7 +76,7 @@ public:
 	//ZCA白色化を行う
 	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const
 	{
-		return DeviceMatrix();
+		return DeviceMatrix(X.getRowCount(), X.getColumnCount());
 	}
 };
 
