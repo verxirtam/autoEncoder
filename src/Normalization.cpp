@@ -18,6 +18,31 @@
 #include "Normalization.h"
 
 
+//白色化を行う
+DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const
+{
+	unsigned int D = X.getRowCount();
+	unsigned int N = X.getColumnCount();
+	auto _1N = DeviceVector::get1Vector(N);
+	//whiteningMatrix * (X - mean * _1N^T)
+	
+	DeviceMatrix Y = X;
+	//Y = X - mean * _1N^T;
+	//  = (-1.0f) * mean * _1N^T + Y;
+	float alpha = - 1.0f;
+	Sger(&alpha, mean, _1N, Y);
+	
+	//Y = whiteningMatrix * Y;
+	//  = whiteningMatrix * (X - mean * _1N^T);
+	DeviceMatrix Z(D, N);
+	alpha = 1.0f;
+	float beta = 0.0f;
+	Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, Z);
+	
+	return Z;
+}
+
+
 //正規化用のデータを元に平均・白色化の変換行列を作成する
 void Normalization::init(const DeviceMatrix& X)
 {

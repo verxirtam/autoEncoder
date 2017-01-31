@@ -1714,6 +1714,8 @@ TEST(NormalizationTest, getHandle)
 	printVector(  P_pca, " P_pca");
 	printVector( dP_pca, "dP_pca");
 	EXPECT_EQ(compareVector(Y_pca, dY_pca) < 0.0625f, true);
+	printVector(  Y_pca, " Y_pca");
+	printVector( dY_pca, "dY_pca");
 	
 	
 	
@@ -1727,6 +1729,8 @@ TEST(NormalizationTest, getHandle)
 	printVector(  P_zca, " P_zca");
 	printVector( dP_zca, "dP_zca");
 	EXPECT_EQ(compareVector(Y_zca, dY_zca) < 0.0625f, true);
+	printVector(  Y_zca, " Y_zca");
+	printVector( dY_zca, "dY_zca");
 }
 
 
@@ -1735,11 +1739,11 @@ TEST(NormalizationTest, getHandle)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*Normalization*";
+	//::testing::GTEST_FLAG(filter)="*Normalization*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";

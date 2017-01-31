@@ -36,6 +36,9 @@ private:
 
 	//成分毎に(-1/2)乗を算出する
 	void invSqrtByElement(DeviceVector& W);
+	
+	//白色化を行う
+	DeviceMatrix getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const;
 public:
 	//コンストラクタ
 	Normalization():
@@ -66,7 +69,7 @@ public:
 	//PCA白色化を行う
 	DeviceMatrix getPCAWhitening(const DeviceMatrix& X) const
 	{
-		return DeviceMatrix(X.getRowCount(), X.getColumnCount());
+		return getWhitening(pcaWhiteningMatrix, X);
 	}
 	//ZCA白色化の変換行列を取得する
 	const DeviceMatrix& getZCAWhiteningMatrix(void) const
@@ -76,7 +79,7 @@ public:
 	//ZCA白色化を行う
 	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const
 	{
-		return DeviceMatrix(X.getRowCount(), X.getColumnCount());
+		return getWhitening(zcaWhiteningMatrix, X);
 	}
 };
 

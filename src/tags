@@ -107,7 +107,9 @@ SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:NormalizationTest
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemm	CuBlasFunction.cpp	/^void Sgemm$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
+Sger	CuBlasFunction.cpp	/^void Sger$/;"	f
 Sscal	CuBlasFunction.cpp	/^void Sscal$/;"	f
+Ssymm	CuBlasFunction.cpp	/^void Ssymm$/;"	f
 Ssyr	CuBlasFunction.cpp	/^void Ssyr$/;"	f
 Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
@@ -227,9 +229,11 @@ getSubStreamCount	Backpropagation.h	/^	unsigned int getSubStreamCount(void) cons
 getU	Backpropagation.h	/^	const std::vector<DeviceVector>& getU() const$/;"	f	class:Backpropagation
 getU	Backpropagation.h	/^	void getU(std::vector<std::vector<float> >& hu) const$/;"	f	class:Backpropagation
 getUAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:Backpropagation
+getVarCovMatrix	Normalization.h	/^	const DeviceMatrix& getVarCovMatrix(void) const$/;"	f	class:Normalization
 getWTDelta	Backpropagation.h	/^	const std::vector<DeviceVector>& getWTDelta() const$/;"	f	class:Backpropagation
 getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
 getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation
+getWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const$/;"	f	class:Normalization
 getZ	Backpropagation.h	/^	const std::vector<DeviceVector>& getZ() const$/;"	f	class:Backpropagation
 getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
 getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
@@ -253,6 +257,7 @@ operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
 operator =	DeviceVector.h	/^	DeviceVector& operator=(const DeviceVector& dv)$/;"	f	class:DeviceVector
 pcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix pcaWhiteningMatrix;$/;"	m	class:Normalization
+printVector	unittest.cpp	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
 rowCount	DeviceMatrix.h	/^	unsigned int rowCount;$/;"	m	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const float* host)$/;"	f	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceMatrix
@@ -270,6 +275,7 @@ track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
 u	Backpropagation.h	/^	std::vector<DeviceVector> u;$/;"	m	class:Backpropagation
 unitCount	Backpropagation.h	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation
 updateParameter	Backpropagation.cpp	/^void Backpropagation::updateParameter()$/;"	f	class:Backpropagation
+varCovMatrix	Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:Normalization
 weight	Backpropagation.h	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation
 z	Backpropagation.h	/^	std::vector<DeviceVector> z;$/;"	m	class:Backpropagation
 zcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix zcaWhiteningMatrix;$/;"	m	class:Normalization
