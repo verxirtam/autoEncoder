@@ -129,93 +129,115 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; y</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//A = alpha * x * x^T + A; A : symmetric matrix</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125">Ssyr</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//A = alpha * x * y^T + A;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a8e22f052e4de2d7762f26b3703c1590e">Sger</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    (</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    );</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//C = alpha * op(A) * (op(A))^T + beta * C; C : symmetric matrix</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5">Ssyrk</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    (</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        cublasOperation_t op,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//C = alpha * op_A(A) * op_B(B) + beta * C;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    (</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        cublasOperation_t op_A,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        cublasOperation_t op_B,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; B,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">//C = alpha * op_A(A) + beta * op_B(B);</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    (</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cublasOperation_t op_A,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        cublasOperation_t op_B,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; B,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//x = alpha * x;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    (</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; y,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    );</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//A = alpha * x * x^T + A; A : symmetric matrix</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125">Ssyr</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    (</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//C = alpha * op(A) * (op(A))^T + beta * C; C : symmetric matrix</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5">Ssyrk</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    (</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        cublasOperation_t op,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//C = alpha * op_A(A) * op_B(B) + beta * C;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    (</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cublasOperation_t op_A,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cublasOperation_t op_B,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; B,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//C = alpha * A * B + beta * C; A : symmetric matrix</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5">Ssymm</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    (</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; B,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    );</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//A = alpha * A;</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    (</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    );</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//C = A * diag(x)</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    (</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//C = diag(x) * A</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    (</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//C = alpha * op_A(A) + beta * op_B(B);</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    (</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        cublasOperation_t op_A,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* beta,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        cublasOperation_t op_B,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; B,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//x = alpha * x;</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    (</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//A = alpha * A;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    (</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span>* alpha,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">//C = A * diag(x)</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    (</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    );</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">//C = diag(x) * A</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    (</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; x,</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; A,</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; C</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    );</div>
 <div class="ttc" id="CuBlasFunction_8h_html_a64ad0c14765ac642aa383c1441da6362"><div class="ttname"><a href="CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362">Saxpy</a></div><div class="ttdeci">void Saxpy(const float *const alpha, const DeviceVector &amp;x, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:23</div></div>
 <div class="ttc" id="DeviceVector_8h_html"><div class="ttname"><a href="DeviceVector_8h.html">DeviceVector.h</a></div></div>
 <div class="ttc" id="DeviceMatrix_8h_html"><div class="ttname"><a href="DeviceMatrix_8h.html">DeviceMatrix.h</a></div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_a00cd0bdc5a5d9ae227fea48d86cf6a53"><div class="ttname"><a href="CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a></div><div class="ttdeci">void Sgemm(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, cublasOperation_t op_B, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:116</div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_a7e08a31241335fa3628dcd9b486a5125"><div class="ttname"><a href="CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125">Ssyr</a></div><div class="ttdeci">void Ssyr(const float *alpha, const DeviceVector &amp;x, DeviceMatrix &amp;A)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:60</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a00cd0bdc5a5d9ae227fea48d86cf6a53"><div class="ttname"><a href="CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a></div><div class="ttdeci">void Sgemm(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, cublasOperation_t op_B, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:141</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a7e08a31241335fa3628dcd9b486a5125"><div class="ttname"><a href="CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125">Ssyr</a></div><div class="ttdeci">void Ssyr(const float *alpha, const DeviceVector &amp;x, DeviceMatrix &amp;A)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:85</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a8e22f052e4de2d7762f26b3703c1590e"><div class="ttname"><a href="CuBlasFunction_8h.html#a8e22f052e4de2d7762f26b3703c1590e">Sger</a></div><div class="ttdeci">void Sger(const float *alpha, const DeviceVector &amp;x, const DeviceVector &amp;y, DeviceMatrix &amp;A)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:60</div></div>
 <div class="ttc" id="classDeviceMatrix_html"><div class="ttname"><a href="classDeviceMatrix.html">DeviceMatrix</a></div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:25</div></div>
 <div class="ttc" id="classDeviceVector_html"><div class="ttname"><a href="classDeviceVector.html">DeviceVector</a></div><div class="ttdef"><b>Definition:</b> DeviceVector.h:26</div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_a6f8a762ecde9d88fb4c1094478694621"><div class="ttname"><a href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div><div class="ttdeci">void Sscal(const float *alpha, DeviceVector &amp;x)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:170</div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_ad909d96eb7965d764b725171132dbd64"><div class="ttname"><a href="CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a></div><div class="ttdeci">void Sgeam(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, const float *beta, cublasOperation_t op_B, const DeviceMatrix &amp;B, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:143</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a6f8a762ecde9d88fb4c1094478694621"><div class="ttname"><a href="CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621">Sscal</a></div><div class="ttdeci">void Sscal(const float *alpha, DeviceVector &amp;x)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:224</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_ad909d96eb7965d764b725171132dbd64"><div class="ttname"><a href="CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a></div><div class="ttdeci">void Sgeam(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, const float *beta, cublasOperation_t op_B, const DeviceMatrix &amp;B, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:197</div></div>
 <div class="ttc" id="CuBlasFunction_8h_html_acf599610485471a429e1f0a3aa6c77d4"><div class="ttname"><a href="CuBlasFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4">Sgemv</a></div><div class="ttdeci">void Sgemv(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const DeviceVector &amp;x, const float *beta, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:35</div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_a2dfbd95424f457f126c37d516cd37fe5"><div class="ttname"><a href="CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5">Ssyrk</a></div><div class="ttdeci">void Ssyrk(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:85</div></div>
-<div class="ttc" id="CuBlasFunction_8h_html_a0116e643f587b46bb43f9a4191689aa5"><div class="ttname"><a href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div><div class="ttdeci">void Sdgmm(const DeviceMatrix &amp;A, const DeviceVector &amp;x, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:231</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a639e60ad1e9ba61cdaa7c93aaef0ace5"><div class="ttname"><a href="CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5">Ssymm</a></div><div class="ttdeci">void Ssymm(const float *alpha, const DeviceMatrix &amp;A, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:168</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a2dfbd95424f457f126c37d516cd37fe5"><div class="ttname"><a href="CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5">Ssyrk</a></div><div class="ttdeci">void Ssyrk(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:110</div></div>
+<div class="ttc" id="CuBlasFunction_8h_html_a0116e643f587b46bb43f9a4191689aa5"><div class="ttname"><a href="CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5">Sdgmm</a></div><div class="ttdeci">void Sdgmm(const DeviceMatrix &amp;A, const DeviceVector &amp;x, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:285</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 31 2017 01:49:30 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 1 2017 01:31:58 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

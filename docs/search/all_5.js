@@ -33,6 +33,7 @@ var searchData=
   ['getvarcovmatrix',['getVarCovMatrix',['../classNormalization.html#a6785f76633cdd021bee3980d8fb0971a',1,'Normalization']]],
   ['getweight',['getWeight',['../classBackpropagation.html#a5efd2913d5588b8c12d56f129c5d9ae1',1,'Backpropagation']]],
   ['getweightasvector',['getWeightAsVector',['../classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda',1,'Backpropagation']]],
+  ['getwhitening',['getWhitening',['../classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79',1,'Normalization']]],
   ['getwtdelta',['getWTDelta',['../classBackpropagation.html#a433519629dc1dcbb5403d4c8bf7a433f',1,'Backpropagation']]],
   ['getz',['getZ',['../classBackpropagation.html#aedd9c2a98885bbf3ff841c052c1ccffe',1,'Backpropagation']]],
   ['getzasvector',['getZAsVector',['../classBackpropagation.html#a3089e4192f8448e4d4e83915a8aed438',1,'Backpropagation']]],
