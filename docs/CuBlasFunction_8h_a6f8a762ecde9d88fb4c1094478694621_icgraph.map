@@ -1,8 +1,9 @@
 <map id="Sscal" name="Sscal">
 <area shape="rect" id="node2" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="110,56,303,83"/>
 <area shape="rect" id="node5" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="143,107,270,133"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="171,157,243,184"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="171,157,243,184"/>
 <area shape="rect" id="node3" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="352,5,424,32"/>
 <area shape="rect" id="node4" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="360,56,416,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf" title="TEST" alt="" coords="360,107,416,133"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="360,107,416,133"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="352,157,424,184"/>
 </map>

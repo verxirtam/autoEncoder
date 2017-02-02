@@ -1,5 +1,6 @@
 <map id="Normalization::getWhitening" name="Normalization::getWhitening">
-<area shape="rect" id="node2" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="241,5,455,32"/>
-<area shape="rect" id="node4" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="241,56,455,83"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf" title="TEST" alt="" coords="504,31,560,57"/>
+<area shape="rect" id="node2" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="241,56,455,83"/>
+<area shape="rect" id="node5" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="241,5,455,32"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="512,5,568,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="504,56,576,83"/>
 </map>

@@ -1,7 +1,8 @@
 <map id="CuSolverDnManager::getHandle" name="CuSolverDnManager::getHandle">
-<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="205,31,288,57"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="219,81,275,108"/>
-<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="337,5,463,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="372,56,428,83"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf" title="TEST" alt="" coords="512,5,568,32"/>
+<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="205,56,288,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="219,107,275,133"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="337,31,463,57"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="372,81,428,108"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="520,5,576,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="512,56,584,83"/>
 </map>

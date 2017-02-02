@@ -1,5 +1,6 @@
 <map id="Sdgmm" name="Sdgmm">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="121,5,247,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="156,56,212,83"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a0ad6fdfd233c7616f54cdf06db7150bf" title="TEST" alt="" coords="296,5,352,32"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="121,31,247,57"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="156,81,212,108"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="304,5,360,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="296,56,368,83"/>
 </map>
