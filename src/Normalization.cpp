@@ -52,7 +52,7 @@ void Normalization::init(const DeviceMatrix& X)
 	unsigned int N = X.getColumnCount();
 	//全成分が1のベクトル
 	auto _1N = DeviceVector::get1Vector(N);
-	//X * _1N (* は内積)
+	//X * _1N
 	DeviceVector X_1N(D);
 	//X_1N = 1.0f * X * _1N;
 	float alpha = 1.0f;

@@ -1662,7 +1662,7 @@ void printVector(const std::vector<float>& v, const std::string& vname)
 	std::cout << "}" << std::endl;
 }
 
-TEST(NormalizationTest, getHandle)
+TEST(NormalizationTest, simple)
 {
 	//正規化用のクラス
 	Normalization n;
@@ -1733,17 +1733,56 @@ TEST(NormalizationTest, getHandle)
 	printVector( dY_zca, "dY_zca");
 }
 
+///////////////////////////////////////
+class NormalizationGeneralTest :
+	public ::testing::Test,
+	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int> >
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
 
+INSTANTIATE_TEST_CASE_P
+	(
+		InstantiateNormalizationGeneralTest,
+		NormalizationGeneralTest,
+		::testing::Combine
+			(
+				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 5, 10}),
+				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 5, 10})
+			)
+	);
+
+TEST_P(NormalizationGeneralTest, test)
+{
+	unsigned int D = std::get<0>(GetParam());
+	unsigned int N = std::get<1>(GetParam());
+	std::cout << "(D, N) = (" << D << ", " << N << ")" << std::endl;
+	DeviceMatrix X(D,N);
+	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), X.getAddress(), D * N));
+	Normalization n;
+	n.init(X);
+	printVector(n.getMean().get(),         "Mean"        );
+	printVector(n.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix");
+	DeviceMatrix Y_pca = n.getPCAWhitening(X);
+	printVector(Y_pca.get(),               "Y_pca"        );
+	Normalization n_pca;
+	n_pca.init(Y_pca);
+	printVector(n_pca.getMean().get(),     "Mean_pca"        );
+	printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
+	printVector(n_pca.getVarCovMatrix().get(), "VarCovMatrix_pca");
+}
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	//::testing::GTEST_FLAG(filter)="*Normalization*";
+	::testing::GTEST_FLAG(filter)="*Normalization*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
