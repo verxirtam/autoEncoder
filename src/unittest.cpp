@@ -940,12 +940,14 @@ float compareVector(const std::vector<float>& x,const std::vector<float>& y)
 		std::cout << "x.size() = " << x.size() << ", y.size() = " << y.size() << std::endl;
 		throw std::runtime_error("x.size() != y.size()");
 	}
-	return std::inner_product
+	float diff = std::inner_product
 		(
 		 x.begin(), x.end(), y.begin(), 0.0f,
 		 [](float _x, float _y){return std::max(_x, _y);},
-		 [](float _x, float _y){EXPECT_NEAR(_x, _y, 0.0625f); return std::abs(_x - _y);}
+		 [](float _x, float _y){return std::abs(_x - _y);}
 		);
+	EXPECT_NEAR(diff, 0.0f, 0.0625);
+	return diff;
 }
 //CUDAの算出結果とhostでの算出結果と一致することを確認する
 TEST_P(BackpropagationFunctionTest, Kernel)
@@ -1749,8 +1751,8 @@ INSTANTIATE_TEST_CASE_P
 		NormalizationGeneralTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}),
-				::testing::ValuesIn(std::vector<unsigned int>{100, 1000})
+				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1000}),
+				::testing::ValuesIn(std::vector<unsigned int>{5000})
 			)
 	);
 
