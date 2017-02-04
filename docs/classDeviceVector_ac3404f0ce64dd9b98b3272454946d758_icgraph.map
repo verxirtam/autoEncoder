@@ -1,9 +1,9 @@
 <map id="DeviceVector::DeviceVector" name="DeviceVector::DeviceVector">
 <area shape="rect" id="node2" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="243,81,415,108"/>
 <area shape="rect" id="node3" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="464,56,651,83"/>
-<area shape="rect" id="node8" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="743,107,870,133"/>
-<area shape="rect" id="node4" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="699,56,914,83"/>
-<area shape="rect" id="node7" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="700,5,913,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="971,56,1027,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="963,107,1035,133"/>
+<area shape="rect" id="node7" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="494,107,621,133"/>
+<area shape="rect" id="node4" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="699,5,914,32"/>
+<area shape="rect" id="node6" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="700,56,913,83"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="963,56,1019,83"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="771,157,843,184"/>
 </map>

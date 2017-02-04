@@ -1,5 +1,10 @@
 <map id="DeviceVector::get" name="DeviceVector::get">
-<area shape="rect" id="node2" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="182,5,314,32"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="220,56,276,83"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="212,107,284,133"/>
+<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="207,56,289,83"/>
+<area shape="rect" id="node7" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="182,107,314,133"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="220,157,276,184"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="212,208,284,235"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="363,31,490,57"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="399,81,455,108"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="547,5,603,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="539,56,611,83"/>
 </map>

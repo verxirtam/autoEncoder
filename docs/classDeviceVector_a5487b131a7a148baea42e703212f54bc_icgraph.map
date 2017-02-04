@@ -20,10 +20,10 @@
 <area shape="rect" id="node13" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="491,245,618,272"/>
 <area shape="rect" id="node11" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="740,132,911,159"/>
 <area shape="rect" id="node14" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="995,448,1051,475"/>
-<area shape="rect" id="node15" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="987,321,1059,348"/>
+<area shape="rect" id="node15" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="789,245,861,272"/>
 <area shape="rect" id="node17" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="461,499,648,525"/>
-<area shape="rect" id="node18" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="718,448,933,475"/>
-<area shape="rect" id="node19" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="719,499,932,525"/>
+<area shape="rect" id="node18" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="718,499,933,525"/>
+<area shape="rect" id="node19" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="719,448,932,475"/>
 <area shape="rect" id="node22" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="458,347,651,373"/>
 <area shape="rect" id="node25" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="519,296,591,323"/>
 <area shape="rect" id="node23" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="789,397,861,424"/>

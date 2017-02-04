@@ -1,7 +1,6 @@
 <map id="Sger" name="Sger">
 <area shape="rect" id="node2" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="104,31,291,57"/>
-<area shape="rect" id="node3" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="339,56,554,83"/>
-<area shape="rect" id="node6" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="340,5,553,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="611,5,667,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="603,56,675,83"/>
+<area shape="rect" id="node3" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="339,5,554,32"/>
+<area shape="rect" id="node5" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="340,56,553,83"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="603,31,659,57"/>
 </map>
