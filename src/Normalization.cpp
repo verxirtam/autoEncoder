@@ -64,6 +64,7 @@ void Normalization::init(const DeviceMatrix& X)
 	mean = X_1N;
 	Sscal(&alpha, mean);
 	
+	
 	//分散共分散行列
 	varCovMatrix = DeviceMatrix(D,D);
 	//varCovMatrix = 1.0f * X * X^T;
@@ -92,6 +93,7 @@ void Normalization::init(const DeviceMatrix& X)
 	DeviceMatrix E;
 	DeviceVector W;
 	DnSsyevd(varCovMatrix, W , E);
+	
 	
 	//W = W^(-1/2)
 	invSqrtByElement(W);

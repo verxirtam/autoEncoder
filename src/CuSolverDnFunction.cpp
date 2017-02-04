@@ -106,6 +106,18 @@ void DnSsyevd
 		std::stringstream msg;
 		msg << "error at DnSsyevd() : ";
 		msg << "info_gpu = " << info_gpu;
+		msg << ", ";
+		msg << "A = {";
+		for(auto&& x : A.get()){msg << x << ", ";}
+		msg << "}";
+		msg << ", ";
+		msg << "V = {";
+		for(auto&& x : V.get()){msg << x << ", ";}
+		msg << "}";
+		msg << ", ";
+		msg << "W = {";
+		for(auto&& x : W.get()){msg << x << ", ";}
+		msg << "}";
 		//デバイスメモリの開放
 		CUDA_CALL(cudaFree(devinfo));
 		throw CuSolverDnException(msg.str());

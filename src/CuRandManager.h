@@ -20,6 +20,8 @@
 #include <sstream>
 #include <vector>
 
+#include <ctime>
+
 #include <curand.h>
 
 #include "CuRandException.h"
@@ -51,7 +53,11 @@ private:
 	CuRandManager():
 		generator()
 	{
+		//擬似乱数generatorの生成
 		CURAND_CALL(curandCreateGenerator(&generator, CURAND_RNG_PSEUDO_MT19937));
+		//seedの設定
+		//現在時刻を元にseedを設定
+		CURAND_CALL(curandSetPseudoRandomGeneratorSeed(generator, static_cast<unsigned long long>(std::time(nullptr))));
 	}
 	~CuRandManager()
 	{

@@ -1749,8 +1749,8 @@ INSTANTIATE_TEST_CASE_P
 		NormalizationGeneralTest,
 		::testing::Combine
 			(
-				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 5, 10}),
-				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 5, 10})
+				::testing::ValuesIn(std::vector<unsigned int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}),
+				::testing::ValuesIn(std::vector<unsigned int>{100, 1000})
 			)
 	);
 
@@ -1758,31 +1758,90 @@ TEST_P(NormalizationGeneralTest, test)
 {
 	unsigned int D = std::get<0>(GetParam());
 	unsigned int N = std::get<1>(GetParam());
-	std::cout << "(D, N) = (" << D << ", " << N << ")" << std::endl;
-	DeviceMatrix X(D,N);
+	//std::cout << "(D, N) = (" << D << ", " << N << ")" << std::endl;
+	DeviceMatrix X(D, N);
 	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), X.getAddress(), D * N));
+	if(D == 2)
+	{
+		std::vector<float> v;
+		for(unsigned int i = 0; i < N; i++)
+		{
+			float x = static_cast<float>(i) / static_cast<float>(N);
+			float y = std::sin(4.0f * x);
+			v.push_back(x);
+			v.push_back(y);
+		}
+		X = DeviceMatrix(D, N, v);
+	}
+	
+	std::vector<float> unit_matrixD;
+	for(unsigned int j = 0; j < D; j++)
+	{
+		for(unsigned int i = 0; i < D; i++)
+		{
+			float x = (i != j) ? 0.0f : 1.0f;
+			unit_matrixD.push_back(x);
+		}
+	}
+	
+	//printVector(X.get(), "X");
 	Normalization n;
+	
 	n.init(X);
-	printVector(n.getMean().get(),         "Mean"        );
-	printVector(n.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix");
+	//printVector(n.getMean().get(),               "Mean              ");
+	//printVector(n.getVarCovMatrix().get(),       "VarCovMatrix      ");
+	//printVector(n.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix");
+	
 	DeviceMatrix Y_pca = n.getPCAWhitening(X);
-	printVector(Y_pca.get(),               "Y_pca"        );
+	//printVector(Y_pca.get(),                     "Y_pca"             );
+	
 	Normalization n_pca;
 	n_pca.init(Y_pca);
-	printVector(n_pca.getMean().get(),     "Mean_pca"        );
-	printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
-	printVector(n_pca.getVarCovMatrix().get(), "VarCovMatrix_pca");
+	compareVector(n_pca.getVarCovMatrix().get(), unit_matrixD);
+	
+	//printVector(n_pca.getMean().get(),               "Mean_pca              ");
+	//printVector(n_pca.getVarCovMatrix().get(),       "VarCovMatrix_pca      ");
+	//printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
+	
+	DeviceMatrix Y_zca = n.getZCAWhitening(X);
+	//printVector(Y_zca.get(),                     "Y_zca"             );
+	
+	Normalization n_zca;
+	n_zca.init(Y_zca);
+	compareVector(n_zca.getVarCovMatrix().get(), unit_matrixD);
+	
+	//printVector(n_zca.getMean().get(),               "Mean_zca              ");
+	//printVector(n_zca.getVarCovMatrix().get(),       "VarCovMatrix_zca      ");
+	//printVector(n_zca.getZCAWhiteningMatrix().get(), "ZCAWhiteningMatrix_zca");
+	
+	if(false && (D == 2))
+	{
+		auto vX = X.get();
+		auto vY_pca = Y_pca.get();
+		auto vY_zca = Y_zca.get();
+		
+		for(unsigned int i = 0; i < N; i++)
+		{
+			unsigned int ix = i * 2;
+			unsigned int iy = i * 2 + 1;
+			std::cout << vX[ix]     << ", " << vX[iy]     << ", ";
+			std::cout << vY_pca[ix] << ", " << vY_pca[iy] << ", ";
+			std::cout << vY_zca[ix] << ", " << vY_zca[iy];
+			std::cout <<std::endl;
+		}
+	}
+
 }
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*Normalization*";
+	//::testing::GTEST_FLAG(filter)="*Normalization*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
