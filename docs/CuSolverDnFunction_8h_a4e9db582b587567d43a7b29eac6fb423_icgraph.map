@@ -1,6 +1,7 @@
 <map id="DnSsyevd" name="DnSsyevd">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,31,263,57"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,81,228,108"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="320,5,376,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="312,56,384,83"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,56,263,83"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,107,228,133"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a5f0315c5e96ef54080d4e5bf9944e3c3" title="AutoEncoder::init" alt="" coords="312,5,435,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="345,56,401,83"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="337,107,409,133"/>
 </map>

@@ -1,6 +1,7 @@
 <map id="src/BackpropagationException.h" name="src/BackpropagationException.h">
-<area shape="rect" id="node2" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="191,80,343,107"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="5,163,171,189"/>
-<area shape="rect" id="node4" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="196,155,336,197"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="361,163,472,189"/>
+<area shape="rect" id="node2" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="257,80,409,107"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8h.html" title="src/AutoEncoder.h" alt="" coords="5,163,135,189"/>
+<area shape="rect" id="node4" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="161,163,327,189"/>
+<area shape="rect" id="node5" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="352,155,492,197"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="517,163,628,189"/>
 </map>

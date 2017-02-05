@@ -1,11 +1,12 @@
 <map id="src/CuBlasFunction.h" name="src/CuBlasFunction.h">
-<area shape="rect" id="node2" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="71,80,223,107"/>
-<area shape="rect" id="node6" href="$CuBlasFunction_8cpp.html" title="src/CuBlasFunction.cpp" alt="" coords="247,80,409,107"/>
-<area shape="rect" id="node7" href="$learningTrackData_8cpp.html" title="src/learningTrackData.cpp" alt="" coords="434,80,608,107"/>
-<area shape="rect" id="node8" href="$Normalization_8h.html" title="src/Normalization.h" alt="" coords="633,80,767,107"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="5,163,171,189"/>
-<area shape="rect" id="node4" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="196,155,336,197"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="425,163,536,189"/>
-<area shape="rect" id="node9" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="593,163,741,189"/>
-<area shape="rect" id="node10" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="767,163,944,189"/>
+<area shape="rect" id="node2" href="$Normalization_8h.html" title="src/Normalization.h" alt="" coords="515,80,649,107"/>
+<area shape="rect" id="node7" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="339,80,491,107"/>
+<area shape="rect" id="node10" href="$CuBlasFunction_8cpp.html" title="src/CuBlasFunction.cpp" alt="" coords="675,80,837,107"/>
+<area shape="rect" id="node11" href="$learningTrackData_8cpp.html" title="src/learningTrackData.cpp" alt="" coords="862,80,1036,107"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8h.html" title="src/AutoEncoder.h" alt="" coords="361,163,491,189"/>
+<area shape="rect" id="node4" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="652,163,800,189"/>
+<area shape="rect" id="node5" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="826,163,1003,189"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="516,163,627,189"/>
+<area shape="rect" id="node8" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="5,163,171,189"/>
+<area shape="rect" id="node9" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="196,155,336,197"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pcawhiteningmatrix',['pcaWhiteningMatrix',['../classNormalization.html#a182780baefa5adde8c967a1ec81d0d61',1,'Normalization']]]
+  ['mean',['mean',['../classNormalization.html#a275bc50701083bfdef098c315066d981',1,'Normalization']]]
 ];

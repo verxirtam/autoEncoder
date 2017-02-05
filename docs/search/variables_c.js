@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['varcovmatrix',['varCovMatrix',['../classNormalization.html#adc75656f21ddf2d3a31ee9f1e65ed2a9',1,'Normalization']]]
+  ['stream',['stream',['../classCudaManager.html#a062336d3e1edf52ce3782eb250c5571a',1,'CudaManager']]]
 ];

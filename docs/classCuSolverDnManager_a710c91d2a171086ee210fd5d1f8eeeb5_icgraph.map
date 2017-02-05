@@ -1,9 +1,10 @@
 <map id="CuSolverDnManager::getInstance" name="CuSolverDnManager::getInstance">
-<area shape="rect" id="node2" href="$classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="206,74,357,115"/>
-<area shape="rect" id="node3" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="405,56,488,83"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="419,107,475,133"/>
-<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="537,31,663,57"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="572,81,628,108"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="720,5,776,32"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="712,56,784,83"/>
+<area shape="rect" id="node2" href="$classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="206,99,357,141"/>
+<area shape="rect" id="node3" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="405,81,488,108"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="419,132,475,159"/>
+<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="537,56,663,83"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="572,107,628,133"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a5f0315c5e96ef54080d4e5bf9944e3c3" title="AutoEncoder::init" alt="" coords="712,5,835,32"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="745,56,801,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="737,107,809,133"/>
 </map>

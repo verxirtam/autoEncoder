@@ -1,4 +1,5 @@
 <map id="Normalization::getPCAWhitening" name="Normalization::getPCAWhitening">
-<area shape="rect" id="node2" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="277,5,333,32"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="269,56,341,83"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="270,5,421,32"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="317,56,373,83"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="309,107,381,133"/>
 </map>

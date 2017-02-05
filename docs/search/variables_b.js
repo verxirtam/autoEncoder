@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['u',['u',['../classBackpropagation.html#a601f560e8dacc11aa48dd233c90e73ba',1,'Backpropagation']]],
-  ['unitcount',['unitCount',['../classBackpropagation.html#a1611691e824ccfd5ac52cc484b28693b',1,'Backpropagation']]]
+  ['rowcount',['rowCount',['../classDeviceMatrix.html#a6336e3424399d2485ffb6fd328955085',1,'DeviceMatrix']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['normalization',['Normalization',['../classNormalization.html',1,'']]],
-  ['normalizationgeneraltest',['NormalizationGeneralTest',['../classNormalizationGeneralTest.html',1,'']]],
-  ['normalizationtest',['NormalizationTest',['../classNormalizationTest.html',1,'']]]
+  ['devicematrix',['DeviceMatrix',['../classDeviceMatrix.html',1,'']]],
+  ['devicematrixtest',['DeviceMatrixTest',['../classDeviceMatrixTest.html',1,'']]],
+  ['devicevector',['DeviceVector',['../classDeviceVector.html',1,'']]],
+  ['devicevectortest',['DeviceVectorTest',['../classDeviceVectorTest.html',1,'']]]
 ];

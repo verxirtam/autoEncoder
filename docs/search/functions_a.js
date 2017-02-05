@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printvector',['printVector',['../unittest_8cpp.html#abd0744eaaed49b3213a3a5ec054ca035',1,'unittest.cpp']]]
+  ['normalization',['Normalization',['../classNormalization.html#a7998284e5456d915ebdb2520e4d74250',1,'Normalization']]]
 ];

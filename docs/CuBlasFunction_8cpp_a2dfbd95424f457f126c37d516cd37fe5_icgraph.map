@@ -1,5 +1,6 @@
 <map id="Ssyrk" name="Ssyrk">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="110,31,237,57"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="293,5,349,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="285,56,357,83"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="110,56,237,83"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a5f0315c5e96ef54080d4e5bf9944e3c3" title="AutoEncoder::init" alt="" coords="285,5,408,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="319,56,375,83"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="311,107,383,133"/>
 </map>

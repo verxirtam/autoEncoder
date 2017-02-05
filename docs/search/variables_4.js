@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generator',['generator',['../classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a',1,'CuRandManager']]]
+  ['epsilon',['epsilon',['../classBackpropagation.html#af259b432ddfba7efcc9e6f883afd1134',1,'Backpropagation']]]
 ];

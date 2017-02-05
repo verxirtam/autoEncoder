@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['learningtrackdata_2ecpp',['learningTrackData.cpp',['../learningTrackData_8cpp.html',1,'']]]
+  ['devicematrix_2eh',['DeviceMatrix.h',['../DeviceMatrix_8h.html',1,'']]],
+  ['devicevector_2eh',['DeviceVector.h',['../DeviceVector_8h.html',1,'']]]
 ];

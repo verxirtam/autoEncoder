@@ -1,17 +1,11 @@
 var searchData=
 [
-  ['cublasexception',['CuBlasException',['../classCuBlasException.html',1,'']]],
-  ['cublasfunctiontest',['CuBlasFunctionTest',['../classCuBlasFunctionTest.html',1,'']]],
-  ['cublasfunctiontest_5f1v',['CuBlasFunctionTest_1V',['../classCuBlasFunctionTest__1V.html',1,'']]],
-  ['cublasfunctiontest_5f2v',['CuBlasFunctionTest_2V',['../classCuBlasFunctionTest__2V.html',1,'']]],
-  ['cublasmanager',['CuBlasManager',['../classCuBlasManager.html',1,'']]],
-  ['cudaexception',['CudaException',['../classCudaException.html',1,'']]],
-  ['cudamanager',['CudaManager',['../classCudaManager.html',1,'']]],
-  ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
-  ['curandexception',['CuRandException',['../classCuRandException.html',1,'']]],
-  ['curandmanager',['CuRandManager',['../classCuRandManager.html',1,'']]],
-  ['curandmanagertest',['CuRandManagerTest',['../classCuRandManagerTest.html',1,'']]],
-  ['cusolverdnexception',['CuSolverDnException',['../classCuSolverDnException.html',1,'']]],
-  ['cusolverdnmanager',['CuSolverDnManager',['../classCuSolverDnManager.html',1,'']]],
-  ['cusolverdntest',['CuSolverDnTest',['../classCuSolverDnTest.html',1,'']]]
+  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'']]],
+  ['backpropagationalltest',['BackpropagationAllTest',['../classBackpropagationAllTest.html',1,'']]],
+  ['backpropagationexception',['BackpropagationException',['../classBackpropagationException.html',1,'']]],
+  ['backpropagationfunctiontest',['BackpropagationFunctionTest',['../classBackpropagationFunctionTest.html',1,'']]],
+  ['backpropagationnumericdifftest',['BackpropagationNumericDiffTest',['../classBackpropagationNumericDiffTest.html',1,'']]],
+  ['backpropagationobtaindedwtest',['BackpropagationObtainDEDWTest',['../classBackpropagationObtainDEDWTest.html',1,'']]],
+  ['backpropagationstreamtest',['BackpropagationStreamTest',['../classBackpropagationStreamTest.html',1,'']]],
+  ['backpropagationtest',['BackpropagationTest',['../classBackpropagationTest.html',1,'']]]
 ];
