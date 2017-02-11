@@ -933,7 +933,7 @@ INSTANTIATE_TEST_CASE_P
 	);
 //std::vector<float>同士の差が許容誤差未満であることを確認する
 //その差の絶対値の最大値を求める
-float compareVector(const std::vector<float>& x,const std::vector<float>& y)
+float compareVector(const std::vector<float>& x,const std::vector<float>& y, float error = 0.0625)
 {
 	if(x.size() != y.size())
 	{
@@ -946,7 +946,7 @@ float compareVector(const std::vector<float>& x,const std::vector<float>& y)
 		 [](float _x, float _y){return std::max(_x, _y);},
 		 [](float _x, float _y){return std::abs(_x - _y);}
 		);
-	EXPECT_NEAR(diff, 0.0f, 0.0625);
+	EXPECT_NEAR(diff, 0.0f, error);
 	return diff;
 }
 //CUDAの算出結果とhostでの算出結果と一致することを確認する
@@ -1834,6 +1834,72 @@ TEST_P(NormalizationGeneralTest, test)
 	}
 
 }
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+class BackpropagationMiniBatchTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+//ミニバッチに対応したBackpropagationのテスト
+TEST(BackpropagationMiniBatchTest, Simple)
+{
+	Backpropagation b(3);
+	unsigned int dimension = 3;
+	unsigned int layer_size = 2;
+	unsigned int minibatch_size = 100;
+	//値を入れ替えるインデックス1
+	unsigned int index_swap1 = 21;
+	//値を入れ替えるインデックス2
+	unsigned int index_swap2 = 65;
+	
+	//init()ではミニバッチのサイズを引数にとる
+	b.init({dimension, layer_size, dimension}, minibatch_size);
+	b.initRandom();
+	
+	//インプットをミニバッチとして定義
+	DeviceMatrix X(dimension, minibatch_size);
+	//一様分布に従う確率変数の値を格納
+	setRandomUniform(X, -1.0f, 1.0f);
+	
+	DeviceMatrix Y;
+	DeviceMatrix& D = X;
+	
+	//順伝播・逆伝播はDeviceMatrixを引数にとる
+	b.forward(X, Y);
+	
+	//ミニバッチの列を入れ替えても列同士は同じ値を返すかをテスト
+	auto x  = X.get();
+	auto x1 = x;
+	auto y  = Y.get();
+	auto y1 = y;
+	for(unsigned int j = 0; j < dimension; j++)
+	{
+		unsigned int s1 = index_swap1 * dimension + j;
+		unsigned int s2 = index_swap2 * dimension + j;
+		x1[s1] = x[s2];
+		x1[s2] = x[s1];
+		y1[s1] = y[s2];
+		y1[s2] = y[s1];
+	}
+	
+	DeviceMatrix X1(dimension, minibatch_size, x1);
+	DeviceMatrix Y1;
+	b.forward(X1, Y1);
+	auto y1_out = Y1.get();
+	
+	compareVector(y1, y1_out, 0.0f);
+	
+	//DeviceMatrixでback(), updateParameter() が実行できるかをテスト
+	b.back(D);
+	b.updateParameter();
+}
+
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
