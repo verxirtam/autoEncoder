@@ -3,7 +3,7 @@
 <area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="425,427,551,453"/>
 <area shape="rect" id="node21" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="896,52,1021,79"/>
 <area shape="rect" id="node27" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="126,561,341,588"/>
-<area shape="rect" id="node30" href="$unittest_8cpp.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="178,444,289,471"/>
+<area shape="rect" id="node30" href="$unittest_8cpp.html#aa6f4ac8731c7c3b7758f901ea3a64b98" title="compareVector" alt="" coords="178,444,289,471"/>
 <area shape="rect" id="node31" href="$classNormalization.html#a6785f76633cdd021bee3980d8fb0971a" title="Normalization::getVarCov\lMatrix" alt="" coords="147,495,319,537"/>
 <area shape="rect" id="node32" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="127,393,340,420"/>
 <area shape="rect" id="node3" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="390,5,586,32"/>

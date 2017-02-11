@@ -9,10 +9,10 @@
 <area shape="rect" id="node21" href="$CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="243,461,309,488"/>
 <area shape="rect" id="node22" href="$CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5" title="Ssymm" alt="" coords="243,512,309,539"/>
 <area shape="rect" id="node23" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="245,157,307,184"/>
-<area shape="rect" id="node25" href="$CuBlasFunction_8h.html#a443f286492eac14303adf334de45cb33" title="Sscal" alt="" coords="249,613,303,640"/>
-<area shape="rect" id="node26" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="243,411,309,437"/>
-<area shape="rect" id="node28" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="248,715,304,741"/>
-<area shape="rect" id="node29" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="240,765,312,792"/>
+<area shape="rect" id="node26" href="$CuBlasFunction_8h.html#a443f286492eac14303adf334de45cb33" title="Sscal" alt="" coords="249,613,303,640"/>
+<area shape="rect" id="node27" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="243,411,309,437"/>
+<area shape="rect" id="node29" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="248,715,304,741"/>
+<area shape="rect" id="node30" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="240,765,312,792"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="369,107,562,133"/>
 <area shape="rect" id="node9" href="$classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="360,56,571,83"/>
 <area shape="rect" id="node11" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="399,5,531,32"/>
@@ -26,5 +26,6 @@
 <area shape="rect" id="node17" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="625,360,839,387"/>
 <area shape="rect" id="node18" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="625,461,839,488"/>
 <area shape="rect" id="node24" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="619,157,845,184"/>
-<area shape="rect" id="node27" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="437,411,493,437"/>
+<area shape="rect" id="node25" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="941,208,997,235"/>
+<area shape="rect" id="node28" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="437,411,493,437"/>
 </map>
