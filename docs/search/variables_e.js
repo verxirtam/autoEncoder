@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['u',['u',['../classBackpropagation.html#a601f560e8dacc11aa48dd233c90e73ba',1,'Backpropagation']]],
-  ['unitcount',['unitCount',['../classBackpropagation.html#a1611691e824ccfd5ac52cc484b28693b',1,'Backpropagation']]]
+  ['time',['time',['../classTrackData.html#a916531d4e9ca68eaa17bbe01c3d559b0',1,'TrackData']]]
 ];

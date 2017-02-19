@@ -1,13 +1,12 @@
 <map id="CudaManager::getStreamCount" name="CudaManager::getStreamCount">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="261,150,472,191"/>
-<area shape="rect" id="node12" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="339,216,395,243"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="559,107,713,133"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="523,56,749,83"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="520,157,752,184"/>
-<area shape="rect" id="node10" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="608,208,664,235"/>
-<area shape="rect" id="node11" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="600,259,672,285"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="801,56,951,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="848,157,904,184"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="840,107,912,133"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="848,5,904,32"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ac0a9873c47fdc8ca67db9d7bf2f2d64d" title="Backpropagation::getSubStream\lCount" alt="" coords="261,99,472,141"/>
+<area shape="rect" id="node11" href="$unittest_8cpp.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="339,165,395,192"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="559,5,713,32"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="523,56,749,83"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="520,107,752,133"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="608,157,664,184"/>
+<area shape="rect" id="node10" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="600,208,672,235"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="801,5,951,32"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="840,56,912,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="848,107,904,133"/>
 </map>

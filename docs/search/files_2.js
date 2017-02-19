@@ -8,6 +8,8 @@ var searchData=
   ['cudaexception_2eh',['CudaException.h',['../CudaException_8h.html',1,'']]],
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
   ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
+  ['curandfunction_2ecpp',['CuRandFunction.cpp',['../CuRandFunction_8cpp.html',1,'']]],
+  ['curandfunction_2eh',['CuRandFunction.h',['../CuRandFunction_8h.html',1,'']]],
   ['curandmanager_2ecpp',['CuRandManager.cpp',['../CuRandManager_8cpp.html',1,'']]],
   ['curandmanager_2eh',['CuRandManager.h',['../CuRandManager_8h.html',1,'']]],
   ['cusolverdnexception_2eh',['CuSolverDnException.h',['../CuSolverDnException_8h.html',1,'']]],

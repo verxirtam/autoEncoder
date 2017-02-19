@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['main',['main',['../learningTrackData_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main(void):&#160;learningTrackData.cpp'],['../unittest_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;unittest.cpp']]],
-  ['mean',['mean',['../classNormalization.html#a275bc50701083bfdef098c315066d981',1,'Normalization']]]
+  ['latitude',['latitude',['../classTrackData.html#ab9d911b54cb2a2b54d591fec3f09946b',1,'TrackData']]],
+  ['layercount',['layerCount',['../classAutoEncoder.html#a836e927b7a2f482f97cb004df25d1554',1,'AutoEncoder::layerCount()'],['../classBackpropagation.html#abb7416301d29366a9fd155560ddab509',1,'Backpropagation::layerCount()']]],
+  ['learning',['learning',['../classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453',1,'AutoEncoder']]],
+  ['learningtrackdata_2ecpp',['learningTrackData.cpp',['../learningTrackData_8cpp.html',1,'']]],
+  ['longitude',['longitude',['../classTrackData.html#aceaf61535caf68b778145f8a9be4d184',1,'TrackData']]]
 ];

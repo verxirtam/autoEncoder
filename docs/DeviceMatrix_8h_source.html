@@ -258,9 +258,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceMatrix.html#aae610c8c73a240c25dc645dd0dfc11fc">columnCount</a>;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">//全成分が引数alphaの行列を取得</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b">  173</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> <a class="code" href="classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b">getAlphaMatrix</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column, <span class="keywordtype">float</span> alpha)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceMatrix.html#a678af62d896522088f280aaa70434486">DeviceMatrix</a>(row, column, std::vector&lt;float&gt;(row * column, alpha));</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">//全成分が0の行列を取得</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810">  178</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> <a class="code" href="classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810">get0Matrix</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceMatrix.html#a678af62d896522088f280aaa70434486">DeviceMatrix</a>(row, column, std::vector&lt;float&gt;(row * column, 0.0f));</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">//全成分が1の行列を取得</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d">  183</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> <a class="code" href="classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d">get1Matrix</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classDeviceMatrix.html#a678af62d896522088f280aaa70434486">DeviceMatrix</a>(row, column, std::vector&lt;float&gt;(row * column, 1.0f));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;};</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="ttc" id="classDeviceMatrix_html_a7d71fcf1eec66e69617c76903be4f55d"><div class="ttname"><a href="classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d">DeviceMatrix::get1Matrix</a></div><div class="ttdeci">static DeviceMatrix get1Matrix(unsigned int row, unsigned int column)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:183</div></div>
 <div class="ttc" id="CuBlasManager_8h_html_a7faf58a47ee95fc475079ec1d80e9d67"><div class="ttname"><a href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a></div><div class="ttdeci">#define CUBLAS_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:33</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a55575fa4e327c89f94895a62a420493e"><div class="ttname"><a href="classDeviceMatrix.html#a55575fa4e327c89f94895a62a420493e">DeviceMatrix::DeviceMatrix</a></div><div class="ttdeci">DeviceMatrix(int r, int c)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:100</div></div>
 <div class="ttc" id="classDeviceMatrix_html"><div class="ttname"><a href="classDeviceMatrix.html">DeviceMatrix</a></div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:25</div></div>
@@ -269,11 +286,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classDeviceMatrix_html_a4b4eef8deff3075c2bb055478a878a90"><div class="ttname"><a href="classDeviceMatrix.html#a4b4eef8deff3075c2bb055478a878a90">DeviceMatrix::operator=</a></div><div class="ttdeci">DeviceMatrix &amp; operator=(DeviceMatrix &amp;&amp;dm)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:83</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a5e108d0456e4db0f0a553d9b97f55e4f"><div class="ttname"><a href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f">DeviceMatrix::getColumnCount</a></div><div class="ttdeci">int getColumnCount() const </div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:168</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a8fd766a8bf78b21323eb2fd6b4c2cb57"><div class="ttname"><a href="classDeviceMatrix.html#a8fd766a8bf78b21323eb2fd6b4c2cb57">DeviceMatrix::set</a></div><div class="ttdeci">void set(const std::vector&lt; float &gt; &amp;host)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:137</div></div>
+<div class="ttc" id="classDeviceMatrix_html_a64e6f32bb00d08ea81acda6fd18d032b"><div class="ttname"><a href="classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b">DeviceMatrix::getAlphaMatrix</a></div><div class="ttdeci">static DeviceMatrix getAlphaMatrix(unsigned int row, unsigned int column, float alpha)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:173</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a8c2c08acf67066fbef96ff57c8a13f2f"><div class="ttname"><a href="classDeviceMatrix.html#a8c2c08acf67066fbef96ff57c8a13f2f">DeviceMatrix::set</a></div><div class="ttdeci">void set(const float *host)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:129</div></div>
 <div class="ttc" id="CuBlasManager_8h_html"><div class="ttname"><a href="CuBlasManager_8h.html">CuBlasManager.h</a></div></div>
 <div class="ttc" id="CudaManager_8h_html_a66bc11e96a4f269bc00a472efd4f86fb"><div class="ttname"><a href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a></div><div class="ttdeci">#define CUDA_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CudaManager.h:26</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a74f7b918bfefcadab80528a77e207a97"><div class="ttname"><a href="classDeviceMatrix.html#a74f7b918bfefcadab80528a77e207a97">DeviceMatrix::~DeviceMatrix</a></div><div class="ttdeci">~DeviceMatrix()</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:125</div></div>
 <div class="ttc" id="classDeviceMatrix_html_ae974aecf5cef1b6677d3f7ef3309fcaa"><div class="ttname"><a href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa">DeviceMatrix::getRowCount</a></div><div class="ttdeci">int getRowCount() const </div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:164</div></div>
+<div class="ttc" id="classDeviceMatrix_html_a87a42a15abbcb767ec76ed5932d5e810"><div class="ttname"><a href="classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810">DeviceMatrix::get0Matrix</a></div><div class="ttdeci">static DeviceMatrix get0Matrix(unsigned int row, unsigned int column)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:178</div></div>
 <div class="ttc" id="classDeviceMatrix_html_ad58c044ed53f43db2657352f548ab1f1"><div class="ttname"><a href="classDeviceMatrix.html#ad58c044ed53f43db2657352f548ab1f1">DeviceMatrix::DeviceMatrix</a></div><div class="ttdeci">DeviceMatrix(DeviceMatrix &amp;&amp;dm)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:71</div></div>
 <div class="ttc" id="classDeviceMatrix_html_a38f74b238bab091fb94e78d75f4c737d"><div class="ttname"><a href="classDeviceMatrix.html#a38f74b238bab091fb94e78d75f4c737d">DeviceMatrix::DeviceMatrix</a></div><div class="ttdeci">DeviceMatrix(const DeviceMatrix &amp;dm)</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:33</div></div>
 <div class="ttc" id="classDeviceMatrix_html_aae610c8c73a240c25dc645dd0dfc11fc"><div class="ttname"><a href="classDeviceMatrix.html#aae610c8c73a240c25dc645dd0dfc11fc">DeviceMatrix::columnCount</a></div><div class="ttdeci">unsigned int columnCount</div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:29</div></div>
@@ -284,7 +303,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 11 2017 23:25:07 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 20 2017 02:41:28 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

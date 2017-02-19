@@ -1,0 +1,17 @@
+<map id="DeviceVector::getAlphaVector" name="DeviceVector::getAlphaVector">
+<area shape="rect" id="node2" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="273,56,407,83"/>
+<area shape="rect" id="node4" href="$classDeviceVector.html#a074da01d2c5080cf58fe55f334c1eb3a" title="DeviceVector::get0Vector" alt="" coords="254,107,426,133"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="254,157,426,184"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="540,56,596,83"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="496,107,640,133"/>
+<area shape="rect" id="node10" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="475,208,661,235"/>
+<area shape="rect" id="node16" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="505,157,631,184"/>
+<area shape="rect" id="node7" href="$classAutoEncoder.html#a5f0315c5e96ef54080d4e5bf9944e3c3" title="AutoEncoder::init" alt="" coords="756,107,879,133"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="781,56,853,83"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="789,5,845,32"/>
+<area shape="rect" id="node11" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="710,309,925,336"/>
+<area shape="rect" id="node15" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="711,208,924,235"/>
+<area shape="rect" id="node12" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="974,309,1125,336"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1021,259,1077,285"/>
+<area shape="rect" id="node14" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1013,208,1085,235"/>
+</map>

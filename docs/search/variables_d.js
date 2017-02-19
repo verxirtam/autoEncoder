@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['time',['time',['../classTrackData.html#a916531d4e9ca68eaa17bbe01c3d559b0',1,'TrackData']]]
+  ['stream',['stream',['../classCudaManager.html#a062336d3e1edf52ce3782eb250c5571a',1,'CudaManager']]]
 ];

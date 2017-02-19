@@ -1,9 +1,6 @@
 <map id="Backpropagation::getMainStream" name="Backpropagation::getMainStream">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="227,5,445,32"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="493,56,648,83"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="239,107,433,133"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="308,157,364,184"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="697,5,847,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="744,56,800,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="736,107,808,133"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ad4549cb3adb28420cff01cb124368596" title="Backpropagation::obtainDeltaLast" alt="" coords="227,5,445,32"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="493,56,648,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="239,107,433,133"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="308,157,364,184"/>
 </map>

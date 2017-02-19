@@ -1,0 +1,10 @@
+<map id="Backpropagation::obtainDeltaLast" name="Backpropagation::obtainDeltaLast">
+<area shape="rect" id="node2" href="$CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="329,77,388,104"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655" title="Backpropagation::getMain\lStream" alt="" coords="272,150,445,191"/>
+<area shape="rect" id="node3" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="493,5,683,32"/>
+<area shape="rect" id="node4" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="497,56,679,83"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="501,107,675,133"/>
+<area shape="rect" id="node5" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="731,56,922,83"/>
+<area shape="rect" id="node8" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="499,157,677,184"/>
+<area shape="rect" id="node9" href="$classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98" title="CudaManager::getStream" alt="" coords="503,208,673,235"/>
+</map>

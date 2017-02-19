@@ -3,11 +3,12 @@
 <area shape="rect" id="node3" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="732,5,919,32"/>
 <area shape="rect" id="node4" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="723,56,928,83"/>
 <area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="502,233,674,260"/>
-<area shape="rect" id="node7" href="$CuBlasFunction_8cpp.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="563,157,613,184"/>
-<area shape="rect" id="node12" href="$CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="555,107,621,133"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="731,259,919,285"/>
-<area shape="rect" id="node8" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="734,107,917,133"/>
-<area shape="rect" id="node10" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="738,208,913,235"/>
-<area shape="rect" id="node11" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="739,157,912,184"/>
-<area shape="rect" id="node9" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="977,107,1167,133"/>
+<area shape="rect" id="node8" href="$CuBlasFunction_8cpp.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="563,157,613,184"/>
+<area shape="rect" id="node13" href="$CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="555,107,621,133"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="726,259,925,285"/>
+<area shape="rect" id="node7" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="978,259,1166,285"/>
+<area shape="rect" id="node9" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="734,107,917,133"/>
+<area shape="rect" id="node11" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="738,208,913,235"/>
+<area shape="rect" id="node12" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="739,157,912,184"/>
+<area shape="rect" id="node10" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="977,107,1167,133"/>
 </map>

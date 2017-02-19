@@ -1,7 +1,4 @@
 <map id="Backpropagation::obtainDEDW" name="Backpropagation::obtainDEDW">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="259,56,413,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="300,107,372,133"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="462,5,613,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="509,56,565,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="501,107,573,133"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="259,5,413,32"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="300,56,372,83"/>
 </map>

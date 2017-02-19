@@ -1,6 +1,3 @@
 <map id="Backpropagation::obtainZFromU" name="Backpropagation::obtainZFromU">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8" title="Backpropagation::forward" alt="" coords="264,56,435,83"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="483,5,634,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="531,56,587,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="523,107,595,133"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="264,5,435,32"/>
 </map>

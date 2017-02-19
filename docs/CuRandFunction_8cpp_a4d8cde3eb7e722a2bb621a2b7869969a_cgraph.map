@@ -1,0 +1,14 @@
+<map id="setRandomUniform" name="setRandomUniform">
+<area shape="rect" id="node2" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="199,5,385,32"/>
+<area shape="rect" id="node3" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="189,56,395,83"/>
+<area shape="rect" id="node4" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="191,107,393,133"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="205,157,379,184"/>
+<area shape="rect" id="node7" href="$classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b" title="DeviceMatrix::getAlphaMatrix" alt="" coords="195,208,389,235"/>
+<area shape="rect" id="node9" href="$CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="263,284,321,311"/>
+<area shape="rect" id="node5" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="443,107,639,133"/>
+<area shape="rect" id="node8" href="$classDeviceMatrix.html#a678af62d896522088f280aaa70434486" title="DeviceMatrix::DeviceMatrix" alt="" coords="449,195,633,221"/>
+<area shape="rect" id="node10" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="447,245,636,272"/>
+<area shape="rect" id="node11" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="450,296,633,323"/>
+<area shape="rect" id="node13" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="454,347,629,373"/>
+<area shape="rect" id="node12" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="689,296,879,323"/>
+</map>

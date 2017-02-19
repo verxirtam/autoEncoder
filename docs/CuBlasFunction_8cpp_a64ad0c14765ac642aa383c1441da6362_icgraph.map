@@ -1,9 +1,6 @@
 <map id="Saxpy" name="Saxpy">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a01a673820db95e496a9b45323c170dc2" title="Backpropagation::obtainDeltaLast" alt="" coords="112,56,331,83"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="379,107,605,133"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="415,56,569,83"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="654,56,805,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="701,5,757,32"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="693,107,765,133"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="701,157,757,184"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#ad4549cb3adb28420cff01cb124368596" title="Backpropagation::obtainDeltaLast" alt="" coords="112,5,331,32"/>
+<area shape="rect" id="node4" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="154,56,289,83"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="379,5,533,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="428,56,484,83"/>
 </map>
