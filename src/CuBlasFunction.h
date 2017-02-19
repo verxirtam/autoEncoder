@@ -29,6 +29,14 @@ void Saxpy
 		DeviceVector& y
 	);
 
+//Y = alpha * X + Y;
+void Saxpy
+	(
+		const float* const alpha,
+		const DeviceMatrix& X,
+		DeviceMatrix& Y
+	);
+
 //y = alpha * op(A) * x + beta * y;
 void Sgemv
 	(

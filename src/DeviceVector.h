@@ -181,10 +181,20 @@ public:
 	{
 		return dimension;
 	}
+	//全成分が引数alphaのベクトルを取得
+	static DeviceVector getAlphaVector(unsigned int dimension, float alpha)
+	{
+		return DeviceVector(std::vector<float>(dimension, alpha));
+	}
+	//全成分が0のベクトルを取得
+	static DeviceVector get0Vector(unsigned int dimension)
+	{
+		return getAlphaVector(dimension, 0.0f);
+	}
 	//全成分が1のベクトルを取得
 	static DeviceVector get1Vector(unsigned int dimension)
 	{
-		return DeviceVector(std::vector<float>(dimension, 1.0f));
+		return getAlphaVector(dimension, 1.0f);
 	}
 };
 

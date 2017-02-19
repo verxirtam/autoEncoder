@@ -20,20 +20,19 @@
 
 //初期化
 //下記を実行する
-//delta[layer_count - 1] = u[layer_count - 1] - dd;
+//delta[layer_count - 1] = u[layer_count - 1] - D;
 //下記の2式に分けて実行する
 //delta[layerCount -1] = u[layer_count - 1];
-//delta[layer_count - 1] = (-1.0f) * dd + delta[layerCount -1];
-void Backpropagation::obtainDeltaLast(const std::vector<float>& d)
+//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];
+void Backpropagation::obtainDeltaLast(const DeviceMatrix& D)
 {
-	DeviceVector dd(d);
 	
 	//delta[layerCount -1] = u[layer_count - 1];
 	delta[layerCount -1] = u[layerCount - 1];
 	
-	//delta[layer_count - 1] = (-1.0f) * dd + delta[layerCount -1];
+	//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];
 	float alpha = -1.0f;
-	Saxpy(&alpha, dd, delta[layerCount -1]);
+	Saxpy(&alpha, D, delta[layerCount -1]);
 	
 	//ストリーム完了待ち
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
@@ -50,7 +49,7 @@ void Backpropagation::obtainDelta(unsigned int l)
 	//WTdelta[l +1] = 1.0f * (W[l + 1])^T * delta[l+1] + 0.0f * WTdelta[l +1];
 	float alpha = 1.0f;
 	float beta  = 0.0f;
-	Sgemv(&alpha, CUBLAS_OP_T, weight[l + 1], delta[l + 1], &beta, WTdelta[l + 1]);
+	Sgemm(&alpha, CUBLAS_OP_T, weight[l + 1], CUBLAS_OP_N, delta[l + 1], &beta, WTdelta[l + 1]);
 	
 	//ストリーム完了待ち
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
@@ -62,7 +61,7 @@ void Backpropagation::obtainDelta(unsigned int l)
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
-void Backpropagation::init(const std::vector<unsigned int>& unit_count)
+void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
 {
 	//NULL Streamを使用する
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
@@ -72,13 +71,21 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 		throw BackpropagationException("error at Backpropagation::init() : layerCount != unit_count.size().");
 	}
 	unitCount = unit_count;
-
+	
+	if(minibatch_size == 0)
+	{
+		throw BackpropagationException("error at Backpropagation::init() : minibatch_size == 0.");
+	}
+	miniBatchSize = minibatch_size;
+	
 	u.clear();
 	z.clear();
 	weight.clear();
 	bias.clear();
 	dEdW.clear();
 	dEdb.clear();
+	WTdelta.clear();
+	delta.clear();
 
 	for(unsigned int l = 0; l < layerCount; l++)
 	{
@@ -89,27 +96,31 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count)
 			throw BackpropagationException(msg.str());
 		}
 		
-		z.push_back(DeviceVector(unitCount[l]));
+		z.push_back(DeviceMatrix(unitCount[l], miniBatchSize));
 		if(l == 0)
 		{
 			//インデックスl = 0は使用しないのでダミーの値を格納する。
-			u.push_back(      DeviceVector{0.0f}      );
-			weight.push_back( DeviceMatrix(1,1,{0.0f}));
-			bias.push_back(   DeviceVector{0.0f}      );
-			dEdW.push_back(   DeviceMatrix(1,1,{0.0f}));
-			dEdb.push_back(   DeviceVector{0.0f}      );
-			WTdelta.push_back(DeviceVector{0.0f}      );
+			u.push_back(      DeviceMatrix(1, 1, {0.0f}));
+			weight.push_back( DeviceMatrix(1, 1, {0.0f}));
+			bias.push_back(   DeviceVector{0.0f}        );
+			dEdW.push_back(   DeviceMatrix(1, 1, {0.0f}));
+			dEdb.push_back(   DeviceVector{0.0f}        );
+			WTdelta.push_back(DeviceMatrix(1, 1, {0.0f}));
+			delta.push_back(  DeviceMatrix(1, 1, {0.0f}));
 		}
 		else
 		{
-			u.push_back(     DeviceVector(unitCount[l]));
-			weight.push_back(DeviceMatrix(unitCount[l],unitCount[l-1]));
-			bias.push_back(  DeviceVector(unitCount[l]));
-			dEdW.push_back(  DeviceMatrix(unitCount[l],unitCount[l-1]));
-			dEdb.push_back(  DeviceVector(unitCount[l]));
-			WTdelta.push_back(DeviceVector(unitCount[l-1]));
+			u.push_back(      DeviceMatrix(unitCount[l], miniBatchSize));
+			weight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
+			bias.push_back(   DeviceVector(unitCount[l]));
+			dEdW.push_back(   DeviceMatrix(unitCount[l],unitCount[l-1]));
+			dEdb.push_back(   DeviceVector(unitCount[l]));
+			WTdelta.push_back(DeviceMatrix(unitCount[l-1], miniBatchSize));
+			delta.push_back(  DeviceMatrix(unitCount[l], miniBatchSize));
 		}
 	}
+	
+	_1B = DeviceVector::get1Vector(miniBatchSize);
 }
 
 void Backpropagation::initRandom(void)
@@ -159,11 +170,18 @@ void Backpropagation::initRandom(void)
 
 void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)
 {
+	DeviceMatrix X(x.size(), 1, x);
+	DeviceMatrix Y;
+	forward(X, Y);
+	y = Y.get();
+}
+void Backpropagation::forward(const DeviceMatrix& X, DeviceMatrix& Y)
+{
 	//使用するStreamをMainStreamに設定
 	//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
-	z[0].set(x);
+	z[0] = X;
 	//ストリーム完了待ち
 	//CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 	for(unsigned int l = 0; l < layerCount - 1; l++)
@@ -178,19 +196,24 @@ void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y
 		//CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 	}
 	//y = z[L-1]を設定
-	y = z[layerCount - 1].get();
+	Y = z[layerCount - 1];
 	//ストリーム完了待ち
 	//CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
 void Backpropagation::back(const std::vector<float>& d)
 {
+	DeviceMatrix D(d.size(), 1, d);
+	back(D);
+}
+void Backpropagation::back(const DeviceMatrix& D)
+{
 	//使用するStreamをMainStreamに設定
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
 	
 	//初期化
 	//delta[layer_count - 1] = u[layer_count - 1] - dd;
-	obtainDeltaLast(d);
+	obtainDeltaLast(D);
 	
 	//lについて降順に逐次実行("**"は要素ごとの積(cudaで実行))
 	//delta[l] = f'(u[l]) ** ((W[l + 1])^T * delta[l+1]);
@@ -234,19 +257,37 @@ void Backpropagation::updateParameter()
 		unsigned int si = (2 * l) % substream_count;
 		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
+		//W[l] = W[l] - epsilon * dEdW[l]
+		//     = W[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T
+		//     = W[l] - (epsilon / B) * delta[l] * z[l - 1]^T
+		//     = - (epsilon / B) * delta[l] * z[l - 1]^T + 1.0f * W[l]
+		float alpha = - epsilon / miniBatchSize;
+		float beta = 1.0f;
+		Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, weight[l]);
+		
 		//W[l] = W[l] - e * dEdW[l];
 		//<=> W[l] = - e * dEdW[l] + 1.0f *  W[l];
-		float alpha = - epsilon;
-		float beta = 1.0f;
-		Sgeam(&alpha, CUBLAS_OP_N, dEdW[l], &beta, CUBLAS_OP_N, weight[l], weight[l]);
+		//TODO delete after debug
+		//alpha = - epsilon;
+		//beta = 1.0f;
+		//Sgeam(&alpha, CUBLAS_OP_N, dEdW[l], &beta, CUBLAS_OP_N, weight[l], weight[l]);
 		
 		//使用するStreamを設定
 		si = (2 * l + 1) % substream_count;
 		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
+		//b[l] = b[l] - epsilon * dEdb[l]
+		//     = b[l] - epsilon * ((1.0f / B) * delta[l] * _1B)
+		//     = b[l] - (epsilon / B) * delta[l] * _1B
+		//     = - (epsilon / B) * delta[l] * _1B + 1.0f * b[l]
+		alpha = - epsilon / miniBatchSize;
+		beta = 1.0f;
+		Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, bias[l]);
+		
 		//b[l] = b[l] - e * dEdb[l];
 		//<=> b[l] = - e * dEdb[l] + b[l];
-		Saxpy(&alpha, dEdb[l], bias[l]);
+		//TODO delete after debug
+		//Saxpy(&alpha, dEdb[l], bias[l]);
 	}
 	
 	//完了待ち

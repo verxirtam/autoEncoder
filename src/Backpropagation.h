@@ -33,16 +33,18 @@ class Backpropagation
 private:
 	
 	const unsigned int layerCount;
+	unsigned int miniBatchSize;
 	std::vector<unsigned int> unitCount;
 	float epsilon;
-	std::vector<DeviceVector> u;
-	std::vector<DeviceVector> z;
+	std::vector<DeviceMatrix> u;
+	std::vector<DeviceMatrix> z;
 	std::vector<DeviceMatrix> weight;
 	std::vector<DeviceVector> bias;
 	std::vector<DeviceMatrix> dEdW;
 	std::vector<DeviceVector> dEdb;
-	std::vector<DeviceVector>& delta;
-	std::vector<DeviceVector> WTdelta;
+	std::vector<DeviceMatrix> delta;
+	std::vector<DeviceMatrix> WTdelta;
+	DeviceVector _1B;
 	//活性化関数
 	float f(const float& x)
 	{
@@ -56,17 +58,31 @@ private:
 	}
 public:
 	//下記を求める
-	//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1];
+	//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1] * _1B ^ T;
 	void obtainUFromZ(unsigned int l)
 	{
+		//u[l + 1] = weight[l + 1] * z[l];
+		//         = 1.0f * weight[l + 1] * z[l] + 0.0f * u[l + 1];
+		float alpha = 1.0f;
+		float beta  = 0.0f;
+		Sgemm(&alpha, CUBLAS_OP_N, weight[l + 1], CUBLAS_OP_N, z[l], &beta, u[l + 1]);
+		
+		//u[l + 1] = 1.0f * bias[l + 1] * _1B ^ T + u[l + 1];
+		//<=>
+		//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1] * _1B ^ T;
+		alpha = 1.0;
+		Sger(&alpha, bias[l +1], _1B, u[l + 1]);
+		
+		/////////////////////////////////////////////////////////
+		
 		//Sgemv()を使用するため事前に下記を算出する
-		u[l + 1] = bias[l + 1];
+		//u[l + 1] = bias[l + 1];
 		
 		//Sgemv()を用いて下記を求める
 		//u[l + 1] = weight[l + 1] * z[l] + u[l + 1];
-		float alpha = 1.0f;
-		float beta = 1.0f;
-		Sgemv(&alpha, CUBLAS_OP_N, weight[l + 1], z[l], &beta, u[l + 1]);
+		//float alpha = 1.0f;
+		//float beta = 1.0f;
+		//Sgemv(&alpha, CUBLAS_OP_N, weight[l + 1], z[l], &beta, u[l + 1]);
 	}
 	//下記を求める
 	//z[l + 1] = f(u[l + 1]);
@@ -74,7 +90,7 @@ public:
 	
 	//逆伝播の初期化
 	//delta[layer_count - 1] = u[layer_count - 1] - dd;
-	void obtainDeltaLast(const std::vector<float>& d);
+	void obtainDeltaLast(const DeviceMatrix& d);
 	//逆伝播でのdeltaの算出
 	//lについて降順に逐次実行("**"は要素ごとの積(cudaで実行))
 	//delta[l] = f'(u[l]) ** ((W[l + 1])^T * delta[l+1]);
@@ -91,6 +107,7 @@ public:
 	//コンストラクタ
 	Backpropagation(unsigned int layer_count):
 		layerCount(layer_count),
+		miniBatchSize(1),
 		unitCount(),
 		epsilon(0.0625f * 0.0625f),
 		u(),
@@ -99,19 +116,22 @@ public:
 		bias(),
 		dEdW(),
 		dEdb(),
-		delta(dEdb),
-		WTdelta()
+		delta(),
+		WTdelta(),
+		_1B()
 	{
 		this->setSubStreamCount(4);
 	}
 	//初期化
-	void init(const std::vector<unsigned int>& unit_count);
+	void init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size = 1);
 	//weightをランダムに初期化する
 	void initRandom(void);
 	//順伝播
 	void forward(const std::vector<float>& x, std::vector<float>& y);
+	void forward(const DeviceMatrix& X, DeviceMatrix& Y);
 	//逆伝播
 	void back(const std::vector<float>& d);
+	void back(const DeviceMatrix& D);
 	
 	void updateParameter();
 
@@ -143,7 +163,12 @@ public:
 	}
 	
 	
-	const std::vector<DeviceVector>& getU() const
+	float getEpsilon() const
+	{
+		return this->epsilon;
+	}
+	
+	const std::vector<DeviceMatrix>& getU() const
 	{
 		return this->u;
 	}
@@ -167,7 +192,7 @@ public:
 		}
 		return hu;
 	}
-	const std::vector<DeviceVector>& getZ() const
+	const std::vector<DeviceMatrix>& getZ() const
 	{
 		return this->z;
 	}
@@ -223,9 +248,9 @@ public:
 	{
 		return this->dEdb;
 	}
-	const std::vector<DeviceVector>& getDelta() const
+	const std::vector<DeviceMatrix>& getDelta() const
 	{
-		return this->dEdb;
+		return this->delta;
 	}
 	std::vector<std::vector<float> > getDeltaAsVector() const
 	{
@@ -240,7 +265,7 @@ public:
 	{
 		return getDeltaAsVector();
 	}
-	const std::vector<DeviceVector>& getWTDelta() const
+	const std::vector<DeviceMatrix>& getWTDelta() const
 	{
 		return this->WTdelta;
 	}

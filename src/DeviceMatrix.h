@@ -169,6 +169,22 @@ public:
 	{
 		return columnCount;
 	}
+	//全成分が引数alphaの行列を取得
+	static DeviceMatrix getAlphaMatrix(unsigned int row, unsigned int column, float alpha)
+	{
+		return DeviceMatrix(row, column, std::vector<float>(row * column, alpha));
+	}
+	//全成分が0の行列を取得
+	static DeviceMatrix get0Matrix(unsigned int row, unsigned int column)
+	{
+		return DeviceMatrix(row, column, std::vector<float>(row * column, 0.0f));
+	}
+	//全成分が1の行列を取得
+	static DeviceMatrix get1Matrix(unsigned int row, unsigned int column)
+	{
+		return DeviceMatrix(row, column, std::vector<float>(row * column, 1.0f));
+	}
+	
 };
 
 

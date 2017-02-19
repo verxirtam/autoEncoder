@@ -33,6 +33,8 @@
 
 #include "Backpropagation.h"
 
+#include "CuRandFunction.h"
+
 #include "CuSolverDnManager.h"
 #include "CuSolverDnFunction.h"
 
@@ -893,7 +895,7 @@ TEST_P(BackpropagationAllTest, All)
 	
 	for(int n = 0; n < nmax; n++)
 	{
-		
+		std::cout << "n =  " << n << std::endl;
 		std::vector<float> x(dimension, r[n]);
 		std::vector<float> y;
 		std::vector<float> d = x;
@@ -1865,7 +1867,7 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	//インプットをミニバッチとして定義
 	DeviceMatrix X(dimension, minibatch_size);
 	//一様分布に従う確率変数の値を格納
-	setRandomUniform(X, -1.0f, 1.0f);
+	setRandomUniform(-1.0f, 1.0f, X);
 	
 	DeviceMatrix Y;
 	DeviceMatrix& D = X;
@@ -1894,10 +1896,33 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	auto y1_out = Y1.get();
 	
 	compareVector(y1, y1_out, 0.0f);
+	printVector(y1, "y1");
+	printVector(y1_out, "y1_out");
 	
 	//DeviceMatrixでback(), updateParameter() が実行できるかをテスト
 	b.back(D);
+	auto delta = b.getDelta()[1].get();
+	std::vector<float> bias_old = b.getBias()[1].get();
+	std::vector<float> bias     = b.getBias()[1].get();
+	for(unsigned int i = 0; i < layer_size; i++)
+	{
+		float delta_bias_i = 0.0f;
+		for(unsigned int j = 0; j < minibatch_size; j++)
+		{
+			delta_bias_i += delta[j * layer_size + i];
+		}
+		delta_bias_i /= static_cast<float>(minibatch_size);
+		delta_bias_i *= b.getEpsilon();
+		bias[i] -= delta_bias_i;
+	}
+	
 	b.updateParameter();
+	auto bias_out = b.getBias()[1].get();
+	compareVector(bias, bias_out);
+	printVector(delta,    "delta");
+	printVector(bias_old, "bias_old");
+	printVector(bias,     "bias");
+	printVector(bias_out, "bias_out");
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -1917,6 +1942,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);

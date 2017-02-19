@@ -93,7 +93,7 @@ void Backpropagation::obtainZFromU(unsigned int l)
 	static unsigned int thread_count = CudaManager::getDeviceProp().maxThreadsPerBlock;
 	
 	//生成するスレッド数全体
-	unsigned int thread_count_total = u[l + 1].getDimension();
+	unsigned int thread_count_total = u[l + 1].getRowCount() * u[l + 1].getColumnCount();
 	
 	//スレッド数thread_countで実行するブロック数
 	unsigned int block_count         = thread_count_total / thread_count;
@@ -137,7 +137,7 @@ void Backpropagation::obtainDeltaFromFdUWTDelta(unsigned int l)
 	static unsigned int thread_count = CudaManager::getDeviceProp().maxThreadsPerBlock;
 	
 	//生成するスレッド数全体
-	unsigned int thread_count_total = u[l].getDimension();
+	unsigned int thread_count_total = u[l].getRowCount() * u[l].getColumnCount();
 	
 	//スレッド数thread_countで実行するブロック数
 	unsigned int block_count         = thread_count_total / thread_count;

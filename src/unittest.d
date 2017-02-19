@@ -20,7 +20,7 @@ unittest.o: unittest.cpp DeviceVector.h CuBlasManager.h \
  /usr/local/cuda/include/vector_functions.hpp CudaException.h \
  CuBlasException.h DeviceMatrix.h Backpropagation.h CuBlasFunction.h \
  CuRandManager.h /usr/local/cuda/include/curand.h CuRandException.h \
- BackpropagationException.h CuSolverDnManager.h \
+ BackpropagationException.h CuRandFunction.h CuSolverDnManager.h \
  /usr/local/cuda/include/cusolverDn.h /usr/local/cuda/include/cublas_v2.h \
  /usr/local/cuda/include/cusolver_common.h CuSolverDnException.h \
  CuSolverDnFunction.h Normalization.h
