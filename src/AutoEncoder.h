@@ -37,25 +37,25 @@ public:
 	}
 	//normarize_input : 正規化するための入力(ランダムに抽出された複数データを想定)
 	//layer_size : 中間層のレイヤのサイズ
-	void init(const DeviceMatrix& normarize_input, unsigned int layer_size)
+	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)
 	{
 		//normarize_inputを元に正規化を行う
 		normalization.init(normarize_input);
 		//BPの初期化を行う
 		unsigned int n = normarize_input.getRowCount();
-		backpropagation.init({n, layer_size, n});
+		backpropagation.init({n, layer_size, n}, minibatch_size);
 	}
 	//X : ミニバッチ
 	DeviceMatrix learning(const DeviceMatrix& X)
 	{
 		//正規化されたミニバッチ
-		DeviceVector nX = normalization.getPCAWhitening(X);
+		DeviceMatrix nX = normalization.getPCAWhitening(X);
 		
 		DeviceMatrix Y;
 		backpropagation.forward(nX, Y);
 		backpropagation.back(nX);
 		backpropagation.updateParameter();
 		
-		return Y;
+		return normalization.getInversePCAWhitening(Y);
 	}
 };

@@ -40,6 +40,8 @@
 
 #include "Normalization.h"
 
+#include "AutoEncoder.h"
+
 //////////////////////////////////////////////////////////////////////
 // DeviceVectorTest
 //////////////////////////////////////////////////////////////////////
@@ -1924,6 +1926,23 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	printVector(bias,     "bias");
 	printVector(bias_out, "bias_out");
 }
+
+/////////////////////////////////////////////////////////////////////////////////
+class AutoEncoderTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+//ミニバッチに対応したBackpropagationのテスト
+TEST(AutoEncoderTest, Simple)
+{
+	AutoEncoder a;
+}
+
+
 
 //////////////////////////////////////////////////////////////////////
 // main()

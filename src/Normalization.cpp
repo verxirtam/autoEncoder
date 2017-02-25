@@ -23,7 +23,7 @@ DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, co
 {
 	unsigned int D = X.getRowCount();
 	unsigned int N = X.getColumnCount();
-	auto _1N = DeviceVector::get1Vector(N);
+	auto _1N = DeviceVector::get1Vector(N);//TODO いちいち1Vector作るのは無駄
 	//whiteningMatrix * (X - mean * _1N^T)
 	
 	DeviceMatrix Y = X;
