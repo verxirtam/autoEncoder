@@ -31,11 +31,18 @@ private:
 	DeviceMatrix varCovMatrix;
 	//PCA白色化変換行列
 	DeviceMatrix pcaWhiteningMatrix;
+	//PCA白色化変換行列の逆行列
+	DeviceMatrix inversePCAWhiteningMatrix;
 	//ZCA白色化変換行列
 	DeviceMatrix zcaWhiteningMatrix;
+	//ZCA白色化変換行列の逆行列
+	DeviceMatrix inverseZCAWhiteningMatrix;
 
 	//成分毎に(-1/2)乗を算出する
 	void invSqrtByElement(DeviceVector& W);
+	
+	//成分毎に(-1)乗を算出する
+	void invByElement(DeviceVector& W);
 	
 	//白色化を行う
 	DeviceMatrix getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const;
@@ -45,7 +52,9 @@ public:
 		mean(),
 		varCovMatrix(),
 		pcaWhiteningMatrix(),
-		zcaWhiteningMatrix()
+		inversePCAWhiteningMatrix(),
+		zcaWhiteningMatrix(),
+		inverseZCAWhiteningMatrix()
 	{
 		
 	}
@@ -71,6 +80,11 @@ public:
 	{
 		return getWhitening(pcaWhiteningMatrix, X);
 	}
+	//PCA白色化の逆変換を行う
+	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const
+	{
+		return getWhitening(inversePCAWhiteningMatrix, X);
+	}
 	//ZCA白色化の変換行列を取得する
 	const DeviceMatrix& getZCAWhiteningMatrix(void) const
 	{
@@ -80,6 +94,11 @@ public:
 	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const
 	{
 		return getWhitening(zcaWhiteningMatrix, X);
+	}
+	//ZCA白色化の逆変換を行う
+	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const
+	{
+		return getWhitening(inverseZCAWhiteningMatrix, X);
 	}
 };
 

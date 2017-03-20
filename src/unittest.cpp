@@ -1756,7 +1756,7 @@ INSTANTIATE_TEST_CASE_P
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1, 10, 100, 1000}),
-				::testing::ValuesIn(std::vector<unsigned int>{5000})
+				::testing::ValuesIn(std::vector<unsigned int>{10000})
 			)
 	);
 
@@ -1803,6 +1803,7 @@ TEST_P(NormalizationGeneralTest, test)
 	
 	Normalization n_pca;
 	n_pca.init(Y_pca);
+	std::cout << "T_pca" << std::endl;
 	compareVector(n_pca.getVarCovMatrix().get(), unit_matrixD);
 	
 	//printVector(n_pca.getMean().get(),               "Mean_pca              ");
@@ -1814,6 +1815,7 @@ TEST_P(NormalizationGeneralTest, test)
 	
 	Normalization n_zca;
 	n_zca.init(Y_zca);
+	std::cout << "T_zca" << std::endl;
 	compareVector(n_zca.getVarCovMatrix().get(), unit_matrixD);
 	
 	//printVector(n_zca.getMean().get(),               "Mean_zca              ");
