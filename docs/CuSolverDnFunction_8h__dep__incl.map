@@ -1,8 +1,8 @@
 <map id="src/CuSolverDnFunction.h" name="src/CuSolverDnFunction.h">
-<area shape="rect" id="node2" href="$Normalization_8h.html" title="src/Normalization.h" alt="" coords="355,80,489,107"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="536,155,647,181"/>
-<area shape="rect" id="node7" href="$CuSolverDnFunction_8cpp.html" title="src/CuSolverDnFunction.cpp" alt="" coords="598,80,788,107"/>
+<area shape="rect" id="node2" href="$Normalization_8h.html" title="src/Normalization.h" alt="" coords="218,80,352,107"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="117,229,228,256"/>
+<area shape="rect" id="node7" href="$CuSolverDnFunction_8cpp.html" title="src/CuSolverDnFunction.cpp" alt="" coords="638,80,828,107"/>
 <area shape="rect" id="node3" href="$AutoEncoder_8h.html" title="src/AutoEncoder.h" alt="" coords="5,155,135,181"/>
-<area shape="rect" id="node4" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="160,155,308,181"/>
-<area shape="rect" id="node5" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="334,155,511,181"/>
+<area shape="rect" id="node5" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="211,155,359,181"/>
+<area shape="rect" id="node6" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="385,155,561,181"/>
 </map>

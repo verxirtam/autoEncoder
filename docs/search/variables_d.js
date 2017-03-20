@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stream',['stream',['../classCudaManager.html#a062336d3e1edf52ce3782eb250c5571a',1,'CudaManager']]]
+  ['rowcount',['rowCount',['../classDeviceMatrix.html#a6336e3424399d2485ffb6fd328955085',1,'DeviceMatrix']]]
 ];

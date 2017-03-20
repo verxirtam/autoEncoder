@@ -25,6 +25,8 @@ var searchData=
   ['getgenerator',['getGenerator',['../classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8',1,'CuRandManager']]],
   ['gethandle',['getHandle',['../classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d',1,'CuBlasManager::getHandle()'],['../classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685',1,'CuSolverDnManager::getHandle()']]],
   ['getinstance',['getInstance',['../classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f',1,'CuBlasManager::getInstance()'],['../classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86',1,'CudaManager::getInstance()'],['../classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c',1,'CuRandManager::getInstance()'],['../classCuSolverDnManager.html#a710c91d2a171086ee210fd5d1f8eeeb5',1,'CuSolverDnManager::getInstance()']]],
+  ['getinversepcawhitening',['getInversePCAWhitening',['../classNormalization.html#af4bb37886a79a60bfa41272a7a6f578b',1,'Normalization']]],
+  ['getinversezcawhitening',['getInverseZCAWhitening',['../classNormalization.html#af1ea886fdf9a856ada3e9bf55dc91a9e',1,'Normalization']]],
   ['getmainstream',['getMainStream',['../classBackpropagation.html#a3709ad39a5c6e43115831e46056cd655',1,'Backpropagation']]],
   ['getmean',['getMean',['../classNormalization.html#a30294727819c10bee0b977df51e0fd38',1,'Normalization::getMean()'],['../learningTrackData_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'getMean():&#160;learningTrackData.cpp']]],
   ['getpcawhitening',['getPCAWhitening',['../classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec',1,'Normalization']]],

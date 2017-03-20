@@ -1,6 +1,6 @@
 <map id="src/Normalization.h" name="src/Normalization.h">
 <area shape="rect" id="node2" href="$AutoEncoder_8h.html" title="src/AutoEncoder.h" alt="" coords="5,80,135,107"/>
-<area shape="rect" id="node3" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="160,80,308,107"/>
-<area shape="rect" id="node4" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="334,80,511,107"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="536,80,647,107"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="65,155,176,181"/>
+<area shape="rect" id="node4" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="211,80,359,107"/>
+<area shape="rect" id="node5" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="385,80,561,107"/>
 </map>
