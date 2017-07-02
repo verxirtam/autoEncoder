@@ -1801,14 +1801,24 @@ TEST_P(NormalizationGeneralTest, test)
 	DeviceMatrix Y_pca = n.getPCAWhitening(X);
 	//printVector(Y_pca.get(),                     "Y_pca"             );
 	
+	float max_error = 0.0625;
+	
 	Normalization n_pca;
 	n_pca.init(Y_pca);
 	std::cout << "T_pca" << std::endl;
-	compareVector(n_pca.getVarCovMatrix().get(), unit_matrixD);
+	//TODO 下半分の要素の比較を行わない or 下半分に上半分と同一の値を設定する
+	float diff = compareVector(n_pca.getVarCovMatrix().get(), unit_matrixD, max_error);
 	
-	//printVector(n_pca.getMean().get(),               "Mean_pca              ");
-	//printVector(n_pca.getVarCovMatrix().get(),       "VarCovMatrix_pca      ");
-	//printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
+	if(diff >= max_error)
+	{
+		printVector(n.getMean().get(),                   "Mean                  ");
+		printVector(n.getVarCovMatrix().get(),           "VarCovMatrix          ");
+		printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix    ");
+		//printVector(Y_pca.get(),                       "Y_pca                 ");
+		printVector(n_pca.getMean().get(),               "Mean_pca              ");
+		printVector(n_pca.getVarCovMatrix().get(),       "VarCovMatrix_pca      ");
+		printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
+	}
 	
 	DeviceMatrix Y_zca = n.getZCAWhitening(X);
 	//printVector(Y_zca.get(),                     "Y_zca"             );
@@ -1816,11 +1826,19 @@ TEST_P(NormalizationGeneralTest, test)
 	Normalization n_zca;
 	n_zca.init(Y_zca);
 	std::cout << "T_zca" << std::endl;
-	compareVector(n_zca.getVarCovMatrix().get(), unit_matrixD);
+	//TODO 下半分の要素の比較を行わない or 下半分に上半分と同一の値を設定する
+	diff = compareVector(n_zca.getVarCovMatrix().get(), unit_matrixD);
 	
-	//printVector(n_zca.getMean().get(),               "Mean_zca              ");
-	//printVector(n_zca.getVarCovMatrix().get(),       "VarCovMatrix_zca      ");
-	//printVector(n_zca.getZCAWhiteningMatrix().get(), "ZCAWhiteningMatrix_zca");
+	if(diff >= max_error)
+	{
+		printVector(n.getMean().get(),                   "Mean                  ");
+		printVector(n.getVarCovMatrix().get(),           "VarCovMatrix          ");
+		printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix    ");
+		//printVector(Y_zca.get(),                       "Y_zca                 ");
+		printVector(n_zca.getMean().get(),               "Mean_zca              ");
+		printVector(n_zca.getVarCovMatrix().get(),       "VarCovMatrix_zca      ");
+		printVector(n_zca.getZCAWhiteningMatrix().get(), "ZCAWhiteningMatrix_zca");
+	}
 	
 	if(false && (D == 2))
 	{
@@ -1955,7 +1973,7 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	//::testing::GTEST_FLAG(filter)="*Normalization*";
+	::testing::GTEST_FLAG(filter)="*Normalization*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";
