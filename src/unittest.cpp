@@ -1806,8 +1806,20 @@ TEST_P(NormalizationGeneralTest, test)
 	Normalization n_pca;
 	n_pca.init(Y_pca);
 	std::cout << "T_pca" << std::endl;
-	//TODO 下半分の要素の比較を行わない or 下半分に上半分と同一の値を設定する
-	float diff = compareVector(n_pca.getVarCovMatrix().get(), unit_matrixD, max_error);
+	//TODO 下半分に上半分と同一の値を設定する
+	auto VarCovMatrix_pca = n_pca.getVarCovMatrix().get();
+	for(unsigned int j = 0; j < D; j++)
+	{
+		for(unsigned int i = 0; i < D; i++)
+		{
+			if(j < i)
+			{
+				VarCovMatrix_pca[i + j * D] = VarCovMatrix_pca[j + i * D];
+			}
+		}
+	}
+	
+	float diff = compareVector(VarCovMatrix_pca, unit_matrixD, max_error);
 	
 	if(diff >= max_error)
 	{
@@ -1816,7 +1828,7 @@ TEST_P(NormalizationGeneralTest, test)
 		printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix    ");
 		//printVector(Y_pca.get(),                       "Y_pca                 ");
 		printVector(n_pca.getMean().get(),               "Mean_pca              ");
-		printVector(n_pca.getVarCovMatrix().get(),       "VarCovMatrix_pca      ");
+		printVector(VarCovMatrix_pca,                    "VarCovMatrix_pca      ");
 		printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
 	}
 	
@@ -1826,8 +1838,19 @@ TEST_P(NormalizationGeneralTest, test)
 	Normalization n_zca;
 	n_zca.init(Y_zca);
 	std::cout << "T_zca" << std::endl;
-	//TODO 下半分の要素の比較を行わない or 下半分に上半分と同一の値を設定する
-	diff = compareVector(n_zca.getVarCovMatrix().get(), unit_matrixD);
+	//TODO 下半分に上半分と同一の値を設定する
+	auto VarCovMatrix_zca = n_zca.getVarCovMatrix().get();
+	for(unsigned int j = 0; j < D; j++)
+	{
+		for(unsigned int i = 0; i < D; i++)
+		{
+			if(j < i)
+			{
+				VarCovMatrix_zca[i + j * D] = VarCovMatrix_zca[j + i * D];
+			}
+		}
+	}
+	diff = compareVector(VarCovMatrix_zca, unit_matrixD);
 	
 	if(diff >= max_error)
 	{
@@ -1836,7 +1859,7 @@ TEST_P(NormalizationGeneralTest, test)
 		printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix    ");
 		//printVector(Y_zca.get(),                       "Y_zca                 ");
 		printVector(n_zca.getMean().get(),               "Mean_zca              ");
-		printVector(n_zca.getVarCovMatrix().get(),       "VarCovMatrix_zca      ");
+		printVector(VarCovMatrix_zca,                    "VarCovMatrix_zca      ");
 		printVector(n_zca.getZCAWhiteningMatrix().get(), "ZCAWhiteningMatrix_zca");
 	}
 	
