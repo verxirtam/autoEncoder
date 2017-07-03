@@ -1,7 +1,8 @@
 <map id="Sdgmm" name="Sdgmm">
 <area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="121,56,247,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="156,107,212,133"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="156,107,212,133"/>
 <area shape="rect" id="node3" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="296,5,419,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="329,56,385,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="321,107,393,133"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="329,56,385,83"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="321,107,393,133"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="467,5,523,32"/>
 </map>

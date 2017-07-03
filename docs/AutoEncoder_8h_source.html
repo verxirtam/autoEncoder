@@ -140,12 +140,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//正規化されたミニバッチ</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> nX = <a class="code" href="classAutoEncoder.html#a887befd953ae46e976fbf2706ef77fa1">normalization</a>.<a class="code" href="classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec">getPCAWhitening</a>(X);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> Y;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66">backpropagation</a>.<a class="code" href="classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8">forward</a>(nX, Y);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> nY;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66">backpropagation</a>.<a class="code" href="classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8">forward</a>(nX, nY);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66">backpropagation</a>.<a class="code" href="classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e">back</a>(nX);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66">backpropagation</a>.<a class="code" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212">updateParameter</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAutoEncoder.html#a887befd953ae46e976fbf2706ef77fa1">normalization</a>.<a class="code" href="classNormalization.html#af4bb37886a79a60bfa41272a7a6f578b">getInversePCAWhitening</a>(Y);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classAutoEncoder.html#a887befd953ae46e976fbf2706ef77fa1">normalization</a>.<a class="code" href="classNormalization.html#af4bb37886a79a60bfa41272a7a6f578b">getInversePCAWhitening</a>(nY);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 <div class="ttc" id="Normalization_8h_html"><div class="ttname"><a href="Normalization_8h.html">Normalization.h</a></div></div>
@@ -171,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 3 2017 02:59:49 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 4 2017 01:59:26 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

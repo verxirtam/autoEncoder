@@ -1,9 +1,10 @@
 <map id="CuSolverDnManager::getHandle" name="CuSolverDnManager::getHandle">
 <area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="205,81,288,108"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="219,132,275,159"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="219,132,275,159"/>
 <area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="337,56,463,83"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="372,107,428,133"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="372,107,428,133"/>
 <area shape="rect" id="node4" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="512,5,635,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="545,56,601,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="537,107,609,133"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="545,56,601,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="537,107,609,133"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="683,5,739,32"/>
 </map>

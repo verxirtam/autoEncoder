@@ -3,10 +3,11 @@
 <area shape="rect" id="node4" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="116,123,303,149"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="385,5,556,32"/>
 <area shape="rect" id="node5" href="$classNormalization.html#a5706dbfc7e03e93a3bd05a4800a950ec" title="Normalization::getPCAWhitening" alt="" coords="363,123,578,149"/>
-<area shape="rect" id="node9" href="$classNormalization.html#af4bb37886a79a60bfa41272a7a6f578b" title="Normalization::getInverse\lPCAWhitening" alt="" coords="385,57,556,98"/>
-<area shape="rect" id="node10" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="364,240,577,267"/>
-<area shape="rect" id="node11" href="$classNormalization.html#af1ea886fdf9a856ada3e9bf55dc91a9e" title="Normalization::getInverse\lZCAWhitening" alt="" coords="385,174,556,215"/>
+<area shape="rect" id="node10" href="$classNormalization.html#af4bb37886a79a60bfa41272a7a6f578b" title="Normalization::getInverse\lPCAWhitening" alt="" coords="385,57,556,98"/>
+<area shape="rect" id="node11" href="$classNormalization.html#ae6c98abf709156e118ab5abc02ef80bf" title="Normalization::getZCAWhitening" alt="" coords="364,240,577,267"/>
+<area shape="rect" id="node12" href="$classNormalization.html#af1ea886fdf9a856ada3e9bf55dc91a9e" title="Normalization::getInverse\lZCAWhitening" alt="" coords="385,174,556,215"/>
 <area shape="rect" id="node6" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="627,96,778,123"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="675,151,731,177"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="667,209,739,236"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="675,151,731,177"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="667,209,739,236"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="827,96,883,123"/>
 </map>
