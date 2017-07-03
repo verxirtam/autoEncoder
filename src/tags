@@ -6,6 +6,7 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 AutoEncoder	AutoEncoder.h	/^	AutoEncoder():$/;"	f	class:AutoEncoder
 AutoEncoder	AutoEncoder.h	/^class AutoEncoder$/;"	c
+AutoEncoderTest	unittest.cpp	/^class AutoEncoderTest :$/;"	c	file:
 Backpropagation	Backpropagation.h	/^	Backpropagation(unsigned int layer_count):$/;"	f	class:Backpropagation
 Backpropagation	Backpropagation.h	/^class Backpropagation$/;"	c
 BackpropagationAllTest	unittest.cpp	/^class BackpropagationAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
@@ -93,6 +94,7 @@ RowColumn	unittest.cpp	/^using RowColumn = std::tuple<unsigned int, unsigned int
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
 Saxpy	CuBlasFunction.cpp	/^void Saxpy$/;"	f
 Sdgmm	CuBlasFunction.cpp	/^void Sdgmm$/;"	f
+SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:AutoEncoderTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationAllTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationFunctionTest
 SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationMiniBatchTest
@@ -119,6 +121,7 @@ Ssymm	CuBlasFunction.cpp	/^void Ssymm$/;"	f
 Ssyr	CuBlasFunction.cpp	/^void Ssyr$/;"	f
 Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
+TEST	unittest.cpp	/^TEST(AutoEncoderTest, Simple)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationMiniBatchTest, Simple)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
 TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
@@ -162,6 +165,7 @@ TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(NormalizationGeneralTest, test)$/;"	f
+TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:AutoEncoderTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationAllTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationFunctionTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationMiniBatchTest
@@ -227,6 +231,7 @@ getDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getDelta() const$
 getDeltaAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDeltaAsVector() const$/;"	f	class:Backpropagation
 getDeviceProp	CudaManager.h	/^	static inline const cudaDeviceProp& getDeviceProp(void)$/;"	f	class:CudaManager
 getDimension	DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:DeviceVector
+getEpsilon	Backpropagation.h	/^	float getEpsilon() const$/;"	f	class:Backpropagation
 getErrorString	CuBlasManager.cpp	/^const char* CuBlasManager::getErrorString(cublasStatus_t error)$/;"	f	class:CuBlasManager
 getErrorString	CuRandManager.cpp	/^const char* CuRandManager::getErrorString(curandStatus_t error)$/;"	f	class:CuRandManager
 getErrorString	CuSolverDnManager.cpp	/^const char* CuSolverDnManager::getErrorString(cusolverStatus_t status)$/;"	f	class:CuSolverDnManager
@@ -237,6 +242,8 @@ getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:C
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager
 getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
+getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
 getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
@@ -262,11 +269,13 @@ getZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getZCAWhiteningMatr
 handle	CuBlasManager.h	/^	cublasHandle_t handle;$/;"	m	class:CuBlasManager
 handle	CuSolverDnManager.h	/^	cusolverDnHandle_t handle;$/;"	m	class:CuSolverDnManager
 host_matrix	unittest.cpp	/^	using host_matrix = std::vector<float>;$/;"	u
-init	AutoEncoder.h	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size)$/;"	f	class:AutoEncoder
+init	AutoEncoder.h	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)$/;"	f	class:AutoEncoder
 init	Backpropagation.cpp	/^void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:Backpropagation
 init	Normalization.cpp	/^void Normalization::init(const DeviceMatrix& X)$/;"	f	class:Normalization
 initRandom	Backpropagation.cpp	/^void Backpropagation::initRandom(void)$/;"	f	class:Backpropagation
 initStream	CudaManager.h	/^	void initStream(unsigned int stream_count)$/;"	f	class:CudaManager
+inversePCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inversePCAWhiteningMatrix;$/;"	m	class:Normalization
+inverseZCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inverseZCAWhiteningMatrix;$/;"	m	class:Normalization
 latitude	TrackData.h	/^	float latitude;$/;"	m	class:TrackData
 layerCount	AutoEncoder.h	/^	const unsigned int layerCount;$/;"	m	class:AutoEncoder
 layerCount	Backpropagation.h	/^	const unsigned int layerCount;$/;"	m	class:Backpropagation

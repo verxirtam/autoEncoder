@@ -51,11 +51,11 @@ public:
 		//正規化されたミニバッチ
 		DeviceMatrix nX = normalization.getPCAWhitening(X);
 		
-		DeviceMatrix Y;
-		backpropagation.forward(nX, Y);
+		DeviceMatrix nY;
+		backpropagation.forward(nX, nY);
 		backpropagation.back(nX);
 		backpropagation.updateParameter();
 		
-		return normalization.getInversePCAWhitening(Y);
+		return normalization.getInversePCAWhitening(nY);
 	}
 };

@@ -1982,7 +1982,68 @@ protected:
 //ミニバッチに対応したBackpropagationのテスト
 TEST(AutoEncoderTest, Simple)
 {
+	
+	//正規化用データ
+	std::vector<float> normarize_input_base(20);
+	for(int i = 0; i < 10; i++)
+	{
+		float x = static_cast<float>(i);
+		normarize_input_base[2 * i    ] = x;
+		normarize_input_base[2 * i + 1] = x * x;
+	}
+	
+	//正規化用データのDeviceMatrix
+	DeviceMatrix normarize_input(2, 10);
+	normarize_input.set(normarize_input_base);
+	
 	AutoEncoder a;
+	a.init(normarize_input, 1, 10);
+	
+	//学習用データ
+	std::vector<float> minibatch_input_base(20);
+	for(int i = 0; i < 10; i++)
+	{
+		float x = static_cast<float>(i) + 0.5f;
+		minibatch_input_base[2 * i    ] = x;
+		minibatch_input_base[2 * i + 1] = x * x;
+	}
+	
+	//学習用データのDeviceMatrix
+	DeviceMatrix minibatch_input(2, 10);
+	minibatch_input.set(minibatch_input_base);
+	
+	//学習の実行
+	for(int i = 0; i < 1000; i++)
+	{
+		a.learning(minibatch_input);
+	}
+	//出力の取得
+	auto minibatch_output = a.learning(minibatch_input);
+	
+	//normarize_inputの表示
+	std::cout << "normarize_input" << std::endl;
+	for(int i = 0; i < 10; i++)
+	{
+		std::cout << normarize_input_base[2 * i    ] << "\t";
+		std::cout << normarize_input_base[2 * i + 1] << std::endl;
+	}
+	//minibatch_inputの表示
+	auto minibatch_input_vector = minibatch_input.get();
+	std::cout << "minibatch_input" << std::endl;
+	for(int i = 0; i < 10; i++)
+	{
+		std::cout << minibatch_input_vector[2 * i    ] << "\t";
+		std::cout << minibatch_input_vector[2 * i + 1] << std::endl;
+	}
+	//minibatch_outputの表示
+	auto minibatch_output_vector = minibatch_output.get();
+	std::cout << "minibatch_output" << std::endl;
+	for(int i = 0; i < 10; i++)
+	{
+		std::cout << minibatch_output_vector[2 * i    ] << "\t";
+		std::cout << minibatch_output_vector[2 * i + 1] << std::endl;
+	}
+	EXPECT_TRUE(false);//今の処理では学習していないので注意喚起のために失敗させる
 }
 
 
@@ -1996,6 +2057,7 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*Normalization*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
