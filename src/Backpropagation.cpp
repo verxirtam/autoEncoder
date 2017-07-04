@@ -121,6 +121,9 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 	}
 	
 	_1B = DeviceVector::get1Vector(miniBatchSize);
+	
+	//weightとbiasをランダムに初期化する
+	this->initRandom();
 }
 
 void Backpropagation::initRandom(void)

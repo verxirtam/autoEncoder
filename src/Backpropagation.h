@@ -56,6 +56,8 @@ private:
 		float tanh_x = std::tanh(x);
 		return 1.0f - (tanh_x * tanh_x);
 	}
+	//weightとbiasをランダムに初期化する
+	void initRandom(void);
 public:
 	//下記を求める
 	//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1] * _1B ^ T;
@@ -124,8 +126,6 @@ public:
 	}
 	//初期化
 	void init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size = 1);
-	//weightをランダムに初期化する
-	void initRandom(void);
 	//順伝播
 	void forward(const std::vector<float>& x, std::vector<float>& y);
 	void forward(const DeviceMatrix& X, DeviceMatrix& Y);

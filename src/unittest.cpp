@@ -664,7 +664,6 @@ TEST_P(BackpropagationTest, Init)
 	}
 	
 	b.init(unit_count);
-	b.initRandom();
 }
 
 TEST(BackpropagationTest, Simple)
@@ -874,7 +873,6 @@ TEST_P(BackpropagationAllTest, All)
 	std::vector<unsigned int> unit_count{dimension, dimension / 2, 1, dimension / 2, dimension};
 	Backpropagation b(unit_count.size());
 	b.init(unit_count);
-	b.initRandom();
 	
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
@@ -960,7 +958,6 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 	unsigned int d1 = std::get<1>(GetParam());
 	Backpropagation b(3);
 	b.init({d0, d1, d0});
-	b.initRandom();
 	
 	std::vector<float> x(d0, 0.5f);
 	std::vector<float> y;
@@ -1104,7 +1101,6 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 	std::vector<unsigned int> unit_count{d0, d1, d0};
 	Backpropagation b(unit_count.size());
 	b.init(unit_count);
-	b.initRandom();
 	
 	//数値微分との差の評価に使用するepsilon
 	float epsilon0 = 1.0f;
@@ -1275,7 +1271,6 @@ TEST(BackpropagationStreamTest, Init)
 {
 	Backpropagation b(3);
 	b.init({3,2,3});
-	b.initRandom();
 	
 	b.setSubStreamCount(1);
 	EXPECT_EQ(b.getSubStreamCount(), 1);
@@ -1302,7 +1297,6 @@ TEST_P(BackpropagationStreamTest, Evaluate)
 	unsigned int d0 = std::get<0>(GetParam());
 	unsigned int d1 = std::get<1>(GetParam());
 	b.init({d0,d1,d0});
-	b.initRandom();
 	std::vector<float> x(d0);
 	std::vector<float> y(d0);
 	auto d = x;
@@ -1365,7 +1359,6 @@ TEST_P(BackpropagationObtainDEDWTest, test)
 	b.setSubStreamCount(substream_count);
 	EXPECT_EQ(b.getSubStreamCount(), substream_count);
 	b.init(unit_count);
-	b.initRandom();
 	
 	std::cout << "Backpropagation の初期化完了" << std::endl;
 	
@@ -1806,7 +1799,7 @@ TEST_P(NormalizationGeneralTest, test)
 	Normalization n_pca;
 	n_pca.init(Y_pca);
 	std::cout << "T_pca" << std::endl;
-	//TODO 下半分に上半分と同一の値を設定する
+	//下半分に上半分と同一の値を設定する
 	auto VarCovMatrix_pca = n_pca.getVarCovMatrix().get();
 	for(unsigned int j = 0; j < D; j++)
 	{
@@ -1838,7 +1831,7 @@ TEST_P(NormalizationGeneralTest, test)
 	Normalization n_zca;
 	n_zca.init(Y_zca);
 	std::cout << "T_zca" << std::endl;
-	//TODO 下半分に上半分と同一の値を設定する
+	//下半分に上半分と同一の値を設定する
 	auto VarCovMatrix_zca = n_zca.getVarCovMatrix().get();
 	for(unsigned int j = 0; j < D; j++)
 	{
@@ -1907,7 +1900,6 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	
 	//init()ではミニバッチのサイズを引数にとる
 	b.init({dimension, layer_size, dimension}, minibatch_size);
-	b.initRandom();
 	
 	//インプットをミニバッチとして定義
 	DeviceMatrix X(dimension, minibatch_size);
@@ -1918,6 +1910,7 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	DeviceMatrix& D = X;
 	
 	//順伝播・逆伝播はDeviceMatrixを引数にとる
+	//順伝播の実行
 	b.forward(X, Y);
 	
 	//ミニバッチの列を入れ替えても列同士は同じ値を返すかをテスト
@@ -1945,7 +1938,11 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	printVector(y1_out, "y1_out");
 	
 	//DeviceMatrixでback(), updateParameter() が実行できるかをテスト
+	//逆伝播の実行
 	b.back(D);
+	
+	//TODO weightについて意図した更新のデータを作成する
+	
 	auto delta = b.getDelta()[1].get();
 	std::vector<float> bias_old = b.getBias()[1].get();
 	std::vector<float> bias     = b.getBias()[1].get();
@@ -1961,7 +1958,11 @@ TEST(BackpropagationMiniBatchTest, Simple)
 		bias[i] -= delta_bias_i;
 	}
 	
+	//パラメータの更新
 	b.updateParameter();
+	
+	//TODO weightについて結果を比較して差分が十分小さいことを確認する
+	
 	auto bias_out = b.getBias()[1].get();
 	compareVector(bias, bias_out);
 	printVector(delta,    "delta");
@@ -1997,7 +1998,7 @@ TEST(AutoEncoderTest, Simple)
 	normarize_input.set(normarize_input_base);
 	
 	AutoEncoder a;
-	a.init(normarize_input, 1, 10);
+	a.init(normarize_input, 10, 10);
 	
 	//学習用データ
 	std::vector<float> minibatch_input_base(20);
@@ -2066,7 +2067,8 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
-	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
+	::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
+	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);
