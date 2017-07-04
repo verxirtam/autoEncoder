@@ -1,10 +1,13 @@
 <map id="CuRandManager::getInstance" name="CuRandManager::getInstance">
 <area shape="rect" id="node2" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="251,132,453,159"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="502,56,695,83"/>
-<area shape="rect" id="node6" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="531,107,666,133"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="563,157,635,184"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="571,208,627,235"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="744,5,816,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="752,56,808,83"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="752,107,808,133"/>
+<area shape="rect" id="node9" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="531,107,666,133"/>
+<area shape="rect" id="node11" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="563,157,635,184"/>
+<area shape="rect" id="node12" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="571,208,627,235"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="744,56,888,83"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="936,5,1059,32"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="961,56,1033,83"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="969,107,1025,133"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="1107,5,1163,32"/>
+<area shape="rect" id="node10" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="788,107,844,133"/>
 </map>

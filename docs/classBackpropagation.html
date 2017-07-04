@@ -121,8 +121,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b0f4dc317a9ae9e58416835757752d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01e5cff96a253eccd24612208bb57ba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6">init</a> (const std::vector&lt; unsigned int &gt; &amp;unit_count, unsigned int minibatch_size=1)</td></tr>
 <tr class="separator:a01e5cff96a253eccd24612208bb57ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88be5645aa2718c69899a786d1ca39bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc">initRandom</a> (void)</td></tr>
-<tr class="separator:a88be5645aa2718c69899a786d1ca39bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98cfa54ca3bbe71bde5a60967762ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#ae98cfa54ca3bbe71bde5a60967762ec8">forward</a> (const std::vector&lt; float &gt; &amp;x, std::vector&lt; float &gt; &amp;y)</td></tr>
 <tr class="separator:ae98cfa54ca3bbe71bde5a60967762ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af675ca044a49b694f3899b0b664803cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#af675ca044a49b694f3899b0b664803cc">forward</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;X, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;Y)</td></tr>
@@ -186,6 +184,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a61bcca6bfe2f3ac0dd1c84eba2ff48f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35499381a306103889b02b3b00e51a49"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a35499381a306103889b02b3b00e51a49">df</a> (const float &amp;x)</td></tr>
 <tr class="separator:a35499381a306103889b02b3b00e51a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88be5645aa2718c69899a786d1ca39bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc">initRandom</a> (void)</td></tr>
+<tr class="separator:a88be5645aa2718c69899a786d1ca39bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -352,7 +352,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph.png" border="0" usemap="#classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph" alt=""/></div>
 <map name="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph" id="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="185,31,378,57"/><area shape="rect" id="node3" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="427,5,499,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="435,56,491,83"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="185,56,378,83"/><area shape="rect" id="node3" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="427,56,571,83"/><area shape="rect" id="node4" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="619,5,741,32"/><area shape="rect" id="node6" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="644,56,716,83"/><area shape="rect" id="node7" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="652,107,708,133"/><area shape="rect" id="node5" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="789,5,845,32"/></map>
 </div>
 </p>
 
@@ -1074,7 +1074,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_cgraph.png" border="0" usemap="#classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_cgraph" alt=""/></div>
 <map name="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_cgraph" id="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_cgraph">
-<area shape="rect" id="node2" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="198,5,381,32"/><area shape="rect" id="node4" href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="203,56,375,83"/><area shape="rect" id="node3" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="434,5,625,32"/><area shape="rect" id="node5" href="classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="430,56,629,83"/><area shape="rect" id="node6" href="classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="678,56,866,83"/></map>
+<area shape="rect" id="node2" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="698,5,881,32"/><area shape="rect" id="node4" href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="209,183,381,209"/><area shape="rect" id="node7" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="198,107,391,133"/><area shape="rect" id="node3" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="937,5,1127,32"/><area shape="rect" id="node5" href="classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="442,233,641,260"/><area shape="rect" id="node6" href="classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="695,233,883,260"/><area shape="rect" id="node8" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="440,132,643,159"/><area shape="rect" id="node10" href="CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="514,81,569,108"/><area shape="rect" id="node13" href="classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="476,183,607,209"/><area shape="rect" id="node9" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="691,157,887,184"/><area shape="rect" id="node11" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="695,56,884,83"/><area shape="rect" id="node12" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="702,107,877,133"/></map>
 </div>
 </p>
 
@@ -1092,6 +1092,9 @@ Here is the caller graph for this function:</div>
 <a class="anchor" id="a88be5645aa2718c69899a786d1ca39bc"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Backpropagation::initRandom </td>
@@ -1101,6 +1104,11 @@ Here is the caller graph for this function:</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p><div class="dynheader">
@@ -1117,7 +1125,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph.png" border="0" usemap="#classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph" alt=""/></div>
 <map name="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph" id="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="248,5,320,32"/><area shape="rect" id="node3" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="256,56,312,83"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="248,56,392,83"/><area shape="rect" id="node3" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="440,5,563,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="465,56,537,83"/><area shape="rect" id="node6" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="473,107,529,133"/><area shape="rect" id="node4" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="611,5,667,32"/></map>
 </div>
 </p>
 
@@ -1789,7 +1797,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 4 2017 01:59:28 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 5 2017 01:35:00 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,21 +1,22 @@
 <map id="DeviceVector::getDimension" name="DeviceVector::getDimension">
-<area shape="rect" id="node2" href="$CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="309,37,368,64"/>
+<area shape="rect" id="node2" href="$CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="309,27,368,53"/>
 <area shape="rect" id="node5" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="525,56,659,83"/>
-<area shape="rect" id="node7" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="311,139,366,165"/>
-<area shape="rect" id="node17" href="$classNormalization.html#a09014d6d9a91df63852852e4b79a46f9" title="Normalization::invSqrtBy\lElement" alt="" coords="255,190,422,231"/>
-<area shape="rect" id="node18" href="$classNormalization.html#a26d0ec8b6e92613a1fbc1385332d6b7d" title="Normalization::invByElement" alt="" coords="243,256,434,283"/>
-<area shape="rect" id="node19" href="$unittest_8cpp.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="311,307,367,333"/>
-<area shape="rect" id="node20" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="303,357,375,384"/>
+<area shape="rect" id="node7" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="311,128,366,155"/>
+<area shape="rect" id="node18" href="$classNormalization.html#a09014d6d9a91df63852852e4b79a46f9" title="Normalization::invSqrtBy\lElement" alt="" coords="255,179,422,221"/>
+<area shape="rect" id="node19" href="$classNormalization.html#a26d0ec8b6e92613a1fbc1385332d6b7d" title="Normalization::invByElement" alt="" coords="243,245,434,272"/>
+<area shape="rect" id="node20" href="$unittest_8cpp.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="311,296,367,323"/>
+<area shape="rect" id="node21" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="303,347,375,373"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#ad4549cb3adb28420cff01cb124368596" title="Backpropagation::obtainDeltaLast" alt="" coords="483,5,701,32"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="749,5,904,32"/>
 <area shape="rect" id="node6" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="799,56,855,83"/>
-<area shape="rect" id="node8" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="495,117,689,144"/>
-<area shape="rect" id="node11" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="529,248,655,275"/>
-<area shape="rect" id="node16" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="556,168,628,195"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="791,107,863,133"/>
-<area shape="rect" id="node10" href="$unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="799,157,855,184"/>
-<area shape="rect" id="node12" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="765,208,888,235"/>
-<area shape="rect" id="node14" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="799,259,855,285"/>
-<area shape="rect" id="node15" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="791,309,863,336"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="952,208,1008,235"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="495,157,689,184"/>
+<area shape="rect" id="node14" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="529,208,655,235"/>
+<area shape="rect" id="node17" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="556,107,628,133"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="755,107,899,133"/>
+<area shape="rect" id="node10" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="952,208,1075,235"/>
+<area shape="rect" id="node12" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="977,132,1049,159"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="985,81,1041,108"/>
+<area shape="rect" id="node11" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="1123,208,1179,235"/>
+<area shape="rect" id="node15" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="799,208,855,235"/>
+<area shape="rect" id="node16" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="791,157,863,184"/>
 </map>
