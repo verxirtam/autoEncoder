@@ -1656,7 +1656,7 @@ void printVector(const std::vector<float>& v, const std::string& vname)
 	std::cout << vname << " = {";
 	for(auto&& x : v)
 	{
-		std::cout << x << ", ";
+		std::cout << std::showpoint << std::setprecision(8)<< x << ", ";
 	}
 	std::cout << "}" << std::endl;
 }
@@ -1898,6 +1898,12 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	//値を入れ替えるインデックス2
 	unsigned int index_swap2 = 65;
 	
+	
+	std::cout << "dimension = " << dimension << std::endl;
+	std::cout << "layer_size = " << layer_size << std::endl;
+	std::cout << "minibatch_size = " << minibatch_size << std::endl;
+	
+	
 	//init()ではミニバッチのサイズを引数にとる
 	b.init({dimension, layer_size, dimension}, minibatch_size);
 	
@@ -1941,34 +1947,64 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	//逆伝播の実行
 	b.back(D);
 	
-	//TODO weightについて意図した更新のデータを作成する
+	auto delta1 = b.getDelta()[1].get();
 	
-	auto delta = b.getDelta()[1].get();
-	std::vector<float> bias_old = b.getBias()[1].get();
-	std::vector<float> bias     = b.getBias()[1].get();
+	DeviceMatrix& Z0 = X;
+	auto z0 = Z0.get();
+	
+	//TODO weightについて意図した更新のデータを作成する
+	auto weight1_old = b.getWeight()[1].get();
+	auto weight1 = b.getWeight()[1].get();
+	//delta1 * (Z0 ^ T)
+	for(unsigned int j = 0; j < dimension; j++)
+	{
+		for(unsigned int i = 0; i < layer_size; i++)
+		{
+			float delta_weight1_ij = 0.0f;
+			for(unsigned int k = 0; k < minibatch_size; k++)
+			{
+				delta_weight1_ij += delta1[k * layer_size + i] * z0[k * dimension + j];
+			}
+			delta_weight1_ij /= static_cast<float>(minibatch_size);
+			delta_weight1_ij *= b.getEpsilon();
+			weight1[j * layer_size + i] -= delta_weight1_ij;
+		}
+	}
+	
+	
+	
+	std::vector<float> bias1_old = b.getBias()[1].get();
+	std::vector<float> bias1     = b.getBias()[1].get();
 	for(unsigned int i = 0; i < layer_size; i++)
 	{
-		float delta_bias_i = 0.0f;
+		float delta_bias1_i = 0.0f;
 		for(unsigned int j = 0; j < minibatch_size; j++)
 		{
-			delta_bias_i += delta[j * layer_size + i];
+			delta_bias1_i += delta1[j * layer_size + i];
 		}
-		delta_bias_i /= static_cast<float>(minibatch_size);
-		delta_bias_i *= b.getEpsilon();
-		bias[i] -= delta_bias_i;
+		delta_bias1_i /= static_cast<float>(minibatch_size);
+		delta_bias1_i *= b.getEpsilon();
+		bias1[i] -= delta_bias1_i;
 	}
 	
 	//パラメータの更新
 	b.updateParameter();
 	
-	//TODO weightについて結果を比較して差分が十分小さいことを確認する
+	printVector(delta1,    "delta1");
 	
-	auto bias_out = b.getBias()[1].get();
-	compareVector(bias, bias_out);
-	printVector(delta,    "delta");
-	printVector(bias_old, "bias_old");
-	printVector(bias,     "bias");
-	printVector(bias_out, "bias_out");
+	//TODO weightについて結果を比較して差分が十分小さいことを確認する
+	auto weight1_out = b.getWeight()[1].get();
+	compareVector(weight1, weight1_out);
+	printVector(weight1_old, "weight1_old");
+	printVector(weight1,     "weight1    ");
+	printVector(weight1_out, "weight1_out");
+	
+	
+	auto bias1_out = b.getBias()[1].get();
+	compareVector(bias1, bias1_out);
+	printVector(bias1_old, "bias1_old");
+	printVector(bias1,     "bias1    ");
+	printVector(bias1_out, "bias1_out");
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -2067,7 +2103,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
-	::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
 	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
 	
 	
