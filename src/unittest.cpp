@@ -27,6 +27,7 @@
 #include <algorithm>
 #include <numeric>
 #include <limits>
+#include <fstream>
 
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
@@ -1875,7 +1876,98 @@ TEST_P(NormalizationGeneralTest, test)
 
 }
 
+/////////////////////////////////////////////////////////////////////////////////
 
+TEST(NormalizationTest, csv)
+{
+	//CSVファイルから学習データ(行列)の読み込み
+	//CSVファイル
+	std::string csv_file_name("../../../anaconda3/test_anaconda/data.csv");
+	
+	//学習データを格納するvector
+	std::vector<float> data;
+	//学習データの次元(CSVファイルのカラム数=行列の"行"数(縦横入れ替わる))
+	int dimension = 0;
+	
+	//CSVファイルを読み込み用に開く
+	std::ifstream csv_file(csv_file_name);
+	//1行読み飛ばす
+	std::string dummy;
+	csv_file >> dummy;
+	//ファイルを1行ずつ読み込み
+	while(!csv_file.eof())
+	{
+		//1行ごとの処理
+		//1行分の文字列の取得
+		std::string line;
+		csv_file >> line;
+		
+		std::cout << line << std::endl;
+		
+		//1行分の文字列ストリーム
+		std::istringstream line_stream(line);
+		//トークン（カンマ区切り）
+		std::string token;
+		//カラム数のカウンタ
+		int column_count = 0;
+		//カンマで区切られた文字列を格納
+		while(std::getline(line_stream, token, ','))
+		{
+			//トークンをfloatに変換
+			float token_float = std::stof(token);
+			//vectorに格納
+			data.push_back(token_float);
+			//カラム数をカウントする
+			column_count++;
+		}
+		//次元が未設定の時
+		if(dimension == 0)
+		{
+			//次元としてカラム数を設定する
+			dimension = column_count;
+		}
+	}
+	//CSVファイルのデータの行数 = 行列の列数
+	int data_length = data.size() / dimension;
+	
+	//学習データをDeviceMatrixとして初期化
+	DeviceMatrix dX(dimension, data_length, data);
+
+	//Normalizationを初期化して学習データで初期化
+	Normalization n;
+	//白色化の変換行列の生成
+	n.init(dX);
+	
+	//初期値自体の白色化の実行
+	DeviceMatrix nX = n.getPCAWhitening(dX);
+	
+	//白色化の結果を結果のCSV出力
+	std::vector<float> data_w;
+	nX.get(data_w);
+	
+	std::string result_csv_file_name("../../../anaconda3/test_anaconda/data_w_cpp.csv");
+	std::ofstream result_csv_file(result_csv_file_name.c_str());
+	for(int i = 0; i < data_length; i++)
+	{
+		for(int j = 0; j < dimension; j++)
+		{
+			result_csv_file << data_w[i * dimension + j];
+			if(j != (dimension - 1))
+			{
+				result_csv_file << ',';
+			}
+		}
+		result_csv_file << std::endl;
+	}
+	
+	//auto m = n.getPCAWhiteningMatrix().get();
+	auto m = n.getVarCovMatrix().get();
+	//auto m = n.getMean().get();
+	for(auto&& mi : m)
+	{
+		std::cout << mi << ", ";
+	}
+}
 
 /////////////////////////////////////////////////////////////////////////////////
 class BackpropagationMiniBatchTest :
@@ -2034,7 +2126,7 @@ TEST(AutoEncoderTest, Simple)
 	normarize_input.set(normarize_input_base);
 	
 	AutoEncoder a;
-	a.init(normarize_input, 10, 10);
+	a.init(normarize_input, 5, 10);
 	
 	//学習用データ
 	std::vector<float> minibatch_input_base(20);
@@ -2050,7 +2142,7 @@ TEST(AutoEncoderTest, Simple)
 	minibatch_input.set(minibatch_input_base);
 	
 	//学習の実行
-	for(int i = 0; i < 1000; i++)
+	for(int i = 0; i < 10000; i++)
 	{
 		a.learning(minibatch_input);
 	}
@@ -2090,12 +2182,13 @@ TEST(AutoEncoderTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	//::testing::GTEST_FLAG(filter)="*Normalization*";
+	::testing::GTEST_FLAG(filter)="*NormalizationTest*";
+	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
 	//::testing::GTEST_FLAG(filter)="*CuRandManagerTest*";

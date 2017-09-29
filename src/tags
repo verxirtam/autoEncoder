@@ -165,6 +165,7 @@ TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(NormalizationGeneralTest, test)$/;"	f
+TEST_P	unittest.cpp	/^TEST_P(NormalizationTest, csv)$/;"	f
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:AutoEncoderTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationAllTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationFunctionTest
