@@ -1671,6 +1671,7 @@ TEST(NormalizationTest, simple)
 	//算出される値
 	std::vector<float> mean{6.0f, 7.0f};
 	std::vector<float> varcovmatrix{6.0f, -3.0f, -3.0f, 14.0f};
+	std::vector<float> varcovvalue{5.0f, 15.0f};
 	std::vector<float> P_pca{-0.424264068711929f, -0.0816496580927726f, -0.14142135623731f, 0.244948974278318f};
 	std::vector<float> Y_pca
 		{
@@ -1702,6 +1703,12 @@ TEST(NormalizationTest, simple)
 	EXPECT_EQ(compareVector(varcovmatrix, dvarcovmatrix) < 0.0625f, true);
 	printVector( varcovmatrix, " varcovmatrix");
 	printVector(dvarcovmatrix, "dvarcovmatrix");
+	
+	//分散共分散行列の固有値を比較
+	auto dvarcovvalue = n.getVarCovEigenValue().get();
+	EXPECT_EQ(compareVector(varcovvalue, dvarcovvalue) < 0.0625f, true);
+	printVector( varcovvalue, " varcovvalue");
+	printVector(dvarcovvalue, "dvarcovvalue");
 	
 	//PCA白色化
 	//白色化変換行列を取得
@@ -1942,8 +1949,7 @@ TEST(NormalizationTest, csv)
 	DeviceMatrix nX = n.getPCAWhitening(dX);
 	
 	//白色化の結果を結果のCSV出力
-	std::vector<float> data_w;
-	nX.get(data_w);
+	std::vector<float> data_w = nX.get();
 	
 	std::string result_csv_file_name("../../../anaconda3/test_anaconda/data_w_cpp.csv");
 	std::ofstream result_csv_file(result_csv_file_name.c_str());
@@ -1960,13 +1966,14 @@ TEST(NormalizationTest, csv)
 		result_csv_file << std::endl;
 	}
 	
-	//auto m = n.getPCAWhiteningMatrix().get();
-	auto m = n.getVarCovMatrix().get();
-	//auto m = n.getMean().get();
-	for(auto&& mi : m)
-	{
-		std::cout << mi << ", ";
-	}
+	printVector(dX.get(),                            "dX                ");
+	printVector(nX.get(),                            "nX                ");
+	printVector(n.getMean().get(),                   "Mean              ");
+	printVector(n.getVarCovMatrix().get(),           "VarCovMatrix      ");
+	printVector(n.getVarCovEigenValue().get(),       "VarCovEigenValue  ");
+	printVector(n.getVarCovEigenVector().get(),      "VarCovEigenVector ");
+	printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix");
+	
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -2187,7 +2194,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*NormalizationTest*";
+	::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";

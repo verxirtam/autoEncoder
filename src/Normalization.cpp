@@ -75,6 +75,8 @@ void Normalization::init(const DeviceMatrix& X)
 	
 	
 	//分散共分散行列
+	//TODO 算出方法が正しいか確認すること
+	//TODO 分散共分散行列の算出を出しする
 	varCovMatrix = DeviceMatrix(D,D);
 	//varCovMatrix = 1.0f * X * X^T;
 	alpha = 1.0f;
@@ -96,12 +98,14 @@ void Normalization::init(const DeviceMatrix& X)
 	//ただしvarCovMatrixの値は上半分のみ設定されている
 	
 	//varCovMatrix = E * diag(W) * E^T
-	//E : 直交行列
+	//E : 直交行列(varCovMatrixの固有ベクトルから成る)
 	//W : varCovMatrixの固有値から成るベクトル
 	//    W = (l_0, l_1, ... , l_(D-1)), l_i <= l_(i+1) i=0, ... ,D-2
 	DeviceMatrix E;
 	DeviceVector W;
 	DnSsyevd(varCovMatrix, W , E);
+	varCovEigenVector = E;
+	varCovEigenValue = W;
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));

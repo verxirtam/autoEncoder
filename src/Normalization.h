@@ -29,6 +29,10 @@ private:
 	DeviceVector mean;
 	//分散共分散行列
 	DeviceMatrix varCovMatrix;
+	//分散共分散行列の固有値からなるベクトル
+	DeviceVector varCovEigenValue;
+	//分散共分散行列の固有ベクトルからなる行列
+	DeviceMatrix varCovEigenVector;
 	//PCA白色化変換行列
 	DeviceMatrix pcaWhiteningMatrix;
 	//PCA白色化変換行列の逆行列
@@ -51,6 +55,8 @@ public:
 	Normalization():
 		mean(),
 		varCovMatrix(),
+		varCovEigenValue(),
+		varCovEigenVector(),
 		pcaWhiteningMatrix(),
 		inversePCAWhiteningMatrix(),
 		zcaWhiteningMatrix(),
@@ -69,6 +75,16 @@ public:
 	const DeviceMatrix& getVarCovMatrix(void) const
 	{
 		return varCovMatrix;
+	}
+	//分散共分散行列の固有値からなるベクトルを取得
+	const DeviceVector& getVarCovEigenValue(void) const
+	{
+		return varCovEigenValue;
+	}
+	//分散共分散行列の固有ベクトルからなる行列を取得
+	const DeviceMatrix& getVarCovEigenVector(void) const
+	{
+		return varCovEigenVector;
 	}
 	//PCA白色化の変換行列を取得する
 	const DeviceMatrix& getPCAWhiteningMatrix(void) const
