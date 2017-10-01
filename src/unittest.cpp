@@ -18,7 +18,7 @@
 
 #define GTEST_LANG_CXX11 1
 
-
+#include "unittest.h"
 
 #include <gtest/gtest.h>
 
@@ -42,6 +42,20 @@
 #include "Normalization.h"
 
 #include "AutoEncoder.h"
+
+
+
+void printVector(const std::vector<float>& v, const std::string& vname)
+{
+	std::cout << vname << " = {";
+	for(auto&& x : v)
+	{
+		std::cout << std::showpoint << std::setprecision(8)<< x << ", ";
+	}
+	std::cout << "}" << std::endl;
+}
+
+
 
 //////////////////////////////////////////////////////////////////////
 // DeviceVectorTest
@@ -1651,16 +1665,6 @@ protected:
 	void SetUp(){}
 	void TearDown(){}
 };
-
-void printVector(const std::vector<float>& v, const std::string& vname)
-{
-	std::cout << vname << " = {";
-	for(auto&& x : v)
-	{
-		std::cout << std::showpoint << std::setprecision(8)<< x << ", ";
-	}
-	std::cout << "}" << std::endl;
-}
 
 TEST(NormalizationTest, simple)
 {

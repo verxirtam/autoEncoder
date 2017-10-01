@@ -1,4 +1,4 @@
-unittest.o: unittest.cpp DeviceVector.h CuBlasManager.h \
+unittest.o: unittest.cpp unittest.h DeviceVector.h CuBlasManager.h \
  /usr/local/cuda/include/cublas_v2.h /usr/local/cuda/include/cublas_api.h \
  /usr/local/cuda/include/driver_types.h \
  /usr/local/cuda/include/host_defines.h \
@@ -23,4 +23,4 @@ unittest.o: unittest.cpp DeviceVector.h CuBlasManager.h \
  BackpropagationException.h CuRandFunction.h CuSolverDnManager.h \
  /usr/local/cuda/include/cusolverDn.h /usr/local/cuda/include/cublas_v2.h \
  /usr/local/cuda/include/cusolver_common.h CuSolverDnException.h \
- CuSolverDnFunction.h Normalization.h AutoEncoder.h
+ CuSolverDnFunction.h Normalization.h Statistics.h AutoEncoder.h

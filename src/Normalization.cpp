@@ -57,8 +57,14 @@ void Normalization::init(const DeviceMatrix& X)
 	
 	//データの次元
 	unsigned int D = X.getRowCount();
+	
+	mean = DeviceVector(D);
+	varCovMatrix = DeviceMatrix(D, D);
+	getMeanAndVarCovMatrix(X, mean, varCovMatrix, 0);
+	/* ------------------------------------------------------------------------
 	//データ数
 	unsigned int N = X.getColumnCount();
+	
 	//全成分が1のベクトル
 	auto _1N = DeviceVector::get1Vector(N);
 	//X * _1N
@@ -76,7 +82,7 @@ void Normalization::init(const DeviceMatrix& X)
 	
 	//分散共分散行列
 	//TODO 算出方法が正しいか確認すること
-	//TODO 分散共分散行列の算出を出しする
+	//TODO 分散共分散行列の算出を外出しする
 	varCovMatrix = DeviceMatrix(D,D);
 	//varCovMatrix = 1.0f * X * X^T;
 	alpha = 1.0f;
@@ -97,6 +103,8 @@ void Normalization::init(const DeviceMatrix& X)
 	//この時点で分散共分散行列varCovMatrixが取得できた
 	//ただしvarCovMatrixの値は上半分のみ設定されている
 	
+	-------------------------------------------------------------------------- */
+	
 	//varCovMatrix = E * diag(W) * E^T
 	//E : 直交行列(varCovMatrixの固有ベクトルから成る)
 	//W : varCovMatrixの固有値から成るベクトル
@@ -107,7 +115,7 @@ void Normalization::init(const DeviceMatrix& X)
 	varCovEigenVector = E;
 	varCovEigenValue = W;
 	
-	//NULLストリームの完了待ち
+	//NULLストリームの完了待ち:Wの算出待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
 	//W = W^(-1/2)
@@ -116,15 +124,15 @@ void Normalization::init(const DeviceMatrix& X)
 	//ET = E^T;
 	//   = 1.0f * E^T + 0.0f * E;
 	DeviceMatrix ET(D, D);
-	alpha = 1.0f;
-	beta = 0.0f;
+	float alpha = 1.0f;
+	float beta  = 0.0f;
 	Sgeam(&alpha, CUBLAS_OP_T, E, &beta, CUBLAS_OP_N, E, ET);
 	
 	//P_PCA =     diag(W) * E^T;
 	pcaWhiteningMatrix = DeviceMatrix(D, D);
 	Sdgmm(W, ET, pcaWhiteningMatrix);
 	
-	//NULLストリームの完了待ち
+	//NULLストリームの完了待ち:
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
 	//W_inv = diag(W)^(-1)

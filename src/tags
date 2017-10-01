@@ -145,6 +145,7 @@ TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveAssignmentOperator2)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor1)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor2)$/;"	f
 TEST	unittest.cpp	/^TEST(DeviceVectorTest, useContainer)$/;"	f
+TEST	unittest.cpp	/^TEST(NormalizationTest, csv)$/;"	f
 TEST	unittest.cpp	/^TEST(NormalizationTest, simple)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
@@ -165,7 +166,6 @@ TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
 TEST_P	unittest.cpp	/^TEST_P(NormalizationGeneralTest, test)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(NormalizationTest, csv)$/;"	f
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:AutoEncoderTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationAllTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationFunctionTest
@@ -248,6 +248,7 @@ getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(co
 getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
+getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f
 getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
@@ -258,6 +259,8 @@ getSubStreamCount	Backpropagation.h	/^	unsigned int getSubStreamCount(void) cons
 getU	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getU() const$/;"	f	class:Backpropagation
 getU	Backpropagation.h	/^	void getU(std::vector<std::vector<float> >& hu) const$/;"	f	class:Backpropagation
 getUAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:Backpropagation
+getVarCovEigenValue	Normalization.h	/^	const DeviceVector& getVarCovEigenValue(void) const$/;"	f	class:Normalization
+getVarCovEigenVector	Normalization.h	/^	const DeviceMatrix& getVarCovEigenVector(void) const$/;"	f	class:Normalization
 getVarCovMatrix	Normalization.h	/^	const DeviceMatrix& getVarCovMatrix(void) const$/;"	f	class:Normalization
 getWTDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWTDelta() const$/;"	f	class:Backpropagation
 getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
@@ -295,7 +298,7 @@ operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
 operator =	DeviceVector.h	/^	DeviceVector& operator=(const DeviceVector& dv)$/;"	f	class:DeviceVector
 pcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix pcaWhiteningMatrix;$/;"	m	class:Normalization
-printVector	unittest.cpp	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
+printVector	unittest.h	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
 rowCount	DeviceMatrix.h	/^	unsigned int rowCount;$/;"	m	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const float* host)$/;"	f	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceMatrix
@@ -316,6 +319,8 @@ track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
 u	Backpropagation.h	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation
 unitCount	Backpropagation.h	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation
 updateParameter	Backpropagation.cpp	/^void Backpropagation::updateParameter()$/;"	f	class:Backpropagation
+varCovEigenValue	Normalization.h	/^	DeviceVector varCovEigenValue;$/;"	m	class:Normalization
+varCovEigenVector	Normalization.h	/^	DeviceMatrix varCovEigenVector;$/;"	m	class:Normalization
 varCovMatrix	Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:Normalization
 weight	Backpropagation.h	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation
 z	Backpropagation.h	/^	std::vector<DeviceMatrix> z;$/;"	m	class:Backpropagation

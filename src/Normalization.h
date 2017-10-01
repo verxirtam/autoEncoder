@@ -21,6 +21,8 @@
 #include "CuBlasFunction.h"
 #include "CuSolverDnFunction.h"
 
+#include "Statistics.h"
+
 //入力データの正規化を行う
 class Normalization
 {
