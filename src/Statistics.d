@@ -19,4 +19,4 @@ Statistics.o: Statistics.cpp Statistics.h CuBlasFunction.h DeviceVector.h \
  /usr/local/cuda/include/driver_functions.h \
  /usr/local/cuda/include/vector_functions.h \
  /usr/local/cuda/include/vector_functions.hpp CudaException.h \
- CuBlasException.h DeviceMatrix.h unittest.h
+ CuBlasException.h DeviceMatrix.h

@@ -222,15 +222,4 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
     CuSolverDnException.h \
-    Statistics.h \
-    unittest.h \
-    /usr/include/c++/4.8/iostream \
-    /usr/include/c++/4.8/iomanip \
-    /usr/include/c++/4.8/locale \
-    /usr/include/c++/4.8/bits/locale_facets_nonio.h \
-    /usr/include/c++/4.8/ctime \
-    /usr/include/x86_64-linux-gnu/c++/4.8/bits/time_members.h \
-    /usr/include/x86_64-linux-gnu/c++/4.8/bits/messages_members.h \
-    /usr/include/libintl.h \
-    /usr/include/c++/4.8/bits/codecvt.h \
-    /usr/include/c++/4.8/bits/locale_facets_nonio.tcc
+    Statistics.h

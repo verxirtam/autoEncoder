@@ -23,4 +23,4 @@ Normalization.o: Normalization.cpp Normalization.h CuBlasFunction.h \
  CuSolverDnManager.h /usr/local/cuda/include/cusolverDn.h \
  /usr/local/cuda/include/cublas_v2.h \
  /usr/local/cuda/include/cusolver_common.h CuSolverDnException.h \
- Statistics.h unittest.h
+ Statistics.h

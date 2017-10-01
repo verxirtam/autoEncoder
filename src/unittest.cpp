@@ -1902,6 +1902,12 @@ TEST(NormalizationTest, csv)
 	
 	//CSVファイルを読み込み用に開く
 	std::ifstream csv_file(csv_file_name);
+	//ファイルが存在しない時は終了
+	if(csv_file.fail())
+	{
+		EXPECT_TRUE(false);
+		return;
+	}
 	//1行読み飛ばす
 	std::string dummy;
 	csv_file >> dummy;
@@ -1978,6 +1984,8 @@ TEST(NormalizationTest, csv)
 	printVector(n.getVarCovEigenVector().get(),      "VarCovEigenVector ");
 	printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix");
 	
+	//TODO jupyter-notebookの結果とを比較して成否を判定する処理を追加するまではfalseにする
+	EXPECT_TRUE(false);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -2193,12 +2201,12 @@ TEST(AutoEncoderTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
+	//::testing::GTEST_FLAG(filter)="*NormalizationTest*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";

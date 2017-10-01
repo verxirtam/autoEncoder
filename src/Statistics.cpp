@@ -17,7 +17,6 @@
  */
 #include "Statistics.h"
 
-
 //平均と分散共分散行列を求める
 void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)
 {
@@ -45,50 +44,30 @@ void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, Devi
 	mean = X_1N;
 	Sscal(&alpha, mean);
 	
-	//TODO デバッグ用の出力
-	std::cout << "N = " << N << std::endl;
-	printVector(X_1N.get(), "X_1N");
-	
 	//分散共分散行列
-	//TODO 算出方法が正しいか確認すること
-	varCovMatrix = DeviceMatrix(D, D, std::vector<float>(D * D, 0.0f));
-	//varCovMatrix = 1.0f * X * X^T + 0.0f * varCovMatrix;
-	//             = 1.0f * X * X^T;
-	alpha = 1.0f;
-	beta  = 0.0f;
-	Ssyrk(&alpha, CUBLAS_OP_N, X, &beta, varCovMatrix);
-	//varCovMatrixの値は上半分のみ設定される
+	// X_ = X - mean * _1N^T;
+	// varCovMatrix = (1 / N) * X_ * X_^T
 	
-	//ストリームの完了待ち:varCovMatrixの算出待ち
+	// X_ = X - mean * _1N^T;
+	//		X_ = X;
+	//		Sger(-1.0f, mean, _1N, X_);
+	//			<=>
+	//			X_ = (-1.0f) * mean * _1N^T + X;
+	//			   = X - mean * _1N^T;
+	DeviceMatrix X_ = X;
+	alpha = - 1.0f;
+	Sger(&alpha, mean, _1N, X_);
+	
+	//ストリームの完了待ち:X_の算出待ち
 	CUDA_CALL(cudaStreamSynchronize(stream));
 	
-	//TODO デバッグ用の出力
-	printVector(varCovMatrix.get(), "X * X^T");
-	
-	//varCovMatrix = DeviceMatrix(D, D, std::vector<float>(D * D, 0.0f));//TODO This is for debug.
-	//varCovMatrix = - (1 / N) * (X_1N) * (X_1N)^T + varCovMatrix;
-	//             = - (1 / N) * (X_1N) * (X_1N)^T + X * X^T;
-	//             = X * X^T - (1 / N) * (X_1N) * (X_1N)^T;
-	alpha = - 1.0f / static_cast<float>(N);
-	Ssyr(&alpha, X_1N, varCovMatrix);
-	//varCovMatrixの値は上半分のみ設定される
-	
-	//ストリームの完了待ち:varCovMatrixの算出待ち
-	CUDA_CALL(cudaStreamSynchronize(stream));
-	
-	//TODO デバッグ用の出力
-	std::cout << "X_1N.dimension = " << X_1N.getDimension() << std::endl;
-	printVector(varCovMatrix.get(), "X * X^T - (1 / N) * (X_1N) * (X_1N)^T");// <-----ここが違っているように見える
-	
-	//varCovMatrix = (1 / N) * varCovMatrix;
-	//             = (1 / N) * (X * X^T -(1 / N) * (X_1N) * (X_1N)^T);
+	// varCovMatrix = (1 / N) * X_ * X_^T
+	//              = (1 / N) * X_ * X_^T + 0.0f * varCovMatrix
+	//		Ssyrk((1 / N), CUBLAS_OP_N, X_, 0.0f, varCovMatrix);
+	varCovMatrix = DeviceMatrix(D, D);
 	alpha = 1.0f / static_cast<float>(N);
-	Sscal(&alpha, varCovMatrix);
-	//この時点で分散共分散行列varCovMatrixが取得できた
-	//ただしvarCovMatrixの値は上半分のみ設定されている
-	
-	//TODO デバッグ用の出力
-	printVector(varCovMatrix.get(), "varCovMatrix");
+	beta  = 0.0f;
+	Ssyrk(&alpha, CUBLAS_OP_N, X_, &beta, varCovMatrix);
 	
 }
 
