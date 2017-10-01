@@ -16,5 +16,7 @@ var searchData=
   ['ssymm',['Ssymm',['../CuBlasFunction_8cpp.html#a639e60ad1e9ba61cdaa7c93aaef0ace5',1,'Ssymm(const float *alpha, const DeviceMatrix &amp;A, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C):&#160;CuBlasFunction.cpp'],['../CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5',1,'Ssymm(const float *alpha, const DeviceMatrix &amp;A, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C):&#160;CuBlasFunction.cpp']]],
   ['ssyr',['Ssyr',['../CuBlasFunction_8cpp.html#a7e08a31241335fa3628dcd9b486a5125',1,'Ssyr(const float *alpha, const DeviceVector &amp;x, DeviceMatrix &amp;A):&#160;CuBlasFunction.cpp'],['../CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125',1,'Ssyr(const float *alpha, const DeviceVector &amp;x, DeviceMatrix &amp;A):&#160;CuBlasFunction.cpp']]],
   ['ssyrk',['Ssyrk',['../CuBlasFunction_8cpp.html#a2dfbd95424f457f126c37d516cd37fe5',1,'Ssyrk(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const float *beta, DeviceMatrix &amp;C):&#160;CuBlasFunction.cpp'],['../CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5',1,'Ssyrk(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const float *beta, DeviceMatrix &amp;C):&#160;CuBlasFunction.cpp']]],
+  ['statistics_2ecpp',['Statistics.cpp',['../Statistics_8cpp.html',1,'']]],
+  ['statistics_2eh',['Statistics.h',['../Statistics_8h.html',1,'']]],
   ['stream',['stream',['../classCudaManager.html#a062336d3e1edf52ce3782eb250c5571a',1,'CudaManager']]]
 ];

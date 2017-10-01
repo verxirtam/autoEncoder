@@ -1,7 +1,7 @@
 var searchData=
 [
   ['back',['back',['../classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e',1,'Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e',1,'Backpropagation::back(const DeviceMatrix &amp;D)']]],
-  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'Backpropagation'],['../classBackpropagation.html#a6b0f4dc317a9ae9e58416835757752d5',1,'Backpropagation::Backpropagation()'],['../classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66',1,'AutoEncoder::backpropagation()']]],
+  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'Backpropagation'],['../classAutoEncoder.html#a864c985cdb72e845dba0dc9721cd1f66',1,'AutoEncoder::backpropagation()'],['../classBackpropagation.html#a6b0f4dc317a9ae9e58416835757752d5',1,'Backpropagation::Backpropagation()']]],
   ['backpropagation_2ecpp',['Backpropagation.cpp',['../Backpropagation_8cpp.html',1,'']]],
   ['backpropagation_2eh',['Backpropagation.h',['../Backpropagation_8h.html',1,'']]],
   ['backpropagation_5fcuda_2ecu',['Backpropagation_cuda.cu',['../Backpropagation__cuda_8cu.html',1,'']]],

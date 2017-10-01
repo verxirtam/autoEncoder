@@ -1,6 +1,6 @@
 <map id="AutoEncoder" name="AutoEncoder">
-<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation" alt="" coords="5,155,123,181"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html" title="DeviceVector" alt="" coords="20,5,121,32"/>
-<area shape="rect" id="node4" href="$classNormalization.html" title="Normalization" alt="" coords="147,155,249,181"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html" title="DeviceMatrix" alt="" coords="149,5,248,32"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation" alt="" coords="5,168,123,195"/>
+<area shape="rect" id="node3" href="$classDeviceVector.html" title="DeviceVector" alt="" coords="43,5,144,32"/>
+<area shape="rect" id="node4" href="$classNormalization.html" title="Normalization" alt="" coords="147,168,249,195"/>
+<area shape="rect" id="node5" href="$classDeviceMatrix.html" title="DeviceMatrix" alt="" coords="213,5,312,32"/>
 </map>
