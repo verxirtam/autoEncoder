@@ -298,7 +298,7 @@ operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
 operator =	DeviceVector.h	/^	DeviceVector& operator=(const DeviceVector& dv)$/;"	f	class:DeviceVector
 pcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix pcaWhiteningMatrix;$/;"	m	class:Normalization
-printVector	unittest.h	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
+printVector	unittest.cpp	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
 rowCount	DeviceMatrix.h	/^	unsigned int rowCount;$/;"	m	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const float* host)$/;"	f	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceMatrix
