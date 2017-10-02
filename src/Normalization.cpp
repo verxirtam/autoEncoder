@@ -61,49 +61,6 @@ void Normalization::init(const DeviceMatrix& X)
 	mean = DeviceVector(D);
 	varCovMatrix = DeviceMatrix(D, D);
 	getMeanAndVarCovMatrix(X, mean, varCovMatrix, 0);
-	/* ------------------------------------------------------------------------
-	//データ数
-	unsigned int N = X.getColumnCount();
-	
-	//全成分が1のベクトル
-	auto _1N = DeviceVector::get1Vector(N);
-	//X * _1N
-	DeviceVector X_1N(D);
-	//X_1N = 1.0f * X * _1N;
-	float alpha = 1.0f;
-	float beta = 0.0f;
-	Sgemv(&alpha, CUBLAS_OP_N, X, _1N, &beta, X_1N);
-	
-	//平均
-	alpha = 1.0f / static_cast<float>(N);
-	mean = X_1N;
-	Sscal(&alpha, mean);
-	
-	
-	//分散共分散行列
-	//TODO 算出方法が正しいか確認すること
-	//TODO 分散共分散行列の算出を外出しする
-	varCovMatrix = DeviceMatrix(D,D);
-	//varCovMatrix = 1.0f * X * X^T;
-	alpha = 1.0f;
-	beta = 0.0f;
-	Ssyrk(&alpha, CUBLAS_OP_N, X, &beta, varCovMatrix);
-	//varCovMatrixの値は上半分のみ設定される
-	
-	//varCovMatrix = -(1 / N) * (X_1N) * (X_1N)^T + X * X^T;
-	//     = X * X^T -(1 / N) * (X_1N) * (X_1N)^T;
-	alpha = - 1.0f / static_cast<float>(N);
-	Ssyr(&alpha, X_1N, varCovMatrix);
-	//varCovMatrixの値は上半分のみ設定される
-	
-	//varCovMatrix = (1 / N) * varCovMatrix;
-	//     = (1 / N) * (X * X^T -(1 / N)*(X_1N) * (X_1N)^T);
-	alpha = 1.0f / static_cast<float>(N);
-	Sscal(&alpha, varCovMatrix);
-	//この時点で分散共分散行列varCovMatrixが取得できた
-	//ただしvarCovMatrixの値は上半分のみ設定されている
-	
-	-------------------------------------------------------------------------- */
 	
 	//varCovMatrix = E * diag(W) * E^T
 	//E : 直交行列(varCovMatrixの固有ベクトルから成る)

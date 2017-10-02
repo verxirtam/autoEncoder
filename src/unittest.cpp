@@ -43,7 +43,7 @@
 
 #include "AutoEncoder.h"
 
-
+#include "DeviceVectorUtils.h"
 
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
@@ -1895,6 +1895,12 @@ TEST(NormalizationTest, csv)
 	//CSVファイル
 	std::string csv_file_name("../../../anaconda3/test_anaconda/data.csv");
 	
+	DeviceMatrix dX;
+	readFromCsvFile(csv_file_name, dX);
+	int dimension = dX.getRowCount();
+	int data_length = dX.getColumnCount();
+	
+	/*
 	//学習データを格納するvector
 	std::vector<float> data;
 	//学習データの次元(CSVファイルのカラム数=行列の"行"数(縦横入れ替わる))
@@ -1949,7 +1955,8 @@ TEST(NormalizationTest, csv)
 	
 	//学習データをDeviceMatrixとして初期化
 	DeviceMatrix dX(dimension, data_length, data);
-
+	*/
+	
 	//Normalizationを初期化して学習データで初期化
 	Normalization n;
 	//白色化の変換行列の生成
@@ -2201,12 +2208,12 @@ TEST(AutoEncoderTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	//::testing::GTEST_FLAG(filter)="*NormalizationTest*";
+	::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
