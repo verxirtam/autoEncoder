@@ -44,6 +44,7 @@ var searchData=
   ['getweight',['getWeight',['../classBackpropagation.html#a5efd2913d5588b8c12d56f129c5d9ae1',1,'Backpropagation']]],
   ['getweightasvector',['getWeightAsVector',['../classBackpropagation.html#a9091daf11c984eb9e5225d0d324a9dda',1,'Backpropagation']]],
   ['getwhitening',['getWhitening',['../classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79',1,'Normalization']]],
+  ['getwhiteningmatrix',['getWhiteningMatrix',['../classAutoEncoder.html#a7bcb62b93af3c411420241bf4786949b',1,'AutoEncoder']]],
   ['getwtdelta',['getWTDelta',['../classBackpropagation.html#a758ea9ea283666c3d8aa324779b419be',1,'Backpropagation']]],
   ['getz',['getZ',['../classBackpropagation.html#ad599a50a69a12cc8cc5e5309512adc5c',1,'Backpropagation']]],
   ['getzasvector',['getZAsVector',['../classBackpropagation.html#a3089e4192f8448e4d4e83915a8aed438',1,'Backpropagation']]],

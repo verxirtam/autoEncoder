@@ -1,11 +1,12 @@
 <map id="DeviceMatrix::get" name="DeviceMatrix::get">
-<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="179,81,261,108"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="184,132,256,159"/>
-<area shape="rect" id="node10" href="$unittest_8cpp.html#a98d826c169d0b7bf1e946e6181a2a420" title="TEST" alt="" coords="192,183,248,209"/>
-<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="310,56,437,83"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="345,107,401,133"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="485,5,608,32"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="519,56,575,83"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="511,107,583,133"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="656,5,712,32"/>
+<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="193,81,276,108"/>
+<area shape="rect" id="node9" href="$DeviceVectorUtils_8h.html#a3b08c60bdcaf5630bfe82ac9c8a3267a" title="writeToCsvFile" alt="" coords="179,132,290,159"/>
+<area shape="rect" id="node10" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="199,183,271,209"/>
+<area shape="rect" id="node11" href="$unittest_8cpp.html#a98d826c169d0b7bf1e946e6181a2a420" title="TEST" alt="" coords="207,233,263,260"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="339,56,466,83"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="375,107,431,133"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="515,5,637,32"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="548,56,604,83"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="540,107,612,133"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="685,5,741,32"/>
 </map>
