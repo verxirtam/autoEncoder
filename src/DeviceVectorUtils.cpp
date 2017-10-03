@@ -29,8 +29,7 @@ DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& devi
 DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& deviceMatrix)
 {
 	
-	//CSVファイルから学習データ(行列)の読み込み
-	//CSVファイル
+	//CSVファイルから行列の読み込み
 	
 	//学習データを格納するvector
 	std::vector<float> data;
@@ -95,6 +94,22 @@ void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVe
 
 void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMatrix)
 {
+	std::vector<float> data = deviceMatrix.get();
 	
-	throw 1;
+	unsigned int column_count = deviceMatrix.getColumnCount();
+	unsigned int row_count    = deviceMatrix.getRowCount();
+	
+	std::ofstream csv_file(csvFileName);
+	for(unsigned int i = 0; i < column_count; i++)
+	{
+		for(unsigned int j = 0; j < row_count; j++)
+		{
+			csv_file << data[i * row_count + j];
+			if(j != (row_count - 1))
+			{
+				csv_file << ',';
+			}
+		}
+		csv_file << std::endl;
+	}
 }

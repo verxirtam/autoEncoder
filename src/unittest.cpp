@@ -1897,65 +1897,6 @@ TEST(NormalizationTest, csv)
 	
 	DeviceMatrix dX;
 	readFromCsvFile(csv_file_name, dX);
-	int dimension = dX.getRowCount();
-	int data_length = dX.getColumnCount();
-	
-	/*
-	//学習データを格納するvector
-	std::vector<float> data;
-	//学習データの次元(CSVファイルのカラム数=行列の"行"数(縦横入れ替わる))
-	int dimension = 0;
-	
-	//CSVファイルを読み込み用に開く
-	std::ifstream csv_file(csv_file_name);
-	//ファイルが存在しない時は終了
-	if(csv_file.fail())
-	{
-		EXPECT_TRUE(false);
-		return;
-	}
-	//1行読み飛ばす
-	std::string dummy;
-	csv_file >> dummy;
-	//ファイルを1行ずつ読み込み
-	while(!csv_file.eof())
-	{
-		//1行ごとの処理
-		//1行分の文字列の取得
-		std::string line;
-		csv_file >> line;
-		
-		std::cout << line << std::endl;
-		
-		//1行分の文字列ストリーム
-		std::istringstream line_stream(line);
-		//トークン（カンマ区切り）
-		std::string token;
-		//カラム数のカウンタ
-		int column_count = 0;
-		//カンマで区切られた文字列を格納
-		while(std::getline(line_stream, token, ','))
-		{
-			//トークンをfloatに変換
-			float token_float = std::stof(token);
-			//vectorに格納
-			data.push_back(token_float);
-			//カラム数をカウントする
-			column_count++;
-		}
-		//次元が未設定の時
-		if(dimension == 0)
-		{
-			//次元としてカラム数を設定する
-			dimension = column_count;
-		}
-	}
-	//CSVファイルのデータの行数 = 行列の列数
-	int data_length = data.size() / dimension;
-	
-	//学習データをDeviceMatrixとして初期化
-	DeviceMatrix dX(dimension, data_length, data);
-	*/
 	
 	//Normalizationを初期化して学習データで初期化
 	Normalization n;
@@ -1966,33 +1907,23 @@ TEST(NormalizationTest, csv)
 	DeviceMatrix nX = n.getPCAWhitening(dX);
 	
 	//白色化の結果を結果のCSV出力
-	std::vector<float> data_w = nX.get();
+	writeToCsvFile("../../../anaconda3/test_anaconda/data_pca_w_cpp.csv", nX);
 	
-	std::string result_csv_file_name("../../../anaconda3/test_anaconda/data_w_cpp.csv");
-	std::ofstream result_csv_file(result_csv_file_name.c_str());
-	for(int i = 0; i < data_length; i++)
-	{
-		for(int j = 0; j < dimension; j++)
-		{
-			result_csv_file << data_w[i * dimension + j];
-			if(j != (dimension - 1))
-			{
-				result_csv_file << ',';
-			}
-		}
-		result_csv_file << std::endl;
-	}
 	
-	printVector(dX.get(),                            "dX                ");
-	printVector(nX.get(),                            "nX                ");
+	//printVector(dX.get(),                            "dX                ");
+	//printVector(nX.get(),                            "nX                ");
 	printVector(n.getMean().get(),                   "Mean              ");
 	printVector(n.getVarCovMatrix().get(),           "VarCovMatrix      ");
 	printVector(n.getVarCovEigenValue().get(),       "VarCovEigenValue  ");
 	printVector(n.getVarCovEigenVector().get(),      "VarCovEigenVector ");
 	printVector(n.getPCAWhiteningMatrix().get(),     "PCAWhiteningMatrix");
 	
-	//TODO jupyter-notebookの結果とを比較して成否を判定する処理を追加するまではfalseにする
-	EXPECT_TRUE(false);
+	//jupyter-notebookの結果とを比較して成否を判定する
+	DeviceMatrix nY;
+	readFromCsvFile("../../../anaconda3/test_anaconda/data_pca_w_py.csv", nY);
+	
+	compareVector(nX.get(), nY.get());
+	
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -2154,6 +2085,8 @@ TEST(AutoEncoderTest, Simple)
 	AutoEncoder a;
 	a.init(normarize_input, 5, 10);
 	
+	printVector(a.getWhiteningMatrix().get(), "whiteningMatrix");
+	
 	//学習用データ
 	std::vector<float> minibatch_input_base(20);
 	for(int i = 0; i < 10; i++)
@@ -2212,8 +2145,8 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
+	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
 	//::testing::GTEST_FLAG(filter)="*CuSolverDnTest*";
@@ -2224,6 +2157,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
 	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
+	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);

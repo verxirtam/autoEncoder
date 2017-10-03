@@ -58,4 +58,8 @@ public:
 		
 		return normalization.getInversePCAWhitening(nY);
 	}
+	DeviceMatrix getWhiteningMatrix() const
+	{
+		return normalization.getPCAWhiteningMatrix();
+	}
 };

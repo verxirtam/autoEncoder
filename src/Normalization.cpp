@@ -35,7 +35,8 @@ DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, co
 	float alpha = - 1.0f;
 	Sger(&alpha, mean, _1N, Y);
 	
-	//Y = whiteningMatrix * Y;
+	//Z = 1.0f * whiteningMatrix * Y + 0.0f * Z;
+	//  = whiteningMatrix * Y;
 	//  = whiteningMatrix * (X - mean * _1N^T);
 	DeviceMatrix Z(D, N);
 	alpha = 1.0f;
