@@ -30,25 +30,59 @@ DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, co
 	//whiteningMatrix * (X - mean * _1N^T)
 	
 	DeviceMatrix Y = X;
-	//Y = X - mean * _1N^T;
-	//  = (-1.0f) * mean * _1N^T + Y;
+	// Y = (-1.0f) * mean * _1N^T + Y;
+	//   = X - mean * _1N^T;
 	float alpha = - 1.0f;
 	Sger(&alpha, mean, _1N, Y);
 	
-	//Z = 1.0f * whiteningMatrix * Y + 0.0f * Z;
-	//  = whiteningMatrix * Y;
-	//  = whiteningMatrix * (X - mean * _1N^T);
-	DeviceMatrix Z(D, N);
+	// nX = 1.0f * whiteningMatrix * Y + 0.0f * nX;
+	//    = whiteningMatrix * Y;
+	//    = whiteningMatrix * (X - mean * _1N^T);
+	DeviceMatrix nX(D, N);
 	alpha = 1.0f;
 	float beta = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, Z);
+	Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, nX);
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
-	return Z;
+	return nX;
 }
 
+//白色化の逆変換を行う
+DeviceMatrix Normalization::getInverseWhitening(const DeviceMatrix& inverseWhiteningMatrix, const DeviceMatrix& nX) const
+{
+	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
+	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	
+	unsigned int D = nX.getRowCount();
+	unsigned int N = nX.getColumnCount();
+	auto _1N = DeviceVector::get1Vector(N);//TODO いちいち1Vector作るのは無駄
+	//                          nX                = whiteningMatrix * (X - mean * _1N^T)
+	// inverseWhiteningMatrix * nX                = X - mean * _1N^T
+	// inverseWhiteningMatrix * nX + mean * _1N^T = X
+	// ->
+	// X = inverseWhiteningMatrix * nX + mean * _1N^T
+	
+	// Y = 1.0f * inverseWhiteningMatrix * nX + 0.0f * Y;
+	//   = inverseWhiteningMatrix * nX;
+	DeviceMatrix Y(D, N);
+	float alpha = 1.0f;
+	float  beta = 0.0f;
+	Sgemm(&alpha, CUBLAS_OP_N, inverseWhiteningMatrix, CUBLAS_OP_N, nX, &beta, Y);
+	
+	DeviceMatrix X = Y;
+	// X = 1.0f * mean * _1N^T + Y;
+	//   = Y + mean * _1N^T;
+	//   = inverseWhiteningMatrix * nX + mean * _1N^T;
+	alpha = 1.0f;
+	Sger(&alpha, mean, _1N, X);
+	
+	//NULLストリームの完了待ち
+	CUDA_CALL(cudaStreamSynchronize(0));
+	
+	return X;
+}
 
 //正規化用のデータを元に平均・白色化の変換行列を作成する
 void Normalization::init(const DeviceMatrix& X)

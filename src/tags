@@ -244,7 +244,10 @@ getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:C
 getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
 getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getInversePCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInversePCAWhiteningMatrix(void) const$/;"	f	class:Normalization
+getInverseWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
 getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getInverseZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
@@ -266,6 +269,7 @@ getWTDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWTDelta() co
 getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
 getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation
 getWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const$/;"	f	class:Normalization
+getWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getWhiteningMatrix() const$/;"	f	class:AutoEncoder
 getZ	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getZ() const$/;"	f	class:Backpropagation
 getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
 getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization

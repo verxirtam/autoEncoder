@@ -2085,25 +2085,52 @@ TEST(AutoEncoderTest, Simple)
 	AutoEncoder a;
 	a.init(normarize_input, 5, 10);
 	
-	printVector(a.getWhiteningMatrix().get(), "whiteningMatrix");
+	printVector(a.getWhiteningMatrix().get(),        "       whiteningMatrix");
+	printVector(a.getInverseWhiteningMatrix().get(), "inverseWhiteningMatrix");
+	
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
 	//学習用データ
 	std::vector<float> minibatch_input_base(20);
-	for(int i = 0; i < 10; i++)
-	{
-		float x = static_cast<float>(i) + 0.5f;
-		minibatch_input_base[2 * i    ] = x;
-		minibatch_input_base[2 * i + 1] = x * x;
-	}
 	
 	//学習用データのDeviceMatrix
 	DeviceMatrix minibatch_input(2, 10);
-	minibatch_input.set(minibatch_input_base);
 	
 	//学習の実行
-	for(int i = 0; i < 10000; i++)
+	for(long i = 0l; i < 100000l; i++)
 	{
-		a.learning(minibatch_input);
+		//学習用データの生成
+		for(int j = 0; j < 10; j++)
+		{
+			float x = 10.0f * urd(engine);
+			minibatch_input_base[2 * j    ] = x;
+			minibatch_input_base[2 * j + 1] = x * x;
+		}
+		minibatch_input.set(minibatch_input_base);
+		
+		//学習の実行
+		if((i % 10000l) == 0l)
+		{
+			//CSVファイルに出力する
+			std::stringstream input_csv_file_name("");
+			input_csv_file_name << "AutoEncoderTest_";
+			input_csv_file_name << std::setfill('0') << std::setw(5) << i << "_input.csv";
+			writeToCsvFile(input_csv_file_name.str(), minibatch_input);
+			
+			auto output = a.learning(minibatch_input);
+			
+			std::stringstream output_csv_file_name("");
+			output_csv_file_name << "AutoEncoderTest_";
+			output_csv_file_name << std::setfill('0') << std::setw(5) << i << "_output.csv";
+			writeToCsvFile(output_csv_file_name.str(), output);
+		}
+		else
+		{
+			a.learning(minibatch_input);
+		}
 	}
 	//出力の取得
 	auto minibatch_output = a.learning(minibatch_input);
