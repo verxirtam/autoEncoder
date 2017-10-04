@@ -1,14 +1,14 @@
 <map id="Normalization::getInversePCAWhitening" name="Normalization::getInversePCAWhitening">
-<area shape="rect" id="node2" href="$classNormalization.html#ac3fa1a0904f79460e262e3569a79cc79" title="Normalization::getWhitening" alt="" coords="224,132,411,159"/>
-<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="691,5,874,32"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="689,56,876,83"/>
-<area shape="rect" id="node6" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="680,208,885,235"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="459,259,631,285"/>
-<area shape="rect" id="node10" href="$CuBlasFunction_8cpp.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="521,157,570,184"/>
-<area shape="rect" id="node13" href="$CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="512,107,579,133"/>
-<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="934,5,1125,32"/>
-<area shape="rect" id="node8" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="683,259,882,285"/>
-<area shape="rect" id="node9" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="935,259,1123,285"/>
-<area shape="rect" id="node11" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="695,157,870,184"/>
-<area shape="rect" id="node12" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="696,107,869,133"/>
+<area shape="rect" id="node2" href="$classNormalization.html#a3bce5559c372ba5029bbffc4a5c42ab0" title="Normalization::getInverse\lWhitening" alt="" coords="224,125,395,166"/>
+<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="675,5,858,32"/>
+<area shape="rect" id="node5" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="673,56,860,83"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="664,157,869,184"/>
+<area shape="rect" id="node7" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="443,259,615,285"/>
+<area shape="rect" id="node10" href="$CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="496,107,563,133"/>
+<area shape="rect" id="node12" href="$CuBlasFunction_8cpp.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="505,157,554,184"/>
+<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="918,5,1109,32"/>
+<area shape="rect" id="node8" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="667,259,866,285"/>
+<area shape="rect" id="node9" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="919,259,1107,285"/>
+<area shape="rect" id="node11" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="680,107,853,133"/>
+<area shape="rect" id="node13" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="679,208,854,235"/>
 </map>
