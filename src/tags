@@ -245,6 +245,7 @@ getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance(
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
 getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
 getInversePCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInversePCAWhiteningMatrix(void) const$/;"	f	class:Normalization
+getInverseWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getInverseWhitening(const DeviceMatrix& inverseWhiteningMatrix, const DeviceMatrix& nX) const$/;"	f	class:Normalization
 getInverseWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
 getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
 getInverseZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
