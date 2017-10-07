@@ -1672,6 +1672,8 @@ TEST(NormalizationTest, simple)
 	Normalization n;
 	//元のデータ
 	DeviceMatrix dX(2,3,{3.0f, 6.0f, 6.0f, 12.0f, 9.0f, 3.0f});
+	DeviceVector _1B = DeviceVector::get1Vector(dX.getColumnCount());
+	
 	//算出される値
 	std::vector<float> mean{6.0f, 7.0f};
 	std::vector<float> varcovmatrix{6.0f, -3.0f, -3.0f, 14.0f};
@@ -1719,7 +1721,7 @@ TEST(NormalizationTest, simple)
 	auto dP_pca = n.getPCAWhiteningMatrix().get();
 	
 	//白色化を実行
-	auto dY_pca =  n.getPCAWhitening(dX).get();
+	auto dY_pca =  n.getPCAWhitening(dX, _1B).get();
 	//結果を比較
 	EXPECT_EQ(compareVector(P_pca, dP_pca) < 0.0625f, true);
 	printVector(  P_pca, " P_pca");
@@ -1734,7 +1736,7 @@ TEST(NormalizationTest, simple)
 	//白色化変換行列を取得
 	auto dP_zca = n.getZCAWhiteningMatrix().get();
 	//白色化を実行
-	auto dY_zca = n.getZCAWhitening(dX).get();
+	auto dY_zca = n.getZCAWhitening(dX, _1B).get();
 	//結果を比較
 	EXPECT_EQ(compareVector(P_zca, dP_zca) < 0.0625f, true);
 	printVector(  P_zca, " P_zca");
@@ -1771,6 +1773,7 @@ TEST_P(NormalizationGeneralTest, test)
 	unsigned int N = std::get<1>(GetParam());
 	//std::cout << "(D, N) = (" << D << ", " << N << ")" << std::endl;
 	DeviceMatrix X(D, N);
+	DeviceVector _1B = DeviceVector::get1Vector(X.getColumnCount());
 	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), X.getAddress(), D * N));
 	if(D == 2)
 	{
@@ -1803,7 +1806,7 @@ TEST_P(NormalizationGeneralTest, test)
 	//printVector(n.getVarCovMatrix().get(),       "VarCovMatrix      ");
 	//printVector(n.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix");
 	
-	DeviceMatrix Y_pca = n.getPCAWhitening(X);
+	DeviceMatrix Y_pca = n.getPCAWhitening(X, _1B);
 	//printVector(Y_pca.get(),                     "Y_pca"             );
 	
 	float max_error = 0.0625;
@@ -1837,7 +1840,7 @@ TEST_P(NormalizationGeneralTest, test)
 		printVector(n_pca.getPCAWhiteningMatrix().get(), "PCAWhiteningMatrix_pca");
 	}
 	
-	DeviceMatrix Y_zca = n.getZCAWhitening(X);
+	DeviceMatrix Y_zca = n.getZCAWhitening(X, _1B);
 	//printVector(Y_zca.get(),                     "Y_zca"             );
 	
 	Normalization n_zca;
@@ -1897,6 +1900,7 @@ TEST(NormalizationTest, csv)
 	
 	DeviceMatrix dX;
 	readFromCsvFile(csv_file_name, dX);
+	auto _1B = DeviceVector::get1Vector(dX.getColumnCount());
 	
 	//Normalizationを初期化して学習データで初期化
 	Normalization n;
@@ -1904,7 +1908,7 @@ TEST(NormalizationTest, csv)
 	n.init(dX);
 	
 	//初期値自体の白色化の実行
-	DeviceMatrix nX = n.getPCAWhitening(dX);
+	DeviceMatrix nX = n.getPCAWhitening(dX, _1B);
 	
 	//白色化の結果を結果のCSV出力
 	writeToCsvFile("../../../anaconda3/test_anaconda/data_pca_w_cpp.csv", nX);

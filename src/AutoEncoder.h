@@ -27,11 +27,13 @@ private:
 	Normalization normalization;
 	const unsigned int layerCount;
 	Backpropagation backpropagation;
+	DeviceVector _1B;
 public:
 	AutoEncoder():
 		normalization(),
 		layerCount(3),
-		backpropagation(layerCount)
+		backpropagation(layerCount),
+		_1B()
 	{
 		
 	}
@@ -44,19 +46,21 @@ public:
 		//BPの初期化を行う
 		unsigned int n = normarize_input.getRowCount();
 		backpropagation.init({n, layer_size, n}, minibatch_size);
+		//ミニバッチの正規化に使用する1Vectorの初期化
+		_1B = DeviceVector::get1Vector(minibatch_size);
 	}
 	//X : ミニバッチ
 	DeviceMatrix learning(const DeviceMatrix& X)
 	{
 		//正規化されたミニバッチ
-		DeviceMatrix nX = normalization.getPCAWhitening(X);
+		DeviceMatrix nX = normalization.getPCAWhitening(X, _1B);
 		
 		DeviceMatrix nY;
 		backpropagation.forward(nX, nY);
 		backpropagation.back(nX);
 		backpropagation.updateParameter();
 		
-		return normalization.getInversePCAWhitening(nY);
+		return normalization.getInversePCAWhitening(nY, _1B);
 	}
 	DeviceMatrix getWhiteningMatrix() const
 	{

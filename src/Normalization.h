@@ -51,9 +51,19 @@ private:
 	void invByElement(DeviceVector& W);
 	
 	//白色化を行う
-	DeviceMatrix getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const;
+	DeviceMatrix getWhitening
+		(
+			const DeviceMatrix& whiteningMatrix,
+			const DeviceMatrix& X,
+			const DeviceVector& _1B
+		) const;
 	//白色化の逆変換を行う
-	DeviceMatrix getInverseWhitening(const DeviceMatrix& inverseWhiteningMatrix, const DeviceMatrix& nX) const;
+	DeviceMatrix getInverseWhitening
+		(
+			const DeviceMatrix& inverseWhiteningMatrix,
+			const DeviceMatrix& nX,
+			const DeviceVector& _1B
+		) const;
 public:
 	//コンストラクタ
 	Normalization():
@@ -101,14 +111,14 @@ public:
 		return inversePCAWhiteningMatrix;
 	}
 	//PCA白色化を行う
-	DeviceMatrix getPCAWhitening(const DeviceMatrix& X) const
+	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const
 	{
-		return getWhitening(pcaWhiteningMatrix, X);
+		return getWhitening(pcaWhiteningMatrix, X, _1B);
 	}
 	//PCA白色化の逆変換を行う
-	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const
+	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const
 	{
-		return getInverseWhitening(inversePCAWhiteningMatrix, X);
+		return getInverseWhitening(inversePCAWhiteningMatrix, X, _1B);
 	}
 	//ZCA白色化の変換行列を取得する
 	const DeviceMatrix& getZCAWhiteningMatrix(void) const
@@ -121,14 +131,14 @@ public:
 		return inverseZCAWhiteningMatrix;
 	}
 	//ZCA白色化を行う
-	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const
+	DeviceMatrix getZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const
 	{
-		return getWhitening(zcaWhiteningMatrix, X);
+		return getWhitening(zcaWhiteningMatrix, X, _1B);
 	}
 	//ZCA白色化の逆変換を行う
-	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const
+	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const
 	{
-		return getWhitening(inverseZCAWhiteningMatrix, X);
+		return getInverseWhitening(inverseZCAWhiteningMatrix, X, _1B);
 	}
 };
 

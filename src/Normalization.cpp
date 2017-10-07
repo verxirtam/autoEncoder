@@ -19,26 +19,31 @@
 
 
 //白色化を行う
-DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const
+DeviceMatrix Normalization::getWhitening
+	(
+		const DeviceMatrix& whiteningMatrix,
+		const DeviceMatrix& X,
+		const DeviceVector& _1B
+	) const
 {
 	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
 	unsigned int D = X.getRowCount();
-	unsigned int N = X.getColumnCount();
-	auto _1N = DeviceVector::get1Vector(N);//TODO いちいち1Vector作るのは無駄
-	//whiteningMatrix * (X - mean * _1N^T)
+	unsigned int B = X.getColumnCount();
+	//auto _1B = DeviceVector::get1Vector(B);//TODO いちいち1Vector作るのは無駄
+	//whiteningMatrix * (X - mean * _1B^T)
 	
 	DeviceMatrix Y = X;
-	// Y = (-1.0f) * mean * _1N^T + Y;
-	//   = X - mean * _1N^T;
+	// Y = (-1.0f) * mean * _1B^T + Y;
+	//   = X - mean * _1B^T;
 	float alpha = - 1.0f;
-	Sger(&alpha, mean, _1N, Y);
+	Sger(&alpha, mean, _1B, Y);
 	
 	// nX = 1.0f * whiteningMatrix * Y + 0.0f * nX;
 	//    = whiteningMatrix * Y;
-	//    = whiteningMatrix * (X - mean * _1N^T);
-	DeviceMatrix nX(D, N);
+	//    = whiteningMatrix * (X - mean * _1B^T);
+	DeviceMatrix nX(D, B);
 	alpha = 1.0f;
 	float beta = 0.0f;
 	Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, nX);
@@ -50,33 +55,38 @@ DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, co
 }
 
 //白色化の逆変換を行う
-DeviceMatrix Normalization::getInverseWhitening(const DeviceMatrix& inverseWhiteningMatrix, const DeviceMatrix& nX) const
+DeviceMatrix Normalization::getInverseWhitening
+	(
+		const DeviceMatrix& inverseWhiteningMatrix,
+		const DeviceMatrix& nX,
+		const DeviceVector& _1B
+	) const
 {
 	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
 	unsigned int D = nX.getRowCount();
-	unsigned int N = nX.getColumnCount();
-	auto _1N = DeviceVector::get1Vector(N);//TODO いちいち1Vector作るのは無駄
-	//                          nX                = whiteningMatrix * (X - mean * _1N^T)
-	// inverseWhiteningMatrix * nX                = X - mean * _1N^T
-	// inverseWhiteningMatrix * nX + mean * _1N^T = X
+	unsigned int B = nX.getColumnCount();
+	//auto _1B = DeviceVector::get1Vector(B);//TODO いちいち1Vector作るのは無駄
+	//                          nX                = whiteningMatrix * (X - mean * _1B^T)
+	// inverseWhiteningMatrix * nX                = X - mean * _1B^T
+	// inverseWhiteningMatrix * nX + mean * _1B^T = X
 	// ->
-	// X = inverseWhiteningMatrix * nX + mean * _1N^T
+	// X = inverseWhiteningMatrix * nX + mean * _1B^T
 	
 	// Y = 1.0f * inverseWhiteningMatrix * nX + 0.0f * Y;
 	//   = inverseWhiteningMatrix * nX;
-	DeviceMatrix Y(D, N);
+	DeviceMatrix Y(D, B);
 	float alpha = 1.0f;
 	float  beta = 0.0f;
 	Sgemm(&alpha, CUBLAS_OP_N, inverseWhiteningMatrix, CUBLAS_OP_N, nX, &beta, Y);
 	
 	DeviceMatrix X = Y;
-	// X = 1.0f * mean * _1N^T + Y;
-	//   = Y + mean * _1N^T;
-	//   = inverseWhiteningMatrix * nX + mean * _1N^T;
+	// X = 1.0f * mean * _1B^T + Y;
+	//   = Y + mean * _1B^T;
+	//   = inverseWhiteningMatrix * nX + mean * _1B^T;
 	alpha = 1.0f;
-	Sger(&alpha, mean, _1N, X);
+	Sger(&alpha, mean, _1B, X);
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));

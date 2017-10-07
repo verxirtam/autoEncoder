@@ -186,6 +186,7 @@ TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:NormalizationGeneralTest
 TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:NormalizationTest
 TrackData	TrackData.h	/^class TrackData$/;"	c
 WTdelta	Backpropagation.h	/^	std::vector<DeviceMatrix> WTdelta;$/;"	m	class:Backpropagation
+_1B	AutoEncoder.h	/^	DeviceVector _1B;$/;"	m	class:AutoEncoder
 _1B	Backpropagation.h	/^	DeviceVector _1B;$/;"	m	class:Backpropagation
 altitude	TrackData.h	/^	float altitude;$/;"	m	class:TrackData
 back	Backpropagation.cpp	/^void Backpropagation::back(const DeviceMatrix& D)$/;"	f	class:Backpropagation
@@ -243,17 +244,17 @@ getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:C
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager
 getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
-getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
 getInversePCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInversePCAWhiteningMatrix(void) const$/;"	f	class:Normalization
-getInverseWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getInverseWhitening(const DeviceMatrix& inverseWhiteningMatrix, const DeviceMatrix& nX) const$/;"	f	class:Normalization
+getInverseWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getInverseWhitening$/;"	f	class:Normalization
 getInverseWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
-getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
 getInverseZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f
-getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
 getStream	CudaManager.h	/^	cudaStream_t getStream(unsigned int stream_index)$/;"	f	class:CudaManager
@@ -269,11 +270,11 @@ getVarCovMatrix	Normalization.h	/^	const DeviceMatrix& getVarCovMatrix(void) con
 getWTDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWTDelta() const$/;"	f	class:Backpropagation
 getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
 getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation
-getWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getWhitening(const DeviceMatrix& whiteningMatrix, const DeviceMatrix& X) const$/;"	f	class:Normalization
+getWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getWhitening$/;"	f	class:Normalization
 getWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getWhiteningMatrix() const$/;"	f	class:AutoEncoder
 getZ	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getZ() const$/;"	f	class:Backpropagation
 getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
-getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X) const$/;"	f	class:Normalization
+getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
 getZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 handle	CuBlasManager.h	/^	cublasHandle_t handle;$/;"	m	class:CuBlasManager
 handle	CuSolverDnManager.h	/^	cusolverDnHandle_t handle;$/;"	m	class:CuSolverDnManager
