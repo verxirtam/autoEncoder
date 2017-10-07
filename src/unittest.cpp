@@ -2072,6 +2072,101 @@ protected:
 //ミニバッチに対応したBackpropagationのテスト
 TEST(AutoEncoderTest, Simple)
 {
+	//学習データの次元
+	int dimension = 3;
+	//隠れ層のサイズ
+	int layer_size = 10;
+	//ミニバッチの個数
+	int minibatch_size = 100;
+	
+	//正規化用のデータのサイズ
+	int normarize_data_size = 100;
+	
+	//学習の回数
+	int learning_count = 1000;
+	
+	
+	//データ生成部は特定の次元限定の処理なので
+	//次元を変更した時は合わせて変更すること
+	EXPECT_EQ(dimension, 3);
+	//正規化用データ
+	std::vector<float> normarize_input_base(dimension * normarize_data_size);
+	for(int i = 0; i < normarize_data_size; i++)
+	{
+		int j_max = static_cast<int>(std::sqrt(normarize_data_size));
+		int k_max = normarize_data_size / j_max;
+		int j = i % j_max;
+		int k = i / j_max;
+		float t = static_cast<float>(j) / static_cast<float>(j_max);
+		float u = static_cast<float>(k) / static_cast<float>(k_max);
+		float theta = t * 2.0f * 3.14159265358979f;
+		float x = t;//std::cos(theta);
+		float y = u;//std::sin(theta);
+		float z = 0.5f * t + u;//u;
+		normarize_input_base[dimension * i    ] = x;
+		normarize_input_base[dimension * i + 1] = y;
+		normarize_input_base[dimension * i + 2] = z;
+	}
+	
+	//正規化用データのDeviceMatrix
+	DeviceMatrix normarize_input(dimension, normarize_data_size);
+	normarize_input.set(normarize_input_base);
+	
+	AutoEncoder a;
+	a.init(normarize_input, layer_size, minibatch_size);
+	
+	printVector(a.getWhiteningMatrix().get(),        "       whiteningMatrix");
+	printVector(a.getInverseWhiteningMatrix().get(), "inverseWhiteningMatrix");
+	
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	//学習用データ
+	std::vector<float> minibatch_input_base(dimension * minibatch_size);
+	
+	//学習用データのDeviceMatrix
+	DeviceMatrix minibatch_input(dimension, minibatch_size);
+	
+	//データ生成部は特定の次元限定の処理なので
+	//次元を変更した時は合わせて変更すること
+	EXPECT_EQ(dimension, 3);
+	//学習の実行
+	for(int n = 0; n < learning_count; n++)
+	{
+		//学習用データの生成
+		for(int i = 0; i < minibatch_size; i++)
+		{
+			float t = urd(engine);
+			float u = urd(engine);
+			float theta = t * 2.0f * 3.14159265358979f;
+			float x = t;//std::cos(theta);
+			float y = u;//std::sin(theta);
+			float z = 0.5f * t + u;//u;
+			minibatch_input_base[dimension * i    ] = x;
+			minibatch_input_base[dimension * i + 1] = y;
+			minibatch_input_base[dimension * i + 2] = z;
+		}
+		minibatch_input.set(minibatch_input_base);
+		
+		//学習の実行
+		a.learning(minibatch_input);
+	}
+	
+	//出力の取得
+	auto minibatch_output = a.learning(minibatch_input);
+	
+	writeToCsvFile("../data/AutoEncoderTest_Simple_0input.csv",  minibatch_input );
+	writeToCsvFile("../data/AutoEncoderTest_Simple_1output.csv", minibatch_output);
+	
+	compareVector(minibatch_input.get(), minibatch_output.get());
+	
+}
+
+//ミニバッチに対応したBackpropagationのテスト
+TEST(AutoEncoderTest, csv)
+{
 	
 	//正規化用データ
 	std::vector<float> normarize_input_base(20);
