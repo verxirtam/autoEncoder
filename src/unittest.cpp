@@ -1896,7 +1896,7 @@ TEST(NormalizationTest, csv)
 {
 	//CSVファイルから学習データ(行列)の読み込み
 	//CSVファイル
-	std::string csv_file_name("../../../anaconda3/test_anaconda/data.csv");
+	std::string csv_file_name("../../../anaconda3/test_anaconda/csv/data.csv");
 	
 	DeviceMatrix dX;
 	readFromCsvFile(csv_file_name, dX);
@@ -1911,7 +1911,7 @@ TEST(NormalizationTest, csv)
 	DeviceMatrix nX = n.getPCAWhitening(dX, _1B);
 	
 	//白色化の結果を結果のCSV出力
-	writeToCsvFile("../../../anaconda3/test_anaconda/data_pca_w_cpp.csv", nX);
+	writeToCsvFile("../../../anaconda3/test_anaconda/csv/data_pca_w_cpp.csv", nX);
 	
 	
 	//printVector(dX.get(),                            "dX                ");
@@ -1924,7 +1924,7 @@ TEST(NormalizationTest, csv)
 	
 	//jupyter-notebookの結果とを比較して成否を判定する
 	DeviceMatrix nY;
-	readFromCsvFile("../../../anaconda3/test_anaconda/data_pca_w_py.csv", nY);
+	readFromCsvFile("../../../anaconda3/test_anaconda/csv/data_pca_w_py.csv", nY);
 	
 	compareVector(nX.get(), nY.get());
 	
@@ -2083,7 +2083,7 @@ TEST(AutoEncoderTest, Simple)
 	int normarize_data_size = 100;
 	
 	//学習の回数
-	int learning_count = 20000;
+	int learning_count = 10000;
 	
 	
 	//データ生成部は特定の次元限定の処理なので
@@ -2272,11 +2272,11 @@ TEST(AutoEncoderTest, csv)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
