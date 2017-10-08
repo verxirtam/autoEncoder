@@ -2075,7 +2075,7 @@ TEST(AutoEncoderTest, Simple)
 	//学習データの次元
 	int dimension = 3;
 	//隠れ層のサイズ
-	int layer_size = 10;
+	int layer_size = 2;
 	//ミニバッチの個数
 	int minibatch_size = 100;
 	
@@ -2083,7 +2083,7 @@ TEST(AutoEncoderTest, Simple)
 	int normarize_data_size = 100;
 	
 	//学習の回数
-	int learning_count = 1000;
+	int learning_count = 20000;
 	
 	
 	//データ生成部は特定の次元限定の処理なので
@@ -2099,7 +2099,7 @@ TEST(AutoEncoderTest, Simple)
 		int k = i / j_max;
 		float t = static_cast<float>(j) / static_cast<float>(j_max);
 		float u = static_cast<float>(k) / static_cast<float>(k_max);
-		float theta = t * 2.0f * 3.14159265358979f;
+		//float theta = t * 2.0f * 3.14159265358979f;
 		float x = t;//std::cos(theta);
 		float y = u;//std::sin(theta);
 		float z = 0.5f * t + u;//u;
@@ -2140,7 +2140,7 @@ TEST(AutoEncoderTest, Simple)
 		{
 			float t = urd(engine);
 			float u = urd(engine);
-			float theta = t * 2.0f * 3.14159265358979f;
+			//float theta = t * 2.0f * 3.14159265358979f;
 			float x = t;//std::cos(theta);
 			float y = u;//std::sin(theta);
 			float z = 0.5f * t + u;//u;
@@ -2160,7 +2160,7 @@ TEST(AutoEncoderTest, Simple)
 	writeToCsvFile("../data/AutoEncoderTest_Simple_0input.csv",  minibatch_input );
 	writeToCsvFile("../data/AutoEncoderTest_Simple_1output.csv", minibatch_output);
 	
-	compareVector(minibatch_input.get(), minibatch_output.get());
+	compareVector(minibatch_input.get(), minibatch_output.get(), 0.125f);
 	
 }
 
@@ -2261,7 +2261,8 @@ TEST(AutoEncoderTest, csv)
 		std::cout << minibatch_output_vector[2 * i    ] << "\t";
 		std::cout << minibatch_output_vector[2 * i + 1] << std::endl;
 	}
-	EXPECT_TRUE(false);//今の処理では学習していないので注意喚起のために失敗させる
+	//入力と出力の比較
+	compareVector(minibatch_input_vector, minibatch_output_vector, 1.0f);
 }
 
 

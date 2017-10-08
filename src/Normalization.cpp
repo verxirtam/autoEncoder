@@ -31,8 +31,8 @@ DeviceMatrix Normalization::getWhitening
 	
 	unsigned int D = X.getRowCount();
 	unsigned int B = X.getColumnCount();
-	//auto _1B = DeviceVector::get1Vector(B);//TODO いちいち1Vector作るのは無駄
-	//whiteningMatrix * (X - mean * _1B^T)
+	
+	// nX = whiteningMatrix * (X - mean * _1B^T)
 	
 	DeviceMatrix Y = X;
 	// Y = (-1.0f) * mean * _1B^T + Y;
@@ -67,7 +67,7 @@ DeviceMatrix Normalization::getInverseWhitening
 	
 	unsigned int D = nX.getRowCount();
 	unsigned int B = nX.getColumnCount();
-	//auto _1B = DeviceVector::get1Vector(B);//TODO いちいち1Vector作るのは無駄
+	
 	//                          nX                = whiteningMatrix * (X - mean * _1B^T)
 	// inverseWhiteningMatrix * nX                = X - mean * _1B^T
 	// inverseWhiteningMatrix * nX + mean * _1B^T = X
