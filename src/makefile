@@ -71,8 +71,8 @@ TESTOPTION := --gtest_color=yes
 #依存関係ファイル
 DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)
 
-#gprof2dot.pyのパス
-GPROF2DOT := ~/tools/gprof2dot/gprof2dot.py
+#gprof2dot.pyのコマンド
+GPROF2DOT := ~/tools/gprof2dot/gprof2dot.py -s
 
 #nvprof_graph.shのパス
 NVPROFGRAPH := ~/tools/nvprof_graph/nvprof_graph.sh
