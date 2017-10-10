@@ -2083,7 +2083,7 @@ TEST(AutoEncoderTest, Simple)
 	int normarize_data_size = 100;
 	
 	//学習の回数
-	int learning_count = 10000;
+	int learning_count = 500;
 	
 	
 	//データ生成部は特定の次元限定の処理なので
@@ -2201,7 +2201,7 @@ TEST(AutoEncoderTest, csv)
 	DeviceMatrix minibatch_input(2, 10);
 	
 	//学習の実行
-	for(int i = 0; i < 20000; i++)
+	for(int i = 0; i < 1000; i++)
 	{
 		//学習用データの生成
 		for(int j = 0; j < 10; j++)
@@ -2272,11 +2272,12 @@ TEST(AutoEncoderTest, csv)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";

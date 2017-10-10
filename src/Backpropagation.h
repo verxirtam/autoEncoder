@@ -111,7 +111,7 @@ public:
 		layerCount(layer_count),
 		miniBatchSize(1),
 		unitCount(),
-		epsilon(0.0625f * 0.0625f),
+		epsilon(0.125f),//0.0625f * 0.0625f),
 		u(),
 		z(),
 		weight(),
