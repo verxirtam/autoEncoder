@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gamma',['gamma',['../classBackpropagation.html#ad2a6920472dc3a1c5c285d7b11bd8d1b',1,'Backpropagation']]],
   ['generator',['generator',['../classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a',1,'CuRandManager']]],
   ['get',['get',['../classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49',1,'DeviceMatrix::get(float *const host) const '],['../classDeviceMatrix.html#a2813fb81c0fc36af635ad5df83f4051f',1,'DeviceMatrix::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceMatrix.html#a768bbfeecba310e0cd3b9c71a586e9b1',1,'DeviceMatrix::get() const '],['../classDeviceVector.html#ab03314e09ef894fce63874fdee42041c',1,'DeviceVector::get(float *const host) const '],['../classDeviceVector.html#aa8532322d34cb26b623d58e4577ddcb8',1,'DeviceVector::get(std::vector&lt; float &gt; &amp;host) const '],['../classDeviceVector.html#a06ede5f67f6ccbc52e0b94e43e1da736',1,'DeviceVector::get() const ']]],
   ['get0matrix',['get0Matrix',['../classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810',1,'DeviceMatrix']]],
