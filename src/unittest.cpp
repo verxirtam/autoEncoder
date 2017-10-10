@@ -2272,11 +2272,11 @@ TEST(AutoEncoderTest, csv)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";

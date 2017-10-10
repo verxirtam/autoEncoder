@@ -36,6 +36,7 @@ private:
 	unsigned int miniBatchSize;
 	std::vector<unsigned int> unitCount;
 	float epsilon;
+	float gamma;
 	std::vector<DeviceMatrix> u;
 	std::vector<DeviceMatrix> z;
 	std::vector<DeviceMatrix> weight;
@@ -44,6 +45,8 @@ private:
 	std::vector<DeviceVector> dEdb;
 	std::vector<DeviceMatrix> delta;
 	std::vector<DeviceMatrix> WTdelta;
+	std::vector<DeviceMatrix> deltaWeight;
+	std::vector<DeviceVector> deltaBias;
 	DeviceVector _1B;
 	//活性化関数
 	float f(const float& x)
@@ -112,6 +115,7 @@ public:
 		miniBatchSize(1),
 		unitCount(),
 		epsilon(0.125f),//0.0625f * 0.0625f),
+		gamma(0.875),
 		u(),
 		z(),
 		weight(),
@@ -120,6 +124,8 @@ public:
 		dEdb(),
 		delta(),
 		WTdelta(),
+		deltaWeight(),
+		deltaBias(),
 		_1B()
 	{
 		this->setSubStreamCount(4);

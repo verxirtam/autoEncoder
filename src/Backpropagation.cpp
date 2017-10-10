@@ -86,6 +86,8 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 	dEdb.clear();
 	WTdelta.clear();
 	delta.clear();
+	deltaWeight.clear();
+	deltaBias.clear();
 
 	for(unsigned int l = 0; l < layerCount; l++)
 	{
@@ -107,6 +109,8 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			dEdb.push_back(   DeviceVector{0.0f}        );
 			WTdelta.push_back(DeviceMatrix(1, 1, {0.0f}));
 			delta.push_back(  DeviceMatrix(1, 1, {0.0f}));
+			deltaWeight.push_back( DeviceMatrix(1, 1, {0.0f}));
+			deltaBias.push_back(   DeviceVector{0.0f}        );
 		}
 		else
 		{
@@ -117,6 +121,8 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			dEdb.push_back(   DeviceVector(unitCount[l]));
 			WTdelta.push_back(DeviceMatrix(unitCount[l-1], miniBatchSize));
 			delta.push_back(  DeviceMatrix(unitCount[l], miniBatchSize));
+			deltaWeight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
+			deltaBias.push_back(   DeviceVector(unitCount[l]));
 		}
 	}
 	
@@ -124,6 +130,21 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 	
 	//weightとbiasをランダムに初期化する
 	this->initRandom();
+	
+	//deltaWeightを0.0fで初期化
+	for(DeviceMatrix& dw : deltaWeight)
+	{
+		unsigned int N = dw.getRowCount();
+		unsigned int M = dw.getColumnCount();
+		dw.set(std::vector<float>(N * M, 0.0f));
+	}
+	//deltaBiasを0.0fで初期化
+	for(DeviceVector& db : deltaBias)
+	{
+		unsigned int N = db.getDimension();
+		db.set(std::vector<float>(N, 0.0f));
+	}
+
 }
 
 void Backpropagation::initRandom(void)
@@ -162,11 +183,7 @@ void Backpropagation::initRandom(void)
 	for(auto&& b : bias)
 	{
 		unsigned int N = b.getDimension();
-		std::vector<float> h_b;
-		for(unsigned int i =0; i < N; i++)
-		{
-			h_b.push_back(0.0f);
-		}
+		std::vector<float> h_b(N, 0.0f);
 		b.set(h_b);
 	}
 }
@@ -260,37 +277,71 @@ void Backpropagation::updateParameter()
 		unsigned int si = (2 * l) % substream_count;
 		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
+		//モメンタム
+		//-----------------------------------------------
+		// deltaWeight[l] = gamma * deltaWeight[l] - epsilon * dEdW[l]
+		// weight[l] = weight[l] + deltaWeight[l]
+		
+		// deltaWeight[l] = gamma * deltaWeight[l] - epsilon * dEdW[l]
+		//                = gamma * deltaWeight[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T
+		//                = - (epsilon / B) * delta[l] * z[l - 1]^T + gamma * deltaWeight[l]
+		float alpha = - epsilon / miniBatchSize;
+		float beta = gamma;
+		Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, deltaWeight[l]);
+		// weight[l] = weight[l] + deltaWeight[l]
+		//           = 1.0f * weight[l] + 1.0f * deltaWeight[l]
+		alpha = 1.0f;
+		beta  = 1.0f;
+		Sgeam(&alpha, CUBLAS_OP_N, weight[l], &beta, CUBLAS_OP_N, deltaWeight[l], weight[l]);
+		//-----------------------------------------------
+		
+		
+		//モメンタムなし
+		//-----------------------------------------------
 		//W[l] = W[l] - epsilon * dEdW[l]
 		//     = W[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T
 		//     = W[l] - (epsilon / B) * delta[l] * z[l - 1]^T
 		//     = - (epsilon / B) * delta[l] * z[l - 1]^T + 1.0f * W[l]
-		float alpha = - epsilon / miniBatchSize;
-		float beta = 1.0f;
-		Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, weight[l]);
-		
-		//W[l] = W[l] - e * dEdW[l];
-		//<=> W[l] = - e * dEdW[l] + 1.0f *  W[l];
-		//TODO delete after debug
-		//alpha = - epsilon;
+		//alpha = - epsilon / miniBatchSize;
 		//beta = 1.0f;
-		//Sgeam(&alpha, CUBLAS_OP_N, dEdW[l], &beta, CUBLAS_OP_N, weight[l], weight[l]);
+		//Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, weight[l]);
+		//-----------------------------------------------
 		
 		//使用するStreamを設定
 		si = (2 * l + 1) % substream_count;
 		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
 		
+		//モメンタム
+		//-----------------------------------------------
+		// deltaBias[l] = gamma * deltaBias[l] - epsilon * dEdb[l]
+		// bias[l] = bias[l] + deltaBias[l]
+		
+		// deltaBias[l] = gamma * deltaBias[l] - epsilon * dEdb[l]
+		//              = gamma * deltaBias[l] - epsilon * ((1.0f / B) * delta[l] * _1B)
+		//              = gamma * deltaBias[l] - (epsilon / B) * delta[l] * _1B
+		//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]
+		alpha = - epsilon / miniBatchSize;
+		beta = 1.0f;
+		Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, deltaBias[l]);
+		
+		// bias[l] = bias[l] + deltaBias[l]
+		//         = 1.0f * deltaBias[l] + bias[l]
+		alpha = 1.0f;
+		Saxpy(&alpha, deltaBias[l], bias[l]);
+		//-----------------------------------------------
+		
+		
+		//モメンタムなし
+		//-----------------------------------------------
 		//b[l] = b[l] - epsilon * dEdb[l]
 		//     = b[l] - epsilon * ((1.0f / B) * delta[l] * _1B)
 		//     = b[l] - (epsilon / B) * delta[l] * _1B
 		//     = - (epsilon / B) * delta[l] * _1B + 1.0f * b[l]
-		alpha = - epsilon / miniBatchSize;
-		beta = 1.0f;
-		Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, bias[l]);
+		//alpha = - epsilon / miniBatchSize;
+		//beta = 1.0f;
+		//Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, bias[l]);
+		//-----------------------------------------------
 		
-		//b[l] = b[l] - e * dEdb[l];
-		//<=> b[l] = - e * dEdb[l] + b[l];
-		//TODO delete after debug
-		//Saxpy(&alpha, dEdb[l], bias[l]);
 	}
 	
 	//完了待ち
