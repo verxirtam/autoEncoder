@@ -1,8 +1,10 @@
 <map id="DnSsyevd" name="DnSsyevd">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,56,263,83"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,107,228,133"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="312,5,435,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="345,56,401,83"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="337,107,409,133"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="483,5,539,32"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,85,263,112"/>
+<area shape="rect" id="node9" href="$unittest_8cpp.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,136,228,163"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="312,35,435,61"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="345,85,401,112"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="337,136,409,163"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="552,5,608,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="483,57,677,98"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="725,64,781,91"/>
 </map>

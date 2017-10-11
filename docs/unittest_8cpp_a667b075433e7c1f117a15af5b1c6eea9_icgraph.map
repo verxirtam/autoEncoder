@@ -1,4 +1,6 @@
 <map id="compareVector" name="compareVector">
-<area shape="rect" id="node2" href="$unittest_8cpp.html#a80abf7edab0e422a14199efda31ec5f6" title="TEST_P" alt="" coords="165,5,237,32"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="173,56,229,83"/>
+<area shape="rect" id="node2" href="$unittest_8cpp.html#a80abf7edab0e422a14199efda31ec5f6" title="TEST_P" alt="" coords="227,5,299,32"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="235,56,291,83"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="165,107,360,149"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="408,115,464,141"/>
 </map>

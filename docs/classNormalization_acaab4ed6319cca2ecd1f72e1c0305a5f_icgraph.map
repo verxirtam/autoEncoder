@@ -1,8 +1,10 @@
 <map id="Normalization::getWhitening" name="Normalization::getWhitening">
-<area shape="rect" id="node2" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="241,56,455,83"/>
-<area shape="rect" id="node7" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="241,107,455,133"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="505,5,655,32"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="552,107,608,133"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="544,56,616,83"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="704,5,760,32"/>
+<area shape="rect" id="node2" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="241,85,455,112"/>
+<area shape="rect" id="node9" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="241,136,455,163"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="505,35,655,61"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="552,136,608,163"/>
+<area shape="rect" id="node8" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="544,85,616,112"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="773,5,829,32"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="704,57,899,98"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="947,64,1003,91"/>
 </map>

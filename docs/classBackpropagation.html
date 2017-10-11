@@ -135,8 +135,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac241a900cd0987d61b599e300522b477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9352a33ce03182eb34c37cb607bcaf83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a9352a33ce03182eb34c37cb607bcaf83">setBias</a> (const std::vector&lt; std::vector&lt; float &gt; &gt; &amp;b)</td></tr>
 <tr class="separator:a9352a33ce03182eb34c37cb607bcaf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035c47a91d6d42f5b27589558f346c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a035c47a91d6d42f5b27589558f346c76">setEpsilon</a> (float e)</td></tr>
+<tr class="separator:a035c47a91d6d42f5b27589558f346c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496d7a60736bbef299ca96c7d9b4d3b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a496d7a60736bbef299ca96c7d9b4d3b7">getEpsilon</a> () const </td></tr>
 <tr class="separator:a496d7a60736bbef299ca96c7d9b4d3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9605a5923b4a6c1c99d88b38407e4363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a9605a5923b4a6c1c99d88b38407e4363">setGamma</a> (float g)</td></tr>
+<tr class="separator:a9605a5923b4a6c1c99d88b38407e4363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5f66289bdf950d218455b9fdb74fdf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a7f5f66289bdf950d218455b9fdb74fdf">getGamma</a> () const </td></tr>
+<tr class="separator:a7f5f66289bdf950d218455b9fdb74fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d9130141a4c021769f7262683e877c7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a2d9130141a4c021769f7262683e877c7">getU</a> () const </td></tr>
 <tr class="separator:a2d9130141a4c021769f7262683e877c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b7abd6d24e13ebce2fb17d0a974b437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBackpropagation.html#a3b7abd6d24e13ebce2fb17d0a974b437">getU</a> (std::vector&lt; std::vector&lt; float &gt; &gt; &amp;hu) const </td></tr>
@@ -276,7 +282,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_icgraph.png" border="0" usemap="#classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_icgraph" alt=""/></div>
 <map name="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_icgraph" id="classBackpropagation_a7ff957d5f4bc7f10bc9e84d317296b4e_icgraph">
-<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="209,5,359,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="256,56,312,83"/><area shape="rect" id="node5" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="248,107,320,133"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="408,5,464,32"/></map>
+<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="209,35,359,61"/><area shape="rect" id="node6" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="256,85,312,112"/><area shape="rect" id="node7" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="248,136,320,163"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="477,5,533,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="408,57,603,98"/><area shape="rect" id="node5" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="651,64,707,91"/></map>
 </div>
 </p>
 
@@ -358,7 +364,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph.png" border="0" usemap="#classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph" alt=""/></div>
 <map name="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph" id="classBackpropagation_a61bcca6bfe2f3ac0dd1c84eba2ff48f4_icgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="427,56,571,83"/><area shape="rect" id="node7" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="185,81,378,108"/><area shape="rect" id="node3" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="619,5,741,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="644,56,716,83"/><area shape="rect" id="node6" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="652,107,708,133"/><area shape="rect" id="node4" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="789,5,845,32"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="440,56,584,83"/><area shape="rect" id="node9" href="classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="185,107,378,133"/><area shape="rect" id="node10" href="classBackpropagation.html#a035c47a91d6d42f5b27589558f346c76" title="Backpropagation::setEpsilon" alt="" coords="187,157,375,184"/><area shape="rect" id="node12" href="classBackpropagation.html#a9605a5923b4a6c1c99d88b38407e4363" title="Backpropagation::setGamma" alt="" coords="186,208,377,235"/><area shape="rect" id="node3" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="645,5,768,32"/><area shape="rect" id="node7" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="671,56,743,83"/><area shape="rect" id="node8" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="679,107,735,133"/><area shape="rect" id="node4" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="885,5,941,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="816,150,1011,191"/><area shape="rect" id="node6" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1059,157,1115,184"/><area shape="rect" id="node11" href="classAutoEncoder.html#a042d24b3aa5457138bf915cc0d6a4e5f" title="AutoEncoder::setEpsilon" alt="" coords="429,157,595,184"/><area shape="rect" id="node13" href="classAutoEncoder.html#a0dc4bae4c7b62fe37343ab1771176e2a" title="AutoEncoder::setGamma" alt="" coords="427,208,597,235"/></map>
 </div>
 </p>
 
@@ -393,7 +399,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_icgraph.png" border="0" usemap="#classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_icgraph" alt=""/></div>
 <map name="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_icgraph" id="classBackpropagation_ae98cfa54ca3bbe71bde5a60967762ec8_icgraph">
-<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="225,5,375,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="272,56,328,83"/><area shape="rect" id="node5" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="264,107,336,133"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="424,5,480,32"/></map>
+<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="225,35,375,61"/><area shape="rect" id="node6" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="272,85,328,112"/><area shape="rect" id="node7" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="264,136,336,163"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="493,5,549,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="424,57,619,98"/><area shape="rect" id="node5" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="667,64,723,91"/></map>
 </div>
 </p>
 
@@ -707,7 +713,39 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a496d7a60736bbef299ca96c7d9b4d3b7_icgraph.png" border="0" usemap="#classBackpropagation_a496d7a60736bbef299ca96c7d9b4d3b7_icgraph" alt=""/></div>
 <map name="classBackpropagation_a496d7a60736bbef299ca96c7d9b4d3b7_icgraph" id="classBackpropagation_a496d7a60736bbef299ca96c7d9b4d3b7_icgraph">
-<area shape="rect" id="node2" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="243,5,299,32"/></map>
+<area shape="rect" id="node2" href="classAutoEncoder.html#a27948a728074cf5cceec14908c9bf99e" title="AutoEncoder::getEpsilon" alt="" coords="243,5,410,32"/><area shape="rect" id="node3" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="299,56,355,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f5f66289bdf950d218455b9fdb74fdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Backpropagation::getGamma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a7f5f66289bdf950d218455b9fdb74fdf_icgraph.png" border="0" usemap="#classBackpropagation_a7f5f66289bdf950d218455b9fdb74fdf_icgraph" alt=""/></div>
+<map name="classBackpropagation_a7f5f66289bdf950d218455b9fdb74fdf_icgraph" id="classBackpropagation_a7f5f66289bdf950d218455b9fdb74fdf_icgraph">
+<area shape="rect" id="node2" href="classAutoEncoder.html#a9c374a199b4a30962c6d222ea83f81dc" title="AutoEncoder::getGamma" alt="" coords="246,5,415,32"/></map>
 </div>
 </p>
 
@@ -791,7 +829,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph.png" border="0" usemap="#classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" alt=""/></div>
 <map name="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph" id="classBackpropagation_a2bcf82c3a9b8df9a75bfabc310faedf7_icgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="303,5,457,32"/><area shape="rect" id="node3" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="267,56,493,83"/><area shape="rect" id="node8" href="classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="264,107,496,133"/><area shape="rect" id="node9" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="352,157,408,184"/><area shape="rect" id="node4" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="545,5,695,32"/><area shape="rect" id="node6" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="584,56,656,83"/><area shape="rect" id="node7" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="592,107,648,133"/><area shape="rect" id="node5" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="744,5,800,32"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="303,35,457,61"/><area shape="rect" id="node3" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="267,85,493,112"/><area shape="rect" id="node10" href="classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="264,136,496,163"/><area shape="rect" id="node11" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="352,187,408,213"/><area shape="rect" id="node4" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="545,35,695,61"/><area shape="rect" id="node8" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="584,85,656,112"/><area shape="rect" id="node9" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="592,136,648,163"/><area shape="rect" id="node5" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="813,5,869,32"/><area shape="rect" id="node6" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="744,57,939,98"/><area shape="rect" id="node7" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="987,64,1043,91"/></map>
 </div>
 </p>
 
@@ -833,7 +871,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph.png" border="0" usemap="#classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" alt=""/></div>
 <map name="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph" id="classBackpropagation_ac0a9873c47fdc8ca67db9d7bf2f2d64d_icgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="303,5,457,32"/><area shape="rect" id="node3" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="267,56,493,83"/><area shape="rect" id="node8" href="classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="264,107,496,133"/><area shape="rect" id="node9" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="352,157,408,184"/><area shape="rect" id="node10" href="unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="344,208,416,235"/><area shape="rect" id="node4" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="545,5,695,32"/><area shape="rect" id="node6" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="584,56,656,83"/><area shape="rect" id="node7" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="592,107,648,133"/><area shape="rect" id="node5" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="744,5,800,32"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="303,35,457,61"/><area shape="rect" id="node3" href="classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="267,85,493,112"/><area shape="rect" id="node10" href="classBackpropagation.html#a10747eec4d876a06997fedf7cf280e24" title="Backpropagation::obtainDEDWMain" alt="" coords="264,136,496,163"/><area shape="rect" id="node11" href="unittest_8cpp.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="352,187,408,213"/><area shape="rect" id="node12" href="unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="344,237,416,264"/><area shape="rect" id="node4" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="545,35,695,61"/><area shape="rect" id="node8" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="584,85,656,112"/><area shape="rect" id="node9" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="592,136,648,163"/><area shape="rect" id="node5" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="813,5,869,32"/><area shape="rect" id="node6" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="744,57,939,98"/><area shape="rect" id="node7" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="987,64,1043,91"/></map>
 </div>
 </p>
 
@@ -1098,7 +1136,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_icgraph.png" border="0" usemap="#classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_icgraph" alt=""/></div>
 <map name="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_icgraph" id="classBackpropagation_a01e5cff96a253eccd24612208bb57ba6_icgraph">
-<area shape="rect" id="node2" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="197,5,320,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="223,56,295,83"/><area shape="rect" id="node5" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="231,107,287,133"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="368,5,424,32"/></map>
+<area shape="rect" id="node2" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="197,35,320,61"/><area shape="rect" id="node6" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="223,85,295,112"/><area shape="rect" id="node7" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="231,136,287,163"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="437,5,493,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="368,57,563,98"/><area shape="rect" id="node5" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="611,64,667,91"/></map>
 </div>
 </p>
 
@@ -1140,7 +1178,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph.png" border="0" usemap="#classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph" alt=""/></div>
 <map name="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph" id="classBackpropagation_a88be5645aa2718c69899a786d1ca39bc_icgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="248,56,392,83"/><area shape="rect" id="node3" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="440,5,563,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="465,56,537,83"/><area shape="rect" id="node6" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="473,107,529,133"/><area shape="rect" id="node4" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="611,5,667,32"/></map>
+<area shape="rect" id="node2" href="classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="248,85,392,112"/><area shape="rect" id="node3" href="classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="440,35,563,61"/><area shape="rect" id="node7" href="unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="465,85,537,112"/><area shape="rect" id="node8" href="unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="473,136,529,163"/><area shape="rect" id="node4" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="680,5,736,32"/><area shape="rect" id="node5" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="611,57,805,98"/><area shape="rect" id="node6" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="853,64,909,91"/></map>
 </div>
 </p>
 
@@ -1435,6 +1473,90 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a035c47a91d6d42f5b27589558f346c76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Backpropagation::setEpsilon </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_cgraph.png" border="0" usemap="#classBackpropagation_a035c47a91d6d42f5b27589558f346c76_cgraph" alt=""/></div>
+<map name="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_cgraph" id="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_cgraph">
+<area shape="rect" id="node2" href="classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="243,5,373,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_icgraph.png" border="0" usemap="#classBackpropagation_a035c47a91d6d42f5b27589558f346c76_icgraph" alt=""/></div>
+<map name="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_icgraph" id="classBackpropagation_a035c47a91d6d42f5b27589558f346c76_icgraph">
+<area shape="rect" id="node2" href="classAutoEncoder.html#a042d24b3aa5457138bf915cc0d6a4e5f" title="AutoEncoder::setEpsilon" alt="" coords="243,12,410,39"/><area shape="rect" id="node3" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="459,5,653,46"/><area shape="rect" id="node4" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="701,12,757,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9605a5923b4a6c1c99d88b38407e4363"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Backpropagation::setGamma </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_cgraph.png" border="0" usemap="#classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_cgraph" alt=""/></div>
+<map name="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_cgraph" id="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_cgraph">
+<area shape="rect" id="node2" href="classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="245,5,376,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_icgraph.png" border="0" usemap="#classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_icgraph" alt=""/></div>
+<map name="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_icgraph" id="classBackpropagation_a9605a5923b4a6c1c99d88b38407e4363_icgraph">
+<area shape="rect" id="node2" href="classAutoEncoder.html#a0dc4bae4c7b62fe37343ab1771176e2a" title="AutoEncoder::setGamma" alt="" coords="246,12,415,39"/><area shape="rect" id="node3" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="464,5,659,46"/><area shape="rect" id="node4" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="707,12,763,39"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="ad06e40023b1cf99d06f09693fd08386b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1537,7 +1659,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classBackpropagation_af56fe77162dadcfcdac69ec658106212_icgraph.png" border="0" usemap="#classBackpropagation_af56fe77162dadcfcdac69ec658106212_icgraph" alt=""/></div>
 <map name="classBackpropagation_af56fe77162dadcfcdac69ec658106212_icgraph" id="classBackpropagation_af56fe77162dadcfcdac69ec658106212_icgraph">
-<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="281,5,431,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="320,56,392,83"/><area shape="rect" id="node5" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="328,107,384,133"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="480,5,536,32"/></map>
+<area shape="rect" id="node2" href="classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="281,35,431,61"/><area shape="rect" id="node6" href="unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="320,85,392,112"/><area shape="rect" id="node7" href="unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="328,136,384,163"/><area shape="rect" id="node3" href="unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="549,5,605,32"/><area shape="rect" id="node4" href="unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="480,57,675,98"/><area shape="rect" id="node5" href="unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="723,64,779,91"/></map>
 </div>
 </p>
 
@@ -1872,7 +1994,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 11 2017 02:03:33 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 12 2017 01:50:09 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

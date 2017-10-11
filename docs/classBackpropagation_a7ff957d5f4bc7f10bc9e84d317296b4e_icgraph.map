@@ -1,6 +1,8 @@
 <map id="Backpropagation::back" name="Backpropagation::back">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="209,5,359,32"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="256,56,312,83"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="248,107,320,133"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="408,5,464,32"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="209,35,359,61"/>
+<area shape="rect" id="node6" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="256,85,312,112"/>
+<area shape="rect" id="node7" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="248,136,320,163"/>
+<area shape="rect" id="node3" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="477,5,533,32"/>
+<area shape="rect" id="node4" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="408,57,603,98"/>
+<area shape="rect" id="node5" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="651,64,707,91"/>
 </map>
