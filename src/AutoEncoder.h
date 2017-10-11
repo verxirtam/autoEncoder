@@ -70,4 +70,20 @@ public:
 	{
 		return normalization.getInversePCAWhiteningMatrix();
 	}
+	void setEpsilon(float e)
+	{
+		this->backpropagation.setEpsilon(e);
+	}
+	float getEpsilon() const
+	{
+		return this->backpropagation.getEpsilon();
+	}
+	void setGamma(float g)
+	{
+		this->backpropagation.setGamma(g);
+	}
+	float getGamma() const
+	{
+		return this->backpropagation.getGamma();
+	}
 };

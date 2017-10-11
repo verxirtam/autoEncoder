@@ -62,6 +62,8 @@ private:
 	//weightとbiasをランダムに初期化する
 	void initRandom(void);
 public:
+	
+	
 	//下記を求める
 	//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1] * _1B ^ T;
 	void obtainUFromZ(unsigned int l)
@@ -169,9 +171,21 @@ public:
 	}
 	
 	
+	void setEpsilon(float e)
+	{
+		this->epsilon = (e > 0.0f) ? (e) : (1.0e-6f);
+	}
 	float getEpsilon() const
 	{
 		return this->epsilon;
+	}
+	void setGamma(float g)
+	{
+		this->gamma = (g > 0.0f) ? (g) : (1.0e-6f);
+	}
+	float getGamma() const
+	{
+		return this->gamma;
 	}
 	
 	const std::vector<DeviceMatrix>& getU() const

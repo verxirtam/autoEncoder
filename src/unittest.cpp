@@ -950,7 +950,7 @@ INSTANTIATE_TEST_CASE_P
 	);
 //std::vector<float>同士の差が許容誤差未満であることを確認する
 //その差の絶対値の最大値を求める
-float compareVector(const std::vector<float>& x,const std::vector<float>& y, float error = 0.0625)
+float compareVector(const std::vector<float>& x,const std::vector<float>& y)
 {
 	if(x.size() != y.size())
 	{
@@ -963,7 +963,6 @@ float compareVector(const std::vector<float>& x,const std::vector<float>& y, flo
 		 [](float _x, float _y){return std::max(_x, _y);},
 		 [](float _x, float _y){return std::abs(_x - _y);}
 		);
-	EXPECT_NEAR(diff, 0.0f, error);
 	return diff;
 }
 //CUDAの算出結果とhostでの算出結果と一致することを確認する
@@ -994,6 +993,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 	{
 		std::transform(hz[l].begin(), hz[l].end(), hz[l].begin(), [](float _x){return std::tanh(_x);});
 		float max_error = compareVector(hz[l], dz[l]);
+		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 		std::cout << "max_error(z[" << l << "]) = " << max_error << std::endl;
 	}
 	
@@ -1014,6 +1014,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			hu[l][i] += dbias[l][i];
 		}
 		float max_error = compareVector(hu[l], du[l]);
+		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 		std::cout << "max_error(u[" << l << "]) = " << max_error << std::endl;
 	}
 	
@@ -1026,6 +1027,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			[](float _x, float _y){return _x - _y;}
 		);
 	float max_error = compareVector(hdelta[lmax - 1], ddelta[lmax - 1]);
+	EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 	std::cout << "max_error(delta[" << (lmax - 1) << "]) = " << max_error << std::endl;
 	
 	//hdelta[l] = f'(u[l]) ** (weight[l + 1]^T * delta[l + 1]);
@@ -1045,6 +1047,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			hdelta[l][j] = fd_u_lj * hwtdelta_lj;
 		}
 		float max_error = compareVector(hdelta[l], ddelta[l]);
+		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 		std::cout << "max_error(delta[" << l << "]) = " << max_error << std::endl;
 	}
 	auto ddedw = b.getDEDWAsVector();
@@ -1061,6 +1064,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 			hdedw[l][k] = hdelta[l][i] * hz[l - 1][j];
 		}
 		float max_error = compareVector(hdedw[l], ddedw[l]);
+		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 		std::cout << "max_error(dedw[" << l << "]) = " << max_error << std::endl;
 	}
 }
@@ -1552,6 +1556,7 @@ TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)
 	auto y = x_d.get();
 	
 	float diff = compareVector(x, y);
+	EXPECT_NEAR(diff, 0.0f, 0.0625f);
 	std::cout << "diff = " << diff << std::endl;
 }
 
@@ -1592,6 +1597,7 @@ TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)
 	//std::cout << ")" << std::endl;
 	
 	float diff = compareVector(A, B);
+	EXPECT_NEAR(diff, 0.0f, 0.0625f);
 	std::cout << "diff = " << diff << std::endl;
 }
 
@@ -1623,8 +1629,8 @@ TEST(CuBlasFunctionTest, Sdgmm)
 	auto dC = C.get();
 	auto dD = D.get();
 	
-	compareVector(dC, Ax);
-	compareVector(dD, yA);
+	EXPECT_NEAR(compareVector(dC, Ax), 0.0f, 0.0625f);
+	EXPECT_NEAR(compareVector(dD, yA), 0.0f, 0.0625f);
 }
 /////////////////////////////////////////////////////////////////////////////////
 class CuSolverDnTest :
@@ -1653,8 +1659,8 @@ TEST(CuSolverDnTest, DnSsyevd)
 	std::vector<float> W{2.0f, 3.0f, 4.0f};
 	std::vector<float> V{0.0f, 0.0f, 1.0f, - rt2d2, rt2d2, 0.0f, rt2d2, rt2d2, 0.0f};
 	
-	compareVector(hW, W);
-	compareVector(hV, V);
+	EXPECT_NEAR(compareVector(hW, W), 0.0f, 0.0625f);
+	EXPECT_NEAR(compareVector(hV, V), 0.0f, 0.0625f);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -1827,7 +1833,8 @@ TEST_P(NormalizationGeneralTest, test)
 		}
 	}
 	
-	float diff = compareVector(VarCovMatrix_pca, unit_matrixD, max_error);
+	float diff = compareVector(VarCovMatrix_pca, unit_matrixD);
+	EXPECT_NEAR(diff, 0.0f, max_error);
 	
 	if(diff >= max_error)
 	{
@@ -1859,6 +1866,7 @@ TEST_P(NormalizationGeneralTest, test)
 		}
 	}
 	diff = compareVector(VarCovMatrix_zca, unit_matrixD);
+	EXPECT_NEAR(diff, 0.0f, 0.0625f);
 	
 	if(diff >= max_error)
 	{
@@ -1926,7 +1934,8 @@ TEST(NormalizationTest, csv)
 	DeviceMatrix nY;
 	readFromCsvFile("../../../anaconda3/test_anaconda/csv/data_pca_w_py.csv", nY);
 	
-	compareVector(nX.get(), nY.get());
+	float diff = compareVector(nX.get(), nY.get());
+	EXPECT_NEAR(diff, 0.0f, 0.0625f);
 	
 }
 
@@ -1992,7 +2001,7 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	b.forward(X1, Y1);
 	auto y1_out = Y1.get();
 	
-	compareVector(y1, y1_out, 0.0f);
+	EXPECT_NEAR(compareVector(y1, y1_out),0.0f, 0.0f);
 	printVector(y1, "y1");
 	printVector(y1_out, "y1_out");
 	
@@ -2047,14 +2056,14 @@ TEST(BackpropagationMiniBatchTest, Simple)
 	
 	//TODO weightについて結果を比較して差分が十分小さいことを確認する
 	auto weight1_out = b.getWeight()[1].get();
-	compareVector(weight1, weight1_out);
+	EXPECT_NEAR(compareVector(weight1, weight1_out), 0.0f, 0.0625f);
 	printVector(weight1_old, "weight1_old");
 	printVector(weight1,     "weight1    ");
 	printVector(weight1_out, "weight1_out");
 	
 	
 	auto bias1_out = b.getBias()[1].get();
-	compareVector(bias1, bias1_out);
+	EXPECT_NEAR(compareVector(bias1, bias1_out), 0.0f, 0.0625f);
 	printVector(bias1_old, "bias1_old");
 	printVector(bias1,     "bias1    ");
 	printVector(bias1_out, "bias1_out");
@@ -2160,7 +2169,7 @@ TEST(AutoEncoderTest, Simple)
 	writeToCsvFile("../data/AutoEncoderTest_Simple_0input.csv",  minibatch_input );
 	writeToCsvFile("../data/AutoEncoderTest_Simple_1output.csv", minibatch_output);
 	
-	compareVector(minibatch_input.get(), minibatch_output.get(), 0.125f);
+	EXPECT_NEAR(compareVector(minibatch_input.get(), minibatch_output.get()), 0.0f, 0.125f);
 	
 }
 
@@ -2262,22 +2271,154 @@ TEST(AutoEncoderTest, csv)
 		std::cout << minibatch_output_vector[2 * i + 1] << std::endl;
 	}
 	//入力と出力の比較
-	compareVector(minibatch_input_vector, minibatch_output_vector, 1.0f);
+	float diff = compareVector(minibatch_input_vector, minibatch_output_vector);
+	EXPECT_NEAR(diff, 0.0f, 1.0f);
 }
 
 
+int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
+{
+	
+	//学習データの次元
+	int dimension = 3;
+	//隠れ層のサイズ
+	int layer_size = 2;
+	//ミニバッチの個数
+	int minibatch_size = 100;
+	
+	//正規化用のデータのサイズ
+	int normarize_data_size = 100;
+	
+	//学習の回数
+	int learning_count = 100;
+	
+	
+	//データ生成部は特定の次元限定の処理なので
+	//次元を変更した時は合わせて変更すること
+	EXPECT_EQ(dimension, 3);
+	//正規化用データ
+	std::vector<float> normarize_input_base(dimension * normarize_data_size);
+	for(int i = 0; i < normarize_data_size; i++)
+	{
+		int j_max = static_cast<int>(std::sqrt(normarize_data_size));
+		int k_max = normarize_data_size / j_max;
+		int j = i % j_max;
+		int k = i / j_max;
+		float t = static_cast<float>(j) / static_cast<float>(j_max);
+		float u = static_cast<float>(k) / static_cast<float>(k_max);
+		//float theta = t * 2.0f * 3.14159265358979f;
+		float x = t;//std::cos(theta);
+		float y = u;//std::sin(theta);
+		float z = 0.5f * t + u;//u;
+		normarize_input_base[dimension * i    ] = x;
+		normarize_input_base[dimension * i + 1] = y;
+		normarize_input_base[dimension * i + 2] = z;
+	}
+	
+	//正規化用データのDeviceMatrix
+	DeviceMatrix normarize_input(dimension, normarize_data_size);
+	normarize_input.set(normarize_input_base);
+	
+	AutoEncoder a;
+	a.setEpsilon(epsilon);
+	a.setGamma(gamma);
+	a.init(normarize_input, layer_size, minibatch_size);
+	
+	
+	//乱数の初期化
+	std::random_device rdev;
+	std::mt19937 engine(rdev());
+	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	
+	//学習用データ
+	std::vector<float> minibatch_input_base(dimension * minibatch_size);
+	
+	//学習用データのDeviceMatrix
+	DeviceMatrix minibatch_input(dimension, minibatch_size);
+	
+	//データ生成部は特定の次元限定の処理なので
+	//次元を変更した時は合わせて変更すること
+	EXPECT_EQ(dimension, 3);
+	//学習の実行
+	for(int n = 0; n < learning_count; n++)
+	{
+		//学習用データの生成
+		for(int i = 0; i < minibatch_size; i++)
+		{
+			float t = urd(engine);
+			float u = urd(engine);
+			//float theta = t * 2.0f * 3.14159265358979f;
+			float x = t;//std::cos(theta);
+			float y = u;//std::sin(theta);
+			float z = 0.5f * t + u;//u;
+			minibatch_input_base[dimension * i    ] = x;
+			minibatch_input_base[dimension * i + 1] = y;
+			minibatch_input_base[dimension * i + 2] = z;
+		}
+		minibatch_input.set(minibatch_input_base);
+		
+		//学習の実行
+		auto minibatch_output = a.learning(minibatch_input);
+		
+		float diff = compareVector(minibatch_input.get(), minibatch_output.get());
+		if(diff < error)
+		{
+			return n;
+		}
+	}
+	
+	return learning_count;
+}
+
+//モメンタムの検証
+TEST(AutoEncoderTest, momentum)
+{
+	//epsilonのインデックスの最大値
+	unsigned int imax = 10;
+	//gammaのインデックスの最大値
+	unsigned int jmax = 10;
+	//平均を取るための試行回数
+	unsigned int kmax =  5;
+	//学習係数
+	float epsilon = 0.0f;
+	//モメンタム
+	float gamma   = 0.0f;
+	//繰り返しを打ち切る誤差
+	float error   = 0.125f;
+	
+	for(unsigned int i = 0; i < imax; i++)
+	{
+		epsilon = 0.25f + 0.25f * static_cast<float>(i + 1) / static_cast<float>(imax);
+		for(unsigned int j = 0; j < jmax; j++)
+		{
+			gamma = 0.5f + 0.5f * static_cast<float>(j) / static_cast<float>(jmax);
+			int n = 0;
+			for(unsigned int k =0; k < kmax ; k++)
+			{
+				//誤差がerror未満になるlearningの回数をカウントする
+				n += AutoEncoderTest_momentum_estimate(epsilon, gamma, error);
+			}
+			float avg_n = static_cast<float>(n) / static_cast<float>(kmax);
+			std::cout << epsilon << ", ";
+			std::cout << gamma   << ", ";
+			std::cout << error   << ", ";
+			std::cout << avg_n       << std::endl;
+		}
+	}
+}
 
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
+	::testing::GTEST_FLAG(filter)="*AutoEncoderTest.momentum*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
