@@ -42,7 +42,6 @@ private:
 	std::vector<DeviceMatrix> weight;
 	std::vector<DeviceVector> bias;
 	std::vector<DeviceMatrix> dEdW;
-	std::vector<DeviceVector> dEdb;
 	std::vector<DeviceMatrix> delta;
 	std::vector<DeviceMatrix> WTdelta;
 	std::vector<DeviceMatrix> deltaWeight;
@@ -123,7 +122,6 @@ public:
 		weight(),
 		bias(),
 		dEdW(),
-		dEdb(),
 		delta(),
 		WTdelta(),
 		deltaWeight(),
@@ -263,10 +261,6 @@ public:
 			hdEdW.push_back(_d.get());
 		}
 		return hdEdW;
-	}
-	const std::vector<DeviceVector>& getDEDB() const
-	{
-		return this->dEdb;
 	}
 	const std::vector<DeviceMatrix>& getDelta() const
 	{

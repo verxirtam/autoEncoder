@@ -83,7 +83,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 	weight.clear();
 	bias.clear();
 	dEdW.clear();
-	dEdb.clear();
 	WTdelta.clear();
 	delta.clear();
 	deltaWeight.clear();
@@ -106,7 +105,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			weight.push_back( DeviceMatrix(1, 1, {0.0f}));
 			bias.push_back(   DeviceVector{0.0f}        );
 			dEdW.push_back(   DeviceMatrix(1, 1, {0.0f}));
-			dEdb.push_back(   DeviceVector{0.0f}        );
 			WTdelta.push_back(DeviceMatrix(1, 1, {0.0f}));
 			delta.push_back(  DeviceMatrix(1, 1, {0.0f}));
 			deltaWeight.push_back( DeviceMatrix(1, 1, {0.0f}));
@@ -118,7 +116,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			weight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
 			bias.push_back(   DeviceVector(unitCount[l]));
 			dEdW.push_back(   DeviceMatrix(unitCount[l],unitCount[l-1]));
-			dEdb.push_back(   DeviceVector(unitCount[l]));
 			WTdelta.push_back(DeviceMatrix(unitCount[l-1], miniBatchSize));
 			delta.push_back(  DeviceMatrix(unitCount[l], miniBatchSize));
 			deltaWeight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
@@ -259,9 +256,6 @@ void Backpropagation::back(const DeviceMatrix& D)
 		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
 	}
 	
-	//対応不要
-	//dEdb[l]  = delta[l];
-	//l = layerCount - 1, ... , 2
 	
 }
 
