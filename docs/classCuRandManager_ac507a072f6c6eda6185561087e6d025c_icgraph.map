@@ -2,8 +2,8 @@
 <area shape="rect" id="node2" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="251,161,453,188"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="502,85,695,112"/>
 <area shape="rect" id="node11" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="531,136,666,163"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="563,187,635,213"/>
-<area shape="rect" id="node14" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="571,237,627,264"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="571,187,627,213"/>
+<area shape="rect" id="node14" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="563,237,635,264"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="744,85,888,112"/>
 <area shape="rect" id="node5" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="936,35,1059,61"/>
 <area shape="rect" id="node9" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="961,85,1033,112"/>

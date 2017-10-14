@@ -7,7 +7,6 @@
 <area shape="rect" id="node19" href="$classBackpropagation.html#a320a9bce5775a00805ee4ef8dc23f3bf" title="Backpropagation::getUAsVector" alt="" coords="110,386,319,413"/>
 <area shape="rect" id="node20" href="$classBackpropagation.html#a7ff957d5f4bc7f10bc9e84d317296b4e" title="Backpropagation::back" alt="" coords="137,437,292,463"/>
 <area shape="rect" id="node21" href="$classBackpropagation.html#ada3aa286e72185627564c11716ef6acf" title="Backpropagation::getDelta\lAsVector" alt="" coords="127,488,303,529"/>
-<area shape="rect" id="node22" href="$classBackpropagation.html#aa09898475e7c091b1ffe89a877477af8" title="Backpropagation::getDEDWAs\lVector" alt="" coords="113,553,316,595"/>
 <area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="869,6,1051,33"/>
 <area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="379,209,551,235"/>
 <area shape="rect" id="node8" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="369,107,562,134"/>

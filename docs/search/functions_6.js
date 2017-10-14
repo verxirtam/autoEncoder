@@ -12,8 +12,6 @@ var searchData=
   ['getbiasasvector',['getBiasAsVector',['../classBackpropagation.html#ae10dab2abddf279a343882d07ad372ef',1,'Backpropagation']]],
   ['getcolumncount',['getColumnCount',['../classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f',1,'DeviceMatrix']]],
   ['getdedbasvector',['getDEDBAsVector',['../classBackpropagation.html#a90adcdc5ef8c3e007c55caefacd66eb9',1,'Backpropagation']]],
-  ['getdedw',['getDEDW',['../classBackpropagation.html#a06950b24d2fcd028cf79c409f2994e25',1,'Backpropagation']]],
-  ['getdedwasvector',['getDEDWAsVector',['../classBackpropagation.html#aa09898475e7c091b1ffe89a877477af8',1,'Backpropagation']]],
   ['getdelta',['getDelta',['../classBackpropagation.html#ad385ef193bf5aac8658b6dbd71e07adb',1,'Backpropagation']]],
   ['getdeltaasvector',['getDeltaAsVector',['../classBackpropagation.html#ada3aa286e72185627564c11716ef6acf',1,'Backpropagation']]],
   ['getdeviceprop',['getDeviceProp',['../classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4',1,'CudaManager']]],

@@ -1,8 +1,8 @@
 <map id="CuRandManager::getGenerator" name="CuRandManager::getGenerator">
 <area shape="rect" id="node2" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="257,85,450,112"/>
 <area shape="rect" id="node10" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="286,136,421,163"/>
-<area shape="rect" id="node12" href="$unittest_8cpp.html#afbca1b8afea82bac0f57a02e7d9f6d35" title="TEST_P" alt="" coords="317,187,389,213"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="325,237,381,264"/>
+<area shape="rect" id="node12" href="$unittest_8cpp.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="325,187,381,213"/>
+<area shape="rect" id="node13" href="$unittest_8cpp.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="317,237,389,264"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="499,85,643,112"/>
 <area shape="rect" id="node4" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="691,35,813,61"/>
 <area shape="rect" id="node8" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="716,85,788,112"/>

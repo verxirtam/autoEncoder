@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['dedw',['dEdW',['../classBackpropagation.html#af9eac0f6e3f734440045efb602c2d2ea',1,'Backpropagation']]],
   ['delta',['delta',['../classBackpropagation.html#afd66d9d9e1d20e86dd00b6b06d6f7e93',1,'Backpropagation']]],
   ['deltabias',['deltaBias',['../classBackpropagation.html#a697db3e1f950b1adabd6116d5da76c99',1,'Backpropagation']]],
   ['deltaweight',['deltaWeight',['../classBackpropagation.html#aef34fefca2d02cdac9efd51dcb8eebb9',1,'Backpropagation']]],
