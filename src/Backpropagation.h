@@ -41,7 +41,6 @@ private:
 	std::vector<DeviceMatrix> z;
 	std::vector<DeviceMatrix> weight;
 	std::vector<DeviceVector> bias;
-	std::vector<DeviceMatrix> dEdW;
 	std::vector<DeviceMatrix> delta;
 	std::vector<DeviceMatrix> WTdelta;
 	std::vector<DeviceMatrix> deltaWeight;
@@ -104,11 +103,6 @@ public:
 	void obtainDelta(unsigned int l);
 	//delta[l] = f'(u[l]) ** WTdelta[l + 1];
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
-	//dEdW[l] = delta[l] * (z[l -1])^T;
-	void obtainDEDW(unsigned int l, unsigned int thread_count = 128, unsigned int d = 32);
-	//dEdW[l] = delta[l] * (z[l -1])^T;
-	template<unsigned int D>
-	void obtainDEDWMain(unsigned int l, unsigned int thread_count);
 	
 	//コンストラクタ
 	Backpropagation(unsigned int layer_count):
@@ -116,12 +110,11 @@ public:
 		miniBatchSize(1),
 		unitCount(),
 		epsilon(0.125f),//0.0625f * 0.0625f),
-		gamma(0.875),
+		gamma(0.875f),
 		u(),
 		z(),
 		weight(),
 		bias(),
-		dEdW(),
 		delta(),
 		WTdelta(),
 		deltaWeight(),
@@ -248,19 +241,6 @@ public:
 			hbias.push_back(_b.get());
 		}
 		return hbias;
-	}
-	const std::vector<DeviceMatrix>& getDEDW() const
-	{
-		return this->dEdW;
-	}
-	std::vector<std::vector<float> > getDEDWAsVector() const
-	{
-		std::vector<std::vector<float> > hdEdW;
-		for(auto&& _d : this->dEdW)
-		{
-			hdEdW.push_back(_d.get());
-		}
-		return hdEdW;
 	}
 	const std::vector<DeviceMatrix>& getDelta() const
 	{

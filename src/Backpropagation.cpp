@@ -82,7 +82,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 	z.clear();
 	weight.clear();
 	bias.clear();
-	dEdW.clear();
 	WTdelta.clear();
 	delta.clear();
 	deltaWeight.clear();
@@ -104,7 +103,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			u.push_back(      DeviceMatrix(1, 1, {0.0f}));
 			weight.push_back( DeviceMatrix(1, 1, {0.0f}));
 			bias.push_back(   DeviceVector{0.0f}        );
-			dEdW.push_back(   DeviceMatrix(1, 1, {0.0f}));
 			WTdelta.push_back(DeviceMatrix(1, 1, {0.0f}));
 			delta.push_back(  DeviceMatrix(1, 1, {0.0f}));
 			deltaWeight.push_back( DeviceMatrix(1, 1, {0.0f}));
@@ -115,7 +113,6 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 			u.push_back(      DeviceMatrix(unitCount[l], miniBatchSize));
 			weight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
 			bias.push_back(   DeviceVector(unitCount[l]));
-			dEdW.push_back(   DeviceMatrix(unitCount[l],unitCount[l-1]));
 			WTdelta.push_back(DeviceMatrix(unitCount[l-1], miniBatchSize));
 			delta.push_back(  DeviceMatrix(unitCount[l], miniBatchSize));
 			deltaWeight.push_back( DeviceMatrix(unitCount[l],unitCount[l-1]));
@@ -173,6 +170,7 @@ void Backpropagation::initRandom(void)
 		CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), w.getAddress(), M * N));
 		//wを1/Nでスカラー倍する
 		float alpha = 1.0f / static_cast<float>(N);
+		//float alpha = 0.01f / static_cast<float>(N);
 		Sscal(&alpha, w);
 		
 	}
@@ -240,21 +238,6 @@ void Backpropagation::back(const DeviceMatrix& D)
 		obtainDelta(l);
 	}
 	
-	
-	//lについて並列実行
-	//dEdW[l]  = delta[l] * (z[l - 1])^T;
-	//l = layerCount - 1, ... , 1
-	for(unsigned int l = layerCount - 1; l >= 1; l--)
-	{
-		//非同期実行
-		obtainDEDW(l);
-	}
-	unsigned int substream_count = getSubStreamCount();
-	//完了待ち
-	for(unsigned int s = 0; s < substream_count; s++)
-	{
-		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
-	}
 	
 	
 }

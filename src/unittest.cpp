@@ -55,6 +55,37 @@ void printVector(const std::vector<float>& v, const std::string& vname)
 	std::cout << "}" << std::endl;
 }
 
+//std::vector<float>同士の差が許容誤差未満であることを確認する
+//その差の絶対値の最大値を求める
+float compareVector(const std::vector<float>& x,const std::vector<float>& y)
+{
+	if(x.size() != y.size())
+	{
+		std::cout << "x.size() = " << x.size() << ", y.size() = " << y.size() << std::endl;
+		throw std::runtime_error("x.size() != y.size()");
+	}
+	for(auto&& m : x)
+	{
+		if(std::isnan(m))
+		{
+			throw std::runtime_error("x has nan.");
+		}
+	}
+	for(auto&& m : y)
+	{
+		if(std::isnan(m))
+		{
+			throw std::runtime_error("y has nan.");
+		}
+	}
+	float diff = std::inner_product
+		(
+		 x.begin(), x.end(), y.begin(), 0.0f,
+		 [](float _x, float _y){return std::max(_x, _y);},
+		 [](float _x, float _y){return std::abs(_x - _y);}
+		);
+	return diff;
+}
 
 
 //////////////////////////////////////////////////////////////////////
@@ -740,13 +771,6 @@ TEST(BackpropagationTest, Simple)
 	EXPECT_NEAR(hdelta[1][0], delta[1][0], 0.0001f);
 	EXPECT_NEAR(hdelta[2][0], delta[2][0], 0.0001f);
 	
-	std::vector<std::vector<float> > dEdW = {{0.0f},{0.0f},{0.0f}};
-	dEdW[2][0] = delta[2][0] * z[1][0];
-	dEdW[1][0] = delta[1][0] * z[0][0];
-
-	auto hdEdW   = b.getDEDWAsVector();
-	std::cout << "hdEdW[1][0] = " << hdEdW[1][0] << ", dEdW[1][0] = " <<  dEdW[1][0] << std::endl;
-	std::cout << "hdEdW[2][0] = " << hdEdW[2][0] << ", dEdW[2][0] = " <<  dEdW[2][0] << std::endl;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -767,7 +791,8 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(200, 225, 250, 275, 300)
 		//::testing::Values(10, 50, 100, 200, 300, 400, 500, 625, 750, 875, 1000, 1024)
 		//::testing::Values(10, 1024, 1025, 2000)
-		::testing::Values(10, 1025)
+		//::testing::Values(10, 1025)
+		::testing::Values(10, 100, 200)
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
@@ -812,19 +837,6 @@ void BackpropagationTest_All_showInfo
 		for(unsigned int i = 0; i < imax; i++)
 		{
 			std::cout << u_l[i] << ", ";
-		}
-		std::cout << std::endl;
-	}
-	std::cout << "...)" << std::endl;
-
-	auto dEdW = b.getDEDWAsVector();
-	std::cout << "dEdW = (";
-	for(auto&& w_l : dEdW)
-	{
-		unsigned int imax = std::min(w_l.size(), 10ul);
-		for(unsigned int i = 0; i < imax; i++)
-		{
-			std::cout << w_l[i] << ", ";
 		}
 		std::cout << std::endl;
 	}
@@ -885,23 +897,34 @@ TEST_P(BackpropagationAllTest, All)
 {
 	const unsigned int dimension = GetParam();
 	
-	std::vector<unsigned int> unit_count{dimension, dimension / 2, 1, dimension / 2, dimension};
+	int minibatch_size = 50;
+	
+	std::vector<unsigned int> unit_count{dimension, dimension / 2, dimension / 2, dimension};
+	//std::vector<unsigned int> unit_count{dimension, 1, dimension};
 	Backpropagation b(unit_count.size());
-	b.init(unit_count);
+	b.init(unit_count, minibatch_size);
 	
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
-	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
+	std::uniform_real_distribution<float> urd(-0.1f, 0.1f);
 	
 	int nmax = 100;
 	
-	std::vector<float> r;
+	std::vector<std::vector<float> > r;
 	
 	std::cout << "r init start." << std::endl;
 	
 	for(int n = 0; n < nmax; n++)
 	{
-		r.push_back(urd(engine));
+		r.push_back(std::vector<float>());
+		for(int m = 0; m < minibatch_size; m++)
+		{
+			float u = urd(engine);
+			for(unsigned int l = 0; l < dimension; l++)
+			{
+				r[n].push_back(u);
+			}
+		}
 	}
 	
 	std::cout << "r init end." << std::endl;
@@ -911,22 +934,26 @@ TEST_P(BackpropagationAllTest, All)
 	for(int n = 0; n < nmax; n++)
 	{
 		std::cout << "n =  " << n << std::endl;
-		std::vector<float> x(dimension, r[n]);
-		std::vector<float> y;
-		std::vector<float> d = x;
+		EXPECT_EQ(r[n].size(), dimension * minibatch_size);
+		DeviceMatrix x(dimension, minibatch_size, r[n]);
+		DeviceMatrix y(dimension, minibatch_size);
+		DeviceMatrix& d = x;
 		b.forward(x, y);
 		b.back(d);
 		b.updateParameter();
 		
-		if(n == nmax -1)
+		if((n == nmax -1) || ((n % 10) == 0))
 		{
-			BackpropagationTest_All_showInfo(dimension, n, b, x, y);
+			BackpropagationTest_All_showInfo(dimension, n, b, x.get(), y.get());
 		}
 	}
-	std::vector<float> x(dimension, 0.5f);
-	std::vector<float> y(dimension, 0.0f);
+	DeviceMatrix x(dimension, minibatch_size, std::vector<float>(dimension * minibatch_size, 0.0f));
+	DeviceMatrix y;
 	b.forward(x, y);
-	std::cout << "y = (" << y[0] << ", " << y[1] << ")" << std::endl;
+	std::cout << "y = (" << y.get()[0] << ", " << y.get()[1] << ")" << std::endl;
+	std::cout << "y.RowCount    = " << y.getRowCount()    << std::endl;
+	std::cout << "y.columnCount = " << y.getColumnCount() << std::endl;
+	EXPECT_NEAR(compareVector(x.get(), y.get()), 0.0f, 0.125f);
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -948,23 +975,6 @@ INSTANTIATE_TEST_CASE_P
 				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u})
 			)
 	);
-//std::vector<float>同士の差が許容誤差未満であることを確認する
-//その差の絶対値の最大値を求める
-float compareVector(const std::vector<float>& x,const std::vector<float>& y)
-{
-	if(x.size() != y.size())
-	{
-		std::cout << "x.size() = " << x.size() << ", y.size() = " << y.size() << std::endl;
-		throw std::runtime_error("x.size() != y.size()");
-	}
-	float diff = std::inner_product
-		(
-		 x.begin(), x.end(), y.begin(), 0.0f,
-		 [](float _x, float _y){return std::max(_x, _y);},
-		 [](float _x, float _y){return std::abs(_x - _y);}
-		);
-	return diff;
-}
 //CUDAの算出結果とhostでの算出結果と一致することを確認する
 TEST_P(BackpropagationFunctionTest, Kernel)
 {
@@ -1049,23 +1059,6 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 		float max_error = compareVector(hdelta[l], ddelta[l]);
 		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
 		std::cout << "max_error(delta[" << l << "]) = " << max_error << std::endl;
-	}
-	auto ddedw = b.getDEDWAsVector();
-	auto hdedw = ddedw;
-	//dEdW[l] = delta[l] * z[l-1]^T
-	for(unsigned int l = 1; l < lmax; l++)
-	{
-		unsigned int kmax = hdedw[l].size();
-		for(unsigned int k = 0; k < kmax; k++)
-		{
-			unsigned int imax = du[l].size();
-			unsigned int i = k % imax;
-			unsigned int j = k / imax;
-			hdedw[l][k] = hdelta[l][i] * hz[l - 1][j];
-		}
-		float max_error = compareVector(hdedw[l], ddedw[l]);
-		EXPECT_NEAR(max_error, 0.0f, 0.0625f);
-		std::cout << "max_error(dedw[" << l << "]) = " << max_error << std::endl;
 	}
 }
 /////////////////////////////////////////////////////////////////////////////////
@@ -1156,8 +1149,6 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 	auto bias0 = b.getBiasAsVector();
 	auto bias  = bias0;
 	
-	//比較用のdEdWの取得
-	auto dedw = b.getDEDWAsVector();
 	//比較用のdEdbの取得
 	auto dedb = b.getDEDBAsVector();
 	
@@ -1165,53 +1156,7 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 	for(unsigned int i = 0; i < imax; i++)
 	{
 		unsigned int jmax = w[i].size();
-		for(unsigned int j = 0; j < jmax; j++)
-		{
-			//dEdWの数値微分を算出する
-			{
-				w = w0;
-				float e = std::abs(w[i][j]);
-				e = (e < 1.0f) ? 1.0f : e;
-				e *= epsilon;
-				w[i][j] += e;
-				b.setWeight(w);
-				
-				std::vector<float> y;
-				b.forward(x, y);
-				
-				float E = ErrorFunc(y, x);
-				
-				//下記を算出する
-				//(E - E0) / epsilon
-				float ndedw = (E - E0) / e;
-				
-				float e0 = std::abs(w[i][j]);
-				e0 = (e0 < 1.0f) ? 1.0f : e0;
-				e0 *= epsilon0;
-				//数値微分と比較する
-				EXPECT_NEAR(ndedw, dedw[i][j], e0);
-				if(!(std::abs(ndedw - dedw[i][j]) < e0))
-				{
-					//失敗した時に情報表示する
-					std::cout << "ERROR." << std::endl;
-					std::cout << "epsilon  = " << epsilon  << std::endl;
-					std::cout << "e        = " << e        << std::endl;
-					std::cout << "epsilon0 = " << epsilon0 << std::endl;
-					std::cout << "e0       = " << e0       << std::endl;
-					std::cout << "d0 = " << d0 << std::endl;
-					std::cout << "d1 = " << d1 << std::endl;
-					std::cout << "i  = " << i  << std::endl;
-					std::cout << "j  = " << j  << std::endl;
-					std::cout << "E  = " << std::setprecision(10) << E  << std::endl;
-					std::cout << "E0 = " << std::setprecision(10) << E0 << std::endl;
-					std::cout << "ndedw  = " << ndedw << std::endl;
-					std::cout << "dedw["<< i << "][" << j << "]  = " << dedw[i][j] << std::endl;
-					std::cout << "diff  = " << (ndedw - dedw[i][j]) << std::endl;
-					BackpropagationTest_All_showInfo(d0, sample_count, b, x, y);
-					return;
-				}
-			}
-		}
+		
 		//biasの数値微分に影響しないように
 		//weightを元に戻す
 		b.setWeight(w0);
@@ -1353,88 +1298,8 @@ INSTANTIATE_TEST_CASE_P
 				::testing::ValuesIn(std::vector<unsigned int>{32})//1, 4, 13, 31, 32})
 			)
 	);
-TEST_P(BackpropagationObtainDEDWTest, test)
-{
-	std::cout << "テスト開始" << std::endl;
-	
-	//乱数の初期化
-	//std::random_device rdev;
-	//std::mt19937 engine(rdev());
-	//std::uniform_real_distribution<float> urd(0.0f, 1.0f);
-	
-	CuBlasManager::getHandle();
-	CuRandManager::getGenerator();
-	
-	
-	unsigned int dimension    = std::get<0>(GetParam());
-	unsigned int thread_count = std::get<1>(GetParam());
-	unsigned int data_count   = std::get<2>(GetParam());
-	unsigned int substream_count = std::get<3>(GetParam());
-	
-	std::cout << "乱数の初期化完了" << std::endl;
-	
-	std::vector<unsigned int> unit_count(64, dimension);
-	Backpropagation b(unit_count.size());
-	b.setSubStreamCount(substream_count);
-	EXPECT_EQ(b.getSubStreamCount(), substream_count);
-	b.init(unit_count);
-	
-	std::cout << "Backpropagation の初期化完了" << std::endl;
-	
-	//xを乱数で初期化する
-	//std::transform(x.begin(), x.end(), x.begin(), [&](float){return urd(engine);});
-	DeviceVector dx(dimension);
-	CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), dx.getAddress(), dx.getDimension()));
-	std::vector<float> x = dx.get();
-	std::vector<float> y(dimension);
-	std::vector<float>& d =x;
-	
-	std::cout << "x の初期化完了" << std::endl;
-	
-	b.forward(x, y);
-	b.back(d);
-	
-	std::cout << "forward(), back()完了" << std::endl;
-	
-	//時刻測定イベントの定義
-	cudaEvent_t start;
-	cudaEvent_t stop;
-	CUDA_CALL(cudaEventCreate(&start));
-	CUDA_CALL(cudaEventCreate(&stop));
-	//時刻測定前に同期
-	CUDA_CALL(cudaDeviceSynchronize());
-	//時間測定開始
-	CUDA_CALL(cudaEventRecord(start, 0));
-	//obtainDEDWを単独で実行
-	for(unsigned int n = 0; n < 10; n++)
-	{
-		for(unsigned int l = unit_count.size() - 1; l >= 1; l--)
-		{
-			b.obtainDEDW(l, thread_count, data_count);
-		}
-	}
-	//時刻測定前に同期
-	CUDA_CALL(cudaDeviceSynchronize());
-	//時間測定完了
-	CUDA_CALL(cudaEventRecord(stop, 0));
-	CUDA_CALL(cudaEventSynchronize(stop));
-	//実行時間
-	float elapsed_time_ms;
-	CUDA_CALL(cudaEventElapsedTime(&elapsed_time_ms, start, stop));
-	//実行時間を表示
-	std::cout << "(label)"       << '\t';
-	std::cout << "dimension"       << '\t';
-	std::cout << "thread_count"    << '\t';
-	std::cout << "data_count"      << '\t';
-	std::cout << "substream_count" << '\t';
-	std::cout << "elapsed_time_ms" << std::endl;
-	std::cout << "EV" << '\t';
-	std::cout << dimension << '\t';
-	std::cout << thread_count << '\t';
-	std::cout << data_count << '\t';
-	std::cout << substream_count << '\t';
-	std::cout << elapsed_time_ms << std::endl;
-}
+
+
 /////////////////////////////////////////////////////////////////////////////////
 class CudaManagerTest :
 	public ::testing::Test
@@ -2418,7 +2283,7 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest.momentum*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.momentum*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
@@ -2430,6 +2295,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
 	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
+	::testing::GTEST_FLAG(filter)="*BackpropagationAllTest*";
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	
 	
