@@ -2277,7 +2277,7 @@ TEST(AutoEncoderTest, momentum)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
 	
@@ -2295,7 +2295,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
 	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
 	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
-	::testing::GTEST_FLAG(filter)="*BackpropagationAllTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationAllTest*";
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	
 	
