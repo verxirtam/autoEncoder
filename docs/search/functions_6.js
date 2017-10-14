@@ -11,7 +11,6 @@ var searchData=
   ['getbias',['getBias',['../classBackpropagation.html#a92b8518396e44af72149674389b561c1',1,'Backpropagation']]],
   ['getbiasasvector',['getBiasAsVector',['../classBackpropagation.html#ae10dab2abddf279a343882d07ad372ef',1,'Backpropagation']]],
   ['getcolumncount',['getColumnCount',['../classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f',1,'DeviceMatrix']]],
-  ['getdedb',['getDEDB',['../classBackpropagation.html#abb86f3dae751a8aaa0f73dffc9278869',1,'Backpropagation']]],
   ['getdedbasvector',['getDEDBAsVector',['../classBackpropagation.html#a90adcdc5ef8c3e007c55caefacd66eb9',1,'Backpropagation']]],
   ['getdedw',['getDEDW',['../classBackpropagation.html#a06950b24d2fcd028cf79c409f2994e25',1,'Backpropagation']]],
   ['getdedwasvector',['getDEDWAsVector',['../classBackpropagation.html#aa09898475e7c091b1ffe89a877477af8',1,'Backpropagation']]],
