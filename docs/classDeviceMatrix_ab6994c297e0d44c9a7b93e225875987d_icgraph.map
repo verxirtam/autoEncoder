@@ -10,8 +10,9 @@
 <area shape="rect" id="node33" href="$CuBlasFunction_8h.html#a443f286492eac14303adf334de45cb33" title="Sscal" alt="" coords="267,509,322,536"/>
 <area shape="rect" id="node34" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="261,357,328,384"/>
 <area shape="rect" id="node36" href="$CuRandFunction_8h.html#a4d8cde3eb7e722a2bb621a2b7869969a" title="setRandomUniform" alt="" coords="227,560,362,587"/>
-<area shape="rect" id="node37" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="267,611,323,637"/>
-<area shape="rect" id="node38" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="259,661,331,688"/>
+<area shape="rect" id="node37" href="$classTanh.html#aee4780a6788adfcac99b00f6b6d16ed7" title="Tanh::activate" alt="" coords="242,611,347,637"/>
+<area shape="rect" id="node38" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="267,661,323,688"/>
+<area shape="rect" id="node39" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="259,712,331,739"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="411,47,637,73"/>
 <area shape="rect" id="node11" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="458,148,590,175"/>
 <area shape="rect" id="node12" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="437,199,611,225"/>

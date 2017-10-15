@@ -1,6 +1,7 @@
 <map id="CudaManager::getDeviceProp" name="CudaManager::getDeviceProp">
 <area shape="rect" id="node2" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="251,5,461,32"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="259,57,453,98"/>
+<area shape="rect" id="node7" href="$classTanh.html#aee4780a6788adfcac99b00f6b6d16ed7" title="Tanh::activate" alt="" coords="303,123,409,149"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="521,5,692,32"/>
 <area shape="rect" id="node5" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="510,64,703,91"/>
 <area shape="rect" id="node6" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="752,64,907,91"/>

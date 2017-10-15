@@ -1,0 +1,7 @@
+<map id="Tanh::activate" name="Tanh::activate">
+<area shape="rect" id="node2" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="164,5,361,32"/>
+<area shape="rect" id="node4" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="169,56,356,83"/>
+<area shape="rect" id="node5" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="160,107,365,133"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="176,157,349,184"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="413,5,592,32"/>
+</map>

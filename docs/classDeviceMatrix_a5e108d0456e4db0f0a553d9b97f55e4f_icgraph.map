@@ -14,8 +14,9 @@
 <area shape="rect" id="node35" href="$CuRandFunction_8h.html#a4d8cde3eb7e722a2bb621a2b7869969a" title="setRandomUniform" alt="" coords="259,737,394,764"/>
 <area shape="rect" id="node36" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="285,585,368,612"/>
 <area shape="rect" id="node38" href="$DeviceVectorUtils_8h.html#a3b08c60bdcaf5630bfe82ac9c8a3267a" title="writeToCsvFile" alt="" coords="271,788,382,815"/>
-<area shape="rect" id="node39" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="299,839,355,865"/>
-<area shape="rect" id="node40" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="291,889,363,916"/>
+<area shape="rect" id="node39" href="$classTanh.html#aee4780a6788adfcac99b00f6b6d16ed7" title="Tanh::activate" alt="" coords="274,839,379,865"/>
+<area shape="rect" id="node40" href="$unittest_8cpp.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="299,889,355,916"/>
+<area shape="rect" id="node41" href="$unittest_8cpp.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="291,940,363,967"/>
 <area shape="rect" id="node4" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="443,113,669,140"/>
 <area shape="rect" id="node11" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="490,63,622,89"/>
 <area shape="rect" id="node5" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="982,340,1133,367"/>
