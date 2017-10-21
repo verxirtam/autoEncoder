@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['statistics_2ecpp',['Statistics.cpp',['../Statistics_8cpp.html',1,'']]],
-  ['statistics_2eh',['Statistics.h',['../Statistics_8h.html',1,'']]]
+  ['relu_2ecuh',['ReLU.cuh',['../ReLU_8cuh.html',1,'']]]
 ];

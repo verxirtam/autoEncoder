@@ -88,18 +88,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Tanh Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="Tanh_8h_source.html">Tanh.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aee4780a6788adfcac99b00f6b6d16ed7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTanh.html#aee4780a6788adfcac99b00f6b6d16ed7">activate</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;x, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;y)</td></tr>
-<tr class="separator:aee4780a6788adfcac99b00f6b6d16ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d66913ddccf8985021d86f05ff1f45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTanh.html#a04d66913ddccf8985021d86f05ff1f45">activateDiff</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;x, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;y)</td></tr>
-<tr class="separator:a04d66913ddccf8985021d86f05ff1f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea7953f4537433b8f861d397ecca193"><td class="memItemLeft" align="right" valign="top">__host__ static __device__ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTanh.html#afea7953f4537433b8f861d397ecca193">apply</a> (float x)</td></tr>
+<tr class="separator:afea7953f4537433b8f861d397ecca193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7d57dcf7b6de7b4f4fbdd54b7bf732"><td class="memItemLeft" align="right" valign="top">__host__ static __device__ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTanh.html#aef7d57dcf7b6de7b4f4fbdd54b7bf732">applyDiff</a> (float x)</td></tr>
+<tr class="separator:aef7d57dcf7b6de7b4f4fbdd54b7bf732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aee4780a6788adfcac99b00f6b6d16ed7"></a>
+<a class="anchor" id="afea7953f4537433b8f861d397ecca193"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -107,42 +105,23 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp; Tanh::activate </td>
+          <td class="memname">__host__ static __device__ float Tanh::apply </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classTanh_aee4780a6788adfcac99b00f6b6d16ed7_cgraph.png" border="0" usemap="#classTanh_aee4780a6788adfcac99b00f6b6d16ed7_cgraph" alt=""/></div>
-<map name="classTanh_aee4780a6788adfcac99b00f6b6d16ed7_cgraph" id="classTanh_aee4780a6788adfcac99b00f6b6d16ed7_cgraph">
-<area shape="rect" id="node2" href="classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="164,5,361,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="169,56,356,83"/><area shape="rect" id="node5" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="160,107,365,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="176,157,349,184"/><area shape="rect" id="node3" href="classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="413,5,592,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="a04d66913ddccf8985021d86f05ff1f45"></a>
+<a class="anchor" id="aef7d57dcf7b6de7b4f4fbdd54b7bf732"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -150,40 +129,29 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; Tanh::activateDiff </td>
+          <td class="memname">__host__ static __device__ float Tanh::applyDiff </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="Tanh_8h_source.html">Tanh.h</a></li>
-<li>src/<a class="el" href="Tanh__cuda_8cu.html">Tanh_cuda.cu</a></li>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/<a class="el" href="Tanh_8cuh.html">Tanh.cuh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 16 2017 03:56:40 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 22 2017 03:32:25 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

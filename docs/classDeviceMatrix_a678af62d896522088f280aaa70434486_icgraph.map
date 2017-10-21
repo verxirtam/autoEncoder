@@ -1,6 +1,7 @@
 <map id="DeviceMatrix::DeviceMatrix" name="DeviceMatrix::DeviceMatrix">
 <area shape="rect" id="node2" href="$classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b" title="DeviceMatrix::getAlphaMatrix" alt="" coords="237,5,432,32"/>
 <area shape="rect" id="node4" href="$classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810" title="DeviceMatrix::get0Matrix" alt="" coords="251,56,419,83"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d" title="DeviceMatrix::get1Matrix" alt="" coords="251,107,419,133"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d" title="DeviceMatrix::get1Matrix" alt="" coords="251,107,419,133"/>
 <area shape="rect" id="node3" href="$CuRandFunction_8h.html#a4d8cde3eb7e722a2bb621a2b7869969a" title="setRandomUniform" alt="" coords="481,5,615,32"/>
+<area shape="rect" id="node5" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="526,81,570,108"/>
 </map>

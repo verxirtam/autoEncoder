@@ -1,8 +1,11 @@
 <map id="CudaManager::getDeviceProp" name="CudaManager::getDeviceProp">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="251,5,461,32"/>
-<area shape="rect" id="node4" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="259,57,453,98"/>
-<area shape="rect" id="node7" href="$classTanh.html#aee4780a6788adfcac99b00f6b6d16ed7" title="Tanh::activate" alt="" coords="303,123,409,149"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="521,5,692,32"/>
-<area shape="rect" id="node5" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="510,64,703,91"/>
-<area shape="rect" id="node6" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="752,64,907,91"/>
+<area shape="rect" id="node2" href="$classActivateFunction.html#a718be86ac6b7b80536a2424b25221e05" title="ActivateFunction::culculate\lBlockThreadCount" alt="" coords="266,45,446,86"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="251,111,461,137"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a8f9e9e93af97b549f31b2a080a881573" title="Backpropagation::obtainDelta\lFromFdUWTDelta" alt="" coords="259,162,453,203"/>
+<area shape="rect" id="node3" href="$classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0" title="ActivateFunction::activate" alt="" coords="519,5,694,32"/>
+<area shape="rect" id="node5" href="$classActivateFunction.html#a7ea83e286e81755d6fb2d7213e076780" title="ActivateFunction::activateDiff" alt="" coords="509,56,704,83"/>
+<area shape="rect" id="node4" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="807,5,851,32"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="521,111,692,137"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a9a883f6ae5aba9bedb936e29cf82600e" title="Backpropagation::obtainDelta" alt="" coords="510,169,703,196"/>
+<area shape="rect" id="node10" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="752,169,907,196"/>
 </map>
