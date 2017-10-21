@@ -1,4 +1,4 @@
-Tanh_cuda.o : Tanh_cuda.cu \
+test_cuda.o : test_cuda.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \
@@ -115,7 +115,7 @@ Tanh_cuda.o : Tanh_cuda.cu \
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    Tanh.h \
+    ActivateFunction.cuh \
     DeviceMatrix.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
@@ -214,4 +214,6 @@ Tanh_cuda.o : Tanh_cuda.cu \
     CudaManager.h \
     CudaException.h \
     /usr/include/c++/4.8/stdexcept \
-    CuBlasException.h
+    CuBlasException.h \
+    Tanh.cuh \
+    ReLU.cuh

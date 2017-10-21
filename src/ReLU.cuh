@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Tanh.h
+ *       Filename:  ReLU.cuh
  *
  *    Description:  
  *
@@ -17,13 +17,24 @@
  */
 #pragma once
 
-#include "DeviceMatrix.h"
 
-class Tanh
+class ReLU
 {
 public:
-	//活性化関数
-	static DeviceMatrix& activate(const DeviceMatrix& x, DeviceMatrix& y);
-	//活性化関数の微分
-	static DeviceMatrix& activateDiff(const DeviceMatrix& x, DeviceMatrix& y);
+	//関数
+	__host__ __device__
+	static float apply(float x)
+	{
+		return (x < 0.0f) ? (0.0f) : (x);
+	}
+	//関数の微分
+	__host__ __device__
+	static float applyDiff(float x)
+	{
+		return (x < 0.0f) ? (0.0f) : (1.0f);
+	}
 };
+
+
+
+
