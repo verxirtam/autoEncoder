@@ -1,5 +1,7 @@
 <map id="ActivateFunction::culculateBlockThreadCount" name="ActivateFunction::culculateBlockThreadCount">
-<area shape="rect" id="node2" href="$classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0" title="ActivateFunction::activate" alt="" coords="245,5,419,32"/>
-<area shape="rect" id="node4" href="$classActivateFunction.html#a7ea83e286e81755d6fb2d7213e076780" title="ActivateFunction::activateDiff" alt="" coords="235,56,429,83"/>
-<area shape="rect" id="node3" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="478,5,522,32"/>
+<area shape="rect" id="node2" href="$classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0" title="ActivateFunction::activate" alt="" coords="245,31,419,57"/>
+<area shape="rect" id="node6" href="$classActivateFunction.html#a7ea83e286e81755d6fb2d7213e076780" title="ActivateFunction::activateDiff" alt="" coords="235,81,429,108"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="477,5,688,32"/>
+<area shape="rect" id="node5" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="561,56,605,83"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="736,5,907,32"/>
 </map>

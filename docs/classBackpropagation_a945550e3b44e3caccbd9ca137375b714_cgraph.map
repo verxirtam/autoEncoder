@@ -1,4 +1,9 @@
 <map id="Backpropagation::obtainZFromU" name="Backpropagation::obtainZFromU">
-<area shape="rect" id="node2" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="264,5,461,32"/>
-<area shape="rect" id="node3" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="509,5,688,32"/>
+<area shape="rect" id="node2" href="$classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0" title="ActivateFunction::activate" alt="" coords="265,85,439,112"/>
+<area shape="rect" id="node3" href="$classActivateFunction.html#a718be86ac6b7b80536a2424b25221e05" title="ActivateFunction::culculate\lBlockThreadCount" alt="" coords="489,49,669,90"/>
+<area shape="rect" id="node8" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="492,115,665,141"/>
+<area shape="rect" id="node4" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="721,5,919,32"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="727,56,913,83"/>
+<area shape="rect" id="node7" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="717,107,923,133"/>
+<area shape="rect" id="node5" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="971,5,1149,32"/>
 </map>

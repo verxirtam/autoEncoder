@@ -1,14 +1,13 @@
 <map id="Backpropagation::init" name="Backpropagation::init">
-<area shape="rect" id="node2" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="698,8,881,34"/>
-<area shape="rect" id="node4" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="209,210,381,237"/>
-<area shape="rect" id="node7" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="198,109,391,136"/>
-<area shape="rect" id="node13" href="$classBackpropagation.html#a61bcca6bfe2f3ac0dd1c84eba2ff48f4" title="Backpropagation::f" alt="" coords="476,160,607,186"/>
-<area shape="rect" id="node3" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="937,8,1127,34"/>
-<area shape="rect" id="node5" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="442,210,641,237"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="695,210,883,237"/>
-<area shape="rect" id="node8" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="440,58,643,85"/>
-<area shape="rect" id="node10" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="514,109,569,136"/>
-<area shape="rect" id="node9" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="691,58,887,85"/>
-<area shape="rect" id="node11" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="695,160,884,186"/>
-<area shape="rect" id="node12" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="702,109,877,136"/>
+<area shape="rect" id="node2" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="698,157,881,184"/>
+<area shape="rect" id="node4" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="209,233,381,260"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a88be5645aa2718c69899a786d1ca39bc" title="Backpropagation::initRandom" alt="" coords="198,107,391,133"/>
+<area shape="rect" id="node3" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="937,157,1127,184"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="442,233,641,260"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="695,233,883,260"/>
+<area shape="rect" id="node8" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="440,5,643,32"/>
+<area shape="rect" id="node10" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="514,81,569,108"/>
+<area shape="rect" id="node9" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="691,5,887,32"/>
+<area shape="rect" id="node11" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="695,56,884,83"/>
+<area shape="rect" id="node12" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="702,107,877,133"/>
 </map>
