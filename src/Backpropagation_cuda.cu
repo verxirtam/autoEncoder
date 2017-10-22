@@ -1,40 +1,11 @@
 
 #include "Backpropagation.h"
 
+#include "ActivateFunction.cuh"
+#include "Tanh.cuh"
+
 namespace
 {
-	__host__ __device__
-	float activateFunction(float x)
-	{
-		return tanhf(x);
-	}
-	
-	__host__ __device__
-	float activateFunctionDash(float x)
-	{
-		float tanh_x = tanhf(x);
-		return 1.0f - (tanh_x * tanh_x);
-	}
-	
-	
-	__global__
-	void obtainZFromU_kernel
-		(
-			unsigned int thread_index_offset,
-			const float* const u_lp1,
-			float* const z_lp1
-		)
-	{
-		//ブロックインデックス、スレッドインデックスの読み替え
-		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
-		
-		//このスレッドが計算すべき成分のインデックス
-		unsigned int j = s;
-		
-		//活性化関数の適用
-		z_lp1[j] = activateFunction(u_lp1[j]);
-	}
-
 	__global__
 	void obtainDeltaFromFdUWTDelta_kernel
 		(
@@ -50,7 +21,7 @@ namespace
 		//このスレッドが計算すべき成分のインデックス
 		unsigned int j = s;
 		
-		delta_l[j] = activateFunctionDash(u_l[j]) * wtdelta_lp1[j];
+		delta_l[j] = Tanh::applyDiff(u_l[j]) * wtdelta_lp1[j];
 	}
 	
 	//dEdW[l] = delta[l] * (z[l])^T;
@@ -89,44 +60,7 @@ void Backpropagation::obtainZFromU(unsigned int l)
 		return;
 	}
 	
-	//1ブロックあたりのスレッド数の上限
-	static unsigned int thread_count = CudaManager::getDeviceProp().maxThreadsPerBlock;
-	
-	//生成するスレッド数全体
-	unsigned int thread_count_total = u[l + 1].getRowCount() * u[l + 1].getColumnCount();
-	
-	//スレッド数thread_countで実行するブロック数
-	unsigned int block_count         = thread_count_total / thread_count;
-	//スレッド数の残り
-	unsigned int thread_count_remain = thread_count_total % thread_count;
-	
-	if(block_count * thread_count != 0)
-	{
-		//カーネル実行
-		obtainZFromU_kernel<<<block_count, thread_count>>>
-			(
-				0,
-				u[l + 1].getAddress(),
-				z[l + 1].getAddress()
-			);
-		//カーネル実行時のエラーチェック
-		CUDA_CALL(cudaGetLastError());
-	}
-	if(thread_count_remain != 0)
-	{
-		//カーネル実行
-		obtainZFromU_kernel<<<1, thread_count_remain>>>
-			(
-				block_count * thread_count,
-				u[l + 1].getAddress(),
-				z[l + 1].getAddress()
-			);
-		//カーネル実行時のエラーチェック
-		CUDA_CALL(cudaGetLastError());
-	}
-	
-	//直後にu[l + 1]を使用するので同期する
-	CUDA_CALL(cudaStreamSynchronize(0));
+	ActivateFunction<Tanh>::activate(u[l + 1], z[l + 1]);
 }
 
 

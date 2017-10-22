@@ -252,4 +252,6 @@ Backpropagation_cuda.o : Backpropagation_cuda.cu \
     /usr/include/c++/4.8/ctime \
     /usr/local/cuda/include/curand.h \
     CuRandException.h \
-    BackpropagationException.h
+    BackpropagationException.h \
+    ActivateFunction.cuh \
+    Tanh.cuh

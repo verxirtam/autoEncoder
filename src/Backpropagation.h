@@ -46,17 +46,6 @@ private:
 	std::vector<DeviceMatrix> deltaWeight;
 	std::vector<DeviceVector> deltaBias;
 	DeviceVector _1B;
-	//活性化関数
-	float f(const float& x)
-	{
-		return std::tanh(x);
-	}
-	//活性化関数の微分
-	float df(const float& x)
-	{
-		float tanh_x = std::tanh(x);
-		return 1.0f - (tanh_x * tanh_x);
-	}
 	//weightとbiasをランダムに初期化する
 	void initRandom(void);
 public:
