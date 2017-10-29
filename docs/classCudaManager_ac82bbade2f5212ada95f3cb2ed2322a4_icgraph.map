@@ -1,8 +1,8 @@
 <map id="CudaManager::getDeviceProp" name="CudaManager::getDeviceProp">
-<area shape="rect" id="node2" href="$classActivateFunction.html#a718be86ac6b7b80536a2424b25221e05" title="ActivateFunction::culculate\lBlockThreadCount" alt="" coords="262,59,442,101"/>
-<area shape="rect" id="node7" href="$classBackpropagation__Base.html#a4f225f9f61fdd8f3b87ee77e63c205b4" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="251,125,453,166"/>
-<area shape="rect" id="node3" href="$classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0" title="ActivateFunction::activate" alt="" coords="511,41,686,68"/>
-<area shape="rect" id="node6" href="$classActivateFunction.html#a7ea83e286e81755d6fb2d7213e076780" title="ActivateFunction::activateDiff" alt="" coords="501,92,696,119"/>
-<area shape="rect" id="node4" href="$classBackpropagation__Base.html#ab089d62feaa832d470499a9e380acb6d" title="Backpropagation_Base\l::obtainZFromU" alt="" coords="745,5,901,46"/>
-<area shape="rect" id="node5" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="801,71,845,97"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a4f225f9f61fdd8f3b87ee77e63c205b4" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="252,5,455,46"/>
+<area shape="rect" id="node3" href="$classElementWiseFunction1__1.html#a37c38d360f798a665a0bbc9f91a4d1c7" title="ElementWiseFunction1\l_1::culculateBlockThreadCount" alt="" coords="251,70,455,111"/>
+<area shape="rect" id="node4" href="$classElementWiseFunction1__1.html#a428f1da44225e3264f1076ffa59207d4" title="ElementWiseFunction1\l_1::apply" alt="" coords="504,70,661,111"/>
+<area shape="rect" id="node5" href="$classActivateFunction.html#a0668a5f8d7e797d24933571622d3c627" title="ActivateFunction::activate" alt="" coords="710,77,885,104"/>
+<area shape="rect" id="node6" href="$classBackpropagation__Base.html#ab089d62feaa832d470499a9e380acb6d" title="Backpropagation_Base\l::obtainZFromU" alt="" coords="934,41,1090,82"/>
+<area shape="rect" id="node7" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="990,107,1034,133"/>
 </map>

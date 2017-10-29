@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['activate',['activate',['../classActivateFunction.html#a6a7bd1e6111ba03162e2dd3d706ff0d0',1,'ActivateFunction']]],
-  ['activatediff',['activateDiff',['../classActivateFunction.html#a7ea83e286e81755d6fb2d7213e076780',1,'ActivateFunction']]],
+  ['activate',['activate',['../classActivateFunction.html#a0668a5f8d7e797d24933571622d3c627',1,'ActivateFunction']]],
+  ['activatediff',['activateDiff',['../classActivateFunction.html#abb4d883e3311a89d9cf1c86eb1256e6e',1,'ActivateFunction']]],
   ['activatefunction',['ActivateFunction',['../classActivateFunction.html',1,'']]],
   ['activatefunction_2ecuh',['ActivateFunction.cuh',['../ActivateFunction_8cuh.html',1,'']]],
   ['altitude',['altitude',['../classTrackData.html#a46bbda52839cf3e9d9a719d04f089f0d',1,'TrackData']]],
-  ['apply',['apply',['../classReLU.html#aab3aea84439eddeb8ab142f7f0917e3d',1,'ReLU::apply()'],['../classTanh.html#afea7953f4537433b8f861d397ecca193',1,'Tanh::apply()']]],
+  ['apply',['apply',['../classElementWiseFunction1__1.html#a428f1da44225e3264f1076ffa59207d4',1,'ElementWiseFunction1_1::apply()'],['../classElementWiseFunction2__1.html#ad61094e8146f61651d6400093e2a2757',1,'ElementWiseFunction2_1::apply()'],['../classComposite1st2__1.html#a4b01d63a03916bd6a494a7e382b7527f',1,'Composite1st2_1::apply()'],['../classComposite2nd2__1.html#a0a0761ed82020057bdba1a76bb73acf6',1,'Composite2nd2_1::apply()'],['../classApplyDiff1__1.html#ad70e46c89f1a3dfd316fdd04093d0f67',1,'ApplyDiff1_1::apply()'],['../classElementWiseProduct.html#a38dbc937aebeff807a58137d97d76e8d',1,'ElementWiseProduct::apply()'],['../classReLU.html#aab3aea84439eddeb8ab142f7f0917e3d',1,'ReLU::apply()'],['../classTanh.html#afea7953f4537433b8f861d397ecca193',1,'Tanh::apply()']]],
   ['applydiff',['applyDiff',['../classReLU.html#a998cc3c22b2af68e3fbe9e76194d34fb',1,'ReLU::applyDiff()'],['../classTanh.html#aef7d57dcf7b6de7b4f4fbdd54b7bf732',1,'Tanh::applyDiff()']]],
+  ['applydiff1_5f1',['ApplyDiff1_1',['../classApplyDiff1__1.html',1,'']]],
   ['autoencoder',['AutoEncoder',['../classAutoEncoder.html',1,'AutoEncoder'],['../classAutoEncoder.html#a0044e56fc355d4e8908a03a5646045af',1,'AutoEncoder::AutoEncoder()']]],
   ['autoencoder_2ecuh',['AutoEncoder.cuh',['../AutoEncoder_8cuh.html',1,'']]],
   ['autoencodertest',['AutoEncoderTest',['../classAutoEncoderTest.html',1,'']]],

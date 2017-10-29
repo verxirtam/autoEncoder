@@ -2,6 +2,8 @@ var searchData=
 [
   ['columncount',['columnCount',['../classDeviceMatrix.html#aae610c8c73a240c25dc645dd0dfc11fc',1,'DeviceMatrix']]],
   ['comparevector',['compareVector',['../unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9',1,'unittest.cu']]],
+  ['composite1st2_5f1',['Composite1st2_1',['../classComposite1st2__1.html',1,'']]],
+  ['composite2nd2_5f1',['Composite2nd2_1',['../classComposite2nd2__1.html',1,'']]],
   ['count',['count',['../unittest_8cu.html#a94b1957249b9d95386b1a60dce55735c',1,'unittest.cu']]],
   ['cublas_5fcall',['CUBLAS_CALL',['../CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67',1,'CuBlasManager.h']]],
   ['cublasexception',['CuBlasException',['../classCuBlasException.html',1,'CuBlasException'],['../classCuBlasException.html#a0b145266437601d2411478a033199780',1,'CuBlasException::CuBlasException(const std::string &amp;what_arg)'],['../classCuBlasException.html#a68530bd6987eb2ef7d037c2a7133d21e',1,'CuBlasException::CuBlasException(const char *what_arg)']]],
@@ -20,7 +22,7 @@ var searchData=
   ['cudamanager',['CudaManager',['../classCudaManager.html',1,'CudaManager'],['../classCudaManager.html#adfc45a05dd47ba033325b6ee80f0dc05',1,'CudaManager::CudaManager()'],['../classCudaManager.html#a8b77054f5b522ea2f4af481429a02228',1,'CudaManager::CudaManager(const CudaManager &amp;)=delete'],['../classCudaManager.html#afb8237bd653579ee9500dc1b3be449af',1,'CudaManager::CudaManager(CudaManager &amp;&amp;)=delete']]],
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
   ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
-  ['culculateblockthreadcount',['culculateBlockThreadCount',['../classActivateFunction.html#a718be86ac6b7b80536a2424b25221e05',1,'ActivateFunction']]],
+  ['culculateblockthreadcount',['culculateBlockThreadCount',['../classActivateFunction.html#a11bb8ca0e3d764f323768f2458ec47ef',1,'ActivateFunction::culculateBlockThreadCount()'],['../classElementWiseFunction1__1.html#a37c38d360f798a665a0bbc9f91a4d1c7',1,'ElementWiseFunction1_1::culculateBlockThreadCount()']]],
   ['curand_5fcall',['CURAND_CALL',['../CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02',1,'CuRandManager.h']]],
   ['curandexception',['CuRandException',['../classCuRandException.html',1,'CuRandException'],['../classCuRandException.html#a225dc948e1b1eaa4bf77124cbde9fcd0',1,'CuRandException::CuRandException(const std::string &amp;what_arg)'],['../classCuRandException.html#a41bfdfc146e267dbb8236b1021603089',1,'CuRandException::CuRandException(const char *what_arg)']]],
   ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
