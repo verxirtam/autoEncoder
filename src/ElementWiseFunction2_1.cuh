@@ -8,6 +8,14 @@
 template<class Func2_1>
 class ElementWiseFunction2_1
 {
+private:
+	static void culculateBlockThreadCount
+		(
+			const DeviceMatrix& x,
+			unsigned int& block_count,
+			unsigned int& thread_count,
+			unsigned int& thread_count_remain
+		);
 public:
 	//関数の適用
 	static DeviceMatrix& apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z);
@@ -19,7 +27,7 @@ namespace
 {
 	template<typename Func2_1>
 	__global__
-	void activate_kernel
+	void apply_kernel
 		(
 			unsigned int thread_index_offset,
 			const float* const x,
@@ -69,7 +77,7 @@ DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, cons
 	//スレッド数の残り
 	unsigned int thread_count_remain;
 	
-	ActivateFunction::culculateBlockThreadCount(x, block_count, thread_count, thread_count_remain);
+	ElementWiseFunction2_1<Func2_1>::culculateBlockThreadCount(x, block_count, thread_count, thread_count_remain);
 	
 	if(block_count != 0)
 	{

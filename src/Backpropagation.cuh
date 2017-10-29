@@ -29,6 +29,9 @@
 
 
 #include "ActivateFunction.cuh"
+#include "ElementWiseProduct.cuh"
+#include "ElementWiseFunction2_1.cuh"
+#include "ElementWiseFunctionUtil.cuh"
 
 template<class AF>
 class Backpropagation_Base

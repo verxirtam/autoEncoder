@@ -320,6 +320,8 @@ unittest.o : unittest.cu \
     ActivateFunction.cuh \
     ElementWiseFunction1_1.cuh \
     ElementWiseFunctionUtil.cuh \
+    ElementWiseProduct.cuh \
+    ElementWiseFunction2_1.cuh \
     Backpropagation_detail.cuh \
     Tanh.cuh \
     CuRandFunction.h \
