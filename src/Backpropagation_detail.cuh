@@ -1,21 +1,127 @@
-/*
- * =====================================================================================
- *
- *       Filename:  Backpropagation.cpp
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2016年12月19日 03時55分38秒
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
-#include "Backpropagation.h"
+#pragma once
+
+//Backpropagation.cuhのテンプレートクラスの実装
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// cudaカーネルを含む関数
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+namespace
+{
+	template<class AF>
+	__global__
+	void obtainDeltaFromFdUWTDelta_kernel
+		(
+			unsigned int thread_index_offset,
+			const float* const u_l,
+			const float* const wtdelta_lp1,
+			float* const delta_l
+		)
+	{
+		//ブロックインデックス、スレッドインデックスの読み替え
+		unsigned int s = threadIdx.x + blockIdx.x * blockDim.x + thread_index_offset;
+		
+		//このスレッドが計算すべき成分のインデックス
+		unsigned int j = s;
+		
+		delta_l[j] = AF::applyDiff(u_l[j]) * wtdelta_lp1[j];
+	}
+	
+	/*
+	//dEdW[l] = delta[l] * (z[l])^T;
+	template<unsigned int D>
+	__global__
+	void obtainDEDW_kernel
+		(
+			unsigned int data_index_offset,
+			unsigned int row_count,
+			const float* const delta_l,
+			const float* const z_lm1,
+			float* const dedw_l
+		)
+	{
+		for(unsigned int d =0; d < D; d++)
+		{
+			//ブロックインデックス、スレッドインデックスの読み替え
+			unsigned int s = threadIdx.x + d * blockDim.x + blockIdx.x * D * blockDim.x + data_index_offset;
+			unsigned int i = s % row_count;
+			unsigned int j = s / row_count;
+			unsigned int k = s;
+			
+			//dEdW[l] = delta[l] * (z[l])^T;
+			dedw_l[k] = delta_l[i] * z_lm1[j];
+		}
+	}
+	*/
+}
+
+template<class AF>
+void Backpropagation_Base<AF>::obtainZFromU(unsigned int l)
+{
+	
+	//最後のレイヤ(l == layerCount - 2)の場合は恒等写像なので単にコピーする
+	if(l == layerCount - 2)
+	{
+		z[l + 1] = u[l + 1];
+		return;
+	}
+	
+	ActivateFunction<AF>::activate(u[l + 1], z[l + 1]);
+}
+
+
+//delta[l] = f'(u[l]) ** WTdelta[l + 1];
+template<class AF>
+void Backpropagation_Base<AF>::obtainDeltaFromFdUWTDelta(unsigned int l)
+{
+	//1ブロックあたりのスレッド数の上限
+	static unsigned int thread_count = CudaManager::getDeviceProp().maxThreadsPerBlock;
+	
+	//生成するスレッド数全体
+	unsigned int thread_count_total = u[l].getRowCount() * u[l].getColumnCount();
+	
+	//スレッド数thread_countで実行するブロック数
+	unsigned int block_count         = thread_count_total / thread_count;
+	//スレッド数の残り
+	unsigned int thread_count_remain = thread_count_total % thread_count;
+	
+	if(block_count * thread_count != 0)
+	{
+		//カーネル実行
+		obtainDeltaFromFdUWTDelta_kernel<AF><<<block_count, thread_count>>>
+			(
+				0,
+				u[l].getAddress(),
+				WTdelta[l + 1].getAddress(),
+				delta[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	if(thread_count_remain != 0)
+	{
+		//カーネル実行
+		obtainDeltaFromFdUWTDelta_kernel<AF><<<1, thread_count_remain>>>
+			(
+				block_count * thread_count,
+				u[l].getAddress(),
+				WTdelta[l + 1].getAddress(),
+				delta[l].getAddress()
+			);
+		//カーネル実行時のエラーチェック
+		CUDA_CALL(cudaGetLastError());
+	}
+	//直後にdelta[l]を使用するので同期する
+	CUDA_CALL(cudaStreamSynchronize(0));
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// cudaカーネルを含まない関数
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 //初期化
@@ -24,7 +130,8 @@
 //下記の2式に分けて実行する
 //delta[layerCount -1] = u[layer_count - 1];
 //delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];
-void Backpropagation::obtainDeltaLast(const DeviceMatrix& D)
+template<class AF>
+void Backpropagation_Base<AF>::obtainDeltaLast(const DeviceMatrix& D)
 {
 	
 	//delta[layerCount -1] = u[layer_count - 1];
@@ -42,7 +149,8 @@ void Backpropagation::obtainDeltaLast(const DeviceMatrix& D)
 //lについて降順に逐次実行("**"は要素ごとの積(cudaで実行))
 //delta[l] = f'(u[l]) ** ((W[l + 1])^T * delta[l+1]);
 //l = layerCount - 2, ... , 1
-void Backpropagation::obtainDelta(unsigned int l)
+template<class AF>
+void Backpropagation_Base<AF>::obtainDelta(unsigned int l)
 {
 	//WTdelta[l +1] = (W[l + 1])^T * delta[l+1];
 	//<=>
@@ -61,20 +169,21 @@ void Backpropagation::obtainDelta(unsigned int l)
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
-void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
+template<class AF>
+void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
 {
 	//NULL Streamを使用する
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
 	if(layerCount != unit_count.size())
 	{
-		throw BackpropagationException("error at Backpropagation::init() : layerCount != unit_count.size().");
+		throw BackpropagationException("error at Backpropagation_Base<AF>::init() : layerCount != unit_count.size().");
 	}
 	unitCount = unit_count;
 	
 	if(minibatch_size == 0)
 	{
-		throw BackpropagationException("error at Backpropagation::init() : minibatch_size == 0.");
+		throw BackpropagationException("error at Backpropagation_Base<AF>::init() : minibatch_size == 0.");
 	}
 	miniBatchSize = minibatch_size;
 	
@@ -92,7 +201,7 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 		if(unitCount[l] == 0)
 		{
 			std::stringstream msg;
-			msg << "error at Backpropagation::init() : unitCount[" << l << "] == 0.";
+			msg << "error at Backpropagation_Base<AF>::init() : unitCount[" << l << "] == 0.";
 			throw BackpropagationException(msg.str());
 		}
 		
@@ -141,7 +250,8 @@ void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned
 
 }
 
-void Backpropagation::initRandom(void)
+template<class AF>
+void Backpropagation_Base<AF>::initRandom(void)
 {
 	//NULL Streamを使用する
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
@@ -183,14 +293,16 @@ void Backpropagation::initRandom(void)
 	}
 }
 
-void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)
+template<class AF>
+void Backpropagation_Base<AF>::forward(const std::vector<float>& x, std::vector<float>& y)
 {
 	DeviceMatrix X(x.size(), 1, x);
 	DeviceMatrix Y;
 	forward(X, Y);
 	y = Y.get();
 }
-void Backpropagation::forward(const DeviceMatrix& X, DeviceMatrix& Y)
+template<class AF>
+void Backpropagation_Base<AF>::forward(const DeviceMatrix& X, DeviceMatrix& Y)
 {
 	//使用するStreamをMainStreamに設定
 	//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
@@ -216,12 +328,14 @@ void Backpropagation::forward(const DeviceMatrix& X, DeviceMatrix& Y)
 	//CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
-void Backpropagation::back(const std::vector<float>& d)
+template<class AF>
+void Backpropagation_Base<AF>::back(const std::vector<float>& d)
 {
 	DeviceMatrix D(d.size(), 1, d);
 	back(D);
 }
-void Backpropagation::back(const DeviceMatrix& D)
+template<class AF>
+void Backpropagation_Base<AF>::back(const DeviceMatrix& D)
 {
 	//使用するStreamをMainStreamに設定
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
@@ -242,7 +356,8 @@ void Backpropagation::back(const DeviceMatrix& D)
 	
 }
 
-void Backpropagation::updateParameter()
+template<class AF>
+void Backpropagation_Base<AF>::updateParameter()
 {
 	//l,W,b について非同期に実行
 	
@@ -327,3 +442,4 @@ void Backpropagation::updateParameter()
 		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
 	}
 }
+

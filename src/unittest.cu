@@ -32,7 +32,7 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
-#include "Backpropagation.h"
+#include "Backpropagation.cuh"
 
 #include "CuRandFunction.h"
 
@@ -41,7 +41,7 @@
 
 #include "Normalization.h"
 
-#include "AutoEncoder.h"
+#include "AutoEncoder.cuh"
 
 #include "DeviceVectorUtils.h"
 

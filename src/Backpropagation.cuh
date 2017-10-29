@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Backpropagation.h
+ *       Filename:  Backpropagation.cuh
  *
  *    Description:  
  *
@@ -28,7 +28,10 @@
 #include "BackpropagationException.h"
 
 
-class Backpropagation
+#include "ActivateFunction.cuh"
+
+template<class AF>
+class Backpropagation_Base
 {
 private:
 	
@@ -94,7 +97,7 @@ public:
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
 	
 	//コンストラクタ
-	Backpropagation(unsigned int layer_count):
+	Backpropagation_Base(unsigned int layer_count):
 		layerCount(layer_count),
 		miniBatchSize(1),
 		unitCount(),
@@ -270,4 +273,8 @@ public:
 	}
 };
 
+#include "Backpropagation_detail.cuh"
+
+#include "Tanh.cuh"
+using Backpropagation = Backpropagation_Base<Tanh>;
 

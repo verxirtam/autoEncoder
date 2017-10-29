@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  AutoEncoder.h
+ *       Filename:  AutoEncoder.cuh
  *
  *    Description:  
  *
@@ -19,7 +19,7 @@
 #pragma once
 
 #include "Normalization.h"
-#include "Backpropagation.h"
+#include "Backpropagation.cuh"
 
 class AutoEncoder
 {
