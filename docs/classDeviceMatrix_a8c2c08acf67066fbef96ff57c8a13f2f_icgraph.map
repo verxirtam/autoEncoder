@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classDeviceMatrix.html#ada83d78870bd29082835978dfa368fb4" title="DeviceMatrix::DeviceMatrix" alt="" coords="184,5,368,32"/>
 <area shape="rect" id="node3" href="$classDeviceMatrix.html#a8fd766a8bf78b21323eb2fd6b4c2cb57" title="DeviceMatrix::set" alt="" coords="213,56,339,83"/>
 <area shape="rect" id="node4" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="210,107,342,133"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="248,157,304,184"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="179,209,373,250"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="421,216,477,243"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="248,157,304,184"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="179,209,373,250"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="421,216,477,243"/>
 </map>

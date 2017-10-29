@@ -1,4 +1,6 @@
 <map id="src/ActivateFunction.cuh" name="src/ActivateFunction.cuh">
-<area shape="rect" id="node2" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="5,81,145,122"/>
-<area shape="rect" id="node3" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="170,88,288,115"/>
+<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="49,80,215,107"/>
+<area shape="rect" id="node5" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="239,80,357,107"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="5,155,149,181"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="79,229,184,256"/>
 </map>

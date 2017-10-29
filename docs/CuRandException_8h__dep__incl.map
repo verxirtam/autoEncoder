@@ -1,11 +1,9 @@
 <map id="src/CuRandException.h" name="src/CuRandException.h">
-<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="src/CuRandManager.h" alt="" coords="505,80,657,107"/>
-<area shape="rect" id="node3" href="$Backpropagation_8h.html" title="src/Backpropagation.h" alt="" coords="219,155,371,181"/>
-<area shape="rect" id="node8" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="505,155,657,181"/>
-<area shape="rect" id="node10" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="682,155,848,181"/>
-<area shape="rect" id="node4" href="$AutoEncoder_8h.html" title="src/AutoEncoder.h" alt="" coords="5,237,135,264"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html" title="src/unittest.cpp" alt="" coords="117,320,228,347"/>
-<area shape="rect" id="node6" href="$Backpropagation_8cpp.html" title="src/Backpropagation.cpp" alt="" coords="211,237,377,264"/>
-<area shape="rect" id="node7" href="$Backpropagation__cuda_8cu.html" title="src/Backpropagation\l_cuda.cu" alt="" coords="403,230,543,271"/>
-<area shape="rect" id="node9" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="619,237,785,264"/>
+<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="src/CuRandManager.h" alt="" coords="233,80,385,107"/>
+<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="42,155,208,181"/>
+<area shape="rect" id="node6" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="233,155,385,181"/>
+<area shape="rect" id="node8" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="410,155,576,181"/>
+<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="5,229,149,256"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="134,304,239,331"/>
+<area shape="rect" id="node7" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="275,229,441,256"/>
 </map>

@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classCuBlasManager.html" title="CuBlasManager" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$classBackpropagationException.html" title="BackpropagationException" alt="" coords="153,5,330,32"/>
+<area shape="rect" id="node3" href="$classCuBlasException.html" title="CuBlasException" alt="" coords="180,56,303,83"/>
+<area shape="rect" id="node4" href="$classCudaException.html" title="CudaException" alt="" coords="186,107,297,133"/>
+<area shape="rect" id="node5" href="$classCuRandException.html" title="CuRandException" alt="" coords="177,157,305,184"/>
+<area shape="rect" id="node6" href="$classCuSolverDnException.html" title="CuSolverDnException" alt="" coords="166,208,317,235"/>
 </map>

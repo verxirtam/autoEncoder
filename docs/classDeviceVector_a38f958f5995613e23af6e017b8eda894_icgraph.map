@@ -2,16 +2,16 @@
 <area shape="rect" id="node2" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="273,12,407,39"/>
 <area shape="rect" id="node4" href="$classDeviceVector.html#a074da01d2c5080cf58fe55f334c1eb3a" title="DeviceVector::get0Vector" alt="" coords="254,75,426,101"/>
 <area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="254,151,426,177"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="535,5,591,32"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="535,5,591,32"/>
 <area shape="rect" id="node6" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="875,208,997,235"/>
-<area shape="rect" id="node10" href="$classBackpropagation.html#a01e5cff96a253eccd24612208bb57ba6" title="Backpropagation::init" alt="" coords="491,233,635,260"/>
+<area shape="rect" id="node10" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="485,230,641,271"/>
 <area shape="rect" id="node13" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="475,107,650,133"/>
-<area shape="rect" id="node15" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="908,69,964,96"/>
-<area shape="rect" id="node16" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="900,145,972,172"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="1115,179,1171,205"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1045,230,1240,271"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1288,237,1344,264"/>
-<area shape="rect" id="node11" href="$unittest_8cpp.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="727,259,799,285"/>
-<area shape="rect" id="node12" href="$unittest_8cpp.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="735,309,791,336"/>
+<area shape="rect" id="node15" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="908,69,964,96"/>
+<area shape="rect" id="node16" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="900,145,972,172"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="1115,179,1171,205"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1045,230,1240,271"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1288,237,1344,264"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#ac1c291c9bde3a4f2cfbf113b5d03ccca" title="TEST_P" alt="" coords="727,259,799,285"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="735,309,791,336"/>
 <area shape="rect" id="node14" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="699,107,826,133"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="AutoEncoder::init" name="AutoEncoder::init">
-<area shape="rect" id="node2" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="245,5,301,32"/>
-<area shape="rect" id="node3" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="176,57,371,98"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="419,64,475,91"/>
+<area shape="rect" id="node2" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="245,5,301,32"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="176,57,371,98"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="419,64,475,91"/>
 </map>

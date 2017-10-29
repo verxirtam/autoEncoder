@@ -1,15 +1,15 @@
 <map id="Sgemv" name="Sgemv">
-<area shape="rect" id="node2" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="341,189,568,216"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#aee3866480b2d5a6985d6db884ce7ba59" title="Backpropagation_Base\l::updateParameter" alt="" coords="342,182,498,223"/>
 <area shape="rect" id="node9" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="139,228,271,255"/>
 <area shape="rect" id="node10" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="118,101,293,128"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="617,157,767,184"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="656,208,728,235"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="664,259,720,285"/>
-<area shape="rect" id="node4" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="885,29,941,56"/>
-<area shape="rect" id="node5" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="816,127,1011,169"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1059,135,1115,161"/>
-<area shape="rect" id="node11" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="391,81,518,108"/>
-<area shape="rect" id="node12" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="631,5,753,32"/>
-<area shape="rect" id="node13" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="664,56,720,83"/>
-<area shape="rect" id="node14" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="656,107,728,133"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="547,157,698,184"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="587,208,659,235"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="595,259,651,285"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="816,29,872,56"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="747,127,941,169"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="989,135,1045,161"/>
+<area shape="rect" id="node11" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="357,81,483,108"/>
+<area shape="rect" id="node12" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="561,5,684,32"/>
+<area shape="rect" id="node13" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="595,56,651,83"/>
+<area shape="rect" id="node14" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="587,107,659,133"/>
 </map>

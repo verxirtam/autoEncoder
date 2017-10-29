@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['epsilon',['epsilon',['../classBackpropagation.html#af259b432ddfba7efcc9e6f883afd1134',1,'Backpropagation']]]
+  ['epsilon',['epsilon',['../classBackpropagation__Base.html#a56ed57db43d46dfa32730fa6605166d3',1,'Backpropagation_Base']]]
 ];

@@ -1,19 +1,18 @@
 <map id="Sger" name="Sger">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a32b9a44de3d4e1f42b23c698ee33618c" title="Backpropagation::obtainUFromZ" alt="" coords="104,39,315,65"/>
-<area shape="rect" id="node4" href="$classNormalization.html#acaab4ed6319cca2ecd1f72e1c0305a5f" title="Normalization::getWhitening" alt="" coords="116,188,303,215"/>
-<area shape="rect" id="node13" href="$classNormalization.html#aef797a0b8f3cf97814dec5caca7dd04f" title="Normalization::getInverse\lWhitening" alt="" coords="124,122,295,163"/>
-<area shape="rect" id="node16" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="122,264,297,291"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="385,5,556,32"/>
-<area shape="rect" id="node5" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="363,188,578,215"/>
-<area shape="rect" id="node12" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="364,239,577,265"/>
-<area shape="rect" id="node6" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="627,137,778,164"/>
-<area shape="rect" id="node10" href="$unittest_8cpp.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="675,239,731,265"/>
-<area shape="rect" id="node11" href="$unittest_8cpp.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="667,188,739,215"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="896,161,952,188"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="827,235,1021,277"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1069,243,1125,269"/>
-<area shape="rect" id="node14" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="385,57,556,98"/>
-<area shape="rect" id="node15" href="$classNormalization.html#a4703e8547e233ce1bbc2e07a19a257dd" title="Normalization::getInverse\lZCAWhitening" alt="" coords="385,122,556,163"/>
-<area shape="rect" id="node17" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="407,289,534,316"/>
-<area shape="rect" id="node18" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="641,289,764,316"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#acff75ecac2dd73facdd26921528e2ee1" title="Backpropagation_Base\l\&lt; Tanh \&gt;::obtainUFromZ" alt="" coords="114,5,281,46"/>
+<area shape="rect" id="node3" href="$classNormalization.html#acaab4ed6319cca2ecd1f72e1c0305a5f" title="Normalization::getWhitening" alt="" coords="104,121,291,148"/>
+<area shape="rect" id="node12" href="$classNormalization.html#aef797a0b8f3cf97814dec5caca7dd04f" title="Normalization::getInverse\lWhitening" alt="" coords="112,198,283,239"/>
+<area shape="rect" id="node15" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="110,71,285,97"/>
+<area shape="rect" id="node4" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="339,147,554,173"/>
+<area shape="rect" id="node11" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="340,96,553,123"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="603,197,754,224"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="651,96,707,123"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="643,147,715,173"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="872,69,928,96"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="803,143,997,185"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="1045,151,1101,177"/>
+<area shape="rect" id="node13" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="361,263,532,305"/>
+<area shape="rect" id="node14" href="$classNormalization.html#a4703e8547e233ce1bbc2e07a19a257dd" title="Normalization::getInverse\lZCAWhitening" alt="" coords="361,198,532,239"/>
+<area shape="rect" id="node16" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="383,45,510,72"/>
+<area shape="rect" id="node17" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="617,45,740,72"/>
 </map>

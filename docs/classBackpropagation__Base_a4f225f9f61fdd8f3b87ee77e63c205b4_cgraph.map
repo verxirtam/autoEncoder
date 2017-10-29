@@ -1,0 +1,4 @@
+<map id="Backpropagation_Base::obtainDeltaFromFdUWTDelta" name="Backpropagation_Base::obtainDeltaFromFdUWTDelta">
+<area shape="rect" id="node2" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="256,12,453,39"/>
+<area shape="rect" id="node3" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="501,12,680,39"/>
+</map>

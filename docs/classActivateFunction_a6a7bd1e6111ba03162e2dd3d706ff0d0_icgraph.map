@@ -1,5 +1,4 @@
 <map id="ActivateFunction::activate" name="ActivateFunction::activate">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a945550e3b44e3caccbd9ca137375b714" title="Backpropagation::obtainZFromU" alt="" coords="229,5,440,32"/>
-<area shape="rect" id="node4" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="313,56,357,83"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#af675ca044a49b694f3899b0b664803cc" title="Backpropagation::forward" alt="" coords="488,5,659,32"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#ab089d62feaa832d470499a9e380acb6d" title="Backpropagation_Base\l::obtainZFromU" alt="" coords="230,5,386,46"/>
+<area shape="rect" id="node3" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="286,71,330,97"/>
 </map>

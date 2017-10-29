@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['weight',['weight',['../classBackpropagation.html#a11709cf3f30b963a0f1ba3d8e24e1628',1,'Backpropagation']]],
-  ['wtdelta',['WTdelta',['../classBackpropagation.html#a188f915bd07a2e6480d619d92fa6fc48',1,'Backpropagation']]]
+  ['weight',['weight',['../classBackpropagation__Base.html#af3e537b73d265217af751f37b47b6b88',1,'Backpropagation_Base']]],
+  ['wtdelta',['WTdelta',['../classBackpropagation__Base.html#a282656a481796c16f76378c3bf263944',1,'Backpropagation_Base']]]
 ];

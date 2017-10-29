@@ -1,12 +1,11 @@
 <map id="Saxpy" name="Saxpy">
-<area shape="rect" id="node2" href="$classBackpropagation.html#ad4549cb3adb28420cff01cb124368596" title="Backpropagation::obtainDeltaLast" alt="" coords="116,31,335,57"/>
-<area shape="rect" id="node4" href="$classBackpropagation.html#af56fe77162dadcfcdac69ec658106212" title="Backpropagation::updateParameter" alt="" coords="112,107,339,133"/>
-<area shape="rect" id="node11" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="158,157,293,184"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a71a9296c9e6236c1d953d9bc61e4645e" title="Backpropagation::back" alt="" coords="387,5,541,32"/>
-<area shape="rect" id="node5" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="389,56,539,83"/>
-<area shape="rect" id="node9" href="$unittest_8cpp.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="428,107,500,133"/>
-<area shape="rect" id="node10" href="$unittest_8cpp.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="436,157,492,184"/>
-<area shape="rect" id="node6" href="$unittest_8cpp.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="659,27,715,53"/>
-<area shape="rect" id="node7" href="$unittest_8cpp.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="589,78,784,119"/>
-<area shape="rect" id="node8" href="$unittest_8cpp.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="832,85,888,112"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a7354901972c0fce56728fa89d5c77e66" title="Backpropagation_Base\l::obtainDeltaLast" alt="" coords="113,10,269,51"/>
+<area shape="rect" id="node3" href="$classBackpropagation__Base.html#aee3866480b2d5a6985d6db884ce7ba59" title="Backpropagation_Base\l::updateParameter" alt="" coords="113,75,269,117"/>
+<area shape="rect" id="node10" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="123,141,258,168"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="318,35,469,61"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="357,85,429,112"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="365,137,421,164"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="587,5,643,32"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="517,57,712,98"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="760,64,816,91"/>
 </map>

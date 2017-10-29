@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updateparameter',['updateParameter',['../classBackpropagation.html#af56fe77162dadcfcdac69ec658106212',1,'Backpropagation']]]
+  ['updateparameter',['updateParameter',['../classBackpropagation__Base.html#aee3866480b2d5a6985d6db884ce7ba59',1,'Backpropagation_Base']]]
 ];
