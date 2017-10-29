@@ -318,6 +318,8 @@ unittest.o : unittest.cu \
     CuRandException.h \
     BackpropagationException.h \
     ActivateFunction.cuh \
+    ElementWiseFunction1_1.cuh \
+    ElementWiseFunctionUtil.cuh \
     Backpropagation_detail.cuh \
     Tanh.cuh \
     CuRandFunction.h \

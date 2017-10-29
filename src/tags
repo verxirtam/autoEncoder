@@ -4,22 +4,16 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-AutoEncoder	AutoEncoder.h	/^	AutoEncoder():$/;"	f	class:AutoEncoder
-AutoEncoder	AutoEncoder.h	/^class AutoEncoder$/;"	c
-AutoEncoderTest	unittest.cpp	/^class AutoEncoderTest :$/;"	c	file:
-Backpropagation	Backpropagation.h	/^	Backpropagation(unsigned int layer_count):$/;"	f	class:Backpropagation
-Backpropagation	Backpropagation.h	/^class Backpropagation$/;"	c
-BackpropagationAllTest	unittest.cpp	/^class BackpropagationAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
+ActivateFunction	ActivateFunction.cuh	/^class ActivateFunction$/;"	c	file:
+ApplyDiff1_1	ElementWiseFunctionUtil.cuh	/^class ApplyDiff1_1$/;"	c	file:
+AutoEncoder	AutoEncoder.cuh	/^	AutoEncoder():$/;"	f	class:AutoEncoder
+AutoEncoder	AutoEncoder.cuh	/^class AutoEncoder$/;"	c	file:
+Backpropagation	Backpropagation.cuh	/^using Backpropagation = Backpropagation_Base<Tanh>;$/;"	u
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const char* what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const std::string& what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^class BackpropagationException : public std::runtime_error$/;"	c
-BackpropagationFunctionTest	unittest.cpp	/^class BackpropagationFunctionTest :$/;"	c	file:
-BackpropagationMiniBatchTest	unittest.cpp	/^class BackpropagationMiniBatchTest :$/;"	c	file:
-BackpropagationNumericDiffTest	unittest.cpp	/^class BackpropagationNumericDiffTest :$/;"	c	file:
-BackpropagationObtainDEDWTest	unittest.cpp	/^class BackpropagationObtainDEDWTest :$/;"	c	file:
-BackpropagationStreamTest	unittest.cpp	/^class BackpropagationStreamTest :$/;"	c	file:
-BackpropagationTest	unittest.cpp	/^class BackpropagationTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
-BackpropagationTest_All_showInfo	unittest.cpp	/^void BackpropagationTest_All_showInfo$/;"	f
+Backpropagation_Base	Backpropagation.cuh	/^	Backpropagation_Base(unsigned int layer_count):$/;"	f	class:Backpropagation_Base
+Backpropagation_Base	Backpropagation.cuh	/^class Backpropagation_Base$/;"	c	file:
 COMMON_FLAGS	makefile	/^COMMON_FLAGS := -pg -g -O0$/;"	m
 CUBLAS_CALL	CuBlasManager.h	33;"	d
 CUDA_CALL	CudaManager.h	26;"	d
@@ -29,12 +23,11 @@ CUSOLVERDN_CALL	CuSolverDnManager.h	28;"	d
 CXXFLAGS	makefile	/^CXXFLAGS := -Wall -fopenmp -I\/usr\/include -I\/usr\/local\/cuda\/include -I$(HOME)\/programs\/ATFViewer\/include $(CXX_LINKS)$/;"	m
 CXXONLYFLAGS	makefile	/^CXXONLYFLAGS := -std=c++11 -Weffc++$/;"	m
 CXX_LINKS	makefile	/^CXX_LINKS := -L\/usr\/local\/lib -L\/usr\/local\/cuda\/lib64 -lgtest -lsqlite3 -lcudart -lcublas -lcurand -lcusolver$/;"	m
+Composite1st2_1	ElementWiseFunctionUtil.cuh	/^class Composite1st2_1$/;"	c	file:
+Composite2nd2_1	ElementWiseFunctionUtil.cuh	/^class Composite2nd2_1$/;"	c	file:
 CuBlasException	CuBlasException.h	/^	CuBlasException(const char* what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^	CuBlasException(const std::string& what_arg):$/;"	f	class:CuBlasException
 CuBlasException	CuBlasException.h	/^class CuBlasException : public std::runtime_error$/;"	c
-CuBlasFunctionTest	unittest.cpp	/^class CuBlasFunctionTest :$/;"	c	file:
-CuBlasFunctionTest_1V	unittest.cpp	/^class CuBlasFunctionTest_1V :$/;"	c	file:
-CuBlasFunctionTest_2V	unittest.cpp	/^class CuBlasFunctionTest_2V :$/;"	c	file:
 CuBlasManager	CuBlasManager.h	/^	CuBlasManager():$/;"	f	class:CuBlasManager
 CuBlasManager	CuBlasManager.h	/^class CuBlasManager$/;"	c
 CuRandException	CuRandException.h	/^	CuRandException(const char* what_arg):$/;"	f	class:CuRandException
@@ -42,19 +35,16 @@ CuRandException	CuRandException.h	/^	CuRandException(const std::string& what_arg
 CuRandException	CuRandException.h	/^class CuRandException : public std::runtime_error$/;"	c
 CuRandManager	CuRandManager.h	/^	CuRandManager():$/;"	f	class:CuRandManager
 CuRandManager	CuRandManager.h	/^class CuRandManager$/;"	c
-CuRandManagerTest	unittest.cpp	/^class CuRandManagerTest :$/;"	c	file:
 CuSolverDnException	CuSolverDnException.h	/^	CuSolverDnException(const char* what_arg):$/;"	f	class:CuSolverDnException
 CuSolverDnException	CuSolverDnException.h	/^	CuSolverDnException(const std::string& what_arg):$/;"	f	class:CuSolverDnException
 CuSolverDnException	CuSolverDnException.h	/^class CuSolverDnException : public std::runtime_error$/;"	c
 CuSolverDnManager	CuSolverDnManager.h	/^	CuSolverDnManager():$/;"	f	class:CuSolverDnManager
 CuSolverDnManager	CuSolverDnManager.h	/^class CuSolverDnManager$/;"	c
-CuSolverDnTest	unittest.cpp	/^class CuSolverDnTest :$/;"	c	file:
 CudaException	CudaException.h	/^	CudaException(const char* what_arg):$/;"	f	class:CudaException
 CudaException	CudaException.h	/^	CudaException(const std::string& what_arg):$/;"	f	class:CudaException
 CudaException	CudaException.h	/^class CudaException : public std::runtime_error$/;"	c
 CudaManager	CudaManager.h	/^	CudaManager():$/;"	f	class:CudaManager
 CudaManager	CudaManager.h	/^class CudaManager$/;"	c
-CudaManagerTest	unittest.cpp	/^class CudaManagerTest :$/;"	c	file:
 DEPS	makefile	/^DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)$/;"	m
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix():$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(DeviceMatrix&& dm):$/;"	f	class:DeviceMatrix
@@ -62,18 +52,17 @@ DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(const DeviceMatrix& dm):$/;"	f	class
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(int r, int c):$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^	DeviceMatrix(int r, int c, const std::vector<float>& d):$/;"	f	class:DeviceMatrix
 DeviceMatrix	DeviceMatrix.h	/^class DeviceMatrix$/;"	c
-DeviceMatrixTest	unittest.cpp	/^class DeviceMatrixTest : public ::testing::Test , public ::testing::WithParamInterface<RowColumn>$/;"	c	file:
 DeviceVector	DeviceVector.h	/^	DeviceVector(DeviceVector&& dv):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^	DeviceVector(const DeviceVector& dv):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^	DeviceVector(const std::initializer_list<float> v):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^	DeviceVector(const std::vector<float>& v):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^	DeviceVector(unsigned int d = 0):$/;"	f	class:DeviceVector
 DeviceVector	DeviceVector.h	/^class DeviceVector$/;"	c
-DeviceVectorTest	unittest.cpp	/^class DeviceVectorTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>$/;"	c	file:
 DnSsyevd	CuSolverDnFunction.cpp	/^void DnSsyevd$/;"	f
-ErrorFunc	unittest.cpp	/^float ErrorFunc(const std::vector<float>& y, const std::vector<float>& d)$/;"	f
-GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py$/;"	m
-GTEST_LANG_CXX11	unittest.cpp	19;"	d	file:
+ElementWiseFunction1_1	ElementWiseFunction1_1.cuh	/^class ElementWiseFunction1_1$/;"	c	file:
+ElementWiseFunction2_1	ElementWiseFunction2_1.cuh	/^class ElementWiseFunction2_1$/;"	c	file:
+ElementWiseProduct	ElementWiseProduct.cuh	/^class ElementWiseProduct$/;"	c	file:
+GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py -s$/;"	m
 HOME	makefile	/^HOME := $(shell echo ~)$/;"	m
 MAKETEST_EXIST	makefile	/^MAKETEST_EXIST = glunittest$/;"	m
 MAKETEST_NOTEXIST	makefile	/^MAKETEST_NOTEXIST = notexistfile$/;"	m
@@ -85,33 +74,13 @@ NVPROF	makefile	/^NVPROF := nvprof --csv$/;"	m
 NVPROFGRAPH	makefile	/^NVPROFGRAPH := ~\/tools\/nvprof_graph\/nvprof_graph.sh$/;"	m
 Normalization	Normalization.h	/^	Normalization():$/;"	f	class:Normalization
 Normalization	Normalization.h	/^class Normalization$/;"	c
-NormalizationGeneralTest	unittest.cpp	/^class NormalizationGeneralTest :$/;"	c	file:
-NormalizationTest	unittest.cpp	/^class NormalizationTest :$/;"	c	file:
 OBJS	makefile	/^OBJS := $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o)$/;"	m
 OBJSTARGET	makefile	/^OBJSTARGET := $(filter-out $(TESTTARGET).o $(GLTESTTARGET).o, $(OBJS))$/;"	m
 OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OBJS))$/;"	m
-RowColumn	unittest.cpp	/^using RowColumn = std::tuple<unsigned int, unsigned int>;$/;"	u
+ReLU	ReLU.cuh	/^class ReLU$/;"	c	file:
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
 Saxpy	CuBlasFunction.cpp	/^void Saxpy$/;"	f
 Sdgmm	CuBlasFunction.cpp	/^void Sdgmm$/;"	f
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:AutoEncoderTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationAllTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationFunctionTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationMiniBatchTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationNumericDiffTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationObtainDEDWTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationStreamTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:BackpropagationTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_1V
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuBlasFunctionTest_2V
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuRandManagerTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CuSolverDnTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:CudaManagerTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceMatrixTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:DeviceVectorTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:NormalizationGeneralTest
-SetUp	unittest.cpp	/^	void SetUp(){}$/;"	f	class:NormalizationTest
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemm	CuBlasFunction.cpp	/^void Sgemm$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
@@ -121,92 +90,46 @@ Ssymm	CuBlasFunction.cpp	/^void Ssymm$/;"	f
 Ssyr	CuBlasFunction.cpp	/^void Ssyr$/;"	f
 Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
-TEST	unittest.cpp	/^TEST(AutoEncoderTest, Simple)$/;"	f
-TEST	unittest.cpp	/^TEST(BackpropagationMiniBatchTest, Simple)$/;"	f
-TEST	unittest.cpp	/^TEST(BackpropagationStreamTest, Init)$/;"	f
-TEST	unittest.cpp	/^TEST(BackpropagationTest, Simple)$/;"	f
-TEST	unittest.cpp	/^TEST(CuBlasFunctionTest, Sdgmm)$/;"	f
-TEST	unittest.cpp	/^TEST(CuRandManagerTest, Constructor)$/;"	f
-TEST	unittest.cpp	/^TEST(CuRandManagerTest, Generate)$/;"	f
-TEST	unittest.cpp	/^TEST(CuSolverDnTest, DnSsyevd)$/;"	f
-TEST	unittest.cpp	/^TEST(CuSolverDnTest, getHandle)$/;"	f
-TEST	unittest.cpp	/^TEST(CudaManagerTest, Stream)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceMatrixTest, DefaultConstructor)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceMatrixTest, useContainer)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceMatrixTest,Constructor3)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, Constructor1)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, Constructor2)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, Constructor3)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, CopyAssignmentOperator)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, CopyConstructor)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, DefaultConstructor)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveAssignmentOperator1)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveAssignmentOperator2)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor1)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, MoveConstructor2)$/;"	f
-TEST	unittest.cpp	/^TEST(DeviceVectorTest, useContainer)$/;"	f
-TEST	unittest.cpp	/^TEST(NormalizationTest, csv)$/;"	f
-TEST	unittest.cpp	/^TEST(NormalizationTest, simple)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationAllTest, All)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationFunctionTest, Kernel)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationObtainDEDWTest, test)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationStreamTest, Evaluate)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Constructor)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(BackpropagationTest, Init)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(CuBlasFunctionTest_1V, Sscal_Vector)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(CuBlasFunctionTest_2V, Sscal_Matrix)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor1)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, Constructor2)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyAssignmentOperator)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, CopyConstructor)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveAssignmentOperator)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceMatrixTest, MoveConstructor)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(DeviceVectorTest, set)$/;"	f
-TEST_P	unittest.cpp	/^TEST_P(NormalizationGeneralTest, test)$/;"	f
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:AutoEncoderTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationAllTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationFunctionTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationMiniBatchTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationNumericDiffTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationObtainDEDWTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationStreamTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:BackpropagationTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_1V
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuBlasFunctionTest_2V
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuRandManagerTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CuSolverDnTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:CudaManagerTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceMatrixTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:DeviceVectorTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:NormalizationGeneralTest
-TearDown	unittest.cpp	/^	void TearDown(){}$/;"	f	class:NormalizationTest
+Tanh	Tanh.cuh	/^class Tanh$/;"	c	file:
 TrackData	TrackData.h	/^class TrackData$/;"	c
-WTdelta	Backpropagation.h	/^	std::vector<DeviceMatrix> WTdelta;$/;"	m	class:Backpropagation
-_1B	AutoEncoder.h	/^	DeviceVector _1B;$/;"	m	class:AutoEncoder
-_1B	Backpropagation.h	/^	DeviceVector _1B;$/;"	m	class:Backpropagation
+WTdelta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> WTdelta;$/;"	m	class:Backpropagation_Base	file:
+_1B	AutoEncoder.cuh	/^	DeviceVector _1B;$/;"	m	class:AutoEncoder	file:
+_1B	Backpropagation.cuh	/^	DeviceVector _1B;$/;"	m	class:Backpropagation_Base	file:
+activate	ActivateFunction.cuh	/^	static DeviceMatrix& activate(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ActivateFunction
+activateDiff	ActivateFunction.cuh	/^	static DeviceMatrix& activateDiff(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ActivateFunction
+activate_kernel	ElementWiseFunction1_1.cuh	/^	void activate_kernel$/;"	f	namespace:__anon3
+activate_kernel	ElementWiseFunction2_1.cuh	/^	void activate_kernel$/;"	f	namespace:__anon2
 altitude	TrackData.h	/^	float altitude;$/;"	m	class:TrackData
-back	Backpropagation.cpp	/^void Backpropagation::back(const DeviceMatrix& D)$/;"	f	class:Backpropagation
-back	Backpropagation.cpp	/^void Backpropagation::back(const std::vector<float>& d)$/;"	f	class:Backpropagation
-backpropagation	AutoEncoder.h	/^	Backpropagation backpropagation;$/;"	m	class:AutoEncoder
-bias	Backpropagation.h	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backpropagation
+apply	ElementWiseFunction1_1.cuh	/^DeviceMatrix& ElementWiseFunction1_1<Func1_1>::apply(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ElementWiseFunction1_1
+apply	ElementWiseFunction2_1.cuh	/^DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z)$/;"	f	class:ElementWiseFunction2_1
+apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x)$/;"	f	class:ApplyDiff1_1	file:
+apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x, float y)$/;"	f	class:Composite1st2_1
+apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x, float y)$/;"	f	class:Composite2nd2_1
+apply	ElementWiseProduct.cuh	/^	static float apply(float x, float y)$/;"	f	class:ElementWiseProduct
+apply	ReLU.cuh	/^	static float apply(float x)$/;"	f	class:ReLU
+apply	Tanh.cuh	/^	static float apply(float x)$/;"	f	class:Tanh
+applyDiff	ReLU.cuh	/^	static float applyDiff(float x)$/;"	f	class:ReLU
+applyDiff	Tanh.cuh	/^	static float applyDiff(float x)$/;"	f	class:Tanh
+back	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::back(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
+back	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::back(const std::vector<float>& d)$/;"	f	class:Backpropagation_Base
+backpropagation	AutoEncoder.cuh	/^	Backpropagation backpropagation;$/;"	m	class:AutoEncoder	file:
+bias	Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backpropagation_Base	file:
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
-compareVector	unittest.cpp	/^float compareVector(const std::vector<float>& x,const std::vector<float>& y, float error = 0.0625)$/;"	f
-dEdW	Backpropagation.h	/^	std::vector<DeviceMatrix> dEdW;$/;"	m	class:Backpropagation
-dEdb	Backpropagation.h	/^	std::vector<DeviceVector> dEdb;$/;"	m	class:Backpropagation
-delta	Backpropagation.h	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:Backpropagation
+culculateBlockThreadCount	ElementWiseFunction1_1.cuh	/^void ElementWiseFunction1_1<Func1_1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction1_1
+culculateBlockThreadCount	ElementWiseFunction2_1.cuh	/^void ElementWiseFunction2_1<Func2_1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction2_1
+delta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:Backpropagation_Base	file:
+deltaBias	Backpropagation.cuh	/^	std::vector<DeviceVector> deltaBias;$/;"	m	class:Backpropagation_Base	file:
+deltaWeight	Backpropagation.cuh	/^	std::vector<DeviceMatrix> deltaWeight;$/;"	m	class:Backpropagation_Base	file:
 device	DeviceMatrix.h	/^	float* device;$/;"	m	class:DeviceMatrix
 device	DeviceVector.h	/^	float* device;$/;"	m	class:DeviceVector
 deviceProp	CudaManager.h	/^	cudaDeviceProp deviceProp;$/;"	m	class:CudaManager
-df	Backpropagation.h	/^	float df(const float& x)$/;"	f	class:Backpropagation
 dimension	DeviceVector.h	/^	unsigned int dimension;$/;"	m	class:DeviceVector
-epsilon	Backpropagation.h	/^	float epsilon;$/;"	m	class:Backpropagation
-f	Backpropagation.h	/^	float f(const float& x)$/;"	f	class:Backpropagation
-forward	Backpropagation.cpp	/^void Backpropagation::forward(const DeviceMatrix& X, DeviceMatrix& Y)$/;"	f	class:Backpropagation
-forward	Backpropagation.cpp	/^void Backpropagation::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation
+epsilon	Backpropagation.cuh	/^	float epsilon;$/;"	m	class:Backpropagation_Base	file:
+forward	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::forward(const DeviceMatrix& X, DeviceMatrix& Y)$/;"	f	class:Backpropagation_Base
+forward	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation_Base
+gamma	Backpropagation.cuh	/^	float gamma;$/;"	m	class:Backpropagation_Base	file:
 generator	CuRandManager.h	/^	curandGenerator_t generator;$/;"	m	class:CuRandManager
 get	DeviceMatrix.h	/^	std::vector<float> get() const$/;"	f	class:DeviceMatrix
 get	DeviceMatrix.h	/^	void get(float* const host) const$/;"	f	class:DeviceMatrix
@@ -222,21 +145,21 @@ getAddress	DeviceMatrix.h	/^	float* getAddress() const$/;"	f	class:DeviceMatrix
 getAddress	DeviceVector.h	/^	float* getAddress() const$/;"	f	class:DeviceVector
 getAlphaMatrix	DeviceMatrix.h	/^	static DeviceMatrix getAlphaMatrix(unsigned int row, unsigned int column, float alpha)$/;"	f	class:DeviceMatrix
 getAlphaVector	DeviceVector.h	/^	static DeviceVector getAlphaVector(unsigned int dimension, float alpha)$/;"	f	class:DeviceVector
-getBias	Backpropagation.h	/^	const std::vector<DeviceVector>& getBias() const$/;"	f	class:Backpropagation
-getBiasAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getBiasAsVector() const$/;"	f	class:Backpropagation
+getBias	Backpropagation.cuh	/^	const std::vector<DeviceVector>& getBias() const$/;"	f	class:Backpropagation_Base
+getBiasAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getBiasAsVector() const$/;"	f	class:Backpropagation_Base
 getColumnCount	DeviceMatrix.h	/^	int getColumnCount() const$/;"	f	class:DeviceMatrix
-getDEDB	Backpropagation.h	/^	const std::vector<DeviceVector>& getDEDB() const$/;"	f	class:Backpropagation
-getDEDBAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDEDBAsVector() const$/;"	f	class:Backpropagation
-getDEDW	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getDEDW() const$/;"	f	class:Backpropagation
-getDEDWAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDEDWAsVector() const$/;"	f	class:Backpropagation
-getDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getDelta() const$/;"	f	class:Backpropagation
-getDeltaAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getDeltaAsVector() const$/;"	f	class:Backpropagation
+getDEDBAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getDEDBAsVector() const$/;"	f	class:Backpropagation_Base
+getDelta	Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getDelta() const$/;"	f	class:Backpropagation_Base
+getDeltaAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getDeltaAsVector() const$/;"	f	class:Backpropagation_Base
 getDeviceProp	CudaManager.h	/^	static inline const cudaDeviceProp& getDeviceProp(void)$/;"	f	class:CudaManager
 getDimension	DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:DeviceVector
-getEpsilon	Backpropagation.h	/^	float getEpsilon() const$/;"	f	class:Backpropagation
+getEpsilon	AutoEncoder.cuh	/^	float getEpsilon() const$/;"	f	class:AutoEncoder
+getEpsilon	Backpropagation.cuh	/^	float getEpsilon() const$/;"	f	class:Backpropagation_Base
 getErrorString	CuBlasManager.cpp	/^const char* CuBlasManager::getErrorString(cublasStatus_t error)$/;"	f	class:CuBlasManager
 getErrorString	CuRandManager.cpp	/^const char* CuRandManager::getErrorString(curandStatus_t error)$/;"	f	class:CuRandManager
 getErrorString	CuSolverDnManager.cpp	/^const char* CuSolverDnManager::getErrorString(cusolverStatus_t status)$/;"	f	class:CuSolverDnManager
+getGamma	AutoEncoder.cuh	/^	float getGamma() const$/;"	f	class:AutoEncoder
+getGamma	Backpropagation.cuh	/^	float getGamma() const$/;"	f	class:Backpropagation_Base
 getGenerator	CuRandManager.h	/^	static curandGenerator_t getGenerator()$/;"	f	class:CuRandManager
 getHandle	CuBlasManager.h	/^	static cublasHandle_t getHandle()$/;"	f	class:CuBlasManager
 getHandle	CuSolverDnManager.h	/^	static inline cusolverDnHandle_t getHandle(void)$/;"	f	class:CuSolverDnManager
@@ -244,67 +167,67 @@ getInstance	CuBlasManager.h	/^	static CuBlasManager& getInstance()$/;"	f	class:C
 getInstance	CuRandManager.h	/^	static CuRandManager& getInstance()$/;"	f	class:CuRandManager
 getInstance	CuSolverDnManager.h	/^	static inline CuSolverDnManager& getInstance()$/;"	f	class:CuSolverDnManager
 getInstance	CudaManager.h	/^	static CudaManager& getInstance()$/;"	f	class:CudaManager
-getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
+getInversePCAWhitening	Normalization.h	/^	DeviceMatrix getInversePCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getInversePCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInversePCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getInverseWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getInverseWhitening$/;"	f	class:Normalization
-getInverseWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
-getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
+getInverseWhiteningMatrix	AutoEncoder.cuh	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
+getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getInverseZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
-getMainStream	Backpropagation.h	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
+getMainStream	Backpropagation.cuh	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation_Base
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f
-getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
+getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
 getStream	CudaManager.h	/^	cudaStream_t getStream(unsigned int stream_index)$/;"	f	class:CudaManager
 getStreamCount	CudaManager.h	/^	unsigned int getStreamCount()$/;"	f	class:CudaManager
-getSubStream	Backpropagation.h	/^	cudaStream_t getSubStream(unsigned int stream_index) const$/;"	f	class:Backpropagation
-getSubStreamCount	Backpropagation.h	/^	unsigned int getSubStreamCount(void) const$/;"	f	class:Backpropagation
-getU	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getU() const$/;"	f	class:Backpropagation
-getU	Backpropagation.h	/^	void getU(std::vector<std::vector<float> >& hu) const$/;"	f	class:Backpropagation
-getUAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:Backpropagation
+getSubStream	Backpropagation.cuh	/^	cudaStream_t getSubStream(unsigned int stream_index) const$/;"	f	class:Backpropagation_Base
+getSubStreamCount	Backpropagation.cuh	/^	unsigned int getSubStreamCount(void) const$/;"	f	class:Backpropagation_Base
+getU	Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getU() const$/;"	f	class:Backpropagation_Base
+getU	Backpropagation.cuh	/^	void getU(std::vector<std::vector<float> >& hu) const$/;"	f	class:Backpropagation_Base
+getUAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:Backpropagation_Base
 getVarCovEigenValue	Normalization.h	/^	const DeviceVector& getVarCovEigenValue(void) const$/;"	f	class:Normalization
 getVarCovEigenVector	Normalization.h	/^	const DeviceMatrix& getVarCovEigenVector(void) const$/;"	f	class:Normalization
 getVarCovMatrix	Normalization.h	/^	const DeviceMatrix& getVarCovMatrix(void) const$/;"	f	class:Normalization
-getWTDelta	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWTDelta() const$/;"	f	class:Backpropagation
-getWeight	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation
-getWeightAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation
+getWTDelta	Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getWTDelta() const$/;"	f	class:Backpropagation_Base
+getWeight	Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:Backpropagation_Base
+getWeightAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:Backpropagation_Base
 getWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getWhitening$/;"	f	class:Normalization
-getWhiteningMatrix	AutoEncoder.h	/^	DeviceMatrix getWhiteningMatrix() const$/;"	f	class:AutoEncoder
-getZ	Backpropagation.h	/^	const std::vector<DeviceMatrix>& getZ() const$/;"	f	class:Backpropagation
-getZAsVector	Backpropagation.h	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation
-getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1N) const$/;"	f	class:Normalization
+getWhiteningMatrix	AutoEncoder.cuh	/^	DeviceMatrix getWhiteningMatrix() const$/;"	f	class:AutoEncoder
+getZ	Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getZ() const$/;"	f	class:Backpropagation_Base
+getZAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getZAsVector() const$/;"	f	class:Backpropagation_Base
+getZCAWhitening	Normalization.h	/^	DeviceMatrix getZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 handle	CuBlasManager.h	/^	cublasHandle_t handle;$/;"	m	class:CuBlasManager
 handle	CuSolverDnManager.h	/^	cusolverDnHandle_t handle;$/;"	m	class:CuSolverDnManager
-host_matrix	unittest.cpp	/^	using host_matrix = std::vector<float>;$/;"	u
-init	AutoEncoder.h	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)$/;"	f	class:AutoEncoder
-init	Backpropagation.cpp	/^void Backpropagation::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:Backpropagation
+init	AutoEncoder.cuh	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)$/;"	f	class:AutoEncoder
+init	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:Backpropagation_Base
 init	Normalization.cpp	/^void Normalization::init(const DeviceMatrix& X)$/;"	f	class:Normalization
-initRandom	Backpropagation.cpp	/^void Backpropagation::initRandom(void)$/;"	f	class:Backpropagation
+initRandom	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::initRandom(void)$/;"	f	class:Backpropagation_Base
 initStream	CudaManager.h	/^	void initStream(unsigned int stream_count)$/;"	f	class:CudaManager
 inversePCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inversePCAWhiteningMatrix;$/;"	m	class:Normalization
 inverseZCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inverseZCAWhiteningMatrix;$/;"	m	class:Normalization
 latitude	TrackData.h	/^	float latitude;$/;"	m	class:TrackData
-layerCount	AutoEncoder.h	/^	const unsigned int layerCount;$/;"	m	class:AutoEncoder
-layerCount	Backpropagation.h	/^	const unsigned int layerCount;$/;"	m	class:Backpropagation
-learning	AutoEncoder.h	/^	DeviceMatrix learning(const DeviceMatrix& X)$/;"	f	class:AutoEncoder
+layerCount	AutoEncoder.cuh	/^	const unsigned int layerCount;$/;"	m	class:AutoEncoder	file:
+layerCount	Backpropagation.cuh	/^	const unsigned int layerCount;$/;"	m	class:Backpropagation_Base	file:
+learning	AutoEncoder.cuh	/^	DeviceMatrix learning(const DeviceMatrix& X)$/;"	f	class:AutoEncoder
 longitude	TrackData.h	/^	float longitude;$/;"	m	class:TrackData
 main	learningTrackData.cpp	/^int main(void)$/;"	f
-main	unittest.cpp	/^int main(int argc, char **argv)$/;"	f
 mean	Normalization.h	/^	DeviceVector mean;$/;"	m	class:Normalization
-miniBatchSize	Backpropagation.h	/^	unsigned int miniBatchSize;$/;"	m	class:Backpropagation
-normalization	AutoEncoder.h	/^	Normalization normalization;$/;"	m	class:AutoEncoder
-obtainDelta	Backpropagation.cpp	/^void Backpropagation::obtainDelta(unsigned int l)$/;"	f	class:Backpropagation
-obtainDeltaLast	Backpropagation.cpp	/^void Backpropagation::obtainDeltaLast(const DeviceMatrix& D)$/;"	f	class:Backpropagation
-obtainUFromZ	Backpropagation.h	/^	void obtainUFromZ(unsigned int l)$/;"	f	class:Backpropagation
+miniBatchSize	Backpropagation.cuh	/^	unsigned int miniBatchSize;$/;"	m	class:Backpropagation_Base	file:
+normalization	AutoEncoder.cuh	/^	Normalization normalization;$/;"	m	class:AutoEncoder	file:
+obtainDelta	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainDeltaFromFdUWTDelta	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDeltaFromFdUWTDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainDeltaFromFdUWTDelta_kernel	Backpropagation_detail.cuh	/^	void obtainDeltaFromFdUWTDelta_kernel$/;"	f	namespace:__anon1
+obtainDeltaLast	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDeltaLast(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
+obtainUFromZ	Backpropagation.cuh	/^	void obtainUFromZ(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainZFromU	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainZFromU(unsigned int l)$/;"	f	class:Backpropagation_Base
 operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(DeviceMatrix&& dm)$/;"	f	class:DeviceMatrix
 operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"	f	class:DeviceMatrix
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
 operator =	DeviceVector.h	/^	DeviceVector& operator=(const DeviceVector& dv)$/;"	f	class:DeviceVector
 pcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix pcaWhiteningMatrix;$/;"	m	class:Normalization
-printVector	unittest.cpp	/^void printVector(const std::vector<float>& v, const std::string& vname)$/;"	f
 readFromCsvFile	DeviceVectorUtils.cpp	/^DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& deviceMatrix)$/;"	f
 readFromCsvFile	DeviceVectorUtils.cpp	/^DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& deviceVector)$/;"	f
 rowCount	DeviceMatrix.h	/^	unsigned int rowCount;$/;"	m	class:DeviceMatrix
@@ -312,11 +235,15 @@ set	DeviceMatrix.h	/^	void set(const float* host)$/;"	f	class:DeviceMatrix
 set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceMatrix
 set	DeviceVector.h	/^	void set(const float* const host)$/;"	f	class:DeviceVector
 set	DeviceVector.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceVector
-setBias	Backpropagation.h	/^	void setBias(const std::vector<std::vector<float> >& b)$/;"	f	class:Backpropagation
+setBias	Backpropagation.cuh	/^	void setBias(const std::vector<std::vector<float> >& b)$/;"	f	class:Backpropagation_Base
+setEpsilon	AutoEncoder.cuh	/^	void setEpsilon(float e)$/;"	f	class:AutoEncoder
+setEpsilon	Backpropagation.cuh	/^	void setEpsilon(float e)$/;"	f	class:Backpropagation_Base
+setGamma	AutoEncoder.cuh	/^	void setGamma(float g)$/;"	f	class:AutoEncoder
+setGamma	Backpropagation.cuh	/^	void setGamma(float g)$/;"	f	class:Backpropagation_Base
 setRandomUniform	CuRandFunction.cpp	/^void setRandomUniform(float min, float max, DeviceMatrix& m)$/;"	f
 setRandomUniform	CuRandFunction.cpp	/^void setRandomUniform(float min, float max, DeviceVector& v)$/;"	f
-setSubStreamCount	Backpropagation.h	/^	void setSubStreamCount(unsigned int substream_count) const$/;"	f	class:Backpropagation
-setWeight	Backpropagation.h	/^	void setWeight(const std::vector<std::vector<float> >& w)$/;"	f	class:Backpropagation
+setSubStreamCount	Backpropagation.cuh	/^	void setSubStreamCount(unsigned int substream_count) const$/;"	f	class:Backpropagation_Base
+setWeight	Backpropagation.cuh	/^	void setWeight(const std::vector<std::vector<float> >& w)$/;"	f	class:Backpropagation_Base
 stream	CudaManager.h	/^	std::vector<cudaStream_t> stream;$/;"	m	class:CudaManager
 testCUBLAS	learningTrackData.cpp	/^int testCUBLAS()$/;"	f
 testCUBLASClass	learningTrackData.cpp	/^int testCUBLASClass()$/;"	f
@@ -324,16 +251,16 @@ testDBAccessor	learningTrackData.cpp	/^int testDBAccessor(void)$/;"	f
 testDeviceVector	learningTrackData.cpp	/^int testDeviceVector(void)$/;"	f
 time	TrackData.h	/^	float time;$/;"	m	class:TrackData
 track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
-u	Backpropagation.h	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation
-unitCount	Backpropagation.h	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation
-updateParameter	Backpropagation.cpp	/^void Backpropagation::updateParameter()$/;"	f	class:Backpropagation
+u	Backpropagation.cuh	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation_Base	file:
+unitCount	Backpropagation.cuh	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation_Base	file:
+updateParameter	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::updateParameter()$/;"	f	class:Backpropagation_Base
 varCovEigenValue	Normalization.h	/^	DeviceVector varCovEigenValue;$/;"	m	class:Normalization
 varCovEigenVector	Normalization.h	/^	DeviceMatrix varCovEigenVector;$/;"	m	class:Normalization
 varCovMatrix	Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:Normalization
-weight	Backpropagation.h	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation
+weight	Backpropagation.cuh	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation_Base	file:
 writeToCsvFile	DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMatrix)$/;"	f
 writeToCsvFile	DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVector)$/;"	f
-z	Backpropagation.h	/^	std::vector<DeviceMatrix> z;$/;"	m	class:Backpropagation
+z	Backpropagation.cuh	/^	std::vector<DeviceMatrix> z;$/;"	m	class:Backpropagation_Base	file:
 zcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix zcaWhiteningMatrix;$/;"	m	class:Normalization
 ~CuBlasManager	CuBlasManager.h	/^	virtual ~CuBlasManager()$/;"	f	class:CuBlasManager
 ~CuRandManager	CuRandManager.h	/^	~CuRandManager()$/;"	f	class:CuRandManager
