@@ -83,6 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="classElementWiseFunction2__1-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ElementWiseFunction2_1&lt; Func2_1 &gt; Class Template Reference</div>  </div>
@@ -93,6 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad61094e8146f61651d6400093e2a2757"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElementWiseFunction2__1.html#ad61094e8146f61651d6400093e2a2757">apply</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;x, const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;y, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;z)</td></tr>
 <tr class="separator:ad61094e8146f61651d6400093e2a2757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a779e4f0a974a3a197bda63ff3408c663"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElementWiseFunction2__1.html#a779e4f0a974a3a197bda63ff3408c663">culculateBlockThreadCount</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;x, unsigned int &amp;block_count, unsigned int &amp;thread_count, unsigned int &amp;thread_count_remain)</td></tr>
+<tr class="separator:a779e4f0a974a3a197bda63ff3408c663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad61094e8146f61651d6400093e2a2757"></a>
@@ -140,7 +146,82 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_cgraph.png" border="0" usemap="#classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_cgraph" alt=""/></div>
 <map name="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_cgraph" id="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_cgraph">
-<area shape="rect" id="node2" href="classActivateFunction.html#a11bb8ca0e3d764f323768f2458ec47ef" title="ActivateFunction::culculate\lBlockThreadCount" alt="" coords="211,5,391,46"/><area shape="rect" id="node3" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="215,71,388,97"/></map>
+<area shape="rect" id="node2" href="classElementWiseFunction2__1.html#a779e4f0a974a3a197bda63ff3408c663" title="ElementWiseFunction2\l_1::culculateBlockThreadCount" alt="" coords="211,49,415,90"/><area shape="rect" id="node7" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="227,115,400,141"/><area shape="rect" id="node3" href="classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="468,5,665,32"/><area shape="rect" id="node5" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="473,56,660,83"/><area shape="rect" id="node6" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="464,107,669,133"/><area shape="rect" id="node4" href="classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="717,5,896,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_icgraph.png" border="0" usemap="#classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_icgraph" alt=""/></div>
+<map name="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_icgraph" id="classElementWiseFunction2__1_ad61094e8146f61651d6400093e2a2757_icgraph">
+<area shape="rect" id="node2" href="classBackpropagation__Base.html#a4f225f9f61fdd8f3b87ee77e63c205b4" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="211,5,413,46"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a779e4f0a974a3a197bda63ff3408c663"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Func2_1 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classElementWiseFunction2__1.html">ElementWiseFunction2_1</a>&lt; Func2_1 &gt;::culculateBlockThreadCount </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>block_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>thread_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>thread_count_remain</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_cgraph.png" border="0" usemap="#classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_cgraph" alt=""/></div>
+<map name="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_cgraph" id="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_cgraph">
+<area shape="rect" id="node2" href="classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="263,5,460,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="268,56,455,83"/><area shape="rect" id="node5" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="259,107,464,133"/><area shape="rect" id="node3" href="classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="512,5,691,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_icgraph.png" border="0" usemap="#classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_icgraph" alt=""/></div>
+<map name="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_icgraph" id="classElementWiseFunction2__1_a779e4f0a974a3a197bda63ff3408c663_icgraph">
+<area shape="rect" id="node2" href="classElementWiseFunction2__1.html#ad61094e8146f61651d6400093e2a2757" title="ElementWiseFunction2\l_1::apply" alt="" coords="259,5,416,46"/><area shape="rect" id="node3" href="classBackpropagation__Base.html#a4f225f9f61fdd8f3b87ee77e63c205b4" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="464,5,667,46"/></map>
 </div>
 </p>
 
@@ -152,7 +233,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 30 2017 01:41:52 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 30 2017 02:50:18 for ATFViewer learingTrackData by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
