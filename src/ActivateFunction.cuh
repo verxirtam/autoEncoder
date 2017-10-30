@@ -8,14 +8,6 @@
 template<typename Func>
 class ActivateFunction
 {
-private:
-	static void culculateBlockThreadCount
-		(
-			const DeviceMatrix& x,
-			unsigned int& block_count,
-			unsigned int& thread_count,
-			unsigned int& thread_count_remain
-		);
 public:
 	//活性化関数
 	static DeviceMatrix& activate(const DeviceMatrix& x, DeviceMatrix& y)
