@@ -5,7 +5,7 @@ var searchData=
   ['backpropagation_2ecuh',['Backpropagation.cuh',['../Backpropagation_8cuh.html',1,'']]],
   ['backpropagation_5fbase',['Backpropagation_Base',['../classBackpropagation__Base.html',1,'Backpropagation_Base&lt; AF &gt;'],['../classBackpropagation__Base.html#afda6dc5e616b04d78439089e4f51d137',1,'Backpropagation_Base::Backpropagation_Base()']]],
   ['backpropagation_5fbase_3c_20tanh_20_3e',['Backpropagation_Base&lt; Tanh &gt;',['../classBackpropagation__Base.html',1,'']]],
-  ['backpropagation_5fdetail_2ecuh',['Backpropagation_detail.cuh',['../Backpropagation__detail_8cuh.html',1,'']]],
+  ['backpropagation_5fdetail_2eh',['Backpropagation_detail.h',['../Backpropagation__detail_8h.html',1,'']]],
   ['backpropagationalltest',['BackpropagationAllTest',['../classBackpropagationAllTest.html',1,'']]],
   ['backpropagationexception',['BackpropagationException',['../classBackpropagationException.html',1,'BackpropagationException'],['../classBackpropagationException.html#a476cbf6b34647657602a89c6edded46b',1,'BackpropagationException::BackpropagationException(const std::string &amp;what_arg)'],['../classBackpropagationException.html#ab095501546c90d19b0f0f1b99ec62f06',1,'BackpropagationException::BackpropagationException(const char *what_arg)']]],
   ['backpropagationexception_2eh',['BackpropagationException.h',['../BackpropagationException_8h.html',1,'']]],

@@ -6,8 +6,8 @@
 <area shape="rect" id="node26" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="947,179,1141,205"/>
 <area shape="rect" id="node27" href="$ElementWiseProduct_8cuh.html" title="ElementWiseProduct.cuh" alt="" coords="1171,88,1341,115"/>
 <area shape="rect" id="node28" href="$ElementWiseFunction2__1_8cuh.html" title="ElementWiseFunction2\l_1.cuh" alt="" coords="1365,81,1523,122"/>
-<area shape="rect" id="node29" href="$Backpropagation__detail_8cuh.html" title="Backpropagation_detail.cuh" alt="" coords="1547,88,1729,115"/>
-<area shape="rect" id="node30" href="$Tanh_8cuh.html" title="Tanh.cuh" alt="" coords="1754,88,1829,115"/>
+<area shape="rect" id="node29" href="$Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="1547,88,1715,115"/>
+<area shape="rect" id="node30" href="$Tanh_8cuh.html" title="Tanh.cuh" alt="" coords="1739,88,1815,115"/>
 <area shape="rect" id="node7" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="429,179,540,205"/>
 <area shape="rect" id="node18" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="575,179,685,205"/>
 <area shape="rect" id="node9" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="495,261,621,288"/>
