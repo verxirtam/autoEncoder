@@ -1,16 +1,16 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="110,107,266,149"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="110,107,266,149"/>
 <area shape="rect" id="node8" href="$CuRandFunction_8cpp.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="121,56,255,83"/>
-<area shape="rect" id="node14" href="$classBackpropagation__Base.html#a5a2fdc2ba026cfee5295c138beedb237" title="Backpropagation_Base\l::forward" alt="" coords="110,173,266,214"/>
+<area shape="rect" id="node14" href="$classBackpropagation__Base.html#ae025ee20686eb4e1840d8cabb6aecb44" title="Backpropagation_Base\l::forward" alt="" coords="110,173,266,214"/>
 <area shape="rect" id="node15" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="125,239,251,265"/>
 <area shape="rect" id="node16" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="133,289,243,316"/>
 <area shape="rect" id="node17" href="$unittest_8cu.html#abd0744eaaed49b3213a3a5ec054ca035" title="printVector" alt="" coords="145,340,231,367"/>
-<area shape="rect" id="node18" href="$classBackpropagation__Base.html#a7a429b19affed7f284a84a14ab8c9420" title="Backpropagation_Base\l::back" alt="" coords="110,391,266,433"/>
-<area shape="rect" id="node19" href="$classBackpropagation__Base.html#a367824b2e1e2d48a1978aac94c680e54" title="Backpropagation_Base\l::getDelta" alt="" coords="110,457,266,498"/>
-<area shape="rect" id="node20" href="$classBackpropagation__Base.html#a8a5fcc9015df7527132cfa1e376e601a" title="Backpropagation_Base\l::getWeight" alt="" coords="110,522,266,563"/>
-<area shape="rect" id="node21" href="$classBackpropagation__Base.html#acc815eccff6bd2c2cc193b800d96b8ad" title="Backpropagation_Base\l::getEpsilon" alt="" coords="110,587,266,629"/>
-<area shape="rect" id="node22" href="$classBackpropagation__Base.html#af52ef22a1be1bc35ed9badb7e59c696f" title="Backpropagation_Base\l::getBias" alt="" coords="110,653,266,694"/>
-<area shape="rect" id="node23" href="$classBackpropagation__Base.html#aee3866480b2d5a6985d6db884ce7ba59" title="Backpropagation_Base\l::updateParameter" alt="" coords="110,718,266,759"/>
+<area shape="rect" id="node18" href="$classBackpropagation__Base.html#a1f6617ce190319f567e230b6c79e4093" title="Backpropagation_Base\l::back" alt="" coords="110,391,266,433"/>
+<area shape="rect" id="node19" href="$classBackpropagation__Base.html#af982fd9dd612505a2eaccb110ef32650" title="Backpropagation_Base\l::getDelta" alt="" coords="110,457,266,498"/>
+<area shape="rect" id="node20" href="$classBackpropagation__Base.html#a2d5e177359753d1139028be2bb9b3fc9" title="Backpropagation_Base\l::getWeight" alt="" coords="110,522,266,563"/>
+<area shape="rect" id="node21" href="$classBackpropagation__Base.html#ace5fa4e965572fba35068bb9b497293f" title="Backpropagation_Base\l::getEpsilon" alt="" coords="110,587,266,629"/>
+<area shape="rect" id="node22" href="$classBackpropagation__Base.html#a4a6f5a6671b1f8e591650c96aea1dd58" title="Backpropagation_Base\l::getBias" alt="" coords="110,653,266,694"/>
+<area shape="rect" id="node23" href="$classBackpropagation__Base.html#a22003f1601b8aaa4b01f8c4292003020" title="Backpropagation_Base\l::updateParameter" alt="" coords="110,718,266,759"/>
 <area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="577,573,759,600"/>
 <area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="330,157,502,184"/>
 <area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="819,573,1010,600"/>

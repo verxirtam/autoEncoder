@@ -1,4 +1,4 @@
 <map id="CudaManager::getStreamCount" name="CudaManager::getStreamCount">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a6f6671865c87abaf066f6810cf4145a9" title="Backpropagation_Base\l\&lt; Tanh \&gt;::getSubStreamCount" alt="" coords="262,5,463,46"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="335,71,391,97"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#aca8ffd772ad3bc8266a12791051ff47f" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::getSubStreamCount" alt="" coords="261,5,469,61"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="337,85,393,112"/>
 </map>

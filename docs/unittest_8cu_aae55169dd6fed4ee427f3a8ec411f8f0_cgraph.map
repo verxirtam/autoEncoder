@@ -1,7 +1,7 @@
 <map id="BackpropagationTest_All_showInfo" name="BackpropagationTest_All_showInfo">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#adef5db186cd716e29473ec8cae1d3b22" title="Backpropagation_Base\l::getZAsVector" alt="" coords="201,5,357,46"/>
-<area shape="rect" id="node3" href="$classBackpropagation__Base.html#a5f83a5262b58206e567d01375433c0f7" title="Backpropagation_Base\l::getUAsVector" alt="" coords="201,70,357,111"/>
-<area shape="rect" id="node4" href="$classBackpropagation__Base.html#ac02b6cecab5df13fd591e2f24e9f8ad7" title="Backpropagation_Base\l::getDeltaAsVector" alt="" coords="201,135,357,177"/>
-<area shape="rect" id="node5" href="$classBackpropagation__Base.html#a022b9253c2de1c9e7a8ebdd8563a11fc" title="Backpropagation_Base\l::getWeightAsVector" alt="" coords="201,201,357,242"/>
-<area shape="rect" id="node6" href="$classBackpropagation__Base.html#a0c2428e75e301d56ebbd56a2bbe2268b" title="Backpropagation_Base\l::getBiasAsVector" alt="" coords="201,266,357,307"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a862df97b3652f5a2872db539699377e1" title="Backpropagation_Base\l::getZAsVector" alt="" coords="201,5,357,46"/>
+<area shape="rect" id="node3" href="$classBackpropagation__Base.html#ace2979c5533299f81206815442b30eda" title="Backpropagation_Base\l::getUAsVector" alt="" coords="201,70,357,111"/>
+<area shape="rect" id="node4" href="$classBackpropagation__Base.html#a797620bb743f8505182cfcde28458b4d" title="Backpropagation_Base\l::getDeltaAsVector" alt="" coords="201,135,357,177"/>
+<area shape="rect" id="node5" href="$classBackpropagation__Base.html#a4ab6addded2c2da7d1099324846f0c55" title="Backpropagation_Base\l::getWeightAsVector" alt="" coords="201,201,357,242"/>
+<area shape="rect" id="node6" href="$classBackpropagation__Base.html#a91c86abfdcfb5947f807939051f6fd85" title="Backpropagation_Base\l::getBiasAsVector" alt="" coords="201,266,357,307"/>
 </map>

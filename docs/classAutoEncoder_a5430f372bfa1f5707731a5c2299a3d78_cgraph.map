@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="177,441,303,468"/>
 <area shape="rect" id="node5" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="825,637,1012,664"/>
 <area shape="rect" id="node8" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="586,840,758,867"/>
-<area shape="rect" id="node28" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="362,803,518,845"/>
+<area shape="rect" id="node28" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="362,803,518,845"/>
 <area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="827,435,1010,461"/>
 <area shape="rect" id="node6" href="$Statistics_8cpp.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="353,517,527,544"/>
 <area shape="rect" id="node18" href="$CuSolverDnFunction_8cpp.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="631,64,713,91"/>

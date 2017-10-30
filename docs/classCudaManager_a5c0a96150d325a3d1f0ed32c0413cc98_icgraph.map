@@ -1,5 +1,5 @@
 <map id="CudaManager::getStream" name="CudaManager::getStream">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#aceac6b6d27263cd615b9f102da12f152" title="Backpropagation_Base\l\&lt; Tanh \&gt;::getMainStream" alt="" coords="224,5,395,46"/>
-<area shape="rect" id="node3" href="$classBackpropagation__Base.html#afe2a83c12528ee2447ddb0ae423c1697" title="Backpropagation_Base\l\&lt; Tanh \&gt;::getSubStream" alt="" coords="226,70,393,111"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="281,136,337,163"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a8a0afe15d98149521c3d8a19c59208b2" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::getMainStream" alt="" coords="224,5,432,61"/>
+<area shape="rect" id="node3" href="$classBackpropagation__Base.html#a7417fe1c4fee7d47916fbbfb6096d4f1" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::getSubStream" alt="" coords="224,85,432,141"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="300,165,356,192"/>
 </map>

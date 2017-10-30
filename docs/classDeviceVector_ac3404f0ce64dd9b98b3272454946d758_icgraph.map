@@ -5,7 +5,7 @@
 <area shape="rect" id="node6" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="491,151,663,177"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="772,5,828,32"/>
 <area shape="rect" id="node7" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="1112,208,1235,235"/>
-<area shape="rect" id="node11" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="722,230,878,271"/>
+<area shape="rect" id="node11" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="722,230,878,271"/>
 <area shape="rect" id="node14" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="713,107,887,133"/>
 <area shape="rect" id="node16" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1145,69,1201,96"/>
 <area shape="rect" id="node17" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1137,145,1209,172"/>

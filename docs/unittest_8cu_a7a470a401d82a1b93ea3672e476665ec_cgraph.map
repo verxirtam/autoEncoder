@@ -11,7 +11,7 @@
 <area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="426,789,553,816"/>
 <area shape="rect" id="node7" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="1129,984,1316,1011"/>
 <area shape="rect" id="node10" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="890,1405,1062,1432"/>
-<area shape="rect" id="node30" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="661,1339,817,1381"/>
+<area shape="rect" id="node30" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="661,1339,817,1381"/>
 <area shape="rect" id="node5" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="1131,528,1314,555"/>
 <area shape="rect" id="node8" href="$Statistics_8cpp.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="651,971,826,997"/>
 <area shape="rect" id="node20" href="$CuSolverDnFunction_8cpp.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="697,739,780,765"/>
@@ -37,9 +37,9 @@
 <area shape="rect" id="node33" href="$classNormalization.html#a3404f67ac2f9272372d94d6843e58d3a" title="Normalization::getPCAWhitening\lMatrix" alt="" coords="382,906,597,947"/>
 <area shape="rect" id="node35" href="$classNormalization.html#a628fe24c16a293352c626c1c87e6f366" title="Normalization::getInverse\lPCAWhiteningMatrix" alt="" coords="404,971,575,1013"/>
 <area shape="rect" id="node38" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="382,607,597,633"/>
-<area shape="rect" id="node40" href="$classBackpropagation__Base.html#a5a2fdc2ba026cfee5295c138beedb237" title="Backpropagation_Base\l::forward" alt="" coords="411,658,567,699"/>
-<area shape="rect" id="node41" href="$classBackpropagation__Base.html#a7a429b19affed7f284a84a14ab8c9420" title="Backpropagation_Base\l::back" alt="" coords="411,723,567,765"/>
-<area shape="rect" id="node42" href="$classBackpropagation__Base.html#aee3866480b2d5a6985d6db884ce7ba59" title="Backpropagation_Base\l::updateParameter" alt="" coords="661,622,817,663"/>
+<area shape="rect" id="node40" href="$classBackpropagation__Base.html#ae025ee20686eb4e1840d8cabb6aecb44" title="Backpropagation_Base\l::forward" alt="" coords="411,658,567,699"/>
+<area shape="rect" id="node41" href="$classBackpropagation__Base.html#a1f6617ce190319f567e230b6c79e4093" title="Backpropagation_Base\l::back" alt="" coords="411,723,567,765"/>
+<area shape="rect" id="node42" href="$classBackpropagation__Base.html#a22003f1601b8aaa4b01f8c4292003020" title="Backpropagation_Base\l::updateParameter" alt="" coords="661,622,817,663"/>
 <area shape="rect" id="node44" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="404,841,575,882"/>
 <area shape="rect" id="node39" href="$classNormalization.html#acaab4ed6319cca2ecd1f72e1c0305a5f" title="Normalization::getWhitening" alt="" coords="645,840,832,867"/>
 <area shape="rect" id="node43" href="$CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="947,123,1005,149"/>

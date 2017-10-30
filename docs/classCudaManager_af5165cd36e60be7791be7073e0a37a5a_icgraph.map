@@ -1,4 +1,4 @@
 <map id="CudaManager::initStream" name="CudaManager::initStream">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#acada09b1f0b0f224c2be466a207d9a6a" title="Backpropagation_Base\l\&lt; Tanh \&gt;::setSubStreamCount" alt="" coords="225,5,426,46"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="297,71,353,97"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a802f67e51d67006c829b60b7d2fb2c1c" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::setSubStreamCount" alt="" coords="224,5,432,61"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="300,85,356,112"/>
 </map>

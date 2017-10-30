@@ -1,6 +1,6 @@
 <map id="DeviceVector::get1Vector" name="DeviceVector::get1Vector">
 <area shape="rect" id="node2" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="627,35,749,61"/>
-<area shape="rect" id="node6" href="$classBackpropagation__Base.html#a9e499eaeb8aa635e8737a291b59c37a0" title="Backpropagation_Base\l::init" alt="" coords="237,99,393,141"/>
+<area shape="rect" id="node6" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="237,99,393,141"/>
 <area shape="rect" id="node9" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="227,237,402,264"/>
 <area shape="rect" id="node11" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="660,212,716,239"/>
 <area shape="rect" id="node12" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="652,263,724,289"/>

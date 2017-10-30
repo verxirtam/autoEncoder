@@ -1,5 +1,5 @@
 <map id="CuRandManager::getGenerator" name="CuRandManager::getGenerator">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#af534467ec5884af4bda1874489e0f32c" title="Backpropagation_Base\l::initRandom" alt="" coords="257,5,413,46"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#afb96a58e90a6eb19a593af25238c30d3" title="Backpropagation_Base\l::initRandom" alt="" coords="257,5,413,46"/>
 <area shape="rect" id="node3" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="267,71,402,97"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="307,121,363,148"/>
 <area shape="rect" id="node6" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="299,172,371,199"/>

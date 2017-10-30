@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['relu',['ReLU',['../classReLU.html',1,'']]]
+  ['outputlayermulticlassclassification',['OutputLayerMulticlassClassification',['../classOutputLayerMulticlassClassification.html',1,'']]],
+  ['outputlayerregression',['OutputLayerRegression',['../classOutputLayerRegression.html',1,'']]]
 ];
