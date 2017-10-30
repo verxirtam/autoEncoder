@@ -5,14 +5,15 @@
 /////////////////////////////////////////////////////////////////
 
 
-template<class AF>
-void Backpropagation_Base<AF>::obtainZFromU(unsigned int l)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::obtainZFromU(unsigned int l)
 {
 	
-	//最後のレイヤ(l == layerCount - 2)の場合は恒等写像なので単にコピーする
+	//最後のレイヤ(l == layerCount - 2)の場合はOutputLayerのActivateFunctionを使用する
 	if(l == layerCount - 2)
 	{
-		z[l + 1] = u[l + 1];
+		//z[l + 1] = u[l + 1];
+		OutputLayer::activateFunction(u[l + 1], z[l + 1]);
 		return;
 	}
 	
@@ -21,8 +22,8 @@ void Backpropagation_Base<AF>::obtainZFromU(unsigned int l)
 
 
 //delta[l] = f'(u[l]) ** WTdelta[l + 1];
-template<class AF>
-void Backpropagation_Base<AF>::obtainDeltaFromFdUWTDelta(unsigned int l)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::obtainDeltaFromFdUWTDelta(unsigned int l)
 {
 	//Func: (x, y) -> AF'(x) ** y
 	using Func = Composite1st2_1<ElementWiseProduct, ApplyDiff1_1<AF> >;
@@ -44,8 +45,8 @@ void Backpropagation_Base<AF>::obtainDeltaFromFdUWTDelta(unsigned int l)
 //下記の2式に分けて実行する
 //delta[layerCount -1] = u[layer_count - 1];
 //delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];
-template<class AF>
-void Backpropagation_Base<AF>::obtainDeltaLast(const DeviceMatrix& D)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::obtainDeltaLast(const DeviceMatrix& D)
 {
 	
 	//delta[layerCount -1] = u[layer_count - 1];
@@ -63,8 +64,8 @@ void Backpropagation_Base<AF>::obtainDeltaLast(const DeviceMatrix& D)
 //lについて降順に逐次実行("**"は要素ごとの積(cudaで実行))
 //delta[l] = f'(u[l]) ** ((W[l + 1])^T * delta[l+1]);
 //l = layerCount - 2, ... , 1
-template<class AF>
-void Backpropagation_Base<AF>::obtainDelta(unsigned int l)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::obtainDelta(unsigned int l)
 {
 	//WTdelta[l +1] = (W[l + 1])^T * delta[l+1];
 	//<=>
@@ -83,22 +84,23 @@ void Backpropagation_Base<AF>::obtainDelta(unsigned int l)
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
-template<class AF>
-void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
 {
 	//NULL Streamを使用する
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
 	
 	if(layerCount != unit_count.size())
 	{
-		throw BackpropagationException("error at Backpropagation_Base<AF>::init() : layerCount != unit_count.size().");
+		throw BackpropagationException("error at Backpropagation_Base<AF, OutputLayer>::init() : layerCount != unit_count.size().");
 	}
 	unitCount = unit_count;
 	
 	if(minibatch_size == 0)
 	{
-		throw BackpropagationException("error at Backpropagation_Base<AF>::init() : minibatch_size == 0.");
+		throw BackpropagationException("error at Backpropagation_Base<AF, OutputLayer>::init() : minibatch_size == 0.");
 	}
+	
 	miniBatchSize = minibatch_size;
 	
 	u.clear();
@@ -115,7 +117,7 @@ void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count,
 		if(unitCount[l] == 0)
 		{
 			std::stringstream msg;
-			msg << "error at Backpropagation_Base<AF>::init() : unitCount[" << l << "] == 0.";
+			msg << "error at Backpropagation_Base<AF, OutputLayer>::init() : unitCount[" << l << "] == 0.";
 			throw BackpropagationException(msg.str());
 		}
 		
@@ -164,8 +166,8 @@ void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count,
 
 }
 
-template<class AF>
-void Backpropagation_Base<AF>::initRandom(void)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::initRandom(void)
 {
 	//NULL Streamを使用する
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
@@ -207,16 +209,16 @@ void Backpropagation_Base<AF>::initRandom(void)
 	}
 }
 
-template<class AF>
-void Backpropagation_Base<AF>::forward(const std::vector<float>& x, std::vector<float>& y)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::forward(const std::vector<float>& x, std::vector<float>& y)
 {
 	DeviceMatrix X(x.size(), 1, x);
 	DeviceMatrix Y;
 	forward(X, Y);
 	y = Y.get();
 }
-template<class AF>
-void Backpropagation_Base<AF>::forward(const DeviceMatrix& X, DeviceMatrix& Y)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::forward(const DeviceMatrix& X, DeviceMatrix& Y)
 {
 	//使用するStreamをMainStreamに設定
 	//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
@@ -242,14 +244,14 @@ void Backpropagation_Base<AF>::forward(const DeviceMatrix& X, DeviceMatrix& Y)
 	//CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
 }
 
-template<class AF>
-void Backpropagation_Base<AF>::back(const std::vector<float>& d)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::back(const std::vector<float>& d)
 {
 	DeviceMatrix D(d.size(), 1, d);
 	back(D);
 }
-template<class AF>
-void Backpropagation_Base<AF>::back(const DeviceMatrix& D)
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::back(const DeviceMatrix& D)
 {
 	//使用するStreamをMainStreamに設定
 	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
@@ -270,8 +272,8 @@ void Backpropagation_Base<AF>::back(const DeviceMatrix& D)
 	
 }
 
-template<class AF>
-void Backpropagation_Base<AF>::updateParameter()
+template<class AF,class OutputLayer>
+void Backpropagation_Base<AF, OutputLayer>::updateParameter()
 {
 	//l,W,b について非同期に実行
 	

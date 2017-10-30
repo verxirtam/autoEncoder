@@ -324,6 +324,7 @@ unittest.o : unittest.cu \
     ElementWiseFunction2_1.cuh \
     Backpropagation_detail.h \
     Tanh.cuh \
+    OutputLayerRegression.cuh \
     CuRandFunction.h \
     CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \

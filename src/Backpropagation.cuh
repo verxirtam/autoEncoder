@@ -33,7 +33,7 @@
 #include "ElementWiseFunction2_1.cuh"
 #include "ElementWiseFunctionUtil.cuh"
 
-template<class AF>
+template<class AF, class OutputLayer>
 class Backpropagation_Base
 {
 private:
@@ -279,5 +279,7 @@ public:
 #include "Backpropagation_detail.h"
 
 #include "Tanh.cuh"
-using Backpropagation = Backpropagation_Base<Tanh>;
+#include "OutputLayerRegression.cuh"
+
+using Backpropagation = Backpropagation_Base<Tanh, OutputLayerRegression>;
 

@@ -8,7 +8,7 @@ ActivateFunction	ActivateFunction.cuh	/^class ActivateFunction$/;"	c	file:
 ApplyDiff1_1	ElementWiseFunctionUtil.cuh	/^class ApplyDiff1_1$/;"	c	file:
 AutoEncoder	AutoEncoder.cuh	/^	AutoEncoder():$/;"	f	class:AutoEncoder
 AutoEncoder	AutoEncoder.cuh	/^class AutoEncoder$/;"	c	file:
-Backpropagation	Backpropagation.cuh	/^using Backpropagation = Backpropagation_Base<Tanh>;$/;"	u
+Backpropagation	Backpropagation.cuh	/^using Backpropagation = Backpropagation_Base<Tanh, OutputLayerRegression>;$/;"	u
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const char* what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const std::string& what_arg):$/;"	f	class:BackpropagationException
 BackpropagationException	BackpropagationException.h	/^class BackpropagationException : public std::runtime_error$/;"	c
@@ -62,6 +62,7 @@ DnSsyevd	CuSolverDnFunction.cpp	/^void DnSsyevd$/;"	f
 ElementWiseFunction1_1	ElementWiseFunction1_1.cuh	/^class ElementWiseFunction1_1$/;"	c	file:
 ElementWiseFunction2_1	ElementWiseFunction2_1.cuh	/^class ElementWiseFunction2_1$/;"	c	file:
 ElementWiseProduct	ElementWiseProduct.cuh	/^class ElementWiseProduct$/;"	c	file:
+Func	Backpropagation_detail.h	/^	using Func = Composite1st2_1<ElementWiseProduct, ApplyDiff1_1<AF> >;$/;"	u
 GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py -s$/;"	m
 HOME	makefile	/^HOME := $(shell echo ~)$/;"	m
 MAKETEST_EXIST	makefile	/^MAKETEST_EXIST = glunittest$/;"	m
@@ -77,6 +78,8 @@ Normalization	Normalization.h	/^class Normalization$/;"	c
 OBJS	makefile	/^OBJS := $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o)$/;"	m
 OBJSTARGET	makefile	/^OBJSTARGET := $(filter-out $(TESTTARGET).o $(GLTESTTARGET).o, $(OBJS))$/;"	m
 OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OBJS))$/;"	m
+OutputLayerMulticlassClassification	OutputLayerMulticlassClassification.cuh	/^class OutputLayerMulticlassClassification$/;"	c	file:
+OutputLayerRegression	OutputLayerRegression.cuh	/^class OutputLayerRegression$/;"	c	file:
 ReLU	ReLU.cuh	/^class ReLU$/;"	c	file:
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
 Saxpy	CuBlasFunction.cpp	/^void Saxpy$/;"	f
@@ -99,12 +102,12 @@ _1B	AutoEncoder.cuh	/^	DeviceVector _1B;$/;"	m	class:AutoEncoder	file:
 _1B	Backpropagation.cuh	/^	DeviceVector _1B;$/;"	m	class:Backpropagation_Base	file:
 activate	ActivateFunction.cuh	/^	static DeviceMatrix& activate(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ActivateFunction
 activateDiff	ActivateFunction.cuh	/^	static DeviceMatrix& activateDiff(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ActivateFunction
-activate_kernel	ElementWiseFunction1_1.cuh	/^	void activate_kernel$/;"	f	namespace:__anon3
-activate_kernel	ElementWiseFunction2_1.cuh	/^	void activate_kernel$/;"	f	namespace:__anon2
+activateFunction	OutputLayerMulticlassClassification.cuh	/^	static void activateFunction(const DeviceMatrix& u, DeviceMatrix& z)$/;"	f	class:OutputLayerMulticlassClassification
+activateFunction	OutputLayerRegression.cuh	/^	static void activateFunction(const DeviceMatrix& u, DeviceMatrix& z)$/;"	f	class:OutputLayerRegression
 altitude	TrackData.h	/^	float altitude;$/;"	m	class:TrackData
 apply	ElementWiseFunction1_1.cuh	/^DeviceMatrix& ElementWiseFunction1_1<Func1_1>::apply(const DeviceMatrix& x, DeviceMatrix& y)$/;"	f	class:ElementWiseFunction1_1
 apply	ElementWiseFunction2_1.cuh	/^DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z)$/;"	f	class:ElementWiseFunction2_1
-apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x)$/;"	f	class:ApplyDiff1_1	file:
+apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x)$/;"	f	class:ApplyDiff1_1
 apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x, float y)$/;"	f	class:Composite1st2_1
 apply	ElementWiseFunctionUtil.cuh	/^	static float apply(float x, float y)$/;"	f	class:Composite2nd2_1
 apply	ElementWiseProduct.cuh	/^	static float apply(float x, float y)$/;"	f	class:ElementWiseProduct
@@ -112,8 +115,10 @@ apply	ReLU.cuh	/^	static float apply(float x)$/;"	f	class:ReLU
 apply	Tanh.cuh	/^	static float apply(float x)$/;"	f	class:Tanh
 applyDiff	ReLU.cuh	/^	static float applyDiff(float x)$/;"	f	class:ReLU
 applyDiff	Tanh.cuh	/^	static float applyDiff(float x)$/;"	f	class:Tanh
-back	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::back(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
-back	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::back(const std::vector<float>& d)$/;"	f	class:Backpropagation_Base
+apply_kernel	ElementWiseFunction1_1.cuh	/^	void apply_kernel$/;"	f	namespace:__anon2
+apply_kernel	ElementWiseFunction2_1.cuh	/^	void apply_kernel$/;"	f	namespace:__anon1
+back	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::back(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
+back	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::back(const std::vector<float>& d)$/;"	f	class:Backpropagation_Base
 backpropagation	AutoEncoder.cuh	/^	Backpropagation backpropagation;$/;"	m	class:AutoEncoder	file:
 bias	Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backpropagation_Base	file:
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
@@ -127,8 +132,8 @@ device	DeviceVector.h	/^	float* device;$/;"	m	class:DeviceVector
 deviceProp	CudaManager.h	/^	cudaDeviceProp deviceProp;$/;"	m	class:CudaManager
 dimension	DeviceVector.h	/^	unsigned int dimension;$/;"	m	class:DeviceVector
 epsilon	Backpropagation.cuh	/^	float epsilon;$/;"	m	class:Backpropagation_Base	file:
-forward	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::forward(const DeviceMatrix& X, DeviceMatrix& Y)$/;"	f	class:Backpropagation_Base
-forward	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation_Base
+forward	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::forward(const DeviceMatrix& X, DeviceMatrix& Y)$/;"	f	class:Backpropagation_Base
+forward	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation_Base
 gamma	Backpropagation.cuh	/^	float gamma;$/;"	m	class:Backpropagation_Base	file:
 generator	CuRandManager.h	/^	curandGenerator_t generator;$/;"	m	class:CuRandManager
 get	DeviceMatrix.h	/^	std::vector<float> get() const$/;"	f	class:DeviceMatrix
@@ -202,9 +207,9 @@ getZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getZCAWhiteningMatr
 handle	CuBlasManager.h	/^	cublasHandle_t handle;$/;"	m	class:CuBlasManager
 handle	CuSolverDnManager.h	/^	cusolverDnHandle_t handle;$/;"	m	class:CuSolverDnManager
 init	AutoEncoder.cuh	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)$/;"	f	class:AutoEncoder
-init	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:Backpropagation_Base
+init	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:Backpropagation_Base
 init	Normalization.cpp	/^void Normalization::init(const DeviceMatrix& X)$/;"	f	class:Normalization
-initRandom	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::initRandom(void)$/;"	f	class:Backpropagation_Base
+initRandom	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::initRandom(void)$/;"	f	class:Backpropagation_Base
 initStream	CudaManager.h	/^	void initStream(unsigned int stream_count)$/;"	f	class:CudaManager
 inversePCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inversePCAWhiteningMatrix;$/;"	m	class:Normalization
 inverseZCAWhiteningMatrix	Normalization.h	/^	DeviceMatrix inverseZCAWhiteningMatrix;$/;"	m	class:Normalization
@@ -217,12 +222,11 @@ main	learningTrackData.cpp	/^int main(void)$/;"	f
 mean	Normalization.h	/^	DeviceVector mean;$/;"	m	class:Normalization
 miniBatchSize	Backpropagation.cuh	/^	unsigned int miniBatchSize;$/;"	m	class:Backpropagation_Base	file:
 normalization	AutoEncoder.cuh	/^	Normalization normalization;$/;"	m	class:AutoEncoder	file:
-obtainDelta	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
-obtainDeltaFromFdUWTDelta	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDeltaFromFdUWTDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
-obtainDeltaFromFdUWTDelta_kernel	Backpropagation_detail.cuh	/^	void obtainDeltaFromFdUWTDelta_kernel$/;"	f	namespace:__anon1
-obtainDeltaLast	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainDeltaLast(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
+obtainDelta	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::obtainDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainDeltaFromFdUWTDelta	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::obtainDeltaFromFdUWTDelta(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainDeltaLast	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::obtainDeltaLast(const DeviceMatrix& D)$/;"	f	class:Backpropagation_Base
 obtainUFromZ	Backpropagation.cuh	/^	void obtainUFromZ(unsigned int l)$/;"	f	class:Backpropagation_Base
-obtainZFromU	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::obtainZFromU(unsigned int l)$/;"	f	class:Backpropagation_Base
+obtainZFromU	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::obtainZFromU(unsigned int l)$/;"	f	class:Backpropagation_Base
 operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(DeviceMatrix&& dm)$/;"	f	class:DeviceMatrix
 operator =	DeviceMatrix.h	/^	DeviceMatrix& operator=(const DeviceMatrix& dm)$/;"	f	class:DeviceMatrix
 operator =	DeviceVector.h	/^	DeviceVector& operator=(DeviceVector&& dv)$/;"	f	class:DeviceVector
@@ -253,7 +257,7 @@ time	TrackData.h	/^	float time;$/;"	m	class:TrackData
 track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
 u	Backpropagation.cuh	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation_Base	file:
 unitCount	Backpropagation.cuh	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation_Base	file:
-updateParameter	Backpropagation_detail.cuh	/^void Backpropagation_Base<AF>::updateParameter()$/;"	f	class:Backpropagation_Base
+updateParameter	Backpropagation_detail.h	/^void Backpropagation_Base<AF, OutputLayer>::updateParameter()$/;"	f	class:Backpropagation_Base
 varCovEigenValue	Normalization.h	/^	DeviceVector varCovEigenValue;$/;"	m	class:Normalization
 varCovEigenVector	Normalization.h	/^	DeviceMatrix varCovEigenVector;$/;"	m	class:Normalization
 varCovMatrix	Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:Normalization
