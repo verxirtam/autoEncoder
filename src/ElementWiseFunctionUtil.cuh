@@ -1,7 +1,6 @@
 #pragma once
 
 //2変数関数Func2_1の第1変数にFunc1_1を合成する
-
 template<class Func2_1, class Func1_1>
 class Composite1st2_1
 {
@@ -16,7 +15,6 @@ public:
 
 
 //2変数関数Func2_1の第2変数にFunc1_1を合成する
-
 template<class Func2_1, class Func1_1>
 class Composite2nd2_1
 {
@@ -29,7 +27,7 @@ public:
 	}
 };
 
-
+//微分を適用する
 template<class Func1_1>
 class ApplyDiff1_1
 {

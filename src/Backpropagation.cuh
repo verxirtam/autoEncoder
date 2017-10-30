@@ -276,7 +276,7 @@ public:
 	}
 };
 
-#include "Backpropagation_detail.cuh"
+#include "Backpropagation_detail.h"
 
 #include "Tanh.cuh"
 using Backpropagation = Backpropagation_Base<Tanh>;

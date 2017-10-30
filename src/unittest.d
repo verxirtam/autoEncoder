@@ -322,7 +322,7 @@ unittest.o : unittest.cu \
     ElementWiseFunctionUtil.cuh \
     ElementWiseProduct.cuh \
     ElementWiseFunction2_1.cuh \
-    Backpropagation_detail.cuh \
+    Backpropagation_detail.h \
     Tanh.cuh \
     CuRandFunction.h \
     CuSolverDnManager.h \
