@@ -2,7 +2,7 @@
 #pragma once
 
 
-class ElementWiseProduct
+class Func2to1ElementWiseProduct
 {
 public:
 	//関数

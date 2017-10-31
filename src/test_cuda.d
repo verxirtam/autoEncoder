@@ -215,7 +215,7 @@ test_cuda.o : test_cuda.cu \
     CudaException.h \
     /usr/include/c++/4.8/stdexcept \
     CuBlasException.h \
-    ElementWiseFunction1_1.cuh \
+    ElementWiseFunction1to1.cuh \
     ElementWiseFunctionUtil.cuh \
-    Tanh.cuh \
-    ReLU.cuh
+    Func1to1Tanh.cuh \
+    Func1to1ReLU.cuh

@@ -318,12 +318,12 @@ unittest.o : unittest.cu \
     CuRandException.h \
     BackpropagationException.h \
     ActivateFunction.cuh \
-    ElementWiseFunction1_1.cuh \
+    ElementWiseFunction1to1.cuh \
     ElementWiseFunctionUtil.cuh \
-    ElementWiseProduct.cuh \
-    ElementWiseFunction2_1.cuh \
+    Func2to1ElementWiseProduct.cuh \
+    ElementWiseFunction2to1.cuh \
     Backpropagation_detail.h \
-    Tanh.cuh \
+    Func1to1Tanh.cuh \
     OutputLayerRegression.cuh \
     CuRandFunction.h \
     CuSolverDnManager.h \

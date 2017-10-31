@@ -26,11 +26,11 @@ template<class AF,class OutputLayer>
 void Backpropagation_Base<AF, OutputLayer>::obtainDeltaFromFdUWTDelta(unsigned int l)
 {
 	//Func: (x, y) -> AF'(x) ** y
-	using Func = Composite1st2_1<ElementWiseProduct, ApplyDiff1_1<AF> >;
+	using Func = Func2to1Composite1st<Func2to1ElementWiseProduct, Func1to1ApplyDiff<AF> >;
 	
 	//delta[l] = Func(u[l], WTdelta[l + 1])
 	//         = AF'(u[l]) ** WTdelta[l + 1]
-	ElementWiseFunction2_1<Func>::apply(
+	ElementWiseFunction2to1<Func>::apply(
 				u[l],
 				WTdelta[l + 1],
 				delta[l]

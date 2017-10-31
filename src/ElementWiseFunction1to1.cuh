@@ -1,12 +1,12 @@
 
 #pragma once
 
-//成分毎に計算する関数(2変数)
-//Func2_1 : 2変数関数
+//成分毎に計算する関数(1変数)
+//Func1to1 : 1変数関数
 
 
-template<class Func2_1>
-class ElementWiseFunction2_1
+template<class Func1to1>
+class ElementWiseFunction1to1
 {
 private:
 	static void culculateBlockThreadCount
@@ -18,21 +18,20 @@ private:
 		);
 public:
 	//関数の適用
-	static DeviceMatrix& apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z);
+	static DeviceMatrix& apply(const DeviceMatrix& x, DeviceMatrix& y);
 };
 
 
 
 namespace
 {
-	template<typename Func2_1>
+	template<typename Func1to1>
 	__global__
 	void apply_kernel
 		(
 			unsigned int thread_index_offset,
 			const float* const x,
-			const float* const y,
-			float* const z
+			float* const y
 		)
 	{
 		//ブロックインデックス、スレッドインデックスの読み替え
@@ -41,12 +40,12 @@ namespace
 		//このスレッドが計算すべき成分のインデックス
 		unsigned int ij = s;
 		
-		z[ij] = Func2_1::apply(x[ij], y[ij]);
+		y[ij] = Func1to1::apply(x[ij]);
 	}
 }
 
-template<typename Func2_1>
-void ElementWiseFunction2_1<Func2_1>::culculateBlockThreadCount
+template<typename Func1to1>
+void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount
 	(
 		const DeviceMatrix& x,
 		unsigned int& block_count,
@@ -67,8 +66,8 @@ void ElementWiseFunction2_1<Func2_1>::culculateBlockThreadCount
 	thread_count_remain = thread_count_total % thread_count;
 }
 
-template<typename Func2_1>
-DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z)
+template<typename Func1to1>
+DeviceMatrix& ElementWiseFunction1to1<Func1to1>::apply(const DeviceMatrix& x, DeviceMatrix& y)
 {
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count;
@@ -77,17 +76,16 @@ DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, cons
 	//スレッド数の残り
 	unsigned int thread_count_remain;
 	
-	ElementWiseFunction2_1<Func2_1>::culculateBlockThreadCount(x, block_count, thread_count, thread_count_remain);
+	ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount(x, block_count, thread_count, thread_count_remain);
 	
 	if(block_count != 0)
 	{
 		//カーネル実行
-		apply_kernel<Func2_1><<<block_count, thread_count>>>
+		apply_kernel<Func1to1><<<block_count, thread_count>>>
 			(
 				0,
 				x.getAddress(),
-				y.getAddress(),
-				z.getAddress()
+				y.getAddress()
 			);
 		//カーネル実行時のエラーチェック
 		CUDA_CALL(cudaGetLastError());
@@ -95,12 +93,11 @@ DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, cons
 	if(thread_count_remain != 0)
 	{
 		//カーネル実行
-		apply_kernel<Func2_1><<<1, thread_count_remain>>>
+		apply_kernel<Func1to1><<<1, thread_count_remain>>>
 			(
 				block_count * thread_count,
 				x.getAddress(),
-				y.getAddress(),
-				z.getAddress()
+				y.getAddress()
 			);
 		//カーネル実行時のエラーチェック
 		CUDA_CALL(cudaGetLastError());
@@ -108,6 +105,6 @@ DeviceMatrix& ElementWiseFunction2_1<Func2_1>::apply(const DeviceMatrix& x, cons
 	//直後にdelta[l]を使用するので同期する
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
-	return z;
+	return y;
 }
 

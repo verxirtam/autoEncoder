@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  Tanh.cuh
+ *       Filename:  Func1to1Tanh.cuh
  *
  *    Description:  
  *
@@ -18,7 +18,7 @@
 #pragma once
 
 
-class Tanh
+class Func1to1Tanh
 {
 public:
 	//関数

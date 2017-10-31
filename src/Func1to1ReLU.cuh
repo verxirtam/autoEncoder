@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  ReLU.cuh
+ *       Filename:  Func1to1ReLU.cuh
  *
  *    Description:  
  *
@@ -18,7 +18,7 @@
 #pragma once
 
 
-class ReLU
+class Func1to1ReLU
 {
 public:
 	//関数

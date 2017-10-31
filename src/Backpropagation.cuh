@@ -29,8 +29,8 @@
 
 
 #include "ActivateFunction.cuh"
-#include "ElementWiseProduct.cuh"
-#include "ElementWiseFunction2_1.cuh"
+#include "Func2to1ElementWiseProduct.cuh"
+#include "ElementWiseFunction2to1.cuh"
 #include "ElementWiseFunctionUtil.cuh"
 
 template<class AF, class OutputLayer>
@@ -278,8 +278,8 @@ public:
 
 #include "Backpropagation_detail.h"
 
-#include "Tanh.cuh"
+#include "Func1to1Tanh.cuh"
 #include "OutputLayerRegression.cuh"
 
-using Backpropagation = Backpropagation_Base<Tanh, OutputLayerRegression>;
+using Backpropagation = Backpropagation_Base<Func1to1Tanh, OutputLayerRegression>;
 
