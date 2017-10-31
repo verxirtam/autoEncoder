@@ -9,6 +9,7 @@ template<class Func2to1>
 class ElementWiseFunction2to1
 {
 private:
+	//TODO ElementWiseFunction1to1と統合すること
 	static void culculateBlockThreadCount
 		(
 			const DeviceMatrix& x,
