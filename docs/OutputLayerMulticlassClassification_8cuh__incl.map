@@ -1,5 +1,7 @@
 <map id="src/OutputLayerMulticlassClassification.cuh" name="src/OutputLayerMulticlassClassification.cuh">
 <area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="343,96,453,123"/>
+<area shape="rect" id="node13" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="580,96,779,123"/>
+<area shape="rect" id="node14" href="$Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="803,96,927,123"/>
 <area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="155,171,281,197"/>
 <area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="289,245,404,272"/>
 <area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,320,139,347"/>

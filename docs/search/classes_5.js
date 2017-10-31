@@ -1,6 +1,7 @@
 var searchData=
 [
   ['func1to1applydiff',['Func1to1ApplyDiff',['../classFunc1to1ApplyDiff.html',1,'']]],
+  ['func1to1exp',['Func1to1Exp',['../classFunc1to1Exp.html',1,'']]],
   ['func1to1relu',['Func1to1ReLU',['../classFunc1to1ReLU.html',1,'']]],
   ['func1to1tanh',['Func1to1Tanh',['../classFunc1to1Tanh.html',1,'']]],
   ['func2to1composite1st',['Func2to1Composite1st',['../classFunc2to1Composite1st.html',1,'']]],
