@@ -1,6 +1,6 @@
 <map id="Backpropagation_Base::getDeltaAsVector" name="Backpropagation_Base::getDeltaAsVector">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#af37044ebbbee86c45b4f84bec61807a9" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::getDEDBAsVector" alt="" coords="211,5,419,61"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="287,85,343,112"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#aae55169dd6fed4ee427f3a8ec411f8f0" title="BackpropagationTest\l_All_showInfo" alt="" coords="242,137,387,178"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="467,144,539,171"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#af37044ebbbee86c45b4f84bec61807a9" title="Backpropagation_Base\l\&lt; Func1to1Tanh, OutputLayer\lRegression \&gt;::getDEDBAsVector" alt="" coords="211,5,429,61"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a0e8203e08f3c4ecbf257300f185a7e79" title="TEST" alt="" coords="292,85,348,112"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#aae55169dd6fed4ee427f3a8ec411f8f0" title="BackpropagationTest\l_All_showInfo" alt="" coords="247,137,393,178"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="477,144,549,171"/>
 </map>

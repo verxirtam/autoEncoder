@@ -1,4 +1,4 @@
 <map id="Backpropagation_Base::setSubStreamCount" name="Backpropagation_Base::setSubStreamCount">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#af5059f6edbcb6b39aff6dcc7c832b4e0" title="Backpropagation_Base\l\&lt; Tanh, OutputLayerRegression\l \&gt;::Backpropagation_Base" alt="" coords="211,5,419,61"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="287,85,343,112"/>
+<area shape="rect" id="node2" href="$classBackpropagation__Base.html#af5059f6edbcb6b39aff6dcc7c832b4e0" title="Backpropagation_Base\l\&lt; Func1to1Tanh, OutputLayer\lRegression \&gt;::Backpropagation_Base" alt="" coords="211,5,453,61"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#adde4b46de91d8369facfda064a906a69" title="TEST" alt="" coords="304,85,360,112"/>
 </map>

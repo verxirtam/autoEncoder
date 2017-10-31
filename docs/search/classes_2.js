@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['composite1st2_5f1',['Composite1st2_1',['../classComposite1st2__1.html',1,'']]],
-  ['composite2nd2_5f1',['Composite2nd2_1',['../classComposite2nd2__1.html',1,'']]],
   ['cublasexception',['CuBlasException',['../classCuBlasException.html',1,'']]],
   ['cublasfunctiontest',['CuBlasFunctionTest',['../classCuBlasFunctionTest.html',1,'']]],
   ['cublasfunctiontest_5f1v',['CuBlasFunctionTest_1V',['../classCuBlasFunctionTest__1V.html',1,'']]],

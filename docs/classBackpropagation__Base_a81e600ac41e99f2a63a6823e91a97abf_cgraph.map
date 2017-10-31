@@ -1,9 +1,9 @@
 <map id="Backpropagation_Base::obtainDeltaFromFdUWTDelta" name="Backpropagation_Base::obtainDeltaFromFdUWTDelta">
-<area shape="rect" id="node2" href="$classElementWiseFunction2__1.html#ad61094e8146f61651d6400093e2a2757" title="ElementWiseFunction2\l_1::apply" alt="" coords="256,78,413,119"/>
-<area shape="rect" id="node3" href="$classElementWiseFunction2__1.html#a779e4f0a974a3a197bda63ff3408c663" title="ElementWiseFunction2\l_1::culculateBlockThreadCount" alt="" coords="462,49,666,90"/>
-<area shape="rect" id="node8" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="477,115,651,141"/>
-<area shape="rect" id="node4" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="719,5,916,32"/>
-<area shape="rect" id="node6" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="724,56,911,83"/>
-<area shape="rect" id="node7" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="715,107,920,133"/>
-<area shape="rect" id="node5" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="968,5,1147,32"/>
+<area shape="rect" id="node2" href="$classElementWiseFunction2to1.html#a7cf9d20d0d6e7d520b665969042dc2f7" title="ElementWiseFunction2to1\l::apply" alt="" coords="257,78,431,119"/>
+<area shape="rect" id="node3" href="$classElementWiseFunction2to1.html#a8053c5101780c561fe3f9e2b9d11d401" title="ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="481,49,671,90"/>
+<area shape="rect" id="node8" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="489,115,663,141"/>
+<area shape="rect" id="node4" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="724,5,921,32"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="729,56,916,83"/>
+<area shape="rect" id="node7" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="720,107,925,133"/>
+<area shape="rect" id="node5" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="973,5,1152,32"/>
 </map>

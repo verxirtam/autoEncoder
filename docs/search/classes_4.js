@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['elementwisefunction1_5f1',['ElementWiseFunction1_1',['../classElementWiseFunction1__1.html',1,'']]],
-  ['elementwisefunction2_5f1',['ElementWiseFunction2_1',['../classElementWiseFunction2__1.html',1,'']]],
-  ['elementwiseproduct',['ElementWiseProduct',['../classElementWiseProduct.html',1,'']]]
+  ['elementwisefunction1to1',['ElementWiseFunction1to1',['../classElementWiseFunction1to1.html',1,'']]],
+  ['elementwisefunction2to1',['ElementWiseFunction2to1',['../classElementWiseFunction2to1.html',1,'']]]
 ];

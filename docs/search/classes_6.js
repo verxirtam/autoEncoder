@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['outputlayermulticlassclassification',['OutputLayerMulticlassClassification',['../classOutputLayerMulticlassClassification.html',1,'']]],
-  ['outputlayerregression',['OutputLayerRegression',['../classOutputLayerRegression.html',1,'']]]
+  ['normalization',['Normalization',['../classNormalization.html',1,'']]],
+  ['normalizationgeneraltest',['NormalizationGeneralTest',['../classNormalizationGeneralTest.html',1,'']]],
+  ['normalizationtest',['NormalizationTest',['../classNormalizationTest.html',1,'']]]
 ];

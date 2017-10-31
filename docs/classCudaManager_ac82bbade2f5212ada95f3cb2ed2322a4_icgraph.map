@@ -1,10 +1,10 @@
 <map id="CudaManager::getDeviceProp" name="CudaManager::getDeviceProp">
-<area shape="rect" id="node2" href="$classElementWiseFunction1__1.html#a37c38d360f798a665a0bbc9f91a4d1c7" title="ElementWiseFunction1\l_1::culculateBlockThreadCount" alt="" coords="251,34,455,75"/>
-<area shape="rect" id="node7" href="$classElementWiseFunction2__1.html#a779e4f0a974a3a197bda63ff3408c663" title="ElementWiseFunction2\l_1::culculateBlockThreadCount" alt="" coords="251,99,455,141"/>
-<area shape="rect" id="node3" href="$classElementWiseFunction1__1.html#a428f1da44225e3264f1076ffa59207d4" title="ElementWiseFunction1\l_1::apply" alt="" coords="504,34,661,75"/>
-<area shape="rect" id="node4" href="$classActivateFunction.html#a0668a5f8d7e797d24933571622d3c627" title="ActivateFunction::activate" alt="" coords="723,41,898,68"/>
-<area shape="rect" id="node5" href="$classBackpropagation__Base.html#a898479110c1f926ba26552039edd8364" title="Backpropagation_Base\l::obtainZFromU" alt="" coords="961,5,1117,46"/>
-<area shape="rect" id="node6" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="1017,71,1061,97"/>
-<area shape="rect" id="node8" href="$classElementWiseFunction2__1.html#ad61094e8146f61651d6400093e2a2757" title="ElementWiseFunction2\l_1::apply" alt="" coords="504,99,661,141"/>
-<area shape="rect" id="node9" href="$classBackpropagation__Base.html#a81e600ac41e99f2a63a6823e91a97abf" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="709,99,912,141"/>
+<area shape="rect" id="node2" href="$classElementWiseFunction1to1.html#a82d667ae530d1539c24f270d64825217" title="ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="251,34,442,75"/>
+<area shape="rect" id="node7" href="$classElementWiseFunction2to1.html#a8053c5101780c561fe3f9e2b9d11d401" title="ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="251,99,442,141"/>
+<area shape="rect" id="node3" href="$classElementWiseFunction1to1.html#af7917233b07ffed3fb1c13900211671c" title="ElementWiseFunction1to1\l::apply" alt="" coords="491,34,666,75"/>
+<area shape="rect" id="node4" href="$classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1" title="ActivateFunction::activate" alt="" coords="729,41,903,68"/>
+<area shape="rect" id="node5" href="$classBackpropagation__Base.html#a898479110c1f926ba26552039edd8364" title="Backpropagation_Base\l::obtainZFromU" alt="" coords="966,5,1122,46"/>
+<area shape="rect" id="node6" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="1022,71,1066,97"/>
+<area shape="rect" id="node8" href="$classElementWiseFunction2to1.html#a7cf9d20d0d6e7d520b665969042dc2f7" title="ElementWiseFunction2to1\l::apply" alt="" coords="491,99,666,141"/>
+<area shape="rect" id="node9" href="$classBackpropagation__Base.html#a81e600ac41e99f2a63a6823e91a97abf" title="Backpropagation_Base\l::obtainDeltaFromFdUWTDelta" alt="" coords="715,99,917,141"/>
 </map>
