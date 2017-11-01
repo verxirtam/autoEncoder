@@ -679,28 +679,28 @@ TEST(DeviceMatrixTest, useContainer)
 
 
 //////////////////////////////////////////////////////////////////////
-// BackpropagationTest
+// BackpropagationTanhRegTest
 //////////////////////////////////////////////////////////////////////
 
-class BackpropagationTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
+class BackpropagationTanhRegTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
 {
 protected:
 	void SetUp(){}
 	void TearDown(){}
 };
 
-INSTANTIATE_TEST_CASE_P(InstantiateBackpropagationTest, BackpropagationTest, ::testing::Values(2, 3, 10, 100));
+INSTANTIATE_TEST_CASE_P(InstantiateBackpropagationTanhRegTest, BackpropagationTanhRegTest, ::testing::Values(2, 3, 10, 100));
 
-TEST_P(BackpropagationTest, Constructor)
+TEST_P(BackpropagationTanhRegTest, Constructor)
 {
 	unsigned int layer_count = GetParam();
-	Backpropagation b(layer_count);
+	BackpropagationTanhReg b(layer_count);
 }
 
-TEST_P(BackpropagationTest, Init)
+TEST_P(BackpropagationTanhRegTest, Init)
 {
 	unsigned int layer_count = GetParam();
-	Backpropagation b(layer_count);
+	BackpropagationTanhReg b(layer_count);
 	
 	std::vector<unsigned int> unit_count;
 	for(unsigned int l = 0; l < layer_count; l++)
@@ -712,9 +712,9 @@ TEST_P(BackpropagationTest, Init)
 	b.init(unit_count);
 }
 
-TEST(BackpropagationTest, Simple)
+TEST(BackpropagationTanhRegTest, Simple)
 {
-	Backpropagation b(3);
+	BackpropagationTanhReg b(3);
 	//bの初期化
 	b.init({1,1,1});
 	std::vector<std::vector<float> > weight{{0.0f}, {2.0f}, {3.0f}};
@@ -774,7 +774,7 @@ TEST(BackpropagationTest, Simple)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
+class BackpropagationTanhRegAllTest : public ::testing::Test , public ::testing::WithParamInterface<unsigned int>
 {
 protected:
 	void SetUp(){}
@@ -783,8 +783,8 @@ protected:
 
 INSTANTIATE_TEST_CASE_P
 	(
-		InstantiateBackpropagationAllTest,
-		BackpropagationAllTest,
+		InstantiateBackpropagationTanhRegAllTest,
+		BackpropagationTanhRegAllTest,
 		//::testing::Values(205)
 		//::testing::Values(200, 201, 202, 203, 204, 205, 206)
 		//::testing::Values(200, 206, 213, 219, 225)
@@ -796,11 +796,11 @@ INSTANTIATE_TEST_CASE_P
 		//::testing::Values(500, 625, 750, 875, 1000)
 	);
 
-void BackpropagationTest_All_showInfo
+void BackpropagationTanhRegTest_All_showInfo
 	(
 		unsigned int dimension,
 		int n,
-		const Backpropagation& b,
+		const BackpropagationTanhReg& b,
 		const std::vector<float>& x,
 		const std::vector<float>& y
 	)
@@ -893,7 +893,7 @@ void BackpropagationTest_All_showInfo
 }
 
 
-TEST_P(BackpropagationAllTest, All)
+TEST_P(BackpropagationTanhRegAllTest, All)
 {
 	const unsigned int dimension = GetParam();
 	
@@ -901,7 +901,7 @@ TEST_P(BackpropagationAllTest, All)
 	
 	std::vector<unsigned int> unit_count{dimension, dimension / 2, dimension / 2, dimension};
 	//std::vector<unsigned int> unit_count{dimension, 1, dimension};
-	Backpropagation b(unit_count.size());
+	BackpropagationTanhReg b(unit_count.size());
 	b.init(unit_count, minibatch_size);
 	
 	std::random_device rdev;
@@ -929,7 +929,7 @@ TEST_P(BackpropagationAllTest, All)
 	
 	std::cout << "r init end." << std::endl;
 	
-	BackpropagationTest_All_showInfo(dimension, -1, b, {}, {});
+	BackpropagationTanhRegTest_All_showInfo(dimension, -1, b, {}, {});
 	
 	for(int n = 0; n < nmax; n++)
 	{
@@ -944,7 +944,7 @@ TEST_P(BackpropagationAllTest, All)
 		
 		if((n == nmax -1) || ((n % 10) == 0))
 		{
-			BackpropagationTest_All_showInfo(dimension, n, b, x.get(), y.get());
+			BackpropagationTanhRegTest_All_showInfo(dimension, n, b, x.get(), y.get());
 		}
 	}
 	DeviceMatrix x(dimension, minibatch_size, std::vector<float>(dimension * minibatch_size, 0.0f));
@@ -957,7 +957,7 @@ TEST_P(BackpropagationAllTest, All)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationFunctionTest :
+class BackpropagationTanhRegFunctionTest :
 	public ::testing::Test ,
 	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int>>
 {
@@ -967,8 +967,8 @@ protected:
 };
 INSTANTIATE_TEST_CASE_P
 	(
-		InstantiateBackpropagationFunctionTest,
-		BackpropagationFunctionTest,
+		InstantiateBackpropagationTanhRegFunctionTest,
+		BackpropagationTanhRegFunctionTest,
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u, 2050u}),
@@ -976,11 +976,11 @@ INSTANTIATE_TEST_CASE_P
 			)
 	);
 //CUDAの算出結果とhostでの算出結果と一致することを確認する
-TEST_P(BackpropagationFunctionTest, Kernel)
+TEST_P(BackpropagationTanhRegFunctionTest, Kernel)
 {
 	unsigned int d0 = std::get<0>(GetParam());
 	unsigned int d1 = std::get<1>(GetParam());
-	Backpropagation b(3);
+	BackpropagationTanhReg b(3);
 	b.init({d0, d1, d0});
 	
 	std::vector<float> x(d0, 0.5f);
@@ -1062,7 +1062,7 @@ TEST_P(BackpropagationFunctionTest, Kernel)
 	}
 }
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationNumericDiffTest :
+class BackpropagationTanhRegNumericDiffTest :
 	public ::testing::Test ,
 	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int, float>>
 {
@@ -1075,8 +1075,8 @@ protected:
 //std::vector<unsigned int> dimlist{1, 2, 10, 100};
 INSTANTIATE_TEST_CASE_P
 	(
-		InstantiateBackpropagationNumericDiffTest,
-		BackpropagationNumericDiffTest,
+		InstantiateBackpropagationTanhRegNumericDiffTest,
+		BackpropagationTanhRegNumericDiffTest,
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1u, 2u, 10u, 100u, 1025u}),
@@ -1100,7 +1100,7 @@ float ErrorFunc(const std::vector<float>& y, const std::vector<float>& d)
 }
 
 //パラメータの更新に使用するdEdW, dEdbが正しいかを数値微分と比較して確認する
-TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
+TEST_P(BackpropagationTanhRegNumericDiffTest, NumericDifferentiation)
 {
 	//乱数の初期化
 	std::random_device rdev;
@@ -1111,7 +1111,7 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 	unsigned int d0 = std::get<0>(GetParam());
 	unsigned int d1 = std::get<1>(GetParam());
 	std::vector<unsigned int> unit_count{d0, d1, d0};
-	Backpropagation b(unit_count.size());
+	BackpropagationTanhReg b(unit_count.size());
 	b.init(unit_count);
 	
 	//数値微分との差の評価に使用するepsilon
@@ -1201,7 +1201,7 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 				std::cout << "ndedb  = " << ndedb << std::endl;
 				std::cout << "dedb[" << i << "][" << j << "]  = " << dedb[i][j] << std::endl;
 				std::cout << "diff  = " << (ndedb - dedb[i][j]) << std::endl;
-				BackpropagationTest_All_showInfo(d0, sample_count, b, x, y);
+				BackpropagationTanhRegTest_All_showInfo(d0, sample_count, b, x, y);
 				return;
 			}
 		}
@@ -1212,7 +1212,7 @@ TEST_P(BackpropagationNumericDiffTest, NumericDifferentiation)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationStreamTest :
+class BackpropagationTanhRegStreamTest :
 	public ::testing::Test ,
 	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int>>
 {
@@ -1223,17 +1223,17 @@ protected:
 
 INSTANTIATE_TEST_CASE_P
 	(
-		InstantiateBackpropagationStreamTest,
-		BackpropagationStreamTest,
+		InstantiateBackpropagationTanhRegStreamTest,
+		BackpropagationTanhRegStreamTest,
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{2050u}),
 				::testing::ValuesIn(std::vector<unsigned int>{2000u})
 			)
 	);
-TEST(BackpropagationStreamTest, Init)
+TEST(BackpropagationTanhRegStreamTest, Init)
 {
-	Backpropagation b(3);
+	BackpropagationTanhReg b(3);
 	b.init({3,2,3});
 	
 	b.setSubStreamCount(1);
@@ -1250,14 +1250,14 @@ TEST(BackpropagationStreamTest, Init)
 }
 
 
-TEST_P(BackpropagationStreamTest, Evaluate)
+TEST_P(BackpropagationTanhRegStreamTest, Evaluate)
 {
 	//乱数の初期化
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
 	std::uniform_real_distribution<float> urd(0.0f, 1.0f);
 	
-	Backpropagation b(3);
+	BackpropagationTanhReg b(3);
 	unsigned int d0 = std::get<0>(GetParam());
 	unsigned int d1 = std::get<1>(GetParam());
 	b.init({d0,d1,d0});
@@ -1277,7 +1277,7 @@ TEST_P(BackpropagationStreamTest, Evaluate)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationObtainDEDWTest :
+class BackpropagationTanhRegObtainDEDWTest :
 	public ::testing::Test ,
 	public ::testing::WithParamInterface<std::tuple<unsigned int, unsigned int, unsigned int, unsigned int>>
 {
@@ -1288,8 +1288,8 @@ protected:
 
 INSTANTIATE_TEST_CASE_P
 	(
-		InstantiateBackpropagationObtainDEDWTest,
-		BackpropagationObtainDEDWTest,
+		InstantiateBackpropagationTanhRegObtainDEDWTest,
+		BackpropagationTanhRegObtainDEDWTest,
 		::testing::Combine
 			(
 				::testing::ValuesIn(std::vector<unsigned int>{1025}),//1, 10, 100, 1024, 1025}),//512
@@ -1805,7 +1805,7 @@ TEST(NormalizationTest, csv)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class BackpropagationMiniBatchTest :
+class BackpropagationTanhRegMiniBatchTest :
 	public ::testing::Test
 {
 protected:
@@ -1813,10 +1813,10 @@ protected:
 	void TearDown(){}
 };
 
-//ミニバッチに対応したBackpropagationのテスト
-TEST(BackpropagationMiniBatchTest, Simple)
+//ミニバッチに対応したBackpropagationTanhRegのテスト
+TEST(BackpropagationTanhRegMiniBatchTest, Simple)
 {
-	Backpropagation b(3);
+	BackpropagationTanhReg b(3);
 	unsigned int dimension = 3;
 	unsigned int layer_size = 2;
 	unsigned int minibatch_size = 100;
@@ -1943,7 +1943,7 @@ protected:
 	void TearDown(){}
 };
 
-//ミニバッチに対応したBackpropagationのテスト
+//ミニバッチに対応したBackpropagationTanhRegのテスト
 TEST(AutoEncoderTest, Simple)
 {
 	//学習データの次元
@@ -2038,7 +2038,7 @@ TEST(AutoEncoderTest, Simple)
 	
 }
 
-//ミニバッチに対応したBackpropagationのテスト
+//ミニバッチに対応したBackpropagationTanhRegのテスト
 TEST(AutoEncoderTest, csv)
 {
 	
@@ -2279,7 +2279,7 @@ int main(int argc, char **argv)
 {
 	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
-	//::testing::GTEST_FLAG(filter)="*BackpropagationObtainDEDWTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
@@ -2293,9 +2293,9 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*Evaluate*";
 	//::testing::GTEST_FLAG(filter)="*All*:*Simple*";
 	//::testing::GTEST_FLAG(filter)="*Input*:*Output*";
-	//::testing::GTEST_FLAG(filter)="*BackpropagationMiniBatchTest*";
-	//::testing::GTEST_FLAG(filter)="*Backpropagation*";
-	//::testing::GTEST_FLAG(filter)="*BackpropagationAllTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegMiniBatchTest*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhReg*";
+	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegAllTest*";
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	
 	

@@ -26,7 +26,7 @@ class AutoEncoder
 private:
 	Normalization normalization;
 	const unsigned int layerCount;
-	Backpropagation backpropagation;
+	BackpropagationTanhReg backpropagation;
 	DeviceVector _1B;
 public:
 	AutoEncoder():

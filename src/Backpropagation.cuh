@@ -281,5 +281,5 @@ public:
 #include "Func1to1Tanh.cuh"
 #include "OutputLayerRegression.cuh"
 
-using Backpropagation = Backpropagation_Base<Func1to1Tanh, OutputLayerRegression>;
+using BackpropagationTanhReg = Backpropagation_Base<Func1to1Tanh, OutputLayerRegression>;
 
