@@ -20,13 +20,15 @@
 
 #include "Normalization.h"
 #include "Backpropagation.cuh"
+#include "OutputLayerRegression.cuh"
 
+template <class AF>
 class AutoEncoder
 {
 private:
 	Normalization normalization;
 	const unsigned int layerCount;
-	BackpropagationTanhReg backpropagation;
+	Backpropagation<AF, OutputLayerRegression> backpropagation;
 	DeviceVector _1B;
 public:
 	AutoEncoder():
@@ -87,3 +89,5 @@ public:
 		return this->backpropagation.getGamma();
 	}
 };
+
+

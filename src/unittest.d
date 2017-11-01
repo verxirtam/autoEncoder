@@ -304,6 +304,7 @@ unittest.o : unittest.cu \
     CudaException.h \
     CuBlasException.h \
     DeviceMatrix.h \
+    BackpropagationTanhReg.cuh \
     Backpropagation.cuh \
     /usr/include/c++/4.8/memory \
     /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
@@ -333,5 +334,6 @@ unittest.o : unittest.cu \
     CuSolverDnFunction.h \
     Normalization.h \
     Statistics.h \
+    AutoEncoderTanh.cuh \
     AutoEncoder.cuh \
     DeviceVectorUtils.h

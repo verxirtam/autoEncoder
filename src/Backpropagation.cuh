@@ -34,7 +34,7 @@
 #include "ElementWiseFunctionUtil.cuh"
 
 template<class AF, class OutputLayer>
-class Backpropagation_Base
+class Backpropagation
 {
 private:
 	
@@ -100,7 +100,7 @@ public:
 	void obtainDeltaFromFdUWTDelta(unsigned int l);
 	
 	//コンストラクタ
-	Backpropagation_Base(unsigned int layer_count):
+	Backpropagation(unsigned int layer_count):
 		layerCount(layer_count),
 		miniBatchSize(1),
 		unitCount(),
@@ -278,8 +278,4 @@ public:
 
 #include "Backpropagation_detail.h"
 
-#include "Func1to1Tanh.cuh"
-#include "OutputLayerRegression.cuh"
-
-using BackpropagationTanhReg = Backpropagation_Base<Func1to1Tanh, OutputLayerRegression>;
 

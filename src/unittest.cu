@@ -32,7 +32,7 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
-#include "Backpropagation.cuh"
+#include "BackpropagationTanhReg.cuh"
 
 #include "CuRandFunction.h"
 
@@ -41,7 +41,7 @@
 
 #include "Normalization.h"
 
-#include "AutoEncoder.cuh"
+#include "AutoEncoderTanh.cuh"
 
 #include "DeviceVectorUtils.h"
 
@@ -1935,7 +1935,7 @@ TEST(BackpropagationTanhRegMiniBatchTest, Simple)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class AutoEncoderTest :
+class AutoEncoderTanhTest :
 	public ::testing::Test
 {
 protected:
@@ -1944,7 +1944,7 @@ protected:
 };
 
 //ミニバッチに対応したBackpropagationTanhRegのテスト
-TEST(AutoEncoderTest, Simple)
+TEST(AutoEncoderTanhTest, Simple)
 {
 	//学習データの次元
 	int dimension = 3;
@@ -1986,7 +1986,7 @@ TEST(AutoEncoderTest, Simple)
 	DeviceMatrix normarize_input(dimension, normarize_data_size);
 	normarize_input.set(normarize_input_base);
 	
-	AutoEncoder a;
+	AutoEncoderTanh a;
 	a.init(normarize_input, layer_size, minibatch_size);
 	
 	printVector(a.getWhiteningMatrix().get(),        "       whiteningMatrix");
@@ -2031,15 +2031,15 @@ TEST(AutoEncoderTest, Simple)
 	//出力の取得
 	auto minibatch_output = a.learning(minibatch_input);
 	
-	writeToCsvFile("../data/AutoEncoderTest_Simple_0input.csv",  minibatch_input );
-	writeToCsvFile("../data/AutoEncoderTest_Simple_1output.csv", minibatch_output);
+	writeToCsvFile("../data/AutoEncoderTanhTest_Simple_0input.csv",  minibatch_input );
+	writeToCsvFile("../data/AutoEncoderTanhTest_Simple_1output.csv", minibatch_output);
 	
 	EXPECT_NEAR(compareVector(minibatch_input.get(), minibatch_output.get()), 0.0f, 0.125f);
 	
 }
 
 //ミニバッチに対応したBackpropagationTanhRegのテスト
-TEST(AutoEncoderTest, csv)
+TEST(AutoEncoderTanhTest, csv)
 {
 	
 	//正規化用データ
@@ -2057,7 +2057,7 @@ TEST(AutoEncoderTest, csv)
 	DeviceMatrix normarize_input(2, 10);
 	normarize_input.set(normarize_input_base);
 	
-	AutoEncoder a;
+	AutoEncoderTanh a;
 	a.init(normarize_input, 20, 10);
 	
 	printVector(a.getWhiteningMatrix().get(),        "       whiteningMatrix");
@@ -2093,14 +2093,14 @@ TEST(AutoEncoderTest, csv)
 		{
 			//CSVファイルに出力する
 			std::stringstream input_csv_file_name("");
-			input_csv_file_name << "../data/AutoEncoderTest_";
+			input_csv_file_name << "../data/AutoEncoderTanhTest_";
 			input_csv_file_name << std::setfill('0') << std::setw(5) << i << "_input.csv";
 			writeToCsvFile(input_csv_file_name.str(), minibatch_input);
 			
 			auto output = a.learning(minibatch_input);
 			
 			std::stringstream output_csv_file_name("");
-			output_csv_file_name << "../data/AutoEncoderTest_";
+			output_csv_file_name << "../data/AutoEncoderTanhTest_";
 			output_csv_file_name << std::setfill('0') << std::setw(5) << i << "_output.csv";
 			writeToCsvFile(output_csv_file_name.str(), output);
 		}
@@ -2141,7 +2141,7 @@ TEST(AutoEncoderTest, csv)
 }
 
 
-int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
+int AutoEncoderTanhTest_momentum_estimate(float epsilon, float gamma, float error)
 {
 	
 	//学習データの次元
@@ -2184,7 +2184,7 @@ int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 	DeviceMatrix normarize_input(dimension, normarize_data_size);
 	normarize_input.set(normarize_input_base);
 	
-	AutoEncoder a;
+	AutoEncoderTanh a;
 	a.setEpsilon(epsilon);
 	a.setGamma(gamma);
 	a.init(normarize_input, layer_size, minibatch_size);
@@ -2236,7 +2236,7 @@ int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 }
 
 //モメンタムの検証
-TEST(AutoEncoderTest, momentum)
+TEST(AutoEncoderTanhTest, momentum)
 {
 	//epsilonのインデックスの最大値
 	unsigned int imax = 10;
@@ -2261,7 +2261,7 @@ TEST(AutoEncoderTest, momentum)
 			for(unsigned int k =0; k < kmax ; k++)
 			{
 				//誤差がerror未満になるlearningの回数をカウントする
-				n += AutoEncoderTest_momentum_estimate(epsilon, gamma, error);
+				n += AutoEncoderTanhTest_momentum_estimate(epsilon, gamma, error);
 			}
 			float avg_n = static_cast<float>(n) / static_cast<float>(kmax);
 			std::cout << epsilon << ", ";
@@ -2281,9 +2281,9 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.momentum*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTanhTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTanhTest.Simple*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTanhTest.momentum*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
