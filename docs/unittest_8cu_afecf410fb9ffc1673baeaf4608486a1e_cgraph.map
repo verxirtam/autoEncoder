@@ -1,15 +1,15 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#a951b66b03eae11eb21e7fc3c8600c8b9" title="Backpropagation_Base\l::init" alt="" coords="110,23,266,65"/>
-<area shape="rect" id="node8" href="$classBackpropagation__Base.html#afd9b006693ddd9d09ac5c7b4d2307c9f" title="Backpropagation_Base\l::setWeight" alt="" coords="110,89,266,130"/>
-<area shape="rect" id="node9" href="$classBackpropagation__Base.html#a6cd9a8dd568409e7f6fd43ebe1537794" title="Backpropagation_Base\l::setBias" alt="" coords="110,154,266,195"/>
-<area shape="rect" id="node10" href="$classBackpropagation__Base.html#ae025ee20686eb4e1840d8cabb6aecb44" title="Backpropagation_Base\l::forward" alt="" coords="110,219,266,261"/>
-<area shape="rect" id="node11" href="$classBackpropagation__Base.html#a862df97b3652f5a2872db539699377e1" title="Backpropagation_Base\l::getZAsVector" alt="" coords="110,285,266,326"/>
-<area shape="rect" id="node12" href="$classBackpropagation__Base.html#ace2979c5533299f81206815442b30eda" title="Backpropagation_Base\l::getUAsVector" alt="" coords="110,350,266,391"/>
-<area shape="rect" id="node13" href="$classBackpropagation__Base.html#a1f6617ce190319f567e230b6c79e4093" title="Backpropagation_Base\l::back" alt="" coords="110,415,266,457"/>
-<area shape="rect" id="node14" href="$classBackpropagation__Base.html#a797620bb743f8505182cfcde28458b4d" title="Backpropagation_Base\l::getDeltaAsVector" alt="" coords="110,481,266,522"/>
-<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="315,5,498,32"/>
-<area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="321,56,493,83"/>
-<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="551,5,742,32"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="547,56,746,83"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="795,56,983,83"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="143,31,287,57"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#a651aa00ffb479d9e45dca6614ad2aafc" title="Backpropagation::setWeight" alt="" coords="121,81,308,108"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a78605beb809aeb9c41d4dd7ccdc9fa17" title="Backpropagation::setBias" alt="" coords="129,132,300,159"/>
+<area shape="rect" id="node10" href="$classBackpropagation.html#a5650b388a4a506e3e9b857abfdbd3025" title="Backpropagation::forward" alt="" coords="129,183,300,209"/>
+<area shape="rect" id="node11" href="$classBackpropagation.html#ac8d5076e5e0bdcf3af575798cecb442e" title="Backpropagation::getZAsVector" alt="" coords="111,233,318,260"/>
+<area shape="rect" id="node12" href="$classBackpropagation.html#a904fd738737389aa8510a1aca180bf50" title="Backpropagation::getUAsVector" alt="" coords="110,284,319,311"/>
+<area shape="rect" id="node13" href="$classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329" title="Backpropagation::back" alt="" coords="137,335,292,361"/>
+<area shape="rect" id="node14" href="$classBackpropagation.html#a21e671a6a3902ca501a31ab6062590bb" title="Backpropagation::getDelta\lAsVector" alt="" coords="127,386,303,427"/>
+<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="369,5,551,32"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="374,56,546,83"/>
+<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="605,5,795,32"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="601,56,799,83"/>
+<area shape="rect" id="node7" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="849,56,1037,83"/>
 </map>

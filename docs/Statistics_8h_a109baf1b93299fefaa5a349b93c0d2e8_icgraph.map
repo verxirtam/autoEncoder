@@ -1,9 +1,9 @@
 <map id="getMeanAndVarCovMatrix" name="getMeanAndVarCovMatrix">
 <area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="230,85,357,112"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="405,35,528,61"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="405,35,528,61"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="439,85,495,112"/>
 <area shape="rect" id="node8" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="431,136,503,163"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="645,5,701,32"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="576,57,771,98"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="819,64,875,91"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="624,5,680,32"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="576,57,728,98"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="776,64,832,91"/>
 </map>

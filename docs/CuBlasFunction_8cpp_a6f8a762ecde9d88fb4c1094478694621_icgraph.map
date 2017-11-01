@@ -1,12 +1,12 @@
 <map id="Sscal" name="Sscal">
-<area shape="rect" id="node2" href="$classBackpropagation__Base.html#afb96a58e90a6eb19a593af25238c30d3" title="Backpropagation_Base\l::initRandom" alt="" coords="119,19,275,61"/>
-<area shape="rect" id="node3" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="110,85,285,112"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="161,136,233,163"/>
-<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="334,85,461,112"/>
-<area shape="rect" id="node5" href="$classAutoEncoder.html#a5430f372bfa1f5707731a5c2299a3d78" title="AutoEncoder::init" alt="" coords="509,35,632,61"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="543,85,599,112"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="535,136,607,163"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="749,5,805,32"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="680,57,875,98"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="923,64,979,91"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8" title="Backpropagation::initRandom" alt="" coords="110,35,303,61"/>
+<area shape="rect" id="node3" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="119,85,294,112"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="171,136,243,163"/>
+<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="353,85,479,112"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="528,35,651,61"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="561,85,617,112"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="553,136,625,163"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="747,5,803,32"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="699,57,851,98"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="899,64,955,91"/>
 </map>

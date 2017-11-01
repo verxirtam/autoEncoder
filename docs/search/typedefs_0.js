@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['backpropagationtanhreg',['BackpropagationTanhReg',['../Backpropagation_8cuh.html#ac7999964bf1053da1c5c4cd13db026b2',1,'Backpropagation.cuh']]]
+  ['autoencodertanh',['AutoEncoderTanh',['../AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6',1,'AutoEncoderTanh.cuh']]]
 ];

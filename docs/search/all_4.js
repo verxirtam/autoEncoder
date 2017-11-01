@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['delta',['delta',['../classBackpropagation__Base.html#ab3a5a28978063092f7d802761a7941fb',1,'Backpropagation_Base']]],
-  ['deltabias',['deltaBias',['../classBackpropagation__Base.html#a9ffdf18b8a5ebd0c40882dd6ef90db1e',1,'Backpropagation_Base']]],
-  ['deltaweight',['deltaWeight',['../classBackpropagation__Base.html#adfa113c18c7438d721a276be8c6fff91',1,'Backpropagation_Base']]],
+  ['delta',['delta',['../classBackpropagation.html#ac78588d8c49d9422a91c45289462730f',1,'Backpropagation']]],
+  ['deltabias',['deltaBias',['../classBackpropagation.html#a8df1e171bee2710e7717a5d947e92852',1,'Backpropagation']]],
+  ['deltaweight',['deltaWeight',['../classBackpropagation.html#ac6ebcab8e643b3d1f03e0a154c04b391',1,'Backpropagation']]],
   ['device',['device',['../classDeviceMatrix.html#ab9a999def7ee4b4456f0749ffcc03b86',1,'DeviceMatrix::device()'],['../classDeviceVector.html#aec704ebacfeabbff2f292066f64617ca',1,'DeviceVector::device()']]],
   ['devicematrix',['DeviceMatrix',['../classDeviceMatrix.html',1,'DeviceMatrix'],['../classDeviceMatrix.html#a38f74b238bab091fb94e78d75f4c737d',1,'DeviceMatrix::DeviceMatrix(const DeviceMatrix &amp;dm)'],['../classDeviceMatrix.html#ad58c044ed53f43db2657352f548ab1f1',1,'DeviceMatrix::DeviceMatrix(DeviceMatrix &amp;&amp;dm)'],['../classDeviceMatrix.html#a55575fa4e327c89f94895a62a420493e',1,'DeviceMatrix::DeviceMatrix(int r, int c)'],['../classDeviceMatrix.html#ada83d78870bd29082835978dfa368fb4',1,'DeviceMatrix::DeviceMatrix(int r, int c, const std::vector&lt; float &gt; &amp;d)'],['../classDeviceMatrix.html#a678af62d896522088f280aaa70434486',1,'DeviceMatrix::DeviceMatrix()']]],
   ['devicematrix_2eh',['DeviceMatrix.h',['../DeviceMatrix_8h.html',1,'']]],

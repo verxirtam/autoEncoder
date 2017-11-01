@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['backpropagation_5fbase',['Backpropagation_Base',['../classBackpropagation__Base.html',1,'']]],
-  ['backpropagation_5fbase_3c_20func1to1tanh_2c_20outputlayerregression_20_3e',['Backpropagation_Base&lt; Func1to1Tanh, OutputLayerRegression &gt;',['../classBackpropagation__Base.html',1,'']]],
+  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'']]],
+  ['backpropagation_3c_20af_2c_20outputlayerregression_20_3e',['Backpropagation&lt; AF, OutputLayerRegression &gt;',['../classBackpropagation.html',1,'']]],
   ['backpropagationexception',['BackpropagationException',['../classBackpropagationException.html',1,'']]],
   ['backpropagationtanhregalltest',['BackpropagationTanhRegAllTest',['../classBackpropagationTanhRegAllTest.html',1,'']]],
   ['backpropagationtanhregfunctiontest',['BackpropagationTanhRegFunctionTest',['../classBackpropagationTanhRegFunctionTest.html',1,'']]],

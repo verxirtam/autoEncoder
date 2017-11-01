@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowcolumn',['RowColumn',['../unittest_8cu.html#a4b307f9b7776234c29d3de7481d538be',1,'unittest.cu']]]
+  ['backpropagationtanhreg',['BackpropagationTanhReg',['../BackpropagationTanhReg_8cuh.html#a1007f5b9c9e76e49ac1875e58adffa8e',1,'BackpropagationTanhReg.cuh']]]
 ];

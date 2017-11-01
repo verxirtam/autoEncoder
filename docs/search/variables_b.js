@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalization',['normalization',['../classAutoEncoder.html#a887befd953ae46e976fbf2706ef77fa1',1,'AutoEncoder']]]
+  ['normalization',['normalization',['../classAutoEncoder.html#ad6aee4b7f7c8305ba696e2049f355934',1,'AutoEncoder']]]
 ];
