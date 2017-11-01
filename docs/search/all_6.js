@@ -4,6 +4,8 @@ var searchData=
   ['func1to1applydiff',['Func1to1ApplyDiff',['../classFunc1to1ApplyDiff.html',1,'']]],
   ['func1to1exp',['Func1to1Exp',['../classFunc1to1Exp.html',1,'']]],
   ['func1to1exp_2ecuh',['Func1to1Exp.cuh',['../Func1to1Exp_8cuh.html',1,'']]],
+  ['func1to1logistic',['Func1to1Logistic',['../classFunc1to1Logistic.html',1,'']]],
+  ['func1to1logistic_2ecuh',['Func1to1Logistic.cuh',['../Func1to1Logistic_8cuh.html',1,'']]],
   ['func1to1relu',['Func1to1ReLU',['../classFunc1to1ReLU.html',1,'']]],
   ['func1to1relu_2ecuh',['Func1to1ReLU.cuh',['../Func1to1ReLU_8cuh.html',1,'']]],
   ['func1to1tanh',['Func1to1Tanh',['../classFunc1to1Tanh.html',1,'']]],

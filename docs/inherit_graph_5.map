@@ -1,7 +1,20 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classBackpropagationException.html" title="BackpropagationException" alt="" coords="153,5,330,32"/>
-<area shape="rect" id="node3" href="$classCuBlasException.html" title="CuBlasException" alt="" coords="180,56,303,83"/>
-<area shape="rect" id="node4" href="$classCudaException.html" title="CudaException" alt="" coords="186,107,297,133"/>
-<area shape="rect" id="node5" href="$classCuRandException.html" title="CuRandException" alt="" coords="177,157,305,184"/>
-<area shape="rect" id="node6" href="$classCuSolverDnException.html" title="CuSolverDnException" alt="" coords="166,208,317,235"/>
+<area shape="rect" id="node2" href="$classAutoEncoderTest.html" title="AutoEncoderTest" alt="" coords="255,847,377,873"/>
+<area shape="rect" id="node3" href="$classBackpropagationTanhRegAllTest.html" title="BackpropagationTanhRegAllTest" alt="" coords="209,259,423,285"/>
+<area shape="rect" id="node4" href="$classBackpropagationTanhRegFunctionTest.html" title="BackpropagationTanhRegFunctionTest" alt="" coords="192,309,440,336"/>
+<area shape="rect" id="node5" href="$classBackpropagationTanhRegMiniBatchTest.html" title="BackpropagationTanhRegMini\lBatchTest" alt="" coords="218,898,414,939"/>
+<area shape="rect" id="node6" href="$classBackpropagationTanhRegNumericDiffTest.html" title="BackpropagationTanhRegNumeric\lDiffTest" alt="" coords="205,361,427,402"/>
+<area shape="rect" id="node7" href="$classBackpropagationTanhRegObtainDEDWTest.html" title="BackpropagationTanhRegObtain\lDEDWTest" alt="" coords="211,426,421,467"/>
+<area shape="rect" id="node8" href="$classBackpropagationTanhRegStreamTest.html" title="BackpropagationTanhRegStreamTest" alt="" coords="196,492,436,519"/>
+<area shape="rect" id="node9" href="$classBackpropagationTanhRegTest.html" title="BackpropagationTanhRegTest" alt="" coords="217,543,415,569"/>
+<area shape="rect" id="node10" href="$classCuBlasFunctionTest.html" title="CuBlasFunctionTest" alt="" coords="245,593,387,620"/>
+<area shape="rect" id="node11" href="$classCuBlasFunctionTest__1V.html" title="CuBlasFunctionTest_1V" alt="" coords="234,5,398,32"/>
+<area shape="rect" id="node12" href="$classCuBlasFunctionTest__2V.html" title="CuBlasFunctionTest_2V" alt="" coords="234,56,398,83"/>
+<area shape="rect" id="node13" href="$classCudaManagerTest.html" title="CudaManagerTest" alt="" coords="251,644,381,671"/>
+<area shape="rect" id="node14" href="$classCuRandManagerTest.html" title="CuRandManagerTest" alt="" coords="243,695,389,721"/>
+<area shape="rect" id="node15" href="$classCuSolverDnTest.html" title="CuSolverDnTest" alt="" coords="257,745,375,772"/>
+<area shape="rect" id="node16" href="$classDeviceMatrixTest.html" title="DeviceMatrixTest" alt="" coords="253,107,379,133"/>
+<area shape="rect" id="node17" href="$classDeviceVectorTest.html" title="DeviceVectorTest" alt="" coords="253,157,379,184"/>
+<area shape="rect" id="node18" href="$classNormalizationGeneralTest.html" title="NormalizationGeneralTest" alt="" coords="229,208,403,235"/>
+<area shape="rect" id="node19" href="$classNormalizationTest.html" title="NormalizationTest" alt="" coords="252,796,380,823"/>
 </map>

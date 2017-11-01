@@ -3,8 +3,8 @@
 <area shape="rect" id="node3" href="$classBackpropagation__Base.html#a22003f1601b8aaa4b01f8c4292003020" title="Backpropagation_Base\l::updateParameter" alt="" coords="113,75,269,117"/>
 <area shape="rect" id="node10" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="123,141,258,168"/>
 <area shape="rect" id="node4" href="$classAutoEncoder.html#a875311f22d3b1a9e53ad49f9722d2453" title="AutoEncoder::learning" alt="" coords="318,35,469,61"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="357,85,429,112"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#ac0d0812098194330451e871a251c1f33" title="TEST" alt="" coords="365,137,421,164"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="357,85,429,112"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="365,137,421,164"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#aad41c9bf1f20f9c037f778597c83749c" title="TEST" alt="" coords="587,5,643,32"/>
 <area shape="rect" id="node6" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="517,57,712,98"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#a15ea7127013cfc8bd54b5b7d1a9c75e7" title="TEST" alt="" coords="760,64,816,91"/>

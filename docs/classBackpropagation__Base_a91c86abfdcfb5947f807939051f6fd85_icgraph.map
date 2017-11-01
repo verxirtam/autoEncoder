@@ -1,5 +1,5 @@
 <map id="Backpropagation_Base::getBiasAsVector" name="Backpropagation_Base::getBiasAsVector">
-<area shape="rect" id="node2" href="$unittest_8cu.html#aae55169dd6fed4ee427f3a8ec411f8f0" title="BackpropagationTest\l_All_showInfo" alt="" coords="211,5,357,46"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a47d4e24538965ed5fce29573d75c634c" title="TEST_P" alt="" coords="248,71,320,97"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#aca61c1799b7d4dc54c35f757eff14c52" title="TEST_P" alt="" coords="405,12,477,39"/>
+<area shape="rect" id="node2" href="$unittest_8cu.html#a8b7605445954ad74414ae57177d1f540" title="BackpropagationTanhRegTest\l_All_showInfo" alt="" coords="211,5,410,46"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#ac7f6900ff16338833c193686dd08b8f0" title="TEST_P" alt="" coords="275,71,347,97"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="459,12,531,39"/>
 </map>
