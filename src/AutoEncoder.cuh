@@ -88,6 +88,10 @@ public:
 	{
 		return this->backpropagation.getGamma();
 	}
+	const Backpropagation<AF, OutputLayerRegression>& getBackpropagation() const
+	{
+		return backpropagation;
+	}
 };
 
 

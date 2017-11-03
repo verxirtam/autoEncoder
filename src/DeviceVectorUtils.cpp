@@ -88,8 +88,24 @@ DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& devi
 
 void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVector)
 {
+	std::vector<float> data = deviceVector.get();
+
+	unsigned int column_count = 1;
+	unsigned int row_count    = deviceVector.getDimension();
 	
-	throw 1;
+	std::ofstream csv_file(csvFileName);
+	for(unsigned int i = 0; i < column_count; i++)
+	{
+		for(unsigned int j = 0; j < row_count; j++)
+		{
+			csv_file << data[i * row_count + j];
+			if(j != (row_count - 1))
+			{
+				csv_file << ',';
+			}
+		}
+		csv_file << std::endl;
+	}
 }
 
 void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMatrix)

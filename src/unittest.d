@@ -334,6 +334,7 @@ unittest.o : unittest.cu \
     CuSolverDnFunction.h \
     Normalization.h \
     Statistics.h \
-    AutoEncoderTanh.cuh \
     AutoEncoder.cuh \
+    Func1to1ReLU.cuh \
+    Func1to1Logistic.cuh \
     DeviceVectorUtils.h
