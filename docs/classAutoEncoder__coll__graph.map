@@ -1,6 +1,7 @@
 <map id="AutoEncoder&lt; AF &gt;" name="AutoEncoder&lt; AF &gt;">
-<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayerRegression \&gt;" alt="" coords="56,169,230,210"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html" title="DeviceVector" alt="" coords="74,5,175,32"/>
-<area shape="rect" id="node4" href="$classNormalization.html" title="Normalization" alt="" coords="254,176,356,203"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html" title="DeviceMatrix" alt="" coords="274,5,372,32"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayerRegression \&gt;" alt="" coords="42,275,216,317"/>
+<area shape="rect" id="node3" href="$classDeviceVector.html" title="DeviceVector" alt="" coords="42,5,143,32"/>
+<area shape="rect" id="node4" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayer \&gt;" alt="" coords="118,169,270,210"/>
+<area shape="rect" id="node5" href="$classNormalization.html" title="Normalization" alt="" coords="294,176,396,203"/>
+<area shape="rect" id="node6" href="$classDeviceMatrix.html" title="DeviceMatrix" alt="" coords="296,5,395,32"/>
 </map>
