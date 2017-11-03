@@ -1,5 +1,5 @@
 <map id="Backpropagation::setEpsilon" name="Backpropagation::setEpsilon">
 <area shape="rect" id="node2" href="$classAutoEncoder.html#a0481a87cc0313da60e2da983dccc4f28" title="AutoEncoder::setEpsilon" alt="" coords="243,12,410,39"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="459,5,611,46"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="659,12,715,39"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="459,5,653,46"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="702,12,810,39"/>
 </map>

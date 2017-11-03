@@ -1,9 +1,9 @@
 <map id="src/ElementWiseFunctionUtil.cuh" name="src/ElementWiseFunctionUtil.cuh">
-<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/ActivateFunction.cuh" alt="" coords="213,80,379,107"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="91,155,257,181"/>
-<area shape="rect" id="node8" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="282,155,400,181"/>
-<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="48,229,192,256"/>
-<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="203,304,421,331"/>
+<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/ActivateFunction.cuh" alt="" coords="233,80,399,107"/>
+<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="111,155,277,181"/>
+<area shape="rect" id="node8" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="302,155,420,181"/>
+<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="20,229,164,256"/>
+<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="188,229,407,256"/>
 <area shape="rect" id="node5" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,304,179,331"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="149,379,253,405"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="223,304,328,331"/>
 </map>

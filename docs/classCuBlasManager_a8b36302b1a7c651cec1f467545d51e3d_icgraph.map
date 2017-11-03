@@ -20,9 +20,9 @@
 <area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="1009,430,1132,457"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="533,82,605,109"/>
 <area shape="rect" id="node8" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="541,31,597,58"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="1243,486,1299,513"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="1195,420,1347,461"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="1395,427,1451,454"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="1238,486,1346,513"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1195,420,1389,461"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="1438,427,1546,454"/>
 <area shape="rect" id="node13" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="995,485,1146,511"/>
 <area shape="rect" id="node14" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="803,234,875,261"/>
 <area shape="rect" id="node15" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="811,183,867,210"/>

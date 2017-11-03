@@ -20,9 +20,9 @@
 <area shape="rect" id="node42" href="$classElementWiseFunction2to1.html#a8053c5101780c561fe3f9e2b9d11d401" title="ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="241,1058,431,1099"/>
 <area shape="rect" id="node45" href="$unittest_8cu.html#a98528d323a264bb86a2211ea87a3ba31" title="TEST" alt="" coords="308,1124,364,1150"/>
 <area shape="rect" id="node46" href="$unittest_8cu.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="300,1174,372,1201"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="1341,385,1397,412"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="1293,436,1445,478"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="1493,444,1549,470"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="1337,385,1445,412"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1293,436,1488,478"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="1537,444,1645,470"/>
 <area shape="rect" id="node8" href="$classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e" title="Backpropagation::updateParameter" alt="" coords="480,270,707,297"/>
 <area shape="rect" id="node12" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="527,220,659,246"/>
 <area shape="rect" id="node9" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="1065,444,1215,470"/>

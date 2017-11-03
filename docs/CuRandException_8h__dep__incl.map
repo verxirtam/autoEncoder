@@ -1,11 +1,11 @@
 <map id="src/CuRandException.h" name="src/CuRandException.h">
-<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="src/CuRandManager.h" alt="" coords="391,80,544,107"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="201,155,367,181"/>
-<area shape="rect" id="node8" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="391,155,544,181"/>
-<area shape="rect" id="node10" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="569,155,735,181"/>
-<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="65,229,209,256"/>
-<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="203,304,421,331"/>
+<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="src/CuRandManager.h" alt="" coords="386,80,539,107"/>
+<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="195,155,361,181"/>
+<area shape="rect" id="node8" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="386,155,539,181"/>
+<area shape="rect" id="node10" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="563,155,729,181"/>
+<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="20,229,164,256"/>
+<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="188,229,407,256"/>
 <area shape="rect" id="node5" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,304,179,331"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="259,379,364,405"/>
-<area shape="rect" id="node9" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="497,229,663,256"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="245,304,349,331"/>
+<area shape="rect" id="node9" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="482,229,648,256"/>
 </map>

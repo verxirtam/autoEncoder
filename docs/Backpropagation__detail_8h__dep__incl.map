@@ -1,7 +1,7 @@
 <map id="src/Backpropagation_detail.h" name="src/Backpropagation_detail.h">
-<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="118,96,284,123"/>
-<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="48,171,192,197"/>
-<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="203,245,421,272"/>
+<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="111,96,277,123"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="20,171,164,197"/>
+<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="188,171,407,197"/>
 <area shape="rect" id="node4" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,245,179,272"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="149,320,253,347"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="223,245,328,272"/>
 </map>

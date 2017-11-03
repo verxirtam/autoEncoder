@@ -1,7 +1,7 @@
 <map id="src/Normalization.h" name="src/Normalization.h">
-<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="28,80,172,107"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="101,229,205,256"/>
-<area shape="rect" id="node5" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="253,80,401,107"/>
-<area shape="rect" id="node6" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="427,80,604,107"/>
+<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="75,80,219,107"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="203,155,308,181"/>
+<area shape="rect" id="node5" href="$Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="293,80,441,107"/>
+<area shape="rect" id="node6" href="$Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="467,80,644,107"/>
 <area shape="rect" id="node3" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,155,179,181"/>
 </map>

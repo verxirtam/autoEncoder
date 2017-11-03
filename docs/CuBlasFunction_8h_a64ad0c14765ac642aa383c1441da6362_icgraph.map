@@ -5,7 +5,7 @@
 <area shape="rect" id="node4" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="387,35,538,61"/>
 <area shape="rect" id="node8" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="427,85,499,112"/>
 <area shape="rect" id="node9" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="435,136,491,163"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="635,5,691,32"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="587,57,739,98"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="787,64,843,91"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="630,5,738,32"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="587,57,781,98"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="830,64,938,91"/>
 </map>

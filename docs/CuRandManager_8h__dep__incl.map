@@ -1,10 +1,10 @@
 <map id="src/CuRandManager.h" name="src/CuRandManager.h">
-<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="201,80,367,107"/>
-<area shape="rect" id="node7" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="391,80,544,107"/>
-<area shape="rect" id="node9" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="569,80,735,107"/>
-<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="65,155,209,181"/>
-<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="203,229,421,256"/>
+<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="195,80,361,107"/>
+<area shape="rect" id="node7" href="$CuRandFunction_8h.html" title="src/CuRandFunction.h" alt="" coords="386,80,539,107"/>
+<area shape="rect" id="node9" href="$CuRandManager_8cpp.html" title="src/CuRandManager.cpp" alt="" coords="563,80,729,107"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="20,155,164,181"/>
+<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="188,155,407,181"/>
 <area shape="rect" id="node4" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,229,179,256"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="259,304,364,331"/>
-<area shape="rect" id="node8" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="497,155,663,181"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="245,229,349,256"/>
+<area shape="rect" id="node8" href="$CuRandFunction_8cpp.html" title="src/CuRandFunction.cpp" alt="" coords="482,155,648,181"/>
 </map>

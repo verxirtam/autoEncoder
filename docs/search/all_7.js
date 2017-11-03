@@ -10,6 +10,7 @@ var searchData=
   ['getaddress',['getAddress',['../classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d',1,'DeviceMatrix::getAddress()'],['../classDeviceVector.html#a5487b131a7a148baea42e703212f54bc',1,'DeviceVector::getAddress()']]],
   ['getalphamatrix',['getAlphaMatrix',['../classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b',1,'DeviceMatrix']]],
   ['getalphavector',['getAlphaVector',['../classDeviceVector.html#a38f958f5995613e23af6e017b8eda894',1,'DeviceVector']]],
+  ['getbackpropagation',['getBackpropagation',['../classAutoEncoder.html#a6ff7ce63d8f8e44ac2ea92db04700e81',1,'AutoEncoder']]],
   ['getbias',['getBias',['../classBackpropagation.html#a318390c97ec2383eeb960689f2cb76e0',1,'Backpropagation']]],
   ['getbiasasvector',['getBiasAsVector',['../classBackpropagation.html#a153ac241ab866d7fd6d865bac44a177b',1,'Backpropagation']]],
   ['getcolumncount',['getColumnCount',['../classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f',1,'DeviceMatrix']]],

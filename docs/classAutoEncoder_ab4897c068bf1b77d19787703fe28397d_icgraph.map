@@ -1,4 +1,4 @@
 <map id="AutoEncoder::setGamma" name="AutoEncoder::setGamma">
-<area shape="rect" id="node2" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="224,5,376,46"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="424,12,480,39"/>
+<area shape="rect" id="node2" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="224,5,419,46"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="467,12,575,39"/>
 </map>

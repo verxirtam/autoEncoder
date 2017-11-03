@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="224,27,395,69"/>
 <area shape="rect" id="node7" href="$classNormalization.html#a4703e8547e233ce1bbc2e07a19a257dd" title="Normalization::getInverse\lZCAWhitening" alt="" coords="224,93,395,134"/>
 <area shape="rect" id="node3" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="443,35,594,61"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a817d1d1f834876ff1dcaebb124f55d6e" title="TEST" alt="" coords="691,5,747,32"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba" title="AutoEncoderTanhTest\l_momentum_estimate" alt="" coords="643,57,795,98"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a3ba134b03dc2af77c06c493cbebdbacc" title="TEST" alt="" coords="843,64,899,91"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="686,5,794,32"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="643,57,837,98"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="886,64,994,91"/>
 </map>

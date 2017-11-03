@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['a1',['A1',['../unittest_8cu.html#af0001105c721b4b8fcb79cce551a5239',1,'unittest.cu']]],
+  ['a2',['A2',['../unittest_8cu.html#a02edb3f53f588c981af495d6f54e2f48',1,'unittest.cu']]],
+  ['a3',['A3',['../unittest_8cu.html#ae818659936799bd5960c9158723aa388',1,'unittest.cu']]],
   ['activate',['activate',['../classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1',1,'ActivateFunction']]],
   ['activatediff',['activateDiff',['../classActivateFunction.html#ab240720da078d564599bba639ae8d2c3',1,'ActivateFunction']]],
   ['activatefunction',['ActivateFunction',['../classActivateFunction.html',1,'ActivateFunction&lt; Func1to1 &gt;'],['../classOutputLayerMulticlassClassification.html#a83c0549d99190d1ca831f0ff376543bd',1,'OutputLayerMulticlassClassification::activateFunction()'],['../classOutputLayerRegression.html#af3e14cd66a385ba764c99c5f72381ad4',1,'OutputLayerRegression::activateFunction()']]],
@@ -11,6 +14,7 @@ var searchData=
   ['autoencoder_2ecuh',['AutoEncoder.cuh',['../AutoEncoder_8cuh.html',1,'']]],
   ['autoencodertanh',['AutoEncoderTanh',['../AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6',1,'AutoEncoderTanh.cuh']]],
   ['autoencodertanh_2ecuh',['AutoEncoderTanh.cuh',['../AutoEncoderTanh_8cuh.html',1,'']]],
-  ['autoencodertanhtest',['AutoEncoderTanhTest',['../classAutoEncoderTanhTest.html',1,'']]],
-  ['autoencodertanhtest_5fmomentum_5festimate',['AutoEncoderTanhTest_momentum_estimate',['../unittest_8cu.html#a7ce9a8ef0f7eda8063c850aa16237aba',1,'unittest.cu']]]
+  ['autoencodertest',['AutoEncoderTest',['../classAutoEncoderTest.html',1,'']]],
+  ['autoencodertest_5fmomentum_5festimate',['AutoEncoderTest_momentum_estimate',['../unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b',1,'unittest.cu']]],
+  ['autoencodertesttypes',['AutoEncoderTestTypes',['../unittest_8cu.html#a45329dc2b9427e196f02a94972eaa721',1,'unittest.cu']]]
 ];
