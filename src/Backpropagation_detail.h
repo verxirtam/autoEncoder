@@ -192,20 +192,32 @@ void Backpropagation<AF, OutputLayer>::initRandom(void)
 		w.set(h_w);
 		*/
 		
+		/*
 		//wのデバイスメモリに値域(0.0, 1.0]の一様分布に従う乱数を生成
 		CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), w.getAddress(), M * N));
 		//wを1/Nでスカラー倍する
 		float alpha = 1.0f / static_cast<float>(N);
 		//float alpha = 0.01f / static_cast<float>(N);
 		Sscal(&alpha, w);
-		
+		*/
+		//TODO 初期値を設定する処理を書くこと
+		float stddev = 0.125f / std::sqrt(static_cast<float>(N));
+		CURAND_CALL(curandGenerateNormal(CuRandManager::getGenerator(),w.getAddress(), M * N, 0.0f, stddev));
 	}
 	//biasは一律0で初期化する
 	for(auto&& b : bias)
 	{
+		//一定値(0.0f)
 		unsigned int N = b.getDimension();
 		std::vector<float> h_b(N, 0.0f);
 		b.set(h_b);
+		
+		//正規分布
+		/*
+		unsigned int N = b.getDimension();
+		float stddev = 0.125f;
+		CURAND_CALL(curandGenerateNormal(CuRandManager::getGenerator(),b.getAddress(), N, 0.0f, stddev));
+		*/
 	}
 }
 

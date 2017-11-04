@@ -1938,6 +1938,11 @@ TEST(BackpropagationTanhRegMiniBatchTest, Simple)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
+template <class T> std::string get_typename()            {return "";}
+template <>  std::string get_typename<Func1to1Tanh>()    {return "Func1to1Tanh";}
+template <>  std::string get_typename<Func1to1ReLU>()    {return "Func1to1ReLU";}
+template <>  std::string get_typename<Func1to1Logistic>(){return "Func1to1Logistic";}
+
 template <class T>
 class AutoEncoderTest :
 	public ::testing::Test
@@ -1965,13 +1970,16 @@ TYPED_TEST(AutoEncoderTest, Simple)
 	//隠れ層のサイズ
 	int layer_size = 2;
 	//ミニバッチの個数
-	int minibatch_size = 100;
+	int minibatch_size = 50;
 	
 	//正規化用のデータのサイズ
 	int normarize_data_size = 100;
 	
 	//学習の回数
-	int learning_count = 500;
+	int learning_count = 200;
+	
+	//誤差
+	float error_max = 0.125;
 	
 	
 	//データ生成部は特定の次元限定の処理なので
@@ -2001,6 +2009,8 @@ TYPED_TEST(AutoEncoderTest, Simple)
 	normarize_input.set(normarize_input_base);
 	
 	AutoEncoder<TypeParam> a;
+	a.setEpsilon(0.2f);
+	a.setGamma(0.5f);
 	a.init(normarize_input, layer_size, minibatch_size);
 	
 	printVector(a.getWhiteningMatrix().get(),        "       whiteningMatrix");
@@ -2039,16 +2049,44 @@ TYPED_TEST(AutoEncoderTest, Simple)
 		minibatch_input.set(minibatch_input_base);
 		
 		//学習の実行
-		a.learning(minibatch_input);
+		if(n < learning_count)
+		{
+			auto minibatch_output = a.learning(minibatch_input);
+			
+			std::stringstream filename;
+			filename << "../data/AutoEncoderTest_Simple_";
+			filename << std::setfill('0') << std::right;
+			filename << std::setw(4) << n;
+			filename << get_typename<TypeParam>();
+			
+			writeToCsvFile(filename.str() + "_0input.csv",  minibatch_input );
+			writeToCsvFile(filename.str() + "_1output.csv", minibatch_output);
+			
+			//入力を十分近似できたら終了
+			float diff = compareVector(minibatch_input.get(), minibatch_output.get());
+			if(diff < error_max)
+			{
+				std::cout << "learning_count: " << n << std::endl;
+				std::cout << "diff : " << diff << std::endl;
+				break;
+			}
+		}
+		else
+		{
+			a.learning(minibatch_input);
+		}
 	}
 	
 	//出力の取得
 	auto minibatch_output = a.learning(minibatch_input);
 	
-	writeToCsvFile("../data/AutoEncoderTanhTest_Simple_0input.csv",  minibatch_input );
-	writeToCsvFile("../data/AutoEncoderTanhTest_Simple_1output.csv", minibatch_output);
+	std::string filename0("../data/AutoEncoderTest_Simple_");
+	filename0 += get_typename<TypeParam>();
 	
-	EXPECT_NEAR(compareVector(minibatch_input.get(), minibatch_output.get()), 0.0f, 0.125f);
+	writeToCsvFile(filename0 + "_0input.csv",  minibatch_input );
+	writeToCsvFile(filename0 + "_1output.csv", minibatch_output);
+	
+	EXPECT_NEAR(compareVector(minibatch_input.get(), minibatch_output.get()), 0.0f, error_max * 2.0f);
 	
 }
 
@@ -2062,7 +2100,7 @@ TYPED_TEST(AutoEncoderTest, csv)
 	{
 		float x = static_cast<float>(i);
 		float y = std::sin(2.0f * x);
-		x = x + 0.5 * std::sin(10.0f * y);
+		//x = x + 0.5 * std::sin(10.0f * y);
 		normarize_input_base[2 * i    ] = x;
 		normarize_input_base[2 * i + 1] = y;
 	}
@@ -2096,7 +2134,7 @@ TYPED_TEST(AutoEncoderTest, csv)
 		{
 			float x = 10.0f * urd(engine);
 			float y = std::sin(2.0f * x);
-			x = x + 0.5 * std::sin(10.0f * y);
+			//x = x + 0.5 * std::sin(10.0f * y);
 			minibatch_input_base[2 * j    ] = x;
 			minibatch_input_base[2 * j + 1] = y;
 		}
@@ -2153,18 +2191,22 @@ TYPED_TEST(AutoEncoderTest, csv)
 	float diff = compareVector(minibatch_input_vector, minibatch_output_vector);
 	if(diff > 1.0f)
 	{
+		
 		//minibatch_input_vector,minibatch_output_vectorをファイル出力する
-		writeToCsvFile("../data/AutoEncoderTest_csv_0input.csv",  minibatch_input );
-		writeToCsvFile("../data/AutoEncoderTest_csv_1output.csv", minibatch_output);
 		auto b = a.getBackpropagation();
-		writeToCsvFile("../data/AutoEncoderTest_csv_2weight1.csv", b.getWeight()[1]);
-		writeToCsvFile("../data/AutoEncoderTest_csv_2weight2.csv", b.getWeight()[2]);
-		writeToCsvFile("../data/AutoEncoderTest_csv_3bias1.csv", b.getBias()[1]);
-		writeToCsvFile("../data/AutoEncoderTest_csv_3bias2.csv", b.getBias()[2]);
+		std::string filename0("../data/AutoEncoderTest_csv_");
+		filename0 += get_typename<TypeParam>();
+		writeToCsvFile(filename0 + "_0input.csv",  minibatch_input );
+		writeToCsvFile(filename0 + "_1output.csv", minibatch_output);
+		writeToCsvFile(filename0 + "_2weight1.csv", b.getWeight()[1]);
+		writeToCsvFile(filename0 + "_2weight2.csv", b.getWeight()[2]);
+		writeToCsvFile(filename0 + "_3bias1.csv",   b.getBias()[1]);
+		writeToCsvFile(filename0 + "_3bias2.csv",   b.getBias()[2]);
 	}
 	EXPECT_NEAR(diff, 0.0f, 1.0f);
 }
 
+template <class T>
 int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 {
 	
@@ -2179,8 +2221,8 @@ int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 	int normarize_data_size = 100;
 	
 	//学習の回数
-	//int learning_count = 100;
-	int learning_count = 40;
+	int learning_count = 100;
+	//int learning_count = 40;
 	
 	
 	//データ生成部は特定の次元限定の処理なので
@@ -2209,7 +2251,7 @@ int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 	DeviceMatrix normarize_input(dimension, normarize_data_size);
 	normarize_input.set(normarize_input_base);
 	
-	AutoEncoder<Func1to1Tanh> a;
+	AutoEncoder<T> a;
 	a.setEpsilon(epsilon);
 	a.setGamma(gamma);
 	a.init(normarize_input, layer_size, minibatch_size);
@@ -2260,6 +2302,10 @@ int AutoEncoderTest_momentum_estimate(float epsilon, float gamma, float error)
 	return learning_count;
 }
 
+//template <> int AutoEncoderTest_momentum_estimate<Func1to1Tanh>(float epsilon, float gamma, float error);
+//template <> int AutoEncoderTest_momentum_estimate<Func1to1ReLU>(float epsilon, float gamma, float error);
+//template <> int AutoEncoderTest_momentum_estimate<Func1to1Logistic>(float epsilon, float gamma, float error);
+
 //モメンタムの検証
 TYPED_TEST(AutoEncoderTest, momentum)
 {
@@ -2278,7 +2324,7 @@ TYPED_TEST(AutoEncoderTest, momentum)
 	
 	for(unsigned int i = 0; i < imax; i++)
 	{
-		epsilon = 0.25f + 0.25f * static_cast<float>(i + 1) / static_cast<float>(imax);
+		epsilon = 0.1f + 0.5f * static_cast<float>(i + 1) / static_cast<float>(imax);
 		for(unsigned int j = 0; j < jmax; j++)
 		{
 			gamma = 0.5f + 0.5f * static_cast<float>(j) / static_cast<float>(jmax);
@@ -2286,7 +2332,7 @@ TYPED_TEST(AutoEncoderTest, momentum)
 			for(unsigned int k =0; k < kmax ; k++)
 			{
 				//誤差がerror未満になるlearningの回数をカウントする
-				n += AutoEncoderTest_momentum_estimate(epsilon, gamma, error);
+				n += AutoEncoderTest_momentum_estimate<TypeParam>(epsilon, gamma, error);
 			}
 			float avg_n = static_cast<float>(n) / static_cast<float>(kmax);
 			std::cout << epsilon << ", ";
@@ -2302,14 +2348,14 @@ TYPED_TEST(AutoEncoderTest, momentum)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.Simple*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest.momentum*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*momentum*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationTest.csv*";
 	//::testing::GTEST_FLAG(filter)="*NormalizationGeneralTest*";
 	//::testing::GTEST_FLAG(filter)="*Sdgmm*";
