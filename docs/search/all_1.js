@@ -15,6 +15,6 @@ var searchData=
   ['autoencodertanh',['AutoEncoderTanh',['../AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6',1,'AutoEncoderTanh.cuh']]],
   ['autoencodertanh_2ecuh',['AutoEncoderTanh.cuh',['../AutoEncoderTanh_8cuh.html',1,'']]],
   ['autoencodertest',['AutoEncoderTest',['../classAutoEncoderTest.html',1,'']]],
-  ['autoencodertest_5fmomentum_5festimate',['AutoEncoderTest_momentum_estimate',['../unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b',1,'unittest.cu']]],
+  ['autoencodertest_5fmomentum_5festimate',['AutoEncoderTest_momentum_estimate',['../unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75',1,'unittest.cu']]],
   ['autoencodertesttypes',['AutoEncoderTestTypes',['../unittest_8cu.html#a45329dc2b9427e196f02a94972eaa721',1,'unittest.cu']]]
 ];

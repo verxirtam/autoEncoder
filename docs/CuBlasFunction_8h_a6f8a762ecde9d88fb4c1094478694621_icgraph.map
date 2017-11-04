@@ -1,12 +1,10 @@
 <map id="Sscal" name="Sscal">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8" title="Backpropagation::initRandom" alt="" coords="110,35,303,61"/>
-<area shape="rect" id="node3" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="119,85,294,112"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="171,136,243,163"/>
-<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="353,85,479,112"/>
-<area shape="rect" id="node5" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="528,35,651,61"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="561,85,617,112"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="553,136,625,163"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="742,5,850,32"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#ab5a50830799f8b7ced53ff22d63d348b" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="699,57,893,98"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c" title="TYPED_TEST" alt="" coords="942,64,1050,91"/>
+<area shape="rect" id="node2" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="110,85,285,112"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="161,136,233,163"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="334,85,461,112"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="509,35,632,61"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="543,85,599,112"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="535,136,607,163"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="723,5,831,32"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="680,57,875,98"/>
 </map>
