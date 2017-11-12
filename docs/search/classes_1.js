@@ -2,6 +2,7 @@ var searchData=
 [
   ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'']]],
   ['backpropagation_3c_20af_2c_20outputlayerregression_20_3e',['Backpropagation&lt; AF, OutputLayerRegression &gt;',['../classBackpropagation.html',1,'']]],
+  ['backpropagation_3c_20func1to1tanh_2c_20outputlayerregression_20_3e',['Backpropagation&lt; Func1to1Tanh, OutputLayerRegression &gt;',['../classBackpropagation.html',1,'']]],
   ['backpropagationexception',['BackpropagationException',['../classBackpropagationException.html',1,'']]],
   ['backpropagationtanhregalltest',['BackpropagationTanhRegAllTest',['../classBackpropagationTanhRegAllTest.html',1,'']]],
   ['backpropagationtanhregfunctiontest',['BackpropagationTanhRegFunctionTest',['../classBackpropagationTanhRegFunctionTest.html',1,'']]],

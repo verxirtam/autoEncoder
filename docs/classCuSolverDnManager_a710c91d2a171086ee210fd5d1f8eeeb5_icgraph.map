@@ -1,12 +1,10 @@
 <map id="CuSolverDnManager::getInstance" name="CuSolverDnManager::getInstance">
-<area shape="rect" id="node2" href="$classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="206,129,357,170"/>
-<area shape="rect" id="node3" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="405,111,488,137"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="419,161,475,188"/>
-<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="537,85,663,112"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="572,136,628,163"/>
-<area shape="rect" id="node5" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="712,35,835,61"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="745,85,801,112"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="737,136,809,163"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="926,5,1034,32"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="883,57,1077,98"/>
+<area shape="rect" id="node2" href="$classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="206,114,357,155"/>
+<area shape="rect" id="node3" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="405,96,488,123"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a94276c5fd15d9db4a003f972efe4a87a" title="TEST" alt="" coords="419,147,475,173"/>
+<area shape="rect" id="node4" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="537,71,663,97"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="572,121,628,148"/>
+<area shape="rect" id="node5" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="712,5,904,46"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="780,71,836,97"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="772,121,844,148"/>
 </map>

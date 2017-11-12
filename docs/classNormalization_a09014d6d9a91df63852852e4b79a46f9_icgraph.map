@@ -1,8 +1,6 @@
 <map id="Normalization::invSqrtByElement" name="Normalization::invSqrtByElement">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="222,85,349,112"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="397,35,520,61"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="431,85,487,112"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="423,136,495,163"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="611,5,719,32"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="568,57,763,98"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="222,71,349,97"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="397,5,589,46"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="465,71,521,97"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="457,121,529,148"/>
 </map>

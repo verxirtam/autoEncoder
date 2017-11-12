@@ -1,42 +1,41 @@
 <map id="CuBlasManager::getHandle" name="CuBlasManager::getHandle">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="263,31,407,57"/>
-<area shape="rect" id="node8" href="$classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8" title="Backpropagation::initRandom" alt="" coords="238,81,431,108"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#ac2fdd4b89632604858fa5b1290b88d8d" title="Backpropagation::forward" alt="" coords="249,132,420,159"/>
-<area shape="rect" id="node10" href="$classBackpropagation.html#acdfd87d6e8d2483dee4e3348128d0318" title="Backpropagation::back" alt="" coords="257,183,412,209"/>
-<area shape="rect" id="node11" href="$classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e" title="Backpropagation::updateParameter" alt="" coords="480,284,707,311"/>
-<area shape="rect" id="node15" href="$CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="305,233,364,260"/>
-<area shape="rect" id="node18" href="$CuBlasFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="303,385,366,412"/>
-<area shape="rect" id="node21" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="799,487,926,513"/>
-<area shape="rect" id="node24" href="$CuBlasFunction_8h.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="310,689,359,716"/>
-<area shape="rect" id="node26" href="$classNormalization.html#acaab4ed6319cca2ecd1f72e1c0305a5f" title="Normalization::getWhitening" alt="" coords="500,841,687,868"/>
-<area shape="rect" id="node29" href="$classNormalization.html#aef797a0b8f3cf97814dec5caca7dd04f" title="Normalization::getInverse\lWhitening" alt="" coords="508,595,679,637"/>
-<area shape="rect" id="node32" href="$CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125" title="Ssyr" alt="" coords="310,588,359,615"/>
-<area shape="rect" id="node33" href="$CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5" title="Ssyrk" alt="" coords="307,487,363,513"/>
-<area shape="rect" id="node34" href="$CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="301,791,368,817"/>
-<area shape="rect" id="node36" href="$CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5" title="Ssymm" alt="" coords="301,740,368,767"/>
-<area shape="rect" id="node37" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="303,335,366,361"/>
-<area shape="rect" id="node38" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="307,537,362,564"/>
-<area shape="rect" id="node40" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="301,892,368,919"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="1033,487,1156,513"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="557,5,629,32"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="565,56,621,83"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="1262,545,1370,572"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1219,479,1413,521"/>
-<area shape="rect" id="node12" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="1019,545,1170,572"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="827,335,899,361"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="835,208,891,235"/>
-<area shape="rect" id="node16" href="$classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e" title="Backpropagation::obtainDeltaLast" alt="" coords="484,233,703,260"/>
-<area shape="rect" id="node17" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="526,183,661,209"/>
-<area shape="rect" id="node19" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="527,385,659,412"/>
-<area shape="rect" id="node20" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="506,487,681,513"/>
-<area shape="rect" id="node22" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1067,644,1123,671"/>
-<area shape="rect" id="node23" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1059,695,1131,721"/>
-<area shape="rect" id="node25" href="$classBackpropagation.html#a2fd43a448f10fe77cb53b072528209d6" title="Backpropagation\&lt; AF,\l OutputLayerRegression\l \&gt;::obtainUFromZ" alt="" coords="512,660,675,716"/>
-<area shape="rect" id="node27" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="755,669,970,696"/>
-<area shape="rect" id="node28" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="756,720,969,747"/>
-<area shape="rect" id="node30" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="777,603,948,645"/>
-<area shape="rect" id="node31" href="$classNormalization.html#a4703e8547e233ce1bbc2e07a19a257dd" title="Normalization::getInverse\lZCAWhitening" alt="" coords="777,538,948,579"/>
-<area shape="rect" id="node35" href="$classBackpropagation.html#a3cf1ed29e3e03dbe1d5d7dcf3d24d337" title="Backpropagation::obtainDelta" alt="" coords="497,740,690,767"/>
-<area shape="rect" id="node39" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="557,537,629,564"/>
-<area shape="rect" id="node41" href="$unittest_8cu.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="565,892,621,919"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="263,81,407,108"/>
+<area shape="rect" id="node6" href="$classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8" title="Backpropagation::initRandom" alt="" coords="238,835,431,861"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#ac2fdd4b89632604858fa5b1290b88d8d" title="Backpropagation::forward" alt="" coords="249,885,420,912"/>
+<area shape="rect" id="node8" href="$classBackpropagation.html#acdfd87d6e8d2483dee4e3348128d0318" title="Backpropagation::back" alt="" coords="257,936,412,963"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e" title="Backpropagation::updateParameter" alt="" coords="480,259,707,285"/>
+<area shape="rect" id="node13" href="$CuBlasFunction_8h.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="305,208,364,235"/>
+<area shape="rect" id="node16" href="$CuBlasFunction_8h.html#acf599610485471a429e1f0a3aa6c77d4" title="Sgemv" alt="" coords="303,364,366,391"/>
+<area shape="rect" id="node19" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="799,651,926,677"/>
+<area shape="rect" id="node22" href="$CuBlasFunction_8h.html#a8e22f052e4de2d7762f26b3703c1590e" title="Sger" alt="" coords="310,581,359,608"/>
+<area shape="rect" id="node24" href="$classNormalization.html#acaab4ed6319cca2ecd1f72e1c0305a5f" title="Normalization::getWhitening" alt="" coords="500,759,687,785"/>
+<area shape="rect" id="node28" href="$classNormalization.html#aef797a0b8f3cf97814dec5caca7dd04f" title="Normalization::getInverse\lWhitening" alt="" coords="508,513,679,554"/>
+<area shape="rect" id="node31" href="$CuBlasFunction_8h.html#a7e08a31241335fa3628dcd9b486a5125" title="Ssyr" alt="" coords="310,987,359,1013"/>
+<area shape="rect" id="node32" href="$CuBlasFunction_8h.html#a2dfbd95424f457f126c37d516cd37fe5" title="Ssyrk" alt="" coords="307,480,363,507"/>
+<area shape="rect" id="node33" href="$CuBlasFunction_8h.html#a00cd0bdc5a5d9ae227fea48d86cf6a53" title="Sgemm" alt="" coords="301,632,368,659"/>
+<area shape="rect" id="node35" href="$CuBlasFunction_8h.html#a639e60ad1e9ba61cdaa7c93aaef0ace5" title="Ssymm" alt="" coords="301,1037,368,1064"/>
+<area shape="rect" id="node36" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="303,309,366,336"/>
+<area shape="rect" id="node37" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="307,429,362,456"/>
+<area shape="rect" id="node39" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="301,784,368,811"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="1019,274,1211,315"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="557,56,629,83"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="565,5,621,32"/>
+<area shape="rect" id="node10" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::learning" alt="" coords="1019,513,1211,554"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="827,309,899,336"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="835,208,891,235"/>
+<area shape="rect" id="node14" href="$classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e" title="Backpropagation::obtainDeltaLast" alt="" coords="484,157,703,184"/>
+<area shape="rect" id="node15" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="526,208,661,235"/>
+<area shape="rect" id="node17" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="527,360,659,387"/>
+<area shape="rect" id="node18" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="506,461,681,488"/>
+<area shape="rect" id="node20" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1087,687,1143,713"/>
+<area shape="rect" id="node21" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1079,737,1151,764"/>
+<area shape="rect" id="node23" href="$classBackpropagation.html#a2fd43a448f10fe77cb53b072528209d6" title="Backpropagation\&lt; AF,\l OutputLayerRegression\l \&gt;::obtainUFromZ" alt="" coords="512,577,675,633"/>
+<area shape="rect" id="node25" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="755,701,970,728"/>
+<area shape="rect" id="node27" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="756,752,969,779"/>
+<area shape="rect" id="node26" href="$classAutoEncoder.html#af90a5395cdc01fe2b60507b1999bfa9f" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::forward" alt="" coords="1019,606,1211,647"/>
+<area shape="rect" id="node29" href="$classNormalization.html#a2cca11da276d6d942a4edb2ec453076c" title="Normalization::getInverse\lPCAWhitening" alt="" coords="777,513,948,554"/>
+<area shape="rect" id="node30" href="$classNormalization.html#a4703e8547e233ce1bbc2e07a19a257dd" title="Normalization::getInverse\lZCAWhitening" alt="" coords="777,578,948,619"/>
+<area shape="rect" id="node34" href="$classBackpropagation.html#a3cf1ed29e3e03dbe1d5d7dcf3d24d337" title="Backpropagation::obtainDelta" alt="" coords="497,657,690,684"/>
+<area shape="rect" id="node38" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="557,411,629,437"/>
+<area shape="rect" id="node40" href="$unittest_8cu.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="565,860,621,887"/>
 </map>

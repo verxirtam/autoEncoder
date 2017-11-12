@@ -1,9 +1,8 @@
 <map id="Normalization::getWhitening" name="Normalization::getWhitening">
-<area shape="rect" id="node2" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="241,85,455,112"/>
-<area shape="rect" id="node8" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="241,136,455,163"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="505,35,655,61"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="552,136,608,163"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="544,85,616,112"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="747,5,855,32"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="704,57,899,98"/>
+<area shape="rect" id="node2" href="$classNormalization.html#add03b6927e6704e21061c13d53fffc4b" title="Normalization::getPCAWhitening" alt="" coords="241,111,455,137"/>
+<area shape="rect" id="node7" href="$classNormalization.html#a7e4a5447e5ef631d8d7959c3b72e6b34" title="Normalization::getZCAWhitening" alt="" coords="241,161,455,188"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#af90a5395cdc01fe2b60507b1999bfa9f" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::forward" alt="" coords="504,5,696,46"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::learning" alt="" coords="504,70,696,111"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="572,136,628,163"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="564,187,636,213"/>
 </map>

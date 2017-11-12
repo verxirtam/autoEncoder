@@ -1,5 +1,3 @@
 <map id="Backpropagation::setGamma" name="Backpropagation::setGamma">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#ab4897c068bf1b77d19787703fe28397d" title="AutoEncoder::setGamma" alt="" coords="246,35,415,61"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="507,5,615,32"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="464,57,659,98"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#ab4897c068bf1b77d19787703fe28397d" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::setGamma" alt="" coords="245,5,437,46"/>
 </map>

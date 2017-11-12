@@ -1,9 +1,7 @@
 <map id="DnSsyevd" name="DnSsyevd">
-<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,85,263,112"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,136,228,163"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="312,35,435,61"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="345,85,401,112"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="337,136,409,163"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="526,5,634,32"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="483,57,677,98"/>
+<area shape="rect" id="node2" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,71,263,97"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,121,228,148"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="312,5,504,46"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="380,71,436,97"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="372,121,444,148"/>
 </map>

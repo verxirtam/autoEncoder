@@ -1,3 +1,4 @@
 <map id="Backpropagation&lt; AF, OutputLayer &gt;" name="Backpropagation&lt; AF, OutputLayer &gt;">
-<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayerRegression \&gt;" alt="" coords="5,113,179,154"/>
+<area shape="rect" id="node2" href="$classBackpropagation.html" title="Backpropagation\&lt; Func1to1\lTanh, OutputLayerRegression \&gt;" alt="" coords="397,5,605,46"/>
+<area shape="rect" id="node3" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayerRegression \&gt;" alt="" coords="414,70,589,111"/>
 </map>

@@ -4,5 +4,6 @@ var searchData=
   ['a2',['A2',['../unittest_8cu.html#a02edb3f53f588c981af495d6f54e2f48',1,'unittest.cu']]],
   ['a3',['A3',['../unittest_8cu.html#ae818659936799bd5960c9158723aa388',1,'unittest.cu']]],
   ['autoencodertanh',['AutoEncoderTanh',['../AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6',1,'AutoEncoderTanh.cuh']]],
-  ['autoencodertesttypes',['AutoEncoderTestTypes',['../unittest_8cu.html#a45329dc2b9427e196f02a94972eaa721',1,'unittest.cu']]]
+  ['autoencodertesttypes',['AutoEncoderTestTypes',['../unittest_8cu.html#a45329dc2b9427e196f02a94972eaa721',1,'unittest.cu']]],
+  ['autoencodertype',['AutoEncoderType',['../classFXAutoEncoder.html#aa4e34d3a0608eddd2259277dde09c823',1,'FXAutoEncoder']]]
 ];

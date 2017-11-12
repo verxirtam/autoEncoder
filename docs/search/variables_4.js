@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['dbfilename',['dbFileName',['../classFXAutoEncoder.html#abb124cb832c374890f2f346ded6f3451',1,'FXAutoEncoder']]],
   ['delta',['delta',['../classBackpropagation.html#ac78588d8c49d9422a91c45289462730f',1,'Backpropagation']]],
   ['deltabias',['deltaBias',['../classBackpropagation.html#a8df1e171bee2710e7717a5d947e92852',1,'Backpropagation']]],
   ['deltaweight',['deltaWeight',['../classBackpropagation.html#ac6ebcab8e643b3d1f03e0a154c04b391',1,'Backpropagation']]],

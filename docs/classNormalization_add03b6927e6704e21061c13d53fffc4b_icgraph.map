@@ -1,7 +1,6 @@
 <map id="Normalization::getPCAWhitening" name="Normalization::getPCAWhitening">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="270,35,421,61"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="317,85,373,112"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="309,136,381,163"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="513,5,621,32"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="469,57,664,98"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#af90a5395cdc01fe2b60507b1999bfa9f" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::forward" alt="" coords="269,5,461,46"/>
+<area shape="rect" id="node3" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::learning" alt="" coords="269,70,461,111"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="337,136,393,163"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="329,187,401,213"/>
 </map>

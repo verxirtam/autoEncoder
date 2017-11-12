@@ -1,4 +1,4 @@
 <map id="Backpropagation::getEpsilon" name="Backpropagation::getEpsilon">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#a957cc37aae0e60bdb2511254ef71ac05" title="AutoEncoder::getEpsilon" alt="" coords="243,5,410,32"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="299,56,355,83"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#a957cc37aae0e60bdb2511254ef71ac05" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::getEpsilon" alt="" coords="243,5,435,46"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="311,71,367,97"/>
 </map>

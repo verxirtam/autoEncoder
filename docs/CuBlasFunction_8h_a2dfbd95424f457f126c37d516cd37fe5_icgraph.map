@@ -1,9 +1,7 @@
 <map id="Ssyrk" name="Ssyrk">
-<area shape="rect" id="node2" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="110,85,285,112"/>
-<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="334,85,461,112"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="509,35,632,61"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="543,85,599,112"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="535,136,607,163"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="723,5,831,32"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="680,57,875,98"/>
+<area shape="rect" id="node2" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="110,71,285,97"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="334,71,461,97"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="509,5,701,46"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="577,71,633,97"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="569,121,641,148"/>
 </map>

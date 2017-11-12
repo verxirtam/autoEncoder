@@ -1,4 +1,6 @@
 <map id="Backpropagation::getBias" name="Backpropagation::getBias">
-<area shape="rect" id="node2" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="251,5,307,32"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="225,56,333,83"/>
+<area shape="rect" id="node2" href="$BackpropagationUtils_8cuh.html#a9fd92090695efcb040292de59dab1f2e" title="writeToDotFile" alt="" coords="225,5,332,32"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="251,56,307,83"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="225,107,333,133"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="381,5,437,32"/>
 </map>

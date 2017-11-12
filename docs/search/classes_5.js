@@ -7,5 +7,7 @@ var searchData=
   ['func1to1tanh',['Func1to1Tanh',['../classFunc1to1Tanh.html',1,'']]],
   ['func2to1composite1st',['Func2to1Composite1st',['../classFunc2to1Composite1st.html',1,'']]],
   ['func2to1composite2nd',['Func2to1Composite2nd',['../classFunc2to1Composite2nd.html',1,'']]],
-  ['func2to1elementwiseproduct',['Func2to1ElementWiseProduct',['../classFunc2to1ElementWiseProduct.html',1,'']]]
+  ['func2to1elementwiseproduct',['Func2to1ElementWiseProduct',['../classFunc2to1ElementWiseProduct.html',1,'']]],
+  ['fxautoencoder',['FXAutoEncoder',['../classFXAutoEncoder.html',1,'']]],
+  ['fxautoencodertest',['FXAutoEncoderTest',['../classFXAutoEncoderTest.html',1,'']]]
 ];

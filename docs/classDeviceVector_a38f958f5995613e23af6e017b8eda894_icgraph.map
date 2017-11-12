@@ -3,14 +3,12 @@
 <area shape="rect" id="node4" href="$classDeviceVector.html#a074da01d2c5080cf58fe55f334c1eb3a" title="DeviceVector::get0Vector" alt="" coords="254,75,426,101"/>
 <area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="254,151,426,177"/>
 <area shape="rect" id="node3" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="535,5,591,32"/>
-<area shape="rect" id="node6" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="875,208,997,235"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="491,233,635,260"/>
-<area shape="rect" id="node12" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="475,107,650,133"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="908,69,964,96"/>
-<area shape="rect" id="node15" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="900,145,972,172"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="1089,179,1197,205"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="1045,230,1240,271"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="727,259,799,285"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="735,309,791,336"/>
-<area shape="rect" id="node13" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="699,107,826,133"/>
+<area shape="rect" id="node6" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="875,201,1067,242"/>
+<area shape="rect" id="node7" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="491,233,635,260"/>
+<area shape="rect" id="node10" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="475,107,650,133"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="943,67,999,93"/>
+<area shape="rect" id="node13" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="935,128,1007,155"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="727,259,799,285"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="735,309,791,336"/>
+<area shape="rect" id="node11" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="699,107,826,133"/>
 </map>

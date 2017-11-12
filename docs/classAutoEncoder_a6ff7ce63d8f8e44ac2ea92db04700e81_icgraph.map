@@ -1,3 +1,5 @@
 <map id="AutoEncoder::getBackpropagation" name="AutoEncoder::getBackpropagation">
-<area shape="rect" id="node2" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="275,5,383,32"/>
+<area shape="rect" id="node2" href="$classFXAutoEncoder.html#ab330056668734d83aea2275b216232fd" title="FXAutoEncoder::learning" alt="" coords="275,5,442,32"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="491,31,547,57"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="305,107,413,133"/>
 </map>

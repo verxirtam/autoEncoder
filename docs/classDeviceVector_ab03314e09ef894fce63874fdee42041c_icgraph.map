@@ -1,15 +1,14 @@
 <map id="DeviceVector::get" name="DeviceVector::get">
-<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="207,113,289,140"/>
-<area shape="rect" id="node10" href="$DeviceVectorUtils_8h.html#a1dfadae54280ea671dfd463323a8b468" title="writeToCsvFile" alt="" coords="193,164,303,191"/>
-<area shape="rect" id="node12" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="182,215,314,241"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="220,265,276,292"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="212,316,284,343"/>
-<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="363,63,490,89"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="399,113,455,140"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="539,12,661,39"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="572,63,628,89"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="564,113,636,140"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="753,117,861,144"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="709,5,904,46"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="399,215,455,241"/>
+<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423" title="DnSsyevd" alt="" coords="207,121,289,148"/>
+<area shape="rect" id="node8" href="$DeviceVectorUtils_8h.html#a1dfadae54280ea671dfd463323a8b468" title="writeToCsvFile" alt="" coords="193,172,303,199"/>
+<area shape="rect" id="node11" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="182,223,314,249"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="220,273,276,300"/>
+<area shape="rect" id="node13" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="212,324,284,351"/>
+<area shape="rect" id="node3" href="$classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="363,71,490,97"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="399,121,455,148"/>
+<area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="539,5,731,46"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="607,71,663,97"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="599,121,671,148"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="399,172,455,199"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="373,223,481,249"/>
 </map>

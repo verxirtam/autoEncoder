@@ -1,4 +1,3 @@
 <map id="Normalization::getInversePCAWhiteningMatrix" name="Normalization::getInversePCAWhiteningMatrix">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#ac3caf20e49ccae6bde816ef476ce52cc" title="AutoEncoder::getInverseWhitening\lMatrix" alt="" coords="224,5,448,46"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="497,12,605,39"/>
+<area shape="rect" id="node2" href="$classAutoEncoder.html#ac3caf20e49ccae6bde816ef476ce52cc" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::getInverseWhiteningMatrix" alt="" coords="224,5,421,46"/>
 </map>
