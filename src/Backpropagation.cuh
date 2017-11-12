@@ -274,6 +274,10 @@ public:
 	{
 		return CudaManager::getInstance().getStream(stream_index + 1);
 	}
+	unsigned int getMiniBatchSize() const
+	{
+		return miniBatchSize;
+	}
 };
 
 #include "Backpropagation_detail.h"

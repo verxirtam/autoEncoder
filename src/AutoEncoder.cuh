@@ -52,6 +52,16 @@ public:
 		_1B = DeviceVector::get1Vector(minibatch_size);
 	}
 	//X : ミニバッチ
+	DeviceMatrix forward(const DeviceMatrix& X)
+	{
+		//正規化されたミニバッチ
+		DeviceMatrix nX = normalization.getPCAWhitening(X, _1B);
+		
+		DeviceMatrix nY;
+		backpropagation.forward(nX, nY);
+		
+		return normalization.getInversePCAWhitening(nY, _1B);
+	}
 	DeviceMatrix learning(const DeviceMatrix& X)
 	{
 		//正規化されたミニバッチ

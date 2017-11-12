@@ -48,6 +48,10 @@
 
 #include "DeviceVectorUtils.h"
 
+#include "FXAutoEncoder.cuh"
+
+#include "BackpropagationUtils.cuh"
+
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
 	std::cout << vname << " = {";
@@ -2343,15 +2347,44 @@ TYPED_TEST(AutoEncoderTest, momentum)
 	}
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class FXAutoEncoderTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+//ミニバッチに対応したBackpropagationTanhRegのテスト
+TEST(FXAutoEncoderTest, Simple)
+{
+	FXAutoEncoder f;
+	f.init("/home/daisuke/programs/analyzeExchange/db/test.db", 10, 5, 100);
+	printVector(f.getAutoEncoder().getWhiteningMatrix().get(), "f.getAutoEncoder().getWhiteningMatrix()");
+	f.learning();
+	for(auto&& w : f.getAutoEncoder().getBackpropagation().getWeight())
+	{
+		printVector(w.get(), "weight");
+	}
+	for(auto&& b : f.getAutoEncoder().getBackpropagation().getBias())
+	{
+		printVector(b.get(), "bias");
+	}
+	writeToDotFile("../data/FXAutoEncoderTest.dot", f.getAutoEncoder().getBackpropagation());
+}
+
+
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
+	::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";

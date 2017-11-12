@@ -8,6 +8,7 @@ ActivateFunction	ActivateFunction.cuh	/^class ActivateFunction$/;"	c	file:
 AutoEncoder	AutoEncoder.cuh	/^	AutoEncoder():$/;"	f	class:AutoEncoder
 AutoEncoder	AutoEncoder.cuh	/^class AutoEncoder$/;"	c	file:
 AutoEncoderTanh	AutoEncoderTanh.cuh	/^using AutoEncoderTanh = AutoEncoder<Func1to1Tanh>;$/;"	u
+AutoEncoderType	FXAutoEncoder.cuh	/^	using AutoEncoderType = AutoEncoder<Func1to1Tanh>;$/;"	u
 Backpropagation	Backpropagation.cuh	/^	Backpropagation(unsigned int layer_count):$/;"	f	class:Backpropagation
 Backpropagation	Backpropagation.cuh	/^class Backpropagation$/;"	c	file:
 BackpropagationException	BackpropagationException.h	/^	BackpropagationException(const char* what_arg):$/;"	f	class:BackpropagationException
@@ -59,6 +60,8 @@ DeviceVector	DeviceVector.h	/^class DeviceVector$/;"	c
 DnSsyevd	CuSolverDnFunction.cpp	/^void DnSsyevd$/;"	f
 ElementWiseFunction1to1	ElementWiseFunction1to1.cuh	/^class ElementWiseFunction1to1$/;"	c	file:
 ElementWiseFunction2to1	ElementWiseFunction2to1.cuh	/^class ElementWiseFunction2to1$/;"	c	file:
+FXAutoEncoder	FXAutoEncoder.cuh	/^	FXAutoEncoder():$/;"	f	class:FXAutoEncoder
+FXAutoEncoder	FXAutoEncoder.cuh	/^class FXAutoEncoder$/;"	c	file:
 Func	Backpropagation_detail.h	/^	using Func = Func2to1Composite1st<Func2to1ElementWiseProduct, Func1to1ApplyDiff<AF> >;$/;"	u
 Func1to1ApplyDiff	ElementWiseFunctionUtil.cuh	/^class Func1to1ApplyDiff$/;"	c	file:
 Func1to1Exp	Func1to1Exp.cuh	/^class Func1to1Exp$/;"	c	file:
@@ -131,6 +134,7 @@ bias	Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backprop
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
 culculateBlockThreadCount	ElementWiseFunction1to1.cuh	/^void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction1to1
 culculateBlockThreadCount	ElementWiseFunction2to1.cuh	/^void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction2to1
+dbFileName	FXAutoEncoder.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoder	file:
 delta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:Backpropagation	file:
 deltaBias	Backpropagation.cuh	/^	std::vector<DeviceVector> deltaBias;$/;"	m	class:Backpropagation	file:
 deltaWeight	Backpropagation.cuh	/^	std::vector<DeviceMatrix> deltaWeight;$/;"	m	class:Backpropagation	file:
@@ -157,6 +161,7 @@ getAddress	DeviceMatrix.h	/^	float* getAddress() const$/;"	f	class:DeviceMatrix
 getAddress	DeviceVector.h	/^	float* getAddress() const$/;"	f	class:DeviceVector
 getAlphaMatrix	DeviceMatrix.h	/^	static DeviceMatrix getAlphaMatrix(unsigned int row, unsigned int column, float alpha)$/;"	f	class:DeviceMatrix
 getAlphaVector	DeviceVector.h	/^	static DeviceVector getAlphaVector(unsigned int dimension, float alpha)$/;"	f	class:DeviceVector
+getAutoEncoder	FXAutoEncoder.cuh	/^	const AutoEncoderType& getAutoEncoder()$/;"	f	class:FXAutoEncoder
 getBackpropagation	AutoEncoder.cuh	/^	const Backpropagation<AF, OutputLayerRegression>& getBackpropagation() const$/;"	f	class:AutoEncoder
 getBias	Backpropagation.cuh	/^	const std::vector<DeviceVector>& getBias() const$/;"	f	class:Backpropagation
 getBiasAsVector	Backpropagation.cuh	/^	std::vector<std::vector<float> > getBiasAsVector() const$/;"	f	class:Backpropagation
@@ -190,6 +195,7 @@ getMainStream	Backpropagation.cuh	/^	cudaStream_t getMainStream(void) const$/;"	
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f
+getMiniBatchSize	Backpropagation.cuh	/^	unsigned int getMiniBatchSize() const$/;"	f	class:Backpropagation
 getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
@@ -262,6 +268,7 @@ testCUBLASClass	learningTrackData.cpp	/^int testCUBLASClass()$/;"	f
 testDBAccessor	learningTrackData.cpp	/^int testDBAccessor(void)$/;"	f
 testDeviceVector	learningTrackData.cpp	/^int testDeviceVector(void)$/;"	f
 time	TrackData.h	/^	float time;$/;"	m	class:TrackData
+timeLength	FXAutoEncoder.cuh	/^	unsigned int timeLength;$/;"	m	class:FXAutoEncoder	file:
 track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
 u	Backpropagation.cuh	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation	file:
 unitCount	Backpropagation.cuh	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation	file:
