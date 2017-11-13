@@ -139,3 +139,71 @@ void Sdgmm
 		const DeviceMatrix& A,
 		DeviceMatrix& C
 	);
+
+
+//d = x * y (*: inner product)
+void Sdot
+	(
+		const DeviceVector& x,
+		const DeviceVector& y,
+		float& result
+	);
+
+//d = X * Y (*: elementwise inner product)
+void Sdot
+	(
+		const DeviceMatrix& X,
+		const DeviceMatrix& Y,
+		float& result
+	);
+
+
+//d = argmax_i |x_i|
+void Samax
+	(
+		const DeviceVector& x,
+		int& result
+	);
+
+//d = argmax_i |x_i|
+void Samax
+	(
+		const DeviceMatrix& X,
+		int& result
+	);
+
+
+
+//d = argmin_i |x_i|
+void Samin
+	(
+		const DeviceVector& x,
+		int& result
+	);
+
+//d = argmax_i |x_i|
+void Samin
+	(
+		const DeviceMatrix& X,
+		int& result
+	);
+
+
+
+
+//d = sum_i |x_i|
+void Sasum
+	(
+		const DeviceVector& x,
+		float& result
+	);
+
+//d = sum_i |x_i|
+void Sasum
+	(
+		const DeviceMatrix& X,
+		float& result
+	);
+
+
+

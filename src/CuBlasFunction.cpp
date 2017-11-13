@@ -345,3 +345,186 @@ void Sdgmm
 }
 
 
+
+//d = x * y (*: inner product)
+void Sdot
+	(
+		const DeviceVector& x,
+		const DeviceVector& y,
+		float& result
+	)
+{
+	int N = x.getDimension();
+	
+	CUBLAS_CALL
+		(
+			cublasSdot
+				(
+					CuBlasManager::getHandle(),
+					N,
+					x.getAddress(), 1,
+					y.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+//d = X * Y (*: elementwise inner product)
+void Sdot
+	(
+		const DeviceMatrix& X,
+		const DeviceMatrix& Y,
+		float& result
+	)
+{
+	int N = X.getRowCount() * X.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasSdot
+				(
+					CuBlasManager::getHandle(),
+					N,
+					X.getAddress(), 1,
+					Y.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+
+
+
+//d = argmax_i |x_i|
+void Samax
+	(
+		const DeviceVector& x,
+		int& result
+	)
+{
+	int N = x.getDimension();
+	
+	CUBLAS_CALL
+		(
+			cublasIsamax
+				(
+					CuBlasManager::getHandle(),
+					N,
+					x.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+//d = argmax_i |x_i|
+void Samax
+	(
+		const DeviceMatrix& X,
+		int& result
+	)
+{
+	int N = X.getRowCount() * X.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasIsamax
+				(
+					CuBlasManager::getHandle(),
+					N,
+					X.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+
+
+
+//d = argmin_i |x_i|
+void Samin
+	(
+		const DeviceVector& x,
+		int& result
+	)
+{
+	int N = x.getDimension();
+	
+	CUBLAS_CALL
+		(
+			cublasIsamin
+				(
+					CuBlasManager::getHandle(),
+					N,
+					x.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+//d = argmax_i |x_i|
+void Samin
+	(
+		const DeviceMatrix& X,
+		int& result
+	)
+{
+	int N = X.getRowCount() * X.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasIsamin
+				(
+					CuBlasManager::getHandle(),
+					N,
+					X.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+
+
+
+//d = sum_i |x_i|
+void Sasum
+	(
+		const DeviceVector& x,
+		float& result
+	)
+{
+	int N = x.getDimension();
+	
+	CUBLAS_CALL
+		(
+			cublasSasum
+				(
+					CuBlasManager::getHandle(),
+					N,
+					x.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+//d = sum_i |x_i|
+void Sasum
+	(
+		const DeviceMatrix& X,
+		float& result
+	)
+{
+	int N = X.getRowCount() * X.getColumnCount();
+	
+	CUBLAS_CALL
+		(
+			cublasSasum
+				(
+					CuBlasManager::getHandle(),
+					N,
+					X.getAddress(), 1,
+					&result
+				)
+		);
+}
+
+
