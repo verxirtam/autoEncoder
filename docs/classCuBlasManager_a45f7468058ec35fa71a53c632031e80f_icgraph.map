@@ -1,5 +1,5 @@
 <map id="CuBlasManager::getInstance" name="CuBlasManager::getInstance">
-<area shape="rect" id="node2" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="246,607,429,633"/>
+<area shape="rect" id="node2" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="246,708,429,735"/>
 <area shape="rect" id="node3" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="503,81,647,108"/>
 <area shape="rect" id="node7" href="$classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8" title="Backpropagation::initRandom" alt="" coords="478,835,671,861"/>
 <area shape="rect" id="node8" href="$classBackpropagation.html#ac2fdd4b89632604858fa5b1290b88d8d" title="Backpropagation::forward" alt="" coords="489,885,660,912"/>
@@ -18,6 +18,10 @@
 <area shape="rect" id="node37" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="543,309,606,336"/>
 <area shape="rect" id="node38" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="547,429,602,456"/>
 <area shape="rect" id="node40" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="541,784,608,811"/>
+<area shape="rect" id="node42" href="$CuBlasFunction_8h.html#aae3fdde704f3cd77356830dd76bd45f7" title="Sdot" alt="" coords="550,1088,599,1115"/>
+<area shape="rect" id="node43" href="$CuBlasFunction_8h.html#a31d46fc89b382f289ebbca34e5f09157" title="Samax" alt="" coords="543,1139,606,1165"/>
+<area shape="rect" id="node44" href="$CuBlasFunction_8h.html#a42d4efb5b36224038d441552f6803218" title="Samin" alt="" coords="545,1189,604,1216"/>
+<area shape="rect" id="node45" href="$CuBlasFunction_8h.html#a6085186fe568789016653ea5c912c3a1" title="Sasum" alt="" coords="543,1240,606,1267"/>
 <area shape="rect" id="node4" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="1259,274,1451,315"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="797,56,869,83"/>
 <area shape="rect" id="node6" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="805,5,861,32"/>

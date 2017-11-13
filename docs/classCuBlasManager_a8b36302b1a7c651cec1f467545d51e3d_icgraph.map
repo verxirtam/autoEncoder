@@ -17,6 +17,10 @@
 <area shape="rect" id="node36" href="$CuBlasFunction_8h.html#ad909d96eb7965d764b725171132dbd64" title="Sgeam" alt="" coords="303,309,366,336"/>
 <area shape="rect" id="node37" href="$CuBlasFunction_8h.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="307,429,362,456"/>
 <area shape="rect" id="node39" href="$CuBlasFunction_8h.html#a0116e643f587b46bb43f9a4191689aa5" title="Sdgmm" alt="" coords="301,784,368,811"/>
+<area shape="rect" id="node41" href="$CuBlasFunction_8h.html#aae3fdde704f3cd77356830dd76bd45f7" title="Sdot" alt="" coords="310,1088,359,1115"/>
+<area shape="rect" id="node42" href="$CuBlasFunction_8h.html#a31d46fc89b382f289ebbca34e5f09157" title="Samax" alt="" coords="303,1139,366,1165"/>
+<area shape="rect" id="node43" href="$CuBlasFunction_8h.html#a42d4efb5b36224038d441552f6803218" title="Samin" alt="" coords="305,1189,364,1216"/>
+<area shape="rect" id="node44" href="$CuBlasFunction_8h.html#a6085186fe568789016653ea5c912c3a1" title="Sasum" alt="" coords="303,1240,366,1267"/>
 <area shape="rect" id="node3" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="1019,274,1211,315"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="557,56,629,83"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="565,5,621,32"/>
