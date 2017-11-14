@@ -461,7 +461,7 @@ void Samin
 		);
 }
 
-//d = argmax_i |x_i|
+//d = argmin_i |x_i|
 void Samin
 	(
 		const DeviceMatrix& X,
