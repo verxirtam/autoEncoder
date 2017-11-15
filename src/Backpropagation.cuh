@@ -278,6 +278,10 @@ public:
 	{
 		return miniBatchSize;
 	}
+	unsigned int getLayerCount() const
+	{
+		return layerCount;
+	}
 };
 
 #include "Backpropagation_detail.h"

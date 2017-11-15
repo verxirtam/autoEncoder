@@ -341,4 +341,5 @@ unittest.o : unittest.cu \
     FXAutoEncoder.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/sqlite3.h \
-    BackpropagationUtils.cuh
+    BackpropagationUtils.cuh \
+    BackpropagationUtils_detail.cuh

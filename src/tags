@@ -70,7 +70,9 @@ Func1to1ReLU	Func1to1ReLU.cuh	/^class Func1to1ReLU$/;"	c	file:
 Func1to1Tanh	Func1to1Tanh.cuh	/^class Func1to1Tanh$/;"	c	file:
 Func2to1Composite1st	ElementWiseFunctionUtil.cuh	/^class Func2to1Composite1st$/;"	c	file:
 Func2to1Composite2nd	ElementWiseFunctionUtil.cuh	/^class Func2to1Composite2nd$/;"	c	file:
+Func2to1ElementWiseDifference	Func2to1ElementWiseDifference.cuh	/^class Func2to1ElementWiseDifference$/;"	c	file:
 Func2to1ElementWiseProduct	Func2to1ElementWiseProduct.cuh	/^class Func2to1ElementWiseProduct$/;"	c	file:
+Func2to1ElementWiseSum	Func2to1ElementWiseSum.cuh	/^class Func2to1ElementWiseSum$/;"	c	file:
 GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py -s$/;"	m
 HOME	makefile	/^HOME := $(shell echo ~)$/;"	m
 MAKETEST_EXIST	makefile	/^MAKETEST_EXIST = glunittest$/;"	m
@@ -89,8 +91,12 @@ OBJSTEST	makefile	/^OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OB
 OutputLayerMulticlassClassification	OutputLayerMulticlassClassification.cuh	/^class OutputLayerMulticlassClassification$/;"	c	file:
 OutputLayerRegression	OutputLayerRegression.cuh	/^class OutputLayerRegression$/;"	c	file:
 SRCS	makefile	/^SRCS := $(shell ls *.cpp)$/;"	m
+Samax	CuBlasFunction.cpp	/^void Samax$/;"	f
+Samin	CuBlasFunction.cpp	/^void Samin$/;"	f
+Sasum	CuBlasFunction.cpp	/^void Sasum$/;"	f
 Saxpy	CuBlasFunction.cpp	/^void Saxpy$/;"	f
 Sdgmm	CuBlasFunction.cpp	/^void Sdgmm$/;"	f
+Sdot	CuBlasFunction.cpp	/^void Sdot$/;"	f
 Sgeam	CuBlasFunction.cpp	/^void Sgeam$/;"	f
 Sgemm	CuBlasFunction.cpp	/^void Sgemm$/;"	f
 Sgemv	CuBlasFunction.cpp	/^void Sgemv$/;"	f
@@ -120,7 +126,9 @@ apply	Func1to1Exp.cuh	/^	static float apply(float x)$/;"	f	class:Func1to1Exp
 apply	Func1to1Logistic.cuh	/^	static float apply(float x)$/;"	f	class:Func1to1Logistic
 apply	Func1to1ReLU.cuh	/^	static float apply(float x)$/;"	f	class:Func1to1ReLU
 apply	Func1to1Tanh.cuh	/^	static float apply(float x)$/;"	f	class:Func1to1Tanh
+apply	Func2to1ElementWiseDifference.cuh	/^	static float apply(float x, float y)$/;"	f	class:Func2to1ElementWiseDifference
 apply	Func2to1ElementWiseProduct.cuh	/^	static float apply(float x, float y)$/;"	f	class:Func2to1ElementWiseProduct
+apply	Func2to1ElementWiseSum.cuh	/^	static float apply(float x, float y)$/;"	f	class:Func2to1ElementWiseSum
 applyDiff	Func1to1Exp.cuh	/^	static float applyDiff(float x)$/;"	f	class:Func1to1Exp
 applyDiff	Func1to1Logistic.cuh	/^	static float applyDiff(float x)$/;"	f	class:Func1to1Logistic
 applyDiff	Func1to1ReLU.cuh	/^	static float applyDiff(float x)$/;"	f	class:Func1to1ReLU
@@ -143,6 +151,7 @@ device	DeviceVector.h	/^	float* device;$/;"	m	class:DeviceVector
 deviceProp	CudaManager.h	/^	cudaDeviceProp deviceProp;$/;"	m	class:CudaManager
 dimension	DeviceVector.h	/^	unsigned int dimension;$/;"	m	class:DeviceVector
 epsilon	Backpropagation.cuh	/^	float epsilon;$/;"	m	class:Backpropagation	file:
+forward	AutoEncoder.cuh	/^	DeviceMatrix forward(const DeviceMatrix& X)$/;"	f	class:AutoEncoder
 forward	Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::forward(const DeviceMatrix& X, DeviceMatrix& Y)$/;"	f	class:Backpropagation
 forward	Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:Backpropagation
 gamma	Backpropagation.cuh	/^	float gamma;$/;"	m	class:Backpropagation	file:
@@ -191,6 +200,7 @@ getInverseWhitening	Normalization.cpp	/^DeviceMatrix Normalization::getInverseWh
 getInverseWhiteningMatrix	AutoEncoder.cuh	/^	DeviceMatrix getInverseWhiteningMatrix() const$/;"	f	class:AutoEncoder
 getInverseZCAWhitening	Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getInverseZCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:Normalization
+getLayerCount	Backpropagation.cuh	/^	unsigned int getLayerCount() const$/;"	f	class:Backpropagation
 getMainStream	Backpropagation.cuh	/^	cudaStream_t getMainStream(void) const$/;"	f	class:Backpropagation
 getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:Normalization
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
@@ -198,6 +208,7 @@ getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const Device
 getMiniBatchSize	Backpropagation.cuh	/^	unsigned int getMiniBatchSize() const$/;"	f	class:Backpropagation
 getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
+getParameterVector	BackpropagationUtils_detail.cuh	/^std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& backpropagation)$/;"	f
 getRowCount	DeviceMatrix.h	/^	int getRowCount() const$/;"	f	class:DeviceMatrix
 getStream	CudaManager.h	/^	cudaStream_t getStream(unsigned int stream_index)$/;"	f	class:CudaManager
 getStreamCount	CudaManager.h	/^	unsigned int getStreamCount()$/;"	f	class:CudaManager
@@ -277,8 +288,14 @@ varCovEigenValue	Normalization.h	/^	DeviceVector varCovEigenValue;$/;"	m	class:N
 varCovEigenVector	Normalization.h	/^	DeviceMatrix varCovEigenVector;$/;"	m	class:Normalization
 varCovMatrix	Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:Normalization
 weight	Backpropagation.cuh	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:Backpropagation	file:
+writeBiasSetting	BackpropagationUtils_detail.cuh	/^	void writeBiasSetting(std::ostream& out, unsigned int layer_index, const std::string& node_name)$/;"	f	namespace:__anon3
+writeEdgeSettings	BackpropagationUtils_detail.cuh	/^	void writeEdgeSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight, const std::vector<DeviceVector>& bias)$/;"	f	namespace:__anon3
+writeNodeSettings	BackpropagationUtils_detail.cuh	/^	void writeNodeSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight)$/;"	f	namespace:__anon3
+writeRankSettings	BackpropagationUtils_detail.cuh	/^	void writeRankSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight)$/;"	f	namespace:__anon3
+writeSingleNodeSetting	BackpropagationUtils_detail.cuh	/^	void writeSingleNodeSetting(std::ostream& out, unsigned int layer_index, unsigned int dimension, const std::string& node_name)$/;"	f	namespace:__anon3
 writeToCsvFile	DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMatrix)$/;"	f
 writeToCsvFile	DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVector)$/;"	f
+writeToDotFile	BackpropagationUtils_detail.cuh	/^void writeToDotFile(const std::string& dotfilename, const Backpropagation<AF, OutputLayer>& backpropagation)$/;"	f
 z	Backpropagation.cuh	/^	std::vector<DeviceMatrix> z;$/;"	m	class:Backpropagation	file:
 zcaWhiteningMatrix	Normalization.h	/^	DeviceMatrix zcaWhiteningMatrix;$/;"	m	class:Normalization
 ~CuBlasManager	CuBlasManager.h	/^	virtual ~CuBlasManager()$/;"	f	class:CuBlasManager

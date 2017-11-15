@@ -56,6 +56,9 @@ void FXAutoEncoder::init
 void FXAutoEncoder::learning()
 {
 	
+	//TODO autoEncoder.learning()を1回ずつ実行できるように変更すること
+	throw 1;
+	
 	DBAccessor db(dbFileName);
 	db.setQuery("select strftime('%s', datetime) as epoch, opening from USDJPY_M1 order by epoch;");
 	
