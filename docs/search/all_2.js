@@ -19,5 +19,6 @@ var searchData=
   ['backpropagationtanhregtest',['BackpropagationTanhRegTest',['../classBackpropagationTanhRegTest.html',1,'']]],
   ['backpropagationtanhregtest_5fall_5fshowinfo',['BackpropagationTanhRegTest_All_showInfo',['../unittest_8cu.html#a8b7605445954ad74414ae57177d1f540',1,'unittest.cu']]],
   ['backpropagationutils_2ecuh',['BackpropagationUtils.cuh',['../BackpropagationUtils_8cuh.html',1,'']]],
+  ['backpropagationutils_5fdetail_2ecuh',['BackpropagationUtils_detail.cuh',['../BackpropagationUtils__detail_8cuh.html',1,'']]],
   ['bias',['bias',['../classBackpropagation.html#ac95b30c8050710639540949a6b4ff06c',1,'Backpropagation']]]
 ];

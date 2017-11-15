@@ -1,6 +1,7 @@
 <map id="Backpropagation::getWeight" name="Backpropagation::getWeight">
-<area shape="rect" id="node2" href="$BackpropagationUtils_8cuh.html#a9fd92090695efcb040292de59dab1f2e" title="writeToDotFile" alt="" coords="241,5,348,32"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="267,56,323,83"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="241,107,349,133"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="397,5,453,32"/>
+<area shape="rect" id="node2" href="$BackpropagationUtils__detail_8cuh.html#a9fd92090695efcb040292de59dab1f2e" title="writeToDotFile" alt="" coords="256,5,363,32"/>
+<area shape="rect" id="node4" href="$BackpropagationUtils__detail_8cuh.html#ace4ac2d7dd5cd57a4d8f8b212031df71" title="getParameterVector" alt="" coords="240,56,379,83"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="281,107,337,133"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="255,157,363,184"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="427,5,483,32"/>
 </map>
