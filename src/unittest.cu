@@ -2360,9 +2360,36 @@ protected:
 TEST(FXAutoEncoderTest, Simple)
 {
 	FXAutoEncoder f;
-	f.init("/home/daisuke/programs/analyzeExchange/db/test.db", 10, 5, 100);
+	unsigned int time_length    =  10;
+	unsigned int layer_size     =   5;
+	unsigned int minibatch_size =  20;
+	f.init("/home/daisuke/programs/analyzeExchange/db/test.db", time_length, layer_size, minibatch_size);
 	printVector(f.getAutoEncoder().getWhiteningMatrix().get(), "f.getAutoEncoder().getWhiteningMatrix()");
-	f.learning();
+	
+	std::vector<float> transition_parameter_vector;
+	unsigned int parameter_vector_length = 0;
+	unsigned int learning_count = 1000;
+
+	for(unsigned int n = 0; n < learning_count; n++)
+	{
+		if(f.learning() == false)
+		{
+			break;
+		}
+		auto b = f.getAutoEncoder().getBackpropagation();
+		auto v = getParameterVector(b);
+		parameter_vector_length = v.size();
+		transition_parameter_vector.insert(transition_parameter_vector.end(), v.begin(), v.end());
+		
+	}
+	DeviceMatrix transition_parameter(parameter_vector_length, learning_count, transition_parameter_vector);
+	writeToCsvFile("../data/FXAutoEncoderTest_parameter.csv", transition_parameter);
+	Normalization norm;
+	auto _1L = DeviceVector::get1Vector(learning_count);
+	norm.init(transition_parameter);
+	auto transition_parameter_norm = norm.getPCAWhitening(transition_parameter, _1L);
+	writeToCsvFile("../data/FXAutoEncoderTest_parameter_norm.csv", transition_parameter_norm);
+	
 	for(auto&& w : f.getAutoEncoder().getBackpropagation().getWeight())
 	{
 		printVector(w.get(), "weight");

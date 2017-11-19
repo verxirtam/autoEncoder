@@ -14,15 +14,23 @@ private:
 	AutoEncoderType autoEncoder;
 	//DBファイルのパス
 	std::string dbFileName;
+	//DBアクセサ(学習用)
+	DBAccessor dbAccessorLearning;
 	//1データの長さ(過去何分のデータを使用するか)
 	unsigned int timeLength;
+	//学習用のクエリのキャッシュ
+	std::vector<float> learningQueryCache;
 	//正規化用の情報を取得する
 	void getNormarizeInput(DeviceMatrix& normarize_input);
+	//学習用のクエリから指定したレコード数分情報取得する
+	bool selectRecord(unsigned int record_count, std::vector<float>& output);
 public:
 	FXAutoEncoder():
 		autoEncoder(),
 		dbFileName(""),
-		timeLength(10)
+		dbAccessorLearning(),
+		timeLength(10),
+		learningQueryCache()
 	{
 	}
 	void init(const std::string& db_file_name, unsigned int time_length, unsigned int layer_size, unsigned int minibatch_size);
@@ -30,6 +38,6 @@ public:
 	{
 		return autoEncoder;
 	}
-	void learning();
+	bool learning();
 };
 

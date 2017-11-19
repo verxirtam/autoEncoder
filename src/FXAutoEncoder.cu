@@ -4,15 +4,15 @@
 
 void FXAutoEncoder::getNormarizeInput(DeviceMatrix& normarize_input)
 {
-	DBAccessor db(dbFileName);
-	db.setQuery("select strftime('%s', datetime) as epoch, opening from USDJPY_M1 order by epoch;");
+	DBAccessor dba(dbFileName);
+	dba.setQuery("select strftime('%s', datetime) as epoch, opening from USDJPY_M1 order by epoch;");
 	
 	std::vector<float> vector_opening;
 	
-	while(SQLITE_ROW == db.step_select())
+	while(SQLITE_ROW == dba.step_select())
 	{
-		long long epoch   = db.getColumnLongLong(0);
-		float opening = static_cast<float>(db.getColumnDouble(1));
+		long long epoch   = dba.getColumnLongLong(0);
+		float opening = static_cast<float>(dba.getColumnDouble(1));
 		vector_opening.push_back(opening);
 	}
 	
@@ -34,6 +34,25 @@ void FXAutoEncoder::getNormarizeInput(DeviceMatrix& normarize_input)
 	normarize_input = DeviceMatrix(timeLength, normarize_input_length, normarize_input_host);
 }
 
+//学習用のクエリから指定したレコード数分情報取得する
+bool FXAutoEncoder::selectRecord(unsigned int record_count, std::vector<float>& output)
+{
+	for(unsigned int r = 0; r < record_count; r++)
+	{
+		//1レコード取得
+		if(SQLITE_ROW != dbAccessorLearning.step_select())
+		{
+			//取得に失敗した場合はfalseを返す
+			return false;
+		}
+		//1レコード文のデータ格納
+		long long epoch   = dbAccessorLearning.getColumnLongLong(0);
+		float opening = static_cast<float>(dbAccessorLearning.getColumnDouble(1));
+		output.push_back(opening);
+	}
+	return true;
+}
+
 void FXAutoEncoder::init
 	(
 		const std::string& db_file_name,
@@ -45,52 +64,67 @@ void FXAutoEncoder::init
 	dbFileName = db_file_name;
 	timeLength = time_length;
 	
+	dbAccessorLearning.open(dbFileName);
+	
 	
 	DeviceMatrix normarize_input;
 	getNormarizeInput(normarize_input);
 	
 	autoEncoder.init(normarize_input, layer_size, minibatch_size);
 	
+	dbAccessorLearning.setQuery("select strftime('%s', datetime) as epoch, opening from USDJPY_M1 order by epoch;");
+	//キャッシュの初期化
+	learningQueryCache.clear();
+	//キャッシュ用のデータをクエリから取得
+	selectRecord(timeLength - 1, learningQueryCache);
 }
 
-void FXAutoEncoder::learning()
+bool FXAutoEncoder::learning()
 {
+	//sqlで取得するレコード数
+	unsigned int minibatch_size = autoEncoder.getBackpropagation().getMiniBatchSize();
+	unsigned int record_count   = minibatch_size;
 	
-	//TODO autoEncoder.learning()を1回ずつ実行できるように変更すること
-	throw 1;
-	
-	DBAccessor db(dbFileName);
-	db.setQuery("select strftime('%s', datetime) as epoch, opening from USDJPY_M1 order by epoch;");
-	
+	//ミニバッチ1つ分のデータを格納するvector
 	std::vector<float> vector_opening;
 	
-	while(SQLITE_ROW == db.step_select())
+	//ミニバッチ1つ分のデータを取得
+	//先頭のデータをキャッシュから取得
+	vector_opening.insert(vector_opening.begin(), learningQueryCache.begin(), learningQueryCache.end());
+	//後半のデータをクエリから取得
+	bool r = selectRecord(record_count, vector_opening);
+	//selectRecordに失敗した場合はfalseを返す
+	if(r == false)
 	{
-		long long epoch   = db.getColumnLongLong(0);
-		float opening = static_cast<float>(db.getColumnDouble(1));
-		vector_opening.push_back(opening);
+		return false;
 	}
 	
-	unsigned int minibatch_size = autoEncoder.getBackpropagation().getMiniBatchSize();
-	std::vector<float> input_data(timeLength * minibatch_size);
-	DeviceMatrix input_data_d(timeLength, minibatch_size);
+	//キャッシュを更新する
+	learningQueryCache.clear();
+	auto copy_begin = vector_opening.end();
+	copy_begin -= timeLength - 1;
+	auto copy_end = vector_opening.end();
+	learningQueryCache.insert(learningQueryCache.end(), copy_begin, copy_end);
 	
-	unsigned int vector_opening_length = vector_opening.size();
-	unsigned int input_data_count = vector_opening_length / (timeLength * minibatch_size);
+	//ミニバッチの初期化用のvector
+	std::vector<float> input_data(timeLength * minibatch_size, 0.0f);
 	
-	for(unsigned int n = 0; n < input_data_count; n++)
+	//取得したデータをDeviceMatrixに格納する
+	for(unsigned int i = 0; i < minibatch_size; i++)
 	{
-		//nはミニバッチのカウンタ
-		
-		for(unsigned int i = 0; i < minibatch_size; i++)
+		for(unsigned int j = 0; j < timeLength; j++)
 		{
-			for(unsigned int j = 0; j < timeLength; j++)
-			{
-				input_data[i * timeLength + j] = vector_opening[n * minibatch_size + i + j];
-			}
+			input_data[i * timeLength + j] = vector_opening[i + j];
 		}
-		input_data_d.set(input_data);
-		autoEncoder.learning(input_data_d);
 	}
+	//ミニバッチ
+	DeviceMatrix input_data_d(timeLength, minibatch_size);
+	input_data_d.set(input_data);
+	
+	//学習を実行する
+	autoEncoder.learning(input_data_d);
+	
+	//実行が正常に終了した場合はTrueを返す
+	return true;
 }
 

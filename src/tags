@@ -142,6 +142,7 @@ bias	Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backprop
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
 culculateBlockThreadCount	ElementWiseFunction1to1.cuh	/^void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction1to1
 culculateBlockThreadCount	ElementWiseFunction2to1.cuh	/^void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction2to1
+dbAccessorLearning	FXAutoEncoder.cuh	/^	DBAccessor dbAccessorLearning;$/;"	m	class:FXAutoEncoder	file:
 dbFileName	FXAutoEncoder.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoder	file:
 delta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:Backpropagation	file:
 deltaBias	Backpropagation.cuh	/^	std::vector<DeviceVector> deltaBias;$/;"	m	class:Backpropagation	file:
@@ -242,6 +243,7 @@ latitude	TrackData.h	/^	float latitude;$/;"	m	class:TrackData
 layerCount	AutoEncoder.cuh	/^	const unsigned int layerCount;$/;"	m	class:AutoEncoder	file:
 layerCount	Backpropagation.cuh	/^	const unsigned int layerCount;$/;"	m	class:Backpropagation	file:
 learning	AutoEncoder.cuh	/^	DeviceMatrix learning(const DeviceMatrix& X)$/;"	f	class:AutoEncoder
+learningQueryCache	FXAutoEncoder.cuh	/^	std::vector<float> learningQueryCache;$/;"	m	class:FXAutoEncoder	file:
 longitude	TrackData.h	/^	float longitude;$/;"	m	class:TrackData
 main	learningTrackData.cpp	/^int main(void)$/;"	f
 mean	Normalization.h	/^	DeviceVector mean;$/;"	m	class:Normalization
