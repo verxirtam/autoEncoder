@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['dbaccessorlearning',['dbAccessorLearning',['../classFXAutoEncoder.html#aa3a5c15785a6f6b4a3181d03a20e4876',1,'FXAutoEncoder']]],
   ['dbfilename',['dbFileName',['../classFXAutoEncoder.html#abb124cb832c374890f2f346ded6f3451',1,'FXAutoEncoder']]],
   ['delta',['delta',['../classBackpropagation.html#ac78588d8c49d9422a91c45289462730f',1,'Backpropagation']]],
   ['deltabias',['deltaBias',['../classBackpropagation.html#a8df1e171bee2710e7717a5d947e92852',1,'Backpropagation']]],

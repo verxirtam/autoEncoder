@@ -1,5 +1,5 @@
 <map id="AutoEncoder::learning" name="AutoEncoder::learning">
-<area shape="rect" id="node2" href="$classFXAutoEncoder.html#ab330056668734d83aea2275b216232fd" title="FXAutoEncoder::learning" alt="" coords="219,5,386,32"/>
+<area shape="rect" id="node2" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="219,5,386,32"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="249,56,357,83"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="205,107,400,149"/>
 <area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="448,5,504,32"/>

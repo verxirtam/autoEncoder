@@ -4,12 +4,18 @@
 <area shape="rect" id="node4" href="$classFXAutoEncoder.html#ae87b910400c9c7fbac5b91573711e394" title="FXAutoEncoder::getAutoEncoder" alt="" coords="110,107,325,133"/>
 <area shape="rect" id="node5" href="$classAutoEncoder.html#a41b323dcb35ccb38aca75f59a805c7d5" title="AutoEncoder::getWhitening\lMatrix" alt="" coords="127,158,308,199"/>
 <area shape="rect" id="node6" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="155,224,280,251"/>
-<area shape="rect" id="node7" href="$classFXAutoEncoder.html#ab330056668734d83aea2275b216232fd" title="FXAutoEncoder::learning" alt="" coords="134,325,301,352"/>
-<area shape="rect" id="node8" href="$classAutoEncoder.html#a6ff7ce63d8f8e44ac2ea92db04700e81" title="AutoEncoder::getBackpropagation" alt="" coords="374,208,594,235"/>
-<area shape="rect" id="node12" href="$classBackpropagation.html#a6a97d04adc04480ee9c1bfcff644f18c" title="Backpropagation::getWeight" alt="" coords="391,427,577,453"/>
-<area shape="rect" id="node13" href="$classBackpropagation.html#a318390c97ec2383eeb960689f2cb76e0" title="Backpropagation::getBias" alt="" coords="399,477,569,504"/>
-<area shape="rect" id="node14" href="$BackpropagationUtils_8cuh.html#a9fd92090695efcb040292de59dab1f2e" title="writeToDotFile" alt="" coords="164,427,271,453"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a19d8b33966dc89ee8710d29c245fbf67" title="Backpropagation::getMini\lBatchSize" alt="" coords="399,259,569,301"/>
-<area shape="rect" id="node10" href="$classDeviceMatrix.html#a8c2c08acf67066fbef96ff57c8a13f2f" title="DeviceMatrix::set" alt="" coords="421,325,547,352"/>
-<area shape="rect" id="node11" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="409,376,559,403"/>
+<area shape="rect" id="node7" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="134,325,301,352"/>
+<area shape="rect" id="node8" href="$classAutoEncoder.html#a6ff7ce63d8f8e44ac2ea92db04700e81" title="AutoEncoder::getBackpropagation" alt="" coords="374,141,594,168"/>
+<area shape="rect" id="node13" href="$BackpropagationUtils_8cuh.html#ace4ac2d7dd5cd57a4d8f8b212031df71" title="getParameterVector" alt="" coords="148,376,287,403"/>
+<area shape="rect" id="node15" href="$classBackpropagation.html#a6a97d04adc04480ee9c1bfcff644f18c" title="Backpropagation::getWeight" alt="" coords="391,477,577,504"/>
+<area shape="rect" id="node16" href="$classBackpropagation.html#a318390c97ec2383eeb960689f2cb76e0" title="Backpropagation::getBias" alt="" coords="399,528,569,555"/>
+<area shape="rect" id="node17" href="$DeviceVectorUtils_8cpp.html#a1dfadae54280ea671dfd463323a8b468" title="writeToCsvFile" alt="" coords="162,579,273,605"/>
+<area shape="rect" id="node20" href="$BackpropagationUtils_8cuh.html#a9fd92090695efcb040292de59dab1f2e" title="writeToDotFile" alt="" coords="164,477,271,504"/>
+<area shape="rect" id="node9" href="$classBackpropagation.html#a19d8b33966dc89ee8710d29c245fbf67" title="Backpropagation::getMini\lBatchSize" alt="" coords="399,294,569,335"/>
+<area shape="rect" id="node10" href="$classFXAutoEncoder.html#a062c2141a482ae4934c5d6be98c34558" title="FXAutoEncoder::selectRecord" alt="" coords="385,360,583,387"/>
+<area shape="rect" id="node11" href="$classDeviceMatrix.html#a8c2c08acf67066fbef96ff57c8a13f2f" title="DeviceMatrix::set" alt="" coords="421,192,547,219"/>
+<area shape="rect" id="node12" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="409,243,559,269"/>
+<area shape="rect" id="node14" href="$classBackpropagation.html#ab99f9f9d60c794aebda583db4400deae" title="Backpropagation::getLayer\lCount" alt="" coords="395,411,573,453"/>
+<area shape="rect" id="node18" href="$classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="421,579,547,605"/>
+<area shape="rect" id="node19" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="389,629,579,656"/>
 </map>

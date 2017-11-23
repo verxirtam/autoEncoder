@@ -1,3 +1,5 @@
 <map id="Backpropagation::getLayerCount" name="Backpropagation::getLayerCount">
-<area shape="rect" id="node2" href="$BackpropagationUtils__detail_8cuh.html#ace4ac2d7dd5cd57a4d8f8b212031df71" title="getParameterVector" alt="" coords="232,12,371,39"/>
+<area shape="rect" id="node2" href="$BackpropagationUtils__detail_8cuh.html#ace4ac2d7dd5cd57a4d8f8b212031df71" title="getParameterVector" alt="" coords="232,31,371,57"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="419,5,527,32"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="445,56,501,83"/>
 </map>
