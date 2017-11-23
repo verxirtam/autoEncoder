@@ -117,8 +117,6 @@ void Normalization::init(const DeviceMatrix& X)
 	varCovEigenVector = E;
 	varCovEigenValue = W;
 	
-	//TODO Wの成分の絶対値が0か非常に小さい時の対応を書くこと
-	
 	//NULLストリームの完了待ち:Wの算出待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
 	

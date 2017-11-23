@@ -162,7 +162,15 @@ std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& ba
 		auto w_l = w[l].get();
 		auto b_l = b[l].get();
 		result.insert(result.end(), w_l.begin(), w_l.end());
+		for(int i = 0; i < 10; i++)
+		{
+			result.push_back(-1.0f);
+		}
 		result.insert(result.end(), b_l.begin(), b_l.end());
+		for(int i = 0; i < 10; i++)
+		{
+			result.push_back( 1.0f);
+		}
 	}
 	
 	return result;

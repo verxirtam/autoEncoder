@@ -2130,8 +2130,14 @@ TYPED_TEST(AutoEncoderTest, csv)
 	//学習用データのDeviceMatrix
 	DeviceMatrix minibatch_input(2, 10);
 	
+	
+	unsigned int parameter_vector_length;
+	std::vector<float> transition_parameter_vector;
+	
+	unsigned int learning_count = 1000;
+
 	//学習の実行
-	for(int i = 0; i < 1000; i++)
+	for(int i = 0; i < learning_count; i++)
 	{
 		//学習用データの生成
 		for(int j = 0; j < 10; j++)
@@ -2164,7 +2170,19 @@ TYPED_TEST(AutoEncoderTest, csv)
 		{
 			a.learning(minibatch_input);
 		}
+		/////////////////////////////////////
+		//パラメータベクトルを取得
+		auto b = a.getBackpropagation();
+		auto v = getParameterVector(b);
+		parameter_vector_length = v.size();
+		transition_parameter_vector.insert(transition_parameter_vector.end(), v.begin(), v.end());
+		/////////////////////////////////////
 	}
+	
+	//パラメータの推移をファイル出力
+	DeviceMatrix transition_parameter(parameter_vector_length, learning_count, transition_parameter_vector);
+	writeToCsvFile("../data/AutoEncoderTest_parameter_" + get_typename<TypeParam>() + ".csv", transition_parameter);
+	
 	//出力の取得
 	auto minibatch_output = a.learning(minibatch_input);
 	
@@ -2360,8 +2378,8 @@ protected:
 TEST(FXAutoEncoderTest, Simple)
 {
 	FXAutoEncoder f;
-	unsigned int time_length    =  10;
-	unsigned int layer_size     =   5;
+	unsigned int time_length    =  32;
+	unsigned int layer_size     =  16;
 	unsigned int minibatch_size =  20;
 	f.init("/home/daisuke/programs/analyzeExchange/db/test.db", time_length, layer_size, minibatch_size);
 	printVector(f.getAutoEncoder().getWhiteningMatrix().get(), "f.getAutoEncoder().getWhiteningMatrix()");
@@ -2382,13 +2400,14 @@ TEST(FXAutoEncoderTest, Simple)
 		transition_parameter_vector.insert(transition_parameter_vector.end(), v.begin(), v.end());
 		
 	}
-	DeviceMatrix transition_parameter(parameter_vector_length, learning_count, transition_parameter_vector);
+	unsigned int learning_count_result = transition_parameter_vector.size() / parameter_vector_length;
+	DeviceMatrix transition_parameter(parameter_vector_length, learning_count_result, transition_parameter_vector);
 	writeToCsvFile("../data/FXAutoEncoderTest_parameter.csv", transition_parameter);
-	Normalization norm;
-	auto _1L = DeviceVector::get1Vector(learning_count);
-	norm.init(transition_parameter);
-	auto transition_parameter_norm = norm.getPCAWhitening(transition_parameter, _1L);
-	writeToCsvFile("../data/FXAutoEncoderTest_parameter_norm.csv", transition_parameter_norm);
+	//Normalization norm;
+	//auto _1L = DeviceVector::get1Vector(learning_count);
+	//norm.init(transition_parameter);
+	//auto transition_parameter_norm = norm.getPCAWhitening(transition_parameter, _1L);
+	//writeToCsvFile("../data/FXAutoEncoderTest_parameter_norm.csv", transition_parameter_norm);
 	
 	for(auto&& w : f.getAutoEncoder().getBackpropagation().getWeight())
 	{
@@ -2411,8 +2430,8 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
+	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*momentum*";
