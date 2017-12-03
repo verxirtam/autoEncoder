@@ -339,7 +339,9 @@ unittest.o : unittest.cu \
     Func1to1Logistic.cuh \
     DeviceVectorUtils.h \
     FXAutoEncoder.cuh \
+    FXAutoEncoderDBAccessor.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/sqlite3.h \
+    TimeUtil.h \
     BackpropagationUtils.cuh \
     BackpropagationUtils_detail.cuh

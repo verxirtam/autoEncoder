@@ -270,6 +270,8 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     Backpropagation_detail.h \
     OutputLayerRegression.cuh \
     Func1to1Tanh.cuh \
+    FXAutoEncoderDBAccessor.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/c++/4.8/iostream \
-    /usr/include/sqlite3.h
+    /usr/include/sqlite3.h \
+    TimeUtil.h

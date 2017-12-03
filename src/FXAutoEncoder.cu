@@ -61,6 +61,12 @@ void FXAutoEncoder::init
 		unsigned int minibatch_size
 	)
 {
+	
+	trainingTimeBegin = TimeUtil::stringToEpoch("2017/07/22 00:00:00");
+	trainingTimeEnd   = TimeUtil::stringToEpoch("2017/09/01 00:00:00");
+	testTimeBegin     = TimeUtil::stringToEpoch("2017/09/01 00:00:00");
+	testTimeEnd       = TimeUtil::stringToEpoch("2017/09/22 00:00:00");
+	
 	dbFileName = db_file_name;
 	timeLength = time_length;
 	

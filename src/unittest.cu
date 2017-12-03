@@ -52,6 +52,8 @@
 
 #include "BackpropagationUtils.cuh"
 
+#include "TimeUtil.h"
+
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
 	std::cout << vname << " = {";
@@ -2382,7 +2384,21 @@ TEST(FXAutoEncoderTest, Simple)
 	unsigned int layer_size     =  16;
 	unsigned int minibatch_size =  20;
 	f.init("/home/daisuke/programs/analyzeExchange/db/test.db", time_length, layer_size, minibatch_size);
-	printVector(f.getAutoEncoder().getWhiteningMatrix().get(), "f.getAutoEncoder().getWhiteningMatrix()");
+	
+	auto wm = f.getAutoEncoder().getWhiteningMatrix();
+	printVector(wm.get(), "f.getAutoEncoder().getWhiteningMatrix()");
+	writeToCsvFile("../data/FXAutoEncoderTest_WhiteningMatrix.csv", wm);
+	
+	auto varcov = f.getAutoEncoder().getNormarization().getVarCovMatrix();
+	writeToCsvFile("../data/FXAutoEncoderTest_VarCovMatrix.csv", varcov);
+	
+	auto input = f.getAllInput();
+	writeToCsvFile("../data/FXAutoEncoderTest_input.csv", input);
+	DeviceVector _1input = DeviceVector::get1Vector(input.getColumnCount());
+	auto input_whitening = f.getAutoEncoder().getNormarization().getPCAWhitening(input, _1input);
+	writeToCsvFile("../data/FXAutoEncoderTest_input_whitening.csv", input_whitening);
+	
+	
 	
 	std::vector<float> transition_parameter_vector;
 	unsigned int parameter_vector_length = 0;
@@ -2421,6 +2437,21 @@ TEST(FXAutoEncoderTest, Simple)
 }
 
 
+/////////////////////////////////////////////////////////////////////////////////
+class TimeUtilTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(TimeUtilTest, Simple)
+{
+	time_t epoch = TimeUtil::stringToEpoch("2017/07/21 11:24:00");
+	EXPECT_EQ(epoch, 1500603840);
+}
+
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
@@ -2430,8 +2461,9 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
+	::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
 	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*momentum*";

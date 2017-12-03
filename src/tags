@@ -62,6 +62,9 @@ ElementWiseFunction1to1	ElementWiseFunction1to1.cuh	/^class ElementWiseFunction1
 ElementWiseFunction2to1	ElementWiseFunction2to1.cuh	/^class ElementWiseFunction2to1$/;"	c	file:
 FXAutoEncoder	FXAutoEncoder.cuh	/^	FXAutoEncoder():$/;"	f	class:FXAutoEncoder
 FXAutoEncoder	FXAutoEncoder.cuh	/^class FXAutoEncoder$/;"	c	file:
+FXAutoEncoderDBAccessor	FXAutoEncoderDBAccessor.cuh	/^	FXAutoEncoderDBAccessor():$/;"	f	class:FXAutoEncoderDBAccessor
+FXAutoEncoderDBAccessor	FXAutoEncoderDBAccessor.cuh	/^	FXAutoEncoderDBAccessor(const std::string& db_file_name):$/;"	f	class:FXAutoEncoderDBAccessor
+FXAutoEncoderDBAccessor	FXAutoEncoderDBAccessor.cuh	/^class FXAutoEncoderDBAccessor$/;"	c	file:
 Func	Backpropagation_detail.h	/^	using Func = Func2to1Composite1st<Func2to1ElementWiseProduct, Func1to1ApplyDiff<AF> >;$/;"	u
 Func1to1ApplyDiff	ElementWiseFunctionUtil.cuh	/^class Func1to1ApplyDiff$/;"	c	file:
 Func1to1Exp	Func1to1Exp.cuh	/^class Func1to1Exp$/;"	c	file:
@@ -108,6 +111,7 @@ Ssyrk	CuBlasFunction.cpp	/^void Ssyrk$/;"	f
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
+TimeUtil	TimeUtil.h	/^class TimeUtil$/;"	c
 TrackData	TrackData.h	/^class TrackData$/;"	c
 WTdelta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> WTdelta;$/;"	m	class:Backpropagation	file:
 _1B	AutoEncoder.cuh	/^	DeviceVector _1B;$/;"	m	class:AutoEncoder	file:
@@ -142,8 +146,10 @@ bias	Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:Backprop
 columnCount	DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:DeviceMatrix
 culculateBlockThreadCount	ElementWiseFunction1to1.cuh	/^void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction1to1
 culculateBlockThreadCount	ElementWiseFunction2to1.cuh	/^void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount$/;"	f	class:ElementWiseFunction2to1
+dbAccessor	FXAutoEncoder.cuh	/^	FXAutoEncoderDBAccessor dbAccessor;$/;"	m	class:FXAutoEncoder	file:
 dbAccessorLearning	FXAutoEncoder.cuh	/^	DBAccessor dbAccessorLearning;$/;"	m	class:FXAutoEncoder	file:
 dbFileName	FXAutoEncoder.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoder	file:
+dbFileName	FXAutoEncoderDBAccessor.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoderDBAccessor	file:
 delta	Backpropagation.cuh	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:Backpropagation	file:
 deltaBias	Backpropagation.cuh	/^	std::vector<DeviceVector> deltaBias;$/;"	m	class:Backpropagation	file:
 deltaWeight	Backpropagation.cuh	/^	std::vector<DeviceMatrix> deltaWeight;$/;"	m	class:Backpropagation	file:
@@ -169,6 +175,7 @@ get1Matrix	DeviceMatrix.h	/^	static DeviceMatrix get1Matrix(unsigned int row, un
 get1Vector	DeviceVector.h	/^	static DeviceVector get1Vector(unsigned int dimension)$/;"	f	class:DeviceVector
 getAddress	DeviceMatrix.h	/^	float* getAddress() const$/;"	f	class:DeviceMatrix
 getAddress	DeviceVector.h	/^	float* getAddress() const$/;"	f	class:DeviceVector
+getAllInput	FXAutoEncoder.cuh	/^	DeviceMatrix getAllInput()$/;"	f	class:FXAutoEncoder
 getAlphaMatrix	DeviceMatrix.h	/^	static DeviceMatrix getAlphaMatrix(unsigned int row, unsigned int column, float alpha)$/;"	f	class:DeviceMatrix
 getAlphaVector	DeviceVector.h	/^	static DeviceVector getAlphaVector(unsigned int dimension, float alpha)$/;"	f	class:DeviceVector
 getAutoEncoder	FXAutoEncoder.cuh	/^	const AutoEncoderType& getAutoEncoder()$/;"	f	class:FXAutoEncoder
@@ -207,6 +214,7 @@ getMean	Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:N
 getMean	learningTrackData.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getMeanAndVarCovMatrix	Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f
 getMiniBatchSize	Backpropagation.cuh	/^	unsigned int getMiniBatchSize() const$/;"	f	class:Backpropagation
+getNormarization	AutoEncoder.cuh	/^	const Normalization& getNormarization() const$/;"	f	class:AutoEncoder
 getPCAWhitening	Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:Normalization
 getPCAWhiteningMatrix	Normalization.h	/^	const DeviceMatrix& getPCAWhiteningMatrix(void) const$/;"	f	class:Normalization
 getParameterVector	BackpropagationUtils_detail.cuh	/^std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& backpropagation)$/;"	f
@@ -267,6 +275,7 @@ set	DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:Devic
 set	DeviceVector.h	/^	void set(const float* const host)$/;"	f	class:DeviceVector
 set	DeviceVector.h	/^	void set(const std::vector<float>& host)$/;"	f	class:DeviceVector
 setBias	Backpropagation.cuh	/^	void setBias(const std::vector<std::vector<float> >& b)$/;"	f	class:Backpropagation
+setDbFileName	FXAutoEncoderDBAccessor.cuh	/^	void setDbFileName(const std::string& db_file_name)$/;"	f	class:FXAutoEncoderDBAccessor
 setEpsilon	AutoEncoder.cuh	/^	void setEpsilon(float e)$/;"	f	class:AutoEncoder
 setEpsilon	Backpropagation.cuh	/^	void setEpsilon(float e)$/;"	f	class:Backpropagation
 setGamma	AutoEncoder.cuh	/^	void setGamma(float g)$/;"	f	class:AutoEncoder
@@ -276,13 +285,18 @@ setRandomUniform	CuRandFunction.cpp	/^void setRandomUniform(float min, float max
 setSubStreamCount	Backpropagation.cuh	/^	void setSubStreamCount(unsigned int substream_count) const$/;"	f	class:Backpropagation
 setWeight	Backpropagation.cuh	/^	void setWeight(const std::vector<std::vector<float> >& w)$/;"	f	class:Backpropagation
 stream	CudaManager.h	/^	std::vector<cudaStream_t> stream;$/;"	m	class:CudaManager
+stringToEpoch	TimeUtil.cpp	/^time_t TimeUtil::stringToEpoch(const std::string& timestr)$/;"	f	class:TimeUtil
 testCUBLAS	learningTrackData.cpp	/^int testCUBLAS()$/;"	f
 testCUBLASClass	learningTrackData.cpp	/^int testCUBLASClass()$/;"	f
 testDBAccessor	learningTrackData.cpp	/^int testDBAccessor(void)$/;"	f
 testDeviceVector	learningTrackData.cpp	/^int testDeviceVector(void)$/;"	f
+testTimeBegin	FXAutoEncoder.cuh	/^	time_t testTimeBegin;$/;"	m	class:FXAutoEncoder	file:
+testTimeEnd	FXAutoEncoder.cuh	/^	time_t testTimeEnd;$/;"	m	class:FXAutoEncoder	file:
 time	TrackData.h	/^	float time;$/;"	m	class:TrackData
 timeLength	FXAutoEncoder.cuh	/^	unsigned int timeLength;$/;"	m	class:FXAutoEncoder	file:
 track	learningTrackData.cpp	/^using track = std::array<float, 4>;$/;"	u
+trainingTimeBegin	FXAutoEncoder.cuh	/^	time_t trainingTimeBegin;$/;"	m	class:FXAutoEncoder	file:
+trainingTimeEnd	FXAutoEncoder.cuh	/^	time_t trainingTimeEnd;$/;"	m	class:FXAutoEncoder	file:
 u	Backpropagation.cuh	/^	std::vector<DeviceMatrix> u;$/;"	m	class:Backpropagation	file:
 unitCount	Backpropagation.cuh	/^	std::vector<unsigned int> unitCount;$/;"	m	class:Backpropagation	file:
 updateParameter	Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::updateParameter()$/;"	f	class:Backpropagation

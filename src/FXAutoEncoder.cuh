@@ -3,7 +3,10 @@
 #include "AutoEncoder.cuh"
 #include "Func1to1Tanh.cuh"
 
-#include <DBAccessor.h>
+#include "FXAutoEncoderDBAccessor.cuh"
+#include "TimeUtil.h"
+
+#include "DBAccessor.h"
 
 class FXAutoEncoder
 {
@@ -12,10 +15,19 @@ private:
 	using AutoEncoderType = AutoEncoder<Func1to1Tanh>;
 	//オートエンコーダ
 	AutoEncoderType autoEncoder;
-	//DBファイルのパス
+	//DBファイル名
 	std::string dbFileName;
-	//DBアクセサ(学習用)
+	//DBアクセサ
 	DBAccessor dbAccessorLearning;
+	FXAutoEncoderDBAccessor dbAccessor;
+	//訓練用データの開始時刻
+	time_t trainingTimeBegin;
+	//訓練用データの終了時刻
+	time_t trainingTimeEnd;
+	//テスト用データの開始時刻
+	time_t testTimeBegin;
+	//テスト用データの終了時刻
+	time_t testTimeEnd;
 	//1データの長さ(過去何分のデータを使用するか)
 	unsigned int timeLength;
 	//学習用のクエリのキャッシュ
@@ -27,8 +39,9 @@ private:
 public:
 	FXAutoEncoder():
 		autoEncoder(),
-		dbFileName(""),
+		dbFileName(),
 		dbAccessorLearning(),
+		dbAccessor(),
 		timeLength(10),
 		learningQueryCache()
 	{
@@ -39,5 +52,16 @@ public:
 		return autoEncoder;
 	}
 	bool learning();
+	DeviceMatrix getAllInput()
+	{
+		std::vector<float> result_vector;
+		while(selectRecord(1000, result_vector))
+		{
+		}
+		unsigned int r = timeLength;
+		unsigned int c = result_vector.size() / timeLength;
+		DeviceMatrix result(r, c, result_vector);
+		return result;
+	}
 };
 

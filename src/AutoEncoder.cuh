@@ -102,6 +102,10 @@ public:
 	{
 		return backpropagation;
 	}
+	const Normalization& getNormarization() const
+	{
+		return normalization;
+	}
 };
 
 
