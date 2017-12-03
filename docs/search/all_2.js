@@ -1,7 +1,7 @@
 var searchData=
 [
   ['back',['back',['../classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329',1,'Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classBackpropagation.html#acdfd87d6e8d2483dee4e3348128d0318',1,'Backpropagation::back(const DeviceMatrix &amp;D)']]],
-  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'Backpropagation&lt; AF, OutputLayer &gt;'],['../classAutoEncoder.html#ab07c32a6fea1b99db02e03ba776880b8',1,'AutoEncoder::backpropagation()'],['../classBackpropagation.html#a14ea4ab564fe28595b026344b034e8e4',1,'Backpropagation::Backpropagation()']]],
+  ['backpropagation',['Backpropagation',['../classBackpropagation.html',1,'Backpropagation&lt; AF, OutputLayer &gt;'],['../classBackpropagation.html#a14ea4ab564fe28595b026344b034e8e4',1,'Backpropagation::Backpropagation()'],['../classAutoEncoder.html#ab07c32a6fea1b99db02e03ba776880b8',1,'AutoEncoder::backpropagation()']]],
   ['backpropagation_2ecuh',['Backpropagation.cuh',['../Backpropagation_8cuh.html',1,'']]],
   ['backpropagation_3c_20af_2c_20outputlayerregression_20_3e',['Backpropagation&lt; AF, OutputLayerRegression &gt;',['../classBackpropagation.html',1,'']]],
   ['backpropagation_3c_20func1to1tanh_2c_20outputlayerregression_20_3e',['Backpropagation&lt; Func1to1Tanh, OutputLayerRegression &gt;',['../classBackpropagation.html',1,'']]],

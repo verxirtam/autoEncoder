@@ -21,5 +21,8 @@ var searchData=
   ['fxautoencoder',['FXAutoEncoder',['../classFXAutoEncoder.html',1,'FXAutoEncoder'],['../classFXAutoEncoder.html#a2eae9095da04699e7da0b10b0531ca2c',1,'FXAutoEncoder::FXAutoEncoder()']]],
   ['fxautoencoder_2ecu',['FXAutoEncoder.cu',['../FXAutoEncoder_8cu.html',1,'']]],
   ['fxautoencoder_2ecuh',['FXAutoEncoder.cuh',['../FXAutoEncoder_8cuh.html',1,'']]],
+  ['fxautoencoderdbaccessor',['FXAutoEncoderDBAccessor',['../classFXAutoEncoderDBAccessor.html',1,'FXAutoEncoderDBAccessor'],['../classFXAutoEncoderDBAccessor.html#acc3242c51c809e3bcedff7aa445cbddd',1,'FXAutoEncoderDBAccessor::FXAutoEncoderDBAccessor()'],['../classFXAutoEncoderDBAccessor.html#a1e78dbcf4fb29d917a74fb8ef01cb93e',1,'FXAutoEncoderDBAccessor::FXAutoEncoderDBAccessor(const std::string &amp;db_file_name)']]],
+  ['fxautoencoderdbaccessor_2ecu',['FXAutoEncoderDBAccessor.cu',['../FXAutoEncoderDBAccessor_8cu.html',1,'']]],
+  ['fxautoencoderdbaccessor_2ecuh',['FXAutoEncoderDBAccessor.cuh',['../FXAutoEncoderDBAccessor_8cuh.html',1,'']]],
   ['fxautoencodertest',['FXAutoEncoderTest',['../classFXAutoEncoderTest.html',1,'']]]
 ];

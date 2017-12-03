@@ -1,4 +1,5 @@
 <map id="FXAutoEncoder::selectRecord" name="FXAutoEncoder::selectRecord">
-<area shape="rect" id="node2" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="254,5,421,32"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="469,5,525,32"/>
+<area shape="rect" id="node2" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="262,5,429,32"/>
+<area shape="rect" id="node4" href="$classFXAutoEncoder.html#a7c164957710f0c0ac4b7c1e9b0bd7d67" title="FXAutoEncoder::getAllInput" alt="" coords="253,56,437,83"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="485,31,541,57"/>
 </map>

@@ -11,5 +11,6 @@ var searchData=
   ['func2to1elementwiseproduct',['Func2to1ElementWiseProduct',['../classFunc2to1ElementWiseProduct.html',1,'']]],
   ['func2to1elementwisesum',['Func2to1ElementWiseSum',['../classFunc2to1ElementWiseSum.html',1,'']]],
   ['fxautoencoder',['FXAutoEncoder',['../classFXAutoEncoder.html',1,'']]],
+  ['fxautoencoderdbaccessor',['FXAutoEncoderDBAccessor',['../classFXAutoEncoderDBAccessor.html',1,'']]],
   ['fxautoencodertest',['FXAutoEncoderTest',['../classFXAutoEncoderTest.html',1,'']]]
 ];
