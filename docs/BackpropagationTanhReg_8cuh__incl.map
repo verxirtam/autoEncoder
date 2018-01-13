@@ -1,15 +1,15 @@
 <map id="src/BackpropagationTanhReg.cuh" name="src/BackpropagationTanhReg.cuh">
 <area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="381,80,525,107"/>
-<area shape="rect" id="node31" href="$Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="960,80,1089,107"/>
-<area shape="rect" id="node32" href="$OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1448,155,1632,181"/>
-<area shape="rect" id="node7" href="$CuBlasFunction_8h.html" title="CuBlasFunction.h" alt="" coords="550,155,676,181"/>
-<area shape="rect" id="node20" href="$CuRandManager_8h.html" title="CuRandManager.h" alt="" coords="264,379,393,405"/>
-<area shape="rect" id="node24" href="$BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="90,453,277,480"/>
+<area shape="rect" id="node31" href="$Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="976,80,1105,107"/>
+<area shape="rect" id="node32" href="$OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1480,155,1664,181"/>
+<area shape="rect" id="node7" href="$CuBlasFunction_8h.html" title="cuda/CuBlasFunction.h" alt="" coords="550,155,708,181"/>
+<area shape="rect" id="node20" href="$CuRandManager_8h.html" title="cuda/CuRandManager.h" alt="" coords="244,379,407,405"/>
+<area shape="rect" id="node24" href="$BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="86,453,273,480"/>
 <area shape="rect" id="node25" href="$ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="381,155,525,181"/>
 <area shape="rect" id="node27" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="329,229,524,256"/>
-<area shape="rect" id="node28" href="$Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="701,155,924,181"/>
-<area shape="rect" id="node29" href="$ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="949,155,1148,181"/>
-<area shape="rect" id="node30" href="$Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="1173,155,1341,181"/>
+<area shape="rect" id="node28" href="$Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="733,155,956,181"/>
+<area shape="rect" id="node29" href="$ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="981,155,1180,181"/>
+<area shape="rect" id="node30" href="$Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="1205,155,1373,181"/>
 <area shape="rect" id="node8" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="772,229,883,256"/>
 <area shape="rect" id="node19" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="909,229,1019,256"/>
 <area shape="rect" id="node10" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="893,304,1019,331"/>

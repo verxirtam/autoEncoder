@@ -1,4 +1,4 @@
-<map id="src/CuSolverDnFunction.h" name="src/CuSolverDnFunction.h">
+<map id="src/cuda/CuSolverDnFunction.h" name="src/cuda/CuSolverDnFunction.h">
 <area shape="rect" id="node2" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="452,80,563,107"/>
 <area shape="rect" id="node14" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="589,80,699,107"/>
 <area shape="rect" id="node15" href="$CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="221,229,375,256"/>

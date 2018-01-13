@@ -1,5 +1,5 @@
 <map id="src/Statistics.h" name="src/Statistics.h">
-<area shape="rect" id="node2" href="$CuBlasFunction_8h.html" title="CuBlasFunction.h" alt="" coords="145,80,271,107"/>
+<area shape="rect" id="node2" href="$CuBlasFunction_8h.html" title="cuda/CuBlasFunction.h" alt="" coords="129,80,287,107"/>
 <area shape="rect" id="node3" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="84,155,195,181"/>
 <area shape="rect" id="node15" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="221,155,331,181"/>
 <area shape="rect" id="node6" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="285,229,411,256"/>

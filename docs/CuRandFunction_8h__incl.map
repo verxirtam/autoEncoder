@@ -1,4 +1,4 @@
-<map id="src/CuRandFunction.h" name="src/CuRandFunction.h">
+<map id="src/cuda/CuRandFunction.h" name="src/cuda/CuRandFunction.h">
 <area shape="rect" id="node2" href="$CuRandManager_8h.html" title="CuRandManager.h" alt="" coords="684,229,813,256"/>
 <area shape="rect" id="node10" href="$CuBlasFunction_8h.html" title="CuBlasFunction.h" alt="" coords="503,80,629,107"/>
 <area shape="rect" id="node7" href="$CuRandException_8h.html" title="CuRandException.h" alt="" coords="528,379,667,405"/>
