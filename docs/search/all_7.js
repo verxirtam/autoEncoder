@@ -40,7 +40,7 @@ var searchData=
   ['getinversezcawhiteningmatrix',['getInverseZCAWhiteningMatrix',['../classNormalization.html#a3d950bd5040d895170cc332f8a72ffdb',1,'Normalization']]],
   ['getlayercount',['getLayerCount',['../classBackpropagation.html#ab99f9f9d60c794aebda583db4400deae',1,'Backpropagation']]],
   ['getmainstream',['getMainStream',['../classBackpropagation.html#af478d3a28106e58da568b84f528bf706',1,'Backpropagation']]],
-  ['getmean',['getMean',['../classNormalization.html#a30294727819c10bee0b977df51e0fd38',1,'Normalization::getMean()'],['../learningTrackData_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'getMean():&#160;learningTrackData.cpp']]],
+  ['getmean',['getMean',['../classNormalization.html#a30294727819c10bee0b977df51e0fd38',1,'Normalization::getMean()'],['../autoEncoder_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'getMean():&#160;autoEncoder.cpp']]],
   ['getmeanandvarcovmatrix',['getMeanAndVarCovMatrix',['../Statistics_8cpp.html#a109baf1b93299fefaa5a349b93c0d2e8',1,'getMeanAndVarCovMatrix(const DeviceMatrix &amp;sample, DeviceVector &amp;mean, DeviceMatrix &amp;varCovMatrix, cudaStream_t stream):&#160;Statistics.cpp'],['../Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8',1,'getMeanAndVarCovMatrix(const DeviceMatrix &amp;sample, DeviceVector &amp;mean, DeviceMatrix &amp;varCovMatrix, cudaStream_t stream):&#160;Statistics.cpp']]],
   ['getminibatchsize',['getMiniBatchSize',['../classBackpropagation.html#a19d8b33966dc89ee8710d29c245fbf67',1,'Backpropagation']]],
   ['getnormarization',['getNormarization',['../classAutoEncoder.html#a238ec2d4146b001400be66f40feba0c5',1,'AutoEncoder']]],

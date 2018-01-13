@@ -30,7 +30,7 @@
 <area shape="rect" id="node13" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="1075,208,1131,235"/>
 <area shape="rect" id="node15" href="$classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e" title="Backpropagation::obtainDeltaLast" alt="" coords="724,157,943,184"/>
 <area shape="rect" id="node16" href="$CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7" title="setRandomUniform" alt="" coords="766,208,901,235"/>
-<area shape="rect" id="node18" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="767,360,899,387"/>
+<area shape="rect" id="node18" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="767,360,899,387"/>
 <area shape="rect" id="node19" href="$Statistics_8h.html#a109baf1b93299fefaa5a349b93c0d2e8" title="getMeanAndVarCovMatrix" alt="" coords="746,461,921,488"/>
 <area shape="rect" id="node21" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1327,687,1383,713"/>
 <area shape="rect" id="node22" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1319,737,1391,764"/>

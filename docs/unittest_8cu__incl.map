@@ -13,8 +13,8 @@
 <area shape="rect" id="node43" href="$Func1to1Logistic_8cuh.html" title="Func1to1Logistic.cuh" alt="" coords="1703,80,1849,107"/>
 <area shape="rect" id="node44" href="$DeviceVectorUtils_8h.html" title="DeviceVectorUtils.h" alt="" coords="956,237,1095,264"/>
 <area shape="rect" id="node45" href="$FXAutoEncoder_8cuh.html" title="FXAutoEncoder.cuh" alt="" coords="1873,80,2012,107"/>
-<area shape="rect" id="node48" href="$TimeUtil_8h.html" title="TimeUtil.h" alt="" coords="2008,155,2089,181"/>
-<area shape="rect" id="node49" href="$BackpropagationUtils_8cuh.html" title="BackpropagationUtils.cuh" alt="" coords="2376,155,2547,181"/>
+<area shape="rect" id="node48" href="$TimeUtil_8h.html" title="util/TimeUtil.h" alt="" coords="1998,155,2100,181"/>
+<area shape="rect" id="node49" href="$BackpropagationUtils_8cuh.html" title="BackpropagationUtils.cuh" alt="" coords="2377,155,2548,181"/>
 <area shape="rect" id="node14" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="1062,544,1188,571"/>
 <area shape="rect" id="node17" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="872,619,987,645"/>
 <area shape="rect" id="node19" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="1510,619,1644,645"/>

@@ -1,9 +1,9 @@
 <map id="DeviceVector::set" name="DeviceVector::set">
-<area shape="rect" id="node2" href="$classDeviceVector.html#a875dbcee52a101f197c780810095fe8f" title="DeviceVector::DeviceVector" alt="" coords="182,5,370,32"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html#a3f1274f6d0cc0131362706a2d291cec6" title="DeviceVector::set" alt="" coords="213,56,339,83"/>
-<area shape="rect" id="node4" href="$learningTrackData_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="210,107,342,133"/>
-<area shape="rect" id="node5" href="$learningTrackData_8cpp.html#ab075e7673b4ce348dc0b7c6615ff779a" title="testDeviceVector" alt="" coords="215,157,337,184"/>
+<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="210,5,342,32"/>
+<area shape="rect" id="node3" href="$autoEncoder_8cpp.html#ab075e7673b4ce348dc0b7c6615ff779a" title="testDeviceVector" alt="" coords="215,56,337,83"/>
+<area shape="rect" id="node5" href="$classDeviceVector.html#a875dbcee52a101f197c780810095fe8f" title="DeviceVector::DeviceVector" alt="" coords="182,107,370,133"/>
+<area shape="rect" id="node6" href="$classDeviceVector.html#a3f1274f6d0cc0131362706a2d291cec6" title="DeviceVector::set" alt="" coords="213,157,339,184"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="248,208,304,235"/>
 <area shape="rect" id="node8" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="240,259,312,285"/>
-<area shape="rect" id="node6" href="$learningTrackData_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="419,157,469,184"/>
+<area shape="rect" id="node4" href="$autoEncoder_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="419,56,469,83"/>
 </map>

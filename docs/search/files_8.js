@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['outputlayermulticlassclassification_2ecuh',['OutputLayerMulticlassClassification.cuh',['../OutputLayerMulticlassClassification_8cuh.html',1,'']]],
-  ['outputlayerregression_2ecuh',['OutputLayerRegression.cuh',['../OutputLayerRegression_8cuh.html',1,'']]]
+  ['statistics_2ecpp',['Statistics.cpp',['../Statistics_8cpp.html',1,'']]],
+  ['statistics_2eh',['Statistics.h',['../Statistics_8h.html',1,'']]]
 ];

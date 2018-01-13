@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="AutoEncoder.cuh" alt="" coords="1375,155,1498,181"/>
 <area shape="rect" id="node40" href="$Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="1591,155,1721,181"/>
 <area shape="rect" id="node41" href="$FXAutoEncoderDBAccessor_8cuh.html" title="FXAutoEncoderDBAccessor.cuh" alt="" coords="1746,155,1959,181"/>
-<area shape="rect" id="node43" href="$TimeUtil_8h.html" title="TimeUtil.h" alt="" coords="2127,229,2209,256"/>
+<area shape="rect" id="node43" href="$TimeUtil_8h.html" title="util/TimeUtil.h" alt="" coords="2123,229,2225,256"/>
 <area shape="rect" id="node4" href="$Normalization_8h.html" title="Normalization.h" alt="" coords="1511,229,1623,256"/>
 <area shape="rect" id="node24" href="$Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="849,304,993,331"/>
 <area shape="rect" id="node39" href="$OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1275,379,1459,405"/>
