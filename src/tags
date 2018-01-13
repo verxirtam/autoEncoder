@@ -285,7 +285,7 @@ setRandomUniform	CuRandFunction.cpp	/^void setRandomUniform(float min, float max
 setSubStreamCount	Backpropagation.cuh	/^	void setSubStreamCount(unsigned int substream_count) const$/;"	f	class:Backpropagation
 setWeight	Backpropagation.cuh	/^	void setWeight(const std::vector<std::vector<float> >& w)$/;"	f	class:Backpropagation
 stream	CudaManager.h	/^	std::vector<cudaStream_t> stream;$/;"	m	class:CudaManager
-stringToEpoch	TimeUtil.cpp	/^time_t TimeUtil::stringToEpoch(const std::string& timestr)$/;"	f	class:TimeUtil
+stringToEpoch	TimeUtil.cpp	/^time_t TimeUtil::stringToEpoch(const std::string& timestr_jst)$/;"	f	class:TimeUtil
 testCUBLAS	learningTrackData.cpp	/^int testCUBLAS()$/;"	f
 testCUBLASClass	learningTrackData.cpp	/^int testCUBLASClass()$/;"	f
 testDBAccessor	learningTrackData.cpp	/^int testDBAccessor(void)$/;"	f
