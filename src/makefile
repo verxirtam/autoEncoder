@@ -49,21 +49,26 @@ NVCC_LINKS := -lcuda $(CXX_LINKS)
 
 #ソースファイル
 #フォルダ直下の.cppファイル
-SRCS := $(shell ls *.cpp)
+#SRCS := $(shell ls *.cpp)
+SRCS := $(shell find * -name "*.cpp")
 
 #CUDAソース
 #フォルダ直下の.cuファイル
-CUDA_SRCS := $(shell ls *.cu)
+#CUDA_SRCS := $(shell ls *.cu)
+CUDA_SRCS := $(shell find * -name "*.cu")
+
+#中間ファイルの格納先
+OBJDIR := ./obj
 
 #オブジェクトファイル
 #.cpp or .cuを.oに置換している
-OBJS := $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o)
+OBJS := $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o))
 
 #ターゲット用のオブジェクトファイル
-OBJSTARGET := $(filter-out $(TESTTARGET).o $(GLTESTTARGET).o, $(OBJS))
+OBJSTARGET := $(filter-out $(OBJDIR)/$(TESTTARGET).o, $(OBJS))
 
 #テスト用のオブジェクトファイル
-OBJSTEST := $(filter-out $(TARGET).o $(GLTESTTARGET).o, $(OBJS))
+OBJSTEST := $(filter-out $(OBJDIR)/$(TARGET).o, $(OBJS))
 
 #テストのコマンドラインオプション
 TESTOPTION := --gtest_color=yes
@@ -145,6 +150,7 @@ maketest:
 #先頭に書くとコンパイルが通らない
 #<ターゲット>: ターゲットに依存するファイル
 #$@ : ターゲット名
+#$* : ターゲット名からサフィックスを除いたもの
 #$< : 最初の依存ファイル名(":"の右側の最初(一番左)の項目)
 #$^ : 依存ファイル全体
 $(TARGET): $(OBJSTARGET)
@@ -156,18 +162,19 @@ $(TESTTARGET): $(OBJSTEST)
 
 #オブジェクトファイルの作成
 #"-MMD"オプションによって依存関係ファイル(*.d)も同時に作成する
-%.o: %.cpp
-	$(CXX) -c -MMD $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS)
+$(OBJDIR)/%.o: %.cpp
+	$(CXX) -c -MMD $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
 
-%.o: %.cu
-	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -c $<
+$(OBJDIR)/%.o: %.cu
+	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -c $< -o $@
 	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< > $*.d
 
 #実行ファイル・中間ファイルの削除
 #".PHONY"はターゲットではなくコマンドであることを明示するためのコマンド
 .PHONY: clean
 clean:
-	$(RM) $(TARGET) $(TESTTARGET) $(GLTESTTARGET) $(OBJS) $(DEPS)
+	echo $(SRCS)
+	$(RM) $(TARGET) $(TESTTARGET) $(OBJS) $(DEPS)
 
 #依存関係ファイルをインクルードする
 #先頭に”-”を書いているので依存関係ファイルがなくてもエラーとならない

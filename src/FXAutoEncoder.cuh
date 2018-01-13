@@ -4,7 +4,7 @@
 #include "Func1to1Tanh.cuh"
 
 #include "FXAutoEncoderDBAccessor.cuh"
-#include "TimeUtil.h"
+#include "util/TimeUtil.h"
 
 #include "DBAccessor.h"
 

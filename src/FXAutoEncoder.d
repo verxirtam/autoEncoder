@@ -274,4 +274,4 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/c++/4.8/iostream \
     /usr/include/sqlite3.h \
-    TimeUtil.h
+    util/TimeUtil.h

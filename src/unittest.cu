@@ -52,7 +52,7 @@
 
 #include "BackpropagationUtils.cuh"
 
-#include "TimeUtil.h"
+#include "util/TimeUtil.h"
 
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
