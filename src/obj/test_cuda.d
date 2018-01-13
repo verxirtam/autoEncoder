@@ -116,7 +116,7 @@ test_cuda.o : test_cuda.cu \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
     ActivateFunction.cuh \
-    DeviceMatrix.h \
+    cuda/DeviceMatrix.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -145,7 +145,7 @@ test_cuda.o : test_cuda.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
-    CuBlasManager.h \
+    cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -211,10 +211,10 @@ test_cuda.o : test_cuda.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    CudaManager.h \
-    CudaException.h \
+    cuda/CudaManager.h \
+    cuda/CudaException.h \
     /usr/include/c++/4.8/stdexcept \
-    CuBlasException.h \
+    cuda/CuBlasException.h \
     ElementWiseFunction1to1.cuh \
     ElementWiseFunctionUtil.cuh \
     Func1to1Tanh.cuh \

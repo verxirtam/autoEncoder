@@ -9,7 +9,7 @@ obj/CuBlasManager.o: CuBlasManager.cpp CuBlasManager.h \
  /usr/local/cuda/include/surface_types.h \
  /usr/local/cuda/include/texture_types.h \
  /usr/local/cuda/include/cuda_fp16.h \
- /usr/local/cuda/include/library_types.h CudaManager.h \
+ /usr/local/cuda/include/library_types.h cuda/CudaManager.h \
  /usr/local/cuda/include/cuda_runtime.h \
  /usr/local/cuda/include/host_config.h \
  /usr/local/cuda/include/channel_descriptor.h \
@@ -17,5 +17,5 @@ obj/CuBlasManager.o: CuBlasManager.cpp CuBlasManager.h \
  /usr/local/cuda/include/cuda_device_runtime_api.h \
  /usr/local/cuda/include/driver_functions.h \
  /usr/local/cuda/include/vector_functions.h \
- /usr/local/cuda/include/vector_functions.hpp CudaException.h \
+ /usr/local/cuda/include/vector_functions.hpp cuda/CudaException.h \
  CuBlasException.h

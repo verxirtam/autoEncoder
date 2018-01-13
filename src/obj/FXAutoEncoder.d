@@ -118,8 +118,8 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     FXAutoEncoder.cuh \
     AutoEncoder.cuh \
     Normalization.h \
-    CuBlasFunction.h \
-    DeviceVector.h \
+    cuda/CuBlasFunction.h \
+    cuda/DeviceVector.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -148,7 +148,7 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
-    CuBlasManager.h \
+    cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -214,16 +214,16 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    CudaManager.h \
-    CudaException.h \
+    cuda/CudaManager.h \
+    cuda/CudaException.h \
     /usr/include/c++/4.8/stdexcept \
-    CuBlasException.h \
-    DeviceMatrix.h \
-    CuSolverDnFunction.h \
-    CuSolverDnManager.h \
+    cuda/CuBlasException.h \
+    cuda/DeviceMatrix.h \
+    cuda/CuSolverDnFunction.h \
+    cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
-    CuSolverDnException.h \
+    cuda/CuSolverDnException.h \
     Statistics.h \
     Backpropagation.cuh \
     /usr/include/c++/4.8/memory \
@@ -257,10 +257,10 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/include/c++/4.8/bits/random.tcc \
     /usr/include/c++/4.8/numeric \
     /usr/include/c++/4.8/bits/stl_numeric.h \
-    CuRandManager.h \
+    cuda/CuRandManager.h \
     /usr/include/c++/4.8/ctime \
     /usr/local/cuda/include/curand.h \
-    CuRandException.h \
+    cuda/CuRandException.h \
     BackpropagationException.h \
     ActivateFunction.cuh \
     ElementWiseFunction1to1.cuh \

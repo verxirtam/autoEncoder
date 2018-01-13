@@ -23,8 +23,8 @@
 #include <memory>
 #include <random>
 
-#include "CuBlasFunction.h"
-#include "CuRandManager.h"
+#include "cuda/CuBlasFunction.h"
+#include "cuda/CuRandManager.h"
 #include "BackpropagationException.h"
 
 

@@ -29,15 +29,15 @@
 #include <limits>
 #include <fstream>
 
-#include "DeviceVector.h"
-#include "DeviceMatrix.h"
+#include "cuda/DeviceVector.h"
+#include "cuda/DeviceMatrix.h"
 
 #include "BackpropagationTanhReg.cuh"
 
-#include "CuRandFunction.h"
+#include "cuda/CuRandFunction.h"
 
-#include "CuSolverDnManager.h"
-#include "CuSolverDnFunction.h"
+#include "cuda/CuSolverDnManager.h"
+#include "cuda/CuSolverDnFunction.h"
 
 #include "Normalization.h"
 
@@ -46,7 +46,7 @@
 #include "Func1to1ReLU.cuh"
 #include "Func1to1Logistic.cuh"
 
-#include "DeviceVectorUtils.h"
+#include "cuda/DeviceVectorUtils.h"
 
 #include "FXAutoEncoder.cuh"
 

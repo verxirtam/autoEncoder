@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DeviceMatrix.h"
+#include "cuda/DeviceMatrix.h"
 
 #include "ElementWiseFunction1to1.cuh"
 #include "ElementWiseFunctionUtil.cuh"

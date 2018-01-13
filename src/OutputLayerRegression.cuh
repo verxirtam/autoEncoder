@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 
-#include "DeviceMatrix.h"
+#include "cuda/DeviceMatrix.h"
 
 //回帰問題のための出力層の設定
 class OutputLayerRegression

@@ -294,16 +294,16 @@ unittest.o : unittest.cu \
     /usr/include/x86_64-linux-gnu/c++/4.8/bits/basic_file.h \
     /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++io.h \
     /usr/include/c++/4.8/bits/fstream.tcc \
-    DeviceVector.h \
-    CuBlasManager.h \
+    cuda/DeviceVector.h \
+    cuda/CuBlasManager.h \
     /usr/local/cuda/include/cublas_v2.h \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    CudaManager.h \
-    CudaException.h \
-    CuBlasException.h \
-    DeviceMatrix.h \
+    cuda/CudaManager.h \
+    cuda/CudaException.h \
+    cuda/CuBlasException.h \
+    cuda/DeviceMatrix.h \
     BackpropagationTanhReg.cuh \
     Backpropagation.cuh \
     /usr/include/c++/4.8/memory \
@@ -313,10 +313,10 @@ unittest.o : unittest.cu \
     /usr/include/c++/4.8/bits/shared_ptr.h \
     /usr/include/c++/4.8/bits/shared_ptr_base.h \
     /usr/include/c++/4.8/backward/auto_ptr.h \
-    CuBlasFunction.h \
-    CuRandManager.h \
+    cuda/CuBlasFunction.h \
+    cuda/CuRandManager.h \
     /usr/local/cuda/include/curand.h \
-    CuRandException.h \
+    cuda/CuRandException.h \
     BackpropagationException.h \
     ActivateFunction.cuh \
     ElementWiseFunction1to1.cuh \
@@ -326,18 +326,18 @@ unittest.o : unittest.cu \
     Backpropagation_detail.h \
     Func1to1Tanh.cuh \
     OutputLayerRegression.cuh \
-    CuRandFunction.h \
-    CuSolverDnManager.h \
+    cuda/CuRandFunction.h \
+    cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
-    CuSolverDnException.h \
-    CuSolverDnFunction.h \
+    cuda/CuSolverDnException.h \
+    cuda/CuSolverDnFunction.h \
     Normalization.h \
     Statistics.h \
     AutoEncoder.cuh \
     Func1to1ReLU.cuh \
     Func1to1Logistic.cuh \
-    DeviceVectorUtils.h \
+    cuda/DeviceVectorUtils.h \
     FXAutoEncoder.cuh \
     FXAutoEncoderDBAccessor.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \

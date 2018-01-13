@@ -116,8 +116,8 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
     Normalization.h \
-    CuBlasFunction.h \
-    DeviceVector.h \
+    cuda/CuBlasFunction.h \
+    cuda/DeviceVector.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -146,7 +146,7 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
-    CuBlasManager.h \
+    cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -212,14 +212,14 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    CudaManager.h \
-    CudaException.h \
+    cuda/CudaManager.h \
+    cuda/CudaException.h \
     /usr/include/c++/4.8/stdexcept \
-    CuBlasException.h \
-    DeviceMatrix.h \
-    CuSolverDnFunction.h \
-    CuSolverDnManager.h \
+    cuda/CuBlasException.h \
+    cuda/DeviceMatrix.h \
+    cuda/CuSolverDnFunction.h \
+    cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
-    CuSolverDnException.h \
+    cuda/CuSolverDnException.h \
     Statistics.h

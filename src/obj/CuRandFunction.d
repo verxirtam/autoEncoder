@@ -18,4 +18,4 @@ obj/CuRandFunction.o: CuRandFunction.cpp CuRandFunction.h CuRandManager.h \
  CuBlasFunction.h DeviceVector.h CuBlasManager.h \
  /usr/local/cuda/include/cublas_v2.h /usr/local/cuda/include/cublas_api.h \
  /usr/local/cuda/include/cuComplex.h /usr/local/cuda/include/cuda_fp16.h \
- CudaManager.h CudaException.h CuBlasException.h DeviceMatrix.h
+ cuda/CudaManager.h cuda/CudaException.h CuBlasException.h DeviceMatrix.h

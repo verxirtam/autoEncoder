@@ -18,8 +18,8 @@
 
 #pragma once
 
-#include "CuBlasFunction.h"
-#include "CuSolverDnFunction.h"
+#include "cuda/CuBlasFunction.h"
+#include "cuda/CuSolverDnFunction.h"
 
 #include "Statistics.h"
 
