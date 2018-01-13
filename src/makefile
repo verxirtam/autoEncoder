@@ -49,12 +49,10 @@ NVCC_LINKS := -lcuda $(CXX_LINKS)
 
 #ソースファイル
 #フォルダ直下の.cppファイル
-#SRCS := $(shell ls *.cpp)
 SRCS := $(shell find * -name "*.cpp")
 
 #CUDAソース
 #フォルダ直下の.cuファイル
-#CUDA_SRCS := $(shell ls *.cu)
 CUDA_SRCS := $(shell find * -name "*.cu")
 
 #中間ファイルの格納先
@@ -74,7 +72,7 @@ OBJSTEST := $(filter-out $(OBJDIR)/$(TARGET).o, $(OBJS))
 TESTOPTION := --gtest_color=yes
 
 #依存関係ファイル
-DEPS := $(SRCS:.cpp=.d) $(CUDA_SRCS:.cu=.d)
+DEPS := $(OBJS:.o=.d)
 
 #gprof2dot.pyのコマンド
 GPROF2DOT := ~/tools/gprof2dot/gprof2dot.py -s
@@ -166,8 +164,9 @@ $(OBJDIR)/%.o: %.cpp
 	$(CXX) -c -MMD $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
 
 $(OBJDIR)/%.o: %.cu
+	echo "$(@:.o=.d)"
 	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -c $< -o $@
-	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< > $*.d
+	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< > $(@:.o=.d)
 
 #実行ファイル・中間ファイルの削除
 #".PHONY"はターゲットではなくコマンドであることを明示するためのコマンド
