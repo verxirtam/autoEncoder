@@ -1,8 +1,8 @@
 
-#include "ActivateFunction.cuh"
+#include "nn/ActivateFunction.cuh"
 
-#include "Func1to1Tanh.cuh"
-#include "Func1to1ReLU.cuh"
+#include "nn/Func1to1Tanh.cuh"
+#include "nn/Func1to1ReLU.cuh"
 
 void test()
 {

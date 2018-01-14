@@ -1,7 +1,7 @@
 #pragma once
 
-#include "AutoEncoder.cuh"
-#include "Func1to1Tanh.cuh"
+#include "nn/AutoEncoder.cuh"
+#include "nn/Func1to1Tanh.cuh"
 
 #include "FXAutoEncoderDBAccessor.cuh"
 #include "util/TimeUtil.h"

@@ -116,10 +116,10 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
     FXAutoEncoder.cuh \
-    AutoEncoder.cuh \
-    Normalization.h \
-    cuda/CuBlasFunction.h \
-    cuda/DeviceVector.h \
+    nn/AutoEncoder.cuh \
+    nn/Normalization.h \
+    nn/../cuda/CuBlasFunction.h \
+    nn/../cuda/DeviceVector.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -148,7 +148,7 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
-    cuda/CuBlasManager.h \
+    nn/../cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -214,18 +214,18 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
-    cuda/CudaManager.h \
-    cuda/CudaException.h \
+    nn/../cuda/CudaManager.h \
+    nn/../cuda/CudaException.h \
     /usr/include/c++/4.8/stdexcept \
-    cuda/CuBlasException.h \
-    cuda/DeviceMatrix.h \
-    cuda/CuSolverDnFunction.h \
-    cuda/CuSolverDnManager.h \
+    nn/../cuda/CuBlasException.h \
+    nn/../cuda/DeviceMatrix.h \
+    nn/../cuda/CuSolverDnFunction.h \
+    nn/../cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
-    cuda/CuSolverDnException.h \
-    Statistics.h \
-    Backpropagation.cuh \
+    nn/../cuda/CuSolverDnException.h \
+    nn/Statistics.h \
+    nn/Backpropagation.cuh \
     /usr/include/c++/4.8/memory \
     /usr/include/c++/4.8/bits/stl_tempbuf.h \
     /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
@@ -257,19 +257,19 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/include/c++/4.8/bits/random.tcc \
     /usr/include/c++/4.8/numeric \
     /usr/include/c++/4.8/bits/stl_numeric.h \
-    cuda/CuRandManager.h \
+    nn/../cuda/CuRandManager.h \
     /usr/include/c++/4.8/ctime \
     /usr/local/cuda/include/curand.h \
-    cuda/CuRandException.h \
-    BackpropagationException.h \
-    ActivateFunction.cuh \
-    ElementWiseFunction1to1.cuh \
-    ElementWiseFunctionUtil.cuh \
-    Func2to1ElementWiseProduct.cuh \
-    ElementWiseFunction2to1.cuh \
-    Backpropagation_detail.h \
-    OutputLayerRegression.cuh \
-    Func1to1Tanh.cuh \
+    nn/../cuda/CuRandException.h \
+    nn/BackpropagationException.h \
+    nn/ActivateFunction.cuh \
+    nn/ElementWiseFunction1to1.cuh \
+    nn/ElementWiseFunctionUtil.cuh \
+    nn/Func2to1ElementWiseProduct.cuh \
+    nn/ElementWiseFunction2to1.cuh \
+    nn/Backpropagation_detail.h \
+    nn/OutputLayerRegression.cuh \
+    nn/Func1to1Tanh.cuh \
     FXAutoEncoderDBAccessor.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/c++/4.8/iostream \

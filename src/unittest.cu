@@ -32,25 +32,25 @@
 #include "cuda/DeviceVector.h"
 #include "cuda/DeviceMatrix.h"
 
-#include "BackpropagationTanhReg.cuh"
+#include "nn/BackpropagationTanhReg.cuh"
 
 #include "cuda/CuRandFunction.h"
 
 #include "cuda/CuSolverDnManager.h"
 #include "cuda/CuSolverDnFunction.h"
 
-#include "Normalization.h"
+#include "nn/Normalization.h"
 
-#include "AutoEncoder.cuh"
-#include "Func1to1Tanh.cuh"
-#include "Func1to1ReLU.cuh"
-#include "Func1to1Logistic.cuh"
+#include "nn/AutoEncoder.cuh"
+#include "nn/Func1to1Tanh.cuh"
+#include "nn/Func1to1ReLU.cuh"
+#include "nn/Func1to1Logistic.cuh"
 
 #include "cuda/DeviceVectorUtils.h"
 
 #include "FXAutoEncoder.cuh"
 
-#include "BackpropagationUtils.cuh"
+#include "nn/BackpropagationUtils.cuh"
 
 #include "util/TimeUtil.h"
 

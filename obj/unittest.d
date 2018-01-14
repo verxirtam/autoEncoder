@@ -304,8 +304,8 @@ unittest.o : unittest.cu \
     cuda/CudaException.h \
     cuda/CuBlasException.h \
     cuda/DeviceMatrix.h \
-    BackpropagationTanhReg.cuh \
-    Backpropagation.cuh \
+    nn/BackpropagationTanhReg.cuh \
+    nn/Backpropagation.cuh \
     /usr/include/c++/4.8/memory \
     /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
     /usr/include/c++/4.8/ext/concurrence.h \
@@ -313,35 +313,35 @@ unittest.o : unittest.cu \
     /usr/include/c++/4.8/bits/shared_ptr.h \
     /usr/include/c++/4.8/bits/shared_ptr_base.h \
     /usr/include/c++/4.8/backward/auto_ptr.h \
-    cuda/CuBlasFunction.h \
-    cuda/CuRandManager.h \
+    nn/../cuda/CuBlasFunction.h \
+    nn/../cuda/CuRandManager.h \
     /usr/local/cuda/include/curand.h \
-    cuda/CuRandException.h \
-    BackpropagationException.h \
-    ActivateFunction.cuh \
-    ElementWiseFunction1to1.cuh \
-    ElementWiseFunctionUtil.cuh \
-    Func2to1ElementWiseProduct.cuh \
-    ElementWiseFunction2to1.cuh \
-    Backpropagation_detail.h \
-    Func1to1Tanh.cuh \
-    OutputLayerRegression.cuh \
+    nn/../cuda/CuRandException.h \
+    nn/BackpropagationException.h \
+    nn/ActivateFunction.cuh \
+    nn/ElementWiseFunction1to1.cuh \
+    nn/ElementWiseFunctionUtil.cuh \
+    nn/Func2to1ElementWiseProduct.cuh \
+    nn/ElementWiseFunction2to1.cuh \
+    nn/Backpropagation_detail.h \
+    nn/Func1to1Tanh.cuh \
+    nn/OutputLayerRegression.cuh \
     cuda/CuRandFunction.h \
     cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
     cuda/CuSolverDnException.h \
     cuda/CuSolverDnFunction.h \
-    Normalization.h \
-    Statistics.h \
-    AutoEncoder.cuh \
-    Func1to1ReLU.cuh \
-    Func1to1Logistic.cuh \
+    nn/Normalization.h \
+    nn/Statistics.h \
+    nn/AutoEncoder.cuh \
+    nn/Func1to1ReLU.cuh \
+    nn/Func1to1Logistic.cuh \
     cuda/DeviceVectorUtils.h \
     FXAutoEncoder.cuh \
     FXAutoEncoderDBAccessor.cuh \
     /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
     /usr/include/sqlite3.h \
     util/TimeUtil.h \
-    BackpropagationUtils.cuh \
-    BackpropagationUtils_detail.cuh
+    nn/BackpropagationUtils.cuh \
+    nn/BackpropagationUtils_detail.cuh
