@@ -56,7 +56,7 @@ SRCS := $(shell find * -name "*.cpp")
 CUDA_SRCS := $(shell find * -name "*.cu")
 
 #中間ファイルの格納先
-OBJDIR := ./obj
+OBJDIR := ../obj
 
 #オブジェクトファイル
 #.cpp or .cuを.oに置換している
