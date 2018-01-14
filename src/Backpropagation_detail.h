@@ -88,7 +88,7 @@ template<class AF,class OutputLayer>
 void Backpropagation<AF, OutputLayer>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)
 {
 	//NULL Streamを使用する
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	
 	if(layerCount != unit_count.size())
 	{
@@ -170,7 +170,7 @@ template<class AF,class OutputLayer>
 void Backpropagation<AF, OutputLayer>::initRandom(void)
 {
 	//NULL Streamを使用する
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	/*
 	std::random_device rdev;
 	std::mt19937 engine(rdev());
@@ -202,7 +202,7 @@ void Backpropagation<AF, OutputLayer>::initRandom(void)
 		*/
 		//TODO 初期値を設定する処理を書くこと
 		float stddev = 0.125f / std::sqrt(static_cast<float>(N));
-		CURAND_CALL(curandGenerateNormal(CuRandManager::getGenerator(),w.getAddress(), M * N, 0.0f, stddev));
+		CURAND_CALL(curandGenerateNormal(cuda::CuRandManager::getGenerator(),w.getAddress(), M * N, 0.0f, stddev));
 	}
 	//biasは一律0で初期化する
 	for(auto&& b : bias)
@@ -234,7 +234,7 @@ void Backpropagation<AF, OutputLayer>::forward(const DeviceMatrix& X, DeviceMatr
 {
 	//使用するStreamをMainStreamに設定
 	//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	
 	z[0] = X;
 	//ストリーム完了待ち
@@ -266,7 +266,7 @@ template<class AF,class OutputLayer>
 void Backpropagation<AF, OutputLayer>::back(const DeviceMatrix& D)
 {
 	//使用するStreamをMainStreamに設定
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getMainStream()));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), this->getMainStream()));
 	
 	//初期化
 	//delta[layer_count - 1] = u[layer_count - 1] - dd;
@@ -295,7 +295,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 	{
 		//使用するStreamを設定
 		unsigned int si = (2 * l) % substream_count;
-		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
+		CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), this->getSubStream(si)));
 		
 		//モメンタム
 		//-----------------------------------------------
@@ -329,7 +329,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		
 		//使用するStreamを設定
 		si = (2 * l + 1) % substream_count;
-		CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this->getSubStream(si)));
+		CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), this->getSubStream(si)));
 		
 		//モメンタム
 		//-----------------------------------------------

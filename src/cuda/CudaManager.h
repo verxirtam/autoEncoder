@@ -23,6 +23,9 @@
 
 #include "CudaException.h"
 
+namespace cuda
+{
+
 #define CUDA_CALL(cmd)\
 {\
 	{\
@@ -37,7 +40,7 @@
 			msg << __LINE__ << " ";\
 			msg << __PRETTY_FUNCTION__ << " ";\
 			msg << #cmd << std::endl;\
-			throw CudaException(msg.str());\
+			throw cuda::CudaException(msg.str());\
 		}\
 	}\
 }
@@ -111,4 +114,5 @@ public:
 	}
 };
 
+}
 

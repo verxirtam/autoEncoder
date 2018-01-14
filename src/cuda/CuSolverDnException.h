@@ -22,6 +22,9 @@
 
 #include <string>
 
+namespace cuda
+{
+
 class CuSolverDnException : public std::runtime_error
 {
 public:
@@ -34,5 +37,7 @@ public:
 	{
 	}
 };
+
+}
 
 

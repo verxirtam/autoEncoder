@@ -17,6 +17,9 @@
  */
 #include "Statistics.h"
 
+//名前空間cudaを使用
+using namespace cuda;
+
 //平均と分散共分散行列を求める
 void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)
 {

@@ -25,6 +25,9 @@
 template <class AF>
 class AutoEncoder
 {
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
 private:
 	Normalization normalization;
 	const unsigned int layerCount;

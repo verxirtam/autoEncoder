@@ -17,6 +17,9 @@
  */
 #include "CuRandManager.h"
 
+namespace cuda
+{
+
 const char* CuRandManager::getErrorString(curandStatus_t error)
 {
 	switch(error)
@@ -63,3 +66,6 @@ const char* CuRandManager::getErrorString(curandStatus_t error)
 	}
 	return "<unknown status>";
 }
+
+}
+

@@ -22,6 +22,9 @@
 
 #include "CuBlasManager.h"
 
+namespace cuda
+{
+
 class DeviceMatrix
 {
 private:
@@ -187,4 +190,5 @@ public:
 	
 };
 
+}
 

@@ -17,6 +17,8 @@
  */
 #include "Normalization.h"
 
+//名前空間cudaを使用
+using namespace cuda;
 
 //白色化を行う
 DeviceMatrix Normalization::getWhitening

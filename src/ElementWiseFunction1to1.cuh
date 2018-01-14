@@ -4,10 +4,16 @@
 //成分毎に計算する関数(1変数)
 //Func1to1 : 1変数関数
 
+#include "cuda/DeviceMatrix.h"
+#include "cuda/DeviceVector.h"
+
 
 template<class Func1to1>
 class ElementWiseFunction1to1
 {
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
 private:
 	static void culculateBlockThreadCount
 		(
@@ -47,12 +53,15 @@ namespace
 template<typename Func1to1>
 void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount
 	(
-		const DeviceMatrix& x,
+		const cuda::DeviceMatrix& x,
 		unsigned int& block_count,
 		unsigned int& thread_count,
 		unsigned int& thread_count_remain
 	)
 {
+	//名前空間cudaを使用
+	using namespace cuda;
+	
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count_local = CudaManager::getDeviceProp().maxThreadsPerBlock;
 	thread_count = thread_count_local;
@@ -67,8 +76,12 @@ void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount
 }
 
 template<typename Func1to1>
-DeviceMatrix& ElementWiseFunction1to1<Func1to1>::apply(const DeviceMatrix& x, DeviceMatrix& y)
+cuda::DeviceMatrix& ElementWiseFunction1to1<Func1to1>::apply(const cuda::DeviceMatrix& x, cuda::DeviceMatrix& y)
 {
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
+	
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count;
 	//スレッド数thread_countで実行するブロック数

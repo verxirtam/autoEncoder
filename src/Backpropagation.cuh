@@ -36,6 +36,9 @@
 template<class AF, class OutputLayer>
 class Backpropagation
 {
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
 private:
 	
 	const unsigned int layerCount;
@@ -260,19 +263,19 @@ public:
 	}
 	void setSubStreamCount(unsigned int substream_count) const
 	{
-		CudaManager::getInstance().initStream(substream_count + 1);
+		cuda::CudaManager::getInstance().initStream(substream_count + 1);
 	}
 	unsigned int getSubStreamCount(void) const
 	{
-		return CudaManager::getInstance().getStreamCount() - 1;
+		return cuda::CudaManager::getInstance().getStreamCount() - 1;
 	}
 	cudaStream_t getMainStream(void) const
 	{
-		return CudaManager::getInstance().getStream(0);
+		return cuda::CudaManager::getInstance().getStream(0);
 	}
 	cudaStream_t getSubStream(unsigned int stream_index) const
 	{
-		return CudaManager::getInstance().getStream(stream_index + 1);
+		return cuda::CudaManager::getInstance().getStream(stream_index + 1);
 	}
 	unsigned int getMiniBatchSize() const
 	{

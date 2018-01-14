@@ -29,6 +29,8 @@
 #include "cuda/CuBlasFunction.h"
 
 
+//名前空間cudaを使用
+using namespace cuda;
 
 using track = std::array<float, 4>;
 

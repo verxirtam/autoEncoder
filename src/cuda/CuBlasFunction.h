@@ -21,6 +21,11 @@
 #include "DeviceVector.h"
 #include "DeviceMatrix.h"
 
+
+namespace cuda
+{
+
+
 //y = alpha * x + y;
 void Saxpy
 	(
@@ -205,5 +210,5 @@ void Sasum
 		float& result
 	);
 
-
+}
 

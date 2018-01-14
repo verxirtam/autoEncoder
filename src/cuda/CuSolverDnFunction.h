@@ -23,6 +23,9 @@
 
 #include "CuSolverDnManager.h"
 
+namespace cuda
+{
+
 //対称行列に対する固有値・固有ベクトルを求める
 // A * V = V * diag(W)
 //A 対称行列
@@ -34,4 +37,6 @@ void DnSsyevd
 		DeviceVector& W,
 		DeviceMatrix& V
 	);
+
+}
 

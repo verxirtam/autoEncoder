@@ -27,6 +27,9 @@
 class Normalization
 {
 private:
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
 	//平均
 	DeviceVector mean;
 	//分散共分散行列

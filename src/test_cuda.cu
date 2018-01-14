@@ -6,6 +6,8 @@
 
 void test()
 {
+	using namespace cuda;
+	
 	ActivateFunction<Func1to1Tanh> af_tanh;
 	ActivateFunction<Func1to1ReLU> af_relu;
 	DeviceMatrix x = DeviceMatrix::get0Matrix(2,2);

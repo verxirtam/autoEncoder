@@ -26,6 +26,9 @@
 
 #include "CuRandException.h"
 
+namespace cuda
+{
+
 #define CURAND_CALL(cmd)\
 {\
 	{\
@@ -35,12 +38,12 @@
 		{\
 			std::stringstream msg;\
 			msg << "CURAND_ERROR : ";\
-			msg << CuRandManager::getErrorString(error) << " at ";\
+			msg << cuda::CuRandManager::getErrorString(error) << " at ";\
 			msg << __FILE__ << ":";\
 			msg << __LINE__ << " ";\
 			msg << __PRETTY_FUNCTION__ << " ";\
 			msg << #cmd << std::endl;\
-			throw CuRandException(msg.str());\
+			throw cuda::CuRandException(msg.str());\
 		}\
 	}\
 }
@@ -84,5 +87,7 @@ public:
 	}
 	static const char* getErrorString(curandStatus_t error);
 };
+
+}
 
 

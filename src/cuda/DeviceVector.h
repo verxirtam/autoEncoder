@@ -23,6 +23,10 @@
 
 #include "CuBlasManager.h"
 
+
+namespace cuda
+{
+
 class DeviceVector
 {
 private:
@@ -198,4 +202,6 @@ public:
 	}
 };
 
+
+}
 

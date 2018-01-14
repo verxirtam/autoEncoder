@@ -10,7 +10,7 @@ class OutputLayerRegression
 {
 public:
 	//活性化関数 = 恒等写像
-	static void activateFunction(const DeviceMatrix& u, DeviceMatrix& z)
+	static void activateFunction(const cuda::DeviceMatrix& u, cuda::DeviceMatrix& z)
 	{
 		z = u;
 	}

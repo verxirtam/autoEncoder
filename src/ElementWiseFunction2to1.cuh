@@ -12,14 +12,14 @@ private:
 	//TODO ElementWiseFunction1to1と統合すること
 	static void culculateBlockThreadCount
 		(
-			const DeviceMatrix& x,
+			const cuda::DeviceMatrix& x,
 			unsigned int& block_count,
 			unsigned int& thread_count,
 			unsigned int& thread_count_remain
 		);
 public:
 	//関数の適用
-	static DeviceMatrix& apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z);
+	static cuda::DeviceMatrix& apply(const cuda::DeviceMatrix& x, const cuda::DeviceMatrix& y, cuda::DeviceMatrix& z);
 };
 
 
@@ -49,14 +49,14 @@ namespace
 template<typename Func2to1>
 void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount
 	(
-		const DeviceMatrix& x,
+		const cuda::DeviceMatrix& x,
 		unsigned int& block_count,
 		unsigned int& thread_count,
 		unsigned int& thread_count_remain
 	)
 {
 	//1ブロックあたりのスレッド数の上限
-	static unsigned int thread_count_local = CudaManager::getDeviceProp().maxThreadsPerBlock;
+	static unsigned int thread_count_local = cuda::CudaManager::getDeviceProp().maxThreadsPerBlock;
 	thread_count = thread_count_local;
 	
 	//生成するスレッド数全体
@@ -69,8 +69,10 @@ void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount
 }
 
 template<typename Func2to1>
-DeviceMatrix& ElementWiseFunction2to1<Func2to1>::apply(const DeviceMatrix& x, const DeviceMatrix& y, DeviceMatrix& z)
+cuda::DeviceMatrix& ElementWiseFunction2to1<Func2to1>::apply(const cuda::DeviceMatrix& x, const cuda::DeviceMatrix& y, cuda::DeviceMatrix& z)
 {
+	using namespace cuda;
+	
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count;
 	//スレッド数thread_countで実行するブロック数

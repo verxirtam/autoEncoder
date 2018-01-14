@@ -18,6 +18,9 @@
 
 #include "CuRandFunction.h"
 
+namespace cuda
+{
+
 void setRandomUniform(float min, float max, DeviceVector& v)
 {
 	unsigned int N = v.getDimension();
@@ -42,4 +45,5 @@ void setRandomUniform(float min, float max, DeviceMatrix& m)
 	Saxpy(&alpha, m1, m);
 }
 
+}
 

@@ -10,6 +10,7 @@
 
 namespace
 {
+	//using namespace cuda;
 	
 	void writeSingleNodeSetting(std::ostream& out, unsigned int layer_index, unsigned int dimension, const std::string& node_name)
 	{
@@ -28,7 +29,7 @@ namespace
 		out << std::endl;
 	}
 	
-	void writeNodeSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight)
+	void writeNodeSettings(std::ostream& out, const std::vector<cuda::DeviceMatrix>& weight)
 	{
 		unsigned int layer_count = weight.size();
 		
@@ -44,7 +45,12 @@ namespace
 		
 	}
 	
-	void writeEdgeSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight, const std::vector<DeviceVector>& bias)
+	void writeEdgeSettings
+		(
+			std::ostream& out, 
+			const std::vector<cuda::DeviceMatrix>& weight, 
+			const std::vector<cuda::DeviceVector>& bias
+		)
 	{
 		unsigned int layer_count = weight.size();
 		
@@ -97,7 +103,7 @@ namespace
 			}
 		}
 	}
-	void writeRankSettings(std::ostream& out, const std::vector<DeviceMatrix>& weight)
+	void writeRankSettings(std::ostream& out, const std::vector<cuda::DeviceMatrix>& weight)
 	{
 		unsigned int layer_count = weight.size();
 		

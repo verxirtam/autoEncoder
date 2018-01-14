@@ -10,12 +10,12 @@ class ActivateFunction
 {
 public:
 	//活性化関数
-	static DeviceMatrix& activate(const DeviceMatrix& x, DeviceMatrix& y)
+	static cuda::DeviceMatrix& activate(const cuda::DeviceMatrix& x, cuda::DeviceMatrix& y)
 	{
 		return ElementWiseFunction1to1<Func1to1>::apply(x, y);
 	}
 	//活性化関数の微分
-	static DeviceMatrix& activateDiff(const DeviceMatrix& x, DeviceMatrix& y)
+	static cuda::DeviceMatrix& activateDiff(const cuda::DeviceMatrix& x, cuda::DeviceMatrix& y)
 	{
 		return ElementWiseFunction1to1<Func1to1ApplyDiff<Func1to1> >::apply(x, y);
 	}

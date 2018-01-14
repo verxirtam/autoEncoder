@@ -18,6 +18,9 @@
 
 #include "CuSolverDnFunction.h"
 
+namespace cuda
+{
+
 
 //対称行列に対する固有値・固有ベクトルを求める
 // A * V = V * diag(W)
@@ -126,5 +129,7 @@ void DnSsyevd
 	//デバイスメモリの開放
 	CUDA_CALL(cudaFree(devinfo));
 	
+}
+
 }
 

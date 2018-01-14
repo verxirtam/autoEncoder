@@ -54,6 +54,10 @@
 
 #include "util/TimeUtil.h"
 
+
+
+using namespace cuda;
+
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
 	std::cout << vname << " = {";

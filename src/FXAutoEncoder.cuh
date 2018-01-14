@@ -10,6 +10,9 @@
 
 class FXAutoEncoder
 {
+	//名前空間cudaを使用
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
 private:
 	//オートエンコーダの型
 	using AutoEncoderType = AutoEncoder<Func1to1Tanh>;
