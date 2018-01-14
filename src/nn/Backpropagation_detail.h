@@ -17,7 +17,7 @@ void Backpropagation<AF, OutputLayer>::obtainZFromU(unsigned int l)
 		return;
 	}
 	
-	ActivateFunction<AF>::activate(u[l + 1], z[l + 1]);
+	nn::ActivateFunction<AF>::activate(u[l + 1], z[l + 1]);
 }
 
 

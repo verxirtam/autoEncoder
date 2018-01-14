@@ -5,6 +5,9 @@
 #include "ElementWiseFunction1to1.cuh"
 #include "ElementWiseFunctionUtil.cuh"
 
+namespace nn
+{
+
 template<typename Func1to1>
 class ActivateFunction
 {
@@ -20,4 +23,6 @@ public:
 		return ElementWiseFunction1to1<Func1to1ApplyDiff<Func1to1> >::apply(x, y);
 	}
 };
+
+}
 

@@ -7,6 +7,7 @@
 void test()
 {
 	using namespace cuda;
+	using namespace nn;
 	
 	ActivateFunction<Func1to1Tanh> af_tanh;
 	ActivateFunction<Func1to1ReLU> af_relu;

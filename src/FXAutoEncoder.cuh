@@ -15,7 +15,7 @@ class FXAutoEncoder
 	using DeviceVector = cuda::DeviceVector;
 private:
 	//オートエンコーダの型
-	using AutoEncoderType = AutoEncoder<Func1to1Tanh>;
+	using AutoEncoderType = nn::AutoEncoder<Func1to1Tanh>;
 	//オートエンコーダ
 	AutoEncoderType autoEncoder;
 	//DBファイル名

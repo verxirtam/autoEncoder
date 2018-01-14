@@ -23,6 +23,9 @@
 
 #include "Statistics.h"
 
+namespace nn
+{
+
 //入力データの正規化を行う
 class Normalization
 {
@@ -144,4 +147,6 @@ public:
 		return getInverseWhitening(inverseZCAWhiteningMatrix, X, _1B);
 	}
 };
+
+}
 

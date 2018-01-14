@@ -20,6 +20,9 @@
 //名前空間cudaを使用
 using namespace cuda;
 
+namespace nn
+{
+
 //平均と分散共分散行列を求める
 void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)
 {
@@ -75,7 +78,7 @@ void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, Devi
 }
 
 
-
+}
 
 
 

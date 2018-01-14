@@ -57,6 +57,7 @@
 
 
 using namespace cuda;
+using namespace nn;
 
 void printVector(const std::vector<float>& v, const std::string& vname)
 {

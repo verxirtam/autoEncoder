@@ -22,6 +22,9 @@
 #include "Backpropagation.cuh"
 #include "OutputLayerRegression.cuh"
 
+namespace nn
+{
+
 template <class AF>
 class AutoEncoder
 {
@@ -111,4 +114,5 @@ public:
 	}
 };
 
+}
 

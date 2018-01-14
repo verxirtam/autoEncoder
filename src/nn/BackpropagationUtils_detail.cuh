@@ -10,7 +10,6 @@
 
 namespace
 {
-	//using namespace cuda;
 	
 	void writeSingleNodeSetting(std::ostream& out, unsigned int layer_index, unsigned int dimension, const std::string& node_name)
 	{

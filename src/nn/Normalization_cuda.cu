@@ -1,6 +1,9 @@
 
 #include "Normalization.h"
 
+namespace nn
+{
+
 namespace
 {
 	__global__
@@ -56,5 +59,7 @@ void Normalization::invByElement(DeviceVector& W)
 	//TODO 非同期実行されているなら完了待ちしないといけない
 	//直後にWを使用するので同期する
 	CUDA_CALL(cudaStreamSynchronize(0));
+}
+
 }
 

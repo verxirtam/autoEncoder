@@ -17,6 +17,9 @@
  */
 #include "Normalization.h"
 
+namespace nn
+{
+
 //名前空間cudaを使用
 using namespace cuda;
 
@@ -164,5 +167,7 @@ void Normalization::init(const DeviceMatrix& X)
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
+}
+
 }
 

@@ -20,11 +20,15 @@
 
 #include "../cuda/CuBlasFunction.h"
 
+
+namespace nn
+{
+
 //平均と分散共分散行列を求める
 void getMeanAndVarCovMatrix(const cuda::DeviceMatrix& sample, cuda::DeviceVector& mean, cuda::DeviceMatrix& varCovMatrix, cudaStream_t stream);
 
 
-
+}
 
 
 
