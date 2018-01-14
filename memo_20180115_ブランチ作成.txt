@@ -1,0 +1,19 @@
+
+コマンド"make git"の修正
+	現在のブランチを更新するように変更(現状はmasterブランチを更新するようになっている)
+	
+branch add_namespace
+	名前空間の追加
+
+branch add_single_layer_bp
+	単層版のBPの追加
+		畳み込み層の作成
+		ペナルティ項の追加
+
+
+
+
+--------------------
+
+現在のブランチ名を取得するコマンド
+git branch | grep "*" | cut -d " " -f 2

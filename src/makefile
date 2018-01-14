@@ -119,7 +119,7 @@ testprof: $(TESTTARGET)
 git: $(TARGET)
 	(cd ..; git add --all .;)
 	(cd ..; git commit -a;)
-	(cd ..; git push -u origin master;)
+	(cd ..; git push -u origin `git branch | grep "*" | cut -d " " -f 2`;)
 
 .PHONY: doc
 doc: $(TARGET)
@@ -173,6 +173,7 @@ $(OBJDIR)/%.o: %.cu
 .PHONY: clean
 clean:
 	echo $(SRCS)
+	(cd ..; echo `git branch | grep "*" | cut -d " " -f 2`;)
 	$(RM) $(TARGET) $(TESTTARGET) $(OBJS) $(DEPS)
 
 #依存関係ファイルをインクルードする
