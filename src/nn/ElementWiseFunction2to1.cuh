@@ -1,6 +1,9 @@
 
 #pragma once
 
+namespace nn
+{
+
 //成分毎に計算する関数(2変数)
 //Func2to1 : 2変数関数
 
@@ -22,7 +25,7 @@ public:
 	static cuda::DeviceMatrix& apply(const cuda::DeviceMatrix& x, const cuda::DeviceMatrix& y, cuda::DeviceMatrix& z);
 };
 
-
+}
 
 namespace
 {
@@ -45,6 +48,10 @@ namespace
 		z[ij] = Func2to1::apply(x[ij], y[ij]);
 	}
 }
+
+namespace nn
+{
+
 
 template<typename Func2to1>
 void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount
@@ -112,5 +119,7 @@ cuda::DeviceMatrix& ElementWiseFunction2to1<Func2to1>::apply(const cuda::DeviceM
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
 	return z;
+}
+
 }
 

@@ -5,6 +5,9 @@
 
 #include "../cuda/DeviceMatrix.h"
 
+namespace nn
+{
+
 //回帰問題のための出力層の設定
 class OutputLayerRegression
 {
@@ -16,4 +19,5 @@ public:
 	}
 };
 
+}
 

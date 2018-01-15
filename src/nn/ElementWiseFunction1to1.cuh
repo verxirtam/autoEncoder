@@ -7,6 +7,9 @@
 #include "../cuda/DeviceMatrix.h"
 #include "../cuda/DeviceVector.h"
 
+namespace nn
+{
+
 
 template<class Func1to1>
 class ElementWiseFunction1to1
@@ -27,7 +30,7 @@ public:
 	static DeviceMatrix& apply(const DeviceMatrix& x, DeviceMatrix& y);
 };
 
-
+}
 
 namespace
 {
@@ -49,6 +52,10 @@ namespace
 		y[ij] = Func1to1::apply(x[ij]);
 	}
 }
+
+namespace nn
+{
+
 
 template<typename Func1to1>
 void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount
@@ -119,5 +126,7 @@ cuda::DeviceMatrix& ElementWiseFunction1to1<Func1to1>::apply(const cuda::DeviceM
 	CUDA_CALL(cudaStreamSynchronize(0));
 	
 	return y;
+}
+
 }
 

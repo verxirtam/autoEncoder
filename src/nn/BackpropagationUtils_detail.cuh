@@ -129,8 +129,12 @@ namespace
 	}
 }
 
+
+namespace nn
+{
+
 template<class AF, class OutputLayer>
-void writeToDotFile(const std::string& dotfilename, const Backpropagation<AF, OutputLayer>& backpropagation)
+void writeToDotFile(const std::string& dotfilename, const nn::Backpropagation<AF, OutputLayer>& backpropagation)
 {
 	auto weight = backpropagation.getWeight();
 	auto bias   = backpropagation.getBias();
@@ -152,7 +156,7 @@ void writeToDotFile(const std::string& dotfilename, const Backpropagation<AF, Ou
 
 
 template <class AF, class OutputLayer>
-std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& backpropagation)
+std::vector<float> getParameterVector(const nn::Backpropagation<AF, OutputLayer>& backpropagation)
 {
 	//TODO host <-> device間の通信を減らしたい
 	
@@ -181,4 +185,5 @@ std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& ba
 	return result;
 }
 
+}
 

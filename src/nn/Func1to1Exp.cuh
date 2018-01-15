@@ -18,6 +18,10 @@
 #pragma once
 
 
+namespace nn
+{
+
+
 class Func1to1Exp
 {
 public:
@@ -35,6 +39,6 @@ public:
 	}
 };
 
-
+}
 
 

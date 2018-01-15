@@ -8,6 +8,9 @@
 #include "ElementWiseFunction1to1.cuh"
 #include "Func1to1Exp.cuh"
 
+namespace nn
+{
+
 
 //多クラス分類のための出力層の設定
 class OutputLayerMulticlassClassification
@@ -26,4 +29,5 @@ public:
 	}
 };
 
+}
 

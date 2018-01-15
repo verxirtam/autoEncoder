@@ -7,6 +7,8 @@
 
 #include "Backpropagation.cuh"
 
+namespace nn
+{
 
 template <class AF, class OutputLayer>
 void writeToDotFile(const std::string& dotfilename, const Backpropagation<AF, OutputLayer>& backpropagation);
@@ -15,7 +17,7 @@ void writeToDotFile(const std::string& dotfilename, const Backpropagation<AF, Ou
 template <class AF, class OutputLayer>
 std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& backpropagation);
 
-
+}
 
 #include "BackpropagationUtils_detail.cuh"
 

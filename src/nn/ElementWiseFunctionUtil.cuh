@@ -1,5 +1,9 @@
 #pragma once
 
+namespace nn
+{
+
+
 //2変数関数Func2to1の第1変数にFunc1to1を合成する
 template<class Func2to1, class Func1to1>
 class Func2to1Composite1st
@@ -40,7 +44,7 @@ public:
 	}
 };
 
-
+}
 
 
 

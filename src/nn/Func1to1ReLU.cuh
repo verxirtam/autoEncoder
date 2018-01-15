@@ -17,6 +17,9 @@
  */
 #pragma once
 
+namespace nn
+{
+
 
 class Func1to1ReLU
 {
@@ -35,6 +38,6 @@ public:
 	}
 };
 
-
+}
 
 

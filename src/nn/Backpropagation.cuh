@@ -33,6 +33,9 @@
 #include "ElementWiseFunction2to1.cuh"
 #include "ElementWiseFunctionUtil.cuh"
 
+namespace nn
+{
+
 template<class AF, class OutputLayer>
 class Backpropagation
 {
@@ -286,6 +289,8 @@ public:
 		return layerCount;
 	}
 };
+
+}
 
 #include "Backpropagation_detail.h"
 

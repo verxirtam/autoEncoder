@@ -10,12 +10,9 @@
 
 class FXAutoEncoder
 {
-	//名前空間cudaを使用
-	using DeviceMatrix = cuda::DeviceMatrix;
-	using DeviceVector = cuda::DeviceVector;
 private:
 	//オートエンコーダの型
-	using AutoEncoderType = nn::AutoEncoder<Func1to1Tanh>;
+	using AutoEncoderType = nn::AutoEncoder<nn::Func1to1Tanh>;
 	//オートエンコーダ
 	AutoEncoderType autoEncoder;
 	//DBファイル名
@@ -36,7 +33,7 @@ private:
 	//学習用のクエリのキャッシュ
 	std::vector<float> learningQueryCache;
 	//正規化用の情報を取得する
-	void getNormarizeInput(DeviceMatrix& normarize_input);
+	void getNormarizeInput(cuda::DeviceMatrix& normarize_input);
 	//学習用のクエリから指定したレコード数分情報取得する
 	bool selectRecord(unsigned int record_count, std::vector<float>& output);
 public:
@@ -55,7 +52,7 @@ public:
 		return autoEncoder;
 	}
 	bool learning();
-	DeviceMatrix getAllInput()
+	cuda::DeviceMatrix getAllInput()
 	{
 		std::vector<float> result_vector;
 		while(selectRecord(1000, result_vector))
@@ -63,7 +60,7 @@ public:
 		}
 		unsigned int r = timeLength;
 		unsigned int c = result_vector.size() / timeLength;
-		DeviceMatrix result(r, c, result_vector);
+		cuda::DeviceMatrix result(r, c, result_vector);
 		return result;
 	}
 };

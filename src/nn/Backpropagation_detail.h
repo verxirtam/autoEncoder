@@ -1,5 +1,8 @@
 #pragma once
 
+namespace nn
+{
+
 /////////////////////////////////////////////////////////////////
 // Backpropagation.cuh のテンプレートクラスの実装
 /////////////////////////////////////////////////////////////////
@@ -370,4 +373,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		CUDA_CALL(cudaStreamSynchronize(getSubStream(s)));
 	}
 }
+
+}
+
 

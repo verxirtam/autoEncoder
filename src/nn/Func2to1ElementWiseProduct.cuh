@@ -1,6 +1,8 @@
 
 #pragma once
 
+namespace nn
+{
 
 class Func2to1ElementWiseProduct
 {
@@ -13,4 +15,5 @@ public:
 	}
 };
 
+}
 

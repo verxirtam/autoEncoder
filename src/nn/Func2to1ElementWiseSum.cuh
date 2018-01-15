@@ -1,6 +1,9 @@
 
 #pragma once
 
+namespace nn
+{
+
 
 class Func2to1ElementWiseSum
 {
@@ -13,4 +16,5 @@ public:
 	}
 };
 
+}
 
