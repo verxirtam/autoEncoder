@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mean',['mean',['../classNormalization.html#a275bc50701083bfdef098c315066d981',1,'Normalization']]],
-  ['minibatchsize',['miniBatchSize',['../classBackpropagation.html#ac13aba41b1e29692cd19a8116d3aa30d',1,'Backpropagation']]]
+  ['mean',['mean',['../classnn_1_1Normalization.html#a3e43420a118b0d1636e8901f8eb37131',1,'nn::Normalization']]],
+  ['minibatchsize',['miniBatchSize',['../classnn_1_1Backpropagation.html#a8d538dfe6d94399ab09915ca3de30125',1,'nn::Backpropagation']]]
 ];

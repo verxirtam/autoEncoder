@@ -1,4 +1,4 @@
-<map id="src/Func1to1ReLU.cuh" name="src/Func1to1ReLU.cuh">
+<map id="src/nn/Func1to1ReLU.cuh" name="src/nn/Func1to1ReLU.cuh">
 <area shape="rect" id="node2" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="5,80,123,107"/>
 <area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="147,80,252,107"/>
 </map>

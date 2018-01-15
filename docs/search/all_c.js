@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['normalization',['Normalization',['../classNormalization.html',1,'Normalization'],['../classAutoEncoder.html#ad6aee4b7f7c8305ba696e2049f355934',1,'AutoEncoder::normalization()'],['../classNormalization.html#a7998284e5456d915ebdb2520e4d74250',1,'Normalization::Normalization()']]],
+  ['nn',['nn',['../namespacenn.html',1,'']]],
+  ['normalization',['Normalization',['../classnn_1_1Normalization.html',1,'nn']]],
+  ['normalization',['normalization',['../classnn_1_1AutoEncoder.html#a1d6e23ab835edea2e4aeb1659645202c',1,'nn::AutoEncoder::normalization()'],['../classnn_1_1Normalization.html#aa1f58e1fd25596cd91fbbeea58355fa1',1,'nn::Normalization::Normalization()']]],
   ['normalization_2ecpp',['Normalization.cpp',['../Normalization_8cpp.html',1,'']]],
   ['normalization_2eh',['Normalization.h',['../Normalization_8h.html',1,'']]],
   ['normalization_5fcuda_2ecu',['Normalization_cuda.cu',['../Normalization__cuda_8cu.html',1,'']]],

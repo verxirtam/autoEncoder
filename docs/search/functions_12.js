@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['_7ecublasmanager',['~CuBlasManager',['../classCuBlasManager.html#aa4e928933f96fe0628f329174d59c806',1,'CuBlasManager']]],
-  ['_7ecudamanager',['~CudaManager',['../classCudaManager.html#ac248e2334d711d51a5be1df089223d87',1,'CudaManager']]],
-  ['_7ecurandmanager',['~CuRandManager',['../classCuRandManager.html#a6821587d9470498055b397f5dd20ee07',1,'CuRandManager']]],
-  ['_7ecusolverdnmanager',['~CuSolverDnManager',['../classCuSolverDnManager.html#a46e074514e6957f2dcfbd7ec1e15bca0',1,'CuSolverDnManager']]],
-  ['_7edevicematrix',['~DeviceMatrix',['../classDeviceMatrix.html#a74f7b918bfefcadab80528a77e207a97',1,'DeviceMatrix']]],
-  ['_7edevicevector',['~DeviceVector',['../classDeviceVector.html#aa808d221db1f222f68f0e6b748da049a',1,'DeviceVector']]]
+  ['_7ecublasmanager',['~CuBlasManager',['../classcuda_1_1CuBlasManager.html#a6549c187bf260a8811c090479032e641',1,'cuda::CuBlasManager']]],
+  ['_7ecudamanager',['~CudaManager',['../classcuda_1_1CudaManager.html#a81dc2bb2c4ffeb013cf40a522eb7853e',1,'cuda::CudaManager']]],
+  ['_7ecurandmanager',['~CuRandManager',['../classcuda_1_1CuRandManager.html#a10c6fc30e0871a9afbc1834e03fe3d86',1,'cuda::CuRandManager']]],
+  ['_7ecusolverdnmanager',['~CuSolverDnManager',['../classcuda_1_1CuSolverDnManager.html#ad7fcf4dd1319fa0e4a66d64cdbc48f79',1,'cuda::CuSolverDnManager']]],
+  ['_7edevicematrix',['~DeviceMatrix',['../classcuda_1_1DeviceMatrix.html#a7697540c322f19b0a591a4d3fb3af808',1,'cuda::DeviceMatrix']]],
+  ['_7edevicevector',['~DeviceVector',['../classcuda_1_1DeviceVector.html#a477f87c2d72b2814697934457a62d13b',1,'cuda::DeviceVector']]]
 ];

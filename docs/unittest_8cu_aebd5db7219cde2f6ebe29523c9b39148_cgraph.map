@@ -1,12 +1,12 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classBackpropagation.html#a14b837a4fa36334685afd07d74b65108" title="Backpropagation::init" alt="" coords="143,31,287,57"/>
-<area shape="rect" id="node8" href="$classBackpropagation.html#afe8f5e1baa9d4e302954e6a82c8fafd1" title="Backpropagation::setSubStream\lCount" alt="" coords="109,82,320,123"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html#a35bfc2a62f5fbaa6c75d5e31b6eadb6e" title="Backpropagation::getSubStream\lCount" alt="" coords="109,147,320,189"/>
-<area shape="rect" id="node10" href="$classBackpropagation.html#af478d3a28106e58da568b84f528bf706" title="Backpropagation::getMain\lStream" alt="" coords="128,213,301,254"/>
-<area shape="rect" id="node11" href="$classBackpropagation.html#ac5023f42deddaa9da5281f3c816fc0a4" title="Backpropagation::getSubStream" alt="" coords="109,279,320,305"/>
-<area shape="rect" id="node3" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="369,5,551,32"/>
-<area shape="rect" id="node5" href="$classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea" title="DeviceVector::get1Vector" alt="" coords="374,56,546,83"/>
-<area shape="rect" id="node4" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="605,5,795,32"/>
-<area shape="rect" id="node6" href="$classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="601,56,799,83"/>
-<area shape="rect" id="node7" href="$classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="849,56,1037,83"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="113,37,255,78"/>
+<area shape="rect" id="node8" href="$classnn_1_1Backpropagation.html#af5b64d2526b96ecea37d398a25e7d33e" title="nn::Backpropagation\l::setSubStreamCount" alt="" coords="110,102,258,143"/>
+<area shape="rect" id="node9" href="$classnn_1_1Backpropagation.html#a89b35c8d77934af3b1bc266e6195253f" title="nn::Backpropagation\l::getSubStreamCount" alt="" coords="110,167,258,209"/>
+<area shape="rect" id="node10" href="$classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36" title="nn::Backpropagation\l::getMainStream" alt="" coords="113,233,255,274"/>
+<area shape="rect" id="node11" href="$classnn_1_1Backpropagation.html#a5a426d574a0a34d55a74393245c1f59d" title="nn::Backpropagation\l::getSubStream" alt="" coords="113,298,255,339"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="307,5,458,46"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="314,70,451,111"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="507,5,658,46"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="514,70,651,111"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="707,70,845,111"/>
 </map>

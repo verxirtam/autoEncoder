@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['devicematrix',['DeviceMatrix',['../classDeviceMatrix.html',1,'']]],
+  ['devicematrix',['DeviceMatrix',['../classcuda_1_1DeviceMatrix.html',1,'cuda']]],
   ['devicematrixtest',['DeviceMatrixTest',['../classDeviceMatrixTest.html',1,'']]],
-  ['devicevector',['DeviceVector',['../classDeviceVector.html',1,'']]],
+  ['devicevector',['DeviceVector',['../classcuda_1_1DeviceVector.html',1,'cuda']]],
   ['devicevectortest',['DeviceVectorTest',['../classDeviceVectorTest.html',1,'']]]
 ];

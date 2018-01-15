@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['backpropagationtanhreg',['BackpropagationTanhReg',['../BackpropagationTanhReg_8cuh.html#a1007f5b9c9e76e49ac1875e58adffa8e',1,'BackpropagationTanhReg.cuh']]]
+  ['backpropagationtanhreg',['BackpropagationTanhReg',['../namespacenn.html#af8d313c7e65dda20e18dc9d9c2598d13',1,'nn']]]
 ];

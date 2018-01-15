@@ -1,6 +1,6 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="124,5,303,32"/>
-<area shape="rect" id="node3" href="$classCudaManager.html#af5165cd36e60be7791be7073e0a37a5a" title="CudaManager::initStream" alt="" coords="128,56,299,83"/>
-<area shape="rect" id="node4" href="$classCudaManager.html#a5c0a96150d325a3d1f0ed32c0413cc98" title="CudaManager::getStream" alt="" coords="128,107,299,133"/>
-<area shape="rect" id="node5" href="$classCudaManager.html#a77452ece2c085919024b759c01dfceed" title="CudaManager::getStreamCount" alt="" coords="110,157,317,184"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="109,5,256,46"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CudaManager.html#a006633206d874e690b52fe90f9032998" title="cuda::CudaManager::\linitStream" alt="" coords="109,70,256,111"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CudaManager.html#a3a5ece9369b7c54537125e6882dd6c5b" title="cuda::CudaManager::\lgetStream" alt="" coords="109,135,256,177"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CudaManager.html#a86c18fd2b2fac15c79aa4a6a8f701acc" title="cuda::CudaManager::\lgetStreamCount" alt="" coords="109,201,256,242"/>
 </map>

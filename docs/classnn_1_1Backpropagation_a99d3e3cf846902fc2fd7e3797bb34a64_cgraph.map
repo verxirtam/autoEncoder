@@ -1,0 +1,7 @@
+<map id="nn::Backpropagation::obtainDeltaLast" name="nn::Backpropagation::obtainDeltaLast">
+<area shape="rect" id="node2" href="$namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52" title="cuda::Saxpy" alt="" coords="195,77,290,104"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="346,5,483,46"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="339,70,490,111"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="346,135,483,177"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="539,70,690,111"/>
+</map>

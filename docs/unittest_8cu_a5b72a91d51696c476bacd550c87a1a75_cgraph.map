@@ -1,9 +1,9 @@
 <map id="AutoEncoderTest_momentum_estimate" name="AutoEncoderTest_momentum_estimate">
-<area shape="rect" id="node2" href="$classDeviceMatrix.html#a8c2c08acf67066fbef96ff57c8a13f2f" title="DeviceMatrix::set" alt="" coords="271,5,396,32"/>
-<area shape="rect" id="node3" href="$classAutoEncoder.html#a0481a87cc0313da60e2da983dccc4f28" title="AutoEncoder::setEpsilon" alt="" coords="250,56,417,83"/>
-<area shape="rect" id="node4" href="$classAutoEncoder.html#ab4897c068bf1b77d19787703fe28397d" title="AutoEncoder::setGamma" alt="" coords="249,107,418,133"/>
-<area shape="rect" id="node5" href="$classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder::init" alt="" coords="272,157,395,184"/>
-<area shape="rect" id="node6" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="258,208,409,235"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="278,259,389,285"/>
-<area shape="rect" id="node8" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="271,309,396,336"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#a0be8feb5dd2d7308969723c4697fd377" title="cuda::DeviceMatrix::set" alt="" coords="263,5,425,32"/>
+<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#a857af9e2d15c843c02f8a7ad044a9217" title="nn::AutoEncoder::setEpsilon" alt="" coords="250,56,438,83"/>
+<area shape="rect" id="node4" href="$classnn_1_1AutoEncoder.html#a9dfd5006f34b7b233336a17778c4d87c" title="nn::AutoEncoder::setGamma" alt="" coords="249,107,439,133"/>
+<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder::init" alt="" coords="272,157,416,184"/>
+<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder::learning" alt="" coords="258,208,430,235"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="289,259,399,285"/>
+<area shape="rect" id="node8" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="263,309,425,336"/>
 </map>

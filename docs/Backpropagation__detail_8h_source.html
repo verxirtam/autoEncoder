@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/Backpropagation_detail.h Source File</title>
+<title>autoEncoder: src/nn/Backpropagation_detail.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,404 +90,410 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="Backpropagation__detail_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Backpropagation.cuh のテンプレートクラスの実装</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classBackpropagation.html#ad196eadec9f96b257cf64452d8289e22">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#ad196eadec9f96b257cf64452d8289e22">Backpropagation&lt;AF, OutputLayer&gt;::obtainZFromU</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//最後のレイヤ(l == layerCount - 2)の場合はOutputLayerのActivateFunctionを使用する</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span>(l == layerCount - 2)</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">//z[l + 1] = u[l + 1];</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        OutputLayer::activateFunction(u[l + 1], z[l + 1]);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1">ActivateFunction&lt;AF&gt;::activate</a>(u[l + 1], z[l + 1]);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//delta[l] = f&#39;(u[l]) ** WTdelta[l + 1];</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBackpropagation.html#ada4b9cca80a8f2cc167287026dc65302">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#ada4b9cca80a8f2cc167287026dc65302">Backpropagation&lt;AF, OutputLayer&gt;::obtainDeltaFromFdUWTDelta</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//Func: (x, y) -&gt; AF&#39;(x) ** y</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">using</span> Func = <a class="code" href="classFunc2to1Composite1st.html">Func2to1Composite1st&lt;Func2to1ElementWiseProduct, Func1to1ApplyDiff&lt;AF&gt;</a> &gt;;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//delta[l] = Func(u[l], WTdelta[l + 1])</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//         = AF&#39;(u[l]) ** WTdelta[l + 1]</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classElementWiseFunction2to1.html#a7cf9d20d0d6e7d520b665969042dc2f7">ElementWiseFunction2to1&lt;Func&gt;::apply</a>(</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                u[l],</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                WTdelta[l + 1],</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                delta[l]</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//初期化</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//下記を実行する</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//delta[layer_count - 1] = u[layer_count - 1] - D;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//下記の2式に分けて実行する</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//delta[layerCount -1] = u[layer_count - 1];</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e">Backpropagation&lt;AF, OutputLayer&gt;::obtainDeltaLast</a>(<span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; D)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//delta[layerCount -1] = u[layer_count - 1];</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    delta[layerCount -1] = u[layerCount - 1];</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>nn</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// Backpropagation.cuh のテンプレートクラスの実装</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f">Backpropagation&lt;AF, OutputLayer&gt;::obtainZFromU</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//最後のレイヤ(l == layerCount - 2)の場合はOutputLayerのActivateFunctionを使用する</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(l == layerCount - 2)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//z[l + 1] = u[l + 1];</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        OutputLayer::activateFunction(u[l + 1], z[l + 1]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2">nn::ActivateFunction&lt;AF&gt;::activate</a>(u[l + 1], z[l + 1]);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//delta[l] = f&#39;(u[l]) ** WTdelta[l + 1];</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4">Backpropagation&lt;AF, OutputLayer&gt;::obtainDeltaFromFdUWTDelta</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Func: (x, y) -&gt; AF&#39;(x) ** y</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">using</span> Func = <a class="code" href="classnn_1_1Func2to1Composite1st.html">Func2to1Composite1st&lt;Func2to1ElementWiseProduct, Func1to1ApplyDiff&lt;AF&gt;</a> &gt;;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//delta[l] = Func(u[l], WTdelta[l + 1])</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//         = AF&#39;(u[l]) ** WTdelta[l + 1]</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904">ElementWiseFunction2to1&lt;Func&gt;::apply</a>(</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                u[l],</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                WTdelta[l + 1],</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                delta[l]</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            );</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//初期化</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//下記を実行する</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//delta[layer_count - 1] = u[layer_count - 1] - D;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//下記の2式に分けて実行する</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//delta[layerCount -1] = u[layer_count - 1];</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a99d3e3cf846902fc2fd7e3797bb34a64">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a99d3e3cf846902fc2fd7e3797bb34a64">Backpropagation&lt;AF, OutputLayer&gt;::obtainDeltaLast</a>(<span class="keyword">const</span> <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; D)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">float</span> alpha = -1.0f;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362">Saxpy</a>(&amp;alpha, D, delta[layerCount -1]);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//逆伝播でのdeltaの算出</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//lについて降順に逐次実行(&quot;**&quot;は要素ごとの積(cudaで実行))</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//delta[l] = f&#39;(u[l]) ** ((W[l + 1])^T * delta[l+1]);</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//l = layerCount - 2, ... , 1</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classBackpropagation.html#a3cf1ed29e3e03dbe1d5d7dcf3d24d337">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a3cf1ed29e3e03dbe1d5d7dcf3d24d337">Backpropagation&lt;AF, OutputLayer&gt;::obtainDelta</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//WTdelta[l +1] = (W[l + 1])^T * delta[l+1];</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//&lt;=&gt;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//WTdelta[l +1] = 1.0f * (W[l + 1])^T * delta[l+1] + 0.0f * WTdelta[l +1];</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">float</span> alpha = 1.0f;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">float</span> beta  = 0.0f;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a>(&amp;alpha, CUBLAS_OP_T, weight[l + 1], CUBLAS_OP_N, delta[l + 1], &amp;beta, WTdelta[l + 1]);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//delta[layerCount -1] = u[layer_count - 1];</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    delta[layerCount -1] = u[layerCount - 1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//delta[layer_count - 1] = (-1.0f) * D + delta[layerCount -1];</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> alpha = -1.0f;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52">Saxpy</a>(&amp;alpha, D, delta[layerCount -1]);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//逆伝播でのdeltaの算出</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//lについて降順に逐次実行(&quot;**&quot;は要素ごとの積(cudaで実行))</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//delta[l] = f&#39;(u[l]) ** ((W[l + 1])^T * delta[l+1]);</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//l = layerCount - 2, ... , 1</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a40730a67fc8414e5763b2445060452a8">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a40730a67fc8414e5763b2445060452a8">Backpropagation&lt;AF, OutputLayer&gt;::obtainDelta</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//WTdelta[l +1] = (W[l + 1])^T * delta[l+1];</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//&lt;=&gt;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//WTdelta[l +1] = 1.0f * (W[l + 1])^T * delta[l+1] + 0.0f * WTdelta[l +1];</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">float</span> alpha = 1.0f;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">float</span> beta  = 0.0f;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919">Sgemm</a>(&amp;alpha, CUBLAS_OP_T, weight[l + 1], CUBLAS_OP_N, delta[l + 1], &amp;beta, WTdelta[l + 1]);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//delta[l] = f&#39;(u[l]) ** WTdelta[l + 1];</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    obtainDeltaFromFdUWTDelta(l);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classBackpropagation.html#a14b837a4fa36334685afd07d74b65108">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a14b837a4fa36334685afd07d74b65108">Backpropagation&lt;AF, OutputLayer&gt;::init</a>(<span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; unit_count, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minibatch_size)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//NULL Streamを使用する</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), 0));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span>(layerCount != unit_count.size())</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classBackpropagationException.html">BackpropagationException</a>(<span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : layerCount != unit_count.size().&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    unitCount = unit_count;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span>(minibatch_size == 0)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classBackpropagationException.html">BackpropagationException</a>(<span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : minibatch_size == 0.&quot;</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    miniBatchSize = minibatch_size;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    u.clear();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    z.clear();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    weight.clear();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    bias.clear();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    WTdelta.clear();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    delta.clear();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    deltaWeight.clear();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    deltaBias.clear();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt; layerCount; l++)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">if</span>(unitCount[l] == 0)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            std::stringstream msg;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            msg &lt;&lt; <span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : unitCount[&quot;</span> &lt;&lt; l &lt;&lt; <span class="stringliteral">&quot;] == 0.&quot;</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classBackpropagationException.html">BackpropagationException</a>(msg.str());</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        z.push_back(<a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">if</span>(l == 0)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="comment">//インデックスl = 0は使用しないのでダミーの値を格納する。</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            u.push_back(      <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            weight.push_back( <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            bias.push_back(   <a class="code" href="classDeviceVector.html">DeviceVector</a>{0.0f}        );</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            WTdelta.push_back(<a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            delta.push_back(  <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            deltaWeight.push_back( <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            deltaBias.push_back(   <a class="code" href="classDeviceVector.html">DeviceVector</a>{0.0f}        );</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            u.push_back(      <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            weight.push_back( <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l],unitCount[l-1]));</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            bias.push_back(   <a class="code" href="classDeviceVector.html">DeviceVector</a>(unitCount[l]));</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            WTdelta.push_back(<a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l-1], miniBatchSize));</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            delta.push_back(  <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            deltaWeight.push_back( <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>(unitCount[l],unitCount[l-1]));</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            deltaBias.push_back(   <a class="code" href="classDeviceVector.html">DeviceVector</a>(unitCount[l]));</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    _1B = <a class="code" href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea">DeviceVector::get1Vector</a>(miniBatchSize);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">//weightとbiasをランダムに初期化する</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    this-&gt;initRandom();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//delta[l] = f&#39;(u[l]) ** WTdelta[l + 1];</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    obtainDeltaFromFdUWTDelta(l);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(this-&gt;getMainStream()));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa">Backpropagation&lt;AF, OutputLayer&gt;::init</a>(<span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; unit_count, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minibatch_size)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//NULL Streamを使用する</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), 0));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span>(layerCount != unit_count.size())</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classnn_1_1BackpropagationException.html">BackpropagationException</a>(<span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : layerCount != unit_count.size().&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    unitCount = unit_count;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>(minibatch_size == 0)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="classnn_1_1BackpropagationException.html">BackpropagationException</a>(<span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : minibatch_size == 0.&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    miniBatchSize = minibatch_size;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    u.clear();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    z.clear();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    weight.clear();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    bias.clear();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    WTdelta.clear();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    delta.clear();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    deltaWeight.clear();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    deltaBias.clear();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt; layerCount; l++)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span>(unitCount[l] == 0)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            std::stringstream msg;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            msg &lt;&lt; <span class="stringliteral">&quot;error at Backpropagation&lt;AF, OutputLayer&gt;::init() : unitCount[&quot;</span> &lt;&lt; l &lt;&lt; <span class="stringliteral">&quot;] == 0.&quot;</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classnn_1_1BackpropagationException.html">BackpropagationException</a>(msg.str());</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        z.push_back(<a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span>(l == 0)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">//インデックスl = 0は使用しないのでダミーの値を格納する。</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            u.push_back(      <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            weight.push_back( <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            bias.push_back(   <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a>{0.0f}        );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            WTdelta.push_back(<a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            delta.push_back(  <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            deltaWeight.push_back( <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(1, 1, {0.0f}));</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            deltaBias.push_back(   <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a>{0.0f}        );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            u.push_back(      <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            weight.push_back( <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l],unitCount[l-1]));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            bias.push_back(   <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a>(unitCount[l]));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            WTdelta.push_back(<a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l-1], miniBatchSize));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            delta.push_back(  <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l], miniBatchSize));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            deltaWeight.push_back( <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>(unitCount[l],unitCount[l-1]));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            deltaBias.push_back(   <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a>(unitCount[l]));</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    _1B = <a class="code" href="classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715">DeviceVector::get1Vector</a>(miniBatchSize);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//deltaWeightを0.0fで初期化</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; dw : deltaWeight)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = dw.getRowCount();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M = dw.getColumnCount();</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        dw.set(std::vector&lt;float&gt;(N * M, 0.0f));</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">//deltaBiasを0.0fで初期化</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; db : deltaBias)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = db.getDimension();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        db.set(std::vector&lt;float&gt;(N, 0.0f));</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8">  170</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8">Backpropagation&lt;AF, OutputLayer&gt;::initRandom</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">//NULL Streamを使用する</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), 0));</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">    std::random_device rdev;</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="comment">    std::mt19937 engine(rdev());</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">    std::uniform_real_distribution&lt;float&gt; urd(0.0f, 1.0f);</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; w : weight)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M = w.getRowCount();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = w.getColumnCount();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">        std::vector&lt;float&gt; h_w;</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">        for(unsigned int i =0; i &lt; M * N; i++)</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">        {</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">            //定義域の次元が大きい時に絶対値が大きくなると</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">            //活性化関数の値が1に上げ止まってしまうので</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">            //乱数の値をNで割る</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">            h_w.push_back(urd(engine) / static_cast&lt;float&gt;(N));</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">        }</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">        w.set(h_w);</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">        //wのデバイスメモリに値域(0.0, 1.0]の一様分布に従う乱数を生成</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">        CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), w.getAddress(), M * N));</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment">        //wを1/Nでスカラー倍する</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">        float alpha = 1.0f / static_cast&lt;float&gt;(N);</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">        //float alpha = 0.01f / static_cast&lt;float&gt;(N);</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">        Sscal(&amp;alpha, w);</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">//TODO 初期値を設定する処理を書くこと</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">float</span> stddev = 0.125f / std::sqrt(static_cast&lt;float&gt;(N));</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02">CURAND_CALL</a>(curandGenerateNormal(<a class="code" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8">CuRandManager::getGenerator</a>(),w.getAddress(), M * N, 0.0f, stddev));</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//biasは一律0で初期化する</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp;&amp; b : bias)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="comment">//一定値(0.0f)</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = b.getDimension();</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        std::vector&lt;float&gt; h_b(N, 0.0f);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        b.set(h_b);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="comment">//正規分布</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">        unsigned int N = b.getDimension();</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">        float stddev = 0.125f;</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">        CURAND_CALL(curandGenerateNormal(CuRandManager::getGenerator(),b.getAddress(), N, 0.0f, stddev));</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="classBackpropagation.html#a5650b388a4a506e3e9b857abfdbd3025">  225</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a5650b388a4a506e3e9b857abfdbd3025">Backpropagation&lt;AF, OutputLayer&gt;::forward</a>(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; x, std::vector&lt;float&gt;&amp; y)</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> X(x.size(), 1, x);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> Y;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    forward(X, Y);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    y = Y.get();</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classBackpropagation.html#ac2fdd4b89632604858fa5b1290b88d8d">  233</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a5650b388a4a506e3e9b857abfdbd3025">Backpropagation&lt;AF, OutputLayer&gt;::forward</a>(<span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; X, <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; Y)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">//使用するStreamをMainStreamに設定</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this-&gt;getMainStream()));</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), 0));</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    z[0] = X;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt; layerCount - 1; l++)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">//z[l], weight[l+1], bias[l+1]からu[l+1]を得る</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        obtainUFromZ(l);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="comment">//u[l+1]からz[l+1]を得る</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        obtainZFromU(l);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">//y = z[L-1]を設定</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    Y = z[layerCount - 1];</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329">  260</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329">Backpropagation&lt;AF, OutputLayer&gt;::back</a>(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; d)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a> D(d.size(), 1, d);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    back(D);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classBackpropagation.html#acdfd87d6e8d2483dee4e3348128d0318">  266</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329">Backpropagation&lt;AF, OutputLayer&gt;::back</a>(<span class="keyword">const</span> <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; D)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">//使用するStreamをMainStreamに設定</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), this-&gt;getMainStream()));</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//初期化</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">//delta[layer_count - 1] = u[layer_count - 1] - dd;</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    obtainDeltaLast(D);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">//lについて降順に逐次実行(&quot;**&quot;は要素ごとの積(cudaで実行))</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">//delta[l] = f&#39;(u[l]) ** ((W[l + 1])^T * delta[l+1]);</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="comment">//l = layerCount - 2, ... , 1</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = layerCount - 2; l &gt;= 1; l--)</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        obtainDelta(l);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e">  288</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e">Backpropagation&lt;AF, OutputLayer&gt;::updateParameter</a>()</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">//l,W,b について非同期に実行</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> substream_count = getSubStreamCount();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 1; l &lt; layerCount; l++)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="comment">//使用するStreamを設定</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> si = (2 * l) % substream_count;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), this-&gt;getSubStream(si)));</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="comment">//モメンタム</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="comment">// deltaWeight[l] = gamma * deltaWeight[l] - epsilon * dEdW[l]</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// weight[l] = weight[l] + deltaWeight[l]</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//weightとbiasをランダムに初期化する</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    this-&gt;initRandom();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">//deltaWeightを0.0fで初期化</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; dw : deltaWeight)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = dw.getRowCount();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M = dw.getColumnCount();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        dw.set(std::vector&lt;float&gt;(N * M, 0.0f));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//deltaBiasを0.0fで初期化</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a>&amp; db : deltaBias)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = db.getDimension();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        db.set(std::vector&lt;float&gt;(N, 0.0f));</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a4cfcca70eb81b9bec72056a9e928ee2f">  173</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a4cfcca70eb81b9bec72056a9e928ee2f">Backpropagation&lt;AF, OutputLayer&gt;::initRandom</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">//NULL Streamを使用する</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), 0));</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">    std::random_device rdev;</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">    std::mt19937 engine(rdev());</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">    std::uniform_real_distribution&lt;float&gt; urd(0.0f, 1.0f);</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">for</span>(<a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; w : weight)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> M = w.getRowCount();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = w.getColumnCount();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">        std::vector&lt;float&gt; h_w;</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="comment">        for(unsigned int i =0; i &lt; M * N; i++)</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">            //定義域の次元が大きい時に絶対値が大きくなると</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">            //活性化関数の値が1に上げ止まってしまうので</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">            //乱数の値をNで割る</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">            h_w.push_back(urd(engine) / static_cast&lt;float&gt;(N));</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment">        w.set(h_w);</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment">        //wのデバイスメモリに値域(0.0, 1.0]の一様分布に従う乱数を生成</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">        CURAND_CALL(curandGenerateUniform(CuRandManager::getGenerator(), w.getAddress(), M * N));</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="comment">        //wを1/Nでスカラー倍する</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment">        float alpha = 1.0f / static_cast&lt;float&gt;(N);</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment">        //float alpha = 0.01f / static_cast&lt;float&gt;(N);</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">        Sscal(&amp;alpha, w);</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="comment">//TODO 初期値を設定する処理を書くこと</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordtype">float</span> stddev = 0.125f / std::sqrt(static_cast&lt;float&gt;(N));</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02">CURAND_CALL</a>(curandGenerateNormal(<a class="code" href="classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b">cuda::CuRandManager::getGenerator</a>(),w.getAddress(), M * N, 0.0f, stddev));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">//biasは一律0で初期化する</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp;&amp; b : bias)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="comment">//一定値(0.0f)</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N = b.getDimension();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        std::vector&lt;float&gt; h_b(N, 0.0f);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        b.set(h_b);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">//正規分布</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">        unsigned int N = b.getDimension();</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">        float stddev = 0.125f;</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">        CURAND_CALL(curandGenerateNormal(CuRandManager::getGenerator(),b.getAddress(), N, 0.0f, stddev));</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae">  228</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae">Backpropagation&lt;AF, OutputLayer&gt;::forward</a>(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; x, std::vector&lt;float&gt;&amp; y)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> X(x.size(), 1, x);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> Y;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    forward(X, Y);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    y = Y.get();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#af8238cde4db589106ee88a159256cd15">  236</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae">Backpropagation&lt;AF, OutputLayer&gt;::forward</a>(<span class="keyword">const</span> <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; X, <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; Y)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">//使用するStreamをMainStreamに設定</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="comment">//CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), this-&gt;getMainStream()));</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), 0));</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    z[0] = X;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 0; l &lt; layerCount - 1; l++)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="comment">//z[l], weight[l+1], bias[l+1]からu[l+1]を得る</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        obtainUFromZ(l);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="comment">//u[l+1]からz[l+1]を得る</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        obtainZFromU(l);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">//y = z[L-1]を設定</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    Y = z[layerCount - 1];</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">//ストリーム完了待ち</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">//CUDA_CALL(cudaStreamSynchronize(this-&gt;getMainStream()));</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce">  263</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce">Backpropagation&lt;AF, OutputLayer&gt;::back</a>(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; d)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;{</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> D(d.size(), 1, d);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    back(D);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#abdb6692cd278a2a9118f0dbd5884cdbe">  269</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce">Backpropagation&lt;AF, OutputLayer&gt;::back</a>(<span class="keyword">const</span> <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a>&amp; D)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//使用するStreamをMainStreamに設定</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), this-&gt;getMainStream()));</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="comment">//初期化</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">//delta[layer_count - 1] = u[layer_count - 1] - dd;</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    obtainDeltaLast(D);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">//lについて降順に逐次実行(&quot;**&quot;は要素ごとの積(cudaで実行))</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">//delta[l] = f&#39;(u[l]) ** ((W[l + 1])^T * delta[l+1]);</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">//l = layerCount - 2, ... , 1</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = layerCount - 2; l &gt;= 1; l--)</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        obtainDelta(l);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> AF,<span class="keyword">class</span> OutputLayer&gt;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081">  291</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081">Backpropagation&lt;AF, OutputLayer&gt;::updateParameter</a>()</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;{</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">//l,W,b について非同期に実行</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> substream_count = getSubStreamCount();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> l = 1; l &lt; layerCount; l++)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">//使用するStreamを設定</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> si = (2 * l) % substream_count;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), this-&gt;getSubStream(si)));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">//モメンタム</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="comment">// deltaWeight[l] = gamma * deltaWeight[l] - epsilon * dEdW[l]</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">//                = gamma * deltaWeight[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="comment">//                = - (epsilon / B) * delta[l] * z[l - 1]^T + gamma * deltaWeight[l]</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordtype">float</span> alpha = - epsilon / miniBatchSize;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">float</span> beta = gamma;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <a class="code" href="CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a>(&amp;alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &amp;beta, deltaWeight[l]);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">// weight[l] = weight[l] + deltaWeight[l]</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="comment">//           = 1.0f * weight[l] + 1.0f * deltaWeight[l]</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        alpha = 1.0f;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        beta  = 1.0f;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="CuBlasFunction_8cpp.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a>(&amp;alpha, CUBLAS_OP_N, weight[l], &amp;beta, CUBLAS_OP_N, deltaWeight[l], weight[l]);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="comment">//モメンタムなし</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="comment">//W[l] = W[l] - epsilon * dEdW[l]</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">//     = W[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="comment">//     = W[l] - (epsilon / B) * delta[l] * z[l - 1]^T</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="comment">//     = - (epsilon / B) * delta[l] * z[l - 1]^T + 1.0f * W[l]</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="comment">//alpha = - epsilon / miniBatchSize;</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="comment">//beta = 1.0f;</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="comment">//Sgemm(&amp;alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &amp;beta, weight[l]);</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="comment">//使用するStreamを設定</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        si = (2 * l + 1) % substream_count;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a>(), this-&gt;getSubStream(si)));</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="comment">//モメンタム</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="comment">// deltaBias[l] = gamma * deltaBias[l] - epsilon * dEdb[l]</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="comment">// bias[l] = bias[l] + deltaBias[l]</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="comment">// weight[l] = weight[l] + deltaWeight[l]</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">// deltaWeight[l] = gamma * deltaWeight[l] - epsilon * dEdW[l]</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="comment">//                = gamma * deltaWeight[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="comment">//                = - (epsilon / B) * delta[l] * z[l - 1]^T + gamma * deltaWeight[l]</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordtype">float</span> alpha = - epsilon / miniBatchSize;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">float</span> beta = gamma;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <a class="code" href="namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919">Sgemm</a>(&amp;alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &amp;beta, deltaWeight[l]);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// weight[l] = weight[l] + deltaWeight[l]</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">//           = 1.0f * weight[l] + 1.0f * deltaWeight[l]</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        alpha = 1.0f;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        beta  = 1.0f;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="namespacecuda.html#a33ab26d236cd2afae89ab32f1b99f4ea">Sgeam</a>(&amp;alpha, CUBLAS_OP_N, weight[l], &amp;beta, CUBLAS_OP_N, deltaWeight[l], weight[l]);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">//モメンタムなし</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="comment">//W[l] = W[l] - epsilon * dEdW[l]</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="comment">//     = W[l] - epsilon * (1 / B) * delta[l] * z[l - 1]^T</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="comment">//     = W[l] - (epsilon / B) * delta[l] * z[l - 1]^T</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="comment">//     = - (epsilon / B) * delta[l] * z[l - 1]^T + 1.0f * W[l]</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="comment">//alpha = - epsilon / miniBatchSize;</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="comment">//beta = 1.0f;</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="comment">//Sgemm(&amp;alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &amp;beta, weight[l]);</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="comment">//使用するStreamを設定</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        si = (2 * l + 1) % substream_count;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <a class="code" href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a>(cublasSetStream(<a class="code" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a>(), this-&gt;getSubStream(si)));</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="comment">//モメンタム</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="comment">// deltaBias[l] = gamma * deltaBias[l] - epsilon * dEdb[l]</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">//              = gamma * deltaBias[l] - epsilon * ((1.0f / B) * delta[l] * _1B)</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="comment">//              = gamma * deltaBias[l] - (epsilon / B) * delta[l] * _1B</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        alpha = - epsilon / miniBatchSize;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        beta = 1.0f;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="CuBlasFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4">Sgemv</a>(&amp;alpha, CUBLAS_OP_N, delta[l], _1B, &amp;beta, deltaBias[l]);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        </div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="comment">// bias[l] = bias[l] + deltaBias[l]</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="comment">//         = 1.0f * deltaBias[l] + bias[l]</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        alpha = 1.0f;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362">Saxpy</a>(&amp;alpha, deltaBias[l], bias[l]);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">//モメンタムなし</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">//b[l] = b[l] - epsilon * dEdb[l]</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">//     = b[l] - epsilon * ((1.0f / B) * delta[l] * _1B)</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//     = b[l] - (epsilon / B) * delta[l] * _1B</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//     = - (epsilon / B) * delta[l] * _1B + 1.0f * b[l]</span></div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">//alpha = - epsilon / miniBatchSize;</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="comment">//beta = 1.0f;</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">//Sgemv(&amp;alpha, CUBLAS_OP_N, delta[l], _1B, &amp;beta, bias[l]);</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    </div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="comment">//完了待ち</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0; s &lt; substream_count; s++)</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(getSubStream(s)));</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="ttc" id="CuBlasManager_8h_html_a7faf58a47ee95fc475079ec1d80e9d67"><div class="ttname"><a href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a></div><div class="ttdeci">#define CUBLAS_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:33</div></div>
-<div class="ttc" id="classDeviceVector_html_a86c4055cfa3e7d02ed97cf13e523c5ea"><div class="ttname"><a href="classDeviceVector.html#a86c4055cfa3e7d02ed97cf13e523c5ea">DeviceVector::get1Vector</a></div><div class="ttdeci">static DeviceVector get1Vector(unsigned int dimension)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:195</div></div>
-<div class="ttc" id="classBackpropagationException_html"><div class="ttname"><a href="classBackpropagationException.html">BackpropagationException</a></div><div class="ttdef"><b>Definition:</b> BackpropagationException.h:25</div></div>
-<div class="ttc" id="CuBlasFunction_8cpp_html_a64ad0c14765ac642aa383c1441da6362"><div class="ttname"><a href="CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362">Saxpy</a></div><div class="ttdeci">void Saxpy(const float *const alpha, const DeviceVector &amp;x, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:23</div></div>
-<div class="ttc" id="classDeviceMatrix_html"><div class="ttname"><a href="classDeviceMatrix.html">DeviceMatrix</a></div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:25</div></div>
-<div class="ttc" id="classBackpropagation_html_a5650b388a4a506e3e9b857abfdbd3025"><div class="ttname"><a href="classBackpropagation.html#a5650b388a4a506e3e9b857abfdbd3025">Backpropagation::forward</a></div><div class="ttdeci">void forward(const std::vector&lt; float &gt; &amp;x, std::vector&lt; float &gt; &amp;y)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:225</div></div>
-<div class="ttc" id="CuBlasFunction_8cpp_html_a00cd0bdc5a5d9ae227fea48d86cf6a53"><div class="ttname"><a href="CuBlasFunction_8cpp.html#a00cd0bdc5a5d9ae227fea48d86cf6a53">Sgemm</a></div><div class="ttdeci">void Sgemm(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, cublasOperation_t op_B, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:154</div></div>
-<div class="ttc" id="CuRandManager_8h_html_aa31e5d819ee0b16ce23168f426395b02"><div class="ttname"><a href="CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02">CURAND_CALL</a></div><div class="ttdeci">#define CURAND_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:29</div></div>
-<div class="ttc" id="classBackpropagation_html_a14b837a4fa36334685afd07d74b65108"><div class="ttname"><a href="classBackpropagation.html#a14b837a4fa36334685afd07d74b65108">Backpropagation::init</a></div><div class="ttdeci">void init(const std::vector&lt; unsigned int &gt; &amp;unit_count, unsigned int minibatch_size=1)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:88</div></div>
-<div class="ttc" id="CuBlasFunction_8cpp_html_acf599610485471a429e1f0a3aa6c77d4"><div class="ttname"><a href="CuBlasFunction_8cpp.html#acf599610485471a429e1f0a3aa6c77d4">Sgemv</a></div><div class="ttdeci">void Sgemv(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const DeviceVector &amp;x, const float *beta, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:48</div></div>
-<div class="ttc" id="classDeviceVector_html"><div class="ttname"><a href="classDeviceVector.html">DeviceVector</a></div><div class="ttdef"><b>Definition:</b> DeviceVector.h:26</div></div>
-<div class="ttc" id="classActivateFunction_html_a696cb3a2f97a03ffeb1cb2ce34d9f1a1"><div class="ttname"><a href="classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1">ActivateFunction::activate</a></div><div class="ttdeci">static DeviceMatrix &amp; activate(const DeviceMatrix &amp;x, DeviceMatrix &amp;y)</div><div class="ttdef"><b>Definition:</b> ActivateFunction.cuh:13</div></div>
-<div class="ttc" id="classBackpropagation_html_a9dd9f12c3b9e7e19d000787478ef17f8"><div class="ttname"><a href="classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8">Backpropagation::initRandom</a></div><div class="ttdeci">void initRandom(void)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:170</div></div>
-<div class="ttc" id="classCuRandManager_html_abd24fbe05fafa5240680e8d5d1c7a7c8"><div class="ttname"><a href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8">CuRandManager::getGenerator</a></div><div class="ttdeci">static curandGenerator_t getGenerator()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:81</div></div>
-<div class="ttc" id="classBackpropagation_html_acfb444c1e58e0e2e0fb39f803957f16e"><div class="ttname"><a href="classBackpropagation.html#acfb444c1e58e0e2e0fb39f803957f16e">Backpropagation::obtainDeltaLast</a></div><div class="ttdeci">void obtainDeltaLast(const DeviceMatrix &amp;d)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:49</div></div>
-<div class="ttc" id="classCuBlasManager_html_a8b36302b1a7c651cec1f467545d51e3d"><div class="ttname"><a href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d">CuBlasManager::getHandle</a></div><div class="ttdeci">static cublasHandle_t getHandle()</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:82</div></div>
-<div class="ttc" id="classFunc2to1Composite1st_html"><div class="ttname"><a href="classFunc2to1Composite1st.html">Func2to1Composite1st</a></div><div class="ttdef"><b>Definition:</b> ElementWiseFunctionUtil.cuh:5</div></div>
-<div class="ttc" id="CudaManager_8h_html_a66bc11e96a4f269bc00a472efd4f86fb"><div class="ttname"><a href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a></div><div class="ttdeci">#define CUDA_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CudaManager.h:26</div></div>
-<div class="ttc" id="classBackpropagation_html_ada4b9cca80a8f2cc167287026dc65302"><div class="ttname"><a href="classBackpropagation.html#ada4b9cca80a8f2cc167287026dc65302">Backpropagation::obtainDeltaFromFdUWTDelta</a></div><div class="ttdeci">void obtainDeltaFromFdUWTDelta(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:26</div></div>
-<div class="ttc" id="CuBlasFunction_8cpp_html_ad909d96eb7965d764b725171132dbd64"><div class="ttname"><a href="CuBlasFunction_8cpp.html#ad909d96eb7965d764b725171132dbd64">Sgeam</a></div><div class="ttdeci">void Sgeam(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, const float *beta, cublasOperation_t op_B, const DeviceMatrix &amp;B, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:210</div></div>
-<div class="ttc" id="classBackpropagation_html_ac30f7d4e5b78271aa08598c73f0ce329"><div class="ttname"><a href="classBackpropagation.html#ac30f7d4e5b78271aa08598c73f0ce329">Backpropagation::back</a></div><div class="ttdeci">void back(const std::vector&lt; float &gt; &amp;d)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:260</div></div>
-<div class="ttc" id="classBackpropagation_html_ad196eadec9f96b257cf64452d8289e22"><div class="ttname"><a href="classBackpropagation.html#ad196eadec9f96b257cf64452d8289e22">Backpropagation::obtainZFromU</a></div><div class="ttdeci">void obtainZFromU(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:9</div></div>
-<div class="ttc" id="classElementWiseFunction2to1_html_a7cf9d20d0d6e7d520b665969042dc2f7"><div class="ttname"><a href="classElementWiseFunction2to1.html#a7cf9d20d0d6e7d520b665969042dc2f7">ElementWiseFunction2to1::apply</a></div><div class="ttdeci">static DeviceMatrix &amp; apply(const DeviceMatrix &amp;x, const DeviceMatrix &amp;y, DeviceMatrix &amp;z)</div><div class="ttdef"><b>Definition:</b> ElementWiseFunction2to1.cuh:72</div></div>
-<div class="ttc" id="classBackpropagation_html_a4bcdce7e9fe97426150f84585d4c7d5e"><div class="ttname"><a href="classBackpropagation.html#a4bcdce7e9fe97426150f84585d4c7d5e">Backpropagation::updateParameter</a></div><div class="ttdeci">void updateParameter()</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:288</div></div>
-<div class="ttc" id="classBackpropagation_html_a3cf1ed29e3e03dbe1d5d7dcf3d24d337"><div class="ttname"><a href="classBackpropagation.html#a3cf1ed29e3e03dbe1d5d7dcf3d24d337">Backpropagation::obtainDelta</a></div><div class="ttdeci">void obtainDelta(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:68</div></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="comment">// bias[l] = bias[l] + deltaBias[l]</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="comment">// deltaBias[l] = gamma * deltaBias[l] - epsilon * dEdb[l]</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="comment">//              = gamma * deltaBias[l] - epsilon * ((1.0f / B) * delta[l] * _1B)</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">//              = gamma * deltaBias[l] - (epsilon / B) * delta[l] * _1B</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="comment">//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        alpha = - epsilon / miniBatchSize;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        beta = 1.0f;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <a class="code" href="namespacecuda.html#aee23e9d79325014e3dd12126ed0e55a2">Sgemv</a>(&amp;alpha, CUBLAS_OP_N, delta[l], _1B, &amp;beta, deltaBias[l]);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="comment">// bias[l] = bias[l] + deltaBias[l]</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="comment">//         = 1.0f * deltaBias[l] + bias[l]</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        alpha = 1.0f;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <a class="code" href="namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52">Saxpy</a>(&amp;alpha, deltaBias[l], bias[l]);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="comment">//モメンタムなし</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">//b[l] = b[l] - epsilon * dEdb[l]</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="comment">//     = b[l] - epsilon * ((1.0f / B) * delta[l] * _1B)</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="comment">//     = b[l] - (epsilon / B) * delta[l] * _1B</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">//     = - (epsilon / B) * delta[l] * _1B + 1.0f * b[l]</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="comment">//alpha = - epsilon / miniBatchSize;</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="comment">//beta = 1.0f;</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="comment">//Sgemv(&amp;alpha, CUBLAS_OP_N, delta[l], _1B, &amp;beta, bias[l]);</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="comment">//-----------------------------------------------</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="comment">//完了待ち</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0; s &lt; substream_count; s++)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a>(cudaStreamSynchronize(getSubStream(s)));</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a949eaf7de2178fbdad8b10ccdd2084ae"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae">nn::Backpropagation::forward</a></div><div class="ttdeci">void forward(const std::vector&lt; float &gt; &amp;x, std::vector&lt; float &gt; &amp;y)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:228</div></div>
+<div class="ttc" id="classnn_1_1Func2to1Composite1st_html"><div class="ttname"><a href="classnn_1_1Func2to1Composite1st.html">nn::Func2to1Composite1st</a></div><div class="ttdef"><b>Definition:</b> ElementWiseFunctionUtil.cuh:9</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a6056f13f384ad8cefe8ad4f771756e9f"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f">nn::Backpropagation::obtainZFromU</a></div><div class="ttdeci">void obtainZFromU(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:12</div></div>
+<div class="ttc" id="namespacecuda_html_aee23e9d79325014e3dd12126ed0e55a2"><div class="ttname"><a href="namespacecuda.html#aee23e9d79325014e3dd12126ed0e55a2">cuda::Sgemv</a></div><div class="ttdeci">void Sgemv(const float *alpha, cublasOperation_t op, const DeviceMatrix &amp;A, const DeviceVector &amp;x, const float *beta, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:51</div></div>
+<div class="ttc" id="classcuda_1_1CuRandManager_html_a3f2261a0a8e99b183b2d8bbd41cbe32b"><div class="ttname"><a href="classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b">cuda::CuRandManager::getGenerator</a></div><div class="ttdeci">static curandGenerator_t getGenerator()</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:84</div></div>
+<div class="ttc" id="classcuda_1_1DeviceVector_html_a530054f7e9c2dbbe766aeb1a6952f715"><div class="ttname"><a href="classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715">cuda::DeviceVector::get1Vector</a></div><div class="ttdeci">static DeviceVector get1Vector(unsigned int dimension)</div><div class="ttdef"><b>Definition:</b> DeviceVector.h:199</div></div>
+<div class="ttc" id="namespacecuda_html_a4f02863ba9c962d1f78b194f6620b919"><div class="ttname"><a href="namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919">cuda::Sgemm</a></div><div class="ttdeci">void Sgemm(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, cublasOperation_t op_B, const DeviceMatrix &amp;B, const float *beta, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:157</div></div>
+<div class="ttc" id="CuBlasManager_8h_html_a7faf58a47ee95fc475079ec1d80e9d67"><div class="ttname"><a href="CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67">CUBLAS_CALL</a></div><div class="ttdeci">#define CUBLAS_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:36</div></div>
+<div class="ttc" id="classnn_1_1ElementWiseFunction2to1_html_aa5659690ab82b707f093e264bfdbf904"><div class="ttname"><a href="classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904">nn::ElementWiseFunction2to1::apply</a></div><div class="ttdeci">static cuda::DeviceMatrix &amp; apply(const cuda::DeviceMatrix &amp;x, const cuda::DeviceMatrix &amp;y, cuda::DeviceMatrix &amp;z)</div><div class="ttdef"><b>Definition:</b> ElementWiseFunction2to1.cuh:79</div></div>
+<div class="ttc" id="CuRandManager_8h_html_aa31e5d819ee0b16ce23168f426395b02"><div class="ttname"><a href="CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02">CURAND_CALL</a></div><div class="ttdeci">#define CURAND_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CuRandManager.h:32</div></div>
+<div class="ttc" id="namespacecuda_html_a050091e07f2bac2498ec1b4c5f9b1f52"><div class="ttname"><a href="namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52">cuda::Saxpy</a></div><div class="ttdeci">void Saxpy(const float *const alpha, const DeviceVector &amp;x, DeviceVector &amp;y)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:26</div></div>
+<div class="ttc" id="classcuda_1_1DeviceVector_html"><div class="ttname"><a href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></div><div class="ttdef"><b>Definition:</b> DeviceVector.h:30</div></div>
+<div class="ttc" id="classcuda_1_1CuBlasManager_html_ac2795729ce3d8f084710077eadc818a1"><div class="ttname"><a href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager::getHandle</a></div><div class="ttdeci">static cublasHandle_t getHandle()</div><div class="ttdef"><b>Definition:</b> CuBlasManager.h:85</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a63996ff99c32fdfed209f55338e855f4"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4">nn::Backpropagation::obtainDeltaFromFdUWTDelta</a></div><div class="ttdeci">void obtainDeltaFromFdUWTDelta(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:29</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a63edbd467903c47dffc2a4c383fe7efa"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa">nn::Backpropagation::init</a></div><div class="ttdeci">void init(const std::vector&lt; unsigned int &gt; &amp;unit_count, unsigned int minibatch_size=1)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:91</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_afa9b647bb0f79cf73676443b879efbce"><div class="ttname"><a href="classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce">nn::Backpropagation::back</a></div><div class="ttdeci">void back(const std::vector&lt; float &gt; &amp;d)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:263</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a40730a67fc8414e5763b2445060452a8"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a40730a67fc8414e5763b2445060452a8">nn::Backpropagation::obtainDelta</a></div><div class="ttdeci">void obtainDelta(unsigned int l)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:71</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a99d3e3cf846902fc2fd7e3797bb34a64"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a99d3e3cf846902fc2fd7e3797bb34a64">nn::Backpropagation::obtainDeltaLast</a></div><div class="ttdeci">void obtainDeltaLast(const DeviceMatrix &amp;d)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:52</div></div>
+<div class="ttc" id="classnn_1_1ActivateFunction_html_aa6b84529e47f810873731d6ae24d82c2"><div class="ttname"><a href="classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2">nn::ActivateFunction::activate</a></div><div class="ttdeci">static cuda::DeviceMatrix &amp; activate(const cuda::DeviceMatrix &amp;x, cuda::DeviceMatrix &amp;y)</div><div class="ttdef"><b>Definition:</b> ActivateFunction.cuh:16</div></div>
+<div class="ttc" id="CudaManager_8h_html_a66bc11e96a4f269bc00a472efd4f86fb"><div class="ttname"><a href="CudaManager_8h.html#a66bc11e96a4f269bc00a472efd4f86fb">CUDA_CALL</a></div><div class="ttdeci">#define CUDA_CALL(cmd)</div><div class="ttdef"><b>Definition:</b> CudaManager.h:29</div></div>
+<div class="ttc" id="namespacecuda_html_a33ab26d236cd2afae89ab32f1b99f4ea"><div class="ttname"><a href="namespacecuda.html#a33ab26d236cd2afae89ab32f1b99f4ea">cuda::Sgeam</a></div><div class="ttdeci">void Sgeam(const float *alpha, cublasOperation_t op_A, const DeviceMatrix &amp;A, const float *beta, cublasOperation_t op_B, const DeviceMatrix &amp;B, DeviceMatrix &amp;C)</div><div class="ttdef"><b>Definition:</b> CuBlasFunction.cpp:213</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a7e2e227ad1f21475192e0eacb0cd9081"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081">nn::Backpropagation::updateParameter</a></div><div class="ttdeci">void updateParameter()</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:291</div></div>
+<div class="ttc" id="classnn_1_1Backpropagation_html_a4cfcca70eb81b9bec72056a9e928ee2f"><div class="ttname"><a href="classnn_1_1Backpropagation.html#a4cfcca70eb81b9bec72056a9e928ee2f">nn::Backpropagation::initRandom</a></div><div class="ttdeci">void initRandom(void)</div><div class="ttdef"><b>Definition:</b> Backpropagation_detail.h:173</div></div>
+<div class="ttc" id="classcuda_1_1DeviceMatrix_html"><div class="ttname"><a href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:28</div></div>
+<div class="ttc" id="classnn_1_1BackpropagationException_html"><div class="ttname"><a href="classnn_1_1BackpropagationException.html">nn::BackpropagationException</a></div><div class="ttdef"><b>Definition:</b> BackpropagationException.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 11:33:23 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

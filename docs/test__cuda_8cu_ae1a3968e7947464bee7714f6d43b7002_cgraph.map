@@ -1,13 +1,5 @@
 <map id="test" name="test">
-<area shape="rect" id="node2" href="$classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810" title="DeviceMatrix::get0Matrix" alt="" coords="103,5,271,32"/>
-<area shape="rect" id="node4" href="$classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d" title="DeviceMatrix::get1Matrix" alt="" coords="103,56,271,83"/>
-<area shape="rect" id="node5" href="$classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1" title="ActivateFunction::activate" alt="" coords="99,107,274,133"/>
-<area shape="rect" id="node3" href="$classDeviceMatrix.html#a678af62d896522088f280aaa70434486" title="DeviceMatrix::DeviceMatrix" alt="" coords="323,27,507,53"/>
-<area shape="rect" id="node6" href="$classElementWiseFunction1to1.html#af7917233b07ffed3fb1c13900211671c" title="ElementWiseFunction1to1\l::apply" alt="" coords="327,99,502,141"/>
-<area shape="rect" id="node7" href="$classElementWiseFunction1to1.html#a82d667ae530d1539c24f270d64825217" title="ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="555,70,746,111"/>
-<area shape="rect" id="node12" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="564,136,737,163"/>
-<area shape="rect" id="node8" href="$classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="799,27,996,53"/>
-<area shape="rect" id="node10" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="804,77,991,104"/>
-<area shape="rect" id="node11" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="795,128,1000,155"/>
-<area shape="rect" id="node9" href="$classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="1048,27,1227,53"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#a440b48448499feb50fea0f1526896da0" title="cuda::DeviceMatrix\l::get0Matrix" alt="" coords="99,5,234,46"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html#aadd90c21c36856b05522616e9d5ff784" title="cuda::DeviceMatrix\l::get1Matrix" alt="" coords="99,70,234,111"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a8b09d649204affd4c0022f80760604ff" title="cuda::DeviceMatrix\l::DeviceMatrix" alt="" coords="283,38,418,79"/>
 </map>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/OutputLayerRegression.cuh File Reference</title>
+<title>autoEncoder: src/nn/OutputLayerRegression.cuh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,43 +80,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">OutputLayerRegression.cuh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br/>
 <code>#include &lt;string&gt;</code><br/>
-<code>#include &quot;<a class="el" href="DeviceMatrix_8h_source.html">cuda/DeviceMatrix.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="DeviceMatrix_8h_source.html">../cuda/DeviceMatrix.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for OutputLayerRegression.cuh:</div>
 <div class="dyncontent">
-<div class="center"><img src="OutputLayerRegression_8cuh__incl.png" border="0" usemap="#src_2OutputLayerRegression_8cuh" alt=""/></div>
-<map name="src_2OutputLayerRegression_8cuh" id="src_2OutputLayerRegression_8cuh">
-<area shape="rect" id="node4" href="DeviceMatrix_8h.html" title="cuda/DeviceMatrix.h" alt="" coords="311,80,453,107"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="155,155,281,181"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="289,229,404,256"/><area shape="rect" id="node12" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,304,139,331"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="164,304,287,331"/></map>
+<div class="center"><img src="OutputLayerRegression_8cuh__incl.png" border="0" usemap="#src_2nn_2OutputLayerRegression_8cuh" alt=""/></div>
+<map name="src_2nn_2OutputLayerRegression_8cuh" id="src_2nn_2OutputLayerRegression_8cuh">
+<area shape="rect" id="node4" href="DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="300,80,453,107"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="155,155,281,181"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="289,229,404,256"/><area shape="rect" id="node12" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,304,139,331"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="164,304,287,331"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="OutputLayerRegression_8cuh__dep__incl.png" border="0" usemap="#src_2OutputLayerRegression_8cuhdep" alt=""/></div>
-<map name="src_2OutputLayerRegression_8cuhdep" id="src_2OutputLayerRegression_8cuhdep">
-<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="207,80,351,107"/><area shape="rect" id="node7" href="BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="375,80,593,107"/><area shape="rect" id="node3" href="AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,155,179,181"/><area shape="rect" id="node4" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,155,364,181"/><area shape="rect" id="node6" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="371,229,476,256"/><area shape="rect" id="node5" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="193,229,347,256"/></map>
+<div class="center"><img src="OutputLayerRegression_8cuh__dep__incl.png" border="0" usemap="#src_2nn_2OutputLayerRegression_8cuhdep" alt=""/></div>
+<map name="src_2nn_2OutputLayerRegression_8cuhdep" id="src_2nn_2OutputLayerRegression_8cuhdep">
+<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="153,88,316,115"/><area shape="rect" id="node7" href="BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="374,81,561,122"/><area shape="rect" id="node3" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="19,171,180,197"/><area shape="rect" id="node5" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="183,245,288,272"/><area shape="rect" id="node6" href="AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="257,171,447,197"/><area shape="rect" id="node4" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,245,159,272"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputLayerRegression.html">OutputLayerRegression</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1OutputLayerRegression.html">nn::OutputLayerRegression</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenn"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html">nn</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:08 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 11:33:24 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

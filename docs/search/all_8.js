@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handle',['handle',['../classCuBlasManager.html#a903f478502e70ab58c952c086efb4c99',1,'CuBlasManager::handle()'],['../classCuSolverDnManager.html#a2e7ea7623e4c8cf33f7c5638f52cebdd',1,'CuSolverDnManager::handle()']]]
+  ['handle',['handle',['../classcuda_1_1CuBlasManager.html#a48ce83fba47c9fe53a47f98ef86df3d2',1,'cuda::CuBlasManager::handle()'],['../classcuda_1_1CuSolverDnManager.html#a2bb418520e7dd3aa359c9f1be1639109',1,'cuda::CuSolverDnManager::handle()']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['inversepcawhiteningmatrix',['inversePCAWhiteningMatrix',['../classNormalization.html#aba0c7b1d59f361a909e28800ec1845bc',1,'Normalization']]],
-  ['inversezcawhiteningmatrix',['inverseZCAWhiteningMatrix',['../classNormalization.html#a1c920d6efcb0e8836a880f6908afa587',1,'Normalization']]]
+  ['inversepcawhiteningmatrix',['inversePCAWhiteningMatrix',['../classnn_1_1Normalization.html#a972f3db348879650af52e99345538591',1,'nn::Normalization']]],
+  ['inversezcawhiteningmatrix',['inverseZCAWhiteningMatrix',['../classnn_1_1Normalization.html#ab7552b4a6f385d4a9b5b6f8caff4ea6a',1,'nn::Normalization']]]
 ];

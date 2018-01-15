@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/AutoEncoderTanh.cuh File Reference</title>
+<title>autoEncoder: src/nn/AutoEncoderTanh.cuh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,11 +80,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">AutoEncoderTanh.cuh File Reference</div>  </div>
@@ -94,33 +96,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AutoEncoderTanh.cuh:</div>
 <div class="dyncontent">
-<div class="center"><img src="AutoEncoderTanh_8cuh__incl.png" border="0" usemap="#src_2AutoEncoderTanh_8cuh" alt=""/></div>
-<map name="src_2AutoEncoderTanh_8cuh" id="src_2AutoEncoderTanh_8cuh">
-<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="AutoEncoder.cuh" alt="" coords="917,80,1040,107"/><area shape="rect" id="node39" href="Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="1064,80,1193,107"/><area shape="rect" id="node3" href="Normalization_8h.html" title="Normalization.h" alt="" coords="727,155,840,181"/><area shape="rect" id="node23" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="1409,229,1553,256"/><area shape="rect" id="node38" href="OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="887,304,1071,331"/><area shape="rect" id="node4" href="CuBlasFunction_8h.html" title="cuda/CuBlasFunction.h" alt="" coords="703,304,861,331"/><area shape="rect" id="node18" href="CuSolverDnFunction_8h.html" title="cuda/CuSolverDnFunction.h" alt="" coords="492,304,679,331"/><area shape="rect" id="node22" href="Statistics_8h.html" title="Statistics.h" alt="" coords="699,229,787,256"/><area shape="rect" id="node5" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="631,379,741,405"/><area shape="rect" id="node17" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="809,379,919,405"/><area shape="rect" id="node8" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="623,453,749,480"/><area shape="rect" id="node11" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="608,528,723,555"/><area shape="rect" id="node16" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="450,603,584,629"/><area shape="rect" id="node13" href="CudaException_8h.html" title="CudaException.h" alt="" coords="703,603,825,629"/><area shape="rect" id="node19" href="CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="293,528,447,555"/><area shape="rect" id="node21" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="128,603,291,629"/><area shape="rect" id="node27" href="CuRandManager_8h.html" title="cuda/CuRandManager.h" alt="" coords="1076,528,1239,555"/><area shape="rect" id="node31" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="1270,603,1457,629"/><area shape="rect" id="node32" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="1541,304,1685,331"/><area shape="rect" id="node34" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="1849,379,2044,405"/><area shape="rect" id="node35" href="Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="1799,304,2021,331"/><area shape="rect" id="node36" href="ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="2097,304,2296,331"/><area shape="rect" id="node37" href="Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="2321,304,2489,331"/><area shape="rect" id="node30" href="CuRandException_8h.html" title="CuRandException.h" alt="" coords="932,603,1071,629"/><area shape="rect" id="node33" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="1513,379,1712,405"/></map>
+<div class="center"><img src="AutoEncoderTanh_8cuh__incl.png" border="0" usemap="#src_2nn_2AutoEncoderTanh_8cuh" alt=""/></div>
+<map name="src_2nn_2AutoEncoderTanh_8cuh" id="src_2nn_2AutoEncoderTanh_8cuh">
+<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="AutoEncoder.cuh" alt="" coords="1077,80,1200,107"/><area shape="rect" id="node39" href="Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="1224,80,1353,107"/><area shape="rect" id="node3" href="Normalization_8h.html" title="Normalization.h" alt="" coords="15,155,128,181"/><area shape="rect" id="node23" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="1067,155,1211,181"/><area shape="rect" id="node38" href="OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1535,304,1719,331"/><area shape="rect" id="node4" href="CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="572,304,743,331"/><area shape="rect" id="node18" href="CuSolverDnFunction_8h.html" title="../cuda/CuSolverDnFunction.h" alt="" coords="349,304,547,331"/><area shape="rect" id="node22" href="Statistics_8h.html" title="Statistics.h" alt="" coords="68,229,156,256"/><area shape="rect" id="node5" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="688,379,799,405"/><area shape="rect" id="node17" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="825,379,935,405"/><area shape="rect" id="node8" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="817,453,943,480"/><area shape="rect" id="node11" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="849,528,964,555"/><area shape="rect" id="node16" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="606,603,740,629"/><area shape="rect" id="node13" href="CudaException_8h.html" title="CudaException.h" alt="" coords="993,603,1116,629"/><area shape="rect" id="node19" href="CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="423,528,576,555"/><area shape="rect" id="node21" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="419,603,581,629"/><area shape="rect" id="node27" href="CuRandManager_8h.html" title="../cuda/CuRandManager.h" alt="" coords="1359,528,1533,555"/><area shape="rect" id="node31" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="1562,603,1749,629"/><area shape="rect" id="node32" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="895,229,1040,256"/><area shape="rect" id="node34" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="1048,304,1243,331"/><area shape="rect" id="node35" href="Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="231,229,453,256"/><area shape="rect" id="node36" href="ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="479,229,677,256"/><area shape="rect" id="node37" href="Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="703,229,871,256"/><area shape="rect" id="node30" href="CuRandException_8h.html" title="CuRandException.h" alt="" coords="1399,603,1537,629"/><area shape="rect" id="node33" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="767,304,965,331"/></map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenn"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html">nn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad878fe37b6d31781d3d630edc7478cf6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6">AutoEncoderTanh</a> = <a class="el" href="classAutoEncoder.html">AutoEncoder</a>&lt; <a class="el" href="classFunc1to1Tanh.html">Func1to1Tanh</a> &gt;</td></tr>
-<tr class="separator:ad878fe37b6d31781d3d630edc7478cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad433035e01a44c1e06f7ebe2f09be879"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#ad433035e01a44c1e06f7ebe2f09be879">nn::AutoEncoderTanh</a> = AutoEncoder&lt; Func1to1Tanh &gt;</td></tr>
+<tr class="separator:ad433035e01a44c1e06f7ebe2f09be879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ad878fe37b6d31781d3d630edc7478cf6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="AutoEncoderTanh_8cuh.html#ad878fe37b6d31781d3d630edc7478cf6">AutoEncoderTanh</a> =  <a class="el" href="classAutoEncoder.html">AutoEncoder</a>&lt;<a class="el" href="classFunc1to1Tanh.html">Func1to1Tanh</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 11:33:24 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

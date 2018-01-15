@@ -1,7 +1,3 @@
 <map id="FXAutoEncoder::learning" name="FXAutoEncoder::learning">
-<area shape="rect" id="node2" href="$classAutoEncoder.html#a6ff7ce63d8f8e44ac2ea92db04700e81" title="AutoEncoder::getBackpropagation" alt="" coords="222,5,442,32"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html#a19d8b33966dc89ee8710d29c245fbf67" title="Backpropagation::getMini\lBatchSize" alt="" coords="247,57,417,98"/>
-<area shape="rect" id="node4" href="$classFXAutoEncoder.html#a062c2141a482ae4934c5d6be98c34558" title="FXAutoEncoder::selectRecord" alt="" coords="233,123,431,149"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html#a8c2c08acf67066fbef96ff57c8a13f2f" title="DeviceMatrix::set" alt="" coords="269,173,395,200"/>
-<area shape="rect" id="node6" href="$classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c" title="AutoEncoder::learning" alt="" coords="257,224,407,251"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#a0be8feb5dd2d7308969723c4697fd377" title="cuda::DeviceMatrix::set" alt="" coords="222,5,383,32"/>
 </map>

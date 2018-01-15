@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CuRandFunction.h File Reference</div>  </div>
@@ -108,109 +110,22 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="CuRandFunction_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html">cuda</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aac69ff2051ba55e7e5075232d80880c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7">setRandomUniform</a> (float min, float max, <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;v)</td></tr>
-<tr class="separator:aac69ff2051ba55e7e5075232d80880c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8cde3eb7e722a2bb621a2b7869969a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuRandFunction_8h.html#a4d8cde3eb7e722a2bb621a2b7869969a">setRandomUniform</a> (float min, float max, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;m)</td></tr>
-<tr class="separator:a4d8cde3eb7e722a2bb621a2b7869969a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747f893ac555456e9630cae830f94162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a747f893ac555456e9630cae830f94162">cuda::setRandomUniform</a> (float min, float max, DeviceVector &amp;v)</td></tr>
+<tr class="separator:a747f893ac555456e9630cae830f94162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2150c75be49a31e1160d7898c3ac7273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a2150c75be49a31e1160d7898c3ac7273">cuda::setRandomUniform</a> (float min, float max, DeviceMatrix &amp;m)</td></tr>
+<tr class="separator:a2150c75be49a31e1160d7898c3ac7273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aac69ff2051ba55e7e5075232d80880c7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setRandomUniform </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_cgraph.png" border="0" usemap="#CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_cgraph" alt=""/></div>
-<map name="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_cgraph" id="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_cgraph">
-<area shape="rect" id="node2" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="444,56,633,83"/><area shape="rect" id="node3" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="189,5,392,32"/><area shape="rect" id="node5" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="451,157,626,184"/><area shape="rect" id="node6" href="classDeviceVector.html#a38f958f5995613e23af6e017b8eda894" title="DeviceVector::getAlphaVector" alt="" coords="191,208,390,235"/><area shape="rect" id="node8" href="CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="261,107,320,133"/><area shape="rect" id="node4" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="441,5,637,32"/><area shape="rect" id="node7" href="classDeviceVector.html#ac3404f0ce64dd9b98b3272454946d758" title="DeviceVector::DeviceVector" alt="" coords="445,208,633,235"/><area shape="rect" id="node9" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="447,107,630,133"/><area shape="rect" id="node10" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="686,107,877,133"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_icgraph.png" border="0" usemap="#CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_icgraph" alt=""/></div>
-<map name="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_icgraph" id="CuRandFunction_8h_aac69ff2051ba55e7e5075232d80880c7_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="189,5,245,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a4d8cde3eb7e722a2bb621a2b7869969a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setRandomUniform </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="CuRandFunction_8h_a4d8cde3eb7e722a2bb621a2b7869969a_cgraph.png" border="0" usemap="#CuRandFunction_8h_a4d8cde3eb7e722a2bb621a2b7869969a_cgraph" alt=""/></div>
-<map name="CuRandFunction_8h_a4d8cde3eb7e722a2bb621a2b7869969a_cgraph" id="CuRandFunction_8h_a4d8cde3eb7e722a2bb621a2b7869969a_cgraph">
-<area shape="rect" id="node2" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="199,5,385,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="189,56,395,83"/><area shape="rect" id="node4" href="classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="191,107,393,133"/><area shape="rect" id="node6" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="205,157,379,184"/><area shape="rect" id="node7" href="classDeviceMatrix.html#a64e6f32bb00d08ea81acda6fd18d032b" title="DeviceMatrix::getAlphaMatrix" alt="" coords="195,208,389,235"/><area shape="rect" id="node9" href="CuBlasFunction_8cpp.html#a64ad0c14765ac642aa383c1441da6362" title="Saxpy" alt="" coords="263,284,321,311"/><area shape="rect" id="node5" href="classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="443,107,639,133"/><area shape="rect" id="node8" href="classDeviceMatrix.html#a678af62d896522088f280aaa70434486" title="DeviceMatrix::DeviceMatrix" alt="" coords="449,195,633,221"/><area shape="rect" id="node10" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="447,245,636,272"/><area shape="rect" id="node11" href="classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="450,296,633,323"/><area shape="rect" id="node13" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="454,347,629,373"/><area shape="rect" id="node12" href="classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="689,296,879,323"/></map>
-</div>
-</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:07 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 11:33:24 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f1b',['_1B',['../classAutoEncoder.html#a2dd69e31948bb3ab5c82e2790a0c4b85',1,'AutoEncoder::_1B()'],['../classBackpropagation.html#a4b9ec52aae061b5a00086574719a5cb0',1,'Backpropagation::_1B()']]]
+  ['_5f1b',['_1B',['../classnn_1_1AutoEncoder.html#a308176077889909b3dbddd11df61d974',1,'nn::AutoEncoder::_1B()'],['../classnn_1_1Backpropagation.html#a218cb7e01bc157cd321a29bdcfa2cd4d',1,'nn::Backpropagation::_1B()']]]
 ];

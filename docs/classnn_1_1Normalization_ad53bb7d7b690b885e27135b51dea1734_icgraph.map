@@ -1,0 +1,5 @@
+<map id="nn::Normalization::getPCAWhiteningMatrix" name="nn::Normalization::getPCAWhiteningMatrix">
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#a6907341d19747d5d726df5db5f617673" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getWhitening\lMatrix" alt="" coords="217,5,426,61"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="293,85,349,112"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="285,136,357,163"/>
+</map>

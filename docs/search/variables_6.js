@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamma',['gamma',['../classBackpropagation.html#a5be9666d0dd414970a463e55df54a3e5',1,'Backpropagation']]],
-  ['generator',['generator',['../classCuRandManager.html#adb86d79187ea93d75319a5efe8b5b36a',1,'CuRandManager']]]
+  ['gamma',['gamma',['../classnn_1_1Backpropagation.html#a54c04956951751df52fd7b7e698f6acb',1,'nn::Backpropagation']]],
+  ['generator',['generator',['../classcuda_1_1CuRandManager.html#a704ffe3318c8d378c4f56a297ebeb13f',1,'cuda::CuRandManager']]]
 ];

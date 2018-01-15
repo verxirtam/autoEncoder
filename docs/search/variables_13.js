@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['z',['z',['../classBackpropagation.html#a19a1ada72faa08bbe765d1528b4515a5',1,'Backpropagation']]],
-  ['zcawhiteningmatrix',['zcaWhiteningMatrix',['../classNormalization.html#a19ad973ee8b1ef60206f142b39b21761',1,'Normalization']]]
+  ['z',['z',['../classnn_1_1Backpropagation.html#a1115c902510d643a3e51066553e4745d',1,'nn::Backpropagation']]],
+  ['zcawhiteningmatrix',['zcaWhiteningMatrix',['../classnn_1_1Normalization.html#aff795fb6f5fb91d8c263650c7c6c6257',1,'nn::Normalization']]]
 ];
