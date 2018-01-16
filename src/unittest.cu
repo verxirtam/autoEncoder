@@ -2462,11 +2462,11 @@ TEST(TimeUtilTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
+	//::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
 	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";

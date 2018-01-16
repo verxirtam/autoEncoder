@@ -78,8 +78,6 @@ void ElementWiseFunction2to1<Func2to1>::culculateBlockThreadCount
 template<typename Func2to1>
 cuda::DeviceMatrix& ElementWiseFunction2to1<Func2to1>::apply(const cuda::DeviceMatrix& x, const cuda::DeviceMatrix& y, cuda::DeviceMatrix& z)
 {
-	using namespace cuda;
-	
 	//1ブロックあたりのスレッド数の上限
 	static unsigned int thread_count;
 	//スレッド数thread_countで実行するブロック数

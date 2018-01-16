@@ -66,11 +66,8 @@ void ElementWiseFunction1to1<Func1to1>::culculateBlockThreadCount
 		unsigned int& thread_count_remain
 	)
 {
-	//名前空間cudaを使用
-	using namespace cuda;
-	
 	//1ブロックあたりのスレッド数の上限
-	static unsigned int thread_count_local = CudaManager::getDeviceProp().maxThreadsPerBlock;
+	static unsigned int thread_count_local = cuda::CudaManager::getDeviceProp().maxThreadsPerBlock;
 	thread_count = thread_count_local;
 	
 	//生成するスレッド数全体
