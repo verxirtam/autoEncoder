@@ -54,7 +54,7 @@
 
 #include "util/TimeUtil.h"
 
-
+#include "nn/TwoLayerPerceptron.cuh"
 
 using namespace cuda;
 using namespace nn;
@@ -2455,6 +2455,25 @@ TEST(TimeUtilTest, Simple)
 {
 	time_t epoch = TimeUtil::stringToEpoch("2017/07/21 11:24:00");
 	EXPECT_EQ(epoch, 1500603840);
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+class TwoLayerPerceptronTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(TwoLayerPerceptronTest, Simple)
+{
+	TwoLayerPerceptron tlp;
+	unsigned int dim_input  = 2;
+	unsigned int dim_hidden = 3;
+	unsigned int dim_output = 4;
+	tlp.init(dim_input, dim_hidden, dim_output);
+
 }
 
 //////////////////////////////////////////////////////////////////////
