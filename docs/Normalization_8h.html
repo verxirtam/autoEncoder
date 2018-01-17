@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/Normalization.h File Reference</title>
+<title>autoEncoder: src/nn/Normalization.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,45 +80,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">Normalization.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="CuBlasFunction_8h_source.html">cuda/CuBlasFunction.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="CuSolverDnFunction_8h_source.html">cuda/CuSolverDnFunction.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="CuBlasFunction_8h_source.html">../cuda/CuBlasFunction.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="CuSolverDnFunction_8h_source.html">../cuda/CuSolverDnFunction.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="Statistics_8h_source.html">Statistics.h</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Normalization.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="Normalization_8h__incl.png" border="0" usemap="#src_2Normalization_8h" alt=""/></div>
-<map name="src_2Normalization_8h" id="src_2Normalization_8h">
-<area shape="rect" id="node2" href="CuBlasFunction_8h.html" title="cuda/CuBlasFunction.h" alt="" coords="109,155,267,181"/><area shape="rect" id="node16" href="CuSolverDnFunction_8h.html" title="cuda/CuSolverDnFunction.h" alt="" coords="292,155,479,181"/><area shape="rect" id="node20" href="Statistics_8h.html" title="Statistics.h" alt="" coords="144,80,232,107"/><area shape="rect" id="node3" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="132,229,243,256"/><area shape="rect" id="node15" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="299,229,409,256"/><area shape="rect" id="node6" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="315,304,441,331"/><area shape="rect" id="node9" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="345,379,460,405"/><area shape="rect" id="node14" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="427,453,561,480"/><area shape="rect" id="node11" href="CudaException_8h.html" title="CudaException.h" alt="" coords="280,453,403,480"/><area shape="rect" id="node17" href="CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="564,304,717,331"/><area shape="rect" id="node19" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="721,453,884,480"/></map>
+<div class="center"><img src="Normalization_8h__incl.png" border="0" usemap="#src_2nn_2Normalization_8h" alt=""/></div>
+<map name="src_2nn_2Normalization_8h" id="src_2nn_2Normalization_8h">
+<area shape="rect" id="node2" href="CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="100,155,271,181"/><area shape="rect" id="node16" href="CuSolverDnFunction_8h.html" title="../cuda/CuSolverDnFunction.h" alt="" coords="295,155,493,181"/><area shape="rect" id="node20" href="Statistics_8h.html" title="Statistics.h" alt="" coords="141,80,229,107"/><area shape="rect" id="node3" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="129,229,240,256"/><area shape="rect" id="node15" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="302,229,412,256"/><area shape="rect" id="node6" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="317,304,443,331"/><area shape="rect" id="node9" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="345,379,460,405"/><area shape="rect" id="node14" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="427,453,561,480"/><area shape="rect" id="node11" href="CudaException_8h.html" title="CudaException.h" alt="" coords="280,453,403,480"/><area shape="rect" id="node17" href="CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="564,304,717,331"/><area shape="rect" id="node19" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="721,453,884,480"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="Normalization_8h__dep__incl.png" border="0" usemap="#src_2Normalization_8hdep" alt=""/></div>
-<map name="src_2Normalization_8hdep" id="src_2Normalization_8hdep">
-<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="243,80,387,107"/><area shape="rect" id="node6" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="367,229,472,256"/><area shape="rect" id="node7" href="Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="491,80,639,107"/><area shape="rect" id="node8" href="Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="665,80,841,107"/><area shape="rect" id="node3" href="AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,155,179,181"/><area shape="rect" id="node4" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,155,364,181"/><area shape="rect" id="node5" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="189,229,343,256"/></map>
+<div class="center"><img src="Normalization_8h__dep__incl.png" border="0" usemap="#src_2nn_2Normalization_8hdep" alt=""/></div>
+<map name="src_2nn_2Normalization_8hdep" id="src_2nn_2Normalization_8hdep">
+<area shape="rect" id="node2" href="AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="204,88,367,115"/><area shape="rect" id="node5" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="183,245,288,272"/><area shape="rect" id="node7" href="Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="523,88,689,115"/><area shape="rect" id="node8" href="Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="714,81,856,122"/><area shape="rect" id="node3" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="19,171,180,197"/><area shape="rect" id="node6" href="AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="257,171,447,197"/><area shape="rect" id="node4" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,245,159,272"/></map>
 </div>
 </div>
 <p><a href="Normalization_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNormalization.html">Normalization</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Normalization.html">nn::Normalization</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenn"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html">nn</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:08 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

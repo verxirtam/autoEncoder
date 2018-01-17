@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['varcoveigenvalue',['varCovEigenValue',['../classNormalization.html#ad601521f42ed9ca0ccc2afdf067b3cc3',1,'Normalization']]],
-  ['varcoveigenvector',['varCovEigenVector',['../classNormalization.html#aac60a3f824c3c18a5a8d2fccde87fed4',1,'Normalization']]],
-  ['varcovmatrix',['varCovMatrix',['../classNormalization.html#adc75656f21ddf2d3a31ee9f1e65ed2a9',1,'Normalization']]]
+  ['varcoveigenvalue',['varCovEigenValue',['../classnn_1_1Normalization.html#a366d5dbebba9931ab0ae58fc49c40e87',1,'nn::Normalization']]],
+  ['varcoveigenvector',['varCovEigenVector',['../classnn_1_1Normalization.html#a40b3bbc47b1e94f087952e06249daa85',1,'nn::Normalization']]],
+  ['varcovmatrix',['varCovMatrix',['../classnn_1_1Normalization.html#afe00c0a23a56de977bfd6356556618fd',1,'nn::Normalization']]]
 ];

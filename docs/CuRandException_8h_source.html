@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,25 +112,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classCuRandException.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCuRandException.html">CuRandException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cuda</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCuRandException.html#a225dc948e1b1eaa4bf77124cbde9fcd0">   28</a></span>&#160;    <a class="code" href="classCuRandException.html#a225dc948e1b1eaa4bf77124cbde9fcd0">CuRandException</a>(<span class="keyword">const</span> std::string&amp; what_arg):</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        runtime_error(what_arg.c_str())</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classCuRandException.html#a41bfdfc146e267dbb8236b1021603089">   32</a></span>&#160;    <a class="code" href="classCuRandException.html#a41bfdfc146e267dbb8236b1021603089">CuRandException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        runtime_error(what_arg)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="ttc" id="classCuRandException_html_a225dc948e1b1eaa4bf77124cbde9fcd0"><div class="ttname"><a href="classCuRandException.html#a225dc948e1b1eaa4bf77124cbde9fcd0">CuRandException::CuRandException</a></div><div class="ttdeci">CuRandException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> CuRandException.h:28</div></div>
-<div class="ttc" id="classCuRandException_html"><div class="ttname"><a href="classCuRandException.html">CuRandException</a></div><div class="ttdef"><b>Definition:</b> CuRandException.h:25</div></div>
-<div class="ttc" id="classCuRandException_html_a41bfdfc146e267dbb8236b1021603089"><div class="ttname"><a href="classCuRandException.html#a41bfdfc146e267dbb8236b1021603089">CuRandException::CuRandException</a></div><div class="ttdeci">CuRandException(const char *what_arg)</div><div class="ttdef"><b>Definition:</b> CuRandException.h:32</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcuda_1_1CuRandException.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcuda_1_1CuRandException.html">CuRandException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcuda_1_1CuRandException.html#a268255c075314b7b2e67238115df4407">   31</a></span>&#160;    <a class="code" href="classcuda_1_1CuRandException.html#a268255c075314b7b2e67238115df4407">CuRandException</a>(<span class="keyword">const</span> std::string&amp; what_arg):</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        runtime_error(what_arg.c_str())</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classcuda_1_1CuRandException.html#adecf5d1c777c58dbdc9d725f3271545e">   35</a></span>&#160;    <a class="code" href="classcuda_1_1CuRandException.html#adecf5d1c777c58dbdc9d725f3271545e">CuRandException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        runtime_error(what_arg)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="ttc" id="classcuda_1_1CuRandException_html_a268255c075314b7b2e67238115df4407"><div class="ttname"><a href="classcuda_1_1CuRandException.html#a268255c075314b7b2e67238115df4407">cuda::CuRandException::CuRandException</a></div><div class="ttdeci">CuRandException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> CuRandException.h:31</div></div>
+<div class="ttc" id="classcuda_1_1CuRandException_html"><div class="ttname"><a href="classcuda_1_1CuRandException.html">cuda::CuRandException</a></div><div class="ttdef"><b>Definition:</b> CuRandException.h:28</div></div>
+<div class="ttc" id="classcuda_1_1CuRandException_html_adecf5d1c777c58dbdc9d725f3271545e"><div class="ttname"><a href="classcuda_1_1CuRandException.html#adecf5d1c777c58dbdc9d725f3271545e">cuda::CuRandException::CuRandException</a></div><div class="ttdeci">CuRandException(const char *what_arg)</div><div class="ttdef"><b>Definition:</b> CuRandException.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

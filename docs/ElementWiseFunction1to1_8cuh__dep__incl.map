@@ -1,14 +1,14 @@
-<map id="src/ElementWiseFunction1to1.cuh" name="src/ElementWiseFunction1to1.cuh">
-<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/ActivateFunction.cuh" alt="" coords="526,88,692,115"/>
-<area shape="rect" id="node13" href="$OutputLayerMulticlassClassification_8cuh.html" title="src/OutputLayerMulticlass\lClassification.cuh" alt="" coords="717,81,891,122"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="443,171,609,197"/>
-<area shape="rect" id="node12" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="634,171,752,197"/>
-<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="176,253,320,280"/>
-<area shape="rect" id="node9" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="344,253,563,280"/>
-<area shape="rect" id="node10" href="$BackpropagationUtils_8cuh.html" title="src/BackpropagationUtils.cuh" alt="" coords="503,336,696,363"/>
-<area shape="rect" id="node11" href="$BackpropagationUtils__detail_8cuh.html" title="src/BackpropagationUtils\l_detail.cuh" alt="" coords="637,246,805,287"/>
-<area shape="rect" id="node5" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,336,179,363"/>
-<area shape="rect" id="node6" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,336,364,363"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="393,411,497,437"/>
-<area shape="rect" id="node7" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="207,411,360,437"/>
+<map id="src/nn/ElementWiseFunction1to1.cuh" name="src/nn/ElementWiseFunction1to1.cuh">
+<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/nn/ActivateFunction.cuh" alt="" coords="514,88,699,115"/>
+<area shape="rect" id="node13" href="$OutputLayerMulticlassClassification_8cuh.html" title="src/nn/OutputLayerMulticlass\lClassification.cuh" alt="" coords="724,81,916,122"/>
+<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="427,171,611,197"/>
+<area shape="rect" id="node12" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="635,171,753,197"/>
+<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="139,253,301,280"/>
+<area shape="rect" id="node9" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="359,246,547,287"/>
+<area shape="rect" id="node10" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="508,336,717,363"/>
+<area shape="rect" id="node11" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="623,246,809,287"/>
+<area shape="rect" id="node5" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,336,165,363"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="302,411,407,437"/>
+<area shape="rect" id="node8" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,336,432,363"/>
+<area shape="rect" id="node6" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,411,161,437"/>
 </map>

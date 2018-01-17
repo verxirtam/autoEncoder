@@ -32,27 +32,32 @@
 #include "cuda/DeviceVector.h"
 #include "cuda/DeviceMatrix.h"
 
-#include "BackpropagationTanhReg.cuh"
+#include "nn/BackpropagationTanhReg.cuh"
 
 #include "cuda/CuRandFunction.h"
 
 #include "cuda/CuSolverDnManager.h"
 #include "cuda/CuSolverDnFunction.h"
 
-#include "Normalization.h"
+#include "nn/Normalization.h"
 
-#include "AutoEncoder.cuh"
-#include "Func1to1Tanh.cuh"
-#include "Func1to1ReLU.cuh"
-#include "Func1to1Logistic.cuh"
+#include "nn/AutoEncoder.cuh"
+#include "nn/Func1to1Tanh.cuh"
+#include "nn/Func1to1ReLU.cuh"
+#include "nn/Func1to1Logistic.cuh"
 
 #include "cuda/DeviceVectorUtils.h"
 
 #include "FXAutoEncoder.cuh"
 
-#include "BackpropagationUtils.cuh"
+#include "nn/BackpropagationUtils.cuh"
 
 #include "util/TimeUtil.h"
+
+
+
+using namespace cuda;
+using namespace nn;
 
 void printVector(const std::vector<float>& v, const std::string& vname)
 {
@@ -2457,11 +2462,11 @@ TEST(TimeUtilTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
-	::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
+	//::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
 	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";

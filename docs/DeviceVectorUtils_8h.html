@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">DeviceVectorUtils.h File Reference</div>  </div>
@@ -109,162 +111,26 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="DeviceVectorUtils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html">cuda</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a90a62f2f91ca47add46708c8fdbe2a35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DeviceVectorUtils_8h.html#a90a62f2f91ca47add46708c8fdbe2a35">readFromCsvFile</a> (const std::string &amp;csvFileName, <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;deviceVector)</td></tr>
-<tr class="separator:a90a62f2f91ca47add46708c8fdbe2a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c37253f3aaccded1fcd3968c034939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DeviceVectorUtils_8h.html#a30c37253f3aaccded1fcd3968c034939">readFromCsvFile</a> (const std::string &amp;csvFileName, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;deviceMatrix)</td></tr>
-<tr class="separator:a30c37253f3aaccded1fcd3968c034939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dfadae54280ea671dfd463323a8b468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DeviceVectorUtils_8h.html#a1dfadae54280ea671dfd463323a8b468">writeToCsvFile</a> (const std::string &amp;csvFileName, const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;deviceVector)</td></tr>
-<tr class="separator:a1dfadae54280ea671dfd463323a8b468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b08c60bdcaf5630bfe82ac9c8a3267a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DeviceVectorUtils_8h.html#a3b08c60bdcaf5630bfe82ac9c8a3267a">writeToCsvFile</a> (const std::string &amp;csvFileName, const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;deviceMatrix)</td></tr>
-<tr class="separator:a3b08c60bdcaf5630bfe82ac9c8a3267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fbb8da8b204699e6f15a510460d7196"><td class="memItemLeft" align="right" valign="top">DeviceVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">cuda::readFromCsvFile</a> (const std::string &amp;csvFileName, DeviceVector &amp;deviceVector)</td></tr>
+<tr class="separator:a8fbb8da8b204699e6f15a510460d7196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055f7c6e6f3713c4bf7f3b083ea7abfe"><td class="memItemLeft" align="right" valign="top">DeviceMatrix &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a055f7c6e6f3713c4bf7f3b083ea7abfe">cuda::readFromCsvFile</a> (const std::string &amp;csvFileName, DeviceMatrix &amp;deviceMatrix)</td></tr>
+<tr class="separator:a055f7c6e6f3713c4bf7f3b083ea7abfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce3c8c14137f70cb144f5030327f34c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">cuda::writeToCsvFile</a> (const std::string &amp;csvFileName, const DeviceVector &amp;deviceVector)</td></tr>
+<tr class="separator:adce3c8c14137f70cb144f5030327f34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27eb773ce4a8cb680464e3b29204fec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#aa27eb773ce4a8cb680464e3b29204fec">cuda::writeToCsvFile</a> (const std::string &amp;csvFileName, const DeviceMatrix &amp;deviceMatrix)</td></tr>
+<tr class="separator:aa27eb773ce4a8cb680464e3b29204fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a90a62f2f91ca47add46708c8fdbe2a35"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classDeviceVector.html">DeviceVector</a>&amp; readFromCsvFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>csvFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>deviceVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="DeviceVectorUtils_8h_a90a62f2f91ca47add46708c8fdbe2a35_icgraph.png" border="0" usemap="#DeviceVectorUtils_8h_a90a62f2f91ca47add46708c8fdbe2a35_icgraph" alt=""/></div>
-<map name="DeviceVectorUtils_8h_a90a62f2f91ca47add46708c8fdbe2a35_icgraph" id="DeviceVectorUtils_8h_a90a62f2f91ca47add46708c8fdbe2a35_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="176,5,232,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a30c37253f3aaccded1fcd3968c034939"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; readFromCsvFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>csvFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>deviceMatrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1dfadae54280ea671dfd463323a8b468"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void writeToCsvFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>csvFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>deviceVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_cgraph.png" border="0" usemap="#DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_cgraph" alt=""/></div>
-<map name="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_cgraph" id="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_cgraph">
-<area shape="rect" id="node2" href="classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="197,5,323,32"/><area shape="rect" id="node3" href="classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="165,56,355,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_icgraph.png" border="0" usemap="#DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_icgraph" alt=""/></div>
-<map name="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_icgraph" id="DeviceVectorUtils_8h_a1dfadae54280ea671dfd463323a8b468_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="192,5,248,32"/><area shape="rect" id="node3" href="unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="166,56,274,83"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a3b08c60bdcaf5630bfe82ac9c8a3267a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void writeToCsvFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>csvFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>deviceMatrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="DeviceVectorUtils_8h_a3b08c60bdcaf5630bfe82ac9c8a3267a_cgraph.png" border="0" usemap="#DeviceVectorUtils_8h_a3b08c60bdcaf5630bfe82ac9c8a3267a_cgraph" alt=""/></div>
-<map name="DeviceVectorUtils_8h_a3b08c60bdcaf5630bfe82ac9c8a3267a_cgraph" id="DeviceVectorUtils_8h_a3b08c60bdcaf5630bfe82ac9c8a3267a_cgraph">
-<area shape="rect" id="node2" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="205,5,331,32"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="165,56,371,83"/><area shape="rect" id="node4" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="175,107,361,133"/></map>
-</div>
-</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:08 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

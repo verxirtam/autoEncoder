@@ -1,6 +1,7 @@
 
 #include "FXAutoEncoder.cuh"
 
+using namespace cuda;
 
 void FXAutoEncoder::getNormarizeInput(DeviceMatrix& normarize_input)
 {

@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -106,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -120,34 +121,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
 <li>init()
-: <a class="el" href="classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd">AutoEncoder&lt; AF &gt;</a>
-, <a class="el" href="classBackpropagation.html#a14b837a4fa36334685afd07d74b65108">Backpropagation&lt; AF, OutputLayer &gt;</a>
-, <a class="el" href="classFXAutoEncoder.html#a3f0443b91e1c6cfbd8a31b5d9e694bfb">FXAutoEncoder</a>
-, <a class="el" href="classNormalization.html#aada795b6203ef7b688f13df9dc2af843">Normalization</a>
+: <a class="el" href="classFXAutoEncoder.html#a3f0443b91e1c6cfbd8a31b5d9e694bfb">FXAutoEncoder</a>
+, <a class="el" href="classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551">nn::AutoEncoder&lt; AF &gt;</a>
+, <a class="el" href="classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f">nn::Normalization</a>
 </li>
 <li>initRandom()
-: <a class="el" href="classBackpropagation.html#a9dd9f12c3b9e7e19d000787478ef17f8">Backpropagation&lt; AF, OutputLayer &gt;</a>
+: <a class="el" href="classnn_1_1Backpropagation.html#a4cfcca70eb81b9bec72056a9e928ee2f">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
 <li>initStream()
-: <a class="el" href="classCudaManager.html#af5165cd36e60be7791be7073e0a37a5a">CudaManager</a>
+: <a class="el" href="classcuda_1_1CudaManager.html#a006633206d874e690b52fe90f9032998">cuda::CudaManager</a>
 </li>
 <li>invByElement()
-: <a class="el" href="classNormalization.html#a26d0ec8b6e92613a1fbc1385332d6b7d">Normalization</a>
+: <a class="el" href="classnn_1_1Normalization.html#a890ff453b79a1efca639ef05f36ef234">nn::Normalization</a>
 </li>
 <li>inversePCAWhiteningMatrix
-: <a class="el" href="classNormalization.html#aba0c7b1d59f361a909e28800ec1845bc">Normalization</a>
+: <a class="el" href="classnn_1_1Normalization.html#a972f3db348879650af52e99345538591">nn::Normalization</a>
 </li>
 <li>inverseZCAWhiteningMatrix
-: <a class="el" href="classNormalization.html#a1c920d6efcb0e8836a880f6908afa587">Normalization</a>
+: <a class="el" href="classnn_1_1Normalization.html#ab7552b4a6f385d4a9b5b6f8caff4ea6a">nn::Normalization</a>
 </li>
 <li>invSqrtByElement()
-: <a class="el" href="classNormalization.html#a09014d6d9a91df63852852e4b79a46f9">Normalization</a>
+: <a class="el" href="classnn_1_1Normalization.html#a37db90cab9bf31c26766681dc1ca198a">nn::Normalization</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:10 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:16 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

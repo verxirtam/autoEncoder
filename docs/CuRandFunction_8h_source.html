@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,19 +112,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="CuBlasFunction_8h.html">CuBlasFunction.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7">setRandomUniform</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, <a class="code" href="classDeviceVector.html">DeviceVector</a>&amp; v);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7">setRandomUniform</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, <a class="code" href="classDeviceMatrix.html">DeviceMatrix</a>&amp; m);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="ttc" id="classDeviceMatrix_html"><div class="ttname"><a href="classDeviceMatrix.html">DeviceMatrix</a></div><div class="ttdef"><b>Definition:</b> DeviceMatrix.h:25</div></div>
-<div class="ttc" id="classDeviceVector_html"><div class="ttname"><a href="classDeviceVector.html">DeviceVector</a></div><div class="ttdef"><b>Definition:</b> DeviceVector.h:26</div></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cuda</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#a747f893ac555456e9630cae830f94162">setRandomUniform</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, DeviceVector&amp; v);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#a747f893ac555456e9630cae830f94162">setRandomUniform</a>(<span class="keywordtype">float</span> min, <span class="keywordtype">float</span> max, DeviceMatrix&amp; m);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="ttc" id="namespacecuda_html_a747f893ac555456e9630cae830f94162"><div class="ttname"><a href="namespacecuda.html#a747f893ac555456e9630cae830f94162">cuda::setRandomUniform</a></div><div class="ttdeci">void setRandomUniform(float min, float max, DeviceVector &amp;v)</div><div class="ttdef"><b>Definition:</b> CuRandFunction.cpp:24</div></div>
 <div class="ttc" id="CuBlasFunction_8h_html"><div class="ttname"><a href="CuBlasFunction_8h.html">CuBlasFunction.h</a></div></div>
-<div class="ttc" id="CuRandFunction_8h_html_aac69ff2051ba55e7e5075232d80880c7"><div class="ttname"><a href="CuRandFunction_8h.html#aac69ff2051ba55e7e5075232d80880c7">setRandomUniform</a></div><div class="ttdeci">void setRandomUniform(float min, float max, DeviceVector &amp;v)</div><div class="ttdef"><b>Definition:</b> CuRandFunction.cpp:21</div></div>
 <div class="ttc" id="CuRandManager_8h_html"><div class="ttname"><a href="CuRandManager_8h.html">CuRandManager.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rowcolumn',['RowColumn',['../unittest_8cu.html#a4b307f9b7776234c29d3de7481d538be',1,'unittest.cu']]]
+  ['devicematrix',['DeviceMatrix',['../classnn_1_1AutoEncoder.html#a80dc9d65f2bca7979a8ce9ff9fe82606',1,'nn::AutoEncoder::DeviceMatrix()'],['../classnn_1_1Backpropagation.html#acfbd8a7f84ff53d4360014088a243b12',1,'nn::Backpropagation::DeviceMatrix()'],['../classnn_1_1ElementWiseFunction1to1.html#ad71fa3d3d91e16994105e3472bc27385',1,'nn::ElementWiseFunction1to1::DeviceMatrix()'],['../classnn_1_1Normalization.html#a08b18215d1309b6b1ad33a7a0b014918',1,'nn::Normalization::DeviceMatrix()']]],
+  ['devicevector',['DeviceVector',['../classnn_1_1AutoEncoder.html#abec79ee5bb314b3d56a147c0d233340e',1,'nn::AutoEncoder::DeviceVector()'],['../classnn_1_1Backpropagation.html#af6bf52bcf7fbf07420e1d330158ae172',1,'nn::Backpropagation::DeviceVector()'],['../classnn_1_1ElementWiseFunction1to1.html#a21ba12d69c97674787799b6a686d139a',1,'nn::ElementWiseFunction1to1::DeviceVector()'],['../classnn_1_1Normalization.html#a469375e9203d44bcf5f7b29a48d18b07',1,'nn::Normalization::DeviceVector()']]]
 ];

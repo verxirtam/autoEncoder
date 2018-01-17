@@ -23,6 +23,9 @@
 
 #include <fstream>
 
+namespace cuda
+{
+
 DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& deviceVector);
 
 DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& deviceMatrix);
@@ -30,4 +33,6 @@ DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& devi
 void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVector);
 
 void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMatrix);
+
+}
 

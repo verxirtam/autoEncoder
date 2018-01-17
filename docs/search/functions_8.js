@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['learning',['learning',['../classAutoEncoder.html#a732daaa9339eab22f9d083216c5e085c',1,'AutoEncoder::learning()'],['../classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc',1,'FXAutoEncoder::learning()']]]
+  ['learning',['learning',['../classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc',1,'FXAutoEncoder::learning()'],['../classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79',1,'nn::AutoEncoder::learning()']]]
 ];

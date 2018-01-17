@@ -1,11 +1,11 @@
 <map id="FXAutoEncoder" name="FXAutoEncoder">
-<area shape="rect" id="node2" href="$classAutoEncoder.html" title="AutoEncoder\&lt; Func1to1Tanh \&gt;" alt="" coords="1233,171,1437,197"/>
-<area shape="rect" id="node3" href="$classBackpropagation.html" title="Backpropagation\&lt; Func1to1\lTanh, OutputLayerRegression \&gt;" alt="" coords="576,101,784,142"/>
-<area shape="rect" id="node4" href="$classDeviceVector.html" title="DeviceVector" alt="" coords="5,165,107,192"/>
-<area shape="rect" id="node5" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayer \&gt;" alt="" coords="184,123,336,165"/>
-<area shape="rect" id="node6" href="$classNormalization.html" title="Normalization" alt="" coords="629,324,731,351"/>
-<area shape="rect" id="node8" href="$classAutoEncoder.html" title="AutoEncoder\&lt; AF \&gt;" alt="" coords="933,240,1072,267"/>
-<area shape="rect" id="node9" href="$classBackpropagation.html" title="Backpropagation\&lt; AF,\l OutputLayerRegression \&gt;" alt="" coords="593,186,767,227"/>
-<area shape="rect" id="node7" href="$classDeviceMatrix.html" title="DeviceMatrix" alt="" coords="211,427,309,453"/>
-<area shape="rect" id="node10" href="$classFXAutoEncoderDBAccessor.html" title="FXAutoEncoderDBAccessor" alt="" coords="1241,221,1429,248"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;" alt="" coords="1371,163,1517,205"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html" title="nn::Backpropagation\l\&lt; nn::Func1to1Tanh,\l nn::OutputLayerRegression \&gt;" alt="" coords="644,93,841,149"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="6,165,143,192"/>
+<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html" title="nn::Backpropagation\l\&lt; AF, OutputLayer \&gt;" alt="" coords="222,123,365,165"/>
+<area shape="rect" id="node6" href="$classnn_1_1Normalization.html" title="nn::Normalization" alt="" coords="681,324,805,351"/>
+<area shape="rect" id="node8" href="$classnn_1_1AutoEncoder.html" title="nn::AutoEncoder\&lt; AF \&gt;" alt="" coords="1008,240,1168,267"/>
+<area shape="rect" id="node9" href="$classnn_1_1Backpropagation.html" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression \&gt;" alt="" coords="627,186,858,227"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="226,427,361,453"/>
+<area shape="rect" id="node10" href="$classFXAutoEncoderDBAccessor.html" title="FXAutoEncoderDBAccessor" alt="" coords="1350,229,1538,256"/>
 </map>

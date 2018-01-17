@@ -22,7 +22,12 @@
 
 #include "CuBlasFunction.h"
 
+namespace cuda
+{
+
 void setRandomUniform(float min, float max, DeviceVector& v);
 
 void setRandomUniform(float min, float max, DeviceMatrix& m);
+
+}
 

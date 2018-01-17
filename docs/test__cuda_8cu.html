@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,15 +90,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">test_cuda.cu File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ActivateFunction_8cuh.html">ActivateFunction.cuh</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="Func1to1Tanh_8cuh.html">Func1to1Tanh.cuh</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="Func1to1ReLU_8cuh.html">Func1to1ReLU.cuh</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="ActivateFunction_8cuh.html">nn/ActivateFunction.cuh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Func1to1Tanh_8cuh.html">nn/Func1to1Tanh.cuh</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="Func1to1ReLU_8cuh.html">nn/Func1to1ReLU.cuh</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test_cuda.cu:</div>
 <div class="dyncontent">
 <div class="center"><img src="test__cuda_8cu__incl.png" border="0" usemap="#src_2test__cuda_8cu" alt=""/></div>
 <map name="src_2test__cuda_8cu" id="src_2test__cuda_8cu">
-<area shape="rect" id="node2" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="219,80,364,107"/><area shape="rect" id="node16" href="Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="389,80,519,107"/><area shape="rect" id="node17" href="Func1to1ReLU_8cuh.html" title="Func1to1ReLU.cuh" alt="" coords="545,80,679,107"/><area shape="rect" id="node3" href="DeviceMatrix_8h.html" title="cuda/DeviceMatrix.h" alt="" coords="26,155,168,181"/><area shape="rect" id="node14" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="192,155,391,181"/><area shape="rect" id="node15" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="416,155,611,181"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="123,229,249,256"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="257,304,372,331"/><area shape="rect" id="node13" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="394,379,528,405"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="112,379,235,405"/></map>
+<area shape="rect" id="node2" href="ActivateFunction_8cuh.html" title="nn/ActivateFunction.cuh" alt="" coords="139,80,301,107"/><area shape="rect" id="node18" href="Func1to1Tanh_8cuh.html" title="nn/Func1to1Tanh.cuh" alt="" coords="326,80,473,107"/><area shape="rect" id="node19" href="Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="498,80,651,107"/><area shape="rect" id="node3" href="DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="5,229,159,256"/><area shape="rect" id="node14" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="120,155,319,181"/><area shape="rect" id="node17" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="344,155,539,181"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="199,304,325,331"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="247,379,361,405"/><area shape="rect" id="node13" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="426,453,560,480"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="144,453,267,480"/><area shape="rect" id="node15" href="DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="185,229,340,256"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -124,7 +125,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="test__cuda_8cu_ae1a3968e7947464bee7714f6d43b7002_cgraph.png" border="0" usemap="#test__cuda_8cu_ae1a3968e7947464bee7714f6d43b7002_cgraph" alt=""/></div>
 <map name="test__cuda_8cu_ae1a3968e7947464bee7714f6d43b7002_cgraph" id="test__cuda_8cu_ae1a3968e7947464bee7714f6d43b7002_cgraph">
-<area shape="rect" id="node2" href="classDeviceMatrix.html#a87a42a15abbcb767ec76ed5932d5e810" title="DeviceMatrix::get0Matrix" alt="" coords="103,5,271,32"/><area shape="rect" id="node4" href="classDeviceMatrix.html#a7d71fcf1eec66e69617c76903be4f55d" title="DeviceMatrix::get1Matrix" alt="" coords="103,56,271,83"/><area shape="rect" id="node5" href="classActivateFunction.html#a696cb3a2f97a03ffeb1cb2ce34d9f1a1" title="ActivateFunction::activate" alt="" coords="99,107,274,133"/><area shape="rect" id="node3" href="classDeviceMatrix.html#a678af62d896522088f280aaa70434486" title="DeviceMatrix::DeviceMatrix" alt="" coords="323,27,507,53"/><area shape="rect" id="node6" href="classElementWiseFunction1to1.html#af7917233b07ffed3fb1c13900211671c" title="ElementWiseFunction1to1\l::apply" alt="" coords="327,99,502,141"/><area shape="rect" id="node7" href="classElementWiseFunction1to1.html#a82d667ae530d1539c24f270d64825217" title="ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="555,70,746,111"/><area shape="rect" id="node12" href="classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="564,136,737,163"/><area shape="rect" id="node8" href="classCudaManager.html#ac82bbade2f5212ada95f3cb2ed2322a4" title="CudaManager::getDeviceProp" alt="" coords="799,27,996,53"/><area shape="rect" id="node10" href="classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="804,77,991,104"/><area shape="rect" id="node11" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="795,128,1000,155"/><area shape="rect" id="node9" href="classCudaManager.html#a07a5ed1a962c7b1454ee402b42fd9b86" title="CudaManager::getInstance" alt="" coords="1048,27,1227,53"/></map>
+<area shape="rect" id="node2" href="classcuda_1_1DeviceMatrix.html#a440b48448499feb50fea0f1526896da0" title="cuda::DeviceMatrix\l::get0Matrix" alt="" coords="99,5,234,46"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html#aadd90c21c36856b05522616e9d5ff784" title="cuda::DeviceMatrix\l::get1Matrix" alt="" coords="99,70,234,111"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html#a8b09d649204affd4c0022f80760604ff" title="cuda::DeviceMatrix\l::DeviceMatrix" alt="" coords="283,38,418,79"/></map>
 </div>
 </p>
 
@@ -133,7 +134,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:08 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

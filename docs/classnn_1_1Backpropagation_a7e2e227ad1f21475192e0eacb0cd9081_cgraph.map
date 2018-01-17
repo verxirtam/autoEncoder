@@ -1,0 +1,13 @@
+<map id="nn::Backpropagation::updateParameter" name="nn::Backpropagation::updateParameter">
+<area shape="rect" id="node2" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="347,201,498,242"/>
+<area shape="rect" id="node4" href="$namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919" title="cuda::Sgemm" alt="" coords="195,121,298,148"/>
+<area shape="rect" id="node8" href="$namespacecuda.html#a33ab26d236cd2afae89ab32f1b99f4ea" title="cuda::Sgeam" alt="" coords="197,71,296,97"/>
+<area shape="rect" id="node9" href="$namespacecuda.html#aee23e9d79325014e3dd12126ed0e55a2" title="cuda::Sgemv" alt="" coords="197,172,296,199"/>
+<area shape="rect" id="node11" href="$namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52" title="cuda::Saxpy" alt="" coords="199,273,294,300"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="547,201,698,242"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="355,135,490,177"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="355,5,490,46"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="355,70,490,111"/>
+<area shape="rect" id="node10" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="354,266,491,307"/>
+<area shape="rect" id="node12" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="354,331,491,373"/>
+</map>

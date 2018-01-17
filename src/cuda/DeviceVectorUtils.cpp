@@ -17,6 +17,9 @@
  */
 #include "DeviceVectorUtils.h"
 
+namespace cuda
+{
+
 DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& deviceVector)
 {
 	
@@ -129,3 +132,6 @@ void writeToCsvFile(const std::string& csvFileName, const DeviceMatrix& deviceMa
 		csv_file << std::endl;
 	}
 }
+
+}
+

@@ -1,14 +1,14 @@
 <map id="TEST_P" name="TEST_P">
-<area shape="rect" id="node2" href="$classCuRandManager.html#abd24fbe05fafa5240680e8d5d1c7a7c8" title="CuRandManager::getGenerator" alt="" coords="127,5,329,32"/>
-<area shape="rect" id="node4" href="$classDeviceMatrix.html#ab6994c297e0d44c9a7b93e225875987d" title="DeviceMatrix::getAddress" alt="" coords="141,56,315,83"/>
-<area shape="rect" id="node5" href="$classDeviceMatrix.html#ae974aecf5cef1b6677d3f7ef3309fcaa" title="DeviceMatrix::getRowCount" alt="" coords="135,107,321,133"/>
-<area shape="rect" id="node6" href="$classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="125,157,331,184"/>
-<area shape="rect" id="node7" href="$classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="165,208,291,235"/>
-<area shape="rect" id="node8" href="$CuBlasFunction_8cpp.html#a6f8a762ecde9d88fb4c1094478694621" title="Sscal" alt="" coords="201,259,255,285"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="173,309,283,336"/>
-<area shape="rect" id="node3" href="$classCuRandManager.html#ac507a072f6c6eda6185561087e6d025c" title="CuRandManager::getInstance" alt="" coords="379,5,575,32"/>
-<area shape="rect" id="node9" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="383,208,572,235"/>
-<area shape="rect" id="node10" href="$classCuBlasManager.html#a8b36302b1a7c651cec1f467545d51e3d" title="CuBlasManager::getHandle" alt="" coords="386,259,569,285"/>
-<area shape="rect" id="node12" href="$classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="390,309,565,336"/>
-<area shape="rect" id="node11" href="$classCuBlasManager.html#a45f7468058ec35fa71a53c632031e80f" title="CuBlasManager::getInstance" alt="" coords="625,259,815,285"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="129,5,285,46"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="139,70,274,111"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="139,135,274,177"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="139,201,274,242"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="126,267,287,293"/>
+<area shape="rect" id="node8" href="$namespacecuda.html#a1dbfeb0cb13d3792d0c5a5f43dba02f0" title="cuda::Sscal" alt="" coords="161,317,252,344"/>
+<area shape="rect" id="node13" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="151,368,262,395"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="337,5,493,46"/>
+<area shape="rect" id="node9" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="346,245,483,286"/>
+<area shape="rect" id="node10" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="339,310,490,351"/>
+<area shape="rect" id="node12" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="346,375,483,417"/>
+<area shape="rect" id="node11" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="542,310,693,351"/>
 </map>

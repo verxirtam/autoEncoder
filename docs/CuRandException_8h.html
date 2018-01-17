@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">CuRandException.h File Reference</div>  </div>
 </div><!--header-->
@@ -101,20 +103,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="CuRandException_8h__dep__incl.png" border="0" usemap="#src_2cuda_2CuRandException_8hdep" alt=""/></div>
 <map name="src_2cuda_2CuRandException_8hdep" id="src_2cuda_2CuRandException_8hdep">
-<area shape="rect" id="node2" href="CuRandManager_8h.html" title="src/cuda/CuRandManager.h" alt="" coords="822,80,1007,107"/><area shape="rect" id="node3" href="Backpropagation_8cuh.html" title="src/Backpropagation.cuh" alt="" coords="575,155,741,181"/><area shape="rect" id="node12" href="CuRandFunction_8h.html" title="src/cuda/CuRandFunction.h" alt="" coords="822,155,1007,181"/><area shape="rect" id="node14" href="CuRandManager_8cpp.html" title="src/cuda/CuRandManager.cpp" alt="" coords="1031,155,1229,181"/><area shape="rect" id="node4" href="AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="272,237,416,264"/><area shape="rect" id="node9" href="BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="440,320,659,347"/><area shape="rect" id="node10" href="BackpropagationUtils_8cuh.html" title="src/BackpropagationUtils.cuh" alt="" coords="683,320,876,347"/><area shape="rect" id="node11" href="BackpropagationUtils__detail_8cuh.html" title="src/BackpropagationUtils\l_detail.cuh" alt="" coords="696,230,864,271"/><area shape="rect" id="node5" href="AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,320,179,347"/><area shape="rect" id="node6" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,320,364,347"/><area shape="rect" id="node8" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="497,395,601,421"/><area shape="rect" id="node7" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="207,395,360,421"/><area shape="rect" id="node13" href="CuRandFunction_8cpp.html" title="src/cuda/CuRandFunction.cpp" alt="" coords="951,237,1149,264"/></map>
+<area shape="rect" id="node2" href="CuRandManager_8h.html" title="src/cuda/CuRandManager.h" alt="" coords="277,80,461,107"/><area shape="rect" id="node3" href="CuRandFunction_8h.html" title="src/cuda/CuRandFunction.h" alt="" coords="61,155,245,181"/><area shape="rect" id="node6" href="CuRandManager_8cpp.html" title="src/cuda/CuRandManager.cpp" alt="" coords="270,155,468,181"/><area shape="rect" id="node7" href="Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="493,155,677,181"/><area shape="rect" id="node4" href="CuRandFunction_8cpp.html" title="src/cuda/CuRandFunction.cpp" alt="" coords="5,237,203,264"/><area shape="rect" id="node5" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="543,411,648,437"/><area shape="rect" id="node8" href="AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="771,237,933,264"/><area shape="rect" id="node12" href="BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="278,321,465,362"/><area shape="rect" id="node13" href="BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="491,328,700,355"/><area shape="rect" id="node14" href="BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="540,230,727,271"/><area shape="rect" id="node9" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="991,328,1152,355"/><area shape="rect" id="node11" href="AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="777,328,967,355"/><area shape="rect" id="node10" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="995,411,1148,437"/></map>
 </div>
 </div>
 <p><a href="CuRandException_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuRandException.html">CuRandException</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcuda_1_1CuRandException.html">cuda::CuRandException</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html">cuda</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:07 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

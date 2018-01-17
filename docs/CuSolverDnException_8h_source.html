@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -111,27 +112,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classCuSolverDnException.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCuSolverDnException.html">CuSolverDnException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>cuda</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classCuSolverDnException.html#aac394a21a652d3a10d7cd81a62ed06fe">   28</a></span>&#160;    <a class="code" href="classCuSolverDnException.html#aac394a21a652d3a10d7cd81a62ed06fe">CuSolverDnException</a>(<span class="keyword">const</span> std::string&amp; what_arg):</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        runtime_error(what_arg.c_str())</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classCuSolverDnException.html#a841881f24b0f68b7a34159d303797756">   32</a></span>&#160;    <a class="code" href="classCuSolverDnException.html#a841881f24b0f68b7a34159d303797756">CuSolverDnException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        runtime_error(what_arg)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="ttc" id="classCuSolverDnException_html_aac394a21a652d3a10d7cd81a62ed06fe"><div class="ttname"><a href="classCuSolverDnException.html#aac394a21a652d3a10d7cd81a62ed06fe">CuSolverDnException::CuSolverDnException</a></div><div class="ttdeci">CuSolverDnException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:28</div></div>
-<div class="ttc" id="classCuSolverDnException_html_a841881f24b0f68b7a34159d303797756"><div class="ttname"><a href="classCuSolverDnException.html#a841881f24b0f68b7a34159d303797756">CuSolverDnException::CuSolverDnException</a></div><div class="ttdeci">CuSolverDnException(const char *what_arg)</div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:32</div></div>
-<div class="ttc" id="classCuSolverDnException_html"><div class="ttname"><a href="classCuSolverDnException.html">CuSolverDnException</a></div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:25</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcuda_1_1CuSolverDnException.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcuda_1_1CuSolverDnException.html">CuSolverDnException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcuda_1_1CuSolverDnException.html#a2e31388a522b1e3035d2c693c2ae9ad9">   31</a></span>&#160;    <a class="code" href="classcuda_1_1CuSolverDnException.html#a2e31388a522b1e3035d2c693c2ae9ad9">CuSolverDnException</a>(<span class="keyword">const</span> std::string&amp; what_arg):</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        runtime_error(what_arg.c_str())</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classcuda_1_1CuSolverDnException.html#a63f8cc8e2444041d1c634f7e6f87fc06">   35</a></span>&#160;    <a class="code" href="classcuda_1_1CuSolverDnException.html#a63f8cc8e2444041d1c634f7e6f87fc06">CuSolverDnException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg):</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        runtime_error(what_arg)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="ttc" id="classcuda_1_1CuSolverDnException_html_a2e31388a522b1e3035d2c693c2ae9ad9"><div class="ttname"><a href="classcuda_1_1CuSolverDnException.html#a2e31388a522b1e3035d2c693c2ae9ad9">cuda::CuSolverDnException::CuSolverDnException</a></div><div class="ttdeci">CuSolverDnException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:31</div></div>
+<div class="ttc" id="classcuda_1_1CuSolverDnException_html_a63f8cc8e2444041d1c634f7e6f87fc06"><div class="ttname"><a href="classcuda_1_1CuSolverDnException.html#a63f8cc8e2444041d1c634f7e6f87fc06">cuda::CuSolverDnException::CuSolverDnException</a></div><div class="ttdeci">CuSolverDnException(const char *what_arg)</div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:35</div></div>
+<div class="ttc" id="classcuda_1_1CuSolverDnException_html"><div class="ttname"><a href="classcuda_1_1CuSolverDnException.html">cuda::CuSolverDnException</a></div><div class="ttdef"><b>Definition:</b> CuSolverDnException.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

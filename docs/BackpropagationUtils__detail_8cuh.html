@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/BackpropagationUtils_detail.cuh File Reference</title>
+<title>autoEncoder: src/nn/BackpropagationUtils_detail.cuh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,11 +80,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BackpropagationUtils_detail.cuh File Reference</div>  </div>
@@ -96,114 +98,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BackpropagationUtils_detail.cuh:</div>
 <div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh__incl.png" border="0" usemap="#src_2BackpropagationUtils__detail_8cuh" alt=""/></div>
-<map name="src_2BackpropagationUtils__detail_8cuh" id="src_2BackpropagationUtils__detail_8cuh">
-<area shape="rect" id="node5" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="1032,96,1176,123"/><area shape="rect" id="node9" href="CuBlasFunction_8h.html" title="cuda/CuBlasFunction.h" alt="" coords="849,171,1007,197"/><area shape="rect" id="node21" href="CuRandManager_8h.html" title="cuda/CuRandManager.h" alt="" coords="1437,395,1600,421"/><area shape="rect" id="node25" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="226,469,413,496"/><area shape="rect" id="node26" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="1031,171,1176,197"/><area shape="rect" id="node28" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="1117,245,1312,272"/><area shape="rect" id="node29" href="Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="184,171,407,197"/><area shape="rect" id="node30" href="ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="432,171,631,197"/><area shape="rect" id="node31" href="Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="656,171,824,197"/><area shape="rect" id="node10" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="621,245,732,272"/><area shape="rect" id="node20" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="758,245,868,272"/><area shape="rect" id="node12" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="777,320,903,347"/><area shape="rect" id="node15" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="595,395,709,421"/><area shape="rect" id="node19" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="438,469,572,496"/><area shape="rect" id="node17" href="CudaException_8h.html" title="CudaException.h" alt="" coords="732,469,855,496"/><area shape="rect" id="node24" href="CuRandException_8h.html" title="CuRandException.h" alt="" coords="1088,469,1227,496"/><area shape="rect" id="node27" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="893,245,1092,272"/></map>
+<div class="center"><img src="BackpropagationUtils__detail_8cuh__incl.png" border="0" usemap="#src_2nn_2BackpropagationUtils__detail_8cuh" alt=""/></div>
+<map name="src_2nn_2BackpropagationUtils__detail_8cuh" id="src_2nn_2BackpropagationUtils__detail_8cuh">
+<area shape="rect" id="node5" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="488,96,632,123"/><area shape="rect" id="node9" href="CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="875,245,1045,272"/><area shape="rect" id="node21" href="CuRandManager_8h.html" title="../cuda/CuRandManager.h" alt="" coords="171,395,345,421"/><area shape="rect" id="node25" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="999,544,1187,571"/><area shape="rect" id="node26" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="663,171,808,197"/><area shape="rect" id="node28" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="372,245,567,272"/><area shape="rect" id="node29" href="Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="833,171,1056,197"/><area shape="rect" id="node30" href="ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="1081,171,1280,197"/><area shape="rect" id="node31" href="Backpropagation__detail_8h.html" title="Backpropagation_detail.h" alt="" coords="1305,171,1473,197"/><area shape="rect" id="node10" href="DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="701,320,812,347"/><area shape="rect" id="node20" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="566,320,676,347"/><area shape="rect" id="node12" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="566,395,692,421"/><area shape="rect" id="node15" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="741,469,856,496"/><area shape="rect" id="node19" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="841,544,975,571"/><area shape="rect" id="node17" href="CudaException_8h.html" title="CudaException.h" alt="" coords="559,544,681,571"/><area shape="rect" id="node24" href="CuRandException_8h.html" title="CuRandException.h" alt="" coords="313,544,452,571"/><area shape="rect" id="node27" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="651,245,849,272"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh__dep__incl.png" border="0" usemap="#src_2BackpropagationUtils__detail_8cuhdep" alt=""/></div>
-<map name="src_2BackpropagationUtils__detail_8cuhdep" id="src_2BackpropagationUtils__detail_8cuhdep">
-<area shape="rect" id="node2" href="BackpropagationUtils_8cuh.html" title="src/BackpropagationUtils.cuh" alt="" coords="5,96,197,123"/><area shape="rect" id="node3" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="49,171,153,197"/></map>
+<div class="center"><img src="BackpropagationUtils__detail_8cuh__dep__incl.png" border="0" usemap="#src_2nn_2BackpropagationUtils__detail_8cuhdep" alt=""/></div>
+<map name="src_2nn_2BackpropagationUtils__detail_8cuhdep" id="src_2nn_2BackpropagationUtils__detail_8cuhdep">
+<area shape="rect" id="node2" href="BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="4,96,213,123"/><area shape="rect" id="node3" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="57,171,161,197"/></map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenn"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html">nn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9fd92090695efcb040292de59dab1f2e"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
-<tr class="memitem:a9fd92090695efcb040292de59dab1f2e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="BackpropagationUtils__detail_8cuh.html#a9fd92090695efcb040292de59dab1f2e">writeToDotFile</a> (const std::string &amp;dotfilename, const <a class="el" href="classBackpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
-<tr class="separator:a9fd92090695efcb040292de59dab1f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace4ac2d7dd5cd57a4d8f8b212031df71"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
-<tr class="memitem:ace4ac2d7dd5cd57a4d8f8b212031df71"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="BackpropagationUtils__detail_8cuh.html#ace4ac2d7dd5cd57a4d8f8b212031df71">getParameterVector</a> (const <a class="el" href="classBackpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
-<tr class="separator:ace4ac2d7dd5cd57a4d8f8b212031df71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7dd8895114bb339243228a23a4ab42"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
+<tr class="memitem:a4a7dd8895114bb339243228a23a4ab42"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a4a7dd8895114bb339243228a23a4ab42">nn::writeToDotFile</a> (const std::string &amp;dotfilename, const Backpropagation&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
+<tr class="separator:a4a7dd8895114bb339243228a23a4ab42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
+<tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6">nn::getParameterVector</a> (const Backpropagation&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
+<tr class="separator:a2833ccf577ba781cbe2abbff765f56d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ace4ac2d7dd5cd57a4d8f8b212031df71"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class AF , class OutputLayer &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;float&gt; getParameterVector </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classBackpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;&#160;</td>
-          <td class="paramname"><em>backpropagation</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_cgraph.png" border="0" usemap="#BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_cgraph" alt=""/></div>
-<map name="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_cgraph" id="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_cgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#ab99f9f9d60c794aebda583db4400deae" title="Backpropagation::getLayer\lCount" alt="" coords="197,5,374,46"/><area shape="rect" id="node3" href="classBackpropagation.html#a6a97d04adc04480ee9c1bfcff644f18c" title="Backpropagation::getWeight" alt="" coords="192,71,379,97"/><area shape="rect" id="node4" href="classBackpropagation.html#a318390c97ec2383eeb960689f2cb76e0" title="Backpropagation::getBias" alt="" coords="200,121,371,148"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_icgraph.png" border="0" usemap="#BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_icgraph" alt=""/></div>
-<map name="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_icgraph" id="BackpropagationUtils__detail_8cuh_ace4ac2d7dd5cd57a4d8f8b212031df71_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="193,5,301,32"/><area shape="rect" id="node3" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="219,56,275,83"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a9fd92090695efcb040292de59dab1f2e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class AF , class OutputLayer &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void writeToDotFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>dotfilename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classBackpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;&#160;</td>
-          <td class="paramname"><em>backpropagation</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_cgraph.png" border="0" usemap="#BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_cgraph" alt=""/></div>
-<map name="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_cgraph" id="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_cgraph">
-<area shape="rect" id="node2" href="classBackpropagation.html#a6a97d04adc04480ee9c1bfcff644f18c" title="Backpropagation::getWeight" alt="" coords="160,5,347,32"/><area shape="rect" id="node3" href="classBackpropagation.html#a318390c97ec2383eeb960689f2cb76e0" title="Backpropagation::getBias" alt="" coords="168,56,339,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_icgraph.png" border="0" usemap="#BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_icgraph" alt=""/></div>
-<map name="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_icgraph" id="BackpropagationUtils__detail_8cuh_a9fd92090695efcb040292de59dab1f2e_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="160,5,216,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:06 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

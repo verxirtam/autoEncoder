@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CuSolverDnFunction.h File Reference</div>  </div>
@@ -104,71 +106,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="CuSolverDnFunction_8h__dep__incl.png" border="0" usemap="#src_2cuda_2CuSolverDnFunction_8hdep" alt=""/></div>
 <map name="src_2cuda_2CuSolverDnFunction_8hdep" id="src_2cuda_2CuSolverDnFunction_8hdep">
-<area shape="rect" id="node2" href="Normalization_8h.html" title="src/Normalization.h" alt="" coords="498,80,632,107"/><area shape="rect" id="node7" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="393,304,497,331"/><area shape="rect" id="node10" href="CuSolverDnFunction_8cpp.html" title="src/cuda/CuSolverDnFunction.cpp" alt="" coords="917,80,1139,107"/><area shape="rect" id="node3" href="AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="241,155,385,181"/><area shape="rect" id="node8" href="Normalization_8cpp.html" title="src/Normalization.cpp" alt="" coords="491,155,639,181"/><area shape="rect" id="node9" href="Normalization__cuda_8cu.html" title="src/Normalization_cuda.cu" alt="" coords="665,155,841,181"/><area shape="rect" id="node4" href="AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,229,179,256"/><area shape="rect" id="node5" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,229,364,256"/><area shape="rect" id="node6" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="207,304,360,331"/></map>
+<area shape="rect" id="node2" href="CuSolverDnFunction_8cpp.html" title="src/cuda/CuSolverDnFunction.cpp" alt="" coords="269,80,491,107"/><area shape="rect" id="node3" href="Normalization_8h.html" title="src/nn/Normalization.h" alt="" coords="515,80,668,107"/><area shape="rect" id="node7" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="302,320,407,347"/><area shape="rect" id="node4" href="AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="189,163,352,189"/><area shape="rect" id="node9" href="Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="509,163,675,189"/><area shape="rect" id="node10" href="Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="699,155,841,197"/><area shape="rect" id="node5" href="FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,245,165,272"/><area shape="rect" id="node8" href="AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,245,432,272"/><area shape="rect" id="node6" href="FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,320,161,347"/></map>
 </div>
 </div>
 <p><a href="CuSolverDnFunction_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacecuda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html">cuda</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4e9db582b587567d43a7b29eac6fb423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CuSolverDnFunction_8h.html#a4e9db582b587567d43a7b29eac6fb423">DnSsyevd</a> (const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;A, <a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;W, <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;V)</td></tr>
-<tr class="separator:a4e9db582b587567d43a7b29eac6fb423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813115ac345cfcca4e482b2b0351fade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a813115ac345cfcca4e482b2b0351fade">cuda::DnSsyevd</a> (const DeviceMatrix &amp;A, DeviceVector &amp;W, DeviceMatrix &amp;V)</td></tr>
+<tr class="separator:a813115ac345cfcca4e482b2b0351fade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a4e9db582b587567d43a7b29eac6fb423"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DnSsyevd </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceVector.html">DeviceVector</a> &amp;&#160;</td>
-          <td class="paramname"><em>W</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>V</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_cgraph.png" border="0" usemap="#CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_cgraph" alt=""/></div>
-<map name="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_cgraph" id="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_cgraph">
-<area shape="rect" id="node2" href="classDeviceMatrix.html#a5e108d0456e4db0f0a553d9b97f55e4f" title="DeviceMatrix::getColumnCount" alt="" coords="136,5,341,32"/><area shape="rect" id="node3" href="classCuSolverDnManager.html#a9950da0ce6000417e6a9c0fb9e119685" title="CuSolverDnManager::\lgetHandle" alt="" coords="163,57,314,98"/><area shape="rect" id="node5" href="classDeviceVector.html#a5487b131a7a148baea42e703212f54bc" title="DeviceVector::getAddress" alt="" coords="151,123,326,149"/><area shape="rect" id="node6" href="classDeviceMatrix.html#a991601670af51b6e8c81b7a9e8574e49" title="DeviceMatrix::get" alt="" coords="176,173,301,200"/><area shape="rect" id="node7" href="classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="175,224,302,251"/><area shape="rect" id="node4" href="classCuSolverDnManager.html#a710c91d2a171086ee210fd5d1f8eeeb5" title="CuSolverDnManager::\lgetInstance" alt="" coords="390,57,541,98"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_icgraph.png" border="0" usemap="#CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_icgraph" alt=""/></div>
-<map name="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_icgraph" id="CuSolverDnFunction_8h_a4e9db582b587567d43a7b29eac6fb423_icgraph">
-<area shape="rect" id="node2" href="classNormalization.html#aada795b6203ef7b688f13df9dc2af843" title="Normalization::init" alt="" coords="137,71,263,97"/><area shape="rect" id="node6" href="unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="172,121,228,148"/><area shape="rect" id="node3" href="classAutoEncoder.html#a4692fbe4cbca06729b0f44537f2736fd" title="AutoEncoder\&lt; Func1to1Tanh\l \&gt;::init" alt="" coords="312,5,504,46"/><area shape="rect" id="node4" href="unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="380,71,436,97"/><area shape="rect" id="node5" href="unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="372,121,444,148"/></map>
-</div>
-</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:07 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

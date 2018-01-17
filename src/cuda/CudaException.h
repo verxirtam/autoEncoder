@@ -22,6 +22,9 @@
 
 #include <string>
 
+namespace cuda
+{
+
 class CudaException : public std::runtime_error
 {
 public:
@@ -35,4 +38,5 @@ public:
 	}
 };
 
+}
 

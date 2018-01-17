@@ -1,9 +1,10 @@
-<map id="src/OutputLayerMulticlassClassification.cuh" name="src/OutputLayerMulticlassClassification.cuh">
-<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="343,96,453,123"/>
-<area shape="rect" id="node13" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="580,96,779,123"/>
-<area shape="rect" id="node14" href="$Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="803,96,927,123"/>
-<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="155,171,281,197"/>
-<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="289,245,404,272"/>
-<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,320,139,347"/>
-<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="164,320,287,347"/>
+<map id="src/nn/OutputLayerMulticlassClassification.cuh" name="src/nn/OutputLayerMulticlassClassification.cuh">
+<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="139,171,249,197"/>
+<area shape="rect" id="node13" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="243,96,441,123"/>
+<area shape="rect" id="node16" href="$Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="650,96,773,123"/>
+<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="221,245,347,272"/>
+<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="355,320,469,347"/>
+<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="439,395,573,421"/>
+<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="157,395,280,421"/>
+<area shape="rect" id="node14" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="274,171,429,197"/>
 </map>

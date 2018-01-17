@@ -1,8 +1,8 @@
-<map id="src/OutputLayerRegression.cuh" name="src/OutputLayerRegression.cuh">
-<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/AutoEncoder.cuh" alt="" coords="207,80,351,107"/>
-<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/BackpropagationTanhReg.cuh" alt="" coords="375,80,593,107"/>
-<area shape="rect" id="node3" href="$AutoEncoderTanh_8cuh.html" title="src/AutoEncoderTanh.cuh" alt="" coords="5,155,179,181"/>
-<area shape="rect" id="node4" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="203,155,364,181"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="371,229,476,256"/>
-<area shape="rect" id="node5" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="193,229,347,256"/>
+<map id="src/nn/OutputLayerRegression.cuh" name="src/nn/OutputLayerRegression.cuh">
+<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="153,88,316,115"/>
+<area shape="rect" id="node7" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="374,81,561,122"/>
+<area shape="rect" id="node3" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="19,171,180,197"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="183,245,288,272"/>
+<area shape="rect" id="node6" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="257,171,447,197"/>
+<area shape="rect" id="node4" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,245,159,272"/>
 </map>

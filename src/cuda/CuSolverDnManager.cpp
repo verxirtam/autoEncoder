@@ -18,6 +18,9 @@
 
 #include "CuSolverDnManager.h"
 
+namespace cuda
+{
+
 const char* CuSolverDnManager::getErrorString(cusolverStatus_t status)
 {
 	switch (status)
@@ -50,4 +53,5 @@ const char* CuSolverDnManager::getErrorString(cusolverStatus_t status)
 	return "<unknown status>";
 }
 
+}
 

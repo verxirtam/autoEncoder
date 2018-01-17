@@ -22,6 +22,9 @@
 
 #include <string>
 
+namespace cuda
+{
+
 class CuRandException : public std::runtime_error
 {
 public:
@@ -34,3 +37,6 @@ public:
 	{
 	}
 };
+
+}
+

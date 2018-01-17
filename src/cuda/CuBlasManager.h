@@ -28,6 +28,9 @@
 #include "CuBlasException.h"
 
 
+namespace cuda
+{
+
 
 
 #define CUBLAS_CALL(cmd)\
@@ -39,11 +42,11 @@
 		{\
 			std::stringstream msg;\
 			msg << "CUBLAS_ERROR : ";\
-			msg << CuBlasManager::getErrorString(stat) << " at ";\
+			msg << cuda::CuBlasManager::getErrorString(stat) << " at ";\
 			msg << __FILE__ << ":";\
 			msg << __LINE__ << " ";\
 			msg << #cmd << std::endl;\
-			throw CuBlasException(msg.str());\
+			throw cuda::CuBlasException(msg.str());\
 		}\
 	}\
 }
@@ -85,4 +88,6 @@ public:
 	}
 	static const char* getErrorString(cublasStatus_t error);
 };
+
+}
 

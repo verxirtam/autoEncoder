@@ -18,6 +18,9 @@
 
 #include "CuBlasManager.h"
 
+namespace cuda
+{
+
 const char* CuBlasManager::getErrorString(cublasStatus_t error)
 {
 	switch (error)
@@ -58,4 +61,5 @@ const char* CuBlasManager::getErrorString(cublasStatus_t error)
 
 
 
+}
 

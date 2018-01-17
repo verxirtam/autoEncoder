@@ -1,5 +1,5 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classDeviceVector.html#ac18356c032ff10f83ea439a93dbc051b" title="DeviceVector::set" alt="" coords="141,5,267,32"/>
-<area shape="rect" id="node3" href="$classDeviceVector.html#ab03314e09ef894fce63874fdee42041c" title="DeviceVector::get" alt="" coords="141,56,267,83"/>
-<area shape="rect" id="node4" href="$classDeviceVector.html#a9354c8a1e33ddaf5173574a7e61c01ae" title="DeviceVector::getDimension" alt="" coords="109,107,299,133"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a687a7863ee0bb1df41d24c71cee59c52" title="cuda::DeviceVector::set" alt="" coords="109,5,272,32"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="109,56,272,83"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="122,107,259,149"/>
 </map>

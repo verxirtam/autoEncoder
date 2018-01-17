@@ -25,6 +25,9 @@
 
 #include "CuSolverDnException.h"
 
+namespace cuda
+{
+
 #define CUSOLVERDN_CALL(cmd)\
 {\
 	{\
@@ -82,4 +85,5 @@ public:
 	static const char* getErrorString(cusolverStatus_t status);
 };
 
+}
 

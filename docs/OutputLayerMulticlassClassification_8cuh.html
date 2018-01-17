@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: src/OutputLayerMulticlassClassification.cuh File Reference</title>
+<title>autoEncoder: src/nn/OutputLayerMulticlassClassification.cuh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,12 +80,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">OutputLayerMulticlassClassification.cuh File Reference</div>  </div>
 </div><!--header-->
@@ -97,20 +99,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for OutputLayerMulticlassClassification.cuh:</div>
 <div class="dyncontent">
-<div class="center"><img src="OutputLayerMulticlassClassification_8cuh__incl.png" border="0" usemap="#src_2OutputLayerMulticlassClassification_8cuh" alt=""/></div>
-<map name="src_2OutputLayerMulticlassClassification_8cuh" id="src_2OutputLayerMulticlassClassification_8cuh">
-<area shape="rect" id="node4" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="343,96,453,123"/><area shape="rect" id="node13" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="580,96,779,123"/><area shape="rect" id="node14" href="Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="803,96,927,123"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="155,171,281,197"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="289,245,404,272"/><area shape="rect" id="node12" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,320,139,347"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="164,320,287,347"/></map>
+<div class="center"><img src="OutputLayerMulticlassClassification_8cuh__incl.png" border="0" usemap="#src_2nn_2OutputLayerMulticlassClassification_8cuh" alt=""/></div>
+<map name="src_2nn_2OutputLayerMulticlassClassification_8cuh" id="src_2nn_2OutputLayerMulticlassClassification_8cuh">
+<area shape="rect" id="node4" href="DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="139,171,249,197"/><area shape="rect" id="node13" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="243,96,441,123"/><area shape="rect" id="node16" href="Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="650,96,773,123"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="221,245,347,272"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="355,320,469,347"/><area shape="rect" id="node12" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="439,395,573,421"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="157,395,280,421"/><area shape="rect" id="node14" href="DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="274,171,429,197"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOutputLayerMulticlassClassification.html">OutputLayerMulticlassClassification</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1OutputLayerMulticlassClassification.html">nn::OutputLayerMulticlassClassification</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacenn"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html">nn</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 03:11:08 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
