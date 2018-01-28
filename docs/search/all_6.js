@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['forward',['forward',['../classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab',1,'nn::AutoEncoder::forward()'],['../classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae',1,'nn::Backpropagation::forward(const std::vector&lt; float &gt; &amp;x, std::vector&lt; float &gt; &amp;y)'],['../classnn_1_1Backpropagation.html#af8238cde4db589106ee88a159256cd15',1,'nn::Backpropagation::forward(const DeviceMatrix &amp;X, DeviceMatrix &amp;Y)']]],
+  ['forward',['forward',['../classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab',1,'nn::AutoEncoder::forward()'],['../classnn_1_1Backpropagation.html#a949eaf7de2178fbdad8b10ccdd2084ae',1,'nn::Backpropagation::forward(const std::vector&lt; float &gt; &amp;x, std::vector&lt; float &gt; &amp;y)'],['../classnn_1_1Backpropagation.html#af8238cde4db589106ee88a159256cd15',1,'nn::Backpropagation::forward(const DeviceMatrix &amp;X, DeviceMatrix &amp;Y)'],['../classnn_1_1TwoLayerPerceptron.html#a49901c5b34e1a35a8b086cc1af6bd651',1,'nn::TwoLayerPerceptron::forward()'],['../classnn_1_1Serial.html#abc947a1c5bbc66f990ff3cada7952770',1,'nn::Serial::forward()']]],
+  ['forwardmain',['forwardMain',['../classnn_1_1Serial.html#a2b1e45e4b54e994a8cea5a7e31d83fba',1,'nn::Serial']]],
   ['func1to1applydiff',['Func1to1ApplyDiff',['../classnn_1_1Func1to1ApplyDiff.html',1,'nn']]],
   ['func1to1exp',['Func1to1Exp',['../classnn_1_1Func1to1Exp.html',1,'nn']]],
   ['func1to1exp_2ecuh',['Func1to1Exp.cuh',['../Func1to1Exp_8cuh.html',1,'']]],

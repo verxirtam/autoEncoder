@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['back',['back',['../classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce',1,'nn::Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classnn_1_1Backpropagation.html#abdb6692cd278a2a9118f0dbd5884cdbe',1,'nn::Backpropagation::back(const DeviceMatrix &amp;D)']]],
+  ['back',['back',['../classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce',1,'nn::Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classnn_1_1Backpropagation.html#abdb6692cd278a2a9118f0dbd5884cdbe',1,'nn::Backpropagation::back(const DeviceMatrix &amp;D)'],['../classnn_1_1TwoLayerPerceptron.html#a77e883d1992c5d17611c7d4dd5120bdb',1,'nn::TwoLayerPerceptron::back()']]],
   ['backpropagation',['Backpropagation',['../classnn_1_1Backpropagation.html',1,'nn']]],
   ['backpropagation',['backpropagation',['../classnn_1_1AutoEncoder.html#acf3a0bab88066e691940e74d82d08f83',1,'nn::AutoEncoder::backpropagation()'],['../classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d',1,'nn::Backpropagation::Backpropagation()']]],
   ['backpropagation_2ecuh',['Backpropagation.cuh',['../Backpropagation_8cuh.html',1,'']]],
@@ -22,5 +22,5 @@ var searchData=
   ['backpropagationtanhregtest_5fall_5fshowinfo',['BackpropagationTanhRegTest_All_showInfo',['../unittest_8cu.html#a8b7605445954ad74414ae57177d1f540',1,'unittest.cu']]],
   ['backpropagationutils_2ecuh',['BackpropagationUtils.cuh',['../BackpropagationUtils_8cuh.html',1,'']]],
   ['backpropagationutils_5fdetail_2ecuh',['BackpropagationUtils_detail.cuh',['../BackpropagationUtils__detail_8cuh.html',1,'']]],
-  ['bias',['bias',['../classnn_1_1Backpropagation.html#a1f94e23ff63d26724858644b22621734',1,'nn::Backpropagation']]]
+  ['bias',['bias',['../classnn_1_1Backpropagation.html#a1f94e23ff63d26724858644b22621734',1,'nn::Backpropagation::bias()'],['../classnn_1_1TwoLayerPerceptron.html#a0fe5a53acb446ec8fe3b6535b4672580',1,'nn::TwoLayerPerceptron::bias()']]]
 ];

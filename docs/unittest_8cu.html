@@ -116,12 +116,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="FXAutoEncoder_8cuh.html">FXAutoEncoder.cuh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="BackpropagationUtils_8cuh.html">nn/BackpropagationUtils.cuh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="TimeUtil_8h_source.html">util/TimeUtil.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="TwoLayerPerceptron_8cuh.html">nn/TwoLayerPerceptron.cuh</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for unittest.cu:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest_8cu__incl.png" border="0" usemap="#src_2unittest_8cu" alt=""/></div>
 <map name="src_2unittest_8cu" id="src_2unittest_8cu">
-<area shape="rect" id="node2" href="unittest_8h.html" title="unittest.h" alt="" coords="35,80,111,107"/><area shape="rect" id="node12" href="DeviceVector_8h.html" title="cuda/DeviceVector.h" alt="" coords="793,469,937,496"/><area shape="rect" id="node21" href="DeviceMatrix_8h.html" title="cuda/DeviceMatrix.h" alt="" coords="1058,469,1200,496"/><area shape="rect" id="node22" href="BackpropagationTanhReg_8cuh.html" title="nn/BackpropagationTanhReg.cuh" alt="" coords="1238,80,1452,107"/><area shape="rect" id="node32" href="Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="1444,155,1573,181"/><area shape="rect" id="node34" href="CuRandFunction_8h.html" title="cuda/CuRandFunction.h" alt="" coords="1065,320,1228,347"/><area shape="rect" id="node35" href="CuSolverDnManager_8h.html" title="cuda/CuSolverDnManager.h" alt="" coords="632,544,819,571"/><area shape="rect" id="node38" href="CuSolverDnFunction_8h.html" title="cuda/CuSolverDnFunction.h" alt="" coords="641,395,828,421"/><area shape="rect" id="node39" href="Normalization_8h.html" title="nn/Normalization.h" alt="" coords="787,237,916,264"/><area shape="rect" id="node41" href="AutoEncoder_8cuh.html" title="nn/AutoEncoder.cuh" alt="" coords="1599,155,1739,181"/><area shape="rect" id="node42" href="Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="1579,80,1732,107"/><area shape="rect" id="node43" href="Func1to1Logistic_8cuh.html" title="nn/Func1to1Logistic.cuh" alt="" coords="1757,80,1920,107"/><area shape="rect" id="node44" href="DeviceVectorUtils_8h.html" title="cuda/DeviceVectorUtils.h" alt="" coords="941,237,1112,264"/><area shape="rect" id="node45" href="FXAutoEncoder_8cuh.html" title="FXAutoEncoder.cuh" alt="" coords="1945,80,2084,107"/><area shape="rect" id="node48" href="TimeUtil_8h.html" title="util/TimeUtil.h" alt="" coords="2070,155,2172,181"/><area shape="rect" id="node49" href="BackpropagationUtils_8cuh.html" title="nn/BackpropagationUtils.cuh" alt="" coords="2411,155,2600,181"/><area shape="rect" id="node14" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="1083,544,1209,571"/><area shape="rect" id="node17" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="893,619,1008,645"/><area shape="rect" id="node19" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="1531,619,1665,645"/><area shape="rect" id="node23" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="1788,320,1932,347"/><area shape="rect" id="node33" href="OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1420,395,1604,421"/><area shape="rect" id="node27" href="CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="903,395,1073,421"/><area shape="rect" id="node28" href="CuRandManager_8h.html" title="../cuda/CuRandManager.h" alt="" coords="1286,469,1460,496"/><area shape="rect" id="node29" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="2081,469,2268,496"/><area shape="rect" id="node30" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="1250,395,1395,421"/><area shape="rect" id="node31" href="Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="2096,395,2319,421"/><area shape="rect" id="node37" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="1344,619,1507,645"/><area shape="rect" id="node40" href="Statistics_8h.html" title="Statistics.h" alt="" coords="903,320,991,347"/><area shape="rect" id="node46" href="FXAutoEncoderDBAccessor_8cuh.html" title="FXAutoEncoderDBAccessor.cuh" alt="" coords="1764,155,1977,181"/><area shape="rect" id="node50" href="BackpropagationUtils__detail_8cuh.html" title="BackpropagationUtils\l_detail.cuh" alt="" coords="2487,230,2633,271"/></map>
+<area shape="rect" id="node2" href="unittest_8h.html" title="unittest.h" alt="" coords="59,80,135,107"/><area shape="rect" id="node12" href="DeviceVector_8h.html" title="cuda/DeviceVector.h" alt="" coords="795,469,939,496"/><area shape="rect" id="node21" href="DeviceMatrix_8h.html" title="cuda/DeviceMatrix.h" alt="" coords="1047,469,1189,496"/><area shape="rect" id="node22" href="BackpropagationTanhReg_8cuh.html" title="nn/BackpropagationTanhReg.cuh" alt="" coords="1165,80,1379,107"/><area shape="rect" id="node31" href="Func1to1Tanh_8cuh.html" title="Func1to1Tanh.cuh" alt="" coords="1369,155,1499,181"/><area shape="rect" id="node33" href="CuRandFunction_8h.html" title="cuda/CuRandFunction.h" alt="" coords="983,320,1145,347"/><area shape="rect" id="node34" href="CuSolverDnManager_8h.html" title="cuda/CuSolverDnManager.h" alt="" coords="533,544,720,571"/><area shape="rect" id="node37" href="CuSolverDnFunction_8h.html" title="cuda/CuSolverDnFunction.h" alt="" coords="569,395,756,421"/><area shape="rect" id="node38" href="Normalization_8h.html" title="nn/Normalization.h" alt="" coords="1117,237,1247,264"/><area shape="rect" id="node40" href="AutoEncoder_8cuh.html" title="nn/AutoEncoder.cuh" alt="" coords="1525,155,1664,181"/><area shape="rect" id="node41" href="Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="1455,80,1608,107"/><area shape="rect" id="node42" href="Func1to1Logistic_8cuh.html" title="nn/Func1to1Logistic.cuh" alt="" coords="1633,80,1796,107"/><area shape="rect" id="node43" href="DeviceVectorUtils_8h.html" title="cuda/DeviceVectorUtils.h" alt="" coords="817,237,988,264"/><area shape="rect" id="node44" href="FXAutoEncoder_8cuh.html" title="FXAutoEncoder.cuh" alt="" coords="1872,80,2011,107"/><area shape="rect" id="node47" href="TimeUtil_8h.html" title="util/TimeUtil.h" alt="" coords="1978,155,2080,181"/><area shape="rect" id="node48" href="BackpropagationUtils_8cuh.html" title="nn/BackpropagationUtils.cuh" alt="" coords="2105,155,2295,181"/><area shape="rect" id="node50" href="TwoLayerPerceptron_8cuh.html" title="nn/TwoLayerPerceptron.cuh" alt="" coords="751,80,936,107"/><area shape="rect" id="node14" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="1065,544,1191,571"/><area shape="rect" id="node17" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="688,619,803,645"/><area shape="rect" id="node19" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="1189,619,1323,645"/><area shape="rect" id="node23" href="Backpropagation_8cuh.html" title="Backpropagation.cuh" alt="" coords="1797,320,1941,347"/><area shape="rect" id="node32" href="OutputLayerRegression_8cuh.html" title="OutputLayerRegression.cuh" alt="" coords="1228,395,1412,421"/><area shape="rect" id="node27" href="CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="1033,395,1204,421"/><area shape="rect" id="node28" href="CuRandManager_8h.html" title="../cuda/CuRandManager.h" alt="" coords="1421,469,1595,496"/><area shape="rect" id="node29" href="BackpropagationException_8h.html" title="BackpropagationException.h" alt="" coords="2015,469,2203,496"/><area shape="rect" id="node30" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="1487,395,1632,421"/><area shape="rect" id="node36" href="CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="827,619,989,645"/><area shape="rect" id="node39" href="Statistics_8h.html" title="Statistics.h" alt="" coords="1220,320,1308,347"/><area shape="rect" id="node45" href="FXAutoEncoderDBAccessor_8cuh.html" title="FXAutoEncoderDBAccessor.cuh" alt="" coords="1740,155,1953,181"/><area shape="rect" id="node49" href="BackpropagationUtils__detail_8cuh.html" title="BackpropagationUtils\l_detail.cuh" alt="" coords="2127,230,2273,271"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -165,6 +166,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFXAutoEncoderTest.html">FXAutoEncoderTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTimeUtilTest.html">TimeUtilTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTwoLayerPerceptronTest.html">TwoLayerPerceptronTest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -326,6 +329,8 @@ Functions</h2></td></tr>
 <tr class="separator:aff15f1d85ec9b7819dee92a5eb049abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc012a6f03ddd492b8586f1607764bdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cu.html#adc012a6f03ddd492b8586f1607764bdd">TEST</a> (<a class="el" href="classTimeUtilTest.html">TimeUtilTest</a>, Simple)</td></tr>
 <tr class="separator:adc012a6f03ddd492b8586f1607764bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11be8e1c1e814a00650a17792930c1d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cu.html#a11be8e1c1e814a00650a17792930c1d6">TEST</a> (<a class="el" href="classTwoLayerPerceptronTest.html">TwoLayerPerceptronTest</a>, Simple)</td></tr>
+<tr class="separator:a11be8e1c1e814a00650a17792930c1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unittest_8cu.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -1965,6 +1970,32 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a11be8e1c1e814a00650a17792930c1d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTwoLayerPerceptronTest.html">TwoLayerPerceptronTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Simple&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a6ced43c0892681d4f32e0a84ad0d22aa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2645,7 +2676,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 17 2018 01:36:15 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 29 2018 02:58:22 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

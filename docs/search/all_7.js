@@ -42,6 +42,7 @@ var searchData=
   ['getmainstream',['getMainStream',['../classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36',1,'nn::Backpropagation']]],
   ['getmean',['getMean',['../classnn_1_1Normalization.html#a42359749483f9ff7f05b82f0d02154cd',1,'nn::Normalization::getMean()'],['../autoEncoder_8cpp.html#afd72be5c7c2c0b9b1890ac547306b99a',1,'getMean():&#160;autoEncoder.cpp']]],
   ['getmeanandvarcovmatrix',['getMeanAndVarCovMatrix',['../namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6',1,'nn']]],
+  ['getmember',['getMember',['../classnn_1_1Serial.html#a87a315ea20d5efcda8882b88a12bc0b8',1,'nn::Serial']]],
   ['getminibatchsize',['getMiniBatchSize',['../classnn_1_1Backpropagation.html#a72ecdced6e10aa4167eb11eae14603c2',1,'nn::Backpropagation']]],
   ['getnormarization',['getNormarization',['../classnn_1_1AutoEncoder.html#aadd8d95b930b46a663089df4f11b6226',1,'nn::AutoEncoder']]],
   ['getnormarizeinput',['getNormarizeInput',['../classFXAutoEncoder.html#ab62cdcfea18897cc505bb871ddf89d1a',1,'FXAutoEncoder']]],
