@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include <vector>
+#include <tuple>
 
 #include "../cuda/DeviceMatrix.h"
 
@@ -33,50 +33,48 @@ public:
 
 
 
-//(T0, T...)のうちN番目の型 = (T...)のN-1番目の型
-template <unsigned int N, class T0, class ... T>
-struct layerType
-{
-	using type = typename layerType<N-1, T...>::type;
-};
-//0番目の場合はT0
-template <class T0, class ... T>
-struct layerType<0, T0, T...>
-{
-	using type = T0;
-};
 
 template <class Layer, class ... LayerRemain>
 class Serial
 {
 private:
-
-	Layer layer;
-	Serial<LayerRemain...> layerRemain;
+	using DeviceMatrix = cuda::DeviceMatrix;
+	using DeviceVector = cuda::DeviceVector;
+	//レイヤーのタプルの型
+	using leyerTupleType = std::tuple<Layer, LayerRemain...>;
+	//N番目のレイヤーの型
+	template <unsigned int N>
+	using layerType = typename std::tuple_element<N, leyerTupleType>;
 	
+	leyerTupleType layer;
 	
+	template <unsigned int N>
+	const DeviceMatrix& forwardMain(DeviceMatrix& x)
+	{
+		auto l = getMember<N>();
+		
+		auto y = l.forward(x);
+		
+		if((N + 1) < std::tuple_size<leyerTupleType>::value)
+		{
+			auto z = forwardMain<N + 1>(y);
+			y = z;
+		}
+		
+		return y;
+	}
 public:
 	//N番目のメンバの参照を取得
 	template <unsigned int N>
-	typename layerType<N, Layer, LayerRemain...>::type& getMember();
+	layerType<N>& getMember()
+	{
+		return std::get<N>(layer);
+	}
+	const DeviceMatrix& forward(DeviceMatrix& x)
+	{
+		return forwardMain<0>(x);
+	}
 };
-
-
-//N番目のメンバの参照を取得
-template <class Layer, class ... LayerRemain>
-template <unsigned int N>
-typename layerType<N, Layer, LayerRemain...>::type& Serial<Layer, LayerRemain...>::getMember()
-{
-	return layerRemain.getMember<N-1>();
-}
-
-//0番目のメンバ=layerの参照を返す
-template <class Layer, class ... LayerRemain>
-template <>
-typename layerType<0, Layer, LayerRemain...>::type& Serial<Layer, LayerRemain...>::getMember<0>()
-{
-	return layer;
-}
 
 
 

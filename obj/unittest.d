@@ -344,4 +344,5 @@ unittest.o : unittest.cu \
     /usr/include/sqlite3.h \
     util/TimeUtil.h \
     nn/BackpropagationUtils.cuh \
-    nn/BackpropagationUtils_detail.cuh
+    nn/BackpropagationUtils_detail.cuh \
+    nn/TwoLayerPerceptron.cuh

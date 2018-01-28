@@ -2468,11 +2468,11 @@ protected:
 
 TEST(TwoLayerPerceptronTest, Simple)
 {
-	TwoLayerPerceptron tlp;
-	unsigned int dim_input  = 2;
-	unsigned int dim_hidden = 3;
-	unsigned int dim_output = 4;
-	tlp.init(dim_input, dim_hidden, dim_output);
+	TwoLayerPerceptron<Func1to1Tanh> tlp;
+	//unsigned int dim_input  = 2;
+	//unsigned int dim_hidden = 3;
+	//unsigned int dim_output = 4;
+	//tlp.init(dim_input, dim_hidden, dim_output);
 
 }
 
