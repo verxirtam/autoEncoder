@@ -1,0 +1,4 @@
+<map id="nn::TwoLayerPerceptron::initWeightBias" name="nn::TwoLayerPerceptron::initWeightBias">
+<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="219,5,375,46"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="425,5,581,46"/>
+</map>

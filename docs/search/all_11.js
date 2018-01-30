@@ -22,7 +22,9 @@ var searchData=
   ['trainingtimebegin',['trainingTimeBegin',['../classFXAutoEncoder.html#ab1ba55c4feea6f3b1a24b005106ede8b',1,'FXAutoEncoder']]],
   ['trainingtimeend',['trainingTimeEnd',['../classFXAutoEncoder.html#a384f47b768c96bb23130d4bf23828b8b',1,'FXAutoEncoder']]],
   ['twolayerperceptron',['TwoLayerPerceptron',['../classnn_1_1TwoLayerPerceptron.html',1,'nn']]],
+  ['twolayerperceptron',['TwoLayerPerceptron',['../classnn_1_1TwoLayerPerceptron.html#a9333927d7ce59109cd8c266964d31387',1,'nn::TwoLayerPerceptron']]],
   ['twolayerperceptron_2ecuh',['TwoLayerPerceptron.cuh',['../TwoLayerPerceptron_8cuh.html',1,'']]],
+  ['twolayerperceptron_5fdetail_2ecuh',['TwoLayerPerceptron_detail.cuh',['../TwoLayerPerceptron__detail_8cuh.html',1,'']]],
   ['twolayerperceptrontest',['TwoLayerPerceptronTest',['../classTwoLayerPerceptronTest.html',1,'']]],
   ['typed_5ftest',['TYPED_TEST',['../unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62',1,'TYPED_TEST(AutoEncoderTest, Simple):&#160;unittest.cu'],['../unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72',1,'TYPED_TEST(AutoEncoderTest, csv):&#160;unittest.cu'],['../unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c',1,'TYPED_TEST(AutoEncoderTest, momentum):&#160;unittest.cu']]],
   ['typed_5ftest_5fcase',['TYPED_TEST_CASE',['../unittest_8cu.html#a6868174a34b5f1b8420df087d2c2ce4e',1,'unittest.cu']]]

@@ -7,6 +7,7 @@ var searchData=
   ['testcublasclass',['testCUBLASClass',['../autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33',1,'autoEncoder.cpp']]],
   ['testdbaccessor',['testDBAccessor',['../autoEncoder_8cpp.html#ab98cef187126be284affada901d3885f',1,'autoEncoder.cpp']]],
   ['testdevicevector',['testDeviceVector',['../autoEncoder_8cpp.html#ab075e7673b4ce348dc0b7c6615ff779a',1,'autoEncoder.cpp']]],
+  ['twolayerperceptron',['TwoLayerPerceptron',['../classnn_1_1TwoLayerPerceptron.html#a9333927d7ce59109cd8c266964d31387',1,'nn::TwoLayerPerceptron']]],
   ['typed_5ftest',['TYPED_TEST',['../unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62',1,'TYPED_TEST(AutoEncoderTest, Simple):&#160;unittest.cu'],['../unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72',1,'TYPED_TEST(AutoEncoderTest, csv):&#160;unittest.cu'],['../unittest_8cu.html#a07450264c44558d00bf3d66e44570f8c',1,'TYPED_TEST(AutoEncoderTest, momentum):&#160;unittest.cu']]],
   ['typed_5ftest_5fcase',['TYPED_TEST_CASE',['../unittest_8cu.html#a6868174a34b5f1b8420df087d2c2ce4e',1,'unittest.cu']]]
 ];

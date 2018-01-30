@@ -1,10 +1,11 @@
 <map id="cuda::CudaManager::getDeviceProp" name="cuda::CudaManager::getDeviceProp">
-<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749" title="nn::ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="200,70,397,111"/>
-<area shape="rect" id="node7" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="200,135,397,177"/>
-<area shape="rect" id="node3" href="$classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="445,70,643,111"/>
-<area shape="rect" id="node4" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="722,5,865,46"/>
-<area shape="rect" id="node6" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="691,70,896,111"/>
-<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="944,5,1085,46"/>
-<area shape="rect" id="node8" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="445,135,643,177"/>
-<area shape="rect" id="node9" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="692,135,895,177"/>
+<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749" title="nn::ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="200,102,397,143"/>
+<area shape="rect" id="node8" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="200,167,397,209"/>
+<area shape="rect" id="node3" href="$classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="445,102,643,143"/>
+<area shape="rect" id="node4" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="722,37,865,78"/>
+<area shape="rect" id="node7" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="691,102,896,143"/>
+<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="956,5,1097,46"/>
+<area shape="rect" id="node6" href="$classnn_1_1TwoLayerPerceptron.html#a90c4b69ee5a7be20ebc66bfee7ac2064" title="nn::TwoLayerPerceptron\l::forward" alt="" coords="945,70,1109,111"/>
+<area shape="rect" id="node9" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="445,167,643,209"/>
+<area shape="rect" id="node10" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="692,167,895,209"/>
 </map>

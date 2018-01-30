@@ -1,10 +1,11 @@
 <map id="cuda::DeviceVector::get1Vector" name="cuda::DeviceVector::get1Vector">
-<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="635,5,786,46"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="220,210,361,251"/>
-<area shape="rect" id="node6" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="192,57,389,84"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="683,92,739,119"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="675,153,747,180"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="476,213,548,240"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="484,264,540,291"/>
-<area shape="rect" id="node7" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="437,57,587,84"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="635,9,786,50"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="220,214,361,256"/>
+<area shape="rect" id="node6" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="192,62,389,88"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="683,96,739,123"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="675,158,747,184"/>
+<area shape="rect" id="node10" href="$classnn_1_1TwoLayerPerceptron.html#a9bc0248e9af8a11d079f52b9b8f830cf" title="nn::TwoLayerPerceptron\l::init" alt="" coords="209,280,373,321"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="476,218,548,244"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="484,268,540,295"/>
+<area shape="rect" id="node7" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="437,62,587,88"/>
 </map>

@@ -1,13 +1,14 @@
 <map id="src/nn/ElementWiseFunctionUtil.cuh" name="src/nn/ElementWiseFunctionUtil.cuh">
-<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/nn/ActivateFunction.cuh" alt="" coords="557,96,741,123"/>
-<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="427,171,611,197"/>
-<area shape="rect" id="node12" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="635,171,753,197"/>
-<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="139,253,301,280"/>
-<area shape="rect" id="node9" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="359,246,547,287"/>
+<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="src/nn/ActivateFunction.cuh" alt="" coords="641,96,825,123"/>
+<area shape="rect" id="node3" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="444,171,628,197"/>
+<area shape="rect" id="node12" href="$TwoLayerPerceptron_8cuh.html" title="src/nn/TwoLayerPerceptron.cuh" alt="" coords="653,171,859,197"/>
+<area shape="rect" id="node13" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="883,171,1001,197"/>
+<area shape="rect" id="node4" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="123,253,285,280"/>
+<area shape="rect" id="node9" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="310,246,497,287"/>
 <area shape="rect" id="node10" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="508,336,717,363"/>
-<area shape="rect" id="node11" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="623,246,809,287"/>
+<area shape="rect" id="node11" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="573,246,760,287"/>
 <area shape="rect" id="node5" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,336,165,363"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="302,411,407,437"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="418,411,523,437"/>
 <area shape="rect" id="node8" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,336,432,363"/>
 <area shape="rect" id="node6" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,411,161,437"/>
 </map>
