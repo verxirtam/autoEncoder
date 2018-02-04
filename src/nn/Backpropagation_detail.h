@@ -344,7 +344,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		//              = gamma * deltaBias[l] - (epsilon / B) * delta[l] * _1B
 		//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]
 		alpha = - epsilon / miniBatchSize;
-		beta = 1.0f;
+		beta  = gamma;
 		Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, deltaBias[l]);
 		
 		// bias[l] = bias[l] + deltaBias[l]

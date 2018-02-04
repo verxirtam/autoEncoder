@@ -21,8 +21,8 @@ namespace nn
 
 
 //初期化
-template <class ActivateFunction>
-void TwoLayerPerceptron<ActivateFunction>::init
+template <class ActivateMethod, class UpdateMethod>
+void TwoLayerPerceptron<ActivateMethod, UpdateMethod>::init
 	(
 		unsigned int dim_input,
 		unsigned int dim_output,
@@ -37,24 +37,18 @@ void TwoLayerPerceptron<ActivateFunction>::init
 	z      = DeviceMatrix(dim_output, miniBatchSize);
 	_1B    = DeviceVector::get1Vector(miniBatchSize);
 	delta  = DeviceMatrix(dim_output, miniBatchSize);
-	deltaWeight = DeviceMatrix(dim_output, dim_input);
-	deltaBias   = DeviceVector(dim_output);
 	
 	//weightとbiasをランダムに初期化
 	initWeightBias();
 	
-	//deltaWeightを0で初期化
-	unsigned int N = deltaWeight.getRowCount();
-	unsigned int M = deltaWeight.getColumnCount();
-	deltaWeight.set(std::vector<float>(N * M, 0.0f));
-	//deltaBiasを0で初期化
-	N = deltaBias.getDimension();
-	deltaBias.set(std::vector<float>(N, 0.0f));
+
+	//パラメータ更新手法の初期化
+	updateMethod.init(dim_input, dim_output, minibatch_size);
 }
 
 //weight, biasをランダムに初期化する
-template <class ActivateFunction>
-void TwoLayerPerceptron<ActivateFunction>::initWeightBias(void)
+template <class ActivateMethod, class UpdateMethod>
+void TwoLayerPerceptron<ActivateMethod, UpdateMethod>::initWeightBias(void)
 {
 	//weightの初期化
 	{
@@ -76,24 +70,24 @@ void TwoLayerPerceptron<ActivateFunction>::initWeightBias(void)
 
 
 //順伝播
-template <class ActivateFunction>
-const cuda::DeviceMatrix& TwoLayerPerceptron<ActivateFunction>::forward(const DeviceMatrix& x)
+template <class ActivateMethod, class UpdateMethod>
+const cuda::DeviceMatrix& TwoLayerPerceptron<ActivateMethod, UpdateMethod>::forward(const DeviceMatrix& x)
 {
 	//weight, biasを掛ける
 	//u = weight * x + bias * _1B ^ T
 	forwardLinear(x);
 	
 	//活性化関数を適用
-	//z = ActivateFunction(u)
-	nn::ActivateFunction<ActivateFunction>::activate(u, z);
+	//z = ActivateMethod(u) : ElementWiseFunctionとは限らない
+	ActivateMethod::activate(u, z);
 	
 	return z;
 }
 
 //順伝播の線型部分
 //u = weight * x + bias * _1B ^ T
-template <class ActivateFunction>
-void TwoLayerPerceptron<ActivateFunction>::forwardLinear(const DeviceMatrix& x)
+template <class ActivateMethod, class UpdateMethod>
+void TwoLayerPerceptron<ActivateMethod, UpdateMethod>::forwardLinear(const DeviceMatrix& x)
 {
 	
 	//u = weight * x;
@@ -109,19 +103,40 @@ void TwoLayerPerceptron<ActivateFunction>::forwardLinear(const DeviceMatrix& x)
 	Sger(&alpha, bias, _1B, u);
 }
 
+//weightTDeltaを算出する
+//weightTDelta = weight^T * delta;
+template <class ActivateMethod, class UpdateMethod>
+void TwoLayerPerceptron<ActivateMethod, UpdateMethod>::getWeightTDelta()
+{
+	//weightTdelta = (weight)^T * delta;
+	//<=>
+	//weightTdelta = 1.0f * (weight)^T * delta + 0.0f * weightTdelta;
+	float alpha = 1.0f;
+	float beta  = 0.0f;
+	Sgemm(&alpha, CUBLAS_OP_T, weight, CUBLAS_OP_N, delta, &beta, weightTDelta);
+	
+}
 
 //逆伝播
-template <class ActivateFunction>
-const cuda::DeviceMatrix& TwoLayerPerceptron<ActivateFunction>::back(const DeviceMatrix& delta_output)
+template <class ActivateMethod, class UpdateMethod>
+const cuda::DeviceMatrix& TwoLayerPerceptron<ActivateMethod, UpdateMethod>::back(const DeviceMatrix& weight_t_delta)
 {
-	return delta;
+	//delta = f'(u) ** ((weight)^T * delta_output);
+	//"**"は要素ごとの積
+	UpdateMethod::getDelta(u, z, weight_t_delta, delta);
+	
+	//weightTDeltaを算出する
+	//weightTDelta = weight^T * delta;
+	getWeightTDelta();
+	
+	return weightTDelta;
 }
 
 //パラメータの更新
-template <class ActivateFunction>
-void TwoLayerPerceptron<ActivateFunction>::update()
+template <class ActivateMethod, class UpdateMethod>
+void TwoLayerPerceptron<ActivateMethod, UpdateMethod>::update(const DeviceMatrix& x)
 {
-	
+	updateMethod.update(x, delta, weight, bias);
 }
 
 }

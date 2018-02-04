@@ -5,12 +5,11 @@
 
 #include "../cuda/DeviceMatrix.h"
 
-#include "ActivateFunction.cuh"
 
 namespace nn
 {
 
-template <class ActivateFunction>
+template <class ActivateMethod, class UpdateMethod>
 class TwoLayerPerceptron
 {
 private:
@@ -25,28 +24,27 @@ private:
 	//u = weight * z_0 + bias
 	//z_0は入力
 	DeviceMatrix u;
-	//z = ActivateFunction(u)
+	//z = ActivateMethod(u)
 	DeviceMatrix z;
 	//miniBatchSize次元の1-vector
 	DeviceVector _1B;
 	//delta = dE/du = (dE/du_ij)_ij
 	DeviceMatrix delta;
-	//WTDelta = weight ^ T * delta
-	//TODO 変数WTDeltaを作成すること、変数名は見直す
-	//weightの更新差分
-	DeviceMatrix deltaWeight;
-	//biasの更新差分
-	DeviceVector deltaBias;
-	//学習係数
-	float learningRate;
-	//モメンタム
-	float momentum;
+	//weightTDelta = weight ^ T * delta
+	DeviceMatrix weightTDelta;
+	
+	UpdateMethod updateMethod;
 	
 	//weight, biasをランダムに初期化する
 	void initWeightBias(void);
 	//順伝播の線型部分
 	//u = weight * x + bias * _1B ^ T
 	void forwardLinear(const DeviceMatrix& x);
+	
+	//weightTDeltaを算出する
+	//weightTDelta = weight^T * delta;
+	void getWeightTDelta();
+
 public:
 	//コンストラクタ
 	TwoLayerPerceptron():
@@ -57,10 +55,7 @@ public:
 		z(),
 		_1B(),
 		delta(),
-		deltaWeight(),
-		deltaBias(),
-		learningRate(0.125),
-		momentum(0.875)
+		updateMethod()
 	{
 	}
 	//初期化
@@ -70,7 +65,7 @@ public:
 	//逆伝播
 	const DeviceMatrix& back(const DeviceMatrix& delta_output);
 	//パラメータの更新
-	void update();
+	void update(const DeviceMatrix& x);
 };
 
 

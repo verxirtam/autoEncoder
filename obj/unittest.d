@@ -345,5 +345,8 @@ unittest.o : unittest.cu \
     util/TimeUtil.h \
     nn/BackpropagationUtils.cuh \
     nn/BackpropagationUtils_detail.cuh \
+    nn/TwoLayerPerceptronInternal.cuh \
     nn/TwoLayerPerceptron.cuh \
-    nn/TwoLayerPerceptron_detail.cuh
+    nn/TwoLayerPerceptron_detail.cuh \
+    nn/ActivateMethodElementWise.cuh \
+    nn/UpdateMethodMomentum.h

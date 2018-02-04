@@ -54,7 +54,7 @@
 
 #include "util/TimeUtil.h"
 
-#include "nn/TwoLayerPerceptron.cuh"
+#include "nn/TwoLayerPerceptronInternal.cuh"
 
 using namespace cuda;
 using namespace nn;
@@ -2468,7 +2468,7 @@ protected:
 
 TEST(TwoLayerPerceptronTest, Simple)
 {
-	TwoLayerPerceptron<Func1to1Tanh> tlp;
+	TwoLayerPerceptronInternal<Func1to1Tanh> tlp;
 	//unsigned int dim_input  = 2;
 	//unsigned int dim_hidden = 3;
 	//unsigned int dim_output = 4;
