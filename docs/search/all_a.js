@@ -6,7 +6,7 @@ var searchData=
   ['layertype',['layerType',['../classnn_1_1Serial.html#a58f2fc293eb0ef5c0533cc164fe0dbd6',1,'nn::Serial']]],
   ['learning',['learning',['../classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc',1,'FXAutoEncoder::learning()'],['../classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79',1,'nn::AutoEncoder::learning()']]],
   ['learningquerycache',['learningQueryCache',['../classFXAutoEncoder.html#a3a11c076ef6892528e81aef51ad001ae',1,'FXAutoEncoder']]],
-  ['learningrate',['learningRate',['../classnn_1_1TwoLayerPerceptron.html#a82a810553206bc8f00974e9e4ef0607b',1,'nn::TwoLayerPerceptron']]],
+  ['learningrate',['learningRate',['../classnn_1_1UpdateMethodMomentum.html#ad1eb6f5a7dbc51c923af51c87b12bf12',1,'nn::UpdateMethodMomentum']]],
   ['leyertupletype',['leyerTupleType',['../classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f',1,'nn::Serial']]],
   ['longitude',['longitude',['../classTrackData.html#aceaf61535caf68b778145f8a9be4d184',1,'TrackData']]]
 ];

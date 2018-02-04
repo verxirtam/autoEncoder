@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="211,122,367,163"/>
 <area shape="rect" id="node3" href="$namespacecuda.html#a747f893ac555456e9630cae830f94162" title="cuda::setRandomUniform" alt="" coords="416,5,587,32"/>
 <area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a4cfcca70eb81b9bec72056a9e928ee2f" title="nn::Backpropagation\l::initRandom" alt="" coords="431,57,572,98"/>
-<area shape="rect" id="node6" href="$classnn_1_1TwoLayerPerceptron.html#a4b0f260b0921b8e999187f0b057652ac" title="nn::TwoLayerPerceptron\l::initWeightBias" alt="" coords="419,122,583,163"/>
+<area shape="rect" id="node6" href="$classnn_1_1TwoLayerPerceptron.html#a180bd41139cd693233c6096071c330ae" title="nn::TwoLayerPerceptron\l::initWeightBias" alt="" coords="419,122,583,163"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#a7df8f2293620b68b215e7f98425c7d6d" title="TEST" alt="" coords="473,188,529,215"/>
 <area shape="rect" id="node8" href="$unittest_8cu.html#a10d6f310b74f3b584746a4ce7df0d5d9" title="TEST_P" alt="" coords="465,239,537,265"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="635,5,691,32"/>

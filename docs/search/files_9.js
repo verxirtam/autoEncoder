@@ -5,5 +5,7 @@ var searchData=
   ['timeutil_2eh',['TimeUtil.h',['../TimeUtil_8h.html',1,'']]],
   ['trackdata_2eh',['TrackData.h',['../TrackData_8h.html',1,'']]],
   ['twolayerperceptron_2ecuh',['TwoLayerPerceptron.cuh',['../TwoLayerPerceptron_8cuh.html',1,'']]],
-  ['twolayerperceptron_5fdetail_2ecuh',['TwoLayerPerceptron_detail.cuh',['../TwoLayerPerceptron__detail_8cuh.html',1,'']]]
+  ['twolayerperceptron_5fdetail_2ecuh',['TwoLayerPerceptron_detail.cuh',['../TwoLayerPerceptron__detail_8cuh.html',1,'']]],
+  ['twolayerperceptroninternal_2ecuh',['TwoLayerPerceptronInternal.cuh',['../TwoLayerPerceptronInternal_8cuh.html',1,'']]],
+  ['twolayerperceptronoutputidentity_2ecuh',['TwoLayerPerceptronOutputIdentity.cuh',['../TwoLayerPerceptronOutputIdentity_8cuh.html',1,'']]]
 ];

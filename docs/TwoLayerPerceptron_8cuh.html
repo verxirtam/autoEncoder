@@ -93,26 +93,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &lt;tuple&gt;</code><br/>
 <code>#include &quot;<a class="el" href="DeviceMatrix_8h_source.html">../cuda/DeviceMatrix.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="ActivateFunction_8cuh.html">ActivateFunction.cuh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="TwoLayerPerceptron__detail_8cuh.html">TwoLayerPerceptron_detail.cuh</a>&quot;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for TwoLayerPerceptron.cuh:</div>
 <div class="dyncontent">
 <div class="center"><img src="TwoLayerPerceptron_8cuh__incl.png" border="0" usemap="#src_2nn_2TwoLayerPerceptron_8cuh" alt=""/></div>
 <map name="src_2nn_2TwoLayerPerceptron_8cuh" id="src_2nn_2TwoLayerPerceptron_8cuh">
-<area shape="rect" id="node3" href="DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="45,245,199,272"/><area shape="rect" id="node14" href="ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="131,88,276,115"/><area shape="rect" id="node19" href="TwoLayerPerceptron__detail_8cuh.html" title="TwoLayerPerceptron\l_detail.cuh" alt="" coords="301,81,443,122"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="239,320,365,347"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="287,395,401,421"/><area shape="rect" id="node13" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="466,469,600,496"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="184,469,307,496"/><area shape="rect" id="node15" href="ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="181,171,380,197"/><area shape="rect" id="node18" href="ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="405,171,600,197"/><area shape="rect" id="node16" href="DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="225,245,380,272"/></map>
+<area shape="rect" id="node3" href="DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="80,88,233,115"/><area shape="rect" id="node14" href="TwoLayerPerceptron__detail_8cuh.html" title="TwoLayerPerceptron\l_detail.cuh" alt="" coords="259,81,401,122"/><area shape="rect" id="node5" href="CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="182,171,308,197"/><area shape="rect" id="node8" href="CudaManager_8h.html" title="CudaManager.h" alt="" coords="316,245,431,272"/><area shape="rect" id="node13" href="CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="453,320,587,347"/><area shape="rect" id="node10" href="CudaException_8h.html" title="CudaException.h" alt="" coords="171,320,293,347"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="TwoLayerPerceptron_8cuh__dep__incl.png" border="0" usemap="#src_2nn_2TwoLayerPerceptron_8cuhdep" alt=""/></div>
 <map name="src_2nn_2TwoLayerPerceptron_8cuhdep" id="src_2nn_2TwoLayerPerceptron_8cuhdep">
-<area shape="rect" id="node2" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="55,80,160,107"/></map>
+<area shape="rect" id="node2" href="TwoLayerPerceptronInternal_8cuh.html" title="src/nn/TwoLayerPerceptron\lInternal.cuh" alt="" coords="5,81,187,122"/><area shape="rect" id="node4" href="TwoLayerPerceptronOutputIdentity_8cuh.html" title="src/nn/TwoLayerPerceptron\lOutputIdentity.cuh" alt="" coords="211,81,393,122"/><area shape="rect" id="node3" href="unittest_8cu.html" title="src/unittest.cu" alt="" coords="43,171,148,197"/></map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron&lt; ActivateFunction &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron&lt; ActivateMethod, UpdateMethod &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html">nn::Serial&lt; Layer, LayerRemain &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +124,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 31 2018 02:17:52 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 5 2018 07:05:33 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

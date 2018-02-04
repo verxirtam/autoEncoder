@@ -1,7 +1,7 @@
 <map id="nn::ElementWiseFunction1to1::culculateBlockThreadCount" name="nn::ElementWiseFunction1to1::culculateBlockThreadCount">
 <area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="251,70,448,111"/>
-<area shape="rect" id="node3" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="527,37,670,78"/>
-<area shape="rect" id="node6" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="496,102,701,143"/>
-<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="761,5,903,46"/>
-<area shape="rect" id="node5" href="$classnn_1_1TwoLayerPerceptron.html#a90c4b69ee5a7be20ebc66bfee7ac2064" title="nn::TwoLayerPerceptron\l::forward" alt="" coords="750,70,914,111"/>
+<area shape="rect" id="node3" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="527,5,670,46"/>
+<area shape="rect" id="node5" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="507,70,690,111"/>
+<area shape="rect" id="node6" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="496,135,701,177"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="749,5,891,46"/>
 </map>

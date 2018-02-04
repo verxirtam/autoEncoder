@@ -1,3 +1,4 @@
 <map id="nn::ElementWiseFunction2to1::apply" name="nn::ElementWiseFunction2to1::apply">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="251,5,453,46"/>
+<area shape="rect" id="node2" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="261,5,443,46"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="251,70,453,111"/>
 </map>

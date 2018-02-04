@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$classnn_1_1Normalization.html#a9afdd414433975855b4d77cc86edd443" title="nn::Normalization::\lgetWhitening" alt="" coords="182,137,314,178"/>
 <area shape="rect" id="node10" href="$classnn_1_1Normalization.html#a119a0a518d2b957a941d3467dab72e82" title="nn::Normalization::\lgetInverseWhitening" alt="" coords="177,202,319,243"/>
 <area shape="rect" id="node13" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="149,85,347,112"/>
-<area shape="rect" id="node16" href="$classnn_1_1TwoLayerPerceptron.html#a8be21e7c418e4f47ba59d2f3acce9050" title="nn::TwoLayerPerceptron\l::forwardLinear" alt="" coords="166,267,330,309"/>
+<area shape="rect" id="node16" href="$classnn_1_1TwoLayerPerceptron.html#a75458fdb5ea7376198ae68a8db94f33c" title="nn::TwoLayerPerceptron\l::forwardLinear" alt="" coords="166,267,330,309"/>
 <area shape="rect" id="node4" href="$classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="425,137,557,178"/>
 <area shape="rect" id="node9" href="$classnn_1_1Normalization.html#acd7643528fa872483095d3d1a17f644d" title="nn::Normalization::\lgetZCAWhitening" alt="" coords="425,71,557,113"/>
 <area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::forward" alt="" coords="625,262,801,303"/>

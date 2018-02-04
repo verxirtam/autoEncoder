@@ -1,12 +1,8 @@
 <map id="src/nn/TwoLayerPerceptron.cuh" name="src/nn/TwoLayerPerceptron.cuh">
-<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="45,245,199,272"/>
-<area shape="rect" id="node14" href="$ActivateFunction_8cuh.html" title="ActivateFunction.cuh" alt="" coords="131,88,276,115"/>
-<area shape="rect" id="node19" href="$TwoLayerPerceptron__detail_8cuh.html" title="TwoLayerPerceptron\l_detail.cuh" alt="" coords="301,81,443,122"/>
-<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="239,320,365,347"/>
-<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="287,395,401,421"/>
-<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="466,469,600,496"/>
-<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="184,469,307,496"/>
-<area shape="rect" id="node15" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="181,171,380,197"/>
-<area shape="rect" id="node18" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="405,171,600,197"/>
-<area shape="rect" id="node16" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="225,245,380,272"/>
+<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="80,88,233,115"/>
+<area shape="rect" id="node14" href="$TwoLayerPerceptron__detail_8cuh.html" title="TwoLayerPerceptron\l_detail.cuh" alt="" coords="259,81,401,122"/>
+<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="182,171,308,197"/>
+<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="316,245,431,272"/>
+<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="453,320,587,347"/>
+<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="171,320,293,347"/>
 </map>

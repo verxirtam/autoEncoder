@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>autoEncoder: nn::TwoLayerPerceptron&lt; ActivateFunction &gt; Class Template Reference</title>
+<title>autoEncoder: nn::TwoLayerPerceptron&lt; ActivateMethod, UpdateMethod &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,81 +93,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classnn_1_1TwoLayerPerceptron-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">nn::TwoLayerPerceptron&lt; ActivateFunction &gt; Class Template Reference</div>  </div>
+<div class="title">nn::TwoLayerPerceptron&lt; ActivateMethod, UpdateMethod &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Collaboration diagram for nn::TwoLayerPerceptron&lt; ActivateFunction &gt;:</div>
+Collaboration diagram for nn::TwoLayerPerceptron&lt; ActivateMethod, UpdateMethod &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnn_1_1TwoLayerPerceptron__coll__graph.png" border="0" usemap="#nn_1_1TwoLayerPerceptron_3_01ActivateFunction_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="nn_1_1TwoLayerPerceptron_3_01ActivateFunction_01_4_coll__map" id="nn_1_1TwoLayerPerceptron_3_01ActivateFunction_01_4_coll__map">
+<div class="center"><img src="classnn_1_1TwoLayerPerceptron__coll__graph.png" border="0" usemap="#nn_1_1TwoLayerPerceptron_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="nn_1_1TwoLayerPerceptron_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map" id="nn_1_1TwoLayerPerceptron_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map">
 <area shape="rect" id="node2" href="classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="5,5,141,32"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="166,5,300,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9333927d7ce59109cd8c266964d31387"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a9333927d7ce59109cd8c266964d31387">TwoLayerPerceptron</a> ()</td></tr>
-<tr class="separator:a9333927d7ce59109cd8c266964d31387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bc0248e9af8a11d079f52b9b8f830cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a9bc0248e9af8a11d079f52b9b8f830cf">init</a> (unsigned int dim_input, unsigned int dim_output, unsigned int minibatch_size=1)</td></tr>
-<tr class="separator:a9bc0248e9af8a11d079f52b9b8f830cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c4b69ee5a7be20ebc66bfee7ac2064"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a90c4b69ee5a7be20ebc66bfee7ac2064">forward</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;x)</td></tr>
-<tr class="separator:a90c4b69ee5a7be20ebc66bfee7ac2064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacfe0fe4afb11d222e81ac6d186e1691"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aacfe0fe4afb11d222e81ac6d186e1691">back</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;delta_output)</td></tr>
-<tr class="separator:aacfe0fe4afb11d222e81ac6d186e1691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a310d2f619dbd20369e9483ab53f23d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a310d2f619dbd20369e9483ab53f23d53">update</a> ()</td></tr>
-<tr class="separator:a310d2f619dbd20369e9483ab53f23d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab179e636a303ede2b4111e5400a7abdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ab179e636a303ede2b4111e5400a7abdd">TwoLayerPerceptron</a> ()</td></tr>
+<tr class="separator:ab179e636a303ede2b4111e5400a7abdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9837eee9ca69e177f2e39f7146c58f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ab9837eee9ca69e177f2e39f7146c58f4">init</a> (unsigned int dim_input, unsigned int dim_output, unsigned int minibatch_size=1)</td></tr>
+<tr class="separator:ab9837eee9ca69e177f2e39f7146c58f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38adeeca450cbd22fed1ee15a33c2a7e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a38adeeca450cbd22fed1ee15a33c2a7e">forward</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;x)</td></tr>
+<tr class="separator:a38adeeca450cbd22fed1ee15a33c2a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a176d9cdb853a8f8b86ef17bc0770354e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a176d9cdb853a8f8b86ef17bc0770354e">back</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;delta_output)</td></tr>
+<tr class="separator:a176d9cdb853a8f8b86ef17bc0770354e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb0e0e9acf4ba87619e482272d20baf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aeeb0e0e9acf4ba87619e482272d20baf">update</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;x)</td></tr>
+<tr class="separator:aeeb0e0e9acf4ba87619e482272d20baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a0a715cdd02fcff803904082b43e2e0b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> = <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td></tr>
-<tr class="separator:a0a715cdd02fcff803904082b43e2e0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a311249613f99494aea3fc1a4a5b46115"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a> = <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td></tr>
-<tr class="separator:a311249613f99494aea3fc1a4a5b46115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202144cc8c7ae38964400cb8292679e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> = <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td></tr>
+<tr class="separator:a202144cc8c7ae38964400cb8292679e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77f7d91277bcc44667929648e2824d1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a> = <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td></tr>
+<tr class="separator:aa77f7d91277bcc44667929648e2824d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a4b0f260b0921b8e999187f0b057652ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a4b0f260b0921b8e999187f0b057652ac">initWeightBias</a> (void)</td></tr>
-<tr class="separator:a4b0f260b0921b8e999187f0b057652ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be21e7c418e4f47ba59d2f3acce9050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a8be21e7c418e4f47ba59d2f3acce9050">forwardLinear</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;x)</td></tr>
-<tr class="separator:a8be21e7c418e4f47ba59d2f3acce9050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180bd41139cd693233c6096071c330ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a180bd41139cd693233c6096071c330ae">initWeightBias</a> (void)</td></tr>
+<tr class="separator:a180bd41139cd693233c6096071c330ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75458fdb5ea7376198ae68a8db94f33c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a75458fdb5ea7376198ae68a8db94f33c">forwardLinear</a> (const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;x)</td></tr>
+<tr class="separator:a75458fdb5ea7376198ae68a8db94f33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac570bcdd713cf0251c5b78f974fddeef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ac570bcdd713cf0251c5b78f974fddeef">getWeightTDelta</a> ()</td></tr>
+<tr class="separator:ac570bcdd713cf0251c5b78f974fddeef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a144d535124a31cc7e1c0ec5581b90f91"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a144d535124a31cc7e1c0ec5581b90f91">miniBatchSize</a></td></tr>
-<tr class="separator:a144d535124a31cc7e1c0ec5581b90f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afda9e7cc9acd366c616b11376c073716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#afda9e7cc9acd366c616b11376c073716">weight</a></td></tr>
-<tr class="separator:afda9e7cc9acd366c616b11376c073716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fe5a53acb446ec8fe3b6535b4672580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0fe5a53acb446ec8fe3b6535b4672580">bias</a></td></tr>
-<tr class="separator:a0fe5a53acb446ec8fe3b6535b4672580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad07d1680509602d8155d89f19f21d9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ad07d1680509602d8155d89f19f21d9ae">u</a></td></tr>
-<tr class="separator:ad07d1680509602d8155d89f19f21d9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7eb2b65c4c555109ce5aa7f36c7ee9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ac7eb2b65c4c555109ce5aa7f36c7ee9e">z</a></td></tr>
-<tr class="separator:ac7eb2b65c4c555109ce5aa7f36c7ee9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad87c32a8b223161cd0947e6566cbaabf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ad87c32a8b223161cd0947e6566cbaabf">_1B</a></td></tr>
-<tr class="separator:ad87c32a8b223161cd0947e6566cbaabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2ab5c0627936a680a3013bed1ac9a8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#ac2ab5c0627936a680a3013bed1ac9a8a">delta</a></td></tr>
-<tr class="separator:ac2ab5c0627936a680a3013bed1ac9a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4294bf263dd8636a9e902ab21eb8ef9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa4294bf263dd8636a9e902ab21eb8ef9">deltaWeight</a></td></tr>
-<tr class="separator:aa4294bf263dd8636a9e902ab21eb8ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521ef7da7d075bedce159336e9740431"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a521ef7da7d075bedce159336e9740431">deltaBias</a></td></tr>
-<tr class="separator:a521ef7da7d075bedce159336e9740431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a810553206bc8f00974e9e4ef0607b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a82a810553206bc8f00974e9e4ef0607b">learningRate</a></td></tr>
-<tr class="separator:a82a810553206bc8f00974e9e4ef0607b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fae07a086efaf5265bfd632e2ac9df8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a9fae07a086efaf5265bfd632e2ac9df8">momentum</a></td></tr>
-<tr class="separator:a9fae07a086efaf5265bfd632e2ac9df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4917fbff942cf4d431d043c732144a30"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a4917fbff942cf4d431d043c732144a30">miniBatchSize</a></td></tr>
+<tr class="separator:a4917fbff942cf4d431d043c732144a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7227212e3c2e5675e75e142ec997717c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a7227212e3c2e5675e75e142ec997717c">weight</a></td></tr>
+<tr class="separator:a7227212e3c2e5675e75e142ec997717c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecc326ddddcf747cb2128ab05eb5947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aaecc326ddddcf747cb2128ab05eb5947">bias</a></td></tr>
+<tr class="separator:aaecc326ddddcf747cb2128ab05eb5947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3d4e54b0f750e8b36e20c4fb7d7add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a7a3d4e54b0f750e8b36e20c4fb7d7add">u</a></td></tr>
+<tr class="separator:a7a3d4e54b0f750e8b36e20c4fb7d7add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1982b3d68faf5cf38fd41f3fede82ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa1982b3d68faf5cf38fd41f3fede82ea">z</a></td></tr>
+<tr class="separator:aa1982b3d68faf5cf38fd41f3fede82ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814ee482b23cfd54e249a9dc8ba2a99b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a814ee482b23cfd54e249a9dc8ba2a99b">_1B</a></td></tr>
+<tr class="separator:a814ee482b23cfd54e249a9dc8ba2a99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206eac4a840bab02933edeac6f13b5aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a206eac4a840bab02933edeac6f13b5aa">delta</a></td></tr>
+<tr class="separator:a206eac4a840bab02933edeac6f13b5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d83c1d2d473fac15447cec800d51e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a18d83c1d2d473fac15447cec800d51e3">weightTDelta</a></td></tr>
+<tr class="separator:a18d83c1d2d473fac15447cec800d51e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861c218f2eacbe9d71a55dcd46d3c7f6"><td class="memItemLeft" align="right" valign="top">UpdateMethod&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a861c218f2eacbe9d71a55dcd46d3c7f6">updateMethod</a></td></tr>
+<tr class="separator:a861c218f2eacbe9d71a55dcd46d3c7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="a0a715cdd02fcff803904082b43e2e0b5"></a>
+<a class="anchor" id="a202144cc8c7ae38964400cb8292679e1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> =  <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td>
+          <td class="memname">using <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> =  <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td>
         </tr>
       </table>
   </td>
@@ -179,17 +177,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a311249613f99494aea3fc1a4a5b46115"></a>
+<a class="anchor" id="aa77f7d91277bcc44667929648e2824d1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a> =  <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td>
+          <td class="memname">using <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a> =  <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td>
         </tr>
       </table>
   </td>
@@ -202,17 +200,17 @@ template&lt;class ActivateFunction&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9333927d7ce59109cd8c266964d31387"></a>
+<a class="anchor" id="ab179e636a303ede2b4111e5400a7abdd"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html">TwoLayerPerceptron</a> </td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::<a class="el" href="classnn_1_1TwoLayerPerceptron.html">TwoLayerPerceptron</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -228,16 +226,16 @@ template&lt;class ActivateFunction&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aacfe0fe4afb11d222e81ac6d186e1691"></a>
+<a class="anchor" id="a176d9cdb853a8f8b86ef17bc0770354e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a> &amp; <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::back </td>
+          <td class="memname">const <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a> &amp; <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::back </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>delta_output</em></td><td>)</td>
           <td></td>
         </tr>
@@ -246,46 +244,37 @@ template&lt;class ActivateFunction &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a90c4b69ee5a7be20ebc66bfee7ac2064"></a>
+<a class="anchor" id="a38adeeca450cbd22fed1ee15a33c2a7e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a> &amp; <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::forward </td>
+          <td class="memname">const <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a> &amp; <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::forward </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a90c4b69ee5a7be20ebc66bfee7ac2064_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a90c4b69ee5a7be20ebc66bfee7ac2064_cgraph" alt=""/></div>
-<map name="classnn_1_1TwoLayerPerceptron_a90c4b69ee5a7be20ebc66bfee7ac2064_cgraph" id="classnn_1_1TwoLayerPerceptron_a90c4b69ee5a7be20ebc66bfee7ac2064_cgraph">
-<area shape="rect" id="node2" href="classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="219,103,362,145"/><area shape="rect" id="node3" href="classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="411,103,608,145"/><area shape="rect" id="node4" href="classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749" title="nn::ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="656,70,853,111"/><area shape="rect" id="node9" href="classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="687,135,822,177"/><area shape="rect" id="node5" href="classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968" title="cuda::CudaManager::\lgetDeviceProp" alt="" coords="901,5,1048,46"/><area shape="rect" id="node7" href="classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="907,70,1042,111"/><area shape="rect" id="node8" href="classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="907,135,1042,177"/><area shape="rect" id="node6" href="classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="1096,5,1243,46"/></map>
-</div>
-</p>
-
 </div>
 </div>
-<a class="anchor" id="a8be21e7c418e4f47ba59d2f3acce9050"></a>
+<a class="anchor" id="a75458fdb5ea7376198ae68a8db94f33c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::forwardLinear </td>
+          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::forwardLinear </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
@@ -300,22 +289,56 @@ template&lt;class ActivateFunction &gt; </div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a8be21e7c418e4f47ba59d2f3acce9050_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a8be21e7c418e4f47ba59d2f3acce9050_cgraph" alt=""/></div>
-<map name="classnn_1_1TwoLayerPerceptron_a8be21e7c418e4f47ba59d2f3acce9050_cgraph" id="classnn_1_1TwoLayerPerceptron_a8be21e7c418e4f47ba59d2f3acce9050_cgraph">
+<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a75458fdb5ea7376198ae68a8db94f33c_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a75458fdb5ea7376198ae68a8db94f33c_cgraph" alt=""/></div>
+<map name="classnn_1_1TwoLayerPerceptron_a75458fdb5ea7376198ae68a8db94f33c_cgraph" id="classnn_1_1TwoLayerPerceptron_a75458fdb5ea7376198ae68a8db94f33c_cgraph">
 <area shape="rect" id="node2" href="namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919" title="cuda::Sgemm" alt="" coords="219,92,322,119"/><area shape="rect" id="node8" href="namespacecuda.html#a286b10542d6eece4095913200b119345" title="cuda::Sger" alt="" coords="228,143,313,169"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="379,70,514,111"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="379,135,514,177"/><area shape="rect" id="node5" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="371,201,522,242"/><area shape="rect" id="node7" href="classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="379,5,514,46"/><area shape="rect" id="node6" href="classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="571,201,722,242"/><area shape="rect" id="node9" href="classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="378,266,515,307"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a9bc0248e9af8a11d079f52b9b8f830cf"></a>
+<a class="anchor" id="ac570bcdd713cf0251c5b78f974fddeef"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::init </td>
+          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::getWeightTDelta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1TwoLayerPerceptron_ac570bcdd713cf0251c5b78f974fddeef_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_ac570bcdd713cf0251c5b78f974fddeef_cgraph" alt=""/></div>
+<map name="classnn_1_1TwoLayerPerceptron_ac570bcdd713cf0251c5b78f974fddeef_cgraph" id="classnn_1_1TwoLayerPerceptron_ac570bcdd713cf0251c5b78f974fddeef_cgraph">
+<area shape="rect" id="node2" href="namespacecuda.html#a4f02863ba9c962d1f78b194f6620b919" title="cuda::Sgemm" alt="" coords="219,111,322,137"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="379,5,514,46"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="379,70,514,111"/><area shape="rect" id="node5" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="371,135,522,177"/><area shape="rect" id="node7" href="classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="379,201,514,242"/><area shape="rect" id="node6" href="classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="571,135,722,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9837eee9ca69e177f2e39f7146c58f4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::init </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>dim_input</em>, </td>
@@ -343,25 +366,25 @@ template&lt;class ActivateFunction &gt; </div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a9bc0248e9af8a11d079f52b9b8f830cf_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a9bc0248e9af8a11d079f52b9b8f830cf_cgraph" alt=""/></div>
-<map name="classnn_1_1TwoLayerPerceptron_a9bc0248e9af8a11d079f52b9b8f830cf_cgraph" id="classnn_1_1TwoLayerPerceptron_a9bc0248e9af8a11d079f52b9b8f830cf_cgraph">
+<div class="center"><img src="classnn_1_1TwoLayerPerceptron_ab9837eee9ca69e177f2e39f7146c58f4_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_ab9837eee9ca69e177f2e39f7146c58f4_cgraph" alt=""/></div>
+<map name="classnn_1_1TwoLayerPerceptron_ab9837eee9ca69e177f2e39f7146c58f4_cgraph" id="classnn_1_1TwoLayerPerceptron_ab9837eee9ca69e177f2e39f7146c58f4_cgraph">
 <area shape="rect" id="node2" href="classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="219,5,357,46"/><area shape="rect" id="node3" href="classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="406,5,543,46"/><area shape="rect" id="node4" href="classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="593,5,730,46"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a4b0f260b0921b8e999187f0b057652ac"></a>
+<a class="anchor" id="a180bd41139cd693233c6096071c330ae"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::initWeightBias </td>
+          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::initWeightBias </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -378,24 +401,25 @@ template&lt;class ActivateFunction &gt; </div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a4b0f260b0921b8e999187f0b057652ac_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a4b0f260b0921b8e999187f0b057652ac_cgraph" alt=""/></div>
-<map name="classnn_1_1TwoLayerPerceptron_a4b0f260b0921b8e999187f0b057652ac_cgraph" id="classnn_1_1TwoLayerPerceptron_a4b0f260b0921b8e999187f0b057652ac_cgraph">
+<div class="center"><img src="classnn_1_1TwoLayerPerceptron_a180bd41139cd693233c6096071c330ae_cgraph.png" border="0" usemap="#classnn_1_1TwoLayerPerceptron_a180bd41139cd693233c6096071c330ae_cgraph" alt=""/></div>
+<map name="classnn_1_1TwoLayerPerceptron_a180bd41139cd693233c6096071c330ae_cgraph" id="classnn_1_1TwoLayerPerceptron_a180bd41139cd693233c6096071c330ae_cgraph">
 <area shape="rect" id="node2" href="classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="219,5,375,46"/><area shape="rect" id="node3" href="classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="425,5,581,46"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a310d2f619dbd20369e9483ab53f23d53"></a>
+<a class="anchor" id="aeeb0e0e9acf4ba87619e482272d20baf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction &gt; </div>
+template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::update </td>
+          <td class="memname">void <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -404,17 +428,17 @@ template&lt;class ActivateFunction &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ad87c32a8b223161cd0947e6566cbaabf"></a>
+<a class="anchor" id="a814ee482b23cfd54e249a9dc8ba2a99b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::_1B</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::_1B</td>
         </tr>
       </table>
   </td>
@@ -426,17 +450,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a0fe5a53acb446ec8fe3b6535b4672580"></a>
+<a class="anchor" id="aaecc326ddddcf747cb2128ab05eb5947"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::bias</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#aa77f7d91277bcc44667929648e2824d1">DeviceVector</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::bias</td>
         </tr>
       </table>
   </td>
@@ -448,17 +472,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac2ab5c0627936a680a3013bed1ac9a8a"></a>
+<a class="anchor" id="a206eac4a840bab02933edeac6f13b5aa"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::delta</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::delta</td>
         </tr>
       </table>
   </td>
@@ -470,17 +494,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a521ef7da7d075bedce159336e9740431"></a>
+<a class="anchor" id="a4917fbff942cf4d431d043c732144a30"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a311249613f99494aea3fc1a4a5b46115">DeviceVector</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::deltaBias</td>
+          <td class="memname">unsigned int <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::miniBatchSize</td>
         </tr>
       </table>
   </td>
@@ -492,17 +516,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aa4294bf263dd8636a9e902ab21eb8ef9"></a>
+<a class="anchor" id="a7a3d4e54b0f750e8b36e20c4fb7d7add"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::deltaWeight</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::u</td>
         </tr>
       </table>
   </td>
@@ -514,17 +538,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a82a810553206bc8f00974e9e4ef0607b"></a>
+<a class="anchor" id="a861c218f2eacbe9d71a55dcd46d3c7f6"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::learningRate</td>
+          <td class="memname">UpdateMethod <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::updateMethod</td>
         </tr>
       </table>
   </td>
@@ -536,17 +560,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a144d535124a31cc7e1c0ec5581b90f91"></a>
+<a class="anchor" id="a7227212e3c2e5675e75e142ec997717c"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::miniBatchSize</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::weight</td>
         </tr>
       </table>
   </td>
@@ -558,17 +582,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a9fae07a086efaf5265bfd632e2ac9df8"></a>
+<a class="anchor" id="a18d83c1d2d473fac15447cec800d51e3"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::momentum</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::weightTDelta</td>
         </tr>
       </table>
   </td>
@@ -580,61 +604,17 @@ template&lt;class ActivateFunction&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad07d1680509602d8155d89f19f21d9ae"></a>
+<a class="anchor" id="aa1982b3d68faf5cf38fd41f3fede82ea"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::u</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afda9e7cc9acd366c616b11376c073716"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::weight</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ac7eb2b65c4c555109ce5aa7f36c7ee9e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class ActivateFunction&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a0a715cdd02fcff803904082b43e2e0b5">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a> &gt;::z</td>
+          <td class="memname"><a class="el" href="classnn_1_1TwoLayerPerceptron.html#a202144cc8c7ae38964400cb8292679e1">DeviceMatrix</a> <a class="el" href="classnn_1_1TwoLayerPerceptron.html">nn::TwoLayerPerceptron</a>&lt; ActivateMethod, UpdateMethod &gt;::z</td>
         </tr>
       </table>
   </td>
@@ -653,7 +633,7 @@ template&lt;class ActivateFunction&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 31 2018 02:17:53 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 5 2018 07:05:34 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
