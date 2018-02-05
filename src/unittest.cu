@@ -54,7 +54,10 @@
 
 #include "util/TimeUtil.h"
 
-#include "nn/TwoLayerPerceptronInternal.cuh"
+#include "nn/Perceptron.cuh"
+#include "nn/LayerInput.cuh"
+#include "nn/LayerInternal.cuh"
+#include "nn/LayerOutputIdentity.cuh"
 
 using namespace cuda;
 using namespace nn;
@@ -2458,7 +2461,7 @@ TEST(TimeUtilTest, Simple)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-class TwoLayerPerceptronTest :
+class PerceptronTest :
 	public ::testing::Test
 {
 protected:
@@ -2466,9 +2469,10 @@ protected:
 	void TearDown(){}
 };
 
-TEST(TwoLayerPerceptronTest, Simple)
+TEST(PerceptronTest, Simple)
 {
-	TwoLayerPerceptronInternal<Func1to1Tanh> tlp;
+	LayerInternal<Func1to1Tanh> tlp;
+	Perceptron<LayerInput, LayerInternal<Func1to1Tanh>, LayerOutputIdentity> p;
 	//unsigned int dim_input  = 2;
 	//unsigned int dim_hidden = 3;
 	//unsigned int dim_output = 4;

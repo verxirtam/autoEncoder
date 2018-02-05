@@ -345,8 +345,13 @@ unittest.o : unittest.cu \
     util/TimeUtil.h \
     nn/BackpropagationUtils.cuh \
     nn/BackpropagationUtils_detail.cuh \
-    nn/TwoLayerPerceptronInternal.cuh \
-    nn/TwoLayerPerceptron.cuh \
-    nn/TwoLayerPerceptron_detail.cuh \
+    nn/Perceptron.cuh \
+    nn/LayerInput.cuh \
+    nn/LayerInternal.cuh \
+    nn/Layer.cuh \
+    nn/Layer_detail.cuh \
     nn/ActivateMethodElementWise.cuh \
-    nn/UpdateMethodMomentum.h
+    nn/UpdateMethodMomentum.h \
+    nn/LayerOutputIdentity.cuh \
+    nn/ActivateMethodOutputIdentity.cuh \
+    nn/Func2to1ElementWiseDifference.cuh
