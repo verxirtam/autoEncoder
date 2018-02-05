@@ -1,6 +1,6 @@
 <map id="src/nn/UpdateMethodMomentum.h" name="src/nn/UpdateMethodMomentum.h">
-<area shape="rect" id="node2" href="$TwoLayerPerceptronInternal_8cuh.html" title="src/nn/TwoLayerPerceptron\lInternal.cuh" alt="" coords="5,81,187,122"/>
-<area shape="rect" id="node4" href="$TwoLayerPerceptronOutputIdentity_8cuh.html" title="src/nn/TwoLayerPerceptron\lOutputIdentity.cuh" alt="" coords="211,81,393,122"/>
-<area shape="rect" id="node5" href="$UpdateMethodMomentum_8cpp.html" title="src/nn/UpdateMethodMomentum.cpp" alt="" coords="419,88,655,115"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="43,171,148,197"/>
+<area shape="rect" id="node2" href="$LayerInternal_8cuh.html" title="src/nn/LayerInternal.cuh" alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node4" href="$LayerOutputIdentity_8cuh.html" title="src/nn/LayerOutputIdentity.cuh" alt="" coords="193,80,393,107"/>
+<area shape="rect" id="node5" href="$UpdateMethodMomentum_8cpp.html" title="src/nn/UpdateMethodMomentum.cpp" alt="" coords="419,80,655,107"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="137,155,241,181"/>
 </map>

@@ -96,14 +96,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">nn::Serial&lt; Layer, LayerRemain &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Serial_8h_source.html">Serial.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a87a315ea20d5efcda8882b88a12bc0b8"><td class="memTemplParams" colspan="2">template&lt;unsigned int N&gt; </td></tr>
-<tr class="memitem:a87a315ea20d5efcda8882b88a12bc0b8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1Serial.html#a58f2fc293eb0ef5c0533cc164fe0dbd6">layerType</a>&lt; N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a87a315ea20d5efcda8882b88a12bc0b8">getMember</a> ()</td></tr>
+<tr class="memitem:a87a315ea20d5efcda8882b88a12bc0b8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1Serial.html#a7dd346a7fe8cdc5117b9dcf4e05b6cc1">layerType</a>&lt; N &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a87a315ea20d5efcda8882b88a12bc0b8">getMember</a> ()</td></tr>
 <tr class="separator:a87a315ea20d5efcda8882b88a12bc0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc947a1c5bbc66f990ff3cada7952770"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#abc947a1c5bbc66f990ff3cada7952770">forward</a> (<a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;x)</td></tr>
 <tr class="separator:abc947a1c5bbc66f990ff3cada7952770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afca2fde3b46dfda17c323a5a96662e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a8afca2fde3b46dfda17c323a5a96662e">back</a> (const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;delta_output)</td></tr>
+<tr class="separator:a8afca2fde3b46dfda17c323a5a96662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad38849bd96f82c92c5a8f2462d6d218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#aad38849bd96f82c92c5a8f2462d6d218">update</a> (const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;x)</td></tr>
+<tr class="separator:aad38849bd96f82c92c5a8f2462d6d218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d02fca1aaafcf692bff268bedc25de0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a4d02fca1aaafcf692bff268bedc25de0">getZ</a> () const </td></tr>
+<tr class="separator:a4d02fca1aaafcf692bff268bedc25de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -111,13 +119,13 @@ Private Types</h2></td></tr>
 <tr class="separator:a61c5c94f73a9075a833716ffb74518ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739fafb580bfa593a38f1f68d21d7b5e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a739fafb580bfa593a38f1f68d21d7b5e">DeviceVector</a> = <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td></tr>
 <tr class="separator:a739fafb580bfa593a38f1f68d21d7b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeadfad82aca68caea633bc606c66972f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a> = std::tuple&lt; Layer, LayerRemain...&gt;</td></tr>
-<tr class="separator:aeadfad82aca68caea633bc606c66972f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4edd0efd09b71e391e2ed23d58a6ab40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a4edd0efd09b71e391e2ed23d58a6ab40">layerCount</a> = std::tuple_size&lt; <a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a> &gt;</td></tr>
-<tr class="separator:a4edd0efd09b71e391e2ed23d58a6ab40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58f2fc293eb0ef5c0533cc164fe0dbd6"><td class="memTemplParams" colspan="2">template&lt;unsigned int N&gt; </td></tr>
-<tr class="memitem:a58f2fc293eb0ef5c0533cc164fe0dbd6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a58f2fc293eb0ef5c0533cc164fe0dbd6">layerType</a> = typename std::tuple_element&lt; N, <a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a> &gt;</td></tr>
-<tr class="separator:a58f2fc293eb0ef5c0533cc164fe0dbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa546956967b608d5c66440ce5c0296"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a> = std::tuple&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain...&gt;</td></tr>
+<tr class="separator:adfa546956967b608d5c66440ce5c0296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a489792400ac791d8077f978af5eb9898"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a489792400ac791d8077f978af5eb9898">layerCount</a> = std::tuple_size&lt; <a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a> &gt;</td></tr>
+<tr class="separator:a489792400ac791d8077f978af5eb9898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd346a7fe8cdc5117b9dcf4e05b6cc1"><td class="memTemplParams" colspan="2">template&lt;unsigned int N&gt; </td></tr>
+<tr class="memitem:a7dd346a7fe8cdc5117b9dcf4e05b6cc1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a7dd346a7fe8cdc5117b9dcf4e05b6cc1">layerType</a> = typename std::tuple_element&lt; N, <a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a> &gt;</td></tr>
+<tr class="separator:a7dd346a7fe8cdc5117b9dcf4e05b6cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -127,8 +135,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a8242e5ab6f9545cd9d2675b9865728cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a8242e5ab6f9545cd9d2675b9865728cf">layer</a></td></tr>
-<tr class="separator:a8242e5ab6f9545cd9d2675b9865728cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa698b28624feaf91283f8e8e85c340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Serial.html#a7aa698b28624feaf91283f8e8e85c340">layer</a></td></tr>
+<tr class="separator:a7aa698b28624feaf91283f8e8e85c340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a61c5c94f73a9075a833716ffb74518ef"></a>
@@ -141,7 +149,7 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> =  <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td>
+          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> =  <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td>
         </tr>
       </table>
   </td>
@@ -163,7 +171,7 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a739fafb580bfa593a38f1f68d21d7b5e">DeviceVector</a> =  <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td>
+          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a739fafb580bfa593a38f1f68d21d7b5e">DeviceVector</a> =  <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td>
         </tr>
       </table>
   </td>
@@ -175,7 +183,7 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a4edd0efd09b71e391e2ed23d58a6ab40"></a>
+<a class="anchor" id="a489792400ac791d8077f978af5eb9898"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -185,7 +193,7 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a4edd0efd09b71e391e2ed23d58a6ab40">layerCount</a> =  std::tuple_size&lt;<a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a489792400ac791d8077f978af5eb9898">layerCount</a> =  std::tuple_size&lt;<a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -197,7 +205,29 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a58f2fc293eb0ef5c0533cc164fe0dbd6"></a>
+<a class="anchor" id="adfa546956967b608d5c66440ce5c0296"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Layer , class... LayerRemain&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a> =  std::tuple&lt;<a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain...&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7dd346a7fe8cdc5117b9dcf4e05b6cc1"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -209,29 +239,7 @@ template&lt;unsigned int N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a58f2fc293eb0ef5c0533cc164fe0dbd6">layerType</a> =  typename std::tuple_element&lt;N, <a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a>&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aeadfad82aca68caea633bc606c66972f"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class Layer , class... LayerRemain&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a> =  std::tuple&lt;Layer, LayerRemain...&gt;</td>
+          <td class="memname">using <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::<a class="el" href="classnn_1_1Serial.html#a7dd346a7fe8cdc5117b9dcf4e05b6cc1">layerType</a> =  typename std::tuple_element&lt;N, <a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -244,6 +252,24 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8afca2fde3b46dfda17c323a5a96662e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Layer , class... LayerRemain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::back </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>delta_output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="abc947a1c5bbc66f990ff3cada7952770"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +280,7 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::forward </td>
+          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::forward </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
@@ -282,7 +308,7 @@ template&lt;unsigned int N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::forwardMain </td>
+          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::forwardMain </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td>
           <td class="paramname"><em>x</em></td><td>)</td>
@@ -310,7 +336,7 @@ template&lt;unsigned int N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1Serial.html#a58f2fc293eb0ef5c0533cc164fe0dbd6">layerType</a>&lt;N&gt;&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::getMember </td>
+          <td class="memname"><a class="el" href="classnn_1_1Serial.html#a7dd346a7fe8cdc5117b9dcf4e05b6cc1">layerType</a>&lt;N&gt;&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::getMember </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -323,10 +349,18 @@ template&lt;unsigned int N&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Serial_a87a315ea20d5efcda8882b88a12bc0b8_icgraph.png" border="0" usemap="#classnn_1_1Serial_a87a315ea20d5efcda8882b88a12bc0b8_icgraph" alt=""/></div>
+<map name="classnn_1_1Serial_a87a315ea20d5efcda8882b88a12bc0b8_icgraph" id="classnn_1_1Serial_a87a315ea20d5efcda8882b88a12bc0b8_icgraph">
+<area shape="rect" id="node2" href="classnn_1_1Serial.html#a4d02fca1aaafcf692bff268bedc25de0" title="nn::Serial::getZ" alt="" coords="206,5,317,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a8242e5ab6f9545cd9d2675b9865728cf"></a>
+<a class="anchor" id="a4d02fca1aaafcf692bff268bedc25de0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -336,7 +370,60 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnn_1_1Serial.html#aeadfad82aca68caea633bc606c66972f">leyerTupleType</a> <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; Layer, LayerRemain &gt;::layer</td>
+          <td class="memname">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a>&amp; <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::getZ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Serial_a4d02fca1aaafcf692bff268bedc25de0_cgraph.png" border="0" usemap="#classnn_1_1Serial_a4d02fca1aaafcf692bff268bedc25de0_cgraph" alt=""/></div>
+<map name="classnn_1_1Serial_a4d02fca1aaafcf692bff268bedc25de0_cgraph" id="classnn_1_1Serial_a4d02fca1aaafcf692bff268bedc25de0_cgraph">
+<area shape="rect" id="node2" href="classnn_1_1Serial.html#a87a315ea20d5efcda8882b88a12bc0b8" title="nn::Serial::getMember" alt="" coords="166,5,317,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aad38849bd96f82c92c5a8f2462d6d218"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Layer , class... LayerRemain&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnn_1_1Serial.html#a61c5c94f73a9075a833716ffb74518ef">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a7aa698b28624feaf91283f8e8e85c340"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Layer , class... LayerRemain&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296">layerTupleType</a> <a class="el" href="classnn_1_1Serial.html">nn::Serial</a>&lt; <a class="el" href="classnn_1_1Layer.html">Layer</a>, LayerRemain &gt;::layer</td>
         </tr>
       </table>
   </td>
@@ -349,12 +436,12 @@ template&lt;class Layer , class... LayerRemain&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/nn/<a class="el" href="TwoLayerPerceptron_8cuh.html">TwoLayerPerceptron.cuh</a></li>
+<li>src/nn/<a class="el" href="Serial_8h_source.html">Serial.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 5 2018 07:05:34 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 6 2018 06:08:42 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

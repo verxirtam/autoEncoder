@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pcawhiteningmatrix',['pcaWhiteningMatrix',['../classnn_1_1Normalization.html#a84baa60384dc5d1c8306f61e653ec0c0',1,'nn::Normalization']]]
+  ['output',['output',['../classnn_1_1Perceptron.html#af14ced6836677f5191c8341711c2bc3a',1,'nn::Perceptron']]]
 ];

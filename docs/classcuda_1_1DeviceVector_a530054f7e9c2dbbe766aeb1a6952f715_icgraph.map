@@ -1,12 +1,12 @@
 <map id="cuda::DeviceVector::get1Vector" name="cuda::DeviceVector::get1Vector">
 <area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="635,14,786,56"/>
 <area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="220,220,361,261"/>
-<area shape="rect" id="node6" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="192,67,389,94"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="683,102,739,128"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="675,163,747,190"/>
-<area shape="rect" id="node10" href="$classnn_1_1TwoLayerPerceptron.html#ab9837eee9ca69e177f2e39f7146c58f4" title="nn::TwoLayerPerceptron\l::init" alt="" coords="209,285,373,326"/>
-<area shape="rect" id="node11" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="193,350,388,392"/>
+<area shape="rect" id="node6" href="$classnn_1_1Layer.html#a9add69cb9817667db1a54dcaa9cc3a75" title="nn::Layer::init" alt="" coords="240,286,341,312"/>
+<area shape="rect" id="node7" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="192,67,389,94"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="683,102,739,128"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="675,163,747,190"/>
+<area shape="rect" id="node11" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="193,337,388,378"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="476,223,548,250"/>
 <area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="484,274,540,300"/>
-<area shape="rect" id="node7" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="437,67,587,94"/>
+<area shape="rect" id="node8" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="437,67,587,94"/>
 </map>

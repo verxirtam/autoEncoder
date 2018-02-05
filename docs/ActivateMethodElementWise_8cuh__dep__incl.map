@@ -1,4 +1,4 @@
 <map id="src/nn/ActivateMethodElementWise.cuh" name="src/nn/ActivateMethodElementWise.cuh">
-<area shape="rect" id="node2" href="$TwoLayerPerceptronInternal_8cuh.html" title="src/nn/TwoLayerPerceptron\lInternal.cuh" alt="" coords="14,97,196,138"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="53,187,157,213"/>
+<area shape="rect" id="node2" href="$LayerInternal_8cuh.html" title="src/nn/LayerInternal.cuh" alt="" coords="24,96,187,123"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="53,171,157,197"/>
 </map>

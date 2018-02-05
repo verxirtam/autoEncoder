@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['back',['back',['../classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce',1,'nn::Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classnn_1_1Backpropagation.html#abdb6692cd278a2a9118f0dbd5884cdbe',1,'nn::Backpropagation::back(const DeviceMatrix &amp;D)'],['../classnn_1_1TwoLayerPerceptron.html#a176d9cdb853a8f8b86ef17bc0770354e',1,'nn::TwoLayerPerceptron::back()']]],
+  ['back',['back',['../classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce',1,'nn::Backpropagation::back(const std::vector&lt; float &gt; &amp;d)'],['../classnn_1_1Backpropagation.html#abdb6692cd278a2a9118f0dbd5884cdbe',1,'nn::Backpropagation::back(const DeviceMatrix &amp;D)'],['../classnn_1_1Layer.html#a9e1b22bb6b7873606686fb01ff2a46b5',1,'nn::Layer::back()'],['../classnn_1_1LayerInput.html#a5c7a3bd36474d6535068d944b8c81f8b',1,'nn::LayerInput::back()'],['../classnn_1_1Perceptron.html#a95164179bc2ca52d4155b41b27dce169',1,'nn::Perceptron::back()'],['../classnn_1_1Serial.html#a8afca2fde3b46dfda17c323a5a96662e',1,'nn::Serial::back()']]],
   ['backpropagation',['Backpropagation',['../classnn_1_1Backpropagation.html',1,'nn']]],
   ['backpropagation',['backpropagation',['../classnn_1_1AutoEncoder.html#acf3a0bab88066e691940e74d82d08f83',1,'nn::AutoEncoder::backpropagation()'],['../classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d',1,'nn::Backpropagation::Backpropagation()']]],
   ['backpropagation_2ecuh',['Backpropagation.cuh',['../Backpropagation_8cuh.html',1,'']]],
@@ -22,5 +22,5 @@ var searchData=
   ['backpropagationtanhregtest_5fall_5fshowinfo',['BackpropagationTanhRegTest_All_showInfo',['../unittest_8cu.html#a8b7605445954ad74414ae57177d1f540',1,'unittest.cu']]],
   ['backpropagationutils_2ecuh',['BackpropagationUtils.cuh',['../BackpropagationUtils_8cuh.html',1,'']]],
   ['backpropagationutils_5fdetail_2ecuh',['BackpropagationUtils_detail.cuh',['../BackpropagationUtils__detail_8cuh.html',1,'']]],
-  ['bias',['bias',['../classnn_1_1Backpropagation.html#a1f94e23ff63d26724858644b22621734',1,'nn::Backpropagation::bias()'],['../classnn_1_1TwoLayerPerceptron.html#aaecc326ddddcf747cb2128ab05eb5947',1,'nn::TwoLayerPerceptron::bias()']]]
+  ['bias',['bias',['../classnn_1_1Backpropagation.html#a1f94e23ff63d26724858644b22621734',1,'nn::Backpropagation::bias()'],['../classnn_1_1Layer.html#a46d1226766c18ac56f2c8e90120598a9',1,'nn::Layer::bias()']]]
 ];

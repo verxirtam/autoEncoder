@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['normalization_2ecpp',['Normalization.cpp',['../Normalization_8cpp.html',1,'']]],
-  ['normalization_2eh',['Normalization.h',['../Normalization_8h.html',1,'']]],
-  ['normalization_5fcuda_2ecu',['Normalization_cuda.cu',['../Normalization__cuda_8cu.html',1,'']]]
+  ['layer_2ecuh',['Layer.cuh',['../Layer_8cuh.html',1,'']]],
+  ['layer_5fdetail_2ecuh',['Layer_detail.cuh',['../Layer__detail_8cuh.html',1,'']]],
+  ['layerinput_2ecuh',['LayerInput.cuh',['../LayerInput_8cuh.html',1,'']]],
+  ['layerinternal_2ecuh',['LayerInternal.cuh',['../LayerInternal_8cuh.html',1,'']]],
+  ['layeroutputidentity_2ecuh',['LayerOutputIdentity.cuh',['../LayerOutputIdentity_8cuh.html',1,'']]]
 ];

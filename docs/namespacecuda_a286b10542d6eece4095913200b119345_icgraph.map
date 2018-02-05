@@ -1,17 +1,17 @@
 <map id="cuda::Sger" name="cuda::Sger">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::obtainUFromZ" alt="" coords="139,5,357,61"/>
-<area shape="rect" id="node3" href="$classnn_1_1Normalization.html#a9afdd414433975855b4d77cc86edd443" title="nn::Normalization::\lgetWhitening" alt="" coords="182,137,314,178"/>
-<area shape="rect" id="node10" href="$classnn_1_1Normalization.html#a119a0a518d2b957a941d3467dab72e82" title="nn::Normalization::\lgetInverseWhitening" alt="" coords="177,202,319,243"/>
-<area shape="rect" id="node13" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="149,85,347,112"/>
-<area shape="rect" id="node16" href="$classnn_1_1TwoLayerPerceptron.html#a75458fdb5ea7376198ae68a8db94f33c" title="nn::TwoLayerPerceptron\l::forwardLinear" alt="" coords="166,267,330,309"/>
-<area shape="rect" id="node4" href="$classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="425,137,557,178"/>
-<area shape="rect" id="node9" href="$classnn_1_1Normalization.html#acd7643528fa872483095d3d1a17f644d" title="nn::Normalization::\lgetZCAWhitening" alt="" coords="425,71,557,113"/>
-<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::forward" alt="" coords="625,262,801,303"/>
-<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::learning" alt="" coords="624,186,803,227"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="685,129,741,156"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="677,79,749,105"/>
-<area shape="rect" id="node11" href="$classnn_1_1Normalization.html#a7662e44dab21e677d3457f4dbe44dc6f" title="nn::Normalization::\lgetInversePCAWhitening" alt="" coords="406,267,575,309"/>
-<area shape="rect" id="node12" href="$classnn_1_1Normalization.html#a3b88bcbf898a74a4498a35665ae031a3" title="nn::Normalization::\lgetInverseZCAWhitening" alt="" coords="407,202,575,243"/>
-<area shape="rect" id="node14" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="416,20,565,47"/>
-<area shape="rect" id="node15" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="638,13,789,54"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::obtainUFromZ" alt="" coords="139,4,357,60"/>
+<area shape="rect" id="node3" href="$classnn_1_1Layer.html#a3439ae33d0ccade7400d60839ae6394c" title="nn::Layer::forwardLinear" alt="" coords="167,84,329,111"/>
+<area shape="rect" id="node4" href="$classnn_1_1Normalization.html#a9afdd414433975855b4d77cc86edd443" title="nn::Normalization::\lgetWhitening" alt="" coords="182,186,314,227"/>
+<area shape="rect" id="node11" href="$classnn_1_1Normalization.html#a119a0a518d2b957a941d3467dab72e82" title="nn::Normalization::\lgetInverseWhitening" alt="" coords="177,283,319,325"/>
+<area shape="rect" id="node14" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="149,135,347,161"/>
+<area shape="rect" id="node5" href="$classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="425,218,557,259"/>
+<area shape="rect" id="node10" href="$classnn_1_1Normalization.html#acd7643528fa872483095d3d1a17f644d" title="nn::Normalization::\lgetZCAWhitening" alt="" coords="425,153,557,194"/>
+<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::forward" alt="" coords="625,343,801,385"/>
+<area shape="rect" id="node7" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::learning" alt="" coords="624,267,803,309"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="685,211,741,237"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="677,160,749,187"/>
+<area shape="rect" id="node12" href="$classnn_1_1Normalization.html#a7662e44dab21e677d3457f4dbe44dc6f" title="nn::Normalization::\lgetInversePCAWhitening" alt="" coords="406,349,575,390"/>
+<area shape="rect" id="node13" href="$classnn_1_1Normalization.html#a3b88bcbf898a74a4498a35665ae031a3" title="nn::Normalization::\lgetInverseZCAWhitening" alt="" coords="407,283,575,325"/>
+<area shape="rect" id="node15" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="416,101,565,128"/>
+<area shape="rect" id="node16" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="638,94,789,135"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="src/nn/Func2to1ElementWiseDifference.cuh" name="src/nn/Func2to1ElementWiseDifference.cuh">
-<area shape="rect" id="node2" href="$ActivateMethodOutputIdentity_8cuh.html" title="src/nn/ActivateMethodOutput\lIdentity.cuh" alt="" coords="7,97,199,138"/>
-<area shape="rect" id="node3" href="$TwoLayerPerceptronOutputIdentity_8cuh.html" title="src/nn/TwoLayerPerceptron\lOutputIdentity.cuh" alt="" coords="11,187,193,229"/>
+<area shape="rect" id="node2" href="$ActivateMethodOutputIdentity_8cuh.html" title="src/nn/ActivateMethodOutput\lIdentity.cuh" alt="" coords="9,97,201,138"/>
+<area shape="rect" id="node3" href="$LayerOutputIdentity_8cuh.html" title="src/nn/LayerOutputIdentity.cuh" alt="" coords="5,187,205,213"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="53,261,157,288"/>
 </map>
