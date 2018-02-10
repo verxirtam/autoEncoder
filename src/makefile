@@ -8,6 +8,10 @@
 #変数定義
 ###################################################
 
+#makefile自体のデバッグ用
+#OLD_SHELL := $(SHELL)
+#SHELL = $(warning [Making: $@]   [Dependencies: $^]   [Changed: $?])$(OLD_SHELL)
+
 #ターゲット
 #作成する実行ファイル
 #2個上のフォルダ名と同一
@@ -59,20 +63,27 @@ CUDA_SRCS := $(shell find * -name "*.cu")
 OBJDIR := ../obj
 
 #オブジェクトファイル
-#.cpp or .cuを.oに置換している
-OBJS := $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o) $(CUDA_SRCS:.cu=.o))
+#.cppを.oに置換している
+OBJS := $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
+
+#CUDA用のオブジェクトファイル
+#.cuを.oに置換している
+CUDA_OBJS := $(addprefix $(OBJDIR)/, $(CUDA_SRCS:.cu=.o))
 
 #ターゲット用のオブジェクトファイル
-OBJSTARGET := $(filter-out $(OBJDIR)/$(TESTTARGET).o, $(OBJS))
+OBJSTARGET := $(filter-out $(OBJDIR)/$(TESTTARGET).o, $(OBJS)) $(filter-out $(OBJDIR)/$(TESTTARGET).o, $(CUDA_OBJS))
 
 #テスト用のオブジェクトファイル
-OBJSTEST := $(filter-out $(OBJDIR)/$(TARGET).o, $(OBJS))
+OBJSTEST := $(filter-out $(OBJDIR)/$(TARGET).o, $(OBJS)) $(filter-out $(OBJDIR)/$(TARGET).o, $(CUDA_OBJS))
 
 #テストのコマンドラインオプション
 TESTOPTION := --gtest_color=yes
 
 #依存関係ファイル
 DEPS := $(OBJS:.o=.d)
+
+#CUDA用の依存関係ファイル
+CUDA_DEPS := $(CUDA_OBJS:.o=.cu.d)
 
 #gprof2dot.pyのコマンド
 GPROF2DOT := ~/tools/gprof2dot/gprof2dot.py -s
@@ -136,12 +147,10 @@ MAKETEST_EXIST = glunittest
 MAKETEST_NOTEXIST = notexistfile
 .PHONY: maketest
 maketest:
-	echo AAA$(CXXFLAGS:%=-Xcompiler %)AAA
-	banner test
-	if [ -f $(MAKETEST_EXIST)    ]; then banner "exist."; else banner "not exist.";fi
-	if [ -f $(MAKETEST_NOTEXIST) ]; then banner "exist."; else banner "not exist.";fi
-	if [ -f core                 ]; then banner core dumped!;fi
-	if [ -f $(MAKETEST_EXIST)    ]; then banner core dumped!;fi
+	$(warning OBJS = $(OBJS))
+	$(warning DEPS = $(DEPS))
+	$(warning CUDA_OBJS = $(CUDA_OBJS))
+	$(warning CUDA_DEPS = $(CUDA_DEPS))
 
 #実行ファイルの作成
 #オプションは最後に指定する
@@ -161,21 +170,20 @@ $(TESTTARGET): $(OBJSTEST)
 #オブジェクトファイルの作成
 #"-MMD"オプションによって依存関係ファイル(*.d)も同時に作成する
 $(OBJDIR)/%.o: %.cpp
-	$(CXX) -c -MMD $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
+	$(CXX) -c -MMD -MF $(@:%.o=%.d) $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
 
 $(OBJDIR)/%.o: %.cu
-	echo "$(@:.o=.d)"
 	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -c $< -o $@
-	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< > $(@:.o=.d)
+	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< -odir $(OBJDIR) > $(@:.o=.cu.d)
 
 #実行ファイル・中間ファイルの削除
 #".PHONY"はターゲットではなくコマンドであることを明示するためのコマンド
 .PHONY: clean
 clean:
-	echo $(SRCS)
-	(cd ..; echo `git branch | grep "*" | cut -d " " -f 2`;)
-	$(RM) $(TARGET) $(TESTTARGET) $(OBJS) $(DEPS)
+	$(RM) $(TARGET) $(TESTTARGET) $(OBJS) $(DEPS) $(CUDA_OBJS) $(CUDA_DEPS)
 
 #依存関係ファイルをインクルードする
 #先頭に”-”を書いているので依存関係ファイルがなくてもエラーとならない
 -include $(DEPS)
+-include $(CUDA_DEPS)
+

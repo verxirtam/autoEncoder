@@ -1,4 +1,4 @@
-FXAutoEncoder.o : FXAutoEncoder.cu \
+../obj/Normalization_cuda.o : nn/Normalization_cuda.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \
@@ -115,8 +115,6 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    FXAutoEncoder.cuh \
-    nn/AutoEncoder.cuh \
     nn/Normalization.h \
     nn/../cuda/CuBlasFunction.h \
     nn/../cuda/DeviceVector.h \
@@ -224,54 +222,4 @@ FXAutoEncoder.o : FXAutoEncoder.cu \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
     nn/../cuda/CuSolverDnException.h \
-    nn/Statistics.h \
-    nn/Backpropagation.cuh \
-    /usr/include/c++/4.8/memory \
-    /usr/include/c++/4.8/bits/stl_tempbuf.h \
-    /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
-    /usr/include/c++/4.8/typeinfo \
-    /usr/include/c++/4.8/ext/concurrence.h \
-    /usr/include/c++/4.8/bits/uses_allocator.h \
-    /usr/include/c++/4.8/functional \
-    /usr/include/c++/4.8/tuple \
-    /usr/include/c++/4.8/utility \
-    /usr/include/c++/4.8/bits/stl_relops.h \
-    /usr/include/c++/4.8/array \
-    /usr/include/c++/4.8/bits/unique_ptr.h \
-    /usr/include/c++/4.8/bits/shared_ptr.h \
-    /usr/include/c++/4.8/bits/shared_ptr_base.h \
-    /usr/include/c++/4.8/backward/auto_ptr.h \
-    /usr/include/c++/4.8/random \
-    /usr/include/c++/4.8/limits \
-    /usr/include/c++/4.8/bits/random.h \
-    /usr/include/x86_64-linux-gnu/c++/4.8/bits/opt_random.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/x86intrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/ia32intrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/mmintrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/mm_malloc.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/emmintrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/immintrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/fxsrintrin.h \
-    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/adxintrin.h \
-    /usr/include/c++/4.8/bits/random.tcc \
-    /usr/include/c++/4.8/numeric \
-    /usr/include/c++/4.8/bits/stl_numeric.h \
-    nn/../cuda/CuRandManager.h \
-    /usr/include/c++/4.8/ctime \
-    /usr/local/cuda/include/curand.h \
-    nn/../cuda/CuRandException.h \
-    nn/BackpropagationException.h \
-    nn/ActivateFunction.cuh \
-    nn/ElementWiseFunction1to1.cuh \
-    nn/ElementWiseFunctionUtil.cuh \
-    nn/Func2to1ElementWiseProduct.cuh \
-    nn/ElementWiseFunction2to1.cuh \
-    nn/Backpropagation_detail.h \
-    nn/OutputLayerRegression.cuh \
-    nn/Func1to1Tanh.cuh \
-    FXAutoEncoderDBAccessor.cuh \
-    /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
-    /usr/include/c++/4.8/iostream \
-    /usr/include/sqlite3.h \
-    util/TimeUtil.h
+    nn/Statistics.h

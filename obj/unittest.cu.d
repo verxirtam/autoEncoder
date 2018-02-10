@@ -1,4 +1,4 @@
-Normalization_cuda.o : Normalization_cuda.cu \
+../obj/unittest.o : unittest.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \
@@ -115,10 +115,17 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    Normalization.h \
-    cuda/CuBlasFunction.h \
-    cuda/DeviceVector.h \
-    /usr/include/c++/4.8/vector \
+    unittest.h \
+    /usr/include/c++/4.8/iostream \
+    /usr/include/c++/4.8/ostream \
+    /usr/include/c++/4.8/ios \
+    /usr/include/c++/4.8/iosfwd \
+    /usr/include/c++/4.8/bits/stringfwd.h \
+    /usr/include/c++/4.8/bits/memoryfwd.h \
+    /usr/include/c++/4.8/bits/postypes.h \
+    /usr/include/c++/4.8/cwchar \
+    /usr/include/x86_64-linux-gnu/bits/wchar.h \
+    /usr/include/c++/4.8/bits/char_traits.h \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
     /usr/include/c++/4.8/ext/numeric_traits.h \
@@ -130,32 +137,6 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
     /usr/include/c++/4.8/debug/debug.h \
     /usr/include/c++/4.8/bits/stl_iterator.h \
-    /usr/include/c++/4.8/bits/allocator.h \
-    /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h \
-    /usr/include/c++/4.8/ext/new_allocator.h \
-    /usr/include/c++/4.8/bits/memoryfwd.h \
-    /usr/include/c++/4.8/bits/stl_construct.h \
-    /usr/include/c++/4.8/ext/alloc_traits.h \
-    /usr/include/c++/4.8/bits/alloc_traits.h \
-    /usr/include/c++/4.8/bits/ptr_traits.h \
-    /usr/include/c++/4.8/bits/stl_uninitialized.h \
-    /usr/include/c++/4.8/bits/stl_vector.h \
-    /usr/include/c++/4.8/initializer_list \
-    /usr/include/c++/4.8/bits/stl_bvector.h \
-    /usr/include/c++/4.8/bits/functional_hash.h \
-    /usr/include/c++/4.8/bits/hash_bytes.h \
-    /usr/include/c++/4.8/bits/range_access.h \
-    /usr/include/c++/4.8/bits/vector.tcc \
-    cuda/CuBlasManager.h \
-    /usr/include/c++/4.8/sstream \
-    /usr/include/c++/4.8/istream \
-    /usr/include/c++/4.8/ios \
-    /usr/include/c++/4.8/iosfwd \
-    /usr/include/c++/4.8/bits/stringfwd.h \
-    /usr/include/c++/4.8/bits/postypes.h \
-    /usr/include/c++/4.8/cwchar \
-    /usr/include/x86_64-linux-gnu/bits/wchar.h \
-    /usr/include/c++/4.8/bits/char_traits.h \
     /usr/include/c++/4.8/cstdint \
     /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h \
     /usr/include/stdint.h \
@@ -177,11 +158,16 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/include/x86_64-linux-gnu/c++/4.8/bits/atomic_word.h \
     /usr/include/c++/4.8/bits/locale_classes.h \
     /usr/include/c++/4.8/string \
+    /usr/include/c++/4.8/bits/allocator.h \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++allocator.h \
+    /usr/include/c++/4.8/ext/new_allocator.h \
     /usr/include/c++/4.8/bits/ostream_insert.h \
     /usr/include/c++/4.8/bits/cxxabi_forced.h \
     /usr/include/c++/4.8/bits/stl_function.h \
     /usr/include/c++/4.8/backward/binders.h \
+    /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/basic_string.h \
+    /usr/include/c++/4.8/initializer_list \
     /usr/include/c++/4.8/ext/string_conversions.h \
     /usr/include/c++/4.8/cstdio \
     /usr/include/c++/4.8/cerrno \
@@ -191,6 +177,8 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/include/x86_64-linux-gnu/asm/errno.h \
     /usr/include/asm-generic/errno.h \
     /usr/include/asm-generic/errno-base.h \
+    /usr/include/c++/4.8/bits/functional_hash.h \
+    /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/basic_string.tcc \
     /usr/include/c++/4.8/bits/locale_classes.tcc \
     /usr/include/c++/4.8/streambuf \
@@ -204,22 +192,156 @@ Normalization_cuda.o : Normalization_cuda.cu \
     /usr/include/x86_64-linux-gnu/c++/4.8/bits/ctype_inline.h \
     /usr/include/c++/4.8/bits/locale_facets.tcc \
     /usr/include/c++/4.8/bits/basic_ios.tcc \
-    /usr/include/c++/4.8/ostream \
     /usr/include/c++/4.8/bits/ostream.tcc \
+    /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/bits/istream.tcc \
+    /usr/include/c++/4.8/iomanip \
+    /usr/include/c++/4.8/locale \
+    /usr/include/c++/4.8/bits/locale_facets_nonio.h \
+    /usr/include/c++/4.8/ctime \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/time_members.h \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/messages_members.h \
+    /usr/include/libintl.h \
+    /usr/include/c++/4.8/bits/codecvt.h \
+    /usr/include/c++/4.8/bits/locale_facets_nonio.tcc \
+    /usr/include/c++/4.8/vector \
+    /usr/include/c++/4.8/bits/stl_construct.h \
+    /usr/include/c++/4.8/ext/alloc_traits.h \
+    /usr/include/c++/4.8/bits/alloc_traits.h \
+    /usr/include/c++/4.8/bits/ptr_traits.h \
+    /usr/include/c++/4.8/bits/stl_uninitialized.h \
+    /usr/include/c++/4.8/bits/stl_vector.h \
+    /usr/include/c++/4.8/bits/stl_bvector.h \
+    /usr/include/c++/4.8/bits/vector.tcc \
+    /usr/local/include/gtest/gtest.h \
+    /usr/include/c++/4.8/limits \
+    /usr/local/include/gtest/internal/gtest-internal.h \
+    /usr/local/include/gtest/internal/gtest-port.h \
+    /usr/include/x86_64-linux-gnu/sys/stat.h \
+    /usr/include/x86_64-linux-gnu/bits/stat.h \
+    /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/bits/sstream.tcc \
+    /usr/include/unistd.h \
+    /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+    /usr/include/x86_64-linux-gnu/bits/environments.h \
+    /usr/include/x86_64-linux-gnu/bits/confname.h \
+    /usr/include/getopt.h \
+    /usr/include/strings.h \
+    /usr/include/regex.h \
+    /usr/include/x86_64-linux-gnu/gnu/option-groups.h \
+    /usr/include/c++/4.8/typeinfo \
+    /usr/include/c++/4.8/tuple \
+    /usr/include/c++/4.8/utility \
+    /usr/include/c++/4.8/bits/stl_relops.h \
+    /usr/include/c++/4.8/array \
+    /usr/include/c++/4.8/stdexcept \
+    /usr/include/c++/4.8/bits/uses_allocator.h \
+    /usr/include/x86_64-linux-gnu/sys/wait.h \
+    /usr/include/signal.h \
+    /usr/include/x86_64-linux-gnu/bits/signum.h \
+    /usr/include/x86_64-linux-gnu/bits/siginfo.h \
+    /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+    /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+    /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+    /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+    /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h \
+    /usr/include/c++/4.8/set \
+    /usr/include/c++/4.8/bits/stl_tree.h \
+    /usr/include/c++/4.8/bits/stl_set.h \
+    /usr/include/c++/4.8/bits/stl_multiset.h \
+    /usr/local/include/gtest/gtest-message.h \
+    /usr/local/include/gtest/internal/gtest-string.h \
+    /usr/local/include/gtest/internal/gtest-filepath.h \
+    /usr/local/include/gtest/internal/gtest-type-util.h \
+    /usr/include/c++/4.8/cxxabi.h \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/cxxabi_tweaks.h \
+    /usr/local/include/gtest/gtest-death-test.h \
+    /usr/local/include/gtest/internal/gtest-death-test-internal.h \
+    /usr/local/include/gtest/gtest-param-test.h \
+    /usr/local/include/gtest/internal/gtest-param-util.h \
+    /usr/include/c++/4.8/iterator \
+    /usr/include/c++/4.8/bits/stream_iterator.h \
+    /usr/local/include/gtest/internal/gtest-linked_ptr.h \
+    /usr/local/include/gtest/gtest-printers.h \
+    /usr/local/include/gtest/internal/gtest-param-util-generated.h \
+    /usr/local/include/gtest/gtest_prod.h \
+    /usr/local/include/gtest/gtest-test-part.h \
+    /usr/local/include/gtest/gtest-typed-test.h \
+    /usr/local/include/gtest/gtest_pred_impl.h \
+    /usr/include/c++/4.8/algorithm \
+    /usr/include/c++/4.8/bits/stl_algo.h \
+    /usr/include/c++/4.8/bits/algorithmfwd.h \
+    /usr/include/c++/4.8/bits/stl_heap.h \
+    /usr/include/c++/4.8/bits/stl_tempbuf.h \
+    /usr/include/c++/4.8/random \
+    /usr/include/c++/4.8/bits/random.h \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/opt_random.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/x86intrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/ia32intrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/mmintrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/xmmintrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/mm_malloc.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/emmintrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/immintrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/fxsrintrin.h \
+    /usr/lib/gcc/x86_64-linux-gnu/4.8/include/adxintrin.h \
+    /usr/include/c++/4.8/bits/random.tcc \
+    /usr/include/c++/4.8/numeric \
+    /usr/include/c++/4.8/bits/stl_numeric.h \
+    /usr/include/c++/4.8/functional \
+    /usr/include/c++/4.8/fstream \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/basic_file.h \
+    /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++io.h \
+    /usr/include/c++/4.8/bits/fstream.tcc \
+    cuda/DeviceVector.h \
+    cuda/CuBlasManager.h \
     /usr/local/cuda/include/cublas_v2.h \
     /usr/local/cuda/include/cublas_api.h \
     /usr/local/cuda/include/cuComplex.h \
     /usr/local/cuda/include/cuda_fp16.h \
     cuda/CudaManager.h \
     cuda/CudaException.h \
-    /usr/include/c++/4.8/stdexcept \
     cuda/CuBlasException.h \
     cuda/DeviceMatrix.h \
-    cuda/CuSolverDnFunction.h \
+    nn/BackpropagationTanhReg.cuh \
+    nn/Backpropagation.cuh \
+    /usr/include/c++/4.8/memory \
+    /usr/include/c++/4.8/bits/stl_raw_storage_iter.h \
+    /usr/include/c++/4.8/ext/concurrence.h \
+    /usr/include/c++/4.8/bits/unique_ptr.h \
+    /usr/include/c++/4.8/bits/shared_ptr.h \
+    /usr/include/c++/4.8/bits/shared_ptr_base.h \
+    /usr/include/c++/4.8/backward/auto_ptr.h \
+    nn/../cuda/CuBlasFunction.h \
+    nn/../cuda/CuRandManager.h \
+    /usr/local/cuda/include/curand.h \
+    nn/../cuda/CuRandException.h \
+    nn/BackpropagationException.h \
+    nn/ActivateFunction.cuh \
+    nn/ElementWiseFunction1to1.cuh \
+    nn/ElementWiseFunctionUtil.cuh \
+    nn/Func2to1ElementWiseProduct.cuh \
+    nn/ElementWiseFunction2to1.cuh \
+    nn/Backpropagation_detail.h \
+    nn/Func1to1Tanh.cuh \
+    nn/OutputLayerRegression.cuh \
+    cuda/CuRandFunction.h \
     cuda/CuSolverDnManager.h \
     /usr/local/cuda/include/cusolverDn.h \
     /usr/local/cuda/include/cusolver_common.h \
     cuda/CuSolverDnException.h \
-    Statistics.h
+    cuda/CuSolverDnFunction.h \
+    nn/Normalization.h \
+    nn/Statistics.h \
+    nn/AutoEncoder.cuh \
+    nn/Func1to1ReLU.cuh \
+    nn/Func1to1Logistic.cuh \
+    cuda/DeviceVectorUtils.h \
+    FXAutoEncoder.cuh \
+    FXAutoEncoderDBAccessor.cuh \
+    /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
+    /usr/include/sqlite3.h \
+    util/TimeUtil.h \
+    nn/BackpropagationUtils.cuh \
+    nn/BackpropagationUtils_detail.cuh
