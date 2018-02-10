@@ -354,4 +354,7 @@ unittest.o : unittest.cu \
     nn/UpdateMethodMomentum.h \
     nn/LayerOutputIdentity.cuh \
     nn/ActivateMethodOutputIdentity.cuh \
-    nn/Func2to1ElementWiseDifference.cuh
+    nn/Func2to1ElementWiseDifference.cuh \
+    unittest_Serial.cuh \
+    nn/Serial.h \
+    nn/LayerNull.cuh
