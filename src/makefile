@@ -136,6 +136,8 @@ MAKETEST_EXIST = glunittest
 MAKETEST_NOTEXIST = notexistfile
 .PHONY: maketest
 maketest:
+	echo $(OBJS)
+	echo $(DEPS)
 	echo AAA$(CXXFLAGS:%=-Xcompiler %)AAA
 	banner test
 	if [ -f $(MAKETEST_EXIST)    ]; then banner "exist."; else banner "not exist.";fi
@@ -161,10 +163,9 @@ $(TESTTARGET): $(OBJSTEST)
 #オブジェクトファイルの作成
 #"-MMD"オプションによって依存関係ファイル(*.d)も同時に作成する
 $(OBJDIR)/%.o: %.cpp
-	$(CXX) -c -MMD $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
+	$(CXX) -c -MMD -MF $(@:%.o=%.d) $< $(COMMON_FLAGS) $(CXXONLYFLAGS) $(CXXFLAGS) -o $@
 
 $(OBJDIR)/%.o: %.cu
-	echo "$(@:.o=.d)"
 	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -c $< -o $@
 	$(NVCC) $(COMMON_FLAGS) $(NVCC_LINKS) $(NVCC_FLAGS) $(NVCC_CXX_FLAGS) -M $< > $(@:.o=.d)
 
@@ -172,10 +173,9 @@ $(OBJDIR)/%.o: %.cu
 #".PHONY"はターゲットではなくコマンドであることを明示するためのコマンド
 .PHONY: clean
 clean:
-	echo $(SRCS)
-	(cd ..; echo `git branch | grep "*" | cut -d " " -f 2`;)
 	$(RM) $(TARGET) $(TESTTARGET) $(OBJS) $(DEPS)
 
 #依存関係ファイルをインクルードする
 #先頭に”-”を書いているので依存関係ファイルがなくてもエラーとならない
 -include $(DEPS)
+
