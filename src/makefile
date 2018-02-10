@@ -9,8 +9,8 @@
 ###################################################
 
 #makefile自体のデバッグ用
-OLD_SHELL := $(SHELL)
-SHELL = $(warning [Making: $@]   [Dependencies: $^]   [Changed: $?])$(OLD_SHELL)
+#OLD_SHELL := $(SHELL)
+#SHELL = $(warning [Making: $@]   [Dependencies: $^]   [Changed: $?])$(OLD_SHELL)
 
 #ターゲット
 #作成する実行ファイル
