@@ -1,4 +1,4 @@
-unittest.o : unittest.cu \
+../obj/unittest.o : unittest.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \

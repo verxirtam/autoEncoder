@@ -1,4 +1,4 @@
-FXAutoEncoderDBAccessor.o : FXAutoEncoderDBAccessor.cu \
+../obj/test_cuda.o : test_cuda.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \
@@ -115,7 +115,8 @@ FXAutoEncoderDBAccessor.o : FXAutoEncoderDBAccessor.cu \
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    FXAutoEncoderDBAccessor.cuh \
+    nn/ActivateFunction.cuh \
+    nn/../cuda/DeviceMatrix.h \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -144,6 +145,7 @@ FXAutoEncoderDBAccessor.o : FXAutoEncoderDBAccessor.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
+    nn/../cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -205,6 +207,16 @@ FXAutoEncoderDBAccessor.o : FXAutoEncoderDBAccessor.cu \
     /usr/include/c++/4.8/bits/ostream.tcc \
     /usr/include/c++/4.8/bits/istream.tcc \
     /usr/include/c++/4.8/bits/sstream.tcc \
-    /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
-    /usr/include/c++/4.8/iostream \
-    /usr/include/sqlite3.h
+    /usr/local/cuda/include/cublas_v2.h \
+    /usr/local/cuda/include/cublas_api.h \
+    /usr/local/cuda/include/cuComplex.h \
+    /usr/local/cuda/include/cuda_fp16.h \
+    nn/../cuda/CudaManager.h \
+    nn/../cuda/CudaException.h \
+    /usr/include/c++/4.8/stdexcept \
+    nn/../cuda/CuBlasException.h \
+    nn/ElementWiseFunction1to1.cuh \
+    nn/../cuda/DeviceVector.h \
+    nn/ElementWiseFunctionUtil.cuh \
+    nn/Func1to1Tanh.cuh \
+    nn/Func1to1ReLU.cuh

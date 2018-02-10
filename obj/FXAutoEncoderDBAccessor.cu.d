@@ -1,4 +1,4 @@
-Normalization_cuda.o : nn/Normalization_cuda.cu \
+../obj/FXAutoEncoderDBAccessor.o : FXAutoEncoderDBAccessor.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/host_config.h \
@@ -115,9 +115,7 @@ Normalization_cuda.o : nn/Normalization_cuda.cu \
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    nn/Normalization.h \
-    nn/../cuda/CuBlasFunction.h \
-    nn/../cuda/DeviceVector.h \
+    FXAutoEncoderDBAccessor.cuh \
     /usr/include/c++/4.8/vector \
     /usr/include/c++/4.8/bits/stl_algobase.h \
     /usr/include/c++/4.8/bits/functexcept.h \
@@ -146,7 +144,6 @@ Normalization_cuda.o : nn/Normalization_cuda.cu \
     /usr/include/c++/4.8/bits/hash_bytes.h \
     /usr/include/c++/4.8/bits/range_access.h \
     /usr/include/c++/4.8/bits/vector.tcc \
-    nn/../cuda/CuBlasManager.h \
     /usr/include/c++/4.8/sstream \
     /usr/include/c++/4.8/istream \
     /usr/include/c++/4.8/ios \
@@ -208,18 +205,6 @@ Normalization_cuda.o : nn/Normalization_cuda.cu \
     /usr/include/c++/4.8/bits/ostream.tcc \
     /usr/include/c++/4.8/bits/istream.tcc \
     /usr/include/c++/4.8/bits/sstream.tcc \
-    /usr/local/cuda/include/cublas_v2.h \
-    /usr/local/cuda/include/cublas_api.h \
-    /usr/local/cuda/include/cuComplex.h \
-    /usr/local/cuda/include/cuda_fp16.h \
-    nn/../cuda/CudaManager.h \
-    nn/../cuda/CudaException.h \
-    /usr/include/c++/4.8/stdexcept \
-    nn/../cuda/CuBlasException.h \
-    nn/../cuda/DeviceMatrix.h \
-    nn/../cuda/CuSolverDnFunction.h \
-    nn/../cuda/CuSolverDnManager.h \
-    /usr/local/cuda/include/cusolverDn.h \
-    /usr/local/cuda/include/cusolver_common.h \
-    nn/../cuda/CuSolverDnException.h \
-    nn/Statistics.h
+    /home/daisuke/programs/ATFViewer/include/DBAccessor.h \
+    /usr/include/c++/4.8/iostream \
+    /usr/include/sqlite3.h
