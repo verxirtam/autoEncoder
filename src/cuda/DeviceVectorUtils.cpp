@@ -17,8 +17,49 @@
  */
 #include "DeviceVectorUtils.h"
 
+#include <algorithm>
+
 namespace cuda
 {
+
+float compareVector(const std::vector<float>& x0, const std::vector<float>& x1)
+{
+	//要素数が異なる場合は大きい値を返す
+	if(x0.size() != x1.size())
+	{
+		return 65536.0f;
+	}
+	//各成分の差の絶対値の最大値を返す
+	float diff = std::inner_product
+		(
+		 x0.begin(), x0.end(), x1.begin(), 0.0f,
+		 [](float _x, float _y){return std::max(_x, _y);},
+		 [](float _x, float _y){return std::abs(_x - _y);}
+		);
+	
+	return diff;
+}
+
+float compare(const DeviceMatrix& m0, const DeviceMatrix& m1)
+{
+	//行数または列数が異なる場合は大きい値を返す
+	if(m0.getRowCount() != m1.getRowCount())
+	{
+		return 65536.0f;
+	}
+	if(m0.getColumnCount() != m1.getColumnCount())
+	{
+		return 65536.0f;
+	}
+	//std::vector<float>に直して比較する
+	return compareVector(m0.get(), m1.get());
+}
+
+float compare(const DeviceVector& v0, const DeviceVector& v1)
+{
+	//std::vector<float>に直して比較する
+	return compareVector(v0.get(), v1.get());
+}
 
 DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& deviceVector)
 {

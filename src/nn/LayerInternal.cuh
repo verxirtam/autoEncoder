@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "Layer.cuh"
+#include "Layer.h"
 #include "ActivateMethodElementWise.cuh"
 #include "UpdateMethodMomentum.h"
 

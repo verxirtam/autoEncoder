@@ -2483,6 +2483,9 @@ TEST(PerceptronTest, Simple)
 
 
 #include "unittest_Serial.cuh"
+#include "unittest_Layer.cuh"
+#include "unittest_UpdateMethodMomentum.h"
+#include "unittest_ActivateMethodElementWise.cuh"
 
 //////////////////////////////////////////////////////////////////////
 // main()
@@ -2513,7 +2516,9 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegAllTest*";
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
-	::testing::GTEST_FLAG(filter)="*SerialTest*";
+	//::testing::GTEST_FLAG(filter)="*SerialTest*";
+	//::testing::GTEST_FLAG(filter)="*LayerTest*";
+	::testing::GTEST_FLAG(filter)="*Method*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);

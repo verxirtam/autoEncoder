@@ -58,7 +58,7 @@ DeviceMatrix	cuda/DeviceMatrix.h	/^class DeviceMatrix$/;"	c	namespace:cuda
 DeviceMatrix	nn/AutoEncoder.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
 DeviceMatrix	nn/Backpropagation.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
 DeviceMatrix	nn/ElementWiseFunction1to1.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
-DeviceMatrix	nn/Layer.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
+DeviceMatrix	nn/Layer.h	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
 DeviceMatrix	nn/LayerInput.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
 DeviceMatrix	nn/LayerNull.cuh	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
 DeviceMatrix	nn/Normalization.h	/^	using DeviceMatrix = cuda::DeviceMatrix;$/;"	u
@@ -74,7 +74,7 @@ DeviceVector	cuda/DeviceVector.h	/^class DeviceVector$/;"	c	namespace:cuda
 DeviceVector	nn/AutoEncoder.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
 DeviceVector	nn/Backpropagation.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
 DeviceVector	nn/ElementWiseFunction1to1.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
-DeviceVector	nn/Layer.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
+DeviceVector	nn/Layer.h	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
 DeviceVector	nn/LayerInput.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
 DeviceVector	nn/LayerNull.cuh	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
 DeviceVector	nn/Normalization.h	/^	using DeviceVector = cuda::DeviceVector;$/;"	u
@@ -102,15 +102,20 @@ Func2to1ElementWiseProduct	nn/Func2to1ElementWiseProduct.cuh	/^class Func2to1Ele
 Func2to1ElementWiseSum	nn/Func2to1ElementWiseSum.cuh	/^class Func2to1ElementWiseSum$/;"	c	namespace:nn	file:
 GPROF2DOT	makefile	/^GPROF2DOT := ~\/tools\/gprof2dot\/gprof2dot.py -s$/;"	m
 HOME	makefile	/^HOME := $(shell echo ~)$/;"	m
+L	unittest_Layer.cuh	/^	using L = Layer<ActivateMethodElementWise<Func1to1ReLU>, UpdateMethodMomentum>;$/;"	u
 L	unittest_Serial.cuh	/^	using L = LayerNull;$/;"	u
-Layer	nn/Layer.cuh	/^	Layer():$/;"	f	class:nn::Layer
-Layer	nn/Layer.cuh	/^class Layer$/;"	c	namespace:nn	file:
+L0	unittest_Serial.cuh	/^	using L0 = LayerNull;$/;"	u
+L1	unittest_Serial.cuh	/^	using L1 = Serial<L0, L0, L0>;$/;"	u
+L2	unittest_Serial.cuh	/^	using L2 = Serial<L1, L1, L1>;$/;"	u
+Layer	nn/Layer.h	/^	Layer():$/;"	f	class:nn::Layer
+Layer	nn/Layer.h	/^class Layer$/;"	c	namespace:nn
 LayerInput	nn/LayerInput.cuh	/^	LayerInput():$/;"	f	class:nn::LayerInput
 LayerInput	nn/LayerInput.cuh	/^class LayerInput$/;"	c	namespace:nn	file:
 LayerInternal	nn/LayerInternal.cuh	/^using LayerInternal = Layer<ActivateMethodElementWise<ActivateFunction>, UpdateMethodMomentum>;$/;"	u
 LayerNull	nn/LayerNull.cuh	/^	LayerNull():$/;"	f	class:nn::LayerNull
 LayerNull	nn/LayerNull.cuh	/^class LayerNull$/;"	c	namespace:nn	file:
 LayerOutputIdentity	nn/LayerOutputIdentity.cuh	/^using LayerOutputIdentity = Layer<ActivateMethodOutputIdentity, UpdateMethodMomentum>;$/;"	u
+LayerTest	unittest_Layer.cuh	/^class LayerTest :$/;"	c	file:
 MAKETEST_EXIST	makefile	/^MAKETEST_EXIST = glunittest$/;"	m
 MAKETEST_NOTEXIST	makefile	/^MAKETEST_NOTEXIST = notexistfile$/;"	m
 NVCC	makefile	/^NVCC := nvcc$/;"	m
@@ -129,7 +134,8 @@ OutputLayerMulticlassClassification	nn/OutputLayerMulticlassClassification.cuh	/
 OutputLayerRegression	nn/OutputLayerRegression.cuh	/^class OutputLayerRegression$/;"	c	namespace:nn	file:
 Perceptron	nn/Perceptron.cuh	/^	Perceptron():$/;"	f	class:nn::Perceptron
 Perceptron	nn/Perceptron.cuh	/^class Perceptron$/;"	c	namespace:nn	file:
-S	unittest_Serial.cuh	/^	using S = Serial<L, L>;$/;"	u
+S	unittest_Serial.cuh	/^	using S = L2;$/;"	u
+S	unittest_Serial.cuh	/^	using S = Serial<L, L, L>;$/;"	u
 SRCS	makefile	/^SRCS := $(shell find * -name "*.cpp")$/;"	m
 Samax	cuda/CuBlasFunction.cpp	/^void Samax$/;"	f	namespace:cuda
 Samin	cuda/CuBlasFunction.cpp	/^void Samin$/;"	f	namespace:cuda
@@ -139,7 +145,9 @@ Sdgmm	cuda/CuBlasFunction.cpp	/^void Sdgmm$/;"	f	namespace:cuda
 Sdot	cuda/CuBlasFunction.cpp	/^void Sdot$/;"	f	namespace:cuda
 Serial	nn/Serial.h	/^class Serial$/;"	c	namespace:nn
 SerialTest	unittest_Serial.cuh	/^class SerialTest :$/;"	c	file:
+SetUp	unittest_Layer.cuh	/^	void SetUp(){}$/;"	f	class:LayerTest
 SetUp	unittest_Serial.cuh	/^	void SetUp(){}$/;"	f	class:SerialTest
+SetUp	unittest_UpdateMethodMomentum.h	/^	void SetUp(){}$/;"	f	class:UpdateMethodMomentumTest
 Sgeam	cuda/CuBlasFunction.cpp	/^void Sgeam$/;"	f	namespace:cuda
 Sgemm	cuda/CuBlasFunction.cpp	/^void Sgemm$/;"	f	namespace:cuda
 Sgemv	cuda/CuBlasFunction.cpp	/^void Sgemv$/;"	f	namespace:cuda
@@ -149,18 +157,24 @@ Ssymm	cuda/CuBlasFunction.cpp	/^void Ssymm$/;"	f	namespace:cuda
 Ssyr	cuda/CuBlasFunction.cpp	/^void Ssyr$/;"	f	namespace:cuda
 Ssyrk	cuda/CuBlasFunction.cpp	/^void Ssyrk$/;"	f	namespace:cuda
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
+TEST	unittest_Layer.cuh	/^TEST(LayerTest, Simple)$/;"	f
+TEST	unittest_Serial.cuh	/^TEST(SerialTest, Iteration)$/;"	f
 TEST	unittest_Serial.cuh	/^TEST(SerialTest, Simple)$/;"	f
+TEST	unittest_UpdateMethodMomentum.h	/^TEST(UpdateMethodMomentumTest, Simple)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
+TearDown	unittest_Layer.cuh	/^	void TearDown(){}$/;"	f	class:LayerTest
 TearDown	unittest_Serial.cuh	/^	void TearDown(){}$/;"	f	class:SerialTest
+TearDown	unittest_UpdateMethodMomentum.h	/^	void TearDown(){}$/;"	f	class:UpdateMethodMomentumTest
 TimeUtil	util/TimeUtil.h	/^class TimeUtil$/;"	c
 TrackData	TrackData.h	/^class TrackData$/;"	c
 UpdateMethodMomentum	nn/UpdateMethodMomentum.h	/^	UpdateMethodMomentum():$/;"	f	class:nn::UpdateMethodMomentum
 UpdateMethodMomentum	nn/UpdateMethodMomentum.h	/^class UpdateMethodMomentum$/;"	c	namespace:nn
+UpdateMethodMomentumTest	unittest_UpdateMethodMomentum.h	/^class UpdateMethodMomentumTest :$/;"	c
 WTdelta	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> WTdelta;$/;"	m	class:nn::Backpropagation	file:
 _1B	nn/AutoEncoder.cuh	/^	DeviceVector _1B;$/;"	m	class:nn::AutoEncoder	file:
 _1B	nn/Backpropagation.cuh	/^	DeviceVector _1B;$/;"	m	class:nn::Backpropagation	file:
-_1B	nn/Layer.cuh	/^	DeviceVector _1B;$/;"	m	class:nn::Layer	file:
+_1B	nn/Layer.h	/^	DeviceVector _1B;$/;"	m	class:nn::Layer
 _1B	nn/UpdateMethodMomentum.h	/^	DeviceVector _1B;$/;"	m	class:nn::UpdateMethodMomentum
 activate	nn/ActivateFunction.cuh	/^	static cuda::DeviceMatrix& activate(const cuda::DeviceMatrix& x, cuda::DeviceMatrix& y)$/;"	f	class:nn::ActivateFunction
 activate	nn/ActivateMethodElementWise.cuh	/^	static void activate(const cuda::DeviceMatrix& u, cuda::DeviceMatrix& z)$/;"	f	class:nn::ActivateMethodElementWise
@@ -181,6 +195,9 @@ apply	nn/Func1to1Tanh.cuh	/^	static float apply(float x)$/;"	f	class:nn::Func1to
 apply	nn/Func2to1ElementWiseDifference.cuh	/^	static float apply(float x, float y)$/;"	f	class:nn::Func2to1ElementWiseDifference
 apply	nn/Func2to1ElementWiseProduct.cuh	/^	static float apply(float x, float y)$/;"	f	class:nn::Func2to1ElementWiseProduct
 apply	nn/Func2to1ElementWiseSum.cuh	/^	static float apply(float x, float y)$/;"	f	class:nn::Func2to1ElementWiseSum
+apply	nn/Serial.h	/^		static const DeviceMatrix& apply(const DeviceMatrix& weight_t_delta, thisType& tt)$/;"	f	struct:nn::Serial::backMain
+apply	nn/Serial.h	/^		static const DeviceMatrix& apply(const DeviceMatrix& x, thisType& tt)$/;"	f	struct:nn::Serial::forwardMain
+apply	nn/Serial.h	/^		static void apply(const DeviceMatrix& x, thisType& tt)$/;"	f	struct:nn::Serial::updateMain
 applyDiff	nn/Func1to1Exp.cuh	/^	static float applyDiff(float x)$/;"	f	class:nn::Func1to1Exp
 applyDiff	nn/Func1to1Logistic.cuh	/^	static float applyDiff(float x)$/;"	f	class:nn::Func1to1Logistic
 applyDiff	nn/Func1to1ReLU.cuh	/^	static float applyDiff(float x)$/;"	f	class:nn::Func1to1ReLU
@@ -191,14 +208,18 @@ back	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::back(c
 back	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::back(const std::vector<float>& d)$/;"	f	class:nn::Backpropagation
 back	nn/LayerInput.cuh	/^	const DeviceMatrix& back(const DeviceMatrix& weight_t_delta)$/;"	f	class:nn::LayerInput
 back	nn/LayerNull.cuh	/^	const DeviceMatrix& back(const DeviceMatrix& weight_t_delta)$/;"	f	class:nn::LayerNull
-back	nn/Layer_detail.cuh	/^const cuda::DeviceMatrix& Layer<ActivateMethod, UpdateMethod>::back(const DeviceMatrix& weight_t_delta)$/;"	f	class:nn::Layer
+back	nn/Layer_detail.h	/^const cuda::DeviceMatrix& Layer<ActivateMethod, UpdateMethod>::back(const DeviceMatrix& weight_t_delta)$/;"	f	class:nn::Layer
 back	nn/Perceptron.cuh	/^	void back(const DeviceMatrix& d)$/;"	f	class:nn::Perceptron
 back	nn/Serial.h	/^	const DeviceMatrix& back(const DeviceMatrix& weight_t_delta)$/;"	f	class:nn::Serial
-backMain	nn/Serial.h	/^	const DeviceMatrix& backMain(DeviceMatrix& weight_t_delta)$/;"	f	class:nn::Serial
+backMain	nn/Serial.h	/^	struct backMain$/;"	s	class:nn::Serial
+backMain	nn/Serial.h	/^	struct backMain<0, T>$/;"	s	class:nn::Serial
 backpropagation	nn/AutoEncoder.cuh	/^	Backpropagation<AF, OutputLayerRegression> backpropagation;$/;"	m	class:nn::AutoEncoder	file:
 bias	nn/Backpropagation.cuh	/^	std::vector<DeviceVector> bias;$/;"	m	class:nn::Backpropagation	file:
-bias	nn/Layer.cuh	/^	DeviceVector bias;$/;"	m	class:nn::Layer	file:
+bias	nn/Layer.h	/^	DeviceVector bias;$/;"	m	class:nn::Layer
 columnCount	cuda/DeviceMatrix.h	/^	unsigned int columnCount;$/;"	m	class:cuda::DeviceMatrix
+compare	cuda/DeviceVectorUtils.cpp	/^float compare(const DeviceMatrix& m0, const DeviceMatrix& m1)$/;"	f	namespace:cuda
+compare	cuda/DeviceVectorUtils.cpp	/^float compare(const DeviceVector& v0, const DeviceVector& v1)$/;"	f	namespace:cuda
+compareVector	cuda/DeviceVectorUtils.cpp	/^float compareVector(const std::vector<float>& x0, const std::vector<float>& x1)$/;"	f	namespace:cuda
 cuda	cuda/CuBlasException.h	/^namespace cuda$/;"	n
 cuda	cuda/CuBlasFunction.cpp	/^namespace cuda$/;"	n	file:
 cuda	cuda/CuBlasFunction.h	/^namespace cuda$/;"	n
@@ -228,7 +249,7 @@ dbAccessorLearning	FXAutoEncoder.cuh	/^	DBAccessor dbAccessorLearning;$/;"	m	cla
 dbFileName	FXAutoEncoder.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoder	file:
 dbFileName	FXAutoEncoderDBAccessor.cuh	/^	std::string dbFileName;$/;"	m	class:FXAutoEncoderDBAccessor	file:
 delta	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> delta;$/;"	m	class:nn::Backpropagation	file:
-delta	nn/Layer.cuh	/^	DeviceMatrix delta;$/;"	m	class:nn::Layer	file:
+delta	nn/Layer.h	/^	DeviceMatrix delta;$/;"	m	class:nn::Layer
 deltaBias	nn/Backpropagation.cuh	/^	std::vector<DeviceVector> deltaBias;$/;"	m	class:nn::Backpropagation	file:
 deltaBias	nn/UpdateMethodMomentum.h	/^	DeviceVector deltaBias;$/;"	m	class:nn::UpdateMethodMomentum
 deltaWeight	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> deltaWeight;$/;"	m	class:nn::Backpropagation	file:
@@ -243,11 +264,12 @@ forward	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::for
 forward	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::forward(const std::vector<float>& x, std::vector<float>& y)$/;"	f	class:nn::Backpropagation
 forward	nn/LayerInput.cuh	/^	const DeviceMatrix& forward(const DeviceMatrix& x_)$/;"	f	class:nn::LayerInput
 forward	nn/LayerNull.cuh	/^	const DeviceMatrix& forward(const DeviceMatrix& x)$/;"	f	class:nn::LayerNull
-forward	nn/Layer_detail.cuh	/^const cuda::DeviceMatrix& Layer<ActivateMethod, UpdateMethod>::forward(const DeviceMatrix& x)$/;"	f	class:nn::Layer
+forward	nn/Layer_detail.h	/^const cuda::DeviceMatrix& Layer<ActivateMethod, UpdateMethod>::forward(const DeviceMatrix& x)$/;"	f	class:nn::Layer
 forward	nn/Perceptron.cuh	/^	const DeviceMatrix& forward(const DeviceMatrix& x)$/;"	f	class:nn::Perceptron
-forward	nn/Serial.h	/^	const DeviceMatrix& forward(DeviceMatrix& x)$/;"	f	class:nn::Serial
-forwardLinear	nn/Layer_detail.cuh	/^void Layer<ActivateMethod, UpdateMethod>::forwardLinear(const DeviceMatrix& x)$/;"	f	class:nn::Layer
-forwardMain	nn/Serial.h	/^	const DeviceMatrix& forwardMain(DeviceMatrix& x)$/;"	f	class:nn::Serial
+forward	nn/Serial.h	/^	const DeviceMatrix& forward(const DeviceMatrix& x)$/;"	f	class:nn::Serial
+forwardLinear	nn/Layer_detail.h	/^void Layer<ActivateMethod, UpdateMethod>::forwardLinear(const DeviceMatrix& x)$/;"	f	class:nn::Layer
+forwardMain	nn/Serial.h	/^	struct forwardMain$/;"	s	class:nn::Serial
+forwardMain	nn/Serial.h	/^	struct forwardMain<layerCount::value - 1, T>$/;"	s	class:nn::Serial
 gamma	nn/Backpropagation.cuh	/^	float gamma;$/;"	m	class:nn::Backpropagation	file:
 generator	cuda/CuRandManager.h	/^	curandGenerator_t generator;$/;"	m	class:cuda::CuRandManager
 get	cuda/CudaStreamContainer.h	/^	cudaStream_t get(unsigned int stream_index)$/;"	f	class:cuda::CudaStreamContainer
@@ -269,6 +291,7 @@ getAlphaVector	cuda/DeviceVector.h	/^	static DeviceVector getAlphaVector(unsigne
 getAutoEncoder	FXAutoEncoder.cuh	/^	const AutoEncoderType& getAutoEncoder()$/;"	f	class:FXAutoEncoder
 getBackpropagation	nn/AutoEncoder.cuh	/^	const Backpropagation<AF, OutputLayerRegression>& getBackpropagation() const$/;"	f	class:nn::AutoEncoder
 getBias	nn/Backpropagation.cuh	/^	const std::vector<DeviceVector>& getBias() const$/;"	f	class:nn::Backpropagation
+getBias	nn/Layer.h	/^	const DeviceVector& getBias() const$/;"	f	class:nn::Layer
 getBiasAsVector	nn/Backpropagation.cuh	/^	std::vector<std::vector<float> > getBiasAsVector() const$/;"	f	class:nn::Backpropagation
 getColumnCount	cuda/DeviceMatrix.h	/^	int getColumnCount() const$/;"	f	class:cuda::DeviceMatrix
 getCount	cuda/CudaStreamContainer.h	/^	unsigned int getCount()$/;"	f	class:cuda::CudaStreamContainer
@@ -276,7 +299,10 @@ getDEDBAsVector	nn/Backpropagation.cuh	/^	std::vector<std::vector<float> > getDE
 getDelta	nn/ActivateMethodElementWise.cuh	/^	static void getDelta$/;"	f	class:nn::ActivateMethodElementWise
 getDelta	nn/ActivateMethodOutputIdentity.cuh	/^	static void getDelta$/;"	f	class:nn::ActivateMethodOutputIdentity
 getDelta	nn/Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getDelta() const$/;"	f	class:nn::Backpropagation
+getDelta	nn/Layer.h	/^	const DeviceMatrix& getDelta() const$/;"	f	class:nn::Layer
 getDeltaAsVector	nn/Backpropagation.cuh	/^	std::vector<std::vector<float> > getDeltaAsVector() const$/;"	f	class:nn::Backpropagation
+getDeltaBias	nn/UpdateMethodMomentum.h	/^	const DeviceVector& getDeltaBias() const$/;"	f	class:nn::UpdateMethodMomentum
+getDeltaWeight	nn/UpdateMethodMomentum.h	/^	const DeviceMatrix& getDeltaWeight() const$/;"	f	class:nn::UpdateMethodMomentum
 getDeviceProp	cuda/CudaManager.h	/^	static inline const cudaDeviceProp& getDeviceProp(void)$/;"	f	class:cuda::CudaManager
 getDimension	cuda/DeviceVector.h	/^	unsigned int getDimension() const$/;"	f	class:cuda::DeviceVector
 getEpsilon	nn/AutoEncoder.cuh	/^	float getEpsilon() const$/;"	f	class:nn::AutoEncoder
@@ -302,12 +328,16 @@ getInverseWhiteningMatrix	nn/AutoEncoder.cuh	/^	DeviceMatrix getInverseWhitening
 getInverseZCAWhitening	nn/Normalization.h	/^	DeviceMatrix getInverseZCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:nn::Normalization
 getInverseZCAWhiteningMatrix	nn/Normalization.h	/^	const DeviceMatrix& getInverseZCAWhiteningMatrix(void) const$/;"	f	class:nn::Normalization
 getLayerCount	nn/Backpropagation.cuh	/^	unsigned int getLayerCount() const$/;"	f	class:nn::Backpropagation
+getLearningRate	nn/UpdateMethodMomentum.h	/^	float getLearningRate() const$/;"	f	class:nn::UpdateMethodMomentum
 getMainStream	nn/Backpropagation.cuh	/^	cudaStream_t getMainStream(void) const$/;"	f	class:nn::Backpropagation
 getMean	autoEncoder.cpp	/^void getMean(const std::vector<track>& v, track& mean)$/;"	f
 getMean	nn/Normalization.h	/^	const DeviceVector& getMean(void) const$/;"	f	class:nn::Normalization
 getMeanAndVarCovMatrix	nn/Statistics.cpp	/^void getMeanAndVarCovMatrix(const DeviceMatrix& sample, DeviceVector& mean, DeviceMatrix& varCovMatrix, cudaStream_t stream)$/;"	f	namespace:nn
+getMember	nn/Serial.h	/^	const layerType<N>& getMember() const$/;"	f	class:nn::Serial
 getMember	nn/Serial.h	/^	layerType<N>& getMember()$/;"	f	class:nn::Serial
 getMiniBatchSize	nn/Backpropagation.cuh	/^	unsigned int getMiniBatchSize() const$/;"	f	class:nn::Backpropagation
+getMiniBatchSize	nn/Layer.h	/^	unsigned int getMiniBatchSize() const$/;"	f	class:nn::Layer
+getMomentum	nn/UpdateMethodMomentum.h	/^	float getMomentum() const$/;"	f	class:nn::UpdateMethodMomentum
 getNormarization	nn/AutoEncoder.cuh	/^	const Normalization& getNormarization() const$/;"	f	class:nn::AutoEncoder
 getOutput	nn/Perceptron.cuh	/^	Output& getOutput(void)$/;"	f	class:nn::Perceptron
 getPCAWhitening	nn/Normalization.h	/^	DeviceMatrix getPCAWhitening(const DeviceMatrix& X, const DeviceVector& _1B) const$/;"	f	class:nn::Normalization
@@ -320,18 +350,22 @@ getSubStream	nn/Backpropagation.cuh	/^	cudaStream_t getSubStream(unsigned int st
 getSubStreamCount	nn/Backpropagation.cuh	/^	unsigned int getSubStreamCount(void) const$/;"	f	class:nn::Backpropagation
 getU	nn/Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getU() const$/;"	f	class:nn::Backpropagation
 getU	nn/Backpropagation.cuh	/^	void getU(std::vector<std::vector<float> >& hu) const$/;"	f	class:nn::Backpropagation
+getU	nn/Layer.h	/^	const DeviceMatrix& getU() const$/;"	f	class:nn::Layer
 getUAsVector	nn/Backpropagation.cuh	/^	std::vector<std::vector<float> > getUAsVector() const$/;"	f	class:nn::Backpropagation
+getUpdateMethod	nn/Layer.h	/^	const UpdateMethod& getUpdateMethod() const$/;"	f	class:nn::Layer
 getVarCovEigenValue	nn/Normalization.h	/^	const DeviceVector& getVarCovEigenValue(void) const$/;"	f	class:nn::Normalization
 getVarCovEigenVector	nn/Normalization.h	/^	const DeviceMatrix& getVarCovEigenVector(void) const$/;"	f	class:nn::Normalization
 getVarCovMatrix	nn/Normalization.h	/^	const DeviceMatrix& getVarCovMatrix(void) const$/;"	f	class:nn::Normalization
 getWTDelta	nn/Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getWTDelta() const$/;"	f	class:nn::Backpropagation
 getWeight	nn/Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getWeight() const$/;"	f	class:nn::Backpropagation
+getWeight	nn/Layer.h	/^	const DeviceMatrix& getWeight() const$/;"	f	class:nn::Layer
 getWeightAsVector	nn/Backpropagation.cuh	/^	std::vector<std::vector<float> > getWeightAsVector() const$/;"	f	class:nn::Backpropagation
-getWeightTDelta	nn/Layer_detail.cuh	/^void Layer<ActivateMethod, UpdateMethod>::getWeightTDelta()$/;"	f	class:nn::Layer
+getWeightTDelta	nn/Layer.h	/^	const DeviceMatrix& getWeightTDelta() const$/;"	f	class:nn::Layer
+getWeightTDelta	nn/Layer_detail.h	/^void Layer<ActivateMethod, UpdateMethod>::getWeightTDelta()$/;"	f	class:nn::Layer
 getWhitening	nn/Normalization.cpp	/^DeviceMatrix Normalization::getWhitening$/;"	f	class:nn::Normalization
 getWhiteningMatrix	nn/AutoEncoder.cuh	/^	DeviceMatrix getWhiteningMatrix() const$/;"	f	class:nn::AutoEncoder
 getZ	nn/Backpropagation.cuh	/^	const std::vector<DeviceMatrix>& getZ() const$/;"	f	class:nn::Backpropagation
-getZ	nn/Layer.cuh	/^	const DeviceMatrix& getZ() const$/;"	f	class:nn::Layer
+getZ	nn/Layer.h	/^	const DeviceMatrix& getZ() const$/;"	f	class:nn::Layer
 getZ	nn/LayerInput.cuh	/^	const DeviceMatrix& getZ() const$/;"	f	class:nn::LayerInput
 getZ	nn/LayerNull.cuh	/^	const DeviceMatrix& getZ() const$/;"	f	class:nn::LayerNull
 getZ	nn/Serial.h	/^	const DeviceMatrix& getZ() const$/;"	f	class:nn::Serial
@@ -344,13 +378,13 @@ init	cuda/CudaStreamContainer.h	/^	void init(unsigned int stream_count)$/;"	f	cl
 init	nn/AutoEncoder.cuh	/^	void init(const DeviceMatrix& normarize_input, unsigned int layer_size, unsigned int minibatch_size)$/;"	f	class:nn::AutoEncoder
 init	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::init(const std::vector<unsigned int>& unit_count, unsigned int minibatch_size)$/;"	f	class:nn::Backpropagation
 init	nn/LayerInput.cuh	/^	void init(unsigned int dim_input, unsigned int minibatch_size = 1)$/;"	f	class:nn::LayerInput
-init	nn/LayerNull.cuh	/^	void init(unsigned int dim_input, unsigned int dim_output, unsigned int minibatch_size = 1)$/;"	f	class:nn::LayerNull
-init	nn/Layer_detail.cuh	/^void Layer<ActivateMethod, UpdateMethod>::init$/;"	f	class:nn::Layer
+init	nn/LayerNull.cuh	/^	void init()$/;"	f	class:nn::LayerNull
+init	nn/Layer_detail.h	/^void Layer<ActivateMethod, UpdateMethod>::init$/;"	f	class:nn::Layer
 init	nn/Normalization.cpp	/^void Normalization::init(const DeviceMatrix& X)$/;"	f	class:nn::Normalization
 init	nn/UpdateMethodMomentum.cpp	/^void UpdateMethodMomentum::init(unsigned int dim_input, unsigned int dim_output, unsigned int minibatch_size)$/;"	f	class:nn::UpdateMethodMomentum
 initRandom	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::initRandom(void)$/;"	f	class:nn::Backpropagation
 initStream	cuda/CudaManager.h	/^	void initStream(unsigned int stream_count)$/;"	f	class:cuda::CudaManager
-initWeightBias	nn/Layer_detail.cuh	/^void Layer<ActivateMethod, UpdateMethod>::initWeightBias(void)$/;"	f	class:nn::Layer
+initWeightBias	nn/Layer_detail.h	/^void Layer<ActivateMethod, UpdateMethod>::initWeightBias(void)$/;"	f	class:nn::Layer
 internal	nn/Perceptron.cuh	/^	Internal internal;$/;"	m	class:nn::Perceptron	file:
 inversePCAWhiteningMatrix	nn/Normalization.h	/^	DeviceMatrix inversePCAWhiteningMatrix;$/;"	m	class:nn::Normalization
 inverseZCAWhiteningMatrix	nn/Normalization.h	/^	DeviceMatrix inverseZCAWhiteningMatrix;$/;"	m	class:nn::Normalization
@@ -359,14 +393,14 @@ layerCount	nn/AutoEncoder.cuh	/^	const unsigned int layerCount;$/;"	m	class:nn::
 layerCount	nn/Backpropagation.cuh	/^	const unsigned int layerCount;$/;"	m	class:nn::Backpropagation	file:
 layerCount	nn/Serial.h	/^	using layerCount = std::tuple_size<layerTupleType>;$/;"	u
 layerTupleType	nn/Serial.h	/^	using layerTupleType = std::tuple<Layer, LayerRemain...>;$/;"	u
-layerType	nn/Serial.h	/^	using layerType = typename std::tuple_element<N, layerTupleType>;$/;"	u
+layerType	nn/Serial.h	/^	using layerType = typename std::tuple_element<N, layerTupleType>::type;$/;"	u
 learning	nn/AutoEncoder.cuh	/^	DeviceMatrix learning(const DeviceMatrix& X)$/;"	f	class:nn::AutoEncoder
 learningQueryCache	FXAutoEncoder.cuh	/^	std::vector<float> learningQueryCache;$/;"	m	class:FXAutoEncoder	file:
 learningRate	nn/UpdateMethodMomentum.h	/^	float learningRate;$/;"	m	class:nn::UpdateMethodMomentum
 longitude	TrackData.h	/^	float longitude;$/;"	m	class:TrackData
 main	autoEncoder.cpp	/^int main(void)$/;"	f
 miniBatchSize	nn/Backpropagation.cuh	/^	unsigned int miniBatchSize;$/;"	m	class:nn::Backpropagation	file:
-miniBatchSize	nn/Layer.cuh	/^	unsigned int miniBatchSize;$/;"	m	class:nn::Layer	file:
+miniBatchSize	nn/Layer.h	/^	unsigned int miniBatchSize;$/;"	m	class:nn::Layer
 momentum	nn/UpdateMethodMomentum.h	/^	float momentum;$/;"	m	class:nn::UpdateMethodMomentum
 nn	nn/ActivateFunction.cuh	/^namespace nn$/;"	n	file:
 nn	nn/ActivateMethodElementWise.cuh	/^namespace nn$/;"	n	file:
@@ -389,12 +423,12 @@ nn	nn/Func1to1Tanh.cuh	/^namespace nn$/;"	n	file:
 nn	nn/Func2to1ElementWiseDifference.cuh	/^namespace nn$/;"	n	file:
 nn	nn/Func2to1ElementWiseProduct.cuh	/^namespace nn$/;"	n	file:
 nn	nn/Func2to1ElementWiseSum.cuh	/^namespace nn$/;"	n	file:
-nn	nn/Layer.cuh	/^namespace nn$/;"	n	file:
+nn	nn/Layer.h	/^namespace nn$/;"	n
 nn	nn/LayerInput.cuh	/^namespace nn$/;"	n	file:
 nn	nn/LayerInternal.cuh	/^namespace nn$/;"	n	file:
 nn	nn/LayerNull.cuh	/^namespace nn$/;"	n	file:
 nn	nn/LayerOutputIdentity.cuh	/^namespace nn$/;"	n	file:
-nn	nn/Layer_detail.cuh	/^namespace nn$/;"	n	file:
+nn	nn/Layer_detail.h	/^namespace nn$/;"	n
 nn	nn/Normalization.cpp	/^namespace nn$/;"	n	file:
 nn	nn/Normalization.h	/^namespace nn$/;"	n
 nn	nn/OutputLayerMulticlassClassification.cuh	/^namespace nn$/;"	n	file:
@@ -425,15 +459,19 @@ set	cuda/DeviceMatrix.h	/^	void set(const std::vector<float>& host)$/;"	f	class:
 set	cuda/DeviceVector.h	/^	void set(const float* const host)$/;"	f	class:cuda::DeviceVector
 set	cuda/DeviceVector.h	/^	void set(const std::vector<float>& host)$/;"	f	class:cuda::DeviceVector
 setBias	nn/Backpropagation.cuh	/^	void setBias(const std::vector<std::vector<float> >& b)$/;"	f	class:nn::Backpropagation
+setBias	nn/Layer.h	/^	void setBias(const DeviceVector& b)$/;"	f	class:nn::Layer
 setDbFileName	FXAutoEncoderDBAccessor.cuh	/^	void setDbFileName(const std::string& db_file_name)$/;"	f	class:FXAutoEncoderDBAccessor
 setEpsilon	nn/AutoEncoder.cuh	/^	void setEpsilon(float e)$/;"	f	class:nn::AutoEncoder
 setEpsilon	nn/Backpropagation.cuh	/^	void setEpsilon(float e)$/;"	f	class:nn::Backpropagation
 setGamma	nn/AutoEncoder.cuh	/^	void setGamma(float g)$/;"	f	class:nn::AutoEncoder
 setGamma	nn/Backpropagation.cuh	/^	void setGamma(float g)$/;"	f	class:nn::Backpropagation
+setLearningRate	nn/UpdateMethodMomentum.h	/^	void setLearningRate(float learning_rate)$/;"	f	class:nn::UpdateMethodMomentum
+setMomentum	nn/UpdateMethodMomentum.h	/^	void setMomentum(float momentum_)$/;"	f	class:nn::UpdateMethodMomentum
 setRandomUniform	cuda/CuRandFunction.cpp	/^void setRandomUniform(float min, float max, DeviceMatrix& m)$/;"	f	namespace:cuda
 setRandomUniform	cuda/CuRandFunction.cpp	/^void setRandomUniform(float min, float max, DeviceVector& v)$/;"	f	namespace:cuda
 setSubStreamCount	nn/Backpropagation.cuh	/^	void setSubStreamCount(unsigned int substream_count) const$/;"	f	class:nn::Backpropagation
 setWeight	nn/Backpropagation.cuh	/^	void setWeight(const std::vector<std::vector<float> >& w)$/;"	f	class:nn::Backpropagation
+setWeight	nn/Layer.h	/^	void setWeight(const DeviceMatrix& w)$/;"	f	class:nn::Layer
 stream	cuda/CudaManager.h	/^	std::vector<cudaStream_t> stream;$/;"	m	class:cuda::CudaManager
 stream	cuda/CudaStreamContainer.h	/^	std::vector<cudaStream_t> stream;$/;"	m	class:cuda::CudaStreamContainer
 stringToEpoch	util/TimeUtil.cpp	/^time_t TimeUtil::stringToEpoch(const std::string& timestr_jst)$/;"	f	class:TimeUtil
@@ -443,27 +481,31 @@ testDBAccessor	autoEncoder.cpp	/^int testDBAccessor(void)$/;"	f
 testDeviceVector	autoEncoder.cpp	/^int testDeviceVector(void)$/;"	f
 testTimeBegin	FXAutoEncoder.cuh	/^	time_t testTimeBegin;$/;"	m	class:FXAutoEncoder	file:
 testTimeEnd	FXAutoEncoder.cuh	/^	time_t testTimeEnd;$/;"	m	class:FXAutoEncoder	file:
+thisType	nn/Serial.h	/^	using thisType = Serial<Layer, LayerRemain...>;$/;"	u
 time	TrackData.h	/^	float time;$/;"	m	class:TrackData
 timeLength	FXAutoEncoder.cuh	/^	unsigned int timeLength;$/;"	m	class:FXAutoEncoder	file:
 track	autoEncoder.cpp	/^using track = std::array<float, 4>;$/;"	u
 trainingTimeBegin	FXAutoEncoder.cuh	/^	time_t trainingTimeBegin;$/;"	m	class:FXAutoEncoder	file:
 trainingTimeEnd	FXAutoEncoder.cuh	/^	time_t trainingTimeEnd;$/;"	m	class:FXAutoEncoder	file:
 u	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> u;$/;"	m	class:nn::Backpropagation	file:
-u	nn/Layer.cuh	/^	DeviceMatrix u;$/;"	m	class:nn::Layer	file:
+u	nn/Layer.h	/^	DeviceMatrix u;$/;"	m	class:nn::Layer
 unitCount	nn/Backpropagation.cuh	/^	std::vector<unsigned int> unitCount;$/;"	m	class:nn::Backpropagation	file:
 update	nn/LayerInput.cuh	/^	void update(const DeviceMatrix& x)$/;"	f	class:nn::LayerInput
 update	nn/LayerNull.cuh	/^	void update(const DeviceMatrix& x)$/;"	f	class:nn::LayerNull
-update	nn/Layer_detail.cuh	/^void Layer<ActivateMethod, UpdateMethod>::update(const DeviceMatrix& x)$/;"	f	class:nn::Layer
+update	nn/Layer_detail.h	/^void Layer<ActivateMethod, UpdateMethod>::update(const DeviceMatrix& x)$/;"	f	class:nn::Layer
 update	nn/Perceptron.cuh	/^	void update(void)$/;"	f	class:nn::Perceptron
+update	nn/Serial.h	/^	void update(const DeviceMatrix& x)$/;"	f	class:nn::Serial
 update	nn/UpdateMethodMomentum.cpp	/^void UpdateMethodMomentum::update(const DeviceMatrix& x, const DeviceMatrix& delta, DeviceMatrix& weight, DeviceVector& bias)$/;"	f	class:nn::UpdateMethodMomentum
-updateMethod	nn/Layer.cuh	/^	UpdateMethod updateMethod;$/;"	m	class:nn::Layer	file:
+updateMain	nn/Serial.h	/^	struct updateMain$/;"	s	class:nn::Serial
+updateMain	nn/Serial.h	/^	struct updateMain<layerCount::value - 1, T>$/;"	s	class:nn::Serial
+updateMethod	nn/Layer.h	/^	UpdateMethod updateMethod;$/;"	m	class:nn::Layer
 updateParameter	nn/Backpropagation_detail.h	/^void Backpropagation<AF, OutputLayer>::updateParameter()$/;"	f	class:nn::Backpropagation
 varCovEigenValue	nn/Normalization.h	/^	DeviceVector varCovEigenValue;$/;"	m	class:nn::Normalization
 varCovEigenVector	nn/Normalization.h	/^	DeviceMatrix varCovEigenVector;$/;"	m	class:nn::Normalization
 varCovMatrix	nn/Normalization.h	/^	DeviceMatrix varCovMatrix;$/;"	m	class:nn::Normalization
 weight	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> weight;$/;"	m	class:nn::Backpropagation	file:
-weight	nn/Layer.cuh	/^	DeviceMatrix weight;$/;"	m	class:nn::Layer	file:
-weightTDelta	nn/Layer.cuh	/^	DeviceMatrix weightTDelta;$/;"	m	class:nn::Layer	file:
+weight	nn/Layer.h	/^	DeviceMatrix weight;$/;"	m	class:nn::Layer
+weightTDelta	nn/Layer.h	/^	DeviceMatrix weightTDelta;$/;"	m	class:nn::Layer
 writeBiasSetting	nn/BackpropagationUtils_detail.cuh	/^	void writeBiasSetting(std::ostream& out, unsigned int layer_index, const std::string& node_name)$/;"	f	namespace:__anon3
 writeEdgeSettings	nn/BackpropagationUtils_detail.cuh	/^	void writeEdgeSettings$/;"	f	namespace:__anon3
 writeNodeSettings	nn/BackpropagationUtils_detail.cuh	/^	void writeNodeSettings(std::ostream& out, const std::vector<cuda::DeviceMatrix>& weight)$/;"	f	namespace:__anon3
@@ -473,7 +515,7 @@ writeToCsvFile	cuda/DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::strin
 writeToCsvFile	cuda/DeviceVectorUtils.cpp	/^void writeToCsvFile(const std::string& csvFileName, const DeviceVector& deviceVector)$/;"	f	namespace:cuda
 writeToDotFile	nn/BackpropagationUtils_detail.cuh	/^void writeToDotFile(const std::string& dotfilename, const nn::Backpropagation<AF, OutputLayer>& backpropagation)$/;"	f	namespace:nn
 z	nn/Backpropagation.cuh	/^	std::vector<DeviceMatrix> z;$/;"	m	class:nn::Backpropagation	file:
-z	nn/Layer.cuh	/^	DeviceMatrix z;$/;"	m	class:nn::Layer	file:
+z	nn/Layer.h	/^	DeviceMatrix z;$/;"	m	class:nn::Layer
 zcaWhiteningMatrix	nn/Normalization.h	/^	DeviceMatrix zcaWhiteningMatrix;$/;"	m	class:nn::Normalization
 ~CuBlasManager	cuda/CuBlasManager.h	/^	virtual ~CuBlasManager()$/;"	f	class:cuda::CuBlasManager
 ~CuRandManager	cuda/CuRandManager.h	/^	~CuRandManager()$/;"	f	class:cuda::CuRandManager

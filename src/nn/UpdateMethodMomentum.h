@@ -55,7 +55,32 @@ public:
 	void init(unsigned int dim_input, unsigned int dim_output, unsigned int minibatch_size);
 	//パラメータの更新
 	void update(const DeviceMatrix& x, const DeviceMatrix& delta, DeviceMatrix& weight, DeviceVector& bias);
-	
+	//setter
+	void setLearningRate(float learning_rate)
+	{
+		learningRate = learning_rate;
+	}
+	void setMomentum(float momentum_)
+	{
+		momentum = momentum_;
+	}
+	//getter
+	const DeviceMatrix& getDeltaWeight() const
+	{
+		return deltaWeight;
+	}
+	const DeviceVector& getDeltaBias() const
+	{
+		return deltaBias;
+	}
+	float getLearningRate() const
+	{
+		return learningRate;
+	}
+	float getMomentum() const
+	{
+		return momentum;
+	}
 };
 
 

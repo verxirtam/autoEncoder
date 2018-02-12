@@ -348,8 +348,8 @@ unittest.o : unittest.cu \
     nn/Perceptron.cuh \
     nn/LayerInput.cuh \
     nn/LayerInternal.cuh \
-    nn/Layer.cuh \
-    nn/Layer_detail.cuh \
+    nn/Layer.h \
+    nn/Layer_detail.h \
     nn/ActivateMethodElementWise.cuh \
     nn/UpdateMethodMomentum.h \
     nn/LayerOutputIdentity.cuh \
@@ -357,4 +357,7 @@ unittest.o : unittest.cu \
     nn/Func2to1ElementWiseDifference.cuh \
     unittest_Serial.cuh \
     nn/Serial.h \
-    nn/LayerNull.cuh
+    nn/LayerNull.cuh \
+    unittest_Layer.cuh \
+    unittest_UpdateMethodMomentum.h \
+    unittest_ActivateMethodElementWise.cuh

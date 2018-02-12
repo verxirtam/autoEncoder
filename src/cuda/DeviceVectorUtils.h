@@ -26,6 +26,9 @@
 namespace cuda
 {
 
+float compare(const DeviceMatrix& m0, const DeviceMatrix& m1);
+float compare(const DeviceVector& v0, const DeviceVector& v1);
+
 DeviceVector& readFromCsvFile(const std::string& csvFileName, DeviceVector& deviceVector);
 
 DeviceMatrix& readFromCsvFile(const std::string& csvFileName, DeviceMatrix& deviceMatrix);
