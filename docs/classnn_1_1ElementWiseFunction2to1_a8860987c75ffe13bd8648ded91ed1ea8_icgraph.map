@@ -1,4 +1,5 @@
 <map id="nn::ElementWiseFunction2to1::culculateBlockThreadCount" name="nn::ElementWiseFunction2to1::culculateBlockThreadCount">
-<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="251,5,448,46"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="496,5,699,46"/>
+<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="251,38,448,79"/>
+<area shape="rect" id="node3" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="506,5,689,46"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="496,70,699,111"/>
 </map>

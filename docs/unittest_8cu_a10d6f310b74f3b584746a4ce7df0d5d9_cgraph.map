@@ -4,7 +4,7 @@
 <area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="346,201,483,242"/>
 <area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="125,240,288,267"/>
 <area shape="rect" id="node7" href="$namespacecuda.html#a1dbfeb0cb13d3792d0c5a5f43dba02f0" title="cuda::Sscal" alt="" coords="161,139,252,165"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="151,291,262,317"/>
+<area shape="rect" id="node10" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="133,291,280,317"/>
 <area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="337,5,493,46"/>
 <area shape="rect" id="node8" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="339,135,490,177"/>
 <area shape="rect" id="node9" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="542,135,693,177"/>

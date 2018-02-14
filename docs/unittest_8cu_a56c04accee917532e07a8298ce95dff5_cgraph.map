@@ -6,7 +6,7 @@
 <area shape="rect" id="node24" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="589,88,752,114"/>
 <area shape="rect" id="node28" href="$classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="141,939,273,980"/>
 <area shape="rect" id="node30" href="$classnn_1_1Normalization.html#a0fc48430157c6cca4ed647c6662284d2" title="nn::Normalization::\lgetVarCovMatrix" alt="" coords="141,640,273,682"/>
-<area shape="rect" id="node31" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="151,706,262,733"/>
+<area shape="rect" id="node31" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="133,706,280,733"/>
 <area shape="rect" id="node32" href="$unittest_8cu.html#abd0744eaaed49b3213a3a5ec054ca035" title="printVector" alt="" coords="164,757,249,784"/>
 <area shape="rect" id="node33" href="$classnn_1_1Normalization.html#a42359749483f9ff7f05b82f0d02154cd" title="nn::Normalization::\lgetMean" alt="" coords="141,808,273,850"/>
 <area shape="rect" id="node34" href="$classnn_1_1Normalization.html#ad53bb7d7b690b885e27135b51dea1734" title="nn::Normalization::\lgetPCAWhiteningMatrix" alt="" coords="125,874,288,915"/>

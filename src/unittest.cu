@@ -54,7 +54,10 @@
 
 #include "util/TimeUtil.h"
 
-
+#include "nn/Perceptron.cuh"
+#include "nn/LayerInput.cuh"
+#include "nn/LayerInternal.cuh"
+#include "nn/LayerOutputIdentity.cuh"
 
 using namespace cuda;
 using namespace nn;
@@ -2457,6 +2460,33 @@ TEST(TimeUtilTest, Simple)
 	EXPECT_EQ(epoch, 1500603840);
 }
 
+/////////////////////////////////////////////////////////////////////////////////
+class PerceptronTest :
+	public ::testing::Test
+{
+protected:
+	void SetUp(){}
+	void TearDown(){}
+};
+
+TEST(PerceptronTest, Simple)
+{
+	Perceptron<LayerInput, LayerInternal<Func1to1Tanh>, LayerOutputIdentity> p;
+	unsigned int dim_input  = 2;
+	unsigned int dim_hidden = 3;
+	unsigned int dim_output = 4;
+	unsigned int minibatch_size = 5;
+	p.getInput().init(dim_input, minibatch_size);
+	p.getInternal().init(dim_hidden, dim_output, minibatch_size);
+	p.getOutput().init(dim_output, dim_output, minibatch_size);
+}
+
+
+#include "unittest_Serial.cuh"
+#include "unittest_Layer.cuh"
+#include "unittest_UpdateMethodMomentum.h"
+#include "unittest_ActivateMethodElementWise.cuh"
+
 //////////////////////////////////////////////////////////////////////
 // main()
 //////////////////////////////////////////////////////////////////////
@@ -2485,6 +2515,10 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhReg*";
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegAllTest*";
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
+	//::testing::GTEST_FLAG(filter)="*SerialTest*";
+	//::testing::GTEST_FLAG(filter)="*LayerTest*";
+	//::testing::GTEST_FLAG(filter)="*Method*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);

@@ -432,7 +432,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">//              = gamma * deltaBias[l] - (epsilon / B) * delta[l] * _1B</span></div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="comment">//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]</span></div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        alpha = - epsilon / miniBatchSize;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        beta = 1.0f;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        beta  = gamma;</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <a class="code" href="namespacecuda.html#aee23e9d79325014e3dd12126ed0e55a2">Sgemv</a>(&amp;alpha, CUBLAS_OP_N, delta[l], _1B, &amp;beta, deltaBias[l]);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        </div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="comment">// bias[l] = bias[l] + deltaBias[l]</span></div>
@@ -493,7 +493,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 17 2018 01:36:14 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 15 2018 04:50:32 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

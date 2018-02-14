@@ -7,6 +7,7 @@ var searchData=
   ['cublasmanager_2eh',['CuBlasManager.h',['../CuBlasManager_8h.html',1,'']]],
   ['cudaexception_2eh',['CudaException.h',['../CudaException_8h.html',1,'']]],
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
+  ['cudastreamcontainer_2eh',['CudaStreamContainer.h',['../CudaStreamContainer_8h.html',1,'']]],
   ['curandexception_2eh',['CuRandException.h',['../CuRandException_8h.html',1,'']]],
   ['curandfunction_2ecpp',['CuRandFunction.cpp',['../CuRandFunction_8cpp.html',1,'']]],
   ['curandfunction_2eh',['CuRandFunction.h',['../CuRandFunction_8h.html',1,'']]],

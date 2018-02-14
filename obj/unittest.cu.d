@@ -344,4 +344,20 @@
     /usr/include/sqlite3.h \
     util/TimeUtil.h \
     nn/BackpropagationUtils.cuh \
-    nn/BackpropagationUtils_detail.cuh
+    nn/BackpropagationUtils_detail.cuh \
+    nn/Perceptron.cuh \
+    nn/LayerInput.cuh \
+    nn/LayerInternal.cuh \
+    nn/Layer.h \
+    nn/Layer_detail.h \
+    nn/ActivateMethodElementWise.cuh \
+    nn/UpdateMethodMomentum.h \
+    nn/LayerOutputIdentity.cuh \
+    nn/ActivateMethodOutputIdentity.cuh \
+    nn/Func2to1ElementWiseDifference.cuh \
+    unittest_Serial.cuh \
+    nn/Serial.h \
+    nn/LayerNull.cuh \
+    unittest_Layer.cuh \
+    unittest_UpdateMethodMomentum.h \
+    unittest_ActivateMethodElementWise.cuh

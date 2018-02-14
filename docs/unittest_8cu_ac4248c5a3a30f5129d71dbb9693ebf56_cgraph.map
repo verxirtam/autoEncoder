@@ -5,7 +5,7 @@
 <area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="139,201,274,242"/>
 <area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="126,267,287,293"/>
 <area shape="rect" id="node8" href="$namespacecuda.html#a1dbfeb0cb13d3792d0c5a5f43dba02f0" title="cuda::Sscal" alt="" coords="161,317,252,344"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="151,368,262,395"/>
+<area shape="rect" id="node13" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="133,368,280,395"/>
 <area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="337,5,493,46"/>
 <area shape="rect" id="node9" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="346,245,483,286"/>
 <area shape="rect" id="node10" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="339,310,490,351"/>

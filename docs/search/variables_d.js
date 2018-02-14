@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowcount',['rowCount',['../classcuda_1_1DeviceMatrix.html#a0007493d85cb7c79e018a06ec65a31e5',1,'cuda::DeviceMatrix']]]
+  ['pcawhiteningmatrix',['pcaWhiteningMatrix',['../classnn_1_1Normalization.html#a84baa60384dc5d1c8306f61e653ec0c0',1,'nn::Normalization']]]
 ];

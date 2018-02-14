@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_func_p.html#index_p"><span>p</span></a></li>
       <li><a href="functions_func_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_func_t.html#index_t"><span>t</span></a></li>
       <li><a href="functions_func_u.html#index_u"><span>u</span></a></li>
@@ -112,7 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>get()
-: <a class="el" href="classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4">cuda::DeviceMatrix</a>
+: <a class="el" href="classcuda_1_1CudaStreamContainer.html#af1f21960d3eb8abefefe15e1d23d54c9">cuda::CudaStreamContainer</a>
+, <a class="el" href="classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4">cuda::DeviceMatrix</a>
 , <a class="el" href="classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35">cuda::DeviceVector</a>
 </li>
 <li>get0Matrix()
@@ -148,12 +150,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getBias()
 : <a class="el" href="classnn_1_1Backpropagation.html#a826f2eff5d4f56fa72b74fbcfc6f064a">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#a1a605eeadeab3625ee4a4e1d43c382e9">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getBiasAsVector()
 : <a class="el" href="classnn_1_1Backpropagation.html#a5b1237427e514dfeaa59e6d36975505f">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
 <li>getColumnCount()
 : <a class="el" href="classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5">cuda::DeviceMatrix</a>
+</li>
+<li>getCount()
+: <a class="el" href="classcuda_1_1CudaStreamContainer.html#a0a50ed8a3bd5c316b052085febc8f85e">cuda::CudaStreamContainer</a>
 </li>
 <li>getDataAtTime()
 : <a class="el" href="classFXAutoEncoderDBAccessor.html#a875c245429ee1ac8c5219e6a54f0fa88">FXAutoEncoderDBAccessor</a>
@@ -162,10 +168,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classnn_1_1Backpropagation.html#acb8e3e8c72f47f6d39e4b845bd6c84f5">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
 <li>getDelta()
-: <a class="el" href="classnn_1_1Backpropagation.html#af26e8c70976d6f4a23e0a99af0d0f12b">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+: <a class="el" href="classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7">nn::ActivateMethodElementWise&lt; ActivateFunction &gt;</a>
+, <a class="el" href="classnn_1_1ActivateMethodOutputIdentity.html#a62b59e1ba8d8f860821394b58f7011ba">nn::ActivateMethodOutputIdentity</a>
+, <a class="el" href="classnn_1_1Backpropagation.html#af26e8c70976d6f4a23e0a99af0d0f12b">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#ad382b4e4f0eb5fb40eadc0120fde637b">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getDeltaAsVector()
 : <a class="el" href="classnn_1_1Backpropagation.html#ab24e8ac4444af62b90331dd5ef5716a4">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+</li>
+<li>getDeltaBias()
+: <a class="el" href="classnn_1_1UpdateMethodMomentum.html#ac3cdca504c7062def3169d93ecac3fe8">nn::UpdateMethodMomentum</a>
+</li>
+<li>getDeltaWeight()
+: <a class="el" href="classnn_1_1UpdateMethodMomentum.html#adb3b01fceecae7813c18788f7d510db0">nn::UpdateMethodMomentum</a>
 </li>
 <li>getDeviceProp()
 : <a class="el" href="classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968">cuda::CudaManager</a>
@@ -193,11 +208,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1">cuda::CuBlasManager</a>
 , <a class="el" href="classcuda_1_1CuSolverDnManager.html#aff6e97bef99ced3441de486fc0015efc">cuda::CuSolverDnManager</a>
 </li>
+<li>getInput()
+: <a class="el" href="classnn_1_1Perceptron.html#af9e23aaec90e9b420a4b4bec5eae1abf">nn::Perceptron&lt; Input, Internal, Output &gt;</a>
+</li>
 <li>getInstance()
 : <a class="el" href="classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199">cuda::CuBlasManager</a>
 , <a class="el" href="classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea">cuda::CudaManager</a>
 , <a class="el" href="classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b">cuda::CuRandManager</a>
 , <a class="el" href="classcuda_1_1CuSolverDnManager.html#a442915920bba26cdfca25b8d42640a66">cuda::CuSolverDnManager</a>
+</li>
+<li>getInternal()
+: <a class="el" href="classnn_1_1Perceptron.html#a349bcd5df1f07d5c114bec466829e293">nn::Perceptron&lt; Input, Internal, Output &gt;</a>
 </li>
 <li>getInversePCAWhitening()
 : <a class="el" href="classnn_1_1Normalization.html#a7662e44dab21e677d3457f4dbe44dc6f">nn::Normalization</a>
@@ -220,20 +241,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getLayerCount()
 : <a class="el" href="classnn_1_1Backpropagation.html#a9bccb3208701bed484dc1b9f21414822">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
+<li>getLearningRate()
+: <a class="el" href="classnn_1_1UpdateMethodMomentum.html#a344e914c10f86ccaddcd039179e3f53c">nn::UpdateMethodMomentum</a>
+</li>
 <li>getMainStream()
 : <a class="el" href="classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
 <li>getMean()
 : <a class="el" href="classnn_1_1Normalization.html#a42359749483f9ff7f05b82f0d02154cd">nn::Normalization</a>
 </li>
+<li>getMember()
+: <a class="el" href="classnn_1_1Serial.html#a87a315ea20d5efcda8882b88a12bc0b8">nn::Serial&lt; Layer, LayerRemain &gt;</a>
+</li>
 <li>getMiniBatchSize()
 : <a class="el" href="classnn_1_1Backpropagation.html#a72ecdced6e10aa4167eb11eae14603c2">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#a1ca6024b94023c812988d4bdfb65bd6d">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
+</li>
+<li>getMomentum()
+: <a class="el" href="classnn_1_1UpdateMethodMomentum.html#a7beb0b3fc40138acbdfce7bae5a76482">nn::UpdateMethodMomentum</a>
 </li>
 <li>getNormarization()
 : <a class="el" href="classnn_1_1AutoEncoder.html#aadd8d95b930b46a663089df4f11b6226">nn::AutoEncoder&lt; AF &gt;</a>
 </li>
 <li>getNormarizeInput()
 : <a class="el" href="classFXAutoEncoder.html#ab62cdcfea18897cc505bb871ddf89d1a">FXAutoEncoder</a>
+</li>
+<li>getOutput()
+: <a class="el" href="classnn_1_1Perceptron.html#ae4b3d5efc84d7987b22a98140eaf0089">nn::Perceptron&lt; Input, Internal, Output &gt;</a>
 </li>
 <li>getPCAWhitening()
 : <a class="el" href="classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d">nn::Normalization</a>
@@ -257,10 +291,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classnn_1_1Backpropagation.html#a89b35c8d77934af3b1bc266e6195253f">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
 </li>
 <li>getU()
-: <a class="el" href="classnn_1_1Backpropagation.html#af67b0414d137a5420a8fe56d6f44f928">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+: <a class="el" href="classnn_1_1Backpropagation.html#acb0eebfc8b07ebe8ead680f88fc97c08">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#a70fce0e8e026d31bdcbbd7b07aaf163b">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getUAsVector()
 : <a class="el" href="classnn_1_1Backpropagation.html#ab6a690edde3170a7e55d47722365b446">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+</li>
+<li>getUpdateMethod()
+: <a class="el" href="classnn_1_1Layer.html#a467575381890291f45b1152e431a197a">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getVarCovEigenValue()
 : <a class="el" href="classnn_1_1Normalization.html#a03446bbcb965d97f5f70987e3c675bbf">nn::Normalization</a>
@@ -273,9 +311,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getWeight()
 : <a class="el" href="classnn_1_1Backpropagation.html#a9bde6d6aa00ca6bd659ba457adbf8811">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#a691d1142f913ea8837c2efe208f0a04d">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getWeightAsVector()
 : <a class="el" href="classnn_1_1Backpropagation.html#a452c9bbe2973c0c21ecd448ef40e0801">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+</li>
+<li>getWeightTDelta()
+: <a class="el" href="classnn_1_1Layer.html#acac32ffe7a66a29b7e7ae06e28bd2466">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
 </li>
 <li>getWhitening()
 : <a class="el" href="classnn_1_1Normalization.html#a9afdd414433975855b4d77cc86edd443">nn::Normalization</a>
@@ -288,6 +330,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getZ()
 : <a class="el" href="classnn_1_1Backpropagation.html#a9a02d5bd26d5b760701e1d84cd658079">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
+, <a class="el" href="classnn_1_1Layer.html#a9670287fdb67149f5cfd9bba6c6370c3">nn::Layer&lt; ActivateMethod, UpdateMethod &gt;</a>
+, <a class="el" href="classnn_1_1LayerInput.html#ab5d633aaac464e879de6ac336712ac4c">nn::LayerInput</a>
+, <a class="el" href="classnn_1_1LayerNull.html#a749569c1bcbee82d567f493ed87dec11">nn::LayerNull</a>
+, <a class="el" href="classnn_1_1Serial.html#a4d02fca1aaafcf692bff268bedc25de0">nn::Serial&lt; Layer, LayerRemain &gt;</a>
 </li>
 <li>getZAsVector()
 : <a class="el" href="classnn_1_1Backpropagation.html#ad2f466d8d4e4224585f70d5a4dbe7586">nn::Backpropagation&lt; AF, OutputLayer &gt;</a>
@@ -302,7 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 17 2018 01:36:16 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 15 2018 04:50:34 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

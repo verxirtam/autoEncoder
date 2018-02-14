@@ -1,0 +1,13 @@
+<map id="nn::Serial::getMember" name="nn::Serial::getMember">
+<area shape="rect" id="node2" href="$structnn_1_1Serial_1_1forwardMain.html#ad8133d5914e8f32a7e06a7ed58edfac6" title="nn::Serial::forwardMain\l::apply" alt="" coords="206,5,362,46"/>
+<area shape="rect" id="node4" href="$structnn_1_1Serial_1_1forwardMain_3_01layerCount_1_1value-1_00_01T_01_4.html#a72aa2371f4fd183617cb8f68bc9bb18a" title="nn::Serial::forwardMain\l\&lt; layerCount::value&#45;1,\l T \&gt;::apply" alt="" coords="206,69,362,125"/>
+<area shape="rect" id="node5" href="$structnn_1_1Serial_1_1backMain.html#a0841040f85ff0b3ef647f4a5a5146037" title="nn::Serial::backMain\l::apply" alt="" coords="213,149,355,190"/>
+<area shape="rect" id="node7" href="$structnn_1_1Serial_1_1backMain_3_010_00_01T_01_4.html#af485f97671952f8c1230ba5759c50486" title="nn::Serial::backMain\l\&lt; 0, T \&gt;::apply" alt="" coords="213,214,355,255"/>
+<area shape="rect" id="node8" href="$structnn_1_1Serial_1_1updateMain.html#a2e02a3bd39145b6e481a05c9d1f58eba" title="nn::Serial::updateMain\l::apply" alt="" coords="208,279,360,321"/>
+<area shape="rect" id="node10" href="$structnn_1_1Serial_1_1updateMain_3_01layerCount_1_1value-1_00_01T_01_4.html#ac9356641eef0f557570b2979b4040ca1" title="nn::Serial::updateMain\l\&lt; layerCount::value&#45;1,\l T \&gt;::apply" alt="" coords="208,344,360,400"/>
+<area shape="rect" id="node11" href="$classnn_1_1Serial.html#a4d02fca1aaafcf692bff268bedc25de0" title="nn::Serial::getZ" alt="" coords="229,424,339,451"/>
+<area shape="rect" id="node12" href="$unittest__Serial_8cuh.html#a1f0e150d72211e1f2bd2f771280d5fd0" title="TEST" alt="" coords="256,475,312,501"/>
+<area shape="rect" id="node3" href="$classnn_1_1Serial.html#ad7b6da981601835722caf62eecdc71e8" title="nn::Serial::forward" alt="" coords="411,12,539,39"/>
+<area shape="rect" id="node6" href="$classnn_1_1Serial.html#af5b9c5943ab251c8a357680997c7c939" title="nn::Serial::back" alt="" coords="418,156,531,183"/>
+<area shape="rect" id="node9" href="$classnn_1_1Serial.html#aad38849bd96f82c92c5a8f2462d6d218" title="nn::Serial::update" alt="" coords="413,287,537,313"/>
+</map>

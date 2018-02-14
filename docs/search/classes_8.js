@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['timeutil',['TimeUtil',['../classTimeUtil.html',1,'']]],
-  ['timeutiltest',['TimeUtilTest',['../classTimeUtilTest.html',1,'']]],
-  ['trackdata',['TrackData',['../classTrackData.html',1,'']]]
+  ['outputlayermulticlassclassification',['OutputLayerMulticlassClassification',['../classnn_1_1OutputLayerMulticlassClassification.html',1,'nn']]],
+  ['outputlayerregression',['OutputLayerRegression',['../classnn_1_1OutputLayerRegression.html',1,'nn']]]
 ];

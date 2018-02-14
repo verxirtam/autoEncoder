@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['normalization',['Normalization',['../classnn_1_1Normalization.html',1,'nn']]],
-  ['normalizationgeneraltest',['NormalizationGeneralTest',['../classNormalizationGeneralTest.html',1,'']]],
-  ['normalizationtest',['NormalizationTest',['../classNormalizationTest.html',1,'']]]
+  ['layer',['Layer',['../classnn_1_1Layer.html',1,'nn']]],
+  ['layerinput',['LayerInput',['../classnn_1_1LayerInput.html',1,'nn']]],
+  ['layernull',['LayerNull',['../classnn_1_1LayerNull.html',1,'nn']]],
+  ['layertest',['LayerTest',['../classLayerTest.html',1,'']]]
 ];

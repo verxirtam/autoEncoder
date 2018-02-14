@@ -1,9 +1,11 @@
 <map id="cuda::DeviceVector::set" name="cuda::DeviceVector::set">
-<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="231,5,363,32"/>
-<area shape="rect" id="node3" href="$autoEncoder_8cpp.html#ab075e7673b4ce348dc0b7c6615ff779a" title="testDeviceVector" alt="" coords="236,56,359,83"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a41d71fd039397220c91ef3676504943f" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="229,107,366,149"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a988d41a74b80b7cc2260f4474709491d" title="cuda::DeviceVector::set" alt="" coords="216,173,379,200"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="269,224,325,251"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="261,275,333,301"/>
-<area shape="rect" id="node4" href="$autoEncoder_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="427,56,477,83"/>
+<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="247,5,379,32"/>
+<area shape="rect" id="node3" href="$autoEncoder_8cpp.html#ab075e7673b4ce348dc0b7c6615ff779a" title="testDeviceVector" alt="" coords="252,56,375,83"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a41d71fd039397220c91ef3676504943f" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="245,107,382,149"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a988d41a74b80b7cc2260f4474709491d" title="cuda::DeviceVector::set" alt="" coords="232,173,395,200"/>
+<area shape="rect" id="node7" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="216,225,411,266"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="285,291,341,317"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="277,341,349,368"/>
+<area shape="rect" id="node4" href="$autoEncoder_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="461,56,512,83"/>
+<area shape="rect" id="node8" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="459,232,515,259"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="src/nn/Layer_detail.h" name="src/nn/Layer_detail.h">
+<area shape="rect" id="node2" href="$Layer_8h.html" title="src/nn/Layer.h" alt="" coords="241,80,345,107"/>
+<area shape="rect" id="node3" href="$LayerInternal_8cuh.html" title="src/nn/LayerInternal.cuh" alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node5" href="$LayerOutputIdentity_8cuh.html" title="src/nn/LayerOutputIdentity.cuh" alt="" coords="193,155,393,181"/>
+<area shape="rect" id="node6" href="$unittest__Layer_8cuh.html" title="src/unittest_Layer.cuh" alt="" coords="418,155,568,181"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="241,229,345,256"/>
+</map>

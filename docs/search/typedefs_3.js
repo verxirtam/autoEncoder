@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['rowcolumn',['RowColumn',['../unittest_8cu.html#a4b307f9b7776234c29d3de7481d538be',1,'unittest.cu']]]
+  ['layercount',['layerCount',['../classnn_1_1Serial.html#a489792400ac791d8077f978af5eb9898',1,'nn::Serial']]],
+  ['layerinternal',['LayerInternal',['../namespacenn.html#a5b509b11a21d6b9fd3a4faa46feef9e9',1,'nn']]],
+  ['layeroutputidentity',['LayerOutputIdentity',['../namespacenn.html#a008923dc6bceb06bfdfc7fed8ce144cd',1,'nn']]],
+  ['layertupletype',['layerTupleType',['../classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296',1,'nn::Serial']]],
+  ['layertype',['layerType',['../classnn_1_1Serial.html#a940667cb6c5622a72abe836d03d3ac1c',1,'nn::Serial']]]
 ];

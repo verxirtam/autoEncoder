@@ -8,6 +8,7 @@ var searchData=
   ['cudaexception',['CudaException',['../classcuda_1_1CudaException.html',1,'cuda']]],
   ['cudamanager',['CudaManager',['../classcuda_1_1CudaManager.html',1,'cuda']]],
   ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
+  ['cudastreamcontainer',['CudaStreamContainer',['../classcuda_1_1CudaStreamContainer.html',1,'cuda']]],
   ['curandexception',['CuRandException',['../classcuda_1_1CuRandException.html',1,'cuda']]],
   ['curandmanager',['CuRandManager',['../classcuda_1_1CuRandManager.html',1,'cuda']]],
   ['curandmanagertest',['CuRandManagerTest',['../classCuRandManagerTest.html',1,'']]],

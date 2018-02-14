@@ -1,8 +1,26 @@
 var searchData=
 [
   ['latitude',['latitude',['../classTrackData.html#ab9d911b54cb2a2b54d591fec3f09946b',1,'TrackData']]],
-  ['layercount',['layerCount',['../classnn_1_1AutoEncoder.html#a8e073cd021ae4bf0ea4f2a7da4dec1c0',1,'nn::AutoEncoder::layerCount()'],['../classnn_1_1Backpropagation.html#a5ced8462199dc8ba301252b0fa352f7f',1,'nn::Backpropagation::layerCount()']]],
+  ['layer',['Layer',['../classnn_1_1Layer.html',1,'nn']]],
+  ['layer',['Layer',['../classnn_1_1Layer.html#aba1df0d90cd02e6b409fb45a912573a4',1,'nn::Layer::Layer()'],['../classnn_1_1Serial.html#a7aa698b28624feaf91283f8e8e85c340',1,'nn::Serial::layer()']]],
+  ['layer_2eh',['Layer.h',['../Layer_8h.html',1,'']]],
+  ['layer_5fdetail_2eh',['Layer_detail.h',['../Layer__detail_8h.html',1,'']]],
+  ['layercount',['layerCount',['../classnn_1_1Serial.html#a489792400ac791d8077f978af5eb9898',1,'nn::Serial::layerCount()'],['../classnn_1_1AutoEncoder.html#a8e073cd021ae4bf0ea4f2a7da4dec1c0',1,'nn::AutoEncoder::layerCount()'],['../classnn_1_1Backpropagation.html#a5ced8462199dc8ba301252b0fa352f7f',1,'nn::Backpropagation::layerCount()']]],
+  ['layerinput',['LayerInput',['../classnn_1_1LayerInput.html',1,'nn']]],
+  ['layerinput',['LayerInput',['../classnn_1_1LayerInput.html#ae8e855269961a3d3c490a9e5497f791f',1,'nn::LayerInput']]],
+  ['layerinput_2ecuh',['LayerInput.cuh',['../LayerInput_8cuh.html',1,'']]],
+  ['layerinternal',['LayerInternal',['../namespacenn.html#a5b509b11a21d6b9fd3a4faa46feef9e9',1,'nn']]],
+  ['layerinternal_2ecuh',['LayerInternal.cuh',['../LayerInternal_8cuh.html',1,'']]],
+  ['layernull',['LayerNull',['../classnn_1_1LayerNull.html',1,'nn']]],
+  ['layernull',['LayerNull',['../classnn_1_1LayerNull.html#a56bdcf4f151d3abd61a879c13ac67a70',1,'nn::LayerNull']]],
+  ['layernull_2ecuh',['LayerNull.cuh',['../LayerNull_8cuh.html',1,'']]],
+  ['layeroutputidentity',['LayerOutputIdentity',['../namespacenn.html#a008923dc6bceb06bfdfc7fed8ce144cd',1,'nn']]],
+  ['layeroutputidentity_2ecuh',['LayerOutputIdentity.cuh',['../LayerOutputIdentity_8cuh.html',1,'']]],
+  ['layertest',['LayerTest',['../classLayerTest.html',1,'']]],
+  ['layertupletype',['layerTupleType',['../classnn_1_1Serial.html#adfa546956967b608d5c66440ce5c0296',1,'nn::Serial']]],
+  ['layertype',['layerType',['../classnn_1_1Serial.html#a940667cb6c5622a72abe836d03d3ac1c',1,'nn::Serial']]],
   ['learning',['learning',['../classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc',1,'FXAutoEncoder::learning()'],['../classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79',1,'nn::AutoEncoder::learning()']]],
   ['learningquerycache',['learningQueryCache',['../classFXAutoEncoder.html#a3a11c076ef6892528e81aef51ad001ae',1,'FXAutoEncoder']]],
+  ['learningrate',['learningRate',['../classnn_1_1UpdateMethodMomentum.html#ad1eb6f5a7dbc51c923af51c87b12bf12',1,'nn::UpdateMethodMomentum']]],
   ['longitude',['longitude',['../classTrackData.html#aceaf61535caf68b778145f8a9be4d184',1,'TrackData']]]
 ];
