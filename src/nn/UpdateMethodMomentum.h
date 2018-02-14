@@ -64,6 +64,14 @@ public:
 	{
 		momentum = momentum_;
 	}
+	void setDeltaWeight(const DeviceMatrix& delta_weight)
+	{
+		deltaWeight = delta_weight;
+	}
+	void setDeltaBias(const DeviceVector& delta_bias)
+	{
+		deltaBias = delta_bias;
+	}
 	//getter
 	const DeviceMatrix& getDeltaWeight() const
 	{

@@ -4,8 +4,10 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	unittest_ActivateMethodElementWise.cuh	/^	using A = ActivateMethodElementWise<Func1to1ReLU>;$/;"	u
 ActivateFunction	nn/ActivateFunction.cuh	/^class ActivateFunction$/;"	c	namespace:nn	file:
 ActivateMethodElementWise	nn/ActivateMethodElementWise.cuh	/^class ActivateMethodElementWise$/;"	c	namespace:nn	file:
+ActivateMethodElementWiseTest	unittest_ActivateMethodElementWise.cuh	/^class ActivateMethodElementWiseTest :$/;"	c	file:
 ActivateMethodOutputIdentity	nn/ActivateMethodOutputIdentity.cuh	/^class ActivateMethodOutputIdentity$/;"	c	namespace:nn	file:
 AutoEncoder	nn/AutoEncoder.cuh	/^	AutoEncoder():$/;"	f	class:nn::AutoEncoder
 AutoEncoder	nn/AutoEncoder.cuh	/^class AutoEncoder$/;"	c	namespace:nn	file:
@@ -145,6 +147,7 @@ Sdgmm	cuda/CuBlasFunction.cpp	/^void Sdgmm$/;"	f	namespace:cuda
 Sdot	cuda/CuBlasFunction.cpp	/^void Sdot$/;"	f	namespace:cuda
 Serial	nn/Serial.h	/^class Serial$/;"	c	namespace:nn
 SerialTest	unittest_Serial.cuh	/^class SerialTest :$/;"	c	file:
+SetUp	unittest_ActivateMethodElementWise.cuh	/^	void SetUp(){}$/;"	f	class:ActivateMethodElementWiseTest
 SetUp	unittest_Layer.cuh	/^	void SetUp(){}$/;"	f	class:LayerTest
 SetUp	unittest_Serial.cuh	/^	void SetUp(){}$/;"	f	class:SerialTest
 SetUp	unittest_UpdateMethodMomentum.h	/^	void SetUp(){}$/;"	f	class:UpdateMethodMomentumTest
@@ -157,12 +160,14 @@ Ssymm	cuda/CuBlasFunction.cpp	/^void Ssymm$/;"	f	namespace:cuda
 Ssyr	cuda/CuBlasFunction.cpp	/^void Ssyr$/;"	f	namespace:cuda
 Ssyrk	cuda/CuBlasFunction.cpp	/^void Ssyrk$/;"	f	namespace:cuda
 TARGET	makefile	/^TARGET := $(shell basename `dirname \\`pwd\\``)$/;"	m
+TEST	unittest_ActivateMethodElementWise.cuh	/^TEST(ActivateMethodElementWiseTest, Simple)$/;"	f
 TEST	unittest_Layer.cuh	/^TEST(LayerTest, Simple)$/;"	f
 TEST	unittest_Serial.cuh	/^TEST(SerialTest, Iteration)$/;"	f
 TEST	unittest_Serial.cuh	/^TEST(SerialTest, Simple)$/;"	f
 TEST	unittest_UpdateMethodMomentum.h	/^TEST(UpdateMethodMomentumTest, Simple)$/;"	f
 TESTOPTION	makefile	/^TESTOPTION := --gtest_color=yes$/;"	m
 TESTTARGET	makefile	/^TESTTARGET := unittest$/;"	m
+TearDown	unittest_ActivateMethodElementWise.cuh	/^	void TearDown(){}$/;"	f	class:ActivateMethodElementWiseTest
 TearDown	unittest_Layer.cuh	/^	void TearDown(){}$/;"	f	class:LayerTest
 TearDown	unittest_Serial.cuh	/^	void TearDown(){}$/;"	f	class:SerialTest
 TearDown	unittest_UpdateMethodMomentum.h	/^	void TearDown(){}$/;"	f	class:UpdateMethodMomentumTest
@@ -461,6 +466,8 @@ set	cuda/DeviceVector.h	/^	void set(const std::vector<float>& host)$/;"	f	class:
 setBias	nn/Backpropagation.cuh	/^	void setBias(const std::vector<std::vector<float> >& b)$/;"	f	class:nn::Backpropagation
 setBias	nn/Layer.h	/^	void setBias(const DeviceVector& b)$/;"	f	class:nn::Layer
 setDbFileName	FXAutoEncoderDBAccessor.cuh	/^	void setDbFileName(const std::string& db_file_name)$/;"	f	class:FXAutoEncoderDBAccessor
+setDeltaBias	nn/UpdateMethodMomentum.h	/^	void setDeltaBias(const DeviceMatrix& delta_bias)$/;"	f	class:nn::UpdateMethodMomentum
+setDeltaWeight	nn/UpdateMethodMomentum.h	/^	void setDeltaWeight(const DeviceMatrix& delta_weight)$/;"	f	class:nn::UpdateMethodMomentum
 setEpsilon	nn/AutoEncoder.cuh	/^	void setEpsilon(float e)$/;"	f	class:nn::AutoEncoder
 setEpsilon	nn/Backpropagation.cuh	/^	void setEpsilon(float e)$/;"	f	class:nn::Backpropagation
 setGamma	nn/AutoEncoder.cuh	/^	void setGamma(float g)$/;"	f	class:nn::AutoEncoder
