@@ -2,4 +2,8 @@
 /src/core
 #ログファイルを無視する
 /src/*.log
+#objフォルダを無視する
+/obj/
+#dataフォルダを無視する
+/data/
 
