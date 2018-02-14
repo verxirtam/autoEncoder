@@ -98,6 +98,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcuda_1_1CudaManager.html">CudaManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcuda_1_1CudaStreamContainer.html">CudaStreamContainer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcuda_1_1CuRandException.html">CuRandException</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcuda_1_1CuRandManager.html">CuRandManager</a></td></tr>
@@ -161,6 +163,12 @@ Functions</h2></td></tr>
 <tr class="separator:a2150c75be49a31e1160d7898c3ac7273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a813115ac345cfcca4e482b2b0351fade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a813115ac345cfcca4e482b2b0351fade">DnSsyevd</a> (const <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;A, <a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;W, <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;V)</td></tr>
 <tr class="separator:a813115ac345cfcca4e482b2b0351fade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1f59a838c1e980c4e021915434a358"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#acb1f59a838c1e980c4e021915434a358">compareVector</a> (const std::vector&lt; float &gt; &amp;x0, const std::vector&lt; float &gt; &amp;x1)</td></tr>
+<tr class="separator:acb1f59a838c1e980c4e021915434a358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64735d25766c8b2ddfeac5aae83e14f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5">compare</a> (const <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;m0, const <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;m1)</td></tr>
+<tr class="separator:a64735d25766c8b2ddfeac5aae83e14f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89f3d73f17e7a3a54a6734231ee6b16"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#ac89f3d73f17e7a3a54a6734231ee6b16">compare</a> (const <a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;v0, const <a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;v1)</td></tr>
+<tr class="separator:ac89f3d73f17e7a3a54a6734231ee6b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fbb8da8b204699e6f15a510460d7196"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">readFromCsvFile</a> (const std::string &amp;csvFileName, <a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;deviceVector)</td></tr>
 <tr class="separator:a8fbb8da8b204699e6f15a510460d7196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a055f7c6e6f3713c4bf7f3b083ea7abfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecuda.html#a055f7c6e6f3713c4bf7f3b083ea7abfe">readFromCsvFile</a> (const std::string &amp;csvFileName, <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;deviceMatrix)</td></tr>
@@ -171,6 +179,120 @@ Functions</h2></td></tr>
 <tr class="separator:aa27eb773ce4a8cb680464e3b29204fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a64735d25766c8b2ddfeac5aae83e14f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cuda::compare </td>
+          <td>(</td>
+          <td class="paramtype">const DeviceMatrix &amp;&#160;</td>
+          <td class="paramname"><em>m0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DeviceMatrix &amp;&#160;</td>
+          <td class="paramname"><em>m1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_cgraph.png" border="0" usemap="#namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_cgraph" alt=""/></div>
+<map name="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_cgraph" id="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_cgraph">
+<area shape="rect" id="node2" href="classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="177,5,311,46"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="177,70,311,111"/><area shape="rect" id="node4" href="namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="171,136,317,163"/><area shape="rect" id="node5" href="classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="163,187,325,213"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_icgraph.png" border="0" usemap="#namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_icgraph" alt=""/></div>
+<map name="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_icgraph" id="namespacecuda_a64735d25766c8b2ddfeac5aae83e14f5_icgraph">
+<area shape="rect" id="node2" href="unittest__ActivateMethodElementWise_8cuh.html#a431e5db19724c29dc78bbd29cbe4b7c4" title="TEST" alt="" coords="163,5,219,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac89f3d73f17e7a3a54a6734231ee6b16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cuda::compare </td>
+          <td>(</td>
+          <td class="paramtype">const DeviceVector &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DeviceVector &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecuda_ac89f3d73f17e7a3a54a6734231ee6b16_cgraph.png" border="0" usemap="#namespacecuda_ac89f3d73f17e7a3a54a6734231ee6b16_cgraph" alt=""/></div>
+<map name="namespacecuda_ac89f3d73f17e7a3a54a6734231ee6b16_cgraph" id="namespacecuda_ac89f3d73f17e7a3a54a6734231ee6b16_cgraph">
+<area shape="rect" id="node2" href="namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="171,5,317,32"/><area shape="rect" id="node3" href="classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="163,56,325,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acb1f59a838c1e980c4e021915434a358"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float cuda::compareVector </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecuda_acb1f59a838c1e980c4e021915434a358_icgraph.png" border="0" usemap="#namespacecuda_acb1f59a838c1e980c4e021915434a358_icgraph" alt=""/></div>
+<map name="namespacecuda_acb1f59a838c1e980c4e021915434a358_icgraph" id="namespacecuda_acb1f59a838c1e980c4e021915434a358_icgraph">
+<area shape="rect" id="node2" href="namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5" title="cuda::compare" alt="" coords="243,5,351,32"/><area shape="rect" id="node4" href="unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="261,56,333,83"/><area shape="rect" id="node5" href="unittest_8cu.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="269,107,325,133"/><area shape="rect" id="node6" href="unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="243,157,351,184"/><area shape="rect" id="node7" href="unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="200,209,395,250"/><area shape="rect" id="node3" href="unittest__ActivateMethodElementWise_8cuh.html#a431e5db19724c29dc78bbd29cbe4b7c4" title="TEST" alt="" coords="443,5,499,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a813115ac345cfcca4e482b2b0351fade"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1436,7 +1558,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 6 2018 06:08:42 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 15 2018 04:50:33 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

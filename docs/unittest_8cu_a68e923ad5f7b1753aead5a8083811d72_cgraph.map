@@ -11,7 +11,7 @@
 <area shape="rect" id="node13" href="$namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6" title="nn::getParameterVector" alt="" coords="204,544,364,571"/>
 <area shape="rect" id="node15" href="$classnn_1_1Backpropagation.html#a9bde6d6aa00ca6bd659ba457adbf8811" title="nn::Backpropagation\l::getWeight" alt="" coords="464,471,605,513"/>
 <area shape="rect" id="node16" href="$classnn_1_1Backpropagation.html#a826f2eff5d4f56fa72b74fbcfc6f064a" title="nn::Backpropagation\l::getBias" alt="" coords="464,602,605,643"/>
-<area shape="rect" id="node17" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="229,645,339,672"/>
+<area shape="rect" id="node17" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="211,645,357,672"/>
 <area shape="rect" id="node9" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="453,371,616,397"/>
 <area shape="rect" id="node10" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="466,305,603,346"/>
 <area shape="rect" id="node14" href="$classnn_1_1Backpropagation.html#a9bccb3208701bed484dc1b9f21414822" title="nn::Backpropagation\l::getLayerCount" alt="" coords="464,537,605,578"/>

@@ -116,24 +116,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>cuda</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;DeviceVector&amp; <a class="code" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">readFromCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, DeviceVector&amp; deviceVector);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;DeviceMatrix&amp; <a class="code" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">readFromCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, DeviceMatrix&amp; deviceMatrix);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">writeToCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, <span class="keyword">const</span> DeviceVector&amp; deviceVector);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">writeToCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, <span class="keyword">const</span> DeviceMatrix&amp; deviceMatrix);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5">compare</a>(<span class="keyword">const</span> DeviceMatrix&amp; m0, <span class="keyword">const</span> DeviceMatrix&amp; m1);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">float</span> <a class="code" href="namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5">compare</a>(<span class="keyword">const</span> DeviceVector&amp; v0, <span class="keyword">const</span> DeviceVector&amp; v1);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;DeviceVector&amp; <a class="code" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">readFromCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, DeviceVector&amp; deviceVector);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;DeviceMatrix&amp; <a class="code" href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">readFromCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, DeviceMatrix&amp; deviceMatrix);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">writeToCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, <span class="keyword">const</span> DeviceVector&amp; deviceVector);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">writeToCsvFile</a>(<span class="keyword">const</span> std::string&amp; csvFileName, <span class="keyword">const</span> DeviceMatrix&amp; deviceMatrix);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="ttc" id="DeviceVector_8h_html"><div class="ttname"><a href="DeviceVector_8h.html">DeviceVector.h</a></div></div>
 <div class="ttc" id="DeviceMatrix_8h_html"><div class="ttname"><a href="DeviceMatrix_8h.html">DeviceMatrix.h</a></div></div>
-<div class="ttc" id="namespacecuda_html_a8fbb8da8b204699e6f15a510460d7196"><div class="ttname"><a href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">cuda::readFromCsvFile</a></div><div class="ttdeci">DeviceVector &amp; readFromCsvFile(const std::string &amp;csvFileName, DeviceVector &amp;deviceVector)</div><div class="ttdef"><b>Definition:</b> DeviceVectorUtils.cpp:23</div></div>
-<div class="ttc" id="namespacecuda_html_adce3c8c14137f70cb144f5030327f34c"><div class="ttname"><a href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">cuda::writeToCsvFile</a></div><div class="ttdeci">void writeToCsvFile(const std::string &amp;csvFileName, const DeviceVector &amp;deviceVector)</div><div class="ttdef"><b>Definition:</b> DeviceVectorUtils.cpp:92</div></div>
+<div class="ttc" id="namespacecuda_html_a8fbb8da8b204699e6f15a510460d7196"><div class="ttname"><a href="namespacecuda.html#a8fbb8da8b204699e6f15a510460d7196">cuda::readFromCsvFile</a></div><div class="ttdeci">DeviceVector &amp; readFromCsvFile(const std::string &amp;csvFileName, DeviceVector &amp;deviceVector)</div><div class="ttdef"><b>Definition:</b> DeviceVectorUtils.cpp:64</div></div>
+<div class="ttc" id="namespacecuda_html_adce3c8c14137f70cb144f5030327f34c"><div class="ttname"><a href="namespacecuda.html#adce3c8c14137f70cb144f5030327f34c">cuda::writeToCsvFile</a></div><div class="ttdeci">void writeToCsvFile(const std::string &amp;csvFileName, const DeviceVector &amp;deviceVector)</div><div class="ttdef"><b>Definition:</b> DeviceVectorUtils.cpp:133</div></div>
+<div class="ttc" id="namespacecuda_html_a64735d25766c8b2ddfeac5aae83e14f5"><div class="ttname"><a href="namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5">cuda::compare</a></div><div class="ttdeci">float compare(const DeviceMatrix &amp;m0, const DeviceMatrix &amp;m1)</div><div class="ttdef"><b>Definition:</b> DeviceVectorUtils.cpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 6 2018 06:08:40 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 15 2018 04:50:32 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

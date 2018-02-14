@@ -6,7 +6,7 @@
 <area shape="rect" id="node22" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="571,984,733,1011"/>
 <area shape="rect" id="node27" href="$namespacecuda.html#adce3c8c14137f70cb144f5030327f34c" title="cuda::writeToCsvFile" alt="" coords="343,816,489,843"/>
 <area shape="rect" id="node28" href="$unittest_8cu.html#abd0744eaaed49b3213a3a5ec054ca035" title="printVector" alt="" coords="147,917,232,944"/>
-<area shape="rect" id="node29" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="134,968,245,995"/>
+<area shape="rect" id="node29" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="116,968,263,995"/>
 <area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="810,41,947,82"/>
 <area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="1023,41,1161,82"/>
 <area shape="rect" id="node8" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="803,410,954,451"/>

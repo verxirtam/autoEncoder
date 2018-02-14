@@ -1,4 +1,7 @@
 <map id="src/cuda/DeviceVectorUtils.h" name="src/cuda/DeviceVectorUtils.h">
-<area shape="rect" id="node2" href="$DeviceVectorUtils_8cpp.html" title="src/cuda/DeviceVectorUtils.cpp" alt="" coords="5,80,211,107"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="235,80,340,107"/>
+<area shape="rect" id="node2" href="$DeviceVectorUtils_8cpp.html" title="src/cuda/DeviceVectorUtils.cpp" alt="" coords="5,88,211,115"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="405,171,509,197"/>
+<area shape="rect" id="node4" href="$unittest__Layer_8cuh.html" title="src/unittest_Layer.cuh" alt="" coords="287,88,437,115"/>
+<area shape="rect" id="node5" href="$unittest__UpdateMethodMomentum_8h.html" title="src/unittest_UpdateMethod\lMomentum.h" alt="" coords="463,81,641,122"/>
+<area shape="rect" id="node6" href="$unittest__ActivateMethodElementWise_8cuh.html" title="src/unittest_ActivateMethod\lElementWise.cuh" alt="" coords="666,81,851,122"/>
 </map>

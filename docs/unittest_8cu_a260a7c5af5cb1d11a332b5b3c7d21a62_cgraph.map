@@ -9,7 +9,7 @@
 <area shape="rect" id="node9" href="$classnn_1_1AutoEncoder.html#aa664af64f10b98dd07d308ffbcde34ec" title="nn::AutoEncoder::getInverse\lWhiteningMatrix" alt="" coords="170,377,358,418"/>
 <area shape="rect" id="node10" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder::learning" alt="" coords="178,443,350,469"/>
 <area shape="rect" id="node11" href="$namespacecuda.html#adce3c8c14137f70cb144f5030327f34c" title="cuda::writeToCsvFile" alt="" coords="191,493,337,520"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9" title="compareVector" alt="" coords="209,544,319,571"/>
+<area shape="rect" id="node14" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="191,544,337,571"/>
 <area shape="rect" id="node12" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="413,464,576,491"/>
 <area shape="rect" id="node13" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="426,515,563,557"/>
 </map>

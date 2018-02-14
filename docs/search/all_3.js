@@ -1,7 +1,8 @@
 var searchData=
 [
   ['columncount',['columnCount',['../classcuda_1_1DeviceMatrix.html#a6a286c4c25c6005be342fe95f4188cd0',1,'cuda::DeviceMatrix']]],
-  ['comparevector',['compareVector',['../unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9',1,'unittest.cu']]],
+  ['compare',['compare',['../namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5',1,'cuda::compare(const DeviceMatrix &amp;m0, const DeviceMatrix &amp;m1)'],['../namespacecuda.html#ac89f3d73f17e7a3a54a6734231ee6b16',1,'cuda::compare(const DeviceVector &amp;v0, const DeviceVector &amp;v1)']]],
+  ['comparevector',['compareVector',['../namespacecuda.html#acb1f59a838c1e980c4e021915434a358',1,'cuda::compareVector()'],['../unittest_8cu.html#a667b075433e7c1f117a15af5b1c6eea9',1,'compareVector():&#160;unittest.cu']]],
   ['count',['count',['../unittest_8cu.html#a94b1957249b9d95386b1a60dce55735c',1,'unittest.cu']]],
   ['cublas_5fcall',['CUBLAS_CALL',['../CuBlasManager_8h.html#a7faf58a47ee95fc475079ec1d80e9d67',1,'CuBlasManager.h']]],
   ['cublasexception',['CuBlasException',['../classcuda_1_1CuBlasException.html#af3ce72886cd0f9b7243481ef68b6015c',1,'cuda::CuBlasException::CuBlasException(const std::string &amp;what_arg)'],['../classcuda_1_1CuBlasException.html#a0be9afe58024c370fcb733d0a44d86b4',1,'cuda::CuBlasException::CuBlasException(const char *what_arg)']]],
@@ -25,6 +26,9 @@ var searchData=
   ['cudamanager',['CudaManager',['../classcuda_1_1CudaManager.html',1,'cuda']]],
   ['cudamanager_2eh',['CudaManager.h',['../CudaManager_8h.html',1,'']]],
   ['cudamanagertest',['CudaManagerTest',['../classCudaManagerTest.html',1,'']]],
+  ['cudastreamcontainer',['CudaStreamContainer',['../classcuda_1_1CudaStreamContainer.html',1,'cuda']]],
+  ['cudastreamcontainer',['CudaStreamContainer',['../classcuda_1_1CudaStreamContainer.html#abd40f2e97a53cd391dc3aa97788b1a75',1,'cuda::CudaStreamContainer']]],
+  ['cudastreamcontainer_2eh',['CudaStreamContainer.h',['../CudaStreamContainer_8h.html',1,'']]],
   ['culculateblockthreadcount',['culculateBlockThreadCount',['../classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749',1,'nn::ElementWiseFunction1to1::culculateBlockThreadCount()'],['../classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8',1,'nn::ElementWiseFunction2to1::culculateBlockThreadCount()']]],
   ['curand_5fcall',['CURAND_CALL',['../CuRandManager_8h.html#aa31e5d819ee0b16ce23168f426395b02',1,'CuRandManager.h']]],
   ['curandexception',['CuRandException',['../classcuda_1_1CuRandException.html',1,'cuda']]],
@@ -43,8 +47,8 @@ var searchData=
   ['cusolverdnexception_2eh',['CuSolverDnException.h',['../CuSolverDnException_8h.html',1,'']]],
   ['cusolverdnfunction_2ecpp',['CuSolverDnFunction.cpp',['../CuSolverDnFunction_8cpp.html',1,'']]],
   ['cusolverdnfunction_2eh',['CuSolverDnFunction.h',['../CuSolverDnFunction_8h.html',1,'']]],
-  ['cusolverdnmanager',['CuSolverDnManager',['../classcuda_1_1CuSolverDnManager.html',1,'cuda']]],
   ['cusolverdnmanager',['CuSolverDnManager',['../classcuda_1_1CuSolverDnManager.html#a5909a831665e57d88dd49103e29fa6e4',1,'cuda::CuSolverDnManager::CuSolverDnManager()'],['../classcuda_1_1CuSolverDnManager.html#a3ed5d092d48358323318ad72e7920df8',1,'cuda::CuSolverDnManager::CuSolverDnManager(const CuSolverDnManager &amp;)=delete'],['../classcuda_1_1CuSolverDnManager.html#a715ab99afb2f371729dc53ae25357f71',1,'cuda::CuSolverDnManager::CuSolverDnManager(CuSolverDnManager &amp;&amp;)=delete']]],
+  ['cusolverdnmanager',['CuSolverDnManager',['../classcuda_1_1CuSolverDnManager.html',1,'cuda']]],
   ['cusolverdnmanager_2ecpp',['CuSolverDnManager.cpp',['../CuSolverDnManager_8cpp.html',1,'']]],
   ['cusolverdnmanager_2eh',['CuSolverDnManager.h',['../CuSolverDnManager_8h.html',1,'']]],
   ['cusolverdntest',['CuSolverDnTest',['../classCuSolverDnTest.html',1,'']]]

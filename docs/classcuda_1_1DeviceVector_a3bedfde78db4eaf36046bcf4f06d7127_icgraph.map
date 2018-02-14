@@ -12,7 +12,7 @@
 <area shape="rect" id="node23" href="$classnn_1_1Normalization.html#a37db90cab9bf31c26766681dc1ca198a" title="nn::Normalization::\linvSqrtByElement" alt="" coords="223,606,355,647"/>
 <area shape="rect" id="node24" href="$classnn_1_1Normalization.html#a890ff453b79a1efca639ef05f36ef234" title="nn::Normalization::\linvByElement" alt="" coords="223,671,355,713"/>
 <area shape="rect" id="node25" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="192,737,387,778"/>
-<area shape="rect" id="node26" href="$unittest_8cu.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="261,803,317,829"/>
+<area shape="rect" id="node27" href="$unittest_8cu.html#a3361da2355bdad10ef9a832e1410428a" title="TEST" alt="" coords="261,803,317,829"/>
 <area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a99d3e3cf846902fc2fd7e3797bb34a64" title="nn::Backpropagation\l::obtainDeltaLast" alt="" coords="463,57,604,98"/>
 <area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081" title="nn::Backpropagation\l::updateParameter" alt="" coords="463,122,604,163"/>
 <area shape="rect" id="node4" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="727,43,783,69"/>
@@ -24,4 +24,5 @@
 <area shape="rect" id="node14" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="917,304,989,331"/>
 <area shape="rect" id="node21" href="$unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="505,529,561,556"/>
 <area shape="rect" id="node22" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="479,580,587,607"/>
+<area shape="rect" id="node26" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="505,744,561,771"/>
 </map>
