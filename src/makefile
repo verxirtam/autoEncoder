@@ -62,6 +62,9 @@ CUDA_SRCS := $(shell find * -name "*.cu")
 #中間ファイルの格納先
 OBJDIR := ../obj
 
+#出力ファイルの格納先
+OUTDIR := ../out
+
 #オブジェクトファイル
 #.cppを.oに置換している
 OBJS := $(addprefix $(OBJDIR)/, $(SRCS:.cpp=.o))
@@ -100,40 +103,49 @@ NVPROF := nvprof --csv
 #全てコンパイルする
 #先頭に書いたコマンドはmakeコマンドでオプション無しで実行される
 .PHONY: all
-all: $(TARGET) $(TESTTARGET)
+all: $(OUTDIR)/$(TARGET) $(OUTDIR)/$(TESTTARGET)
 
 .PHONY: run
-run: $(TARGET)
-	$(NVPROF) --log-file $(TARGET).nvprof ./$(TARGET)
-	if [ -f core ]; then banner core dumped!;fi
-	gprof $(TARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TARGET).png
+run: $(OUTDIR)/$(TARGET)
+	(\
+		cd $(OUTDIR);\
+		$(NVPROF) --log-file $(TARGET).nvprof $(TARGET);\
+		if [ -f core ]; then banner core dumped!;fi;\
+		gprof $(TARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TARGET).png;\
+	)
 
 #テストの実行ファイルを実行する
 #プロファイルは実行しない
 #ログと標準出力両方に出力する
 .PHONY: test
-test: $(TESTTARGET)
-	./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log
-	if [ -f core ]; then banner core dumped!;fi
+test: $(OUTDIR)/$(TESTTARGET)
+	(\
+		cd $(OUTDIR);\
+		./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log;\
+		if [ -f core ]; then banner core dumped!;fi;\
+	)
 
 #テストとプロファイルを実行する
 #ログと標準出力両方に出力する
 .PHONY: testprof
-testprof: $(TESTTARGET)
-	$(NVPROF) --log-file $(TESTTARGET).nvprof ./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log
-	if [ -f core ]; then banner core dumped!;fi
-	gprof $(TESTTARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TESTTARGET).png
-	$(NVPROFGRAPH) $(TESTTARGET)
+testprof: $(OUTDIR)/$(TESTTARGET)
+	(\
+		cd $(OUTDIR);\
+		$(NVPROF) --log-file $(TESTTARGET).nvprof ./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log;\
+		if [ -f core ]; then banner core dumped!;fi;\
+		gprof $(TESTTARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TESTTARGET).png;\
+		$(NVPROFGRAPH) $(TESTTARGET) nvprof_$(TESTTARGET).png;\
+	)
 
 #githubにアップロードする
 .PHONY: git
-git: $(TARGET)
+git: $(OUTDIR)/$(TARGET) 
 	(cd ..; git add --all .;)
 	(cd ..; git commit -a;)
 	(cd ..; git push -u origin `git branch | grep "*" | cut -d " " -f 2`;)
 
 .PHONY: doc
-doc: $(TARGET)
+doc: $(OUTDIR)/$(TARGET)
 	(cd ..; doxygen;)
 	(cd ../docs; git add .;)
 	(cd ../docs; git commit -m "update docs.";)
@@ -160,12 +172,12 @@ maketest:
 #$* : ターゲット名からサフィックスを除いたもの
 #$< : 最初の依存ファイル名(":"の右側の最初(一番左)の項目)
 #$^ : 依存ファイル全体
-$(TARGET): $(OBJSTARGET)
-	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $@ $^ $(NVCC_CXX_FLAGS)
+$(OUTDIR)/$(TARGET): $(OBJSTARGET)
+	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $(OUTDIR)/$@ $^ $(NVCC_CXX_FLAGS)
 
 #テスト用の実行ファイルを作成
-$(TESTTARGET): $(OBJSTEST)
-	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $@ $^ $(NVCC_CXX_FLAGS)
+$(OUTDIR)/$(TESTTARGET): $(OBJSTEST)
+	$(NVCC) $(NVCC_LINKS) $(COMMON_FLAGS) $(NVCC_FLAGS) -o $(OUTDIR)/$@ $^ $(NVCC_CXX_FLAGS)
 
 #オブジェクトファイルの作成
 #"-MMD"オプションによって依存関係ファイル(*.d)も同時に作成する
