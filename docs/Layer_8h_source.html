@@ -101,8 +101,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classnn_1_1Layer.html">Layer</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html#ad9ab448d2ce71bc3a019cbf1814dc9e6">   14</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> = <a class="code" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html#abf9f7ce6724538d4512e9e396b777216">   15</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a> = <a class="code" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html#ad9ab448d2ce71bc3a019cbf1814dc9e6">   14</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> = <a class="code" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">cuda::DeviceMatrix</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html#abf9f7ce6724538d4512e9e396b777216">   15</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classcuda_1_1DeviceVector.html">DeviceVector</a> = <a class="code" href="namespacenn.html#a13f598f2513a0b808c43436841af5032">cuda::DeviceVector</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//ミニバッチサイズ</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classnn_1_1Layer.html#a6bae1817d4e0313d702f32ac8903c512">   17</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classnn_1_1Layer.html#a6bae1817d4e0313d702f32ac8903c512">miniBatchSize</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//ノード間の重み</span></div>
@@ -211,6 +211,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
 <div class="ttc" id="classnn_1_1Layer_html_afc28a21488cc3c841a380490fc7fc9e0"><div class="ttname"><a href="classnn_1_1Layer.html#afc28a21488cc3c841a380490fc7fc9e0">nn::Layer::_1B</a></div><div class="ttdeci">DeviceVector _1B</div><div class="ttdef"><b>Definition:</b> Layer.h:28</div></div>
+<div class="ttc" id="namespacenn_html_a13f598f2513a0b808c43436841af5032"><div class="ttname"><a href="namespacenn.html#a13f598f2513a0b808c43436841af5032">nn::DeviceVector</a></div><div class="ttdeci">cuda::DeviceVector DeviceVector</div><div class="ttdef"><b>Definition:</b> Normalization.cpp:24</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_a46d1226766c18ac56f2c8e90120598a9"><div class="ttname"><a href="classnn_1_1Layer.html#a46d1226766c18ac56f2c8e90120598a9">nn::Layer::bias</a></div><div class="ttdeci">DeviceVector bias</div><div class="ttdef"><b>Definition:</b> Layer.h:21</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_aba1df0d90cd02e6b409fb45a912573a4"><div class="ttname"><a href="classnn_1_1Layer.html#aba1df0d90cd02e6b409fb45a912573a4">nn::Layer::Layer</a></div><div class="ttdeci">Layer()</div><div class="ttdef"><b>Definition:</b> Layer.h:48</div></div>
 <div class="ttc" id="classnn_1_1Layer_html"><div class="ttname"><a href="classnn_1_1Layer.html">nn::Layer</a></div><div class="ttdef"><b>Definition:</b> Layer.h:11</div></div>
@@ -231,6 +232,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classnn_1_1Layer_html_a9f452e7f747ba9cb3fdac4a923732111"><div class="ttname"><a href="classnn_1_1Layer.html#a9f452e7f747ba9cb3fdac4a923732111">nn::Layer::setBias</a></div><div class="ttdeci">void setBias(const DeviceVector &amp;b)</div><div class="ttdef"><b>Definition:</b> Layer.h:73</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_a3439ae33d0ccade7400d60839ae6394c"><div class="ttname"><a href="classnn_1_1Layer.html#a3439ae33d0ccade7400d60839ae6394c">nn::Layer::forwardLinear</a></div><div class="ttdeci">void forwardLinear(const DeviceMatrix &amp;x)</div><div class="ttdef"><b>Definition:</b> Layer_detail.h:91</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_a89ac60aa4ac0ba69254ed76c331990ea"><div class="ttname"><a href="classnn_1_1Layer.html#a89ac60aa4ac0ba69254ed76c331990ea">nn::Layer::delta</a></div><div class="ttdeci">DeviceMatrix delta</div><div class="ttdef"><b>Definition:</b> Layer.h:30</div></div>
+<div class="ttc" id="namespacenn_html_a186cab7f3ea0cad79437240d968e2c35"><div class="ttname"><a href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">nn::DeviceMatrix</a></div><div class="ttdeci">cuda::DeviceMatrix DeviceMatrix</div><div class="ttdef"><b>Definition:</b> Normalization.cpp:23</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_af30301b9f468f718e0ef272fbc3c1e15"><div class="ttname"><a href="classnn_1_1Layer.html#af30301b9f468f718e0ef272fbc3c1e15">nn::Layer::update</a></div><div class="ttdeci">void update(const DeviceMatrix &amp;x)</div><div class="ttdef"><b>Definition:</b> Layer_detail.h:138</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_ad382b4e4f0eb5fb40eadc0120fde637b"><div class="ttname"><a href="classnn_1_1Layer.html#ad382b4e4f0eb5fb40eadc0120fde637b">nn::Layer::getDelta</a></div><div class="ttdeci">const DeviceMatrix &amp; getDelta() const </div><div class="ttdef"><b>Definition:</b> Layer.h:99</div></div>
 <div class="ttc" id="classnn_1_1Layer_html_a8f25dd8e053e3ab69fa29bf46ed2a0a8"><div class="ttname"><a href="classnn_1_1Layer.html#a8f25dd8e053e3ab69fa29bf46ed2a0a8">nn::Layer::weight</a></div><div class="ttdeci">DeviceMatrix weight</div><div class="ttdef"><b>Definition:</b> Layer.h:19</div></div>
@@ -244,7 +246,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 17 2018 22:54:48 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 20 2018 00:52:16 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

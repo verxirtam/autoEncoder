@@ -71,24 +71,24 @@ public:
 		//         = 1.0f * weight[l + 1] * z[l] + 0.0f * u[l + 1];
 		float alpha = 1.0f;
 		float beta  = 0.0f;
-		Sgemm(&alpha, CUBLAS_OP_N, weight[l + 1], CUBLAS_OP_N, z[l], &beta, u[l + 1]);
+		cuda::Sgemm(&alpha, CUBLAS_OP_N, weight[l + 1], CUBLAS_OP_N, z[l], &beta, u[l + 1]);
 		
 		//u[l + 1] = 1.0f * bias[l + 1] * _1B ^ T + u[l + 1];
 		//<=>
 		//u[l + 1] = weight[l + 1] * z[l] + bias[l + 1] * _1B ^ T;
 		alpha = 1.0;
-		Sger(&alpha, bias[l +1], _1B, u[l + 1]);
+		cuda::Sger(&alpha, bias[l +1], _1B, u[l + 1]);
 		
 		/////////////////////////////////////////////////////////
 		
-		//Sgemv()を使用するため事前に下記を算出する
+		//cuda::Sgemv()を使用するため事前に下記を算出する
 		//u[l + 1] = bias[l + 1];
 		
-		//Sgemv()を用いて下記を求める
+		//cuda::Sgemv()を用いて下記を求める
 		//u[l + 1] = weight[l + 1] * z[l] + u[l + 1];
 		//float alpha = 1.0f;
 		//float beta = 1.0f;
-		//Sgemv(&alpha, CUBLAS_OP_N, weight[l + 1], z[l], &beta, u[l + 1]);
+		//cuda::Sgemv(&alpha, CUBLAS_OP_N, weight[l + 1], z[l], &beta, u[l + 1]);
 	}
 	//下記を求める
 	//z[l + 1] = f(u[l + 1]);

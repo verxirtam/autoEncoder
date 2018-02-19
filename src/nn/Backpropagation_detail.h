@@ -75,7 +75,7 @@ void Backpropagation<AF, OutputLayer>::obtainDelta(unsigned int l)
 	//WTdelta[l +1] = 1.0f * (W[l + 1])^T * delta[l+1] + 0.0f * WTdelta[l +1];
 	float alpha = 1.0f;
 	float beta  = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_T, weight[l + 1], CUBLAS_OP_N, delta[l + 1], &beta, WTdelta[l + 1]);
+	cuda::Sgemm(&alpha, CUBLAS_OP_T, weight[l + 1], CUBLAS_OP_N, delta[l + 1], &beta, WTdelta[l + 1]);
 	
 	//ストリーム完了待ち
 	CUDA_CALL(cudaStreamSynchronize(this->getMainStream()));
@@ -310,12 +310,12 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		//                = - (epsilon / B) * delta[l] * z[l - 1]^T + gamma * deltaWeight[l]
 		float alpha = - epsilon / miniBatchSize;
 		float beta = gamma;
-		Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, deltaWeight[l]);
+		cuda::Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, deltaWeight[l]);
 		// weight[l] = weight[l] + deltaWeight[l]
 		//           = 1.0f * weight[l] + 1.0f * deltaWeight[l]
 		alpha = 1.0f;
 		beta  = 1.0f;
-		Sgeam(&alpha, CUBLAS_OP_N, weight[l], &beta, CUBLAS_OP_N, deltaWeight[l], weight[l]);
+		cuda::Sgeam(&alpha, CUBLAS_OP_N, weight[l], &beta, CUBLAS_OP_N, deltaWeight[l], weight[l]);
 		//-----------------------------------------------
 		
 		
@@ -327,7 +327,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		//     = - (epsilon / B) * delta[l] * z[l - 1]^T + 1.0f * W[l]
 		//alpha = - epsilon / miniBatchSize;
 		//beta = 1.0f;
-		//Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, weight[l]);
+		//cuda::Sgemm(&alpha, CUBLAS_OP_N, delta[l], CUBLAS_OP_T, z[l - 1], &beta, weight[l]);
 		//-----------------------------------------------
 		
 		//使用するStreamを設定
@@ -345,7 +345,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		//              = - (epsilon / B) * delta[l] * _1B + gamma * deltaBias[l]
 		alpha = - epsilon / miniBatchSize;
 		beta  = gamma;
-		Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, deltaBias[l]);
+		cuda::Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, deltaBias[l]);
 		
 		// bias[l] = bias[l] + deltaBias[l]
 		//         = 1.0f * deltaBias[l] + bias[l]
@@ -362,7 +362,7 @@ void Backpropagation<AF, OutputLayer>::updateParameter()
 		//     = - (epsilon / B) * delta[l] * _1B + 1.0f * b[l]
 		//alpha = - epsilon / miniBatchSize;
 		//beta = 1.0f;
-		//Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, bias[l]);
+		//cuda::Sgemv(&alpha, CUBLAS_OP_N, delta[l], _1B, &beta, bias[l]);
 		//-----------------------------------------------
 		
 	}

@@ -95,13 +95,13 @@ void Layer<ActivateMethod, UpdateMethod>::forwardLinear(const DeviceMatrix& x)
 	//  = 1.0f * weight * x + 0.0f * u;
 	float alpha = 1.0f;
 	float beta  = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, weight, CUBLAS_OP_N, x, &beta, u);
+	cuda::Sgemm(&alpha, CUBLAS_OP_N, weight, CUBLAS_OP_N, x, &beta, u);
 	
 	//u = 1.0f * bias * _1B ^ T + u;
 	//<=>
 	//u = weight * x + bias * _1B ^ T;
 	alpha = 1.0;
-	Sger(&alpha, bias, _1B, u);
+	cuda::Sger(&alpha, bias, _1B, u);
 }
 
 //weightTDeltaを算出する
@@ -114,7 +114,7 @@ void Layer<ActivateMethod, UpdateMethod>::getWeightTDelta()
 	//weightTdelta = 1.0f * (weight)^T * delta + 0.0f * weightTdelta;
 	float alpha = 1.0f;
 	float beta  = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_T, weight, CUBLAS_OP_N, delta, &beta, weightTDelta);
+	cuda::Sgemm(&alpha, CUBLAS_OP_T, weight, CUBLAS_OP_N, delta, &beta, weightTDelta);
 	
 }
 

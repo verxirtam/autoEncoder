@@ -157,6 +157,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:a5b509b11a21d6b9fd3a4faa46feef9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008923dc6bceb06bfdfc7fed8ce144cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a008923dc6bceb06bfdfc7fed8ce144cd">LayerOutputIdentity</a> = <a class="el" href="classnn_1_1Layer.html">Layer</a>&lt; <a class="el" href="classnn_1_1ActivateMethodOutputIdentity.html">ActivateMethodOutputIdentity</a>, <a class="el" href="classnn_1_1UpdateMethodMomentum.html">UpdateMethodMomentum</a> &gt;</td></tr>
 <tr class="separator:a008923dc6bceb06bfdfc7fed8ce144cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186cab7f3ea0cad79437240d968e2c35"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">DeviceMatrix</a> = <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a></td></tr>
+<tr class="separator:a186cab7f3ea0cad79437240d968e2c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f598f2513a0b808c43436841af5032"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a13f598f2513a0b808c43436841af5032">DeviceVector</a> = <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td></tr>
+<tr class="separator:a13f598f2513a0b808c43436841af5032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -166,7 +170,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
 <tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6">getParameterVector</a> (const <a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
 <tr class="separator:a2833ccf577ba781cbe2abbff765f56d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060c1d13b3480ab6dc817f3374ab82f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6">getMeanAndVarCovMatrix</a> (const <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;sample, <a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;mean, <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;varCovMatrix, cudaStream_t stream)</td></tr>
+<tr class="memitem:a060c1d13b3480ab6dc817f3374ab82f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6">getMeanAndVarCovMatrix</a> (const <a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">DeviceMatrix</a> &amp;sample, <a class="el" href="namespacenn.html#a13f598f2513a0b808c43436841af5032">DeviceVector</a> &amp;mean, <a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">DeviceMatrix</a> &amp;varCovMatrix, cudaStream_t stream)</td></tr>
 <tr class="separator:a060c1d13b3480ab6dc817f3374ab82f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -188,6 +192,30 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacenn.html#af8d313c7e65dda20e18dc9d9c2598d13">nn::BackpropagationTanhReg</a> = typedef <a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt;<a class="el" href="classnn_1_1Func1to1Tanh.html">Func1to1Tanh</a>, <a class="el" href="classnn_1_1OutputLayerRegression.html">OutputLayerRegression</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a186cab7f3ea0cad79437240d968e2c35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcuda_1_1DeviceMatrix.html">cuda::DeviceMatrix</a> <a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">nn::DeviceMatrix</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a13f598f2513a0b808c43436841af5032"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a> <a class="el" href="namespacenn.html#a13f598f2513a0b808c43436841af5032">nn::DeviceVector</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,19 +256,19 @@ template&lt;class ActivateFunction &gt; </div>
         <tr>
           <td class="memname">void nn::getMeanAndVarCovMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">const DeviceMatrix &amp;&#160;</td>
           <td class="paramname"><em>sample</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcuda_1_1DeviceVector.html">DeviceVector</a> &amp;&#160;</td>
+          <td class="paramtype">DeviceVector &amp;&#160;</td>
           <td class="paramname"><em>mean</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcuda_1_1DeviceMatrix.html">DeviceMatrix</a> &amp;&#160;</td>
+          <td class="paramtype">DeviceMatrix &amp;&#160;</td>
           <td class="paramname"><em>varCovMatrix</em>, </td>
         </tr>
         <tr>
@@ -362,7 +390,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 17 2018 22:54:51 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 20 2018 00:52:17 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
