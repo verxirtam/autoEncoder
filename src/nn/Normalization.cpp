@@ -20,8 +20,8 @@
 namespace nn
 {
 
-//名前空間cudaを使用
-using namespace cuda;
+using DeviceMatrix = cuda::DeviceMatrix;
+using DeviceVector = cuda::DeviceVector;
 
 //白色化を行う
 DeviceMatrix Normalization::getWhitening
@@ -32,7 +32,7 @@ DeviceMatrix Normalization::getWhitening
 	) const
 {
 	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	
 	unsigned int D = X.getRowCount();
 	unsigned int B = X.getColumnCount();
@@ -43,7 +43,7 @@ DeviceMatrix Normalization::getWhitening
 	// Y = (-1.0f) * mean * _1B^T + Y;
 	//   = X - mean * _1B^T;
 	float alpha = - 1.0f;
-	Sger(&alpha, mean, _1B, Y);
+	cuda::Sger(&alpha, mean, _1B, Y);
 	
 	// nX = 1.0f * whiteningMatrix * Y + 0.0f * nX;
 	//    = whiteningMatrix * Y;
@@ -51,7 +51,7 @@ DeviceMatrix Normalization::getWhitening
 	DeviceMatrix nX(D, B);
 	alpha = 1.0f;
 	float beta = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, nX);
+	cuda::Sgemm(&alpha, CUBLAS_OP_N, whiteningMatrix, CUBLAS_OP_N, Y, &beta, nX);
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -68,7 +68,7 @@ DeviceMatrix Normalization::getInverseWhitening
 	) const
 {
 	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	
 	unsigned int D = nX.getRowCount();
 	unsigned int B = nX.getColumnCount();
@@ -84,14 +84,14 @@ DeviceMatrix Normalization::getInverseWhitening
 	DeviceMatrix Y(D, B);
 	float alpha = 1.0f;
 	float  beta = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, inverseWhiteningMatrix, CUBLAS_OP_N, nX, &beta, Y);
+	cuda::Sgemm(&alpha, CUBLAS_OP_N, inverseWhiteningMatrix, CUBLAS_OP_N, nX, &beta, Y);
 	
 	DeviceMatrix X = Y;
 	// X = 1.0f * mean * _1B^T + Y;
 	//   = Y + mean * _1B^T;
 	//   = inverseWhiteningMatrix * nX + mean * _1B^T;
 	alpha = 1.0f;
-	Sger(&alpha, mean, _1B, X);
+	cuda::Sger(&alpha, mean, _1B, X);
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -103,7 +103,7 @@ DeviceMatrix Normalization::getInverseWhitening
 void Normalization::init(const DeviceMatrix& X)
 {
 	//TODO 使用するストリームを明示する&ストリームの完了待ちを行う
-	CUBLAS_CALL(cublasSetStream(CuBlasManager::getHandle(), 0));
+	CUBLAS_CALL(cublasSetStream(cuda::CuBlasManager::getHandle(), 0));
 	
 	//データの次元
 	unsigned int D = X.getRowCount();
@@ -118,7 +118,7 @@ void Normalization::init(const DeviceMatrix& X)
 	//    W = (l_0, l_1, ... , l_(D-1)), l_i <= l_(i+1) i=0, ... ,D-2
 	DeviceMatrix E;
 	DeviceVector W;
-	DnSsyevd(varCovMatrix, W , E);
+	cuda::DnSsyevd(varCovMatrix, W , E);
 	varCovEigenVector = E;
 	varCovEigenValue = W;
 	
@@ -133,11 +133,11 @@ void Normalization::init(const DeviceMatrix& X)
 	DeviceMatrix ET(D, D);
 	float alpha = 1.0f;
 	float beta  = 0.0f;
-	Sgeam(&alpha, CUBLAS_OP_T, E, &beta, CUBLAS_OP_N, E, ET);
+	cuda::Sgeam(&alpha, CUBLAS_OP_T, E, &beta, CUBLAS_OP_N, E, ET);
 	
 	//P_PCA =     diag(W) * E^T;
 	pcaWhiteningMatrix = DeviceMatrix(D, D);
-	Sdgmm(W, ET, pcaWhiteningMatrix);
+	cuda::Sdgmm(W, ET, pcaWhiteningMatrix);
 	
 	//NULLストリームの完了待ち:
 	CUDA_CALL(cudaStreamSynchronize(0));
@@ -149,21 +149,21 @@ void Normalization::init(const DeviceMatrix& X)
 	
 	//(P_PCA)^(-1) = E * diag(W)^(-1)
 	inversePCAWhiteningMatrix = DeviceMatrix(D, D);
-	Sdgmm(E, W_inv, inversePCAWhiteningMatrix);
+	cuda::Sdgmm(E, W_inv, inversePCAWhiteningMatrix);
 	
 	//P_ZCA = E * diag(W) * E^T;
 	//      = E * P_PCA;
 	zcaWhiteningMatrix = DeviceMatrix(D, D);
 	alpha = 1.0f;
 	beta = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, E, CUBLAS_OP_N, pcaWhiteningMatrix, &beta, zcaWhiteningMatrix);
+	cuda::Sgemm(&alpha, CUBLAS_OP_N, E, CUBLAS_OP_N, pcaWhiteningMatrix, &beta, zcaWhiteningMatrix);
 	
 	//(P_ZCA)^(-1) = E * diag(W)^(-1) * E^T;
 	//             = (P_PCA)^(-1) * E^T;
 	inverseZCAWhiteningMatrix = DeviceMatrix(D, D);
 	alpha = 1.0f;
 	beta = 0.0f;
-	Sgemm(&alpha, CUBLAS_OP_N, inversePCAWhiteningMatrix, CUBLAS_OP_N, ET, &beta, inverseZCAWhiteningMatrix);
+	cuda::Sgemm(&alpha, CUBLAS_OP_N, inversePCAWhiteningMatrix, CUBLAS_OP_N, ET, &beta, inverseZCAWhiteningMatrix);
 	
 	//NULLストリームの完了待ち
 	CUDA_CALL(cudaStreamSynchronize(0));
