@@ -104,7 +104,7 @@ public:
 	{
 		return weightTDelta;
 	}
-	const UpdateMethod& getUpdateMethod() const
+	UpdateMethod& getUpdateMethod()
 	{
 		return updateMethod;
 	}

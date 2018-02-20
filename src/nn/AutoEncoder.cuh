@@ -19,8 +19,14 @@
 #pragma once
 
 #include "Normalization.h"
-#include "Backpropagation.cuh"
-#include "OutputLayerRegression.cuh"
+/////////////////
+//#include "Backpropagation.cuh"
+//#include "OutputLayerRegression.cuh"
+/////////////////
+#include "Perceptron.cuh"
+#include "LayerInput.cuh"
+#include "LayerInternal.cuh"
+#include "LayerOutputIdentity.cuh"
 
 namespace nn
 {
@@ -34,13 +40,16 @@ class AutoEncoder
 private:
 	Normalization normalization;
 	const unsigned int layerCount;
-	Backpropagation<AF, OutputLayerRegression> backpropagation;
+	//Backpropagation<AF, OutputLayerRegression> backpropagation;
+	using perceptronType = Perceptron<LayerInput, LayerInternal<AF>, LayerOutputIdentity>;
+	perceptronType perceptron;
 	DeviceVector _1B;
 public:
 	AutoEncoder():
 		normalization(),
 		layerCount(3),
-		backpropagation(layerCount),
+		//backpropagation(layerCount),
+		perceptron(),
 		_1B()
 	{
 		
@@ -52,8 +61,14 @@ public:
 		//normarize_inputを元に正規化を行う
 		normalization.init(normarize_input);
 		//BPの初期化を行う
-		unsigned int n = normarize_input.getRowCount();
-		backpropagation.init({n, layer_size, n}, minibatch_size);
+		//unsigned int n = normarize_input.getRowCount();
+		//backpropagation.init({n, layer_size, n}, minibatch_size);
+		
+		//perceptronの初期化
+		perceptron.getInput().   init(n,                      minibatch_size);
+		perceptron.getInternal().init(n,          layer_size, minibatch_size);
+		perceptron.getOutput().  init(layer_size, n,          minibatch_size);
+		
 		//ミニバッチの正規化に使用する1Vectorの初期化
 		_1B = DeviceVector::get1Vector(minibatch_size);
 	}
@@ -63,8 +78,9 @@ public:
 		//正規化されたミニバッチ
 		DeviceMatrix nX = normalization.getPCAWhitening(X, _1B);
 		
-		DeviceMatrix nY;
-		backpropagation.forward(nX, nY);
+		//DeviceMatrix nY;
+		//backpropagation.forward(nX, nY);
+		const DeviceMatrix& nY = perceptron.forward(nX);
 		
 		return normalization.getInversePCAWhitening(nY, _1B);
 	}
@@ -73,10 +89,14 @@ public:
 		//正規化されたミニバッチ
 		DeviceMatrix nX = normalization.getPCAWhitening(X, _1B);
 		
-		DeviceMatrix nY;
-		backpropagation.forward(nX, nY);
-		backpropagation.back(nX);
-		backpropagation.updateParameter();
+		//DeviceMatrix nY;
+		//backpropagation.forward(nX, nY);
+		//backpropagation.back(nX);
+		//backpropagation.updateParameter();
+		
+		const DeviceMatrix& nY = perceptron.forward(nX);
+		perceptron.back(nX);
+		perceptron.update();
 		
 		return normalization.getInversePCAWhitening(nY, _1B);
 	}
@@ -90,23 +110,30 @@ public:
 	}
 	void setEpsilon(float e)
 	{
-		this->backpropagation.setEpsilon(e);
+		//this->backpropagation.setEpsilon(e);
+		perceptron.getInternal().getUpdateMethod().setLearningRate(e);
+		perceptron.getOutput().  getUpdateMethod().setLearningRate(e);
 	}
 	float getEpsilon() const
 	{
-		return this->backpropagation.getEpsilon();
+		//return this->backpropagation.getEpsilon();
+		return perceptron.getOutput().getUpdateMethod().getLearningRate();
 	}
 	void setGamma(float g)
 	{
-		this->backpropagation.setGamma(g);
+		//this->backpropagation.setGamma(g);
+		perceptron.getInternal().getUpdateMethod().setMomentum(g);
+		perceptron.getOutput().  getUpdateMethod().setMomentum(g);
 	}
 	float getGamma() const
 	{
-		return this->backpropagation.getGamma();
+		return perceptron.getOutput().getUpdateMethod().getMomentum();
 	}
-	const Backpropagation<AF, OutputLayerRegression>& getBackpropagation() const
+	//const Backpropagation<AF, OutputLayerRegression>& getBackpropagation() const
+	const perceptronType& getPerceptron() const
 	{
-		return backpropagation;
+		//return backpropagation;
+		return perceptron;
 	}
 	const Normalization& getNormarization() const
 	{

@@ -2492,13 +2492,13 @@ TEST(PerceptronTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
-	::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
+	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
 	
 	//::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
 	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
-	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*momentum*";
