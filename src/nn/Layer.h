@@ -4,6 +4,8 @@
 #include "../cuda/DeviceMatrix.h"
 #include "../cuda/DeviceVector.h"
 
+#include "../cuda/CuRandManager.h"
+
 namespace nn
 {
 

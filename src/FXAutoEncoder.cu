@@ -89,7 +89,7 @@ void FXAutoEncoder::init
 bool FXAutoEncoder::learning()
 {
 	//sqlで取得するレコード数
-	unsigned int minibatch_size = autoEncoder.getBackpropagation().getMiniBatchSize();
+	unsigned int minibatch_size = autoEncoder.getPerceptron().getMiniBatchSize();
 	unsigned int record_count   = minibatch_size;
 	
 	//ミニバッチ1つ分のデータを格納するvector

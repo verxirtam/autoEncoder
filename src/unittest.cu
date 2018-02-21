@@ -2418,7 +2418,7 @@ TEST(FXAutoEncoderTest, Simple)
 		{
 			break;
 		}
-		auto b = f.getAutoEncoder().getBackpropagation();
+		auto b = f.getAutoEncoder().getPerceptron();
 		auto v = getParameterVector(b);
 		parameter_vector_length = v.size();
 		transition_parameter_vector.insert(transition_parameter_vector.end(), v.begin(), v.end());

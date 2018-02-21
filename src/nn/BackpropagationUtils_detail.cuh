@@ -185,5 +185,6 @@ std::vector<float> getParameterVector(const nn::Backpropagation<AF, OutputLayer>
 	return result;
 }
 
+
 }
 

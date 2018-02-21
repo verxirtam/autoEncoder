@@ -12,18 +12,22 @@ class LayerInput
 private:
 	using DeviceMatrix = cuda::DeviceMatrix;
 	using DeviceVector = cuda::DeviceVector;
+	//ミニバッチサイズ
+	unsigned int miniBatchSize;
 	//インプット
 	DeviceMatrix x;
 public:
 	//コンストラクタ
 	LayerInput():
+		miniBatchSize(1),
 		x()
 	{
 	}
 	//初期化
 	void init(unsigned int dim_input, unsigned int minibatch_size = 1)
 	{
-		x = DeviceMatrix(dim_input, minibatch_size);
+		miniBatchSize = miniBatchSize;
+		x = DeviceMatrix(dim_input, miniBatchSize);
 	}
 	//順伝播
 	const DeviceMatrix& forward(const DeviceMatrix& x_)
@@ -43,6 +47,10 @@ public:
 	const DeviceMatrix& getZ() const
 	{
 		return x;
+	}
+	unsigned int getMiniBatchSize() const
+	{
+		return miniBatchSize;
 	}
 };
 

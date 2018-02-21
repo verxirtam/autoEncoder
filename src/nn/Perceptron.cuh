@@ -51,6 +51,11 @@ public:
 		internal.update(input.getZ());
 		output.update(internal.getZ());
 	}
+	//ミニバッチサイズの取得
+	unsigned int getMiniBatchSize(void) const
+	{
+		return input.getMiniBatchSize();
+	}
 };
 
 }

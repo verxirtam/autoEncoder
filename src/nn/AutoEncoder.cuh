@@ -65,6 +65,7 @@ public:
 		//backpropagation.init({n, layer_size, n}, minibatch_size);
 		
 		//perceptronの初期化
+		unsigned int n = normarize_input.getRowCount();
 		perceptron.getInput().   init(n,                      minibatch_size);
 		perceptron.getInternal().init(n,          layer_size, minibatch_size);
 		perceptron.getOutput().  init(layer_size, n,          minibatch_size);

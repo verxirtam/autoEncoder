@@ -21,7 +21,9 @@
 #include "../cuda/DeviceMatrix.h"
 
 #include "ElementWiseFunction1to1.cuh"
+#include "ElementWiseFunction2to1.cuh"
 #include "ElementWiseFunctionUtil.cuh"
+#include "Func2to1ElementWiseProduct.cuh"
 
 namespace nn
 {
