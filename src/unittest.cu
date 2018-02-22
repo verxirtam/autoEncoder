@@ -2182,8 +2182,8 @@ TYPED_TEST(AutoEncoderTest, csv)
 		}
 		/////////////////////////////////////
 		//パラメータベクトルを取得
-		auto b = a.getBackpropagation();
-		auto v = getParameterVector(b);
+		auto p = a.getPerceptron();
+		auto v = getParameterVector(p);
 		parameter_vector_length = v.size();
 		transition_parameter_vector.insert(transition_parameter_vector.end(), v.begin(), v.end());
 		/////////////////////////////////////
@@ -2225,15 +2225,15 @@ TYPED_TEST(AutoEncoderTest, csv)
 	{
 		
 		//minibatch_input_vector,minibatch_output_vectorをファイル出力する
-		auto b = a.getBackpropagation();
+		auto p = a.getPerceptron();
 		std::string filename0("../data/AutoEncoderTest_csv_");
 		filename0 += get_typename<TypeParam>();
 		writeToCsvFile(filename0 + "_0input.csv",  minibatch_input );
 		writeToCsvFile(filename0 + "_1output.csv", minibatch_output);
-		writeToCsvFile(filename0 + "_2weight1.csv", b.getWeight()[1]);
-		writeToCsvFile(filename0 + "_2weight2.csv", b.getWeight()[2]);
-		writeToCsvFile(filename0 + "_3bias1.csv",   b.getBias()[1]);
-		writeToCsvFile(filename0 + "_3bias2.csv",   b.getBias()[2]);
+		writeToCsvFile(filename0 + "_2weight1.csv", p.getWeight()[1]);
+		writeToCsvFile(filename0 + "_2weight2.csv", p.getWeight()[2]);
+		writeToCsvFile(filename0 + "_3bias1.csv",   p.getBias()[1]);
+		writeToCsvFile(filename0 + "_3bias2.csv",   p.getBias()[2]);
 	}
 	EXPECT_NEAR(diff, 0.0f, 1.0f);
 }
@@ -2433,15 +2433,10 @@ TEST(FXAutoEncoderTest, Simple)
 	//auto transition_parameter_norm = norm.getPCAWhitening(transition_parameter, _1L);
 	//writeToCsvFile("../data/FXAutoEncoderTest_parameter_norm.csv", transition_parameter_norm);
 	
-	for(auto&& w : f.getAutoEncoder().getBackpropagation().getWeight())
-	{
-		printVector(w.get(), "weight");
-	}
-	for(auto&& b : f.getAutoEncoder().getBackpropagation().getBias())
-	{
-		printVector(b.get(), "bias");
-	}
-	writeToDotFile("../data/FXAutoEncoderTest.dot", f.getAutoEncoder().getBackpropagation());
+	auto p = getParameterVector(f.getAutoEncoder().getPerceptron());
+	printVector(p, "parameter");
+	
+	//writeToDotFile("../data/FXAutoEncoderTest.dot", f.getAutoEncoder().getBackpropagation());
 }
 
 
