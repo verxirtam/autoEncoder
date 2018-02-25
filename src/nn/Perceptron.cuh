@@ -51,10 +51,10 @@ public:
 		return output.forward(internal.forward(input.forward(x)));
 	}
 	//逆伝播
-	void back(const DeviceMatrix& d)
+	const DeviceMatrix& back(const DeviceMatrix& d)
 	{
 		//forwardと逆順に適用
-		input.back(internal.back(output.back(d)));
+		return input.back(internal.back(output.back(d)));
 	}
 	//パラメータの更新
 	void update(void)
