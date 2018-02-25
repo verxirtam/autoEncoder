@@ -2230,10 +2230,10 @@ TYPED_TEST(AutoEncoderTest, csv)
 		filename0 += get_typename<TypeParam>();
 		writeToCsvFile(filename0 + "_0input.csv",  minibatch_input );
 		writeToCsvFile(filename0 + "_1output.csv", minibatch_output);
-		writeToCsvFile(filename0 + "_2weight1.csv", p.getWeight()[1]);
-		writeToCsvFile(filename0 + "_2weight2.csv", p.getWeight()[2]);
-		writeToCsvFile(filename0 + "_3bias1.csv",   p.getBias()[1]);
-		writeToCsvFile(filename0 + "_3bias2.csv",   p.getBias()[2]);
+		writeToCsvFile(filename0 + "_2internalweight.csv", p.getInternal().getWeight());
+		writeToCsvFile(filename0 + "_3internalbias.csv",   p.getInternal().getBias());
+		writeToCsvFile(filename0 + "_4outputweight.csv",   p.getOutput().getWeight());
+		writeToCsvFile(filename0 + "_5outputbias.csv",     p.getOutput().getBias());
 	}
 	EXPECT_NEAR(diff, 0.0f, 1.0f);
 }

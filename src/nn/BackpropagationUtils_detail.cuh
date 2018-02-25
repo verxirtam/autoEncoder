@@ -186,5 +186,42 @@ std::vector<float> getParameterVector(const nn::Backpropagation<AF, OutputLayer>
 }
 
 
+template <class Input, class Internal, class Output>
+std::vector<float> getParameterVector(const Perceptron<Input, Internal, Output>& perceptron)
+{
+	std::vector<float> result;
+	
+	const std::vector<float>& vector_input    = getParameterVector(perceptron.getInput()   );
+	const std::vector<float>& vector_internal = getParameterVector(perceptron.getInternal());
+	const std::vector<float>& vector_output   = getParameterVector(perceptron.getOutput()  );
+	result.insert(result.end(), vector_input.begin()   , vector_input.end()   );
+	result.insert(result.end(), vector_internal.begin(), vector_internal.end());
+	result.insert(result.end(), vector_output.begin()  , vector_output.end()  );
+	
+	
+	return result;
+}
+
+std::vector<float> getParameterVector(const LayerInput& layer)
+{
+	std::vector<float> result;
+	
+	return result;
+}
+
+template <class ActivateFunction, class UpdateMethod>
+std::vector<float> getParameterVector(const Layer<ActivateFunction, UpdateMethod>& layer)
+{
+	std::vector<float> result;
+	
+	std::vector<float> w = layer.getWeight().get();
+	std::vector<float> b = layer.getBias().get();
+	result.insert(result.end(), w.begin(), w.end());
+	result.insert(result.end(), b.begin(), b.end());
+	
+	return result;
+}
+
+
 }
 

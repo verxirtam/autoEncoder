@@ -7,8 +7,9 @@
 
 #include "Backpropagation.cuh"
 
-#include "./Perceptron.cuh"
-#include "./Layer.h"
+#include "Perceptron.cuh"
+#include "Layer.h"
+#include "LayerInput.cuh"
 
 namespace nn
 {
@@ -22,6 +23,8 @@ std::vector<float> getParameterVector(const Backpropagation<AF, OutputLayer>& ba
 
 template <class Input, class Internal, class Output>
 std::vector<float> getParameterVector(const Perceptron<Input, Internal, Output>& perceptron);
+
+std::vector<float> getParameterVector(const LayerInput& layer);
 
 template <class ActivateFunction, class UpdateMethod>
 std::vector<float> getParameterVector(const Layer<ActivateFunction, UpdateMethod>& perceptron);

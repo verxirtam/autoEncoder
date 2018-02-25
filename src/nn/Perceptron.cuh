@@ -24,11 +24,23 @@ public:
 	{
 		return input;
 	}
+	const Input& getInput(void) const
+	{
+		return input;
+	}
 	Internal& getInternal(void)
 	{
 		return internal;
 	}
+	const Internal& getInternal(void) const
+	{
+		return internal;
+	}
 	Output& getOutput(void)
+	{
+		return output;
+	}
+	const Output& getOutput(void) const
 	{
 		return output;
 	}
