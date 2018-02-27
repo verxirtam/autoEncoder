@@ -42,7 +42,10 @@ TEST(LayerTest, Simple)
 	EXPECT_EQ(compare(y, y_out), 0.0f);
 	
 	l.back(x);
+	EXPECT_EQ(1, 0);//TODO back()の結果を検証する処理を書くこと
+	
 	l.update(x);
+	EXPECT_EQ(1, 0);//TODO update()の結果を検証する処理を書くこと
 }
 
 
