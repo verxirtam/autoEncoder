@@ -2463,6 +2463,7 @@ TEST(TimeUtilTest, Simple)
 #include "unittest_UpdateMethodMomentum.h"
 #include "unittest_ActivateMethodElementWise.cuh"
 #include "unittest_Perceptron.cuh"
+#include "unittest_PerceptronUtils.cuh"
 
 //////////////////////////////////////////////////////////////////////
 // main()
@@ -2475,7 +2476,7 @@ int main(int argc, char **argv)
 	
 	//::testing::GTEST_FLAG(filter)="*TimeUtilTest*";
 	//::testing::GTEST_FLAG(filter)="*FXAutoEncoderTest*";
-	::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
+	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*csv*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*Simple*";
 	//::testing::GTEST_FLAG(filter)="*AutoEncoderTest*momentum*";
@@ -2496,7 +2497,9 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*SerialTest*";
 	//::testing::GTEST_FLAG(filter)="*LayerTest*";
 	//::testing::GTEST_FLAG(filter)="*Method*";
+	::testing::GTEST_FLAG(filter)="*ActivateMethodElementWiseTest*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
+	//::testing::GTEST_FLAG(filter)="*PerceptronUtilsTest*";
 	
 	
 	::testing::InitGoogleTest(&argc, argv);
