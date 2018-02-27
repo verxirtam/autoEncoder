@@ -1,5 +1,6 @@
 <map id="cuda::CudaManager::getStream" name="cuda::CudaManager::getStream">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::getMainStream" alt="" coords="200,5,419,61"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a5a426d574a0a34d55a74393245c1f59d" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::getSubStream" alt="" coords="200,85,419,141"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="281,165,337,192"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36" title="nn::Backpropagation\l::getMainStream" alt="" coords="200,5,341,46"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a5a426d574a0a34d55a74393245c1f59d" title="nn::Backpropagation\l::getSubStream" alt="" coords="200,70,341,111"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="243,136,299,163"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="389,45,445,72"/>
 </map>

@@ -1,11 +1,8 @@
 <map id="src/nn/Backpropagation_detail.h" name="src/nn/Backpropagation_detail.h">
-<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="427,96,611,123"/>
-<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="139,179,301,205"/>
-<area shape="rect" id="node8" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="359,171,547,213"/>
-<area shape="rect" id="node9" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="508,261,717,288"/>
-<area shape="rect" id="node10" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="623,171,809,213"/>
-<area shape="rect" id="node4" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,261,165,288"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="302,336,407,363"/>
-<area shape="rect" id="node7" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,261,432,288"/>
-<area shape="rect" id="node5" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,336,161,363"/>
+<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="100,96,284,123"/>
+<area shape="rect" id="node3" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="5,262,192,303"/>
+<area shape="rect" id="node5" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="217,269,427,296"/>
+<area shape="rect" id="node7" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="229,171,416,213"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="127,427,232,453"/>
+<area shape="rect" id="node6" href="$unittest__PerceptronUtils_8cuh.html" title="src/unittest_PerceptronUtils.cuh" alt="" coords="218,352,427,379"/>
 </map>

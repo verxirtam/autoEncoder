@@ -107,7 +107,7 @@ Collaboration diagram for nn::AutoEncoder&lt; AF &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnn_1_1AutoEncoder__coll__graph.png" border="0" usemap="#nn_1_1AutoEncoder_3_01AF_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="nn_1_1AutoEncoder_3_01AF_01_4_coll__map" id="nn_1_1AutoEncoder_3_01AF_01_4_coll__map">
-<area shape="rect" id="node2" href="classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="6,103,143,129"/><area shape="rect" id="node3" href="classnn_1_1Normalization.html" title="nn::Normalization" alt="" coords="367,185,491,212"/><area shape="rect" id="node5" href="classnn_1_1Backpropagation.html" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression \&gt;" alt="" coords="763,65,994,106"/><area shape="rect" id="node6" href="classnn_1_1Backpropagation.html" title="nn::Backpropagation\l\&lt; AF, OutputLayer \&gt;" alt="" coords="358,5,501,46"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="7,301,142,328"/></map>
+<area shape="rect" id="node2" href="classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="6,115,143,141"/><area shape="rect" id="node3" href="classnn_1_1Normalization.html" title="nn::Normalization" alt="" coords="387,57,511,84"/><area shape="rect" id="node6" href="classnn_1_1Layer.html" title="nn::Layer\&lt; ActivateMethod,\l UpdateMethod \&gt;" alt="" coords="358,338,541,379"/><area shape="rect" id="node9" href="classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="713,375,831,401"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="7,521,142,548"/><area shape="rect" id="node8" href="classnn_1_1LayerInput.html" title="nn::LayerInput" alt="" coords="566,589,671,616"/><area shape="rect" id="node5" href="classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; LayerInput,\l LayerInternal\&lt; AF \&gt;, LayerOutput\lIdentity \&gt;" alt="" coords="1072,299,1293,355"/><area shape="rect" id="node10" href="classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; Input,\l Internal, Output \&gt;" alt="" coords="696,177,848,218"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -132,9 +132,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9dfd5006f34b7b233336a17778c4d87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586f85d19fd1d1ee24f691993d51fe19"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a586f85d19fd1d1ee24f691993d51fe19">getGamma</a> () const </td></tr>
 <tr class="separator:a586f85d19fd1d1ee24f691993d51fe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66509bcb4c197e008ca4e3d39b5b65c0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt; AF, <br class="typebreak"/>
-<a class="el" href="classnn_1_1OutputLayerRegression.html">OutputLayerRegression</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a66509bcb4c197e008ca4e3d39b5b65c0">getBackpropagation</a> () const </td></tr>
-<tr class="separator:a66509bcb4c197e008ca4e3d39b5b65c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f636acb3b800c33d9520b1b4efd882d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a7f636acb3b800c33d9520b1b4efd882d">getPerceptron</a> () const </td></tr>
+<tr class="separator:a7f636acb3b800c33d9520b1b4efd882d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd8d95b930b46a663089df4f11b6226"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Normalization.html">Normalization</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#aadd8d95b930b46a663089df4f11b6226">getNormarization</a> () const </td></tr>
 <tr class="separator:aadd8d95b930b46a663089df4f11b6226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -144,6 +143,8 @@ Private Types</h2></td></tr>
 <tr class="separator:a80dc9d65f2bca7979a8ce9ff9fe82606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec79ee5bb314b3d56a147c0d233340e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#abec79ee5bb314b3d56a147c0d233340e">DeviceVector</a> = <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td></tr>
 <tr class="separator:abec79ee5bb314b3d56a147c0d233340e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99614b400b9613b139bcb0a509164072"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a> = <a class="el" href="classnn_1_1Perceptron.html">Perceptron</a>&lt; <a class="el" href="classnn_1_1LayerInput.html">LayerInput</a>, <a class="el" href="namespacenn.html#a5b509b11a21d6b9fd3a4faa46feef9e9">LayerInternal</a>&lt; AF &gt;, <a class="el" href="namespacenn.html#a008923dc6bceb06bfdfc7fed8ce144cd">LayerOutputIdentity</a> &gt;</td></tr>
+<tr class="separator:a99614b400b9613b139bcb0a509164072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -151,9 +152,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a1d6e23ab835edea2e4aeb1659645202c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e073cd021ae4bf0ea4f2a7da4dec1c0"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a8e073cd021ae4bf0ea4f2a7da4dec1c0">layerCount</a></td></tr>
 <tr class="separator:a8e073cd021ae4bf0ea4f2a7da4dec1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3a0bab88066e691940e74d82d08f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt; AF, <br class="typebreak"/>
-<a class="el" href="classnn_1_1OutputLayerRegression.html">OutputLayerRegression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#acf3a0bab88066e691940e74d82d08f83">backpropagation</a></td></tr>
-<tr class="separator:acf3a0bab88066e691940e74d82d08f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462bfb232c54d3fd79620b686ade789a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a462bfb232c54d3fd79620b686ade789a">perceptron</a></td></tr>
+<tr class="separator:a462bfb232c54d3fd79620b686ade789a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308176077889909b3dbddd11df61d974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1AutoEncoder.html#abec79ee5bb314b3d56a147c0d233340e">DeviceVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1AutoEncoder.html#a308176077889909b3dbddd11df61d974">_1B</a></td></tr>
 <tr class="separator:a308176077889909b3dbddd11df61d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -191,6 +191,28 @@ template&lt;class AF&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::<a class="el" href="classnn_1_1AutoEncoder.html#abec79ee5bb314b3d56a147c0d233340e">DeviceVector</a> =  <a class="el" href="classcuda_1_1DeviceVector.html">cuda::DeviceVector</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a99614b400b9613b139bcb0a509164072"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class AF&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::<a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a> =  <a class="el" href="classnn_1_1Perceptron.html">Perceptron</a>&lt;<a class="el" href="classnn_1_1LayerInput.html">LayerInput</a>, <a class="el" href="namespacenn.html#a5b509b11a21d6b9fd3a4faa46feef9e9">LayerInternal</a>&lt;AF&gt;, <a class="el" href="namespacenn.html#a008923dc6bceb06bfdfc7fed8ce144cd">LayerOutputIdentity</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -252,40 +274,6 @@ template&lt;class AF&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a66509bcb4c197e008ca4e3d39b5b65c0"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class AF&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt;AF, <a class="el" href="classnn_1_1OutputLayerRegression.html">OutputLayerRegression</a>&gt;&amp; <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::getBackpropagation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnn_1_1AutoEncoder_a66509bcb4c197e008ca4e3d39b5b65c0_icgraph.png" border="0" usemap="#classnn_1_1AutoEncoder_a66509bcb4c197e008ca4e3d39b5b65c0_icgraph" alt=""/></div>
-<map name="classnn_1_1AutoEncoder_a66509bcb4c197e008ca4e3d39b5b65c0_icgraph" id="classnn_1_1AutoEncoder_a66509bcb4c197e008ca4e3d39b5b65c0_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="297,5,405,32"/><area shape="rect" id="node3" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="323,56,379,83"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -402,6 +390,40 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classnn_1_1AutoEncoder_aadd8d95b930b46a663089df4f11b6226_icgraph.png" border="0" usemap="#classnn_1_1AutoEncoder_aadd8d95b930b46a663089df4f11b6226_icgraph" alt=""/></div>
 <map name="classnn_1_1AutoEncoder_aadd8d95b930b46a663089df4f11b6226_icgraph" id="classnn_1_1AutoEncoder_aadd8d95b930b46a663089df4f11b6226_icgraph">
 <area shape="rect" id="node2" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="280,5,336,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7f636acb3b800c33d9520b1b4efd882d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class AF&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a>&amp; <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::getPerceptron </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1AutoEncoder_a7f636acb3b800c33d9520b1b4efd882d_icgraph.png" border="0" usemap="#classnn_1_1AutoEncoder_a7f636acb3b800c33d9520b1b4efd882d_icgraph" alt=""/></div>
+<map name="classnn_1_1AutoEncoder_a7f636acb3b800c33d9520b1b4efd882d_icgraph" id="classnn_1_1AutoEncoder_a7f636acb3b800c33d9520b1b4efd882d_icgraph">
+<area shape="rect" id="node2" href="unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="262,5,370,32"/><area shape="rect" id="node3" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="288,56,344,83"/></map>
 </div>
 </p>
 
@@ -620,28 +642,6 @@ template&lt;class AF&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="acf3a0bab88066e691940e74d82d08f83"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class AF&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt;AF, <a class="el" href="classnn_1_1OutputLayerRegression.html">OutputLayerRegression</a>&gt; <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::backpropagation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a8e073cd021ae4bf0ea4f2a7da4dec1c0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -686,13 +686,35 @@ template&lt;class AF&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a462bfb232c54d3fd79620b686ade789a"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class AF&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072">perceptronType</a> <a class="el" href="classnn_1_1AutoEncoder.html">nn::AutoEncoder</a>&lt; AF &gt;::perceptron</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/nn/<a class="el" href="AutoEncoder_8cuh.html">AutoEncoder.cuh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 20 2018 00:52:17 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 28 2018 01:56:22 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

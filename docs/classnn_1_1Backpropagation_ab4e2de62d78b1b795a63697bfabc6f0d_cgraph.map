@@ -1,0 +1,5 @@
+<map id="nn::Backpropagation::Backpropagation" name="nn::Backpropagation::Backpropagation">
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#af5b64d2526b96ecea37d398a25e7d33e" title="nn::Backpropagation\l::setSubStreamCount" alt="" coords="195,38,343,79"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="392,5,539,46"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CudaManager.html#a006633206d874e690b52fe90f9032998" title="cuda::CudaManager::\linitStream" alt="" coords="392,70,539,111"/>
+</map>

@@ -1,3 +1,5 @@
 <map id="nn::Perceptron::getInput" name="nn::Perceptron::getInput">
-<area shape="rect" id="node2" href="$unittest_8cu.html#a82f684ddd56b20d9debfa95835668afa" title="TEST" alt="" coords="216,5,272,32"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="221,5,371,46"/>
+<area shape="rect" id="node3" href="$namespacenn.html#a171929aea7b716e25a7348f15c99f563" title="nn::getParameterVector" alt="" coords="216,71,376,97"/>
+<area shape="rect" id="node4" href="$unittest__Perceptron_8cuh.html#a80eee9181bae0fbbacf942dc617feb91" title="TEST" alt="" coords="268,121,324,148"/>
 </map>

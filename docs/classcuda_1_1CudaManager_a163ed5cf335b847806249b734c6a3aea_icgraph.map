@@ -1,18 +1,20 @@
 <map id="cuda::CudaManager::getInstance" name="cuda::CudaManager::getInstance">
-<area shape="rect" id="node2" href="$classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968" title="cuda::CudaManager::\lgetDeviceProp" alt="" coords="236,167,383,209"/>
-<area shape="rect" id="node13" href="$classnn_1_1Backpropagation.html#af5b64d2526b96ecea37d398a25e7d33e" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::setSubStreamCount" alt="" coords="200,232,419,288"/>
-<area shape="rect" id="node14" href="$classnn_1_1Backpropagation.html#a89b35c8d77934af3b1bc266e6195253f" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::getSubStreamCount" alt="" coords="200,312,419,368"/>
-<area shape="rect" id="node15" href="$classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::getMainStream" alt="" coords="200,392,419,448"/>
-<area shape="rect" id="node16" href="$classnn_1_1Backpropagation.html#a5a426d574a0a34d55a74393245c1f59d" title="nn::Backpropagation\l\&lt; AF, nn::OutputLayerRegression\l \&gt;::getSubStream" alt="" coords="200,472,419,528"/>
-<area shape="rect" id="node17" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="281,552,337,579"/>
-<area shape="rect" id="node3" href="$classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749" title="nn::ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="467,135,664,177"/>
-<area shape="rect" id="node9" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="467,201,664,242"/>
-<area shape="rect" id="node4" href="$classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="712,103,909,145"/>
-<area shape="rect" id="node5" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="989,5,1131,46"/>
-<area shape="rect" id="node7" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="969,70,1151,111"/>
-<area shape="rect" id="node8" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="957,135,1163,177"/>
-<area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="1211,5,1352,46"/>
-<area shape="rect" id="node10" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="712,201,909,242"/>
-<area shape="rect" id="node11" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="969,201,1151,242"/>
-<area shape="rect" id="node12" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="959,266,1161,307"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968" title="cuda::CudaManager::\lgetDeviceProp" alt="" coords="201,169,348,210"/>
+<area shape="rect" id="node13" href="$classnn_1_1Backpropagation.html#af5b64d2526b96ecea37d398a25e7d33e" title="nn::Backpropagation\l::setSubStreamCount" alt="" coords="201,234,349,275"/>
+<area shape="rect" id="node16" href="$classnn_1_1Backpropagation.html#a89b35c8d77934af3b1bc266e6195253f" title="nn::Backpropagation\l::getSubStreamCount" alt="" coords="201,299,349,341"/>
+<area shape="rect" id="node17" href="$classnn_1_1Backpropagation.html#af1f726e08ce4aaca2b51857cccc4df36" title="nn::Backpropagation\l::getMainStream" alt="" coords="204,365,345,406"/>
+<area shape="rect" id="node18" href="$classnn_1_1Backpropagation.html#a5a426d574a0a34d55a74393245c1f59d" title="nn::Backpropagation\l::getSubStream" alt="" coords="204,430,345,471"/>
+<area shape="rect" id="node19" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="247,496,303,523"/>
+<area shape="rect" id="node3" href="$classnn_1_1ElementWiseFunction1to1.html#a1c90a689eceab5af1f108372c0c78749" title="nn::ElementWiseFunction1to1\l::culculateBlockThreadCount" alt="" coords="397,103,595,145"/>
+<area shape="rect" id="node9" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="397,169,595,210"/>
+<area shape="rect" id="node4" href="$classnn_1_1ElementWiseFunction1to1.html#acb21ba07c9634bc01b6f629969c7406d" title="nn::ElementWiseFunction1to1\l::apply" alt="" coords="643,103,840,145"/>
+<area shape="rect" id="node5" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="919,5,1062,46"/>
+<area shape="rect" id="node7" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="899,70,1082,111"/>
+<area shape="rect" id="node8" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="888,135,1093,177"/>
+<area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="1141,5,1283,46"/>
+<area shape="rect" id="node10" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="643,201,840,242"/>
+<area shape="rect" id="node11" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="899,201,1082,242"/>
+<area shape="rect" id="node12" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="889,266,1092,307"/>
+<area shape="rect" id="node14" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="425,234,567,275"/>
+<area shape="rect" id="node15" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="468,340,524,367"/>
 </map>

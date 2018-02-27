@@ -4,12 +4,12 @@
 <area shape="rect" id="node9" href="$classnn_1_1Backpropagation.html#afa9b647bb0f79cf73676443b879efbce" title="nn::Backpropagation\l::back" alt="" coords="155,363,296,405"/>
 <area shape="rect" id="node10" href="$classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081" title="nn::Backpropagation\l::updateParameter" alt="" coords="155,233,296,274"/>
 <area shape="rect" id="node20" href="$unittest_8cu.html#aea6c6a92ada31de0ae2d9e0448b5be80" title="ErrorFunc" alt="" coords="186,429,265,456"/>
-<area shape="rect" id="node21" href="$classnn_1_1Backpropagation.html#a452c9bbe2973c0c21ecd448ef40e0801" title="nn::Backpropagation\l::getWeightAsVector" alt="" coords="374,458,517,499"/>
-<area shape="rect" id="node22" href="$classnn_1_1Backpropagation.html#a5b1237427e514dfeaa59e6d36975505f" title="nn::Backpropagation\l::getBiasAsVector" alt="" coords="375,523,516,565"/>
+<area shape="rect" id="node21" href="$classnn_1_1Backpropagation.html#a452c9bbe2973c0c21ecd448ef40e0801" title="nn::Backpropagation\l::getWeightAsVector" alt="" coords="374,455,517,497"/>
+<area shape="rect" id="node22" href="$classnn_1_1Backpropagation.html#a5b1237427e514dfeaa59e6d36975505f" title="nn::Backpropagation\l::getBiasAsVector" alt="" coords="375,521,516,562"/>
 <area shape="rect" id="node23" href="$classnn_1_1Backpropagation.html#acb8e3e8c72f47f6d39e4b845bd6c84f5" title="nn::Backpropagation\l::getDEDBAsVector" alt="" coords="155,647,296,689"/>
-<area shape="rect" id="node24" href="$classnn_1_1Backpropagation.html#a51a71bbb74e6d5c95eaa9587bf0c38ba" title="nn::Backpropagation\l::setWeight" alt="" coords="155,713,296,754"/>
-<area shape="rect" id="node25" href="$classnn_1_1Backpropagation.html#a540589f741df8dc38361b4dd63335401" title="nn::Backpropagation\l::setBias" alt="" coords="155,778,296,819"/>
-<area shape="rect" id="node26" href="$unittest_8cu.html#a8b7605445954ad74414ae57177d1f540" title="BackpropagationTanhRegTest\l_All_showInfo" alt="" coords="126,582,325,623"/>
+<area shape="rect" id="node25" href="$classnn_1_1Backpropagation.html#a51a71bbb74e6d5c95eaa9587bf0c38ba" title="nn::Backpropagation\l::setWeight" alt="" coords="155,713,296,754"/>
+<area shape="rect" id="node26" href="$classnn_1_1Backpropagation.html#a540589f741df8dc38361b4dd63335401" title="nn::Backpropagation\l::setBias" alt="" coords="155,778,296,819"/>
+<area shape="rect" id="node27" href="$unittest_8cu.html#a8b7605445954ad74414ae57177d1f540" title="BackpropagationTanhRegTest\l_All_showInfo" alt="" coords="126,582,325,623"/>
 <area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="566,201,717,242"/>
 <area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="377,23,514,65"/>
 <area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="766,201,917,242"/>
@@ -24,7 +24,7 @@
 <area shape="rect" id="node14" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="574,397,709,438"/>
 <area shape="rect" id="node17" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="573,135,710,177"/>
 <area shape="rect" id="node19" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="573,70,710,111"/>
-<area shape="rect" id="node27" href="$classnn_1_1Backpropagation.html#ad2f466d8d4e4224585f70d5a4dbe7586" title="nn::Backpropagation\l::getZAsVector" alt="" coords="375,589,516,630"/>
-<area shape="rect" id="node28" href="$classnn_1_1Backpropagation.html#ab6a690edde3170a7e55d47722365b446" title="nn::Backpropagation\l::getUAsVector" alt="" coords="375,654,516,695"/>
-<area shape="rect" id="node29" href="$classnn_1_1Backpropagation.html#ab24e8ac4444af62b90331dd5ef5716a4" title="nn::Backpropagation\l::getDeltaAsVector" alt="" coords="375,719,516,761"/>
+<area shape="rect" id="node24" href="$classnn_1_1Backpropagation.html#ab24e8ac4444af62b90331dd5ef5716a4" title="nn::Backpropagation\l::getDeltaAsVector" alt="" coords="375,717,516,758"/>
+<area shape="rect" id="node28" href="$classnn_1_1Backpropagation.html#ad2f466d8d4e4224585f70d5a4dbe7586" title="nn::Backpropagation\l::getZAsVector" alt="" coords="375,586,516,627"/>
+<area shape="rect" id="node29" href="$classnn_1_1Backpropagation.html#ab6a690edde3170a7e55d47722365b446" title="nn::Backpropagation\l::getUAsVector" alt="" coords="375,651,516,693"/>
 </map>

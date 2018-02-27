@@ -170,6 +170,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplParams" colspan="2">template&lt;class AF , class OutputLayer &gt; </td></tr>
 <tr class="memitem:a2833ccf577ba781cbe2abbff765f56d6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6">getParameterVector</a> (const <a class="el" href="classnn_1_1Backpropagation.html">Backpropagation</a>&lt; AF, OutputLayer &gt; &amp;backpropagation)</td></tr>
 <tr class="separator:a2833ccf577ba781cbe2abbff765f56d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171929aea7b716e25a7348f15c99f563"><td class="memTemplParams" colspan="2">template&lt;class Input , class Internal , class Output &gt; </td></tr>
+<tr class="memitem:a171929aea7b716e25a7348f15c99f563"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a171929aea7b716e25a7348f15c99f563">getParameterVector</a> (const <a class="el" href="classnn_1_1Perceptron.html">Perceptron</a>&lt; Input, Internal, Output &gt; &amp;perceptron)</td></tr>
+<tr class="separator:a171929aea7b716e25a7348f15c99f563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e69378a3aa7bbe6d206b5897811c6f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a90e69378a3aa7bbe6d206b5897811c6f">getParameterVector</a> (const <a class="el" href="classnn_1_1LayerInput.html">LayerInput</a> &amp;layer)</td></tr>
+<tr class="separator:a90e69378a3aa7bbe6d206b5897811c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcba04627d8ed606c352b9d069a928e"><td class="memTemplParams" colspan="2">template&lt;class ActivateFunction , class UpdateMethod &gt; </td></tr>
+<tr class="memitem:a7bcba04627d8ed606c352b9d069a928e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenn.html#a7bcba04627d8ed606c352b9d069a928e">getParameterVector</a> (const <a class="el" href="classnn_1_1Layer.html">Layer</a>&lt; <a class="el" href="classnn_1_1ActivateFunction.html">ActivateFunction</a>, UpdateMethod &gt; &amp;perceptron)</td></tr>
+<tr class="separator:a7bcba04627d8ed606c352b9d069a928e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a060c1d13b3480ab6dc817f3374ab82f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6">getMeanAndVarCovMatrix</a> (const <a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">DeviceMatrix</a> &amp;sample, <a class="el" href="namespacenn.html#a13f598f2513a0b808c43436841af5032">DeviceVector</a> &amp;mean, <a class="el" href="namespacenn.html#a186cab7f3ea0cad79437240d968e2c35">DeviceMatrix</a> &amp;varCovMatrix, cudaStream_t stream)</td></tr>
 <tr class="separator:a060c1d13b3480ab6dc817f3374ab82f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -335,7 +343,77 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacenn_a2833ccf577ba781cbe2abbff765f56d6_icgraph.png" border="0" usemap="#namespacenn_a2833ccf577ba781cbe2abbff765f56d6_icgraph" alt=""/></div>
 <map name="namespacenn_a2833ccf577ba781cbe2abbff765f56d6_icgraph" id="namespacenn_a2833ccf577ba781cbe2abbff765f56d6_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="214,5,322,32"/><area shape="rect" id="node3" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="240,56,296,83"/></map>
+<area shape="rect" id="node2" href="namespacenn.html#a171929aea7b716e25a7348f15c99f563" title="nn::getParameterVector" alt="" coords="213,5,373,32"/><area shape="rect" id="node3" href="unittest_8cu.html#a68e923ad5f7b1753aead5a8083811d72" title="TYPED_TEST" alt="" coords="239,56,347,83"/><area shape="rect" id="node4" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="265,107,321,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a171929aea7b716e25a7348f15c99f563"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Input , class Internal , class Output &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; float &gt; nn::getParameterVector </td>
+          <td>(</td>
+          <td class="paramtype">const Perceptron&lt; Input, Internal, Output &gt; &amp;&#160;</td>
+          <td class="paramname"><em>perceptron</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenn_a171929aea7b716e25a7348f15c99f563_cgraph.png" border="0" usemap="#namespacenn_a171929aea7b716e25a7348f15c99f563_cgraph" alt=""/></div>
+<map name="namespacenn_a171929aea7b716e25a7348f15c99f563_cgraph" id="namespacenn_a171929aea7b716e25a7348f15c99f563_cgraph">
+<area shape="rect" id="node2" href="namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6" title="nn::getParameterVector" alt="" coords="221,77,381,104"/><area shape="rect" id="node6" href="classnn_1_1Perceptron.html#af9e23aaec90e9b420a4b4bec5eae1abf" title="nn::Perceptron::getInput" alt="" coords="220,128,383,155"/><area shape="rect" id="node7" href="classnn_1_1Perceptron.html#a349bcd5df1f07d5c114bec466829e293" title="nn::Perceptron::getInternal" alt="" coords="213,179,389,205"/><area shape="rect" id="node8" href="classnn_1_1Perceptron.html#ae4b3d5efc84d7987b22a98140eaf0089" title="nn::Perceptron::getOutput" alt="" coords="215,229,387,256"/><area shape="rect" id="node3" href="classnn_1_1Backpropagation.html#a9bccb3208701bed484dc1b9f21414822" title="nn::Backpropagation\l::getLayerCount" alt="" coords="437,5,579,46"/><area shape="rect" id="node4" href="classnn_1_1Backpropagation.html#a9bde6d6aa00ca6bd659ba457adbf8811" title="nn::Backpropagation\l::getWeight" alt="" coords="437,70,579,111"/><area shape="rect" id="node5" href="classnn_1_1Backpropagation.html#a826f2eff5d4f56fa72b74fbcfc6f064a" title="nn::Backpropagation\l::getBias" alt="" coords="437,135,579,177"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a90e69378a3aa7bbe6d206b5897811c6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; float &gt; nn::getParameterVector </td>
+          <td>(</td>
+          <td class="paramtype">const LayerInput &amp;&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bcba04627d8ed606c352b9d069a928e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ActivateFunction , class UpdateMethod &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; float &gt; nn::getParameterVector </td>
+          <td>(</td>
+          <td class="paramtype">const Layer&lt; ActivateFunction, UpdateMethod &gt; &amp;&#160;</td>
+          <td class="paramname"><em>perceptron</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenn_a7bcba04627d8ed606c352b9d069a928e_cgraph.png" border="0" usemap="#namespacenn_a7bcba04627d8ed606c352b9d069a928e_cgraph" alt=""/></div>
+<map name="namespacenn_a7bcba04627d8ed606c352b9d069a928e_cgraph" id="namespacenn_a7bcba04627d8ed606c352b9d069a928e_cgraph">
+<area shape="rect" id="node2" href="classnn_1_1Layer.html#a691d1142f913ea8837c2efe208f0a04d" title="nn::Layer::getWeight" alt="" coords="223,5,366,32"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="214,56,375,83"/><area shape="rect" id="node4" href="classnn_1_1Layer.html#a1a605eeadeab3625ee4a4e1d43c382e9" title="nn::Layer::getBias" alt="" coords="231,107,359,133"/><area shape="rect" id="node5" href="classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="213,157,376,184"/></map>
 </div>
 </p>
 
@@ -376,21 +454,12 @@ Here is the call graph for this function:</div>
 </div>
 </p>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacenn_a4a7dd8895114bb339243228a23a4ab42_icgraph.png" border="0" usemap="#namespacenn_a4a7dd8895114bb339243228a23a4ab42_icgraph" alt=""/></div>
-<map name="namespacenn_a4a7dd8895114bb339243228a23a4ab42_icgraph" id="namespacenn_a4a7dd8895114bb339243228a23a4ab42_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="184,5,240,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 20 2018 00:52:17 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 28 2018 01:56:22 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

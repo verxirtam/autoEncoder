@@ -1,3 +1,10 @@
 <map id="src/nn/Perceptron.cuh" name="src/nn/Perceptron.cuh">
-<area shape="rect" id="node2" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="27,80,132,107"/>
+<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="189,80,352,107"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="443,229,548,256"/>
+<area shape="rect" id="node7" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="508,80,717,107"/>
+<area shape="rect" id="node9" href="$unittest__Perceptron_8cuh.html" title="src/unittest_Perceptron.cuh" alt="" coords="743,80,925,107"/>
+<area shape="rect" id="node3" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,155,165,181"/>
+<area shape="rect" id="node6" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,155,432,181"/>
+<area shape="rect" id="node4" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,229,161,256"/>
+<area shape="rect" id="node8" href="$unittest__PerceptronUtils_8cuh.html" title="src/unittest_PerceptronUtils.cuh" alt="" coords="559,155,768,181"/>
 </map>

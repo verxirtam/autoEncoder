@@ -1,3 +1,6 @@
 <map id="nn::Perceptron::getInternal" name="nn::Perceptron::getInternal">
-<area shape="rect" id="node2" href="$unittest_8cu.html#a82f684ddd56b20d9debfa95835668afa" title="TEST" alt="" coords="229,5,285,32"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="253,5,403,46"/>
+<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#a857af9e2d15c843c02f8a7ad044a9217" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setEpsilon" alt="" coords="231,70,425,111"/>
+<area shape="rect" id="node4" href="$classnn_1_1AutoEncoder.html#a9dfd5006f34b7b233336a17778c4d87c" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setGamma" alt="" coords="229,135,427,177"/>
+<area shape="rect" id="node5" href="$namespacenn.html#a171929aea7b716e25a7348f15c99f563" title="nn::getParameterVector" alt="" coords="248,201,408,228"/>
 </map>

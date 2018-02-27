@@ -1,15 +1,16 @@
 <map id="cuda::DeviceVector::get" name="cuda::DeviceVector::get">
-<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="223,45,355,72"/>
-<area shape="rect" id="node3" href="$namespacecuda.html#a813115ac345cfcca4e482b2b0351fade" title="cuda::DnSsyevd" alt="" coords="230,96,349,123"/>
-<area shape="rect" id="node9" href="$namespacecuda.html#ac89f3d73f17e7a3a54a6734231ee6b16" title="cuda::compare" alt="" coords="235,147,343,173"/>
-<area shape="rect" id="node10" href="$namespacecuda.html#adce3c8c14137f70cb144f5030327f34c" title="cuda::writeToCsvFile" alt="" coords="216,197,363,224"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="261,248,317,275"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="253,299,325,325"/>
-<area shape="rect" id="node4" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="411,71,560,97"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="457,121,513,148"/>
-<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="609,5,759,46"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="656,71,712,97"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="648,121,720,148"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="457,172,513,199"/>
-<area shape="rect" id="node12" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="431,223,539,249"/>
+<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="230,45,362,72"/>
+<area shape="rect" id="node3" href="$namespacecuda.html#a813115ac345cfcca4e482b2b0351fade" title="cuda::DnSsyevd" alt="" coords="237,96,355,123"/>
+<area shape="rect" id="node9" href="$namespacecuda.html#ac89f3d73f17e7a3a54a6734231ee6b16" title="cuda::compare" alt="" coords="242,147,350,173"/>
+<area shape="rect" id="node10" href="$namespacecuda.html#adce3c8c14137f70cb144f5030327f34c" title="cuda::writeToCsvFile" alt="" coords="223,197,369,224"/>
+<area shape="rect" id="node13" href="$namespacenn.html#a7bcba04627d8ed606c352b9d069a928e" title="nn::getParameterVector" alt="" coords="216,248,376,275"/>
+<area shape="rect" id="node14" href="$unittest_8cu.html#aecaf7e708ffeb37254016c4d37ea19cf" title="TEST" alt="" coords="268,299,324,325"/>
+<area shape="rect" id="node15" href="$unittest_8cu.html#a6ced43c0892681d4f32e0a84ad0d22aa" title="TEST_P" alt="" coords="260,349,332,376"/>
+<area shape="rect" id="node4" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="424,71,573,97"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="471,121,527,148"/>
+<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="622,5,773,46"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="669,71,725,97"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="661,121,733,148"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#a93514d14c5e6d97fd61b6bd841dcc10c" title="TEST" alt="" coords="471,172,527,199"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="445,223,553,249"/>
 </map>

@@ -99,11 +99,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="Layer_8h_source.html">Layer.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for nn::Layer&lt; ActivateMethod, UpdateMethod &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Layer__inherit__graph.png" border="0" usemap="#nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_inherit__map" id="nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_inherit__map">
+<area shape="rect" id="node2" href="classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="5,112,121,139"/><area shape="rect" id="node3" href="classnn_1_1Layer.html" title="nn::Layer\&lt; nn::Func1to1Tanh \&gt;" alt="" coords="147,112,352,139"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
 Collaboration diagram for nn::Layer&lt; ActivateMethod, UpdateMethod &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnn_1_1Layer__coll__graph.png" border="0" usemap="#nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map" id="nn_1_1Layer_3_01ActivateMethod_00_01UpdateMethod_01_4_coll__map">
-<area shape="rect" id="node2" href="classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="5,5,141,32"/><area shape="rect" id="node3" href="classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="166,5,300,32"/></map>
+<area shape="rect" id="node3" href="classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="137,5,273,32"/><area shape="rect" id="node4" href="classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="298,5,432,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -136,8 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad382b4e4f0eb5fb40eadc0120fde637b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acac32ffe7a66a29b7e7ae06e28bd2466"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1Layer.html#ad9ab448d2ce71bc3a019cbf1814dc9e6">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Layer.html#acac32ffe7a66a29b7e7ae06e28bd2466">getWeightTDelta</a> () const </td></tr>
 <tr class="separator:acac32ffe7a66a29b7e7ae06e28bd2466"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a467575381890291f45b1152e431a197a"><td class="memItemLeft" align="right" valign="top">const UpdateMethod &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Layer.html#a467575381890291f45b1152e431a197a">getUpdateMethod</a> () const </td></tr>
-<tr class="separator:a467575381890291f45b1152e431a197a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966ec6ed1c67d6630027dfe745999472"><td class="memItemLeft" align="right" valign="top">UpdateMethod &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1Layer.html#a966ec6ed1c67d6630027dfe745999472">getUpdateMethod</a> ()</td></tr>
+<tr class="separator:a966ec6ed1c67d6630027dfe745999472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -181,7 +188,7 @@ Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -203,7 +210,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -226,7 +233,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -323,7 +330,7 @@ Here is the call graph for this function:</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -342,13 +349,22 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Layer_a1a605eeadeab3625ee4a4e1d43c382e9_icgraph.png" border="0" usemap="#classnn_1_1Layer_a1a605eeadeab3625ee4a4e1d43c382e9_icgraph" alt=""/></div>
+<map name="classnn_1_1Layer_a1a605eeadeab3625ee4a4e1d43c382e9_icgraph" id="classnn_1_1Layer_a1a605eeadeab3625ee4a4e1d43c382e9_icgraph">
+<area shape="rect" id="node2" href="namespacenn.html#a7bcba04627d8ed606c352b9d069a928e" title="nn::getParameterVector" alt="" coords="181,5,341,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ad382b4e4f0eb5fb40eadc0120fde637b"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -373,7 +389,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -398,7 +414,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -419,20 +435,20 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a467575381890291f45b1152e431a197a"></a>
+<a class="anchor" id="a966ec6ed1c67d6630027dfe745999472"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const UpdateMethod&amp; <a class="el" href="classnn_1_1Layer.html">nn::Layer</a>&lt; ActivateMethod, UpdateMethod &gt;::getUpdateMethod </td>
+          <td class="memname">UpdateMethod&amp; <a class="el" href="classnn_1_1Layer.html">nn::Layer</a>&lt; ActivateMethod, UpdateMethod &gt;::getUpdateMethod </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -442,13 +458,22 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Layer_a966ec6ed1c67d6630027dfe745999472_icgraph.png" border="0" usemap="#classnn_1_1Layer_a966ec6ed1c67d6630027dfe745999472_icgraph" alt=""/></div>
+<map name="classnn_1_1Layer_a966ec6ed1c67d6630027dfe745999472_icgraph" id="classnn_1_1Layer_a966ec6ed1c67d6630027dfe745999472_icgraph">
+<area shape="rect" id="node2" href="classnn_1_1AutoEncoder.html#a7f1dfb7a5b143cb938622bb018aee5dd" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getEpsilon" alt="" coords="241,5,436,46"/><area shape="rect" id="node3" href="classnn_1_1AutoEncoder.html#a586f85d19fd1d1ee24f691993d51fe19" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getGamma" alt="" coords="240,70,437,111"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a691d1142f913ea8837c2efe208f0a04d"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -466,6 +491,15 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Layer_a691d1142f913ea8837c2efe208f0a04d_icgraph.png" border="0" usemap="#classnn_1_1Layer_a691d1142f913ea8837c2efe208f0a04d_icgraph" alt=""/></div>
+<map name="classnn_1_1Layer_a691d1142f913ea8837c2efe208f0a04d_icgraph" id="classnn_1_1Layer_a691d1142f913ea8837c2efe208f0a04d_icgraph">
+<area shape="rect" id="node2" href="namespacenn.html#a7bcba04627d8ed606c352b9d069a928e" title="nn::getParameterVector" alt="" coords="197,5,357,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -507,7 +541,7 @@ Here is the call graph for this function:</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -532,7 +566,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -594,6 +628,15 @@ Here is the call graph for this function:</div>
 </div>
 </p>
 
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnn_1_1Layer_a9add69cb9817667db1a54dcaa9cc3a75_icgraph.png" border="0" usemap="#classnn_1_1Layer_a9add69cb9817667db1a54dcaa9cc3a75_icgraph" alt=""/></div>
+<map name="classnn_1_1Layer_a9add69cb9817667db1a54dcaa9cc3a75_icgraph" id="classnn_1_1Layer_a9add69cb9817667db1a54dcaa9cc3a75_icgraph">
+<area shape="rect" id="node2" href="unittest__Perceptron_8cuh.html#ac1eb8b099792602a7596f5c329be441d" title="TEST" alt="" coords="155,5,211,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ad01db2b340307d849a690f14fce79327"></a>
@@ -635,7 +678,7 @@ Here is the call graph for this function:</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -661,7 +704,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -706,7 +749,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -728,7 +771,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -750,7 +793,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -772,7 +815,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -794,7 +837,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -816,7 +859,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -838,7 +881,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -860,7 +903,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -882,7 +925,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
+template&lt;class ActivateMethod, class UpdateMethod&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -907,7 +950,7 @@ template&lt;class ActivateMethod , class UpdateMethod &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 20 2018 00:52:17 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 28 2018 01:56:22 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

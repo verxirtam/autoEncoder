@@ -117,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a43f7adff767e2e0e4fb0147184430828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d633aaac464e879de6ac336712ac4c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnn_1_1LayerInput.html#a8f3667b91e197d7dbe3794c4c59037d6">DeviceMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1LayerInput.html#ab5d633aaac464e879de6ac336712ac4c">getZ</a> () const </td></tr>
 <tr class="separator:ab5d633aaac464e879de6ac336712ac4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777f36dc0a6f34a2cfa32eb362f9edf0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1LayerInput.html#a777f36dc0a6f34a2cfa32eb362f9edf0">getMiniBatchSize</a> () const </td></tr>
+<tr class="separator:a777f36dc0a6f34a2cfa32eb362f9edf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -127,6 +129,8 @@ Private Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:abe928ebb6cba46fe1fdad0f3bd5a2c4f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1LayerInput.html#abe928ebb6cba46fe1fdad0f3bd5a2c4f">miniBatchSize</a></td></tr>
+<tr class="separator:abe928ebb6cba46fe1fdad0f3bd5a2c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd05ab4c839e63b5476b5740d3fbdc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnn_1_1LayerInput.html#a8f3667b91e197d7dbe3794c4c59037d6">DeviceMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnn_1_1LayerInput.html#acbd05ab4c839e63b5476b5740d3fbdc5">x</a></td></tr>
 <tr class="separator:acbd05ab4c839e63b5476b5740d3fbdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -244,6 +248,29 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a777f36dc0a6f34a2cfa32eb362f9edf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int nn::LayerInput::getMiniBatchSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab5d633aaac464e879de6ac336712ac4c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -299,15 +326,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnn_1_1LayerInput_aaa8a1f528a540da9c23182a9820047ba_icgraph.png" border="0" usemap="#classnn_1_1LayerInput_aaa8a1f528a540da9c23182a9820047ba_icgraph" alt=""/></div>
-<map name="classnn_1_1LayerInput_aaa8a1f528a540da9c23182a9820047ba_icgraph" id="classnn_1_1LayerInput_aaa8a1f528a540da9c23182a9820047ba_icgraph">
-<area shape="rect" id="node2" href="unittest_8cu.html#a82f684ddd56b20d9debfa95835668afa" title="TEST" alt="" coords="184,5,240,32"/></map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a43f7adff767e2e0e4fb0147184430828"></a>
@@ -335,6 +353,26 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="abe928ebb6cba46fe1fdad0f3bd5a2c4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int nn::LayerInput::miniBatchSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="acbd05ab4c839e63b5476b5740d3fbdc5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -361,7 +399,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 20 2018 00:52:17 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 28 2018 01:56:22 for autoEncoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

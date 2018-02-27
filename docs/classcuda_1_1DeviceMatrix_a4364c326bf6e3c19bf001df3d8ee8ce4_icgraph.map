@@ -2,10 +2,11 @@
 <area shape="rect" id="node2" href="$namespacecuda.html#a813115ac345cfcca4e482b2b0351fade" title="cuda::DnSsyevd" alt="" coords="254,121,373,148"/>
 <area shape="rect" id="node8" href="$namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5" title="cuda::compare" alt="" coords="259,172,367,199"/>
 <area shape="rect" id="node10" href="$namespacecuda.html#aa27eb773ce4a8cb680464e3b29204fec" title="cuda::writeToCsvFile" alt="" coords="240,223,387,249"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="277,273,349,300"/>
-<area shape="rect" id="node12" href="$unittest_8cu.html#a98d826c169d0b7bf1e946e6181a2a420" title="TEST" alt="" coords="285,324,341,351"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="259,375,367,401"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="216,426,411,467"/>
+<area shape="rect" id="node11" href="$namespacenn.html#a7bcba04627d8ed606c352b9d069a928e" title="nn::getParameterVector" alt="" coords="233,273,393,300"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#a352b347e46f1320e4ace101b5b3d34ed" title="TEST_P" alt="" coords="277,324,349,351"/>
+<area shape="rect" id="node13" href="$unittest_8cu.html#a98d826c169d0b7bf1e946e6181a2a420" title="TEST" alt="" coords="285,375,341,401"/>
+<area shape="rect" id="node14" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="259,425,367,452"/>
+<area shape="rect" id="node15" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="216,477,411,518"/>
 <area shape="rect" id="node3" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="459,71,608,97"/>
 <area shape="rect" id="node7" href="$unittest_8cu.html#ad825710f89f5943079e617a471a8d6ae" title="TEST" alt="" coords="505,121,561,148"/>
 <area shape="rect" id="node4" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="657,5,807,46"/>

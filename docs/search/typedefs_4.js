@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowcolumn',['RowColumn',['../unittest_8cu.html#a4b307f9b7776234c29d3de7481d538be',1,'unittest.cu']]]
+  ['perceptrontype',['perceptronType',['../classnn_1_1AutoEncoder.html#a99614b400b9613b139bcb0a509164072',1,'nn::AutoEncoder']]]
 ];

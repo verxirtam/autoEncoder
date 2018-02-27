@@ -1,12 +1,9 @@
 <map id="src/nn/ActivateFunction.cuh" name="src/nn/ActivateFunction.cuh">
-<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="427,80,611,107"/>
-<area shape="rect" id="node11" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="635,80,753,107"/>
-<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="139,163,301,189"/>
-<area shape="rect" id="node8" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="359,155,547,197"/>
-<area shape="rect" id="node9" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="508,245,717,272"/>
-<area shape="rect" id="node10" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="623,155,809,197"/>
-<area shape="rect" id="node4" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,245,165,272"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="302,320,407,347"/>
-<area shape="rect" id="node7" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,245,432,272"/>
-<area shape="rect" id="node5" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,320,161,347"/>
+<area shape="rect" id="node2" href="$Backpropagation_8cuh.html" title="src/nn/Backpropagation.cuh" alt="" coords="100,80,284,107"/>
+<area shape="rect" id="node8" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="309,80,427,107"/>
+<area shape="rect" id="node3" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="5,246,192,287"/>
+<area shape="rect" id="node5" href="$BackpropagationUtils_8cuh.html" title="src/nn/BackpropagationUtils.cuh" alt="" coords="217,253,427,280"/>
+<area shape="rect" id="node7" href="$BackpropagationUtils__detail_8cuh.html" title="src/nn/BackpropagationUtils\l_detail.cuh" alt="" coords="229,155,416,197"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="127,411,232,437"/>
+<area shape="rect" id="node6" href="$unittest__PerceptronUtils_8cuh.html" title="src/unittest_PerceptronUtils.cuh" alt="" coords="218,336,427,363"/>
 </map>

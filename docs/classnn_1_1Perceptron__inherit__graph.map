@@ -1,0 +1,4 @@
+<map id="nn::Perceptron&lt; Input, Internal, Output &gt;" name="nn::Perceptron&lt; Input, Internal, Output &gt;">
+<area shape="rect" id="node2" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; LayerInput,\l LayerInternal\&lt; AF \&gt;, LayerOutput\lIdentity \&gt;" alt="" coords="416,4,637,60"/>
+<area shape="rect" id="node3" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; LayerInput,\l LayerInternal\&lt; nn::Func1to1Tanh\l \&gt;, LayerOutputIdentity \&gt;" alt="" coords="417,84,636,140"/>
+</map>
