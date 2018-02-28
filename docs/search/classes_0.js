@@ -4,6 +4,7 @@ var searchData=
   ['activatemethodelementwise',['ActivateMethodElementWise',['../classnn_1_1ActivateMethodElementWise.html',1,'nn']]],
   ['activatemethodelementwisetest',['ActivateMethodElementWiseTest',['../classActivateMethodElementWiseTest.html',1,'']]],
   ['activatemethodoutputidentity',['ActivateMethodOutputIdentity',['../classnn_1_1ActivateMethodOutputIdentity.html',1,'nn']]],
+  ['activatemethodoutputidentitytest',['ActivateMethodOutputIdentityTest',['../classActivateMethodOutputIdentityTest.html',1,'']]],
   ['autoencoder',['AutoEncoder',['../classnn_1_1AutoEncoder.html',1,'nn']]],
   ['autoencoder_3c_20nn_3a_3afunc1to1tanh_20_3e',['AutoEncoder&lt; nn::Func1to1Tanh &gt;',['../classnn_1_1AutoEncoder.html',1,'nn']]],
   ['autoencodertest',['AutoEncoderTest',['../classAutoEncoderTest.html',1,'']]]

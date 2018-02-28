@@ -1,7 +1,8 @@
 <map id="src/nn/Func1to1ReLU.cuh" name="src/nn/Func1to1ReLU.cuh">
 <area shape="rect" id="node2" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="5,88,123,115"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="318,171,423,197"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="414,171,519,197"/>
 <area shape="rect" id="node4" href="$unittest__Layer_8cuh.html" title="src/unittest_Layer.cuh" alt="" coords="199,88,349,115"/>
 <area shape="rect" id="node5" href="$unittest__ActivateMethodElementWise_8cuh.html" title="src/unittest_ActivateMethod\lElementWise.cuh" alt="" coords="374,81,559,122"/>
-<area shape="rect" id="node6" href="$unittest__Perceptron_8cuh.html" title="src/unittest_Perceptron.cuh" alt="" coords="583,88,765,115"/>
+<area shape="rect" id="node6" href="$unittest__ActivateMethodOutputIdentity_8cuh.html" title="src/unittest_ActivateMethod\lOutputIdentity.cuh" alt="" coords="583,81,768,122"/>
+<area shape="rect" id="node7" href="$unittest__Perceptron_8cuh.html" title="src/unittest_Perceptron.cuh" alt="" coords="793,88,975,115"/>
 </map>

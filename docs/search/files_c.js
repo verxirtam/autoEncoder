@@ -3,6 +3,7 @@ var searchData=
   ['unittest_2ecu',['unittest.cu',['../unittest_8cu.html',1,'']]],
   ['unittest_2eh',['unittest.h',['../unittest_8h.html',1,'']]],
   ['unittest_5factivatemethodelementwise_2ecuh',['unittest_ActivateMethodElementWise.cuh',['../unittest__ActivateMethodElementWise_8cuh.html',1,'']]],
+  ['unittest_5factivatemethodoutputidentity_2ecuh',['unittest_ActivateMethodOutputIdentity.cuh',['../unittest__ActivateMethodOutputIdentity_8cuh.html',1,'']]],
   ['unittest_5flayer_2ecuh',['unittest_Layer.cuh',['../unittest__Layer_8cuh.html',1,'']]],
   ['unittest_5fperceptron_2ecuh',['unittest_Perceptron.cuh',['../unittest__Perceptron_8cuh.html',1,'']]],
   ['unittest_5fperceptronutils_2ecuh',['unittest_PerceptronUtils.cuh',['../unittest__PerceptronUtils_8cuh.html',1,'']]],
