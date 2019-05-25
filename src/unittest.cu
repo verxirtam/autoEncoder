@@ -2496,10 +2496,10 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
 	//::testing::GTEST_FLAG(filter)="*SerialTest*";
-	//::testing::GTEST_FLAG(filter)="*LayerTest*";
+	::testing::GTEST_FLAG(filter)="*LayerTest*";
 	//::testing::GTEST_FLAG(filter)="*Method*";
 	//::testing::GTEST_FLAG(filter)="*ActivateMethodElementWiseTest*";
-	::testing::GTEST_FLAG(filter)="*ActivateMethod*";
+	//::testing::GTEST_FLAG(filter)="*ActivateMethod*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronUtilsTest*";
 	
