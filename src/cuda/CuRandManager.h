@@ -47,6 +47,12 @@ namespace cuda
 		}\
 	}\
 }
+#define CURAND_CALL_NO_EXCEPTION(cmd)\
+{\
+	{\
+		cmd;\
+	}\
+}
 
 //cuRAND全体の管理を行う
 class CuRandManager
@@ -64,7 +70,7 @@ private:
 	}
 	~CuRandManager()
 	{
-		CURAND_CALL(curandDestroyGenerator(generator));
+		CURAND_CALL_NO_EXCEPTION(curandDestroyGenerator(generator));
 	}
 	//シングルトンとするため禁止する
 	//コピーコンストラクタ

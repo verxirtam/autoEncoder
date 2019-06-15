@@ -127,7 +127,7 @@ public:
 	//デストラクタ
 	~DeviceMatrix()
 	{
-		CUDA_CALL(cudaFree(device));
+		CUDA_CALL_NO_EXCEPTION(cudaFree(device));
 	}
 	void set(const float* host)
 	{

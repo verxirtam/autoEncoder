@@ -45,6 +45,13 @@ namespace cuda
 	}\
 }
 
+#define CUDA_CALL_NO_EXCEPTION(cmd)\
+{\
+	{\
+		cmd;\
+	}\
+}
+
 //CUDA全体の設定・変更・情報取得を行う
 //シングルトンとしている。
 //コンストラクタでデバイスの情報を取得している。
@@ -65,7 +72,7 @@ private:
 	{
 		for(auto&& s : stream)
 		{
-			CUDA_CALL(cudaStreamDestroy(s));
+			CUDA_CALL_NO_EXCEPTION(cudaStreamDestroy(s));
 		}
 	}
 	//シングルトンとするため禁止する

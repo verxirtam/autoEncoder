@@ -2147,7 +2147,7 @@ TYPED_TEST(AutoEncoderTest, csv)
 	unsigned int learning_count = 1000;
 
 	//学習の実行
-	for(int i = 0; i < learning_count; i++)
+	for(unsigned int i = 0; i < learning_count; i++)
 	{
 		//学習用データの生成
 		for(int j = 0; j < 10; j++)
@@ -2471,6 +2471,7 @@ TEST(TimeUtilTest, Simple)
 //////////////////////////////////////////////////////////////////////
 int main(int argc, char **argv)
 {
+	//::testing::GTEST_FLAG(filter)="*DeviceVectorTest*";
 	//::testing::GTEST_FLAG(filter)="-:*NumericDifferentiation*";
 	
 	//::testing::GTEST_FLAG(filter)="*BackpropagationTanhRegObtainDEDWTest*";
@@ -2496,7 +2497,7 @@ int main(int argc, char **argv)
 	//::testing::GTEST_FLAG(filter)="*NumericDifferentiation*";
 	//::testing::GTEST_FLAG(filter)="*PerceptronTest*";
 	//::testing::GTEST_FLAG(filter)="*SerialTest*";
-	::testing::GTEST_FLAG(filter)="*LayerTest*";
+	//::testing::GTEST_FLAG(filter)="*LayerTest*";
 	//::testing::GTEST_FLAG(filter)="*Method*";
 	//::testing::GTEST_FLAG(filter)="*ActivateMethodElementWiseTest*";
 	//::testing::GTEST_FLAG(filter)="*ActivateMethod*";

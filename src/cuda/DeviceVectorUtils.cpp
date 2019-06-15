@@ -17,7 +17,8 @@
  */
 #include "DeviceVectorUtils.h"
 
-#include <algorithm>
+//#include <algorithm>
+#include <numeric>
 
 namespace cuda
 {

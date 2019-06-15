@@ -46,6 +46,12 @@ namespace cuda
 		}\
 	}\
 }
+#define CUSOLVERDN_CALL_NO_EXCEPTION(cmd)\
+{\
+	{\
+		cmd;\
+	}\
+}
 
 //CuSolverDnの設定・変更・情報取得を行う
 //シングルトンとしている。
@@ -61,7 +67,7 @@ private:
 	}
 	~CuSolverDnManager()
 	{
-		CUSOLVERDN_CALL(cusolverDnDestroy(handle));
+		CUSOLVERDN_CALL_NO_EXCEPTION(cusolverDnDestroy(handle));
 	}
 	//シングルトンとするため禁止する
 	//コピーコンストラクタ

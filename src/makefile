@@ -134,7 +134,7 @@ testprof: $(OUTDIR)/$(TESTTARGET)
 		$(NVPROF) --log-file $(TESTTARGET).nvprof ./$(TESTTARGET) $(TESTOPTION) 2>&1 | tee -a $(TESTTARGET).log;\
 		if [ -f core ]; then banner core dumped!;fi;\
 		gprof $(TESTTARGET) | $(GPROF2DOT) | dot -Tpng -o gprof_call_graph_$(TESTTARGET).png;\
-		$(NVPROFGRAPH) $(TESTTARGET) nvprof_$(TESTTARGET).png;\
+		: $(NVPROFGRAPH) $(TESTTARGET) nvprof_$(TESTTARGET).png;\
 	)
 
 #githubにアップロードする

@@ -136,7 +136,7 @@ public:
 	//デストラクタ
 	~DeviceVector()
 	{
-		CUDA_CALL(cudaFree(device));
+		CUDA_CALL_NO_EXCEPTION(cudaFree(device));
 	}
 	//値の設定
 	//配列のサイズがdimensionになっていることが前提

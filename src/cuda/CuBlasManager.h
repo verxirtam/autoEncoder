@@ -51,6 +51,12 @@ namespace cuda
 	}\
 }
 
+#define CUBLAS_CALL_NO_EXCEPTION(cmd)\
+{\
+	{\
+		cmd;\
+	}\
+}
 
 
 
@@ -75,7 +81,7 @@ private:
 public:
 	virtual ~CuBlasManager()
 	{
-		CUBLAS_CALL(cublasDestroy(handle));
+		CUBLAS_CALL_NO_EXCEPTION(cublasDestroy(handle));
 	}
 	static CuBlasManager& getInstance()
 	{
