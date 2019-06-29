@@ -1,3 +1,4 @@
 <map id="cuda::CuBlasManager::getHandle" name="cuda::CuBlasManager::getHandle">
-<area shape="rect" id="node2" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="206,5,357,46"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="216,5,379,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#aac42f8f53aceabfb34187e78adb36370" title="cuda::CuBlasManager\l::getErrorString" alt="" coords="216,71,379,112"/>
 </map>

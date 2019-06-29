@@ -1,4 +1,4 @@
 <map id="src/nn/OutputLayerRegression.cuh" name="src/nn/OutputLayerRegression.cuh">
-<area shape="rect" id="node2" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="22,81,209,122"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="63,171,168,197"/>
+<area shape="rect" id="node2" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="24,80,229,121"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="69,169,184,196"/>
 </map>

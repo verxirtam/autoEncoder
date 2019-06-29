@@ -1,11 +1,11 @@
 <map id="src/cuda/CuRandFunction.h" name="src/cuda/CuRandFunction.h">
-<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="CuRandManager.h" alt="" coords="684,229,813,256"/>
-<area shape="rect" id="node10" href="$CuBlasFunction_8h.html" title="CuBlasFunction.h" alt="" coords="503,80,629,107"/>
-<area shape="rect" id="node7" href="$CuRandException_8h.html" title="CuRandException.h" alt="" coords="528,379,667,405"/>
-<area shape="rect" id="node11" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="511,155,621,181"/>
-<area shape="rect" id="node19" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="375,155,485,181"/>
-<area shape="rect" id="node13" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="271,229,397,256"/>
-<area shape="rect" id="node15" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="111,304,225,331"/>
-<area shape="rect" id="node18" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,379,139,405"/>
-<area shape="rect" id="node17" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="299,379,421,405"/>
+<area shape="rect" id="node2" href="$CuRandManager_8h.html" title="CuRandManager.h" alt="" coords="727,229,866,256"/>
+<area shape="rect" id="node10" href="$CuBlasFunction_8h.html" title="CuBlasFunction.h" alt="" coords="522,80,655,107"/>
+<area shape="rect" id="node7" href="$CuRandException_8h.html" title="CuRandException.h" alt="" coords="561,379,709,405"/>
+<area shape="rect" id="node11" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="529,155,648,181"/>
+<area shape="rect" id="node19" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="385,155,505,181"/>
+<area shape="rect" id="node13" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="291,229,425,256"/>
+<area shape="rect" id="node15" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="122,304,245,331"/>
+<area shape="rect" id="node18" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="5,379,148,405"/>
+<area shape="rect" id="node17" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="319,379,450,405"/>
 </map>

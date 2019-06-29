@@ -1,0 +1,4 @@
+<map id="nn::Backpropagation::getSubStream" name="nn::Backpropagation::getSubStream">
+<area shape="rect" id="node2" href="$classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="209,5,368,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CudaManager.html#a3a5ece9369b7c54537125e6882dd6c5b" title="cuda::CudaManager::\lgetStream" alt="" coords="209,71,368,112"/>
+</map>

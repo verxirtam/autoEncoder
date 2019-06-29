@@ -1,6 +1,8 @@
 <map id="nn::ElementWiseFunction1to1::apply" name="nn::ElementWiseFunction1to1::apply">
-<area shape="rect" id="node2" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="282,5,425,46"/>
-<area shape="rect" id="node4" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="262,70,445,111"/>
-<area shape="rect" id="node5" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="251,135,456,177"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="504,5,645,46"/>
+<area shape="rect" id="node2" href="$classnn_1_1ActivateFunction.html#aa6b84529e47f810873731d6ae24d82c2" title="nn::ActivateFunction\l::activate" alt="" coords="303,35,457,76"/>
+<area shape="rect" id="node6" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="279,100,481,141"/>
+<area shape="rect" id="node7" href="$classnn_1_1OutputLayerMulticlassClassification.html#a9c97c37429f09233b4b12eb321c60d2a" title="nn::OutputLayerMulticlass\lClassification::activateFunction" alt="" coords="268,165,492,207"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="540,5,696,47"/>
+<area shape="rect" id="node5" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="595,71,641,98"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l::obtainUFromZ" alt="" coords="744,5,900,47"/>
 </map>

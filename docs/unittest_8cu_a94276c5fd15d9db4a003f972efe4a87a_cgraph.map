@@ -1,4 +1,5 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classcuda_1_1CuSolverDnManager.html#aff6e97bef99ced3441de486fc0015efc" title="cuda::CuSolverDnManager\l::getHandle" alt="" coords="109,5,288,46"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CuSolverDnManager.html#a442915920bba26cdfca25b8d42640a66" title="cuda::CuSolverDnManager\l::getInstance" alt="" coords="336,5,515,46"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuSolverDnManager.html#aff6e97bef99ced3441de486fc0015efc" title="cuda::CuSolverDnManager\l::getHandle" alt="" coords="108,39,301,80"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuSolverDnManager.html#a442915920bba26cdfca25b8d42640a66" title="cuda::CuSolverDnManager\l::getInstance" alt="" coords="349,5,543,47"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuSolverDnManager.html#a99611c1ee06867a1e86d024e6356d579" title="cuda::CuSolverDnManager\l::getErrorString" alt="" coords="349,71,543,112"/>
 </map>

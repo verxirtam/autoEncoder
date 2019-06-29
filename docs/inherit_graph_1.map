@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classcuda_1_1CuBlasException.html" title="cuda::CuBlasException" alt="" coords="173,5,331,32"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CudaException.html" title="cuda::CudaException" alt="" coords="179,56,325,83"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuRandException.html" title="cuda::CuRandException" alt="" coords="170,107,334,133"/>
-<area shape="rect" id="node5" href="$classcuda_1_1CuSolverDnException.html" title="cuda::CuSolverDnException" alt="" coords="159,157,345,184"/>
-<area shape="rect" id="node6" href="$classnn_1_1BackpropagationException.html" title="nn::BackpropagationException" alt="" coords="153,208,351,235"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuBlasException.html" title="cuda::CuBlasException" alt="" coords="189,5,359,32"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CudaException.html" title="cuda::CudaException" alt="" coords="195,56,353,83"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuRandException.html" title="cuda::CuRandException" alt="" coords="187,107,361,133"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuSolverDnException.html" title="cuda::CuSolverDnException" alt="" coords="173,157,375,184"/>
+<area shape="rect" id="node6" href="$classnn_1_1BackpropagationException.html" title="nn::BackpropagationException" alt="" coords="164,208,384,235"/>
 </map>

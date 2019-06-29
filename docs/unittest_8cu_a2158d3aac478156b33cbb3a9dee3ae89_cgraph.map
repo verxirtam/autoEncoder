@@ -1,6 +1,7 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="110,5,266,46"/>
-<area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="119,70,257,111"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="119,135,257,177"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="315,5,471,46"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="108,37,275,79"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="118,103,265,144"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a01a05d3bef4c715b2840bbeff99da573" title="cuda::DeviceVector\l::getDimension" alt="" coords="118,168,265,209"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="323,5,489,47"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuRandManager.html#a3709be4b0d572686b3e8640afe3b592d" title="cuda::CuRandManager\l::getErrorString" alt="" coords="323,71,489,112"/>
 </map>

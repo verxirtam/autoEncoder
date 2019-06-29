@@ -1,15 +1,15 @@
 <map id="src/unittest_ActivateMethodElementWise.cuh" name="src/unittest_ActivateMethodElementWise.cuh">
-<area shape="rect" id="node2" href="$Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="174,104,327,131"/>
-<area shape="rect" id="node3" href="$ActivateMethodElementWise_8cuh.html" title="nn/ActivateMethodElement\lWise.cuh" alt="" coords="559,97,737,138"/>
-<area shape="rect" id="node21" href="$DeviceVectorUtils_8h.html" title="cuda/DeviceVectorUtils.h" alt="" coords="5,187,176,213"/>
-<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="689,261,843,288"/>
-<area shape="rect" id="node15" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="667,187,865,213"/>
-<area shape="rect" id="node18" href="$ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="941,187,1140,213"/>
-<area shape="rect" id="node19" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="200,187,395,213"/>
-<area shape="rect" id="node20" href="$Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="419,187,641,213"/>
-<area shape="rect" id="node6" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="723,336,849,363"/>
-<area shape="rect" id="node9" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="751,411,865,437"/>
-<area shape="rect" id="node14" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="930,485,1064,512"/>
-<area shape="rect" id="node11" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="648,485,771,512"/>
-<area shape="rect" id="node16" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="467,261,623,288"/>
+<area shape="rect" id="node2" href="$Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="71,102,229,129"/>
+<area shape="rect" id="node3" href="$ActivateMethodElementWise_8cuh.html" title="nn/ActivateMethodElement\lWise.cuh" alt="" coords="600,95,799,136"/>
+<area shape="rect" id="node21" href="$DeviceVectorUtils_8h.html" title="cuda/DeviceVectorUtils.h" alt="" coords="5,184,191,211"/>
+<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="744,259,911,285"/>
+<area shape="rect" id="node15" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="718,184,937,211"/>
+<area shape="rect" id="node18" href="$ElementWiseFunction2to1_8cuh.html" title="ElementWiseFunction2to1.cuh" alt="" coords="1011,184,1230,211"/>
+<area shape="rect" id="node19" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="215,184,427,211"/>
+<area shape="rect" id="node20" href="$Func2to1ElementWiseProduct_8cuh.html" title="Func2to1ElementWiseProduct.cuh" alt="" coords="451,184,694,211"/>
+<area shape="rect" id="node6" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="781,333,916,360"/>
+<area shape="rect" id="node9" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="807,408,930,435"/>
+<area shape="rect" id="node14" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="1003,483,1145,509"/>
+<area shape="rect" id="node11" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="701,483,831,509"/>
+<area shape="rect" id="node16" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="513,259,680,285"/>
 </map>

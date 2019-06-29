@@ -1,8 +1,8 @@
 <map id="nn::ElementWiseFunction2to1::apply" name="nn::ElementWiseFunction2to1::apply">
-<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="251,70,448,111"/>
-<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="282,135,417,177"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968" title="cuda::CudaManager::\lgetDeviceProp" alt="" coords="496,5,643,46"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="502,70,637,111"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="502,135,637,177"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="691,5,837,46"/>
+<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#a8860987c75ffe13bd8648ded91ed1ea8" title="nn::ElementWiseFunction2to1\l::culculateBlockThreadCount" alt="" coords="268,71,483,112"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#af893450c7ca8bfbb8079058adebedc49" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="302,136,449,177"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CudaManager.html#a8e1ba7bff57f8833619c06aee71c5968" title="cuda::CudaManager::\lgetDeviceProp" alt="" coords="531,5,689,47"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#a51fedf7b317ac575adbb3ed40fd9ab2c" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="537,71,683,112"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#a48f9cc5cb2c91d06e9f064c5757aa767" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="537,136,683,177"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CudaManager.html#a163ed5cf335b847806249b734c6a3aea" title="cuda::CudaManager::\lgetInstance" alt="" coords="737,5,896,47"/>
 </map>

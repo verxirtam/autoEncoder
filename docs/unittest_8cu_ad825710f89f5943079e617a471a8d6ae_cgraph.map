@@ -1,10 +1,11 @@
 <map id="TEST" name="TEST">
-<area shape="rect" id="node2" href="$namespacecuda.html#a813115ac345cfcca4e482b2b0351fade" title="cuda::DnSsyevd" alt="" coords="123,157,242,184"/>
-<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="313,252,474,279"/>
-<area shape="rect" id="node9" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="109,273,256,300"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="326,5,461,46"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuSolverDnManager.html#aff6e97bef99ced3441de486fc0015efc" title="cuda::CuSolverDnManager\l::getHandle" alt="" coords="304,70,483,111"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="325,135,462,177"/>
-<area shape="rect" id="node8" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="312,201,475,228"/>
-<area shape="rect" id="node5" href="$classcuda_1_1CuSolverDnManager.html#a442915920bba26cdfca25b8d42640a66" title="cuda::CuSolverDnManager\l::getInstance" alt="" coords="531,70,709,111"/>
+<area shape="rect" id="node2" href="$namespacecuda.html#a813115ac345cfcca4e482b2b0351fade" title="cuda::DnSsyevd" alt="" coords="124,173,251,199"/>
+<area shape="rect" id="node8" href="$classcuda_1_1DeviceMatrix.html#a7a7c69315a72e1f9c784b48289bc7417" title="cuda::DeviceMatrix::get" alt="" coords="323,253,499,279"/>
+<area shape="rect" id="node10" href="$namespacecuda.html#acb1f59a838c1e980c4e021915434a358" title="cuda::compareVector" alt="" coords="108,303,267,330"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a48f9cc5cb2c91d06e9f064c5757aa767" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="338,5,485,47"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuSolverDnManager.html#aff6e97bef99ced3441de486fc0015efc" title="cuda::CuSolverDnManager\l::getHandle" alt="" coords="315,71,508,112"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="338,136,485,177"/>
+<area shape="rect" id="node9" href="$classcuda_1_1DeviceVector.html#a1c7ee8555020e59bc0ad63338362c274" title="cuda::DeviceVector::get" alt="" coords="323,202,499,229"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuSolverDnManager.html#a442915920bba26cdfca25b8d42640a66" title="cuda::CuSolverDnManager\l::getInstance" alt="" coords="556,39,749,80"/>
+<area shape="rect" id="node6" href="$classcuda_1_1CuSolverDnManager.html#a99611c1ee06867a1e86d024e6356d579" title="cuda::CuSolverDnManager\l::getErrorString" alt="" coords="556,104,749,145"/>
 </map>

@@ -1,8 +1,9 @@
 <map id="TEST_P" name="TEST_P">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="125,38,267,79"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="315,5,466,46"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="322,70,459,111"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="515,5,666,46"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="522,70,659,111"/>
-<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="715,70,853,111"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="123,104,279,145"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="327,71,489,112"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="335,136,481,177"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="537,5,700,47"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuBlasManager.html#aac42f8f53aceabfb34187e78adb36370" title="cuda::CuBlasManager\l::getErrorString" alt="" coords="537,71,700,112"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="545,136,692,177"/>
+<area shape="rect" id="node8" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="748,136,895,177"/>
 </map>

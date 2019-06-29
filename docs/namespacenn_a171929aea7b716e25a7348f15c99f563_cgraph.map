@@ -1,9 +1,9 @@
 <map id="nn::getParameterVector" name="nn::getParameterVector">
-<area shape="rect" id="node2" href="$namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6" title="nn::getParameterVector" alt="" coords="221,77,381,104"/>
-<area shape="rect" id="node6" href="$classnn_1_1Perceptron.html#af9e23aaec90e9b420a4b4bec5eae1abf" title="nn::Perceptron::getInput" alt="" coords="220,128,383,155"/>
-<area shape="rect" id="node7" href="$classnn_1_1Perceptron.html#a349bcd5df1f07d5c114bec466829e293" title="nn::Perceptron::getInternal" alt="" coords="213,179,389,205"/>
-<area shape="rect" id="node8" href="$classnn_1_1Perceptron.html#ae4b3d5efc84d7987b22a98140eaf0089" title="nn::Perceptron::getOutput" alt="" coords="215,229,387,256"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a9bccb3208701bed484dc1b9f21414822" title="nn::Backpropagation\l::getLayerCount" alt="" coords="437,5,579,46"/>
-<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a9bde6d6aa00ca6bd659ba457adbf8811" title="nn::Backpropagation\l::getWeight" alt="" coords="437,70,579,111"/>
-<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a826f2eff5d4f56fa72b74fbcfc6f064a" title="nn::Backpropagation\l::getBias" alt="" coords="437,135,579,177"/>
+<area shape="rect" id="node2" href="$namespacenn.html#a2833ccf577ba781cbe2abbff765f56d6" title="nn::getParameterVector" alt="" coords="238,78,413,105"/>
+<area shape="rect" id="node6" href="$classnn_1_1Perceptron.html#af9e23aaec90e9b420a4b4bec5eae1abf" title="nn::Perceptron::getInput" alt="" coords="236,129,415,155"/>
+<area shape="rect" id="node7" href="$classnn_1_1Perceptron.html#a349bcd5df1f07d5c114bec466829e293" title="nn::Perceptron::getInternal" alt="" coords="228,179,423,206"/>
+<area shape="rect" id="node8" href="$classnn_1_1Perceptron.html#ae4b3d5efc84d7987b22a98140eaf0089" title="nn::Perceptron::getOutput" alt="" coords="231,230,420,257"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#abad4c929c543574cfb371095e68cd2d1" title="nn::Backpropagation\l::getLayerCount" alt="" coords="471,5,627,47"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a4bc38985e894ddaca3ad6cd4808d599c" title="nn::Backpropagation\l::getWeight" alt="" coords="471,71,627,112"/>
+<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#ad417a8566898dfdaa1e01caaea850d47" title="nn::Backpropagation\l::getBias" alt="" coords="471,136,627,177"/>
 </map>

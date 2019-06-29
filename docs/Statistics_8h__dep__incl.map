@@ -1,11 +1,11 @@
 <map id="src/nn/Statistics.h" name="src/nn/Statistics.h">
-<area shape="rect" id="node2" href="$Normalization_8h.html" title="src/nn/Normalization.h" alt="" coords="469,80,621,107"/>
-<area shape="rect" id="node10" href="$Statistics_8cpp.html" title="src/nn/Statistics.cpp" alt="" coords="646,80,788,107"/>
-<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="204,163,367,189"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="183,320,288,347"/>
-<area shape="rect" id="node8" href="$Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="523,163,689,189"/>
-<area shape="rect" id="node9" href="$Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="714,155,856,197"/>
-<area shape="rect" id="node4" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="19,245,180,272"/>
-<area shape="rect" id="node7" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="257,245,447,272"/>
-<area shape="rect" id="node5" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,320,159,347"/>
+<area shape="rect" id="node2" href="$Normalization_8h.html" title="src/nn/Normalization.h" alt="" coords="488,80,657,107"/>
+<area shape="rect" id="node10" href="$Statistics_8cpp.html" title="src/nn/Statistics.cpp" alt="" coords="682,80,834,107"/>
+<area shape="rect" id="node3" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="213,162,386,189"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="191,319,306,345"/>
+<area shape="rect" id="node8" href="$Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="546,162,730,189"/>
+<area shape="rect" id="node9" href="$Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="754,155,911,196"/>
+<area shape="rect" id="node4" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="21,244,191,271"/>
+<area shape="rect" id="node7" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="267,244,471,271"/>
+<area shape="rect" id="node5" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,319,167,345"/>
 </map>

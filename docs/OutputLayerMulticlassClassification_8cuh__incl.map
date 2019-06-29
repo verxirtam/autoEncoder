@@ -1,10 +1,10 @@
 <map id="src/nn/OutputLayerMulticlassClassification.cuh" name="src/nn/OutputLayerMulticlassClassification.cuh">
-<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="139,171,249,197"/>
-<area shape="rect" id="node13" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="243,96,441,123"/>
-<area shape="rect" id="node16" href="$Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="650,96,773,123"/>
-<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="221,245,347,272"/>
-<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="355,320,469,347"/>
-<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="439,395,573,421"/>
-<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="157,395,280,421"/>
-<area shape="rect" id="node14" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="274,171,429,197"/>
+<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="137,169,257,196"/>
+<area shape="rect" id="node13" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="251,95,469,121"/>
+<area shape="rect" id="node16" href="$Func1to1Exp_8cuh.html" title="Func1to1Exp.cuh" alt="" coords="672,95,803,121"/>
+<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="225,244,359,271"/>
+<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="365,319,488,345"/>
+<area shape="rect" id="node12" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="454,393,597,420"/>
+<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="152,393,283,420"/>
+<area shape="rect" id="node14" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="282,169,449,196"/>
 </map>

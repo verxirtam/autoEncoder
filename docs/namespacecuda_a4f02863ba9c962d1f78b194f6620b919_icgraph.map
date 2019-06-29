@@ -1,22 +1,32 @@
 <map id="cuda::Sgemm" name="cuda::Sgemm">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l::obtainUFromZ" alt="" coords="184,5,325,46"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a40730a67fc8414e5763b2445060452a8" title="nn::Backpropagation\l::obtainDelta" alt="" coords="184,70,325,111"/>
-<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081" title="nn::Backpropagation\l::updateParameter" alt="" coords="184,135,325,177"/>
-<area shape="rect" id="node7" href="$classnn_1_1Layer.html#a3439ae33d0ccade7400d60839ae6394c" title="nn::Layer::forwardLinear" alt="" coords="173,201,336,228"/>
-<area shape="rect" id="node8" href="$classnn_1_1Layer.html#a78062dccfba493812c52e8342842e544" title="nn::Layer::getWeightTDelta" alt="" coords="163,252,346,279"/>
-<area shape="rect" id="node9" href="$classnn_1_1Normalization.html#a9afdd414433975855b4d77cc86edd443" title="nn::Normalization::\lgetWhitening" alt="" coords="189,354,321,395"/>
-<area shape="rect" id="node16" href="$classnn_1_1Normalization.html#a119a0a518d2b957a941d3467dab72e82" title="nn::Normalization::\lgetInverseWhitening" alt="" coords="184,419,325,461"/>
-<area shape="rect" id="node19" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="411,237,560,264"/>
-<area shape="rect" id="node21" href="$classnn_1_1UpdateMethodMomentum.html#a51b8623f7f7fe21ee1fa5ce2cd4854c4" title="nn::UpdateMethodMomentum\l::update" alt="" coords="157,485,352,526"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="449,165,521,192"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="457,115,513,141"/>
-<area shape="rect" id="node10" href="$classnn_1_1Normalization.html#a884788fd630bfac764ef2182b493fc2d" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="419,354,551,395"/>
-<area shape="rect" id="node15" href="$classnn_1_1Normalization.html#acd7643528fa872483095d3d1a17f644d" title="nn::Normalization::\lgetZCAWhitening" alt="" coords="419,289,551,330"/>
-<area shape="rect" id="node11" href="$classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::forward" alt="" coords="620,479,796,521"/>
-<area shape="rect" id="node12" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::learning" alt="" coords="619,403,797,445"/>
-<area shape="rect" id="node13" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="680,347,736,373"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="672,296,744,323"/>
-<area shape="rect" id="node17" href="$classnn_1_1Normalization.html#a7662e44dab21e677d3457f4dbe44dc6f" title="nn::Normalization::\lgetInversePCAWhitening" alt="" coords="401,485,570,526"/>
-<area shape="rect" id="node18" href="$classnn_1_1Normalization.html#a3b88bcbf898a74a4498a35665ae031a3" title="nn::Normalization::\lgetInverseZCAWhitening" alt="" coords="401,419,569,461"/>
-<area shape="rect" id="node20" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="633,230,783,271"/>
+<area shape="rect" id="node2" href="$namespacecuda.html#a209131a0e8b5b6c0e5da02bc5b53e462" title="cuda::Ssyrk" alt="" coords="220,416,317,443"/>
+<area shape="rect" id="node8" href="$classnn_1_1Backpropagation.html#a7e2e227ad1f21475192e0eacb0cd9081" title="nn::Backpropagation\l::updateParameter" alt="" coords="1051,78,1207,119"/>
+<area shape="rect" id="node13" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="1308,360,1475,387"/>
+<area shape="rect" id="node18" href="$classnn_1_1UpdateMethodMomentum.html#a51b8623f7f7fe21ee1fa5ce2cd4854c4" title="nn::UpdateMethodMomentum\l::update" alt="" coords="1021,143,1236,185"/>
+<area shape="rect" id="node20" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l::obtainUFromZ" alt="" coords="791,646,947,687"/>
+<area shape="rect" id="node21" href="$classnn_1_1Layer.html#a3439ae33d0ccade7400d60839ae6394c" title="nn::Layer\&lt; nn::Func1to1Tanh\l \&gt;::forwardLinear" alt="" coords="764,463,973,505"/>
+<area shape="rect" id="node22" href="$classnn_1_1Normalization.html#aec055212855e9545406da6e0050223fe" title="nn::Normalization::\lgetWhitening" alt="" coords="1055,519,1202,561"/>
+<area shape="rect" id="node27" href="$classnn_1_1Normalization.html#aa84639e1e5ff050d36e82cf0b5a6df9e" title="nn::Normalization::\lgetInverseWhitening" alt="" coords="790,581,947,622"/>
+<area shape="rect" id="node30" href="$classnn_1_1Backpropagation.html#a40730a67fc8414e5763b2445060452a8" title="nn::Backpropagation\l::obtainDelta" alt="" coords="421,629,577,670"/>
+<area shape="rect" id="node31" href="$classnn_1_1Layer.html#a78062dccfba493812c52e8342842e544" title="nn::Layer\&lt; nn::Func1to1Tanh\l \&gt;::getWeightTDelta" alt="" coords="164,746,373,787"/>
+<area shape="rect" id="node3" href="$namespacecuda.html#a29a6dd928b2e223816304a8a740981f6" title="cuda::Ssyr" alt="" coords="455,416,544,443"/>
+<area shape="rect" id="node12" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="1021,361,1236,388"/>
+<area shape="rect" id="node4" href="$namespacecuda.html#a286b10542d6eece4095913200b119345" title="cuda::Sger" alt="" coords="625,416,716,443"/>
+<area shape="rect" id="node5" href="$namespacecuda.html#aee23e9d79325014e3dd12126ed0e55a2" title="cuda::Sgemv" alt="" coords="815,260,922,287"/>
+<area shape="rect" id="node6" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="1061,260,1196,287"/>
+<area shape="rect" id="node7" href="$namespacecuda.html#a5089b63f05d95e7b36e2df9ae125fe8c" title="cuda::Saxpy" alt="" coords="1078,311,1179,337"/>
+<area shape="rect" id="node9" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="1313,107,1469,149"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="1357,5,1426,32"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="1364,56,1419,83"/>
+<area shape="rect" id="node14" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="1563,286,1725,327"/>
+<area shape="rect" id="node15" href="$classnn_1_1Normalization.html#aa1f58e1fd25596cd91fbbeea58355fa1" title="nn::Normalization::\lNormalization" alt="" coords="1571,351,1717,393"/>
+<area shape="rect" id="node16" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1617,417,1671,444"/>
+<area shape="rect" id="node17" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1609,468,1679,495"/>
+<area shape="rect" id="node19" href="$classnn_1_1UpdateMethodMomentum.html#abd8b4b84be83a129f30ebb4a7958b5da" title="nn::UpdateMethodMomentum\l::UpdateMethodMomentum" alt="" coords="1284,173,1499,214"/>
+<area shape="rect" id="node23" href="$classnn_1_1Normalization.html#a65f303db28f40881580ba71bd8336abd" title="nn::Normalization::\lgetPCAWhitening" alt="" coords="1318,519,1465,561"/>
+<area shape="rect" id="node26" href="$classnn_1_1Normalization.html#a00b6fd051466ff8165f1f2b40e17b101" title="nn::Normalization::\lgetZCAWhitening" alt="" coords="1318,454,1465,495"/>
+<area shape="rect" id="node24" href="$classnn_1_1AutoEncoder.html#a51807fd99e54558aa9c5fb8843931fab" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::forward" alt="" coords="1549,519,1739,561"/>
+<area shape="rect" id="node25" href="$classnn_1_1AutoEncoder.html#a54c9330ed582d68b7a6db3409f757b79" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::learning" alt="" coords="1547,585,1741,626"/>
+<area shape="rect" id="node28" href="$classnn_1_1Normalization.html#a192eaf4bc8d84dae8f4906f3a202fef9" title="nn::Normalization::\lgetInversePCAWhitening" alt="" coords="1300,585,1483,626"/>
+<area shape="rect" id="node29" href="$classnn_1_1Normalization.html#a4258d782e48150dd23015f132fb26135" title="nn::Normalization::\lgetInverseZCAWhitening" alt="" coords="1037,639,1220,681"/>
 </map>

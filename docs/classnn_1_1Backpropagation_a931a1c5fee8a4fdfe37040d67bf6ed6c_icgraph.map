@@ -1,0 +1,6 @@
+<map id="nn::Backpropagation::getBiasAsVector" name="nn::Backpropagation::getBiasAsVector">
+<area shape="rect" id="node2" href="$unittest_8cu.html#a8b7605445954ad74414ae57177d1f540" title="BackpropagationTanhRegTest\l_All_showInfo" alt="" coords="209,35,421,76"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#ac7f6900ff16338833c193686dd08b8f0" title="TEST_P" alt="" coords="281,101,350,127"/>
+<area shape="rect" id="node3" href="$classBackpropagationTanhRegAllTest.html#af61ad2c7fd896ff5b5297a64f7a4876e" title="BackpropagationTanhRegAll\lTest::TearDown" alt="" coords="469,5,672,47"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="536,71,605,98"/>
+</map>

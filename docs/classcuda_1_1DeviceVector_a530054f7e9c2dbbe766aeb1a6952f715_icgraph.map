@@ -1,14 +1,16 @@
 <map id="cuda::DeviceVector::get1Vector" name="cuda::DeviceVector::get1Vector">
-<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="635,14,786,56"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="220,220,361,261"/>
-<area shape="rect" id="node6" href="$classnn_1_1Layer.html#a9add69cb9817667db1a54dcaa9cc3a75" title="nn::Layer::init" alt="" coords="240,292,341,319"/>
-<area shape="rect" id="node8" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="192,67,389,94"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="683,102,739,128"/>
-<area shape="rect" id="node11" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="675,163,747,190"/>
-<area shape="rect" id="node12" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="193,357,388,398"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="476,219,548,246"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="484,270,540,296"/>
-<area shape="rect" id="node7" href="$unittest__Perceptron_8cuh.html#ac1eb8b099792602a7596f5c329be441d" title="TEST" alt="" coords="484,320,540,347"/>
-<area shape="rect" id="node9" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="437,67,587,94"/>
-<area shape="rect" id="node13" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="484,371,540,398"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="725,5,888,47"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="229,239,385,280"/>
+<area shape="rect" id="node7" href="$classnn_1_1Layer.html#a9add69cb9817667db1a54dcaa9cc3a75" title="nn::Layer\&lt; nn::Func1to1Tanh\l \&gt;::init" alt="" coords="203,304,412,345"/>
+<area shape="rect" id="node8" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="200,86,415,113"/>
+<area shape="rect" id="node11" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="779,137,834,163"/>
+<area shape="rect" id="node12" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="772,187,841,214"/>
+<area shape="rect" id="node13" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="200,399,415,440"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="492,239,648,280"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="535,305,605,331"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="543,355,597,382"/>
+<area shape="rect" id="node9" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="487,86,653,113"/>
+<area shape="rect" id="node10" href="$classnn_1_1Normalization.html#aa1f58e1fd25596cd91fbbeea58355fa1" title="nn::Normalization::\lNormalization" alt="" coords="733,71,880,112"/>
+<area shape="rect" id="node14" href="$classnn_1_1UpdateMethodMomentum.html#abd8b4b84be83a129f30ebb4a7958b5da" title="nn::UpdateMethodMomentum\l::UpdateMethodMomentum" alt="" coords="463,457,677,499"/>
+<area shape="rect" id="node15" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="543,406,597,433"/>
 </map>

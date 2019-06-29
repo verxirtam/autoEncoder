@@ -1,4 +1,4 @@
 <map id="nn::AutoEncoder::learning" name="nn::AutoEncoder::learning">
-<area shape="rect" id="node2" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="270,5,378,32"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="227,57,421,98"/>
+<area shape="rect" id="node2" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="298,5,401,32"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="243,57,456,98"/>
 </map>

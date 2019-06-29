@@ -1,8 +1,8 @@
 <map id="src/nn/Func1to1Tanh.cuh" name="src/nn/Func1to1Tanh.cuh">
-<area shape="rect" id="node2" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="19,88,180,115"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="183,171,288,197"/>
-<area shape="rect" id="node5" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="257,88,447,115"/>
-<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="471,81,659,122"/>
-<area shape="rect" id="node7" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="683,88,801,115"/>
-<area shape="rect" id="node3" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,171,159,197"/>
+<area shape="rect" id="node2" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="21,87,191,114"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="191,169,306,196"/>
+<area shape="rect" id="node5" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="267,87,471,114"/>
+<area shape="rect" id="node6" href="$BackpropagationTanhReg_8cuh.html" title="src/nn/BackpropagationTanh\lReg.cuh" alt="" coords="495,80,701,121"/>
+<area shape="rect" id="node7" href="$test__cuda_8cu.html" title="src/test_cuda.cu" alt="" coords="725,87,852,114"/>
+<area shape="rect" id="node3" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="5,169,167,196"/>
 </map>

@@ -1,18 +1,20 @@
 <map id="cuda::DeviceVector::getAlphaVector" name="cuda::DeviceVector::getAlphaVector">
-<area shape="rect" id="node2" href="$namespacecuda.html#a747f893ac555456e9630cae830f94162" title="cuda::setRandomUniform" alt="" coords="192,20,363,47"/>
-<area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html#a2591c4788d895fdf7e99ca1a7d119bb2" title="cuda::DeviceVector\l::get0Vector" alt="" coords="209,99,346,141"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="209,219,346,261"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="481,5,537,32"/>
-<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="854,243,1005,285"/>
-<area shape="rect" id="node7" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="439,57,580,98"/>
-<area shape="rect" id="node10" href="$classnn_1_1Layer.html#a9add69cb9817667db1a54dcaa9cc3a75" title="nn::Layer::init" alt="" coords="459,123,560,149"/>
-<area shape="rect" id="node12" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="411,291,608,317"/>
-<area shape="rect" id="node14" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="901,331,957,357"/>
-<area shape="rect" id="node15" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="893,381,965,408"/>
-<area shape="rect" id="node16" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="412,174,607,215"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="695,17,767,44"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="703,68,759,95"/>
-<area shape="rect" id="node11" href="$unittest__Perceptron_8cuh.html#ac1eb8b099792602a7596f5c329be441d" title="TEST" alt="" coords="703,123,759,149"/>
-<area shape="rect" id="node13" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="656,291,805,317"/>
-<area shape="rect" id="node17" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="703,181,759,208"/>
+<area shape="rect" id="node2" href="$namespacecuda.html#a747f893ac555456e9630cae830f94162" title="cuda::setRandomUniform" alt="" coords="200,67,388,93"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceVector.html#a2591c4788d895fdf7e99ca1a7d119bb2" title="cuda::DeviceVector\l::get0Vector" alt="" coords="221,142,367,183"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a530054f7e9c2dbbe766aeb1a6952f715" title="cuda::DeviceVector\l::get1Vector" alt="" coords="221,254,367,295"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#abb53c5b33b5c07b32cb1c38dea4b7774" title="TEST" alt="" coords="516,43,571,69"/>
+<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="961,261,1124,302"/>
+<area shape="rect" id="node7" href="$classnn_1_1Backpropagation.html#a63edbd467903c47dffc2a4c383fe7efa" title="nn::Backpropagation\l::init" alt="" coords="465,94,621,135"/>
+<area shape="rect" id="node11" href="$classnn_1_1Layer.html#a9add69cb9817667db1a54dcaa9cc3a75" title="nn::Layer\&lt; nn::Func1to1Tanh\l \&gt;::init" alt="" coords="439,159,648,201"/>
+<area shape="rect" id="node12" href="$namespacenn.html#a060c1d13b3480ab6dc817f3374ab82f6" title="nn::getMeanAndVarCovMatrix" alt="" coords="436,341,651,368"/>
+<area shape="rect" id="node15" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="1015,392,1070,419"/>
+<area shape="rect" id="node16" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="1008,443,1077,469"/>
+<area shape="rect" id="node17" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="436,225,651,266"/>
+<area shape="rect" id="node8" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="728,57,884,98"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a182e2d6bdf3d44225c867e5856bb878e" title="TEST_P" alt="" coords="771,123,841,149"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="779,5,833,32"/>
+<area shape="rect" id="node13" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="723,341,889,368"/>
+<area shape="rect" id="node14" href="$classnn_1_1Normalization.html#aa1f58e1fd25596cd91fbbeea58355fa1" title="nn::Normalization::\lNormalization" alt="" coords="969,326,1116,367"/>
+<area shape="rect" id="node18" href="$classnn_1_1UpdateMethodMomentum.html#abd8b4b84be83a129f30ebb4a7958b5da" title="nn::UpdateMethodMomentum\l::UpdateMethodMomentum" alt="" coords="699,174,913,215"/>
+<area shape="rect" id="node19" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="779,240,833,267"/>
 </map>

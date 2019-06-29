@@ -1,4 +1,5 @@
 <map id="nn::Backpropagation::back" name="nn::Backpropagation::back">
-<area shape="rect" id="node2" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="203,5,259,32"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="195,56,267,83"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="209,5,365,47"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#afecf410fb9ffc1673baeaf4608486a1e" title="TEST" alt="" coords="260,71,315,98"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="253,122,322,149"/>
 </map>

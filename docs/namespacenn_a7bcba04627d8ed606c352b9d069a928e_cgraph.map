@@ -1,6 +1,6 @@
 <map id="nn::getParameterVector" name="nn::getParameterVector">
-<area shape="rect" id="node2" href="$classnn_1_1Layer.html#a691d1142f913ea8837c2efe208f0a04d" title="nn::Layer::getWeight" alt="" coords="223,5,366,32"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="214,56,375,83"/>
-<area shape="rect" id="node4" href="$classnn_1_1Layer.html#a1a605eeadeab3625ee4a4e1d43c382e9" title="nn::Layer::getBias" alt="" coords="231,107,359,133"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a2312677c4797b8177e6f51e4f4be0e35" title="cuda::DeviceVector::get" alt="" coords="213,157,376,184"/>
+<area shape="rect" id="node2" href="$classnn_1_1Layer.html#a17745e2142a0e2d2cbecaf42f9686c0c" title="nn::Layer::getWeight" alt="" coords="238,5,394,32"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a7a7c69315a72e1f9c784b48289bc7417" title="cuda::DeviceMatrix::get" alt="" coords="228,56,404,83"/>
+<area shape="rect" id="node4" href="$classnn_1_1Layer.html#ac96ff659f55b3a00d912371bb942fc9d" title="nn::Layer::getBias" alt="" coords="247,107,385,133"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#a1c7ee8555020e59bc0ad63338362c274" title="cuda::DeviceVector::get" alt="" coords="228,157,404,184"/>
 </map>

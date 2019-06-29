@@ -1,6 +1,6 @@
 <map id="src/cuda/CuBlasManager.cpp" name="src/cuda/CuBlasManager.cpp">
-<area shape="rect" id="node2" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="146,80,272,107"/>
-<area shape="rect" id="node5" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="216,155,331,181"/>
-<area shape="rect" id="node11" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="430,229,564,256"/>
-<area shape="rect" id="node8" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="283,229,405,256"/>
+<area shape="rect" id="node2" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="153,80,287,107"/>
+<area shape="rect" id="node5" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="227,155,349,181"/>
+<area shape="rect" id="node11" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="453,229,595,256"/>
+<area shape="rect" id="node8" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="297,229,428,256"/>
 </map>

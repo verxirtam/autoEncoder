@@ -1,7 +1,7 @@
 <map id="src/nn/Serial.h" name="src/nn/Serial.h">
-<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="80,80,233,107"/>
-<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="182,155,308,181"/>
-<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="316,229,431,256"/>
-<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="453,304,587,331"/>
-<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="171,304,293,331"/>
+<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="84,80,251,107"/>
+<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="193,155,328,181"/>
+<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="334,229,457,256"/>
+<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="481,304,624,331"/>
+<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="179,304,310,331"/>
 </map>

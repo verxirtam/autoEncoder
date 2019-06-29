@@ -1,7 +1,7 @@
 <map id="BackpropagationTanhRegTest_All_showInfo" name="BackpropagationTanhRegTest_All_showInfo">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#ad2f466d8d4e4224585f70d5a4dbe7586" title="nn::Backpropagation\l::getZAsVector" alt="" coords="255,5,396,46"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#ab6a690edde3170a7e55d47722365b446" title="nn::Backpropagation\l::getUAsVector" alt="" coords="255,70,396,111"/>
-<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#ab24e8ac4444af62b90331dd5ef5716a4" title="nn::Backpropagation\l::getDeltaAsVector" alt="" coords="255,135,396,177"/>
-<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a452c9bbe2973c0c21ecd448ef40e0801" title="nn::Backpropagation\l::getWeightAsVector" alt="" coords="254,201,397,242"/>
-<area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a5b1237427e514dfeaa59e6d36975505f" title="nn::Backpropagation\l::getBiasAsVector" alt="" coords="255,266,396,307"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a45c49b16a0a5fa160614bc3ca2b785f7" title="nn::Backpropagation\l::getZAsVector" alt="" coords="265,5,421,47"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a670b48d818ddecc6480e464a86d8d58d" title="nn::Backpropagation\l::getUAsVector" alt="" coords="265,71,421,112"/>
+<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a334816ffe0ed31431fcdc2b8c33e33af" title="nn::Backpropagation\l::getDeltaAsVector" alt="" coords="265,136,421,177"/>
+<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a565ddcaa8d9295a8ce76ea1ceeddf301" title="nn::Backpropagation\l::getWeightAsVector" alt="" coords="265,201,421,243"/>
+<area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a931a1c5fee8a4fdfe37040d67bf6ed6c" title="nn::Backpropagation\l::getBiasAsVector" alt="" coords="265,267,421,308"/>
 </map>

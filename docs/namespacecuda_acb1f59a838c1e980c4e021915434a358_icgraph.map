@@ -1,8 +1,8 @@
 <map id="cuda::compareVector" name="cuda::compareVector">
-<area shape="rect" id="node2" href="$namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5" title="cuda::compare" alt="" coords="243,5,351,32"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="261,56,333,83"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="269,107,325,133"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="243,157,351,184"/>
-<area shape="rect" id="node7" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="200,209,395,250"/>
-<area shape="rect" id="node3" href="$unittest__ActivateMethodElementWise_8cuh.html#a431e5db19724c29dc78bbd29cbe4b7c4" title="TEST" alt="" coords="443,5,499,32"/>
+<area shape="rect" id="node2" href="$namespacecuda.html#a64735d25766c8b2ddfeac5aae83e14f5" title="cuda::compare" alt="" coords="259,5,378,32"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a9f43b2942e9eef7fbbd47c5a93f5d19e" title="TEST_P" alt="" coords="284,56,353,83"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a977a0fcd18b10d6867e16e925ee0a9b5" title="TEST" alt="" coords="291,107,346,133"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="267,157,370,184"/>
+<area shape="rect" id="node7" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="212,209,425,250"/>
+<area shape="rect" id="node3" href="$unittest__ActivateMethodElementWise_8cuh.html#a431e5db19724c29dc78bbd29cbe4b7c4" title="TEST" alt="" coords="473,5,528,32"/>
 </map>

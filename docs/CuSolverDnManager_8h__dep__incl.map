@@ -1,13 +1,13 @@
 <map id="src/cuda/CuSolverDnManager.h" name="src/cuda/CuSolverDnManager.h">
-<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html" title="src/cuda/CuSolverDnFunction.h" alt="" coords="631,80,839,107"/>
-<area shape="rect" id="node8" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="418,395,523,421"/>
-<area shape="rect" id="node12" href="$CuSolverDnManager_8cpp.html" title="src/cuda/CuSolverDnManager.cpp" alt="" coords="967,80,1189,107"/>
-<area shape="rect" id="node3" href="$CuSolverDnFunction_8cpp.html" title="src/cuda/CuSolverDnFunction.cpp" alt="" coords="355,155,577,181"/>
-<area shape="rect" id="node4" href="$Normalization_8h.html" title="src/nn/Normalization.h" alt="" coords="602,155,755,181"/>
-<area shape="rect" id="node5" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="189,237,352,264"/>
-<area shape="rect" id="node10" href="$Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="509,237,675,264"/>
-<area shape="rect" id="node11" href="$Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="699,230,841,271"/>
-<area shape="rect" id="node6" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,320,165,347"/>
-<area shape="rect" id="node9" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,320,432,347"/>
-<area shape="rect" id="node7" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,395,161,421"/>
+<area shape="rect" id="node2" href="$CuSolverDnFunction_8h.html" title="src/cuda/CuSolverDnFunction.h" alt="" coords="665,80,888,107"/>
+<area shape="rect" id="node8" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="435,393,550,420"/>
+<area shape="rect" id="node12" href="$CuSolverDnManager_8cpp.html" title="src/cuda/CuSolverDnManager.cpp" alt="" coords="1021,80,1260,107"/>
+<area shape="rect" id="node3" href="$CuSolverDnFunction_8cpp.html" title="src/cuda/CuSolverDnFunction.cpp" alt="" coords="370,155,607,181"/>
+<area shape="rect" id="node4" href="$Normalization_8h.html" title="src/nn/Normalization.h" alt="" coords="632,155,801,181"/>
+<area shape="rect" id="node5" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="197,237,370,263"/>
+<area shape="rect" id="node10" href="$Normalization_8cpp.html" title="src/nn/Normalization.cpp" alt="" coords="530,237,714,263"/>
+<area shape="rect" id="node11" href="$Normalization__cuda_8cu.html" title="src/nn/Normalization\l_cuda.cu" alt="" coords="738,229,895,271"/>
+<area shape="rect" id="node6" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,319,175,345"/>
+<area shape="rect" id="node9" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="251,319,455,345"/>
+<area shape="rect" id="node7" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="9,393,171,420"/>
 </map>

@@ -1,6 +1,7 @@
 <map id="cuda::Samax" name="cuda::Samax">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="159,5,297,46"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="153,70,303,111"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="159,135,297,177"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="353,70,503,111"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a01a05d3bef4c715b2840bbeff99da573" title="cuda::DeviceVector\l::getDimension" alt="" coords="168,5,315,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="160,71,323,112"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="168,136,315,177"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="371,39,533,80"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuBlasManager.html#aac42f8f53aceabfb34187e78adb36370" title="cuda::CuBlasManager\l::getErrorString" alt="" coords="371,104,533,145"/>
 </map>

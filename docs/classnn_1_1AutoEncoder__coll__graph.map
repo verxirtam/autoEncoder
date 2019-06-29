@@ -1,10 +1,10 @@
 <map id="nn::AutoEncoder&lt; AF &gt;" name="nn::AutoEncoder&lt; AF &gt;">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="6,115,143,141"/>
-<area shape="rect" id="node3" href="$classnn_1_1Normalization.html" title="nn::Normalization" alt="" coords="387,57,511,84"/>
-<area shape="rect" id="node6" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; ActivateMethod,\l UpdateMethod \&gt;" alt="" coords="358,338,541,379"/>
-<area shape="rect" id="node9" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="713,375,831,401"/>
-<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="7,521,142,548"/>
-<area shape="rect" id="node8" href="$classnn_1_1LayerInput.html" title="nn::LayerInput" alt="" coords="566,589,671,616"/>
-<area shape="rect" id="node5" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; LayerInput,\l LayerInternal\&lt; AF \&gt;, LayerOutput\lIdentity \&gt;" alt="" coords="1072,299,1293,355"/>
-<area shape="rect" id="node10" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; Input,\l Internal, Output \&gt;" alt="" coords="696,177,848,218"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html" title="cuda::DeviceVector" alt="" coords="5,115,152,141"/>
+<area shape="rect" id="node3" href="$classnn_1_1Normalization.html" title="nn::Normalization" alt="" coords="413,57,552,84"/>
+<area shape="rect" id="node6" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; ActivateMethod,\l UpdateMethod \&gt;" alt="" coords="381,338,584,379"/>
+<area shape="rect" id="node9" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="767,375,895,401"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html" title="cuda::DeviceMatrix" alt="" coords="5,520,152,547"/>
+<area shape="rect" id="node8" href="$classnn_1_1LayerInput.html" title="nn::LayerInput" alt="" coords="608,589,723,616"/>
+<area shape="rect" id="node5" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; LayerInput,\l LayerInternal\&lt; AF \&gt;, LayerOutput\lIdentity \&gt;" alt="" coords="1163,299,1409,355"/>
+<area shape="rect" id="node10" href="$classnn_1_1Perceptron.html" title="nn::Perceptron\&lt; Input,\l Internal, Output \&gt;" alt="" coords="747,177,915,218"/>
 </map>

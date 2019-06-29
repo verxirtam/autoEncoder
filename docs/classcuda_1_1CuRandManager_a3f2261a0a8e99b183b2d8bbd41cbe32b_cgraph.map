@@ -1,3 +1,4 @@
 <map id="cuda::CuRandManager::getGenerator" name="cuda::CuRandManager::getGenerator">
-<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="211,5,367,46"/>
+<area shape="rect" id="node2" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#a3709be4b0d572686b3e8640afe3b592d" title="cuda::CuRandManager\l::getErrorString" alt="" coords="220,71,387,112"/>
 </map>

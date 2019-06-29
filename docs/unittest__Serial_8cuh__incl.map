@@ -1,9 +1,9 @@
 <map id="src/unittest_Serial.cuh" name="src/unittest_Serial.cuh">
-<area shape="rect" id="node2" href="$Serial_8h.html" title="nn/Serial.h" alt="" coords="11,80,95,107"/>
-<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="80,155,233,181"/>
-<area shape="rect" id="node15" href="$LayerNull_8cuh.html" title="nn/LayerNull.cuh" alt="" coords="171,80,291,107"/>
-<area shape="rect" id="node6" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="182,229,308,256"/>
-<area shape="rect" id="node9" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="316,304,431,331"/>
-<area shape="rect" id="node14" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="453,379,587,405"/>
-<area shape="rect" id="node11" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="171,379,293,405"/>
+<area shape="rect" id="node2" href="$Serial_8h.html" title="nn/Serial.h" alt="" coords="13,80,103,107"/>
+<area shape="rect" id="node4" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="84,155,251,181"/>
+<area shape="rect" id="node15" href="$LayerNull_8cuh.html" title="nn/LayerNull.cuh" alt="" coords="178,80,309,107"/>
+<area shape="rect" id="node6" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="193,229,328,256"/>
+<area shape="rect" id="node9" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="334,304,457,331"/>
+<area shape="rect" id="node14" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="481,379,624,405"/>
+<area shape="rect" id="node11" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="179,379,310,405"/>
 </map>

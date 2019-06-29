@@ -1,11 +1,13 @@
 <map id="cuda::setRandomUniform" name="cuda::setRandomUniform">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="439,70,577,111"/>
-<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="225,13,381,54"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="439,201,577,242"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="234,261,371,302"/>
-<area shape="rect" id="node8" href="$namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52" title="cuda::Saxpy" alt="" coords="255,143,350,169"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="430,5,586,46"/>
-<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="439,266,577,307"/>
-<area shape="rect" id="node9" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="433,135,583,177"/>
-<area shape="rect" id="node10" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="635,135,786,177"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a01a05d3bef4c715b2840bbeff99da573" title="cuda::DeviceVector\l::getDimension" alt="" coords="466,136,613,177"/>
+<area shape="rect" id="node3" href="$classcuda_1_1CuRandManager.html#a3f2261a0a8e99b183b2d8bbd41cbe32b" title="cuda::CuRandManager\l::getGenerator" alt="" coords="241,71,408,112"/>
+<area shape="rect" id="node6" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="466,267,613,308"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceVector.html#ad6de92a368c0e06913d8fc116d80d8a5" title="cuda::DeviceVector\l::getAlphaVector" alt="" coords="251,327,398,368"/>
+<area shape="rect" id="node9" href="$namespacecuda.html#a050091e07f2bac2498ec1b4c5f9b1f52" title="cuda::Saxpy" alt="" coords="274,209,375,235"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuRandManager.html#ac87cd1593a71d5416edcd7aaa13e977b" title="cuda::CuRandManager\l::getInstance" alt="" coords="456,5,623,47"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuRandManager.html#a3709be4b0d572686b3e8640afe3b592d" title="cuda::CuRandManager\l::getErrorString" alt="" coords="456,71,623,112"/>
+<area shape="rect" id="node8" href="$classcuda_1_1DeviceVector.html#ad186fc94705b5fbe8e06c56b332a981b" title="cuda::DeviceVector\l::DeviceVector" alt="" coords="466,332,613,373"/>
+<area shape="rect" id="node10" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="458,201,621,243"/>
+<area shape="rect" id="node11" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="671,168,833,209"/>
+<area shape="rect" id="node12" href="$classcuda_1_1CuBlasManager.html#aac42f8f53aceabfb34187e78adb36370" title="cuda::CuBlasManager\l::getErrorString" alt="" coords="671,233,833,275"/>
 </map>

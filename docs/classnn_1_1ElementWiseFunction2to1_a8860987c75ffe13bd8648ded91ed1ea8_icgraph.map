@@ -1,5 +1,7 @@
 <map id="nn::ElementWiseFunction2to1::culculateBlockThreadCount" name="nn::ElementWiseFunction2to1::culculateBlockThreadCount">
-<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="251,38,448,79"/>
-<area shape="rect" id="node3" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="506,5,689,46"/>
-<area shape="rect" id="node4" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="496,70,699,111"/>
+<area shape="rect" id="node2" href="$classnn_1_1ElementWiseFunction2to1.html#aa5659690ab82b707f093e264bfdbf904" title="nn::ElementWiseFunction2to1\l::apply" alt="" coords="268,39,483,80"/>
+<area shape="rect" id="node3" href="$classnn_1_1ActivateMethodElementWise.html#abebab3d0acb4fc103bed1e3fe0d5cbb7" title="nn::ActivateMethodElement\lWise::getDelta" alt="" coords="539,5,741,47"/>
+<area shape="rect" id="node5" href="$classnn_1_1Backpropagation.html#a63996ff99c32fdfed209f55338e855f4" title="nn::Backpropagation\l::obtainDeltaFromFdUWTDelta" alt="" coords="531,71,749,112"/>
+<area shape="rect" id="node4" href="$classnn_1_1ActivateMethodElementWise.html#a06ed6a7a50171ff96a5992b6397ae6ee" title="nn::ActivateMethodElement\lWise::activate" alt="" coords="797,5,1000,47"/>
+<area shape="rect" id="node6" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l::obtainUFromZ" alt="" coords="821,71,977,112"/>
 </map>

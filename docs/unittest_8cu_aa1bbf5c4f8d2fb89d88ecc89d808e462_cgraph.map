@@ -1,6 +1,6 @@
 <map id="TEST_P" name="TEST_P">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="139,5,274,46"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="139,70,274,111"/>
-<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="139,135,274,177"/>
-<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#a4364c326bf6e3c19bf001df3d8ee8ce4" title="cuda::DeviceMatrix::get" alt="" coords="126,201,287,228"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#a51fedf7b317ac575adbb3ed40fd9ab2c" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="137,5,284,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a48f9cc5cb2c91d06e9f064c5757aa767" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="137,71,284,112"/>
+<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html#af893450c7ca8bfbb8079058adebedc49" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="137,136,284,177"/>
+<area shape="rect" id="node5" href="$classcuda_1_1DeviceMatrix.html#a7a7c69315a72e1f9c784b48289bc7417" title="cuda::DeviceMatrix::get" alt="" coords="123,202,299,229"/>
 </map>

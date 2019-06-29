@@ -1,14 +1,14 @@
 <map id="src/nn/Normalization_cuda.cu" name="src/nn/Normalization_cuda.cu">
-<area shape="rect" id="node2" href="$Normalization_8h.html" title="Normalization.h" alt="" coords="210,96,323,123"/>
-<area shape="rect" id="node3" href="$CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="100,245,271,272"/>
-<area shape="rect" id="node17" href="$CuSolverDnFunction_8h.html" title="../cuda/CuSolverDnFunction.h" alt="" coords="295,245,493,272"/>
-<area shape="rect" id="node21" href="$Statistics_8h.html" title="Statistics.h" alt="" coords="141,171,229,197"/>
-<area shape="rect" id="node4" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="129,320,240,347"/>
-<area shape="rect" id="node16" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="302,320,412,347"/>
-<area shape="rect" id="node7" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="317,395,443,421"/>
-<area shape="rect" id="node10" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="345,469,460,496"/>
-<area shape="rect" id="node15" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="427,544,561,571"/>
-<area shape="rect" id="node12" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="280,544,403,571"/>
-<area shape="rect" id="node18" href="$CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="564,395,717,421"/>
-<area shape="rect" id="node20" href="$CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="721,544,884,571"/>
+<area shape="rect" id="node2" href="$Normalization_8h.html" title="Normalization.h" alt="" coords="240,95,367,121"/>
+<area shape="rect" id="node3" href="$CuBlasFunction_8h.html" title="../cuda/CuBlasFunction.h" alt="" coords="128,244,308,271"/>
+<area shape="rect" id="node17" href="$CuSolverDnFunction_8h.html" title="../cuda/CuSolverDnFunction.h" alt="" coords="333,244,543,271"/>
+<area shape="rect" id="node21" href="$Statistics_8h.html" title="Statistics.h" alt="" coords="171,169,265,196"/>
+<area shape="rect" id="node4" href="$DeviceVector_8h.html" title="DeviceVector.h" alt="" coords="159,319,277,345"/>
+<area shape="rect" id="node16" href="$DeviceMatrix_8h.html" title="DeviceMatrix.h" alt="" coords="334,319,454,345"/>
+<area shape="rect" id="node7" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="343,393,477,420"/>
+<area shape="rect" id="node10" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="365,468,487,495"/>
+<area shape="rect" id="node15" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="445,543,588,569"/>
+<area shape="rect" id="node12" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="290,543,421,569"/>
+<area shape="rect" id="node18" href="$CuSolverDnManager_8h.html" title="CuSolverDnManager.h" alt="" coords="591,393,757,420"/>
+<area shape="rect" id="node20" href="$CuSolverDnException_8h.html" title="CuSolverDnException.h" alt="" coords="760,543,935,569"/>
 </map>

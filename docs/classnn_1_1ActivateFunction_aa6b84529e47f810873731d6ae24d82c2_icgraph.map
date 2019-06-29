@@ -1,3 +1,5 @@
 <map id="nn::ActivateFunction::activate" name="nn::ActivateFunction::activate">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="197,5,339,46"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a6056f13f384ad8cefe8ad4f771756e9f" title="nn::Backpropagation\l::obtainZFromU" alt="" coords="208,5,364,47"/>
+<area shape="rect" id="node4" href="$test__cuda_8cu.html#ae1a3968e7947464bee7714f6d43b7002" title="test" alt="" coords="263,71,309,98"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#a863ef8b4f8f66d34e486db07af2c2bc5" title="nn::Backpropagation\l::obtainUFromZ" alt="" coords="412,5,568,47"/>
 </map>

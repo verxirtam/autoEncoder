@@ -1,8 +1,8 @@
 <map id="nn::Perceptron::getOutput" name="nn::Perceptron::getOutput">
-<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="250,5,401,46"/>
-<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#a857af9e2d15c843c02f8a7ad044a9217" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setEpsilon" alt="" coords="228,70,423,111"/>
-<area shape="rect" id="node4" href="$classnn_1_1AutoEncoder.html#a7f1dfb7a5b143cb938622bb018aee5dd" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getEpsilon" alt="" coords="228,135,423,177"/>
-<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#a9dfd5006f34b7b233336a17778c4d87c" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setGamma" alt="" coords="227,201,424,242"/>
-<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#a586f85d19fd1d1ee24f691993d51fe19" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getGamma" alt="" coords="227,266,424,307"/>
-<area shape="rect" id="node7" href="$namespacenn.html#a171929aea7b716e25a7348f15c99f563" title="nn::getParameterVector" alt="" coords="245,332,405,359"/>
+<area shape="rect" id="node2" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="269,5,431,47"/>
+<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#a857af9e2d15c843c02f8a7ad044a9217" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setEpsilon" alt="" coords="246,71,454,112"/>
+<area shape="rect" id="node4" href="$classnn_1_1AutoEncoder.html#a69b902ea2204e1733fa54b9e246fe8e6" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getEpsilon" alt="" coords="245,136,455,177"/>
+<area shape="rect" id="node5" href="$classnn_1_1AutoEncoder.html#a9dfd5006f34b7b233336a17778c4d87c" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::setGamma" alt="" coords="243,201,457,243"/>
+<area shape="rect" id="node6" href="$classnn_1_1AutoEncoder.html#a5221e4a261867bb6a156403c21f4e729" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::getGamma" alt="" coords="243,267,457,308"/>
+<area shape="rect" id="node7" href="$namespacenn.html#a171929aea7b716e25a7348f15c99f563" title="nn::getParameterVector" alt="" coords="263,333,437,359"/>
 </map>

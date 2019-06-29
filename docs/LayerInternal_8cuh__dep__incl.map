@@ -1,9 +1,9 @@
 <map id="src/nn/LayerInternal.cuh" name="src/nn/LayerInternal.cuh">
-<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="189,80,352,107"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="418,229,523,256"/>
-<area shape="rect" id="node7" href="$unittest__Perceptron_8cuh.html" title="src/unittest_Perceptron.cuh" alt="" coords="509,155,691,181"/>
-<area shape="rect" id="node8" href="$unittest__PerceptronUtils_8cuh.html" title="src/unittest_PerceptronUtils.cuh" alt="" coords="607,80,816,107"/>
-<area shape="rect" id="node3" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,155,165,181"/>
-<area shape="rect" id="node6" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="242,155,432,181"/>
-<area shape="rect" id="node4" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="8,229,161,256"/>
+<area shape="rect" id="node2" href="$AutoEncoder_8cuh.html" title="src/nn/AutoEncoder.cuh" alt="" coords="197,80,370,107"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html" title="src/unittest.cu" alt="" coords="435,229,550,256"/>
+<area shape="rect" id="node7" href="$unittest__Perceptron_8cuh.html" title="src/unittest_Perceptron.cuh" alt="" coords="529,155,728,181"/>
+<area shape="rect" id="node8" href="$unittest__PerceptronUtils_8cuh.html" title="src/unittest_PerceptronUtils.cuh" alt="" coords="633,80,862,107"/>
+<area shape="rect" id="node3" href="$FXAutoEncoder_8cuh.html" title="src/FXAutoEncoder.cuh" alt="" coords="5,155,175,181"/>
+<area shape="rect" id="node6" href="$AutoEncoderTanh_8cuh.html" title="src/nn/AutoEncoderTanh.cuh" alt="" coords="251,155,455,181"/>
+<area shape="rect" id="node4" href="$FXAutoEncoder_8cu.html" title="src/FXAutoEncoder.cu" alt="" coords="9,229,171,256"/>
 </map>

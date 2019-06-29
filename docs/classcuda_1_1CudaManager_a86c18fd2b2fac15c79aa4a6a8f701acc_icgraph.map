@@ -1,5 +1,5 @@
 <map id="cuda::CudaManager::getStreamCount" name="cuda::CudaManager::getStreamCount">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a89b35c8d77934af3b1bc266e6195253f" title="nn::Backpropagation\l::getSubStreamCount" alt="" coords="201,5,349,46"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="247,71,303,97"/>
-<area shape="rect" id="node3" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="397,12,453,39"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#afff17cf276888cf9d197e04cd9f5b22e" title="nn::Backpropagation\l::getSubStreamCount" alt="" coords="212,5,372,47"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="265,71,319,98"/>
+<area shape="rect" id="node3" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="420,13,475,39"/>
 </map>

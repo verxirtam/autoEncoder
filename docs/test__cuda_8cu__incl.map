@@ -1,13 +1,13 @@
 <map id="src/test_cuda.cu" name="src/test_cuda.cu">
-<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="nn/ActivateFunction.cuh" alt="" coords="139,80,301,107"/>
-<area shape="rect" id="node18" href="$Func1to1Tanh_8cuh.html" title="nn/Func1to1Tanh.cuh" alt="" coords="326,80,473,107"/>
-<area shape="rect" id="node19" href="$Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="498,80,651,107"/>
-<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="5,229,159,256"/>
-<area shape="rect" id="node14" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="120,155,319,181"/>
-<area shape="rect" id="node17" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="344,155,539,181"/>
-<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="199,304,325,331"/>
-<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="247,379,361,405"/>
-<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="426,453,560,480"/>
-<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="144,453,267,480"/>
-<area shape="rect" id="node15" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="185,229,340,256"/>
+<area shape="rect" id="node2" href="$ActivateFunction_8cuh.html" title="nn/ActivateFunction.cuh" alt="" coords="147,80,324,107"/>
+<area shape="rect" id="node18" href="$Func1to1Tanh_8cuh.html" title="nn/Func1to1Tanh.cuh" alt="" coords="349,80,506,107"/>
+<area shape="rect" id="node19" href="$Func1to1ReLU_8cuh.html" title="nn/Func1to1ReLU.cuh" alt="" coords="531,80,689,107"/>
+<area shape="rect" id="node3" href="$DeviceMatrix_8h.html" title="../cuda/DeviceMatrix.h" alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node14" href="$ElementWiseFunction1to1_8cuh.html" title="ElementWiseFunction1to1.cuh" alt="" coords="126,155,345,181"/>
+<area shape="rect" id="node17" href="$ElementWiseFunctionUtil_8cuh.html" title="ElementWiseFunctionUtil.cuh" alt="" coords="369,155,581,181"/>
+<area shape="rect" id="node5" href="$CuBlasManager_8h.html" title="CuBlasManager.h" alt="" coords="212,304,347,331"/>
+<area shape="rect" id="node8" href="$CudaManager_8h.html" title="CudaManager.h" alt="" coords="259,379,382,405"/>
+<area shape="rect" id="node13" href="$CuBlasException_8h.html" title="CuBlasException.h" alt="" coords="455,453,597,480"/>
+<area shape="rect" id="node10" href="$CudaException_8h.html" title="CudaException.h" alt="" coords="153,453,283,480"/>
+<area shape="rect" id="node15" href="$DeviceVector_8h.html" title="../cuda/DeviceVector.h" alt="" coords="196,229,363,256"/>
 </map>

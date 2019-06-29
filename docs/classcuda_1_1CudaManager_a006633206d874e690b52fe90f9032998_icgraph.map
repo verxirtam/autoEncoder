@@ -1,6 +1,6 @@
 <map id="cuda::CudaManager::initStream" name="cuda::CudaManager::initStream">
-<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#af5b64d2526b96ecea37d398a25e7d33e" title="nn::Backpropagation\l::setSubStreamCount" alt="" coords="201,34,349,75"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="247,100,303,127"/>
-<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="397,5,539,46"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="440,71,496,97"/>
+<area shape="rect" id="node2" href="$classnn_1_1Backpropagation.html#a749e81f8f675aac69e8f64a12cffb20d" title="nn::Backpropagation\l::setSubStreamCount" alt="" coords="212,35,371,76"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a0e1fabde39e0c2677cbd7b272eae2584" title="TEST" alt="" coords="264,101,319,127"/>
+<area shape="rect" id="node3" href="$classnn_1_1Backpropagation.html#ab4e2de62d78b1b795a63697bfabc6f0d" title="nn::Backpropagation\l::Backpropagation" alt="" coords="419,5,575,47"/>
+<area shape="rect" id="node4" href="$unittest_8cu.html#aebd5db7219cde2f6ebe29523c9b39148" title="TEST" alt="" coords="469,71,524,98"/>
 </map>

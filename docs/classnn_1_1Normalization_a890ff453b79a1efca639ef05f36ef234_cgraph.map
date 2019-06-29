@@ -1,4 +1,4 @@
 <map id="nn::Normalization::invByElement" name="nn::Normalization::invByElement">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a3bedfde78db4eaf36046bcf4f06d7127" title="cuda::DeviceVector\l::getDimension" alt="" coords="187,5,325,46"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceVector.html#ae027934ec44df3e3a8a828194b520dd7" title="cuda::DeviceVector\l::getAddress" alt="" coords="187,70,325,111"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceVector.html#a01a05d3bef4c715b2840bbeff99da573" title="cuda::DeviceVector\l::getDimension" alt="" coords="200,5,347,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="200,71,347,112"/>
 </map>

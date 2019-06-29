@@ -1,6 +1,7 @@
 <map id="nn::Normalization::invSqrtByElement" name="nn::Normalization::invSqrtByElement">
-<area shape="rect" id="node2" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="187,71,336,97"/>
-<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="385,5,535,46"/>
-<area shape="rect" id="node4" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="432,71,488,97"/>
-<area shape="rect" id="node5" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="424,121,496,148"/>
+<area shape="rect" id="node2" href="$classnn_1_1Normalization.html#ae390c5ba2df09b653d1833c9fa5caf5f" title="nn::Normalization::init" alt="" coords="200,107,367,134"/>
+<area shape="rect" id="node3" href="$classnn_1_1AutoEncoder.html#aeb0395d4d57b1d277eb26301504b5551" title="nn::AutoEncoder\&lt; nn\l::Func1to1Tanh \&gt;::init" alt="" coords="415,5,577,47"/>
+<area shape="rect" id="node4" href="$classnn_1_1Normalization.html#aa1f58e1fd25596cd91fbbeea58355fa1" title="nn::Normalization::\lNormalization" alt="" coords="423,71,569,112"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#a43345bdb06cccb5df0c50cf6001a24eb" title="TEST" alt="" coords="469,137,523,163"/>
+<area shape="rect" id="node6" href="$unittest_8cu.html#a56c04accee917532e07a8298ce95dff5" title="TEST_P" alt="" coords="461,187,531,214"/>
 </map>

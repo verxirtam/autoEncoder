@@ -1,7 +1,11 @@
 <map id="cuda::Samax" name="cuda::Samax">
-<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#aff28105bacf90cf5aa18137dc0453cdd" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="161,5,295,46"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#acf8fba9d1539359c472125dfb3ac13e5" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="161,70,295,111"/>
-<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="153,135,303,177"/>
-<area shape="rect" id="node6" href="$classcuda_1_1DeviceMatrix.html#a86c0e1cf8a6817c6f68cb9be59d81416" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="161,201,295,242"/>
-<area shape="rect" id="node5" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="353,135,503,177"/>
+<area shape="rect" id="node2" href="$classcuda_1_1DeviceMatrix.html#a51fedf7b317ac575adbb3ed40fd9ab2c" title="cuda::DeviceMatrix\l::getRowCount" alt="" coords="160,5,307,47"/>
+<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a48f9cc5cb2c91d06e9f064c5757aa767" title="cuda::DeviceMatrix\l::getColumnCount" alt="" coords="160,71,307,112"/>
+<area shape="rect" id="node4" href="$classcuda_1_1CuBlasManager.html#ac2795729ce3d8f084710077eadc818a1" title="cuda::CuBlasManager\l::getHandle" alt="" coords="355,143,517,184"/>
+<area shape="rect" id="node7" href="$classcuda_1_1DeviceMatrix.html#af893450c7ca8bfbb8079058adebedc49" title="cuda::DeviceMatrix\l::getAddress" alt="" coords="160,188,307,229"/>
+<area shape="rect" id="node8" href="$namespacecuda.html#a022a7c585a55b9e480de79b33e065d11" title="cuda::Samin" alt="" coords="182,254,285,281"/>
+<area shape="rect" id="node5" href="$classcuda_1_1CuBlasManager.html#a6e43bfbe4b8de9a7975271174e64e199" title="cuda::CuBlasManager\l::getInstance" alt="" coords="565,111,728,152"/>
+<area shape="rect" id="node6" href="$classcuda_1_1CuBlasManager.html#aac42f8f53aceabfb34187e78adb36370" title="cuda::CuBlasManager\l::getErrorString" alt="" coords="565,176,728,217"/>
+<area shape="rect" id="node9" href="$classcuda_1_1DeviceVector.html#a01a05d3bef4c715b2840bbeff99da573" title="cuda::DeviceVector\l::getDimension" alt="" coords="363,233,509,275"/>
+<area shape="rect" id="node10" href="$classcuda_1_1DeviceVector.html#a97e8b28a93678d30a6e4707c186498f1" title="cuda::DeviceVector\l::getAddress" alt="" coords="363,299,509,340"/>
 </map>

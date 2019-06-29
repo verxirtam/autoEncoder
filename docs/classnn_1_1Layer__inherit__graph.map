@@ -1,4 +1,4 @@
 <map id="nn::Layer&lt; ActivateMethod, UpdateMethod &gt;" name="nn::Layer&lt; ActivateMethod, UpdateMethod &gt;">
-<area shape="rect" id="node2" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="5,112,121,139"/>
-<area shape="rect" id="node3" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; nn::Func1to1Tanh \&gt;" alt="" coords="147,112,352,139"/>
+<area shape="rect" id="node2" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; AF \&gt;" alt="" coords="5,109,133,136"/>
+<area shape="rect" id="node3" href="$classnn_1_1Layer.html" title="nn::Layer\&lt; nn::Func1to1Tanh \&gt;" alt="" coords="157,109,381,136"/>
 </map>

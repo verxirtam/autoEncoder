@@ -1,11 +1,11 @@
 <map id="cuda::DeviceMatrix::set" name="cuda::DeviceMatrix::set">
-<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="247,5,379,32"/>
-<area shape="rect" id="node3" href="$classcuda_1_1DeviceMatrix.html#a075689558d0de498f5d2dfe8451c7627" title="cuda::DeviceMatrix\l::DeviceMatrix" alt="" coords="246,57,381,98"/>
-<area shape="rect" id="node4" href="$classcuda_1_1DeviceMatrix.html#a468bfd9b81fc5a5284435770ec88a19c" title="cuda::DeviceMatrix::set" alt="" coords="233,123,394,149"/>
-<area shape="rect" id="node5" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="230,173,397,200"/>
-<area shape="rect" id="node7" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="216,225,411,266"/>
-<area shape="rect" id="node9" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="259,291,367,317"/>
-<area shape="rect" id="node10" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="216,342,411,383"/>
-<area shape="rect" id="node6" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="459,173,515,200"/>
-<area shape="rect" id="node8" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="459,232,515,259"/>
+<area shape="rect" id="node2" href="$autoEncoder_8cpp.html#a971328ceb22d8404de48b635fb4bdf33" title="testCUBLASClass" alt="" coords="268,5,403,32"/>
+<area shape="rect" id="node3" href="$classFXAutoEncoder.html#a1127cbe3b366b3d8167fa385f6aee2bc" title="FXAutoEncoder::learning" alt="" coords="245,56,426,83"/>
+<area shape="rect" id="node6" href="$classnn_1_1UpdateMethodMomentum.html#afb9e53952525136584763eee8c590484" title="nn::UpdateMethodMomentum\l::init" alt="" coords="228,107,443,149"/>
+<area shape="rect" id="node9" href="$unittest_8cu.html#a260a7c5af5cb1d11a332b5b3c7d21a62" title="TYPED_TEST" alt="" coords="284,173,387,200"/>
+<area shape="rect" id="node10" href="$unittest_8cu.html#a5b72a91d51696c476bacd550c87a1a75" title="AutoEncoderTest_momentum\l_estimate" alt="" coords="229,225,442,266"/>
+<area shape="rect" id="node4" href="$classFXAutoEncoder.html#ae87b910400c9c7fbac5b91573711e394" title="FXAutoEncoder::getAutoEncoder" alt="" coords="491,5,721,32"/>
+<area shape="rect" id="node5" href="$unittest_8cu.html#aff15f1d85ec9b7819dee92a5eb049abe" title="TEST" alt="" coords="769,31,824,57"/>
+<area shape="rect" id="node7" href="$classnn_1_1UpdateMethodMomentum.html#abd8b4b84be83a129f30ebb4a7958b5da" title="nn::UpdateMethodMomentum\l::UpdateMethodMomentum" alt="" coords="499,107,713,149"/>
+<area shape="rect" id="node8" href="$unittest__UpdateMethodMomentum_8h.html#a06dee87c370c6f5bef48f61737d643e9" title="TEST" alt="" coords="579,173,633,200"/>
 </map>
